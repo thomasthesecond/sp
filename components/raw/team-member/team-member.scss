@@ -1,0 +1,101 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Team member
+ * @type Molecule
+ */
+
+.TeamMember {
+  align-items: center;
+  // box-shadow: 0 42px 84px rgba(#000, 0.3);
+  // box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  // max-width: (247px + 35px + 35px);
+  max-width: 247px;
+  // padding: 42px 35px 60px;
+  position: relative;
+  text-align: center;
+
+  .LeadershipTeam & {
+    max-width: none;
+  }
+
+  // &::after {
+  //   background-color: #fff; // green;
+  //   box-shadow: 0 42px 84px rgba(#000, 0.3);
+  //   box-sizing: border-box;
+  //   content: "";
+  //   display: block;
+  //   // max-width: (247px + 35px + 35px);
+  //   height: 100%;
+  //   left: 0;
+  //   // max-width: 247px;
+  //   // padding: 42px 35px 60px;
+  //   position: absolute;
+  //   top: 0;
+  //   transition: opacity 200ms, visibility 200ms;
+  //   visibility: hidden;
+  //   width: 100%;
+  //   z-index: $z-index-below;
+  // }
+
+  &:hover {
+    z-index: $z-index-default;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.TeamMember-image {
+  display: block;
+  max-width: 100%;
+  // max-width: 247px;
+}
+
+.TeamMember-name {
+  color: #25395d;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  line-height: (24 / 14);
+  margin-bottom: 0;
+  margin-top: 28px;
+
+  @media (min-width: 480px) {
+    font-size: 16px;
+    line-height: (28 / 16);
+  }
+}
+
+.TeamMember-title {
+  color: #b5955d;
+  font-size: 10px;
+  font-weight: $font-weight-light;
+  line-height: (16 / 10);
+  margin-bottom: 0;
+  margin-top: 0;
+
+  @media (min-width: 480px) {
+    font-size: 14px;
+    line-height: (28 / 14);
+  }
+}
+
+.TeamMember-bio {
+  color: #8f9aa8;
+  font-size: 16px;
+  line-height: (28 / 16);
+  margin-bottom: 0;
+  margin-top: 16px;
+
+  display: none;
+
+  // .TeamMember:hover & {
+  //   display: block;
+  // }
+}

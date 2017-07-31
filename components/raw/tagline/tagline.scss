@@ -1,0 +1,42 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Tagline
+ * @type Atom
+ */
+
+.Tagline {
+  @include fluid-type(
+    $min-font-size: 40,
+    $max-font-size: 96,
+    $min-width: 600,
+    $max-width: $max-width
+  );
+
+  font-weight: $font-weight-light;
+  letter-spacing: -.5px;
+  line-height: 1;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 64vw;
+  text-align: center;
+
+  @media (min-width: 600px) {
+    letter-spacing: -1.2px;
+    max-width: 50vw;
+  }
+}
+
+.Tagline b {
+  font-weight: $font-weight-semibold;
+
+  @media (min-width: 600px) {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.Tagline--white {
+  color: #fff;
+}

@@ -1,0 +1,43 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Button
+ * @type Atom
+ */
+
+.Button {
+  align-items: center;
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #5d91a1;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  // display: inline-block;
+  // display: flex;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: $font-weight-semibold;
+  justify-content: center;
+  letter-spacing: .7px;
+  line-height: 1;
+  padding: 24px 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 200ms, color 200ms;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:active,
+  &:focus {}
+}
+
+.Button--dark {
+  background-color: #152640;
+  border: 1px solid rgba(#bfd0d8, 0.2);
+  color: #fff; // rgba(#fff, 0.57);
+}

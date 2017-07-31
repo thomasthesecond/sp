@@ -1,0 +1,30 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Skip link
+ * @type Atom
+ */
+
+.SkipLink {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+
+  &:focus {
+    background-color: #fff;
+    clip: auto;
+    color: #446975;
+    height: auto;
+    line-height: 40px;
+    padding: 10px 20px;
+    text-decoration: none;
+    top: 90px;
+    width: auto;
+    z-index: $z-index-sticky;
+  }
+}

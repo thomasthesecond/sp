@@ -1,0 +1,65 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Home block
+ * @type Organism
+ */
+
+.HomeBlock {
+  @media (min-width: 544px) {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.HomeBlock--alternate {
+  @media (min-width: 544px) {
+    flex-direction: row-reverse;
+  }
+}
+
+.HomeBlock-photo {
+  display: block;
+  height: auto;
+  max-width: 100%;
+
+  @media (min-width: 544px) {
+    max-height: 720px;
+  }
+}
+
+.HomeBlock--alternate .HomeBlock-photo {
+  @media (min-width: 544px) {
+    max-height: 668px;
+  }
+}
+
+.HomeBlock-text {
+  @media (min-width: 544px) {
+    margin-left: #{(136 / $max-width) * 100%};
+    max-width: 400px;
+  }
+}
+
+.HomeBlock--alternate .HomeBlock-text {
+  margin-left: 0;
+
+  @media (min-width: 544px) {
+    margin-right: #{(120 / $max-width) * 100%};
+  }
+
+  @media (min-width: 1088px) {
+    margin-left: #{(104 / $max-width) * 100%};
+  }
+}
+
+.HomeBlock-text h2 {
+  color: #435e6c;
+  font-weight: $font-weight-light;
+
+  @media (max-width: 544px) {
+    margin-top: 32px;
+  }
+}

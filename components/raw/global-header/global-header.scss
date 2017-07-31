@@ -1,0 +1,27 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Global Header
+ * @type Organism
+ */
+
+.GlobalHeader {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  height: 48px;
+  justify-content: space-between;
+  position: relative;
+  // width: 100%;
+  z-index: $z-index-dropdown;
+
+  @media (min-width: 768px) {
+    height: 90px;
+  }
+}
+
+.GlobalHeader--transparent {
+  background-color: transparent;
+}

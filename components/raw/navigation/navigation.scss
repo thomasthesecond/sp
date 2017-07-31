@@ -1,0 +1,98 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Navigation
+ * @type Molecule
+ */
+
+.Navigation {
+  background-color: #fff;
+  color: #7d7d7d;
+  font-size: 18px;
+  line-height: (48 / 18);
+  max-width: 464px;
+  // min-width: 464px;
+  width: 100%;
+
+  @media (max-width: 619px) {
+    padding: 24px;
+  }
+
+  @media (min-width: 620px) {
+    line-height: 1;
+  }
+
+  @media (min-width: 620px) and (max-width: 699px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 700px) {
+    font-size: 16px;
+  }
+}
+
+.Navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: 620px) {
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.Navigation li {
+  &:not(:first-child) {
+    @media (max-width: 619px) {
+      border-top: 1px solid rgba(#7d7d7d, 0.16);
+    }
+  }
+}
+
+.Navigation a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 200ms;
+
+  @media (max-width: 619px) {
+    display: block;
+  }
+
+  &:hover {
+    color: #5d91a1;
+  }
+}
+
+// Implementation detail
+
+// .Navigation--mobile,
+.GlobalHeader .Navigation {
+  @media (max-width: 619px) {
+    height: 100vh;
+    right: 0;
+    max-width: 70vw;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    // width: 100vw;
+
+    transform: translateX(100%);
+    transition: opacity 200ms, transform 200ms;
+    z-index: $z-index-modal;
+  }
+
+  @media (min-width: 620px) {
+    margin-left: auto;
+  }
+
+  &.is-open {
+    @media (max-width: 619px) {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
