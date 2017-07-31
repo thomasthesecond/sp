@@ -2640,25 +2640,25 @@ __webpack_require__(73);
 
 __webpack_require__(6);
 
-__webpack_require__(75);
+__webpack_require__(78);
 
-__webpack_require__(76);
+__webpack_require__(79);
 
-__webpack_require__(77);
+__webpack_require__(80);
 
 __webpack_require__(31);
 
-__webpack_require__(79);
+__webpack_require__(82);
 
 __webpack_require__(47);
 
 __webpack_require__(33);
 
-__webpack_require__(80);
+__webpack_require__(83);
 
 __webpack_require__(49);
 
-__webpack_require__(81);
+__webpack_require__(84);
 
 __webpack_require__(52);
 
@@ -2766,6 +2766,12 @@ __webpack_require__(9);
 
 __webpack_require__(74);
 
+__webpack_require__(75);
+
+__webpack_require__(76);
+
+__webpack_require__(77);
+
 /***/ }),
 /* 74 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -2776,13 +2782,31 @@ module.exports = __webpack_require__.p + "logo.png";
 /* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "logo@2x.png";
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "logo-white.png";
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "logo-white@2x.png";
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
 __webpack_require__(11);
 
 /***/ }),
-/* 76 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2793,22 +2817,22 @@ __webpack_require__(10);
 __webpack_require__(1);
 
 /***/ }),
-/* 77 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(78);
+__webpack_require__(81);
 
 /***/ }),
-/* 78 */
+/* 81 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 79 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2817,7 +2841,7 @@ __webpack_require__(78);
 __webpack_require__(13);
 
 /***/ }),
-/* 80 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2826,7 +2850,7 @@ __webpack_require__(13);
 __webpack_require__(12);
 
 /***/ }),
-/* 81 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
