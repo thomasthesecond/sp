@@ -1,0 +1,14 @@
+<nav class="SubNavigation js-sub-navigation">
+  <ul class="SubNavigation-list">
+    {{#each subNavigation.links}}
+      <li class="SubNavigation-item{{#if active}} is-active{{/if}}">
+        <a class="SubNavigation-link" href="{{this.url}}">
+          {{this.label}}
+        </a>
+      </li>
+    {{/each}}
+
+    <div class="SubNavigation-marker js-sub-navigation-marker"
+      aria-hidden="true"></div>
+  </ul>
+</nav>

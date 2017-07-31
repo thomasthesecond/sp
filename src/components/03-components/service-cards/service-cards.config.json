@@ -1,0 +1,30 @@
+{
+  "context": {
+    "serviceCards": [
+      {
+        "icon": "icon-building-color",
+        "title": "Surgical facilities"
+      },
+      {
+        "icon": "icon-syringe-color",
+        "title": "Anesthesia"
+      },
+      {
+        "icon": "icon-pill-color",
+        "title": "Pharmacy"
+      },
+      {
+        "icon": "icon-eye-color",
+        "title": "Optical"
+      },
+      {
+        "icon": "icon-stethoscope-color",
+        "title": "Physician practices"
+      },
+      {
+        "icon": "icon-first-aid-color",
+        "title": "Urgent care"
+      }
+    ]
+  }
+}

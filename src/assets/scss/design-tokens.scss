@@ -1,0 +1,70 @@
+// Background color
+$background-white: #fff;
+$background-blue: #1f6b9c;
+$background-plum: #973b8a;
+$background-green: #00d494;
+$background-peach: #db755c;
+$background-yellow: #ffc83f;
+
+// Text color
+$color-text-overlay: #fff;
+$color-text-black: #000;
+
+// navy: #152640 #172741;
+// steel: #c8d6e1;
+// graphite: #686f79;
+// teal: #5e91a2 #11779f;
+// light gray: #c8cdd1 #f0f1f3;
+
+// Border color
+$border-gray: #e4e4e4;
+$border-peach: #db755c;
+
+// Dimensions
+$min-width: 320;
+$max-width: 1290;
+
+// Fonts
+$font-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+// Typography
+$font-size-default: 16;
+$font-size-large: 96px;
+$font-size-medium: 56px;
+$font-size-small: 24px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-large: (104 / 96);
+$line-height-medium: (72 / 56);
+$line-height-small: (32 / 24);
+
+// Opacity
+
+// Spacing
+
+// Radius
+
+// Sizing
+
+// Shadow
+
+// Time
+
+// Media query
+$mq-max-480: #{(479 / $font-size-default) * 1em};
+$mq-min-480: #{(480 / $font-size-default) * 1em};
+
+// Z-index
+$z-index-toast: 10000;
+$z-index-modal: 9000;
+$z-index-overlay: 8000;
+$z-index-dropdown: 7000;
+$z-index-dialog: 6000;
+$z-index-popup: 5000;
+$z-index-sticky: 1000;
+$z-index-default: 1;
+$z-index-below: -1;

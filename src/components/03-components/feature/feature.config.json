@@ -1,0 +1,32 @@
+{
+  "context": {
+    "feature": {
+      "coverPhoto": {
+        "src": "/content/feature-image.jpg",
+        "title": ""
+      },
+      "statistics": [
+        {
+          "icon": "icon-stethoscope",
+          "number": "5,000 +",
+          "label": "Affiliated physicians"
+        },
+        {
+          "icon": "icon-chart-line",
+          "number": "10%",
+          "label": "Annual same-facility growth over the past five years"
+        },
+        {
+          "icon": "icon-heart",
+          "number": "94%",
+          "label": "Patient satisfaction"
+        },
+        {
+          "icon": "icon-clipboard",
+          "number": "600,000 +",
+          "label": "Annual patients"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@import "./design-tokens";
+@import "./mixins";
+@import "./functions";
+
+/**
+ * Global
+ */
+
+// html {
+//   box-sizing: border-box;
+// }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  // box-sizing: inherit;
+}
+
+body {
+  font-family: $font-sans-serif;
+  font-size: 100%;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+h1 {
+  @include fluid-type(
+    $min-font-size: 40,
+    $max-font-size: 80,
+    $min-width: $min-width,
+    $max-width: $max-width
+  );
+
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+  // letter-spacing: -.5px;
+  // letter-spacing: -3px;
+}
+
+h2 {
+  @include fluid-type(
+    $min-font-size: 24,
+    $max-font-size: 32,
+    $min-width: $min-width,
+    $max-width: $max-width
+  );
+
+  color: #21365a;
+  font-weight: $font-weight-bold;
+  line-height: (56 / 32);
+  margin-bottom: .5em;
+  margin-top: .5em;
+  // margin: 0;
+  // letter-spacing: 0;
+  // letter-spacing: -1px;
+}
+
+h3 {
+  @include fluid-type(
+    $min-font-size: 16,
+    $max-font-size: 24,
+    $min-width: $min-width,
+    $max-width: $max-width
+  );
+
+  color: #21365a;
+  font-weight: $font-weight-bold;
+  line-height: (32 / 24);
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
+
+h4 {
+  @include fluid-type(
+    $min-font-size: 14,
+    $max-font-size: 16,
+    $min-width: $min-width,
+    $max-width: $max-width
+  );
+
+  font-weight: $font-weight-bold;
+  line-height: (24 / 14);
+  line-height: (28 / 16);
+  margin: 0;
+}
+
+p {
+  color: #8f9aa8;
+  font-size: #{(14 / 16) * 1em};
+  line-height: (24 / 14);
+  margin-bottom: 1em;
+  margin-top: 1em;
+
+  @media (min-width: 700px) {
+    font-size: 1em;
+    line-height: (28 / 16);
+  }
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+main {
+  outline: none;
+}

@@ -1,0 +1,24 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Leadership team
+ * @type Organism
+ */
+
+.LeadershipTeam {
+  display: grid;
+  grid-gap: 0;
+  grid-row-gap: 68px;
+  grid-template-columns: repeat(2, 1fr);
+  // grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  // max-width: 630px;
+
+  @media (min-width: 480px) {
+    grid-gap: 82px;
+    grid-row-gap: 56px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    // max-width: 630px;
+  }
+}

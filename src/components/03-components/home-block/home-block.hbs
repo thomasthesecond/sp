@@ -1,0 +1,15 @@
+<article class="HomeBlock">
+  <a href="{{ block.link.url }}">
+    {{> @image--picture image=block.image }}
+  </a>
+
+  <div class="HomeBlock-text">
+    <h2>{{ block.title }}</h2>
+
+    <p>
+      {{ block.description }}
+    </p>
+
+    {{> @more-link link=block.link }}
+  </div>
+</article>

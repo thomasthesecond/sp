@@ -1,0 +1,24 @@
+{
+  "context": {
+    "navigation": {
+      "links": [
+        {
+          "label": "About us",
+          "url": "/about-us"
+        },
+        {
+          "label": "Find a location",
+          "url": "/locations"
+        },
+        {
+          "label": "Partnerships",
+          "url": "/partnerships"
+        },
+        {
+          "label": "Investors",
+          "url": "/investors"
+        }
+      ]
+    }
+  }
+}

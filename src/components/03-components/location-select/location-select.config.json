@@ -1,0 +1,42 @@
+{
+  "context": {
+    "select": {
+      "id": "footer-locations",
+      "class": "dark js-location-select",
+      "name": "footer-locations",
+      "options": [
+        { "label": "Select a state", "value": "", "selected": "true" },
+        { "label": "Alabama", "value": "/locations/Alabama/all/all" },
+        { "label": "Arkansas", "value": "/locations/Arkansas/all/all" },
+        { "label": "California", "value": "/locations/California/all/all" },
+        { "label": "Colorado", "value": "/locations/Colorado/all/all" },
+        { "label": "Delaware", "value": "/locations/Delaware/all/all" },
+        { "label": "Florida", "value": "/locations/Florida/all/all" },
+        { "label": "Georgia", "value": "/locations/Georgia/all/all" },
+        { "label": "Hawaii", "value": "/locations/Hawaii/all/all" },
+        { "label": "Idaho", "value": "/locations/Idaho/all/all" },
+        { "label": "Illinois", "value": "/locations/Illinois/all/all" },
+        { "label": "Indiana", "value": "/locations/Indiana/all/all" },
+        { "label": "Iowa", "value": "/locations/Iowa/all/all" },
+        { "label": "Kansas", "value": "/locations/Kansas/all/all" },
+        { "label": "Kentucky", "value": "/locations/Kentucky/all/all" },
+        { "label": "Louisiana", "value": "/locations/Louisiana/all/all" },
+        { "label": "Michigan", "value": "/locations/Michigan/all/all" },
+        { "label": "Mississippi", "value": "/locations/Mississippi/all/all" },
+        { "label": "Missouri", "value": "/locations/Missouri/all/all" },
+        { "label": "Montana", "value": "/locations/Montana/all/all" },
+        { "label": "Nebraska", "value": "/locations/Nebraska/all/all" },
+        { "label": "New Hampshire", "value": "/locations/New%20Hampshire/all/all" },
+        { "label": "North Carolina", "value": "/locations/North%20Carolina/all/all" },
+        { "label": "North Dakota", "value": "/locations/North%20Dakota/all/all" },
+        { "label": "Ohio", "value": "/locations/Ohio/all/all" },
+        { "label": "Pennsylvania", "value": "/locations/Pennsylvania/all/all" },
+        { "label": "Rhode Island", "value": "/locations/Rhode%20Island/all/all" },
+        { "label": "Tennessee", "value": "/locations/Tennessee/all/all" },
+        { "label": "Texas", "value": "/locations/Texas/all/all" },
+        { "label": "Washington", "value": "/locations/Washington/all/all" },
+        { "label": "Wisconsin", "value": "/locations/Wisconsin/all/all" }
+      ]
+    }
+  }
+}

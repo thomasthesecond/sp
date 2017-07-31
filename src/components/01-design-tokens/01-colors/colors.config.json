@@ -1,0 +1,12 @@
+{
+  "context": {
+    "color": {
+      "white": { "hex": "#fff", "rgb": "rgb(255, 255, 255)" },
+      "blue": { "hex": "#1f6b9c", "rgb": "rgb(31, 107, 156)" },
+      "plum": { "hex": "#973b8a", "rgb": "rgb(151, 59, 138)" },
+      "green": { "hex": "#00d494", "rgb": "rgb(0, 212, 148)" },
+      "peach": { "hex": "#db755c", "rgb": "rgb(219, 117, 92)" },
+      "yellow": { "hex": "#ffc83f", "rgb": "rgb(255, 200, 63)" }
+    }
+  }
+}

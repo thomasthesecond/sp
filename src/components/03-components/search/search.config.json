@@ -1,0 +1,10 @@
+{
+  "context": {
+    "search": {
+      "label": "Search"
+    },
+    "button": {
+      "label": "Submit"
+    }
+  }
+}

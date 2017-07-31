@@ -1,0 +1,25 @@
+@import "./design-tokens";
+
+/**
+ * Mixins
+ */
+
+@mixin fluid-type(
+  $min-font-size,
+  $max-font-size,
+  $min-width: $min-width,
+  $max-width: $max-width
+) {
+  $min: #{($min-width / $font-size-default) * 1em};
+  $max: #{($max-width / $font-size-default) * 1em};
+
+  font-size: #{$min-font-size}px;
+
+  @media (min-width: $min) and (max-width: $max) {
+    font-size: calc(#{$min-font-size}px + (#{$max-font-size} - #{$min-font-size}) * (100vw - #{$min-width}px) / (#{$max-width} - #{$min-width}));
+  }
+
+  @media (min-width: $max) {
+    font-size: #{$max-font-size}px;
+  }
+}

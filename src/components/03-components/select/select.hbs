@@ -1,0 +1,10 @@
+<select
+  id="{{ select.id }}"
+  class="{{ select.class }}"
+  name="{{ select.name }}">
+  {{#each select.options}}
+    <option value="{{ this.value }}"{{#if this.selected }} selected="selected"{{/if}}>
+      {{ this.label }}
+    </option>
+  {{/each}}
+</select>

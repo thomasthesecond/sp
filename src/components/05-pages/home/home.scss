@@ -1,0 +1,97 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Page: Home
+ * @type page
+ */
+
+.GlobalHeader {
+  @media (max-width: 619px) {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+}
+
+.Hamburger {
+  @media (max-width: 619px) {
+    color: #fff;
+  }
+}
+
+// .Logo {
+//   @media (max-width: 619px) {
+//     filter: sepia(100%) contrast(1500%) saturate(0%);
+//   }
+// }
+
+.LocationFinder {
+  z-index: $z-index-sticky;
+
+  @media (max-width: 669px) {
+    display: none;
+  }
+
+  @media (min-width: 670px) {
+    margin-top: #{(-45 / $max-width) * 100vw};
+  }
+
+  @media (min-width: #{$max-width}px) {
+    margin-top: -45px;
+  }
+}
+
+.LocationFinderButton {
+  z-index: $z-index-sticky;
+
+  @media (max-width: 669px) {
+    margin-top: -22px;
+  }
+
+  @media (min-width: 670px) {
+    display: none;
+  }
+}
+
+.Introduction {
+  margin-bottom: 104px;
+  margin-top: 104px;
+
+  @media (min-width: 544px) {
+    margin-bottom: #{(164 / $max-width) * 100vw};
+    margin-top: #{(174 / $max-width) * 100vw};
+  }
+
+  @media (min-width: 1290px) {
+    margin-bottom: 164px;
+    margin-top: 174px;
+  }
+}
+
+.HomeBlock {
+  margin-top: 96px;
+
+  @media (min-width: 544px) {
+    margin-top: #{(184 / $max-width) * 100vw};
+  }
+
+  @media (min-width: 1290px) {
+    margin-top: 184px;
+  }
+}
+
+.GlobalFooter {
+  margin-top: 136px;
+
+  @media (min-width: 544px) {
+    margin-top: #{(456 / $max-width) * 100vw};
+  }
+
+  @media (min-width: 1290px) {
+    margin-top: 456px;
+  }
+}

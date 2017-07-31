@@ -1,0 +1,40 @@
+<img hidden src="small.jpg"
+     srcset="/content/home-careers.jpg 1024w,
+             /content/home-careers-sm.jpg 640w,
+             /content/home-careers-sm.jpg 320w"
+     sizes="(min-width: 36em) 33.3vw,
+            100vw"
+     alt="" />
+
+<picture>
+  <source srcset="/content/home-careers-sm@2x.jpg" media="(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 768px)">
+  <source srcset="/content/home-careers@2x.jpg" media="(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)">
+  <source srcset="/content/home-careers-sm.jpg" media="(max-width: 768px)">
+  <source srcset="/content/home-careers.jpg">
+  <img src="/content/home-careers-sm.jpg" alt="">
+</picture>
+
+<picture hidden>
+  <!-- <source src="large.jpg"
+          media="( (min-device-pixel-ratio: 1.5) and (min-width: 20.001em) and (max-width: 35.999em) ) or
+                 ( (max-device-pixel-ratio: 1.5) and (min-width: 120.001em) ) or
+                 ( (min-device-pixel-ratio: 1.5) and (min-width: 60.001em) )">
+  <source src="medium.jpg"
+          media="( (max-device-pixel-ratio: 1.5) and (min-width: 20.001em) and (max-width: 35.999em) ) or
+                 ( (max-device-pixel-ratio: 1.5) and (min-width: 60.001em) ) or
+                 ( (min-device-pixel-ratio: 1.5) and (min-width: 10.001em) )">
+                  -->
+  <source src="/content/home-careers.jpg"
+    media="(min-width: 600px)">
+
+  <source src="/content/home-careers@2x.jpg"
+    media="((min-device-pixel-ratio: 1.5) and (min-width: 600px))">
+
+  <source src="/content/home-careers-sm@2x.jpg"
+    media="((min-device-pixel-ratio: 1.5) and (max-width: 599px))">
+
+  <source src="/content/home-careers-sm.jpg">
+
+  <!-- fallback -->
+  <img src="/content/home-careers-sm.jpg" alt="">
+</picture>

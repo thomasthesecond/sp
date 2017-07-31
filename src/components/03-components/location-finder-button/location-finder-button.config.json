@@ -1,0 +1,8 @@
+{
+  "context": {
+    "button": {
+      "label": "Find a location",
+      "url": "/locations"
+    }
+  }
+}

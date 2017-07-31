@@ -1,0 +1,10 @@
+{
+  "title": "A simple blockquote component",
+  "status": "wip",
+  "context": {
+    "blockquote": {
+      "text": "Blockquotes are the best!",
+      "citation": "Fractal Docs"
+    }
+  }
+}

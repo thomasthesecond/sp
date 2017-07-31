@@ -1,0 +1,30 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Logo
+ * @type Atom
+ */
+
+.Logo {
+  display: block;
+  max-width: 259px;
+  min-width: 148px;
+}
+
+.Logo img {
+  display: block;
+  width: 100%;
+}
+
+// Implementation detail
+
+.GlobalHeader .Logo {
+  margin-right: 48px;
+  // min-width: 148px;
+
+  @media (max-width: 619px) {
+    width: 148px;
+  }
+}

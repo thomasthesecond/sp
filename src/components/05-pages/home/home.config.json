@@ -1,0 +1,140 @@
+{
+  "context": {
+    "preview": "@preview",
+    "title": "",
+    "name": "home",
+    "classname": "HomePage",
+    "meta": {
+      "title": ""
+    },
+    "coverPhoto": {
+      "src": "/content/masthead-image.jpg",
+      "title": ""
+    },
+    "masthead": {
+      "title": "About us",
+      "image": {
+        "src": "/content/masthead-image.jpg",
+        "title": ""
+      },
+      "tagline": {
+        "first": "We operate",
+        "second": "differently"
+      },
+      "link": {
+        "label": "Learn more",
+        "url": "/"
+      },
+      "video": {
+        "src": "https://media.lonelyplanet.com/mastheads/videos/new-york-city.mp4",
+        "type": "video/mp4",
+        "poster": "/content/masthead-image.jpg"
+      }
+    },
+    "introduction": {
+      "text": "Creating exceptional value for our patients and physicians through our unique healthcare delivery"
+    },
+    "sections": [
+      {
+        "block": {
+          "title": "Partnerships",
+          "description": "We are able to structure a relationship in a way that best suits the physician, either as a partner, an affiliate or as an employed physician. We deliver strategy, resources and substantial industry knowledge.",
+          "link": {
+            "label": "Learn more",
+            "url": "/components/preview/partnerships"
+          },
+          "image": {
+            "class": "HomeBlock-photo",
+            "title": "",
+            "src": "/content/home-partnerships-sm.jpg",
+            "srcset": [
+              {
+                "src": "/content/home-partnerships-sm@2x.jpg",
+                "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+              },
+              {
+                "src": "/content/home-partnerships@2x.jpg",
+                "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+              },
+              {
+                "src": "/content/home-partnerships-sm.jpg",
+                "media": "(max-width: 544px)"
+              },
+              {
+                "src": "/content/home-partnerships.jpg",
+                "media": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "block": {
+          "alternate": true,
+          "title": "Investors",
+          "description": "Surgery Partners is a leading healthcare services company with an integrated outpatient delivery model. We own and operate more than 150 locations in 29 states, including surgical facilities, a diagnostic laboratory, multi-specialty physician practices, anesthesia services and urgent care facilities.",
+          "link": {
+            "label": "Learn more",
+            "url": "/components/preview/investors"
+          },
+          "image": {
+            "class": "HomeBlock-photo",
+            "title": "",
+            "src": "/content/home-investors-sm.jpg",
+            "srcset": [
+              {
+                "src": "/content/home-investors-sm@2x.jpg",
+                "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+              },
+              {
+                "src": "/content/home-investors@2x.jpg",
+                "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+              },
+              {
+                "src": "/content/home-investors-sm.jpg",
+                "media": "(max-width: 544px)"
+              },
+              {
+                "src": "/content/home-investors.jpg",
+                "media": ""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "block": {
+          "title": "Careers",
+          "description": "Our Surgery Partners team is comprised of more than 5,000 employees and 4,000 affiliated physicians, serving more than 500,000 patients annually. Want to work with us? Check out our current employment opportunities.",
+          "link": {
+            "label": "View openings",
+            "url": "/components/preview/careers"
+          },
+          "image": {
+            "class": "HomeBlock-photo",
+            "title": "",
+            "src": "/content/home-careers-sm.jpg",
+            "srcset": [
+              {
+                "src": "/content/home-careers-sm@2x.jpg",
+                "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+              },
+              {
+                "src": "/content/home-careers@2x.jpg",
+                "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+              },
+              {
+                "src": "/content/home-careers-sm.jpg",
+                "media": "(max-width: 544px)"
+              },
+              {
+                "src": "/content/home-careers.jpg",
+                "media": ""
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

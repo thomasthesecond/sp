@@ -1,0 +1,14 @@
+{
+  "context": {
+    "select": {
+      "name": "select-component",
+      "id": "select-component",
+      "options": [
+        { "label": "Select an option", "value": "", "selected": "true" },
+        { "label": "Option 1", "value": "1" },
+        { "label": "Option 2", "value": "2" },
+        { "label": "Option 3", "value": "3" }
+      ]
+    }
+  }
+}

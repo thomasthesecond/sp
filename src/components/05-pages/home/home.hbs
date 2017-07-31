@@ -1,0 +1,24 @@
+{{> @skip-link }}
+{{> @global-header }}
+
+<main id="main" role="main" tabindex="0">
+  {{> @masthead--video }}
+  {{ render "@location-finder" }}
+  {{ render "@location-finder-button" }}
+
+  <div class="container">
+    {{> @introduction }}
+
+    {{#each sections}}
+      {{#unless this.block.alternate}}
+        {{> @home-block block=this.block }}
+      {{/unless}}
+
+      {{#if this.block.alternate}}
+        {{> @home-block--alternate block=this.block }}
+      {{/if}}
+    {{/each}}
+  </div>
+</main>
+
+{{ render "@global-footer" }}

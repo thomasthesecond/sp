@@ -1,0 +1,109 @@
+{
+  "context": {
+    "locationFinder": {
+      "heading": "Find a location",
+      "button": {
+        "label": "Search",
+        "href": "/locations"
+      },
+      "state": {
+        "select": {
+          "id": "state-select",
+          "class": "js-location-finder-select",
+          "name": "state-select",
+          "options": [
+            { "label": "State", "value": "all", "selected": "true" },
+            { "label": "Alabama", "value": "Alabama" },
+            { "label": "Arkansas", "value": "Arkansas" },
+            { "label": "California", "value": "California" },
+            { "label": "Colorado", "value": "Colorado" },
+            { "label": "Delaware", "value": "Delaware" },
+            { "label": "Florida", "value": "Florida" },
+            { "label": "Georgia", "value": "Georgia" },
+            { "label": "Hawaii", "value": "Hawaii" },
+            { "label": "Idaho", "value": "Idaho" },
+            { "label": "Illinois", "value": "Illinois" },
+            { "label": "Indiana", "value": "Indiana" },
+            { "label": "Iowa", "value": "Iowa" },
+            { "label": "Kansas", "value": "Kansas" },
+            { "label": "Kentucky", "value": "Kentucky" },
+            { "label": "Louisiana", "value": "Louisiana" },
+            { "label": "Michigan", "value": "Michigan" },
+            { "label": "Mississippi", "value": "Mississippi" },
+            { "label": "Missouri", "value": "Missouri" },
+            { "label": "Montana", "value": "Montana" },
+            { "label": "Nebraska", "value": "Nebraska" },
+            { "label": "New Hampshire", "value": "New Hampshire" },
+            { "label": "North Carolina", "value": "North Carolina" },
+            { "label": "North Dakota", "value": "North Dakota" },
+            { "label": "Ohio", "value": "Ohio" },
+            { "label": "Pennsylvania", "value": "Pennsylvania" },
+            { "label": "Rhode Island", "value": "Rhode Island" },
+            { "label": "Tennessee", "value": "Tennessee" },
+            { "label": "Texas", "value": "Texas" },
+            { "label": "Washington", "value": "Washington" },
+            { "label": "Wisconsin", "value": "Wisconsin" }
+          ]
+        }
+      },
+      "specialty": {
+        "select": {
+          "id": "specialty-select",
+          "class": "js-location-finder-select",
+          "name": "specialty-select",
+          "options": [
+            { "label": "Specialty", "value": "all", "selected": "true" },
+            { "label": "Ear, Nose and Throat", "value": "1" },
+            { "label": "Oral/Dental Surgery", "value": "2" },
+            { "label": "Gastroenterology", "value": "3" },
+            { "label": "General Surgery", "value": "4" },
+            { "label": "Ophthalmology", "value": "5" },
+            { "label": "Pain Management", "value": "6" },
+            { "label": "Gynecology", "value": "9" },
+            { "label": "Orthopedics", "value": "10" },
+            { "label": "Neurosurgery", "value": "11" },
+            { "label": "Podiatry", "value": "12" },
+            { "label": "Radiology", "value": "13" },
+            { "label": "Lithotripsy", "value": "14" },
+            { "label": "Urology", "value": "15" },
+            { "label": "Dermatology", "value": "16" },
+            { "label": "Plastic Surgery", "value": "17" },
+            { "label": "Pulmonology", "value": "18" },
+            { "label": "Bariatric Surgery", "value": "19" },
+            { "label": "Ocular Plastic Surgery", "value": "22" },
+            { "label": "Hand Surgery", "value": "23" },
+            { "label": "Pediatrics", "value": "24" },
+            { "label": "Spine Surgery", "value": "25" },
+            { "label": "Maxillofacial", "value": "26" },
+            { "label": "IVF", "value": "27" },
+            { "label": "Emergency Services", "value": "28" },
+            { "label": "Cardiology", "value": "29" },
+            { "label": "Family Practice", "value": "30" },
+            { "label": "Physical Therapy", "value": "31" },
+            { "label": "Oncology", "value": "32" },
+            { "label": "Internal Medicine", "value": "33" },
+            { "label": "Retina", "value": "34" },
+            { "label": "Pediatric Dental", "value": "35" },
+            { "label": "Colorectal", "value": "36" },
+            { "label": "Vascular", "value": "37" },
+            { "label": "Anesthesia", "value": "38" }
+          ]
+        }
+      },
+      "facility": {
+        "select": {
+          "id": "facility-select",
+          "class": "js-location-finder-select",
+          "name": "facility-select",
+          "options": [
+            { "label": "Facility type", "value": "all", "selected": "true" },
+            { "value": "Ambulatory Surgery Center" , "value": "surgery" },
+            { "value": "Physician Practice", "value": "practice" },
+            { "value": "Other", "value": "other" },
+            { "value": "Physician-Partnered Hospital", "value": "hospital" }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<footer class="GlobalFooter" role="contentinfo">
+  <div class="container">
+    <div class="GlobalFooter-location">
+      <h4>{{ location.heading }}</h4>
+
+      <img
+        src="{{ location.map.source }}"
+        alt="{{ location.map.title }}">
+
+      <p>
+        {{ location.description }}
+      </p>
+
+      {{ render "@location-select" }}
+
+      <a class="GlobalFooter-locationButton Button Button--dark" href="/locations">
+        Find a location
+      </a>
+    </div>
+
+    <div class="GlobalFooter-contact">
+      <h4>{{ contact.heading }}</h4>
+
+      <p>
+        {{ contact.address.street }}<br>
+        {{ contact.address.city }}, <abbr title="{{ contact.address.state.name }}">{{ contact.address.state.abbr }}</abbr> {{ contact.address.postalCode }}<br>
+        <abbr title="Phone">P</abbr>: <a href="tel:{{ contact.phone.link }}">{{ contact.phone.display }}</a><br>
+        <abbr title="Fax">F</abbr>: {{ contact.fax.display }}
+      </p>
+    </div>
+
+    <div class="GlobalFooter-navigation" id="footer-navigation">
+      <nav class="GlobalFooter-links">
+        {{#each navigation.links}}
+          <span>
+            <a href="{{ this.url }}">
+              {{ this.label }}
+            </a>
+          </span>
+        {{/each}}
+      </nav>
+
+      <div class="GlobalFooter-copyright">
+        &copy;2017 <a href="/">Surgery Partners</a>
+      </div>
+    </div>
+  </div>
+</footer>

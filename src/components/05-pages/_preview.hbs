@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Surgery Partners{{#if _target.context.title}} | {{_target.context.title}}{{/if}}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="author" content="Surgery Partners">
+		<meta name="description" content="">
+
+    <meta property="og:site_name" content="Surgery Partners">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="">
+		<meta property="og:title" content="">
+		<meta property="og:description" content="">
+		<meta property="og:url" content="https://www.surgerypartners.com/">
+		<meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@surgerypartners">
+
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" title="favicon"> -->
+    <link rel="canonical" href="https://www.surgerypartners.com/">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="{{ path '/main.css' }}">
+    <link rel="stylesheet" href="{{ path '/{{_target.context.name}}.css' }}">
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "MedicalOrganization",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "40 Burton Hills Blvd, Suite 500",
+          "addressLocality": "Nashville",
+          "addressRegion": "Tennessee",
+          "postalCode": "37215",
+          "addressCountry": "United States"
+        },
+        "name": "Surgery Partners",
+        "alternateName": [
+      	  "B13",
+      	  "Black 13",
+      	  "Black 13 Tattoo Parlor"
+        ],
+        "legalName": "Black 13 Tattoo, LLC",
+        "containedInPlace": "Cummins Station",
+        "telephone": "615-234-5900",
+        "faxNumber": "615-234-5998",
+        "url": "https://www.surgerypartners.com/",
+        "logo": "",
+        "email": "",
+        "description": "",
+        "sameAs": [
+          "https://www.facebook.com/black13tattoo/",
+          "https://www.yelp.com/biz/black-13-tattoo-parlor-nashville",
+          "https://twitter.com/black13tattoo",
+          "https://www.instagram.com/black13tattoo/",
+          "https://www.youtube.com/user/Black13Tattoo/"
+        ],
+        "image": [
+          {
+            "@type": "ImageObject",
+      			"url": "https://black13tattoo.com/images/uploads/shop/waiting.jpg",
+      			"description": "tattoo parlor waiting room"
+      		},
+      		{
+            "@type": "ImageObject",
+      			"url": "https://black13tattoo.com/images/uploads/shop/window.jpg",
+      			"description": "Black 13 entrance"
+          },
+          {
+            "@type": "ImageObject",
+      			"url": "https://black13tattoo.com/images/uploads/shop/waiting-4.jpg",
+      			"description": "Black 13 waiting room"
+          },
+          {
+            "@type": "ImageObject",
+      			"url": "https://black13tattoo.com/images/uploads/shop/workstation-3.jpg",
+      			"description": "tattoo workstations"
+      		}
+      	]
+      }
+    </script>
+  </head>
+
+  <body class="{{_target.context.classname}}">
+    <!-- <a class="SkipLink" href="#main" tabindex="1">
+			Skip to main content
+		</a> -->
+
+    {{{ yield }}}
+
+    {{> @icon-sprite }}
+
+    <script src="{{ path '/main.js' }}"></script>
+    <script src="{{ path '/{{_target.context.name}}.js' }}"></script>
+  </body>
+</html>

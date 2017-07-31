@@ -1,0 +1,75 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Hamburger
+ * @type Atom
+ */
+
+.Hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #275e70;
+  cursor: pointer;
+  // box-sizing: content-box;
+  padding: 18px 14px;
+  position: relative;
+
+  &.-white {
+    color: #fff;
+  }
+}
+
+.Hamburger-icon {
+  display: block;
+  height: 9px; // 8px;
+  position: relative;
+  width: 17px; // 16px;
+
+  &::before,
+  &::after {
+    background-color: currentColor;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: transform 200ms;
+    width: 100%;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: 7px;
+  }
+
+  .is-active & {
+    &::before {
+      top: 3px;
+      transform: rotate(45deg);
+      transform-origin: center;
+    }
+
+    &::after {
+      top: 3px;
+      transform: rotate(-45deg);
+      transform-origin: center;
+    }
+  }
+}
+
+// Implementation detail
+
+.GlobalHeader .Hamburger {
+  @media (max-width: 619px) {
+    margin-right: -14px;
+  }
+
+  @media (min-width: 620px) {
+    display: none;
+  }
+}

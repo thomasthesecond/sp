@@ -1,0 +1,51 @@
+/**
+ * Styleguide
+ * @note Not for production
+ */
+
+// code {
+//   color: #000080; // #d14;
+// }
+
+.swatch {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  width: 100%;
+}
+
+.swatch--light {
+  color: #000;
+}
+
+.token-table {
+  // border: 1px solid #d4d4d8; // rgba(#535363, .25);
+  border-bottom: 1px solid #d4d4d8;
+  border-collapse: collapse;
+  // margin: 16px;
+  // width: calc(100% - 16px - 16px);
+  width: 100%;
+
+  tr:nth-child(odd) {
+    background-color: #f6f6f6;
+  }
+
+  th {
+    // background-color: #eaeaeb;
+    text-align: left;
+  }
+
+  th,
+  td {
+    // border: 1px solid #d4d4d8; // rgba(#535363, .25);
+    border-bottom: 1px solid #d4d4d8;
+    padding: 16px;
+  }
+
+  th:not(:first-child),
+  td:not(:first-child) {
+    border-left: 1px solid #d4d4d8;
+  }
+}

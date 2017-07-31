@@ -1,0 +1,21 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Timeline
+ * @type Organism
+ */
+
+.Timeline {
+  margin-top: #{(48 / 16) * 1em};
+}
+
+.Timeline-headline {
+  @include fluid-type(
+    $min-font-size: 24,
+    $max-font-size: 32
+  );
+
+  margin-top: #{(48 / 32) * 1em};
+}

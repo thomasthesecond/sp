@@ -1,0 +1,54 @@
+{
+  "context": {
+    "teamMembers": [
+      {
+        "image": "",
+        "name": "Michael Doyle",
+        "title": "Chief Executive Officer",
+        "bio": ""
+      },
+      {
+        "image": "",
+        "name": "Teresa Sparks",
+        "title": "Chief Financial Officer",
+        "bio": "Teresa Sparks serves as Executive Vice President and CFO of Surgery Partners and served as SVP and CFO of Symbion Healthcare until it's acquisition in 2014. She was Corporate Controller of Symbion from its inception until she was named VP in 2002. Prior to joining Symbion, she served as Assistant Controller for HealthWise of America, Inc., and senior healthcare auditor for Deloitte and Touche."
+      },
+      {
+        "image": "",
+        "name": "Chris Topke",
+        "title": "Ancilary Group President",
+        "bio": ""
+      },
+      {
+        "image": "",
+        "name": "Jennifer Baldock",
+        "title": "SVP / General Council",
+        "bio": ""
+      },
+      {
+        "image": "",
+        "name": "Tony Taparo",
+        "title": "Atlantic Group President",
+        "bio": ""
+      },
+      {
+        "image": "",
+        "name": "Brandan Lingle",
+        "title": "Senior Vice President",
+        "bio": ""
+      },
+      {
+        "image": "",
+        "name": "John Crysel",
+        "title": "National Group President",
+        "bio": ""
+      },
+      {
+        "image": "",
+        "name": "George Goodwin",
+        "title": "American Group President",
+        "bio": ""
+      }
+    ]
+  }
+}

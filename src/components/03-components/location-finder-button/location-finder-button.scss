@@ -1,0 +1,22 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Location finder button
+ * @type Atom
+ */
+
+.LocationFinderButton {
+  box-shadow: 0 10px 14px rgba(#406c7a, .22);
+  position: relative;
+
+  .Button {
+    height: 44px;
+    font-weight: $font-weight-regular;
+    letter-spacing: 0;
+    padding: 0;
+    text-transform: none;
+    width: 100%;
+  }
+}

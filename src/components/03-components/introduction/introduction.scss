@@ -1,0 +1,50 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Introduction
+ * @type Atom
+ */
+
+.Introduction {
+  $min-font-size: 20;
+  $max-font-size: 32;
+  $min-width: 480;
+  $max-width: 924;
+
+  @include fluid-type(
+    $min-font-size,
+    $max-font-size,
+    $min-width,
+    $max-width
+  );
+
+  color: #819ba3;
+  font-weight: $font-weight-light;
+  letter-spacing: -.9px;
+  line-height: (36 / $min-font-size);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: #{$max-width}px;
+  text-align: center;
+
+  @media (min-width: $mq-min-480) {
+    letter-spacing: -1.4px;
+    line-height: (48 / $max-font-size);
+  }
+
+  &::after {
+    @media (min-width: $mq-min-480) {
+      content: "";
+      background-color: #b5955d;
+      display: block;
+      height: 4px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: #{(72 / $max-font-size) * 1em};
+      max-width: 408px;
+      width: #{(408 / $max-width) * 100vw};
+    }
+  }
+}
