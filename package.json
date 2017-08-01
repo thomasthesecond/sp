@@ -6,9 +6,9 @@
   "main": "fractal.js",
   "scripts": {
     "start": "fractal start --sync",
-    "build": "webpack && cp -R src/content public/content && fractal build",
+    "build": "npm run clean && webpack && fractal build",
     "assets:ci": "webpack --watch",
-    "clean": "rimraf public",
+    "clean": "rimraf public && rimraf build",
     "_scss": "node-sass src/components -o public",
     "__scss": "node-sass --include-path src/components -o public",
     "___scss": "node-sass src/main.scss public/main.css",
@@ -22,7 +22,7 @@
     "_ci": "NODE_ENV=development npm run glob && npm run sass:ci && npm run prefix:ci",
     "ci": "NODE_ENV=development npm run start && npm run sass:ci && npm run prefix",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gh-pages": "npm run build -- -o build && gh-pages -d build && rm -rf build",
+    "gh-pages": "npm run build -- -o build && gh-pages -d build",
     "postpublish": "npm run gh-pages"
   },
   "author": "Thomas Cunningham",
@@ -50,6 +50,7 @@
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.2",

@@ -1,5 +1,6 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 
 const loaders = {
@@ -37,6 +38,9 @@ module.exports = {
     // about: ["./src/assets/main.js", "./src/assets/about.js"],
     home: "./src/assets/home.js",
     about: "./src/assets/about.js",
+    locations: "./src/assets/locations.js",
+    investors: "./src/assets/investors.js",
+    partnerships: "./src/assets/partnerships.js",
     styleguide: "./src/assets/styleguide.js"
   },
   output: {
@@ -73,13 +77,16 @@ module.exports = {
         loader: "handlebars-loader"
       },
       {
-        test: /\.svg$|\.png$/,
+        test: /\.jpg$|\.png$|\.svg$/,
         loader: "file-loader?name=[name].[ext]"
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin("[name].css")
+    new ExtractTextPlugin("[name].css"),
+    new CopyWebpackPlugin([
+      { from: "src/content" }
+    ])
   ]
 };
 

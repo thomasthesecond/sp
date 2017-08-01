@@ -4,22 +4,22 @@
     "image": {
       "class": "",
       "title": "",
-      "src": "/content/home-careers-sm.jpg",
+      "src": "/home-careers-sm.jpg",
       "srcset": [
         {
-          "src": "/content/home-careers-sm@2x.jpg",
+          "src": "/home-careers-sm@2x.jpg",
           "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
         },
         {
-          "src": "/content/home-careers@2x.jpg",
+          "src": "/home-careers@2x.jpg",
           "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
         },
         {
-          "src": "/content/home-careers-sm.jpg",
+          "src": "/home-careers-sm.jpg",
           "media": "(max-width: 544px)"
         },
         {
-          "src": "/content/home-careers.jpg",
+          "src": "/home-careers.jpg",
           "media": ""
         }
       ]

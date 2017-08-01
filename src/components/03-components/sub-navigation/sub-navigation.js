@@ -24,7 +24,9 @@ class SubNavigation {
   }
 
   removeActiveClass(item) {
-    item.classList.remove(this.activeClass);
+    if (item) {
+      item.classList.remove(this.activeClass);
+    }
   }
 
   updateMarker(item) {
@@ -72,29 +74,44 @@ class SubNavigation {
     // console.log(settings);
     // console.log(window.scrollTop);
     // console.log(document.body.scrollTop);
-    console.log(window.pageYOffset || document.documentElement.scrollTop);
-    console.log(
-      document.getElementById("how-were-different").offsetTop,
-      document.getElementById("how-were-different").offsetHeight
-    );
 
+    // console.log(window.pageYOffset || document.documentElement.scrollTop);
+    // console.log(
+    //   document.getElementById("what-we-do").offsetTop,
+    //   document.getElementById("what-we-do").offsetHeight
+    // );
+
+    // settings.forEach((item) => {
+    //   console.log(
+    //     window.pageYOffset >= item.top && window.pageYOffset < item.bottom
+    //     ? item.id : null);
+    // });
+
+    // const top = document.getElementById("what-we-do").offsetTop;
+    // const bottom = top + document.getElementById("what-we-do").offsetHeight;
+
+    // console.log(window.pageYOffset,
+    //   window.pageYOffset >= top && window.pageYOffset < bottom
+    //   ? true : false);
   }
 
   render() {
     const sections = document.querySelectorAll(".js-spy-section");
-    // const scrollSpySettings = [];
-    const scrollSpySettings = {};
+    const scrollSpySettings = [];
+    // const scrollSpySettings = {};
 
     sections.forEach((section) => {
-      // scrollSpySettings.push({
-      //   id: section.id,
-      //   offset: section.offsetTop,
-      //   height: section.offsetHeight,
-      // });
-      scrollSpySettings[section.id] = {
-        offset: section.offsetTop,
+      scrollSpySettings.push({
+        id: section.id,
+        top: section.offsetTop,
+        bottom: (section.offsetTop + section.offsetHeight),
         height: section.offsetHeight
-      };
+      });
+      // scrollSpySettings[section.id] = {
+      //   top: section.offsetTop,
+      //   bottom: (section.offsetTop + section.offsetHeight),
+      //   height: section.offsetHeight,
+      // };
     });
 
     // console.log(scrollSpySettings);
@@ -103,7 +120,7 @@ class SubNavigation {
     // window.addEventListener("scroll", (event) => {
     //   setTimeout(() => {
     //     this.scrollSpy(scrollSpySettings);
-    //   }, 100);
+    //   }, 500);
     // });
 
     this.subNavigationItems.forEach((item, index) => {

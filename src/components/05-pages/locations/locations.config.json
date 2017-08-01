@@ -1,0 +1,25 @@
+{
+  "context": {
+    "preview": "@preview",
+    "title": "Locations",
+    "name": "locations",
+    "classname": "LocationsPage",
+    "meta": {
+      "title": "Locations"
+    },
+    "coverPhoto": {
+      "src": "/masthead-image.jpg",
+      "title": ""
+    },
+    "masthead": {
+      "title": "Locations",
+      "image": {
+        "src": "/masthead-image.jpg",
+        "title": ""
+      }
+    },
+    "introduction": {
+      "text": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 150 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients."
+    }
+  }
+}

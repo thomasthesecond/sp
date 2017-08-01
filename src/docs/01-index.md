@@ -1,9 +1,9 @@
 ---
-title: FooCorp Components
+title: Surgery Partners Component Library
 ---
-This is the component library for FooCorp. **Feel free to look around!**
+This is the component library for Surgery Partners. **Feel free to look around!**
 
-## Atomic design
+<!-- ## Atomic design
 
 This component library uses [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) principles which classifies components into five distinct groups:
 
@@ -15,4 +15,4 @@ This component library uses [atomic design](http://bradfrost.com/blog/post/atomi
 
 ## Naming components
 
-Components follow the [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) naming convention.
+Components follow the [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) naming convention. -->

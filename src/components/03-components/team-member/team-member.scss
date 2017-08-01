@@ -9,12 +9,13 @@
 
 .TeamMember {
   align-items: center;
+  backface-visibility: hidden;
   // box-shadow: 0 42px 84px rgba(#000, 0.3);
   // box-sizing: content-box;
   display: flex;
   flex-direction: column;
-  // max-width: (247px + 35px + 35px);
-  max-width: 247px;
+  // max-width: (248px + 35px + 35px);
+  max-width: 248px;
   // padding: 42px 35px 60px;
   position: relative;
   text-align: center;
@@ -29,21 +30,22 @@
   //   box-sizing: border-box;
   //   content: "";
   //   display: block;
-  //   // max-width: (247px + 35px + 35px);
+  //   // filter: drop-shadow(0 42px 84px rgba(#000, 0.3));
+  //   // max-width: (248px + 35px + 35px);
   //   height: 100%;
   //   left: 0;
-  //   // max-width: 247px;
+  //   // max-width: 248px;
   //   // padding: 42px 35px 60px;
   //   position: absolute;
   //   top: 0;
-  //   transition: opacity 200ms, visibility 200ms;
+  //   transition: filter 200ms, opacity 200ms, visibility 200ms;
   //   visibility: hidden;
   //   width: 100%;
   //   z-index: $z-index-below;
   // }
 
   &:hover {
-    z-index: $z-index-default;
+    z-index: $z-index-default + 1;
   }
 
   &:hover::after {
@@ -55,7 +57,14 @@
 .TeamMember-image {
   display: block;
   max-width: 100%;
-  // max-width: 247px;
+  // max-width: 248px;
+
+  .TeamMember:hover & {
+    @media (min-width: 1015px) {
+      position: relative;
+      z-index: 2;
+    }
+  }
 }
 
 .TeamMember-name {
@@ -69,6 +78,13 @@
   @media (min-width: 480px) {
     font-size: 16px;
     line-height: (28 / 16);
+  }
+
+  .TeamMember:hover & {
+    @media (min-width: 1015px) {
+      position: relative;
+      z-index: 2;
+    }
   }
 }
 
@@ -84,6 +100,43 @@
     font-size: 14px;
     line-height: (28 / 14);
   }
+
+  .TeamMember:hover & {
+    @media (min-width: 1015px) {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.TeamMember-panel {
+  background-color: #fff;
+  backface-visibility: hidden;
+  position: absolute;
+  padding: #{(48 / $max-width) * 100%};
+  width: calc(100% + #{(96 / $max-width) * 100%});
+  top: #{(-48 / $max-width) * 100%};
+  z-index: 1;
+  padding-top: 408px;
+  box-shadow: 0 42px 84px rgba(#000, .3);
+  opacity: 0;
+  transition: opacity 200ms;
+  visibility: hidden;
+  // will-change: opacity;
+
+  @media (min-width: 1015px) {
+    padding: 48px;
+    width: calc(100% + 96px);
+    top: -48px;
+    padding-top: 408px;
+  }
+
+  .TeamMember:hover & {
+    @media (min-width: 1015px) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
 
 .TeamMember-bio {
@@ -92,10 +145,4 @@
   line-height: (28 / 16);
   margin-bottom: 0;
   margin-top: 16px;
-
-  display: none;
-
-  // .TeamMember:hover & {
-  //   display: block;
-  // }
 }

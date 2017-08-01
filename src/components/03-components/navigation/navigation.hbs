@@ -2,8 +2,8 @@
   <ul>
     {{#each navigation.links}}
       <li>
-        <a href="{{this.url}}">
-          {{this.label}}
+        <a href="{{ path this.url }}">
+          {{ this.label }}
         </a>
       </li>
     {{/each}}

@@ -4,10 +4,10 @@ import "normalize.css/normalize.css";
 import "./scss/global.scss";
 
 // Import icons
-import "../components/02-icons/icons.scss";
+import "../components/_02-icons/icons.scss";
 
 // Import layout modules
-import "../components/04-layout/layout.scss";
+import "../components/_04-layout/layout.scss";
 
 // Import global components
 import "../components/03-components/button";

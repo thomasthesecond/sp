@@ -2,7 +2,7 @@
   "context": {
     "title": "About us",
     "coverPhoto": {
-      "src": "/content/masthead-image.jpg",
+      "src": "/masthead-image.jpg",
       "title": ""
     },
     "tagline": {
@@ -16,30 +16,30 @@
     "video": {
       "src": "https://media.lonelyplanet.com/mastheads/videos/new-york-city.mp4",
       "type": "video/mp4",
-      "poster": "/content/masthead-image.jpg"
+      "poster": "/masthead-image.jpg"
     },
     "masthead": {
       "title": "About us",
       "image": {
         "sizes": [
           {
-            "src": "/content/masthead-image@2x.jpg x2",
+            "src": "/masthead-image@2x.jpg x2",
             "title": ""
           },
           {
-            "src": "/content/masthead-image.jpg x1",
+            "src": "/masthead-image.jpg x1",
             "title": ""
           },
           {
-            "src": "/content/masthead-image-sm@2x.jpg x2",
+            "src": "/masthead-image-sm@2x.jpg x2",
             "title": ""
           },
           {
-            "src": "/content/masthead-image-sm.jpg x1",
+            "src": "/masthead-image-sm.jpg x1",
             "title": ""
           }
         ],
-        "src": "/content/masthead-image.jpg",
+        "src": "/masthead-image.jpg",
         "title": ""
       }
     }

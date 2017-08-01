@@ -5,11 +5,11 @@ import "./scss/global.scss";
 import "./scss/styleguide.scss";
 
 // Import layout modules
-import "../components/04-layout/layout.scss";
+import "../components/_04-layout/layout.scss";
 
 // Import components
-import "../components/03-components/alert";
-import "../components/03-components/blockquote";
+// import "../components/03-components/alert";
+// import "../components/03-components/blockquote";
 import "../components/03-components/button";
 import "../components/03-components/cover-photo";
 import "../components/03-components/cover-video";

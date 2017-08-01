@@ -2,7 +2,7 @@
   "context": {
     "feature": {
       "coverPhoto": {
-        "src": "/content/feature-image.jpg",
+        "src": "/feature-image.jpg",
         "title": ""
       },
       "statistics": [

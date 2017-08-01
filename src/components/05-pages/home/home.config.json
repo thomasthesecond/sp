@@ -8,13 +8,13 @@
       "title": ""
     },
     "coverPhoto": {
-      "src": "/content/masthead-image.jpg",
+      "src": "/masthead-image.jpg",
       "title": ""
     },
     "masthead": {
       "title": "About us",
       "image": {
-        "src": "/content/masthead-image.jpg",
+        "src": "/masthead-image.jpg",
         "title": ""
       },
       "tagline": {
@@ -28,7 +28,7 @@
       "video": {
         "src": "https://media.lonelyplanet.com/mastheads/videos/new-york-city.mp4",
         "type": "video/mp4",
-        "poster": "/content/masthead-image.jpg"
+        "poster": "/masthead-image.jpg"
       }
     },
     "introduction": {
@@ -46,22 +46,22 @@
           "image": {
             "class": "HomeBlock-photo",
             "title": "",
-            "src": "/content/home-partnerships-sm.jpg",
+            "src": "/home-partnerships-sm.jpg",
             "srcset": [
               {
-                "src": "/content/home-partnerships-sm@2x.jpg",
+                "src": "/home-partnerships-sm@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
               },
               {
-                "src": "/content/home-partnerships@2x.jpg",
+                "src": "/home-partnerships@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
               },
               {
-                "src": "/content/home-partnerships-sm.jpg",
+                "src": "/home-partnerships-sm.jpg",
                 "media": "(max-width: 544px)"
               },
               {
-                "src": "/content/home-partnerships.jpg",
+                "src": "/home-partnerships.jpg",
                 "media": ""
               }
             ]
@@ -80,22 +80,22 @@
           "image": {
             "class": "HomeBlock-photo",
             "title": "",
-            "src": "/content/home-investors-sm.jpg",
+            "src": "/home-investors-sm.jpg",
             "srcset": [
               {
-                "src": "/content/home-investors-sm@2x.jpg",
+                "src": "/home-investors-sm@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
               },
               {
-                "src": "/content/home-investors@2x.jpg",
+                "src": "/home-investors@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
               },
               {
-                "src": "/content/home-investors-sm.jpg",
+                "src": "/home-investors-sm.jpg",
                 "media": "(max-width: 544px)"
               },
               {
-                "src": "/content/home-investors.jpg",
+                "src": "/home-investors.jpg",
                 "media": ""
               }
             ]
@@ -113,22 +113,22 @@
           "image": {
             "class": "HomeBlock-photo",
             "title": "",
-            "src": "/content/home-careers-sm.jpg",
+            "src": "/home-careers-sm.jpg",
             "srcset": [
               {
-                "src": "/content/home-careers-sm@2x.jpg",
+                "src": "/home-careers-sm@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
               },
               {
-                "src": "/content/home-careers@2x.jpg",
+                "src": "/home-careers@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
               },
               {
-                "src": "/content/home-careers-sm.jpg",
+                "src": "/home-careers-sm.jpg",
                 "media": "(max-width: 544px)"
               },
               {
-                "src": "/content/home-careers.jpg",
+                "src": "/home-careers.jpg",
                 "media": ""
               }
             ]

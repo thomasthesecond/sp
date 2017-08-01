@@ -2,49 +2,73 @@
   "context": {
     "teamMembers": [
       {
-        "image": "",
+        "image": {
+          "src": "/team-doyle.jpg",
+          "title": ""
+        },
         "name": "Michael Doyle",
         "title": "Chief Executive Officer",
         "bio": ""
       },
       {
-        "image": "",
+        "image": {
+          "src": "/team-sparks.jpg",
+          "title": ""
+        },
         "name": "Teresa Sparks",
         "title": "Chief Financial Officer",
         "bio": "Teresa Sparks serves as Executive Vice President and CFO of Surgery Partners and served as SVP and CFO of Symbion Healthcare until it's acquisition in 2014. She was Corporate Controller of Symbion from its inception until she was named VP in 2002. Prior to joining Symbion, she served as Assistant Controller for HealthWise of America, Inc., and senior healthcare auditor for Deloitte and Touche."
       },
       {
-        "image": "",
+        "image": {
+          "src": "/team-topke.jpg",
+          "title": ""
+        },
         "name": "Chris Topke",
         "title": "Ancilary Group President",
         "bio": ""
       },
       {
-        "image": "",
+        "image": {
+          "src": "/team-baldock.jpg",
+          "title": ""
+        },
         "name": "Jennifer Baldock",
         "title": "SVP / General Council",
         "bio": ""
       },
       {
-        "image": "",
+        "image": {
+          "src": "/team-taparo.jpg",
+          "title": ""
+        },
         "name": "Tony Taparo",
         "title": "Atlantic Group President",
         "bio": ""
       },
       {
-        "image": "",
+        "image": {
+          "src": "/team-lingle.jpg",
+          "title": ""
+        },
         "name": "Brandan Lingle",
         "title": "Senior Vice President",
         "bio": ""
       },
       {
-        "image": "",
+        "image": {
+          "src": "/team-crysel.jpg",
+          "title": ""
+        },
         "name": "John Crysel",
         "title": "National Group President",
         "bio": ""
       },
       {
-        "image": "",
+        "image": {
+          "src": "/team-goodwin.jpg",
+          "title": ""
+        },
         "name": "George Goodwin",
         "title": "American Group President",
         "bio": ""

@@ -2,10 +2,10 @@
   "context": {
     "navigation": {
       "links": [
-        { "label": "About us", "url": "/components/preview/about", "active": false },
-        { "label": "Find a location", "url": "/components/preview/locations", "active": false },
-        { "label": "Partnerships", "url": "/components/preview/partnerships", "active": false },
-        { "label": "Investors", "url": "/components/preview/investors", "active": false }
+        { "label": "About us", "url": "/components/preview/about.html", "active": false },
+        { "label": "Find a location", "url": "/components/preview/locations.html", "active": false },
+        { "label": "Partnerships", "url": "/components/preview/partnerships.html", "active": false },
+        { "label": "Investors", "url": "/components/preview/investors.html", "active": false }
       ]
     }
   }
