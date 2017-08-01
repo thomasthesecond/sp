@@ -70,7 +70,12 @@
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 1 */,
+/* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 2 */
 /***/ (function(module, exports) {
 
@@ -78,47 +83,42 @@
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(4);
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-__webpack_require__(5);
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 5 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(7);
+__webpack_require__(6);
 
 __webpack_require__(0);
 
+__webpack_require__(1);
+
 __webpack_require__(2);
 
-__webpack_require__(3);
-
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 7 */,
 /* 8 */,
 /* 9 */,
 /* 10 */,
@@ -279,7 +279,9 @@ var SubNavigation = function () {
   }, {
     key: "removeActiveClass",
     value: function removeActiveClass(item) {
-      item.classList.remove(this.activeClass);
+      if (item) {
+        item.classList.remove(this.activeClass);
+      }
     }
   }, {
     key: "updateMarker",
@@ -335,8 +337,25 @@ var SubNavigation = function () {
       // console.log(settings);
       // console.log(window.scrollTop);
       // console.log(document.body.scrollTop);
-      console.log(window.pageYOffset || document.documentElement.scrollTop);
-      console.log(document.getElementById("how-were-different").offsetTop, document.getElementById("how-were-different").offsetHeight);
+
+      // console.log(window.pageYOffset || document.documentElement.scrollTop);
+      // console.log(
+      //   document.getElementById("what-we-do").offsetTop,
+      //   document.getElementById("what-we-do").offsetHeight
+      // );
+
+      // settings.forEach((item) => {
+      //   console.log(
+      //     window.pageYOffset >= item.top && window.pageYOffset < item.bottom
+      //     ? item.id : null);
+      // });
+
+      // const top = document.getElementById("what-we-do").offsetTop;
+      // const bottom = top + document.getElementById("what-we-do").offsetHeight;
+
+      // console.log(window.pageYOffset,
+      //   window.pageYOffset >= top && window.pageYOffset < bottom
+      //   ? true : false);
     }
   }, {
     key: "render",
@@ -344,19 +363,21 @@ var SubNavigation = function () {
       var _this2 = this;
 
       var sections = document.querySelectorAll(".js-spy-section");
-      // const scrollSpySettings = [];
-      var scrollSpySettings = {};
+      var scrollSpySettings = [];
+      // const scrollSpySettings = {};
 
       sections.forEach(function (section) {
-        // scrollSpySettings.push({
-        //   id: section.id,
-        //   offset: section.offsetTop,
-        //   height: section.offsetHeight,
-        // });
-        scrollSpySettings[section.id] = {
-          offset: section.offsetTop,
+        scrollSpySettings.push({
+          id: section.id,
+          top: section.offsetTop,
+          bottom: section.offsetTop + section.offsetHeight,
           height: section.offsetHeight
-        };
+        });
+        // scrollSpySettings[section.id] = {
+        //   top: section.offsetTop,
+        //   bottom: (section.offsetTop + section.offsetHeight),
+        //   height: section.offsetHeight,
+        // };
       });
 
       // console.log(scrollSpySettings);
@@ -365,7 +386,7 @@ var SubNavigation = function () {
       // window.addEventListener("scroll", (event) => {
       //   setTimeout(() => {
       //     this.scrollSpy(scrollSpySettings);
-      //   }, 100);
+      //   }, 500);
       // });
 
       this.subNavigationItems.forEach(function (item, index) {
@@ -446,11 +467,11 @@ __webpack_require__(63);
 
 __webpack_require__(43);
 
-__webpack_require__(4);
+__webpack_require__(3);
 
 __webpack_require__(45);
 
-__webpack_require__(6);
+__webpack_require__(5);
 
 __webpack_require__(47);
 

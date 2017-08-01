@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 65);
+/******/ 	return __webpack_require__(__webpack_require__.s = 74);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -83,39 +83,39 @@
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(4);
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(5);
-
-/***/ }),
-/* 5 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(7);
+__webpack_require__(6);
 
 __webpack_require__(0);
 
+__webpack_require__(1);
+
 __webpack_require__(2);
 
-__webpack_require__(3);
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 7 */
@@ -138,7 +138,7 @@ var _hamburger = __webpack_require__(28);
 
 var _hamburger2 = _interopRequireDefault(_hamburger);
 
-__webpack_require__(1);
+__webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1973,7 +1973,7 @@ var _globalHeader2 = _interopRequireDefault(_globalHeader);
 
 __webpack_require__(29);
 
-__webpack_require__(1);
+__webpack_require__(7);
 
 __webpack_require__(9);
 
@@ -2426,7 +2426,9 @@ var SubNavigation = function () {
   }, {
     key: "removeActiveClass",
     value: function removeActiveClass(item) {
-      item.classList.remove(this.activeClass);
+      if (item) {
+        item.classList.remove(this.activeClass);
+      }
     }
   }, {
     key: "updateMarker",
@@ -2482,8 +2484,25 @@ var SubNavigation = function () {
       // console.log(settings);
       // console.log(window.scrollTop);
       // console.log(document.body.scrollTop);
-      console.log(window.pageYOffset || document.documentElement.scrollTop);
-      console.log(document.getElementById("how-were-different").offsetTop, document.getElementById("how-were-different").offsetHeight);
+
+      // console.log(window.pageYOffset || document.documentElement.scrollTop);
+      // console.log(
+      //   document.getElementById("what-we-do").offsetTop,
+      //   document.getElementById("what-we-do").offsetHeight
+      // );
+
+      // settings.forEach((item) => {
+      //   console.log(
+      //     window.pageYOffset >= item.top && window.pageYOffset < item.bottom
+      //     ? item.id : null);
+      // });
+
+      // const top = document.getElementById("what-we-do").offsetTop;
+      // const bottom = top + document.getElementById("what-we-do").offsetHeight;
+
+      // console.log(window.pageYOffset,
+      //   window.pageYOffset >= top && window.pageYOffset < bottom
+      //   ? true : false);
     }
   }, {
     key: "render",
@@ -2491,19 +2510,21 @@ var SubNavigation = function () {
       var _this2 = this;
 
       var sections = document.querySelectorAll(".js-spy-section");
-      // const scrollSpySettings = [];
-      var scrollSpySettings = {};
+      var scrollSpySettings = [];
+      // const scrollSpySettings = {};
 
       sections.forEach(function (section) {
-        // scrollSpySettings.push({
-        //   id: section.id,
-        //   offset: section.offsetTop,
-        //   height: section.offsetHeight,
-        // });
-        scrollSpySettings[section.id] = {
-          offset: section.offsetTop,
+        scrollSpySettings.push({
+          id: section.id,
+          top: section.offsetTop,
+          bottom: section.offsetTop + section.offsetHeight,
           height: section.offsetHeight
-        };
+        });
+        // scrollSpySettings[section.id] = {
+        //   top: section.offsetTop,
+        //   bottom: (section.offsetTop + section.offsetHeight),
+        //   height: section.offsetHeight,
+        // };
       });
 
       // console.log(scrollSpySettings);
@@ -2512,7 +2533,7 @@ var SubNavigation = function () {
       // window.addEventListener("scroll", (event) => {
       //   setTimeout(() => {
       //     this.scrollSpy(scrollSpySettings);
-      //   }, 100);
+      //   }, 500);
       // });
 
       this.subNavigationItems.forEach(function (item, index) {
@@ -2586,7 +2607,16 @@ __webpack_require__(55);
 /* 62 */,
 /* 63 */,
 /* 64 */,
-/* 65 */
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2598,19 +2628,15 @@ __webpack_require__(16);
 
 __webpack_require__(17);
 
-__webpack_require__(66);
+__webpack_require__(75);
 
 __webpack_require__(18);
 
-__webpack_require__(67);
-
-__webpack_require__(69);
-
 __webpack_require__(19);
 
-__webpack_require__(71);
+__webpack_require__(76);
 
-__webpack_require__(72);
+__webpack_require__(77);
 
 __webpack_require__(43);
 
@@ -2626,7 +2652,7 @@ __webpack_require__(8);
 
 __webpack_require__(36);
 
-__webpack_require__(4);
+__webpack_require__(3);
 
 __webpack_require__(45);
 
@@ -2636,29 +2662,29 @@ var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
 __webpack_require__(41);
 
-__webpack_require__(73);
-
-__webpack_require__(6);
-
 __webpack_require__(78);
 
-__webpack_require__(79);
+__webpack_require__(5);
 
-__webpack_require__(80);
+__webpack_require__(83);
+
+__webpack_require__(84);
+
+__webpack_require__(85);
 
 __webpack_require__(31);
 
-__webpack_require__(82);
+__webpack_require__(87);
 
 __webpack_require__(47);
 
 __webpack_require__(33);
 
-__webpack_require__(83);
+__webpack_require__(88);
 
 __webpack_require__(49);
 
-__webpack_require__(84);
+__webpack_require__(89);
 
 __webpack_require__(52);
 
@@ -2679,6 +2705,8 @@ if (document.querySelector(".GlobalFooter")) {
 }
 
 // Import components
+// import "../components/03-components/alert";
+// import "../components/03-components/blockquote";
 
 
 if (document.querySelector(".GlobalHeader")) {
@@ -2702,43 +2730,13 @@ doc.className = doc.className.replace("no-js", "js");
 console.info("Styleguide loaded");
 
 /***/ }),
-/* 66 */
+/* 75 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(68);
-
-/***/ }),
-/* 68 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(70);
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 71 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2747,54 +2745,13 @@ __webpack_require__(70);
 __webpack_require__(0);
 
 /***/ }),
-/* 72 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(2);
-
-/***/ }),
-/* 73 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(9);
-
-__webpack_require__(74);
-
-__webpack_require__(75);
-
-__webpack_require__(76);
-
-__webpack_require__(77);
-
-/***/ }),
-/* 74 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "logo.png";
-
-/***/ }),
-/* 75 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "logo@2x.png";
-
-/***/ }),
-/* 76 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "logo-white.png";
-
-/***/ }),
 /* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "logo-white@2x.png";
+"use strict";
+
+
+__webpack_require__(1);
 
 /***/ }),
 /* 78 */
@@ -2803,42 +2760,39 @@ module.exports = __webpack_require__.p + "logo-white@2x.png";
 "use strict";
 
 
-__webpack_require__(11);
+__webpack_require__(9);
+
+__webpack_require__(79);
+
+__webpack_require__(80);
+
+__webpack_require__(81);
+
+__webpack_require__(82);
 
 /***/ }),
 /* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-__webpack_require__(10);
-
-__webpack_require__(1);
+module.exports = __webpack_require__.p + "logo.png";
 
 /***/ }),
 /* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-__webpack_require__(81);
+module.exports = __webpack_require__.p + "logo@2x.png";
 
 /***/ }),
 /* 81 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+module.exports = __webpack_require__.p + "logo-white.png";
 
 /***/ }),
 /* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-__webpack_require__(13);
+module.exports = __webpack_require__.p + "logo-white@2x.png";
 
 /***/ }),
 /* 83 */
@@ -2847,7 +2801,7 @@ __webpack_require__(13);
 "use strict";
 
 
-__webpack_require__(12);
+__webpack_require__(11);
 
 /***/ }),
 /* 84 */
@@ -2856,7 +2810,51 @@ __webpack_require__(12);
 "use strict";
 
 
-__webpack_require__(3);
+__webpack_require__(10);
+
+__webpack_require__(7);
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(86);
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(13);
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(12);
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(2);
 
 /***/ })
 /******/ ]);

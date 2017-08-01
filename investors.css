@@ -1,0 +1,261 @@
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Masthead
+ * @type Atom
+ */
+.Masthead {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 61.33333vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 435px;
+  min-height: 368px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.Masthead--video {
+  max-height: 732px;
+  min-height: 420px;
+}
+
+.Masthead .container {
+  position: relative;
+  z-index: 1;
+}
+
+.Masthead-title {
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 0 54px #6facc1;
+}
+
+.Masthead .MoreLink {
+  margin-top: 9.30233vw;
+}
+
+@media (min-width: 1290px) {
+  .Masthead .MoreLink {
+    margin-top: 120px;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Cover photo
+ * @type Atom
+ */
+.CoverPhoto {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.CoverPhoto::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5e91a1));
+  background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.26;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.CoverPhoto img {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Cover video
+ * @type Atom
+ */
+.CoverVideo {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.CoverVideo::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5e91a1));
+  background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.26;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.CoverVideo video {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Tagline
+ * @type Atom
+ */
+.Tagline {
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: -.5px;
+  line-height: 1;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 64vw;
+  text-align: center;
+}
+
+@media (min-width: 37.5em) and (max-width: 80.625em) {
+  .Tagline {
+    font-size: calc(40px + (96 - 40) * (100vw - 600px) / (1290 - 600));
+  }
+}
+
+@media (min-width: 80.625em) {
+  .Tagline {
+    font-size: 96px;
+  }
+}
+
+@media (min-width: 600px) {
+  .Tagline {
+    letter-spacing: -1.2px;
+    max-width: 50vw;
+  }
+}
+
+.Tagline b {
+  font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .Tagline b {
+    font-weight: 700;
+  }
+}
+
+.Tagline--white {
+  color: #fff;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Introduction
+ * @type Atom
+ */
+.Introduction {
+  font-size: 20px;
+  color: #819ba3;
+  font-weight: 300;
+  letter-spacing: -.9px;
+  line-height: 1.8;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 924px;
+  text-align: center;
+}
+
+@media (min-width: 30em) and (max-width: 57.75em) {
+  .Introduction {
+    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (924 - 480));
+  }
+}
+
+@media (min-width: 57.75em) {
+  .Introduction {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 30em) {
+  .Introduction {
+    letter-spacing: -1.4px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 30em) {
+  .Introduction::after {
+    content: "";
+    background-color: #b5955d;
+    display: block;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.25em;
+    max-width: 408px;
+    width: 44.15584vw;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Page: Investors
+ * @type page
+ */
+.Introduction {
+  margin-bottom: 13.02326vw;
+  margin-top: 13.48837vw;
+}
+
+@media (min-width: 1290px) {
+  .Introduction {
+    margin-bottom: 168px;
+    margin-top: 174px;
+  }
+}

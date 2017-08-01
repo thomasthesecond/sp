@@ -1,0 +1,25 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Page: Investors
+ * @type page
+ */
+
+ .Introduction {
+   margin-bottom: #{(168 / $max-width) * 100vw};
+   margin-top: #{(174 / $max-width) * 100vw};
+   // margin-bottom: 72px;
+   // margin-top: 88px;
+   //
+   // @media (min-width: 544px) {
+   //   margin-bottom: #{(168 / $max-width) * 100vw};
+   //   margin-top: #{(174 / $max-width) * 100vw};
+   // }
+
+   @media (min-width: 1290px) {
+     margin-bottom: 168px;
+     margin-top: 174px;
+   }
+ }
