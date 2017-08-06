@@ -1,5 +1,9 @@
 <div class="CoverPhoto">
-  <img
-    src="{{ path coverPhoto.src }}"
-    alt="{{ coverPhoto.title }}">
+  {{#unless coverPhoto.srcset}}
+    {{> @image image=coverPhoto }}
+  {{/unless}}
+
+  {{#if coverPhoto.srcset}}
+    {{> @image--picture image=coverPhoto }}
+  {{/if}}
 </div>

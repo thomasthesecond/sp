@@ -1,0 +1,17 @@
+{
+  "title": "Helper classes",
+  "status": "ready",
+  "context": {
+    "class": {
+      "hidden": "Hide content visually and from screen readers; can also use the HTML5 boolean `hidden`",
+      "visuallyhidden": "Hide content only visually, but have it available for screen readers",
+      "invisible": "Hide content visually and from screen readers, but maintain layout; can be used along with `opacity` for animating content in and out",
+      "clearfix": "Contain floats",
+      "align-left": "Left align text",
+      "align-right": "Right align text",
+      "align-center": "Center align text",
+      "float-left": "Float content left",
+      "float-right": "Float content right"
+    }
+  }
+}

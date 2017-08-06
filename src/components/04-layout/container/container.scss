@@ -1,0 +1,17 @@
+/**
+ * Module: container
+ * @type Layout module
+ */
+
+.container {
+  $mq: (($max-width + ($spacing-gutter * 2)) / 16) * 1em;
+
+  margin-left: #{$spacing-gutter}px;
+  margin-right: #{$spacing-gutter}px;
+  max-width: #{$max-width}px;
+
+  @media (min-width: $mq) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

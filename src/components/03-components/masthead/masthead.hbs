@@ -1,31 +1,9 @@
 <header class="Masthead">
   <div class="container">
     <h1 class="Masthead-title">
-      {{ title }}
+      {{ masthead.title }}
     </h1>
   </div>
 
-  {{> @cover-photo }}
-
-  <!-- <img src="{{masthead.image.source}}" alt="{{masthead.image.title}}"> -->
-
-  <!-- <img
-    src="/masthead-image-sm.jpg"
-    sizes="(min-width: 600px) 100vw, 50vw"
-    srcset="/masthead-image-sm.jpg 2x,
-      /masthead-image@.jpg,
-      /masthead-image@2x.jpg 2x"
-    alt="{{masthead.image.title}}"
-  > -->
-
-  <!-- {{#unless masthead.image.sizes}}
-    <img src="{{masthead.image.source}}" alt="{{masthead.image.title}}">
-  {{/unless}} -->
-
-  <!-- {{#if masthead.image.sizes}}
-    <img
-      src="{{masthead.image.source}}"
-      srcset="{{#each masthead.image.sizes}}{{this.source}},{{/each}}"
-      alt="{{masthead.image.title}}">
-  {{/if}} -->
+  {{> @cover-photo coverPhoto=masthead.coverPhoto }}
 </header>

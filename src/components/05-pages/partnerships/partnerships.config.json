@@ -1,25 +1,240 @@
 {
+  "status": "wip",
+  "title": "Partnerships page",
   "context": {
     "preview": "@preview",
     "title": "Partnerships",
-    "name": "partnerships",
+    "description": "Our flexible approach to physician engagement and physician-centric culture focused on customer service is what drives our success.",
+    "image": "/partnerships-masthead.jpg",
+    "slug": "/partnerships/",
+    "assetFileName": "partnerships",
     "classname": "PartnershipsPage",
     "meta": {
-      "title": "Partnerships"
-    },
-    "coverPhoto": {
-      "src": "/masthead-image.jpg",
-      "title": ""
+      "title": "Partnerships",
+      "description": "Our flexible approach to physician engagement and physician-centric culture focused on customer service is what drives our success.",
+      "image": "/partnerships-masthead.jpg"
     },
     "masthead": {
       "title": "Partnerships",
-      "image": {
-        "src": "/masthead-image.jpg",
-        "title": ""
+      "coverPhoto": {
+        "title": "Two doctors analyzing CT scans of a human brain",
+        "src": "/partnerships-masthead-sm.jpg",
+        "srcset": [
+          {
+            "src": "/partnerships-masthead-sm@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+          },
+          {
+            "src": "/partnerships-masthead@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+          },
+          {
+            "src": "/partnerships-masthead-sm.jpg",
+            "media": "(max-width: 544px)"
+          },
+          {
+            "src": "/partnerships-masthead.jpg",
+            "media": null
+          }
+        ]
       }
     },
-    "introduction": {
-      "text": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 150 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients."
+    "subNavigation": [
+      {
+        "label": "Physician practices",
+        "hash": "physician-practices"
+      },
+      {
+        "label": "Ambulatory surgery centers",
+        "hash": "ambulatory-surgery-centers"
+      },
+      {
+        "label": "Surgical hospitals",
+        "hash": "surgical-hospitals"
+      },
+      {
+        "label": "Healthcare systems",
+        "hash": "healthcare-systems"
+      }
+    ],
+    "introduction": "Our flexible approach to physician engagement and physician-centric culture focused on customer service is what drives our success.",
+    "feature": {
+      "coverPhoto": {
+        "title": "Doctors moving around in an operating room",
+        "src": "/partnerships-feature-sm.jpg",
+        "srcset": [
+          {
+            "src": "/partnerships-feature-sm@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+          },
+          {
+            "src": "/partnerships-feature@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+          },
+          {
+            "src": "/partnerships-feature-sm.jpg",
+            "media": "(max-width: 544px)"
+          },
+          {
+            "src": "/partnerships-feature.jpg",
+            "media": null
+          }
+        ]
+      },
+      "testimonial": {
+        "quote": "We're able to structure a relationship in a way that best suits the physician, either as a partner, an affiliated physician or an employed physician.",
+        "citation": "Mike Doyle, CEO",
+        "location": "Surgery Partners"
+      }
+    },
+    "sections": [
+      {
+        "id": "physician-practices",
+        "image": {
+          "class": "ImageBlock-photo",
+          "title": "",
+          "src": "/partnerships-physician-practices-sm.jpg",
+          "srcset": [
+            {
+              "src": "/partnerships-physician-practices-sm@2x.jpg",
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+            },
+            {
+              "src": "/partnerships-physician-practices@2x.jpg",
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+            },
+            {
+              "src": "/partnerships-physician-practices-sm.jpg",
+              "media": "(max-width: 544px)"
+            },
+            {
+              "src": "/partnerships-physician-practices.jpg",
+              "media": null
+            }
+          ]
+        },
+        "title": "Physician practices",
+        "content": [
+          "Finding the right partner can bring significant rewards. Underlying our over 100 employed, 1,000 partnered and 4,000 affiliated physicians is a track record of demonstrated commitment, evidenced by our consistently high physician retention rate. Our partners benefit from efficient operations and corporate support services, enhanced revenue streams and expanded opportunities for professional and personal development. Your time is valuable and taking care of your patients is of upmost importance."
+        ]
+      },
+      {
+        "id": "ambulatory-surgery-centers",
+        "image": {
+          "class": "ImageBlock-photo",
+          "title": "",
+          "src": "/partnerships-surgery-centers-sm.jpg",
+          "srcset": [
+            {
+              "src": "/partnerships-surgery-centers-sm@2x.jpg",
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+            },
+            {
+              "src": "/partnerships-surgery-centers@2x.jpg",
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+            },
+            {
+              "src": "/partnerships-surgery-centers-sm.jpg",
+              "media": "(max-width: 544px)"
+            },
+            {
+              "src": "/partnerships-surgery-centers.jpg",
+              "media": null
+            }
+          ]
+        },
+        "title": "Ambulatory surgery centers",
+        "content": [
+          "Launching a new surgical facility or growing an existing one is no small task. It takes more than hard work; it demands strategy, resources and substantial industry knowledge. With a focus on growth and one of the industry's most experienced management teams, we are equally adept at acquiring existing facilities, as well as developing new facilities. We offer partners expertise and high-quality resources. Years of experience have shown us no two markets are alike. Each community we serve is unique, so we work with partners to develop a customized strategy for each facility."
+        ]
+      },
+      {
+        "id": "surgical-hospitals",
+        "image": {
+          "class": "ImageBlock-photo",
+          "title": "",
+          "src": "/partnerships-surgical-hospitals-sm.jpg",
+          "srcset": [
+            {
+              "src": "/partnerships-surgical-hospitals-sm@2x.jpg",
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+            },
+            {
+              "src": "/partnerships-surgical-hospitals@2x.jpg",
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+            },
+            {
+              "src": "/partnerships-surgical-hospitals-sm.jpg",
+              "media": "(max-width: 544px)"
+            },
+            {
+              "src": "/partnerships-surgical-hospitals.jpg",
+              "media": null
+            }
+          ]
+        },
+        "title": "Surgical hospitals",
+        "content": [
+          "Building on our strong track record of success in the ambulatory surgery industry, we expanded our focus to include surgical hospitals. Our surgical hospitals are owned in partnership with physicians. They offer a specialized focus and have a high nurse-to-patient ratio. Each physician plays an active role in creating the mission and philosophy for the hospital. Every physician has a personal interest in the day-to-day operations and plays an integral role in developing the quality, spirit and direction of the hospital."
+        ]
+      },
+      {
+        "id": "healthcare-systems",
+        "image": {
+          "class": "ImageBlock-photo",
+          "title": "",
+          "src": "/partnerships-healthcare-systems-sm.jpg",
+          "srcset": [
+            {
+              "src": "/partnerships-healthcare-systems-sm@2x.jpg",
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+            },
+            {
+              "src": "/partnerships-healthcare-systems@2x.jpg",
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+            },
+            {
+              "src": "/partnerships-healthcare-systems-sm.jpg",
+              "media": "(max-width: 544px)"
+            },
+            {
+              "src": "/partnerships-healthcare-systems.jpg",
+              "media": null
+            }
+          ]
+        },
+        "title": "Healthcare systems",
+        "content": [
+          "Surgery Partners has a longstanding history of partnering with healthcare systems to manage a variety of surgical facilities. Our experience developing and operating surgical facilities gives healthcare systems the freedom to focus on their core business while offering patients a high quality, low cost alternative for outpatient services. Through partnership with Surgery Partners, hospital systems can benefit from having stronger ties with physicians, additional market presence with limited investment, increased access to capital and operational efficiencies, among others. We currently have 14 facilities joint ventured with healthcare systems, including Baptist Memorial Health Services in Memphis, Tennessee and Vanderbilt Health Systems in Nashville, Tennessee."
+        ]
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "Surgery Partners’ invaluable expertise in the field has positioned my practice for tremendous growth. Their proven operations enable me to efficiently focus my efforts on providing quality care to my patients.",
+        "citation": "Robert Guirguis, DO, Medical Director",
+        "location": "Tampa Pain Relief Centers • Tampa, Florida"
+      },
+      {
+        "quote": "Surgery Partners’ extensive surgery center experience has allowed them to provide critical guidance to our facility for many years. They share our physician partners’ focus on quality, efficiency and growth and provide resources and guidance that improve our ability to excel in each.",
+        "citation": "John Kagan, MD",
+        "location": "Lee Island Coast Surgery Center • Fort Myers, Florida"
+      },
+      {
+        "quote": "The relationship through Surgery Partners made it possible for us to achieve our goal of expanding our hospital services in an outstanding new facility bringing quality and compassionate care to our community.",
+        "citation": "Nancy Maynard, MD",
+        "location": "Great Falls Clinic • Great Falls, Montana"
+      },
+      {
+        "quote": "Surgery Partners has made an excellent partner for Vanderbilt University Medical Center in development and management of a freestanding outpatient surgery center. Their seasoned team of professional healthcare surgery center managers has allowed us to expand into a community based surgery arena in which health systems generally do not have a great deal of experience. This environment has been a quality, cost effective enterprise appealing to patients, surgeons and staff.",
+        "citation": "David R. Posch, MS, Associate Vice Chancellor for Population Health",
+        "location": "VUMC and Vanderbilt Health Affiliated Network • Nashville, Tennessee"
+      }
+    ],
+    "pagination": {
+      "label": "Read next",
+      "title": "Investors",
+      "url": "/"
     }
   }
 }

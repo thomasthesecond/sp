@@ -1,25 +1,38 @@
 {
+  "status": "wip",
+  "title": "Locations page",
   "context": {
     "preview": "@preview",
     "title": "Locations",
-    "name": "locations",
+    "assetFileName": "locations",
     "classname": "LocationsPage",
     "meta": {
       "title": "Locations"
     },
-    "coverPhoto": {
-      "src": "/masthead-image.jpg",
-      "title": ""
-    },
     "masthead": {
       "title": "Locations",
-      "image": {
-        "src": "/masthead-image.jpg",
-        "title": ""
+      "coverPhoto": {
+        "title": "A doctor writing on a clipboard as another doctor observes",
+        "src": "/locations-masthead-sm.jpg",
+        "srcset": [
+          {
+            "src": "/locations-masthead-sm@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+          },
+          {
+            "src": "/locations-masthead@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+          },
+          {
+            "src": "/locations-masthead-sm.jpg",
+            "media": "(max-width: 544px)"
+          },
+          {
+            "src": "/locations-masthead.jpg",
+            "media": ""
+          }
+        ]
       }
-    },
-    "introduction": {
-      "text": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 150 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients."
     }
   }
 }

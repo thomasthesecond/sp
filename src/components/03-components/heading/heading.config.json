@@ -1,0 +1,58 @@
+{
+  "status": "wip",
+  "title": "Heading",
+  "default": "1",
+  "context": {
+    "text": "More than 600,000 annual patients"
+  },
+  "variants": [
+    {
+      "name": "1",
+      "label": "Heading 1",
+      "notes": "H1 styles can be applied to any text element by using the `heading-xlarge` classname.",
+      "context": {
+        "classname": "heading-xlarge"
+      }
+    },
+    {
+      "name": "2",
+      "label": "Heading 2",
+      "notes": "H2 styles can be applied to any text element by using the `heading-large` classname.",
+      "context": {
+        "classname": "heading-large"
+      }
+    },
+    {
+      "name": "3",
+      "label": "Heading 3",
+      "notes": "H3 styles can be applied to any text element by using the `heading-medium` classname.",
+      "context": {
+        "classname": "heading-medium"
+      }
+    },
+    {
+      "name": "4",
+      "label": "Heading 4",
+      "notes": "H4 styles can be applied to any text element by using the `heading-small` classname.",
+      "context": {
+        "classname": "heading-small"
+      }
+    },
+    {
+      "name": "5",
+      "label": "Heading 5",
+      "notes": "H5 styles can be applied to any text element by using the `heading-xsmall` classname.",
+      "context": {
+        "classname": "heading-xsmall"
+      }
+    },
+    {
+      "name": "6",
+      "label": "Heading 6",
+      "notes": "H6 styles can be applied to any text element by using the `heading-xxsmall` classname.",
+      "context": {
+        "classname": "heading-xxsmall"
+      }
+    }
+  ]
+}

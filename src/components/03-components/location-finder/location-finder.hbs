@@ -1,22 +1,24 @@
-<div class="LocationFinder container js-location-finder" data-state="" data-specialty="" data-facility="">
-  <fieldset>
-    <legend>
-      <span>{{ locationFinder.heading }}</span>
-    </legend>
+<div class="LocationFinder js-location-finder">
+  <div class="LocationFinder-container container">
+    <fieldset>
+      <legend>
+        <span>{{ locationFinder.heading }}</span>
+      </legend>
 
-    <div class="LocationFinder-controls">
-      <label for="state-select">State</label>
-      {{> @select select=locationFinder.state.select }}
+      <div class="LocationFinder-controls">
+        <label for="state-select">State</label>
+        {{> @select select=locationFinder.state.select }}
 
-      <label for="specialty-select">Specialty</label>
-      {{> @select select=locationFinder.specialty.select }}
+        <label for="specialty-select">Specialty</label>
+        {{> @select select=locationFinder.specialty.select }}
 
-      <label for="facility-select">Facility</label>
-      {{> @select select=locationFinder.facility.select }}
-    </div>
-  </fieldset>
+        <label for="facility-select">Facility</label>
+        {{> @select select=locationFinder.facility.select }}
+      </div>
+    </fieldset>
 
-  <a class="Button js-location-finder-button" href="{{ locationFinder.button.href }}">
-    {{ locationFinder.button.label }}
-  </a>
+    <a class="LocationFinder-button Button js-location-finder-button" href="{{ locationFinder.button.href }}">
+      {{ locationFinder.button.label }}
+    </a>
+  </div>
 </div>

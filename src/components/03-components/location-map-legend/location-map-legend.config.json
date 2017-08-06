@@ -1,0 +1,18 @@
+{
+  "context": {
+    "pins": [
+      {
+        "color": "#b5955d",
+        "name": "Ambulatory surgery centers"
+      },
+      {
+        "color": "#619ab1",
+        "name": "Physician practices"
+      },
+      {
+        "color": "#e07c63",
+        "name": "Physician-partnered hospitals"
+      }
+    ]
+  }
+}

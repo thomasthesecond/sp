@@ -7,19 +7,26 @@
  * @type page
  */
 
- .Introduction {
-   margin-bottom: #{(168 / $max-width) * 100vw};
-   margin-top: #{(174 / $max-width) * 100vw};
-   // margin-bottom: 72px;
-   // margin-top: 88px;
-   //
-   // @media (min-width: 544px) {
-   //   margin-bottom: #{(168 / $max-width) * 100vw};
-   //   margin-top: #{(174 / $max-width) * 100vw};
-   // }
+.sticky {
+  // @media (max-width: 669px) {
+  //   top: #{$spacing-gutter}px;
+  // }
+}
 
-   @media (min-width: 1290px) {
-     margin-bottom: 168px;
-     margin-top: 174px;
-   }
- }
+.LocationFinder {
+  margin-bottom: 56px;
+  margin-top: 48px;
+
+  @media (max-width: 669px) {
+  }
+
+  @media (min-width: 670px) {
+    margin-bottom: 216px;
+    margin-top: #{(-45 / $max-width) * 100vw};
+    z-index: $z-index-sticky;
+  }
+
+  @media (min-width: #{$max-width}px) {
+    margin-top: -45px;
+  }
+}

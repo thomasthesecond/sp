@@ -7,6 +7,15 @@
 //   color: #000080; // #d14;
 // }
 
+abbr[title] {
+  border-bottom: none;
+  // border-bottom: 1px dotted currentColor;
+  cursor: help;
+  text-decoration: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
 .swatch {
   align-items: center;
   color: #fff;

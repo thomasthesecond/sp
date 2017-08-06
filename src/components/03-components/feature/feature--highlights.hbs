@@ -1,0 +1,11 @@
+<div class="Feature Feature--tall">
+  <div class="container">
+    <div class="Feature-content">
+      {{#each feature.highlights}}
+        {{> @highlight highlight=this }}
+      {{/each}}
+    </div>
+  </div>
+
+  {{> @cover-photo coverPhoto=feature.coverPhoto }}
+</div>

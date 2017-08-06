@@ -1,0 +1,37 @@
+{
+  "context": {
+    "block": {
+      "image": {
+        "class": "ImageBlock-photo",
+        "title": "",
+        "src": "/home-careers-sm.jpg",
+        "srcset": [
+          {
+            "src": "/home-careers-sm@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+          },
+          {
+            "src": "/home-careers@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+          },
+          {
+            "src": "/home-careers-sm.jpg",
+            "media": "(max-width: 544px)"
+          },
+          {
+            "src": "/home-careers.jpg",
+            "media": ""
+          }
+        ]
+      },
+      "title": "Careers",
+      "content": [
+        "Our Surgery Partners team is comprised of more than 5,000 employees and 4,000 affiliated physicians, serving more than 500,000 patients annually. Want to work with us? Check out our current employment opportunities."
+      ],
+      "link": {
+        "label": "Learn more",
+        "url": "/components/preview/careers"
+      }
+    }
+  }
+}

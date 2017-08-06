@@ -1,0 +1,14 @@
+<div class="LocationMapLegend">
+  {{#each pins}}
+    <div class="LocationMapLegend-item">
+      <span
+        class="LocationMapLegend-pin"
+        style="color: {{ this.color }};"
+        aria-hidden="true"></span>
+
+      <span class="LocationMapLegend-name">
+        {{ this.name }}
+      </span>
+    </div>
+  {{/each}}
+</div>

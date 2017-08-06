@@ -1,0 +1,25 @@
+{
+  "status": "wip",
+  "context": {
+    "background": {
+      "$color-background-default": { "hex": "#fff", "rgb": "rgb(255, 255, 255)", "name": "White" },
+      "$color-background-footer": { "hex": "#152640", "rgb": "rgb(21, 38, 64)", "name": "Big Stone" },
+      "$color-background-cover-gradient-start": { "hex": "#b5955d", "rgb": "rgb(181, 149, 93)", "name": "Muddy Waters" },
+      "$color-background-cover-gradient-end": { "hex": "#5d91a1", "rgb": "rgb(93, 145, 161)", "name": "Horizon" },
+      "$color-background-overlay": { "hex": "#000", "rgb": "rgb(0, 0, 0)", "name": "Black" },
+      "$color-background-button": { "hex": "#5d91a1", "rgb": "rgb(93, 145, 161)", "name": "Horizon" }
+    },
+    "border": {
+      "$color-border-default": { "hex": "#bfd0d8", "rgb": "rgb(191, 208, 216)", "name": "Jungle Mist" },
+      "$color-border-introduction": { "hex": "#b5955d", "rgb": "rgb(181, 149, 93)", "name": "Muddy Waters" }
+    },
+    "text": {
+      "$color-text-default": { "hex": "#8f9aa8", "rgb": "rgb(143, 154, 168)", "name": "Regent Gray" },
+      "$color-text-heading": { "hex": "#25395d", "rgb": "rgb(37, 57, 93)", "name": "Cloud Burst" },
+      "$color-text-overlay": { "hex": "#fff", "rgb": "rgb(255, 255, 255)", "name": "White" },
+      "$color-text-introduction": { "hex": "#819ba3", "rgb": "rgb(129, 155, 163)", "name": "Gumbo" },
+      "$color-text-hamburger": { "hex": "#275e70", "rgb": "rgb(39, 94, 112)", "name": "Casal" },
+      "$color-text-more-link": { "hex": "#12769f", "rgb": "rgb(18, 118, 159)", "name": "Blue Chill" }
+    }
+  }
+}

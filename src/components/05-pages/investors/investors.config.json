@@ -1,8 +1,10 @@
 {
+  "status": "wip",
+  "title": "Investors page",
   "context": {
     "preview": "@preview",
     "title": "Investors",
-    "name": "investors",
+    "assetFileName": "investors",
     "classname": "InvestorsPage",
     "meta": {
       "title": "Investors"

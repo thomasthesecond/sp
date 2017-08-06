@@ -1,3 +1,168 @@
+// ---------------------------------------------------------------------
+// Colors
+// ---------------------------------------------------------------------
+$color-background-default: #fff; // rgb(255, 255, 255) // White
+$color-background-footer: #152640; // rgb(21, 38, 64) // Big Stone
+$color-background-cover-gradient-start: #b5955d; // rgb(181, 149, 93) // Muddy Waters
+$color-background-cover-gradient-end: #5d91a1; // rgb(93, 145, 161) // Horizon
+$color-background-overlay: #000; // rgb(0, 0, 0) // Black
+$color-background-button: #5d91a1; // rgb(93, 145, 161) // Horizon
+
+$color-border-default: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
+$color-border-introduction: #b5955d; // rgb(181, 149, 93) // Muddy Waters
+
+$color-text-default: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
+$color-text-heading: #25395d; // rgb(37, 57, 93) // Cloud Burst
+$color-text-overlay: #fff; // rgb(255, 255, 255) // White
+$color-text-introduction: #819ba3; // rgb(129, 155, 163) // Gumbo
+$color-text-hamburger: #275e70; // rgb(39, 94, 112) // Casal
+$color-text-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
+
+// h2
+// color: #21365a;
+// h3
+// color: #21365a;
+// p
+// color: #8f9aa8;
+
+// #b4c2c7, #6091a1 Building icon
+// #b4c2c7, #6091a1 Eye icon
+// #edf6f6, #6091a1 First aid icon
+// #b4c2c7, #6091a1, #6facc1 Pill icon
+// #b4c2c7, #6098af Stethoscope icon
+// #b4c2c7, #6091a1 Syringe icon
+
+// Button
+// background-color: #5d91a1;
+// color: #fff;
+// Button--dark
+// background-color: #152640;
+// border: 1px solid rgba(#bfd0d8, 0.2);
+
+// CoverPhoto, CoverVideo
+// background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
+
+// GlobalFooter
+// background-color: #152640;
+// color: rgba(#fff, 0.57);
+// GlobalFooter h4
+// color: #fff;
+// GlobalFooter a:hover
+// color: rgba(#fff, 0.77);
+// GlobalFooter-contact
+// border-left: 1px solid rgba(#bfd0d8, 0.07);
+// GlobalFooter-navigation
+// border-top: 1px solid rgba(#bfd0d8, 0.2);
+// GlobalFooter-link span::before
+// background-color: rgba(#bfd0d8, 0.07);
+// GlobalFooter-copyright
+// border-top: 1px solid rgba(#bfd0d8, 0.2);
+
+// GlobalHeader
+// background-color: #fff;
+
+// Hamburger
+// color: #275e70;
+// Hamburger--white
+// color: #fff;
+
+// ImageBlock-text h2
+// color: #435e6c;
+
+// Introduction
+// color: #819ba3;
+// Introduction::after
+// background-color: #b5955d;
+
+// LocationFinder
+// background-color: #fff;
+// box-shadow: rgba(#000, 0.5), rgba(#042435, .39);
+// LocationFinder legend
+// color: rgba(#25395d, 0.79);
+// LocationFinder select
+// border-left: 1px solid rgba(#bfd0d8, 0.27);
+
+// LocationFinderButton
+// box-shadow: rgba(#406c7a, .22);
+
+// Masthead-title
+// color: $color-text-overlay;
+// text-shadow: 0 0 54px #6facc1;
+
+// MoreLink
+// color: #12769f;
+// MoreLink--white
+// color: #fff;
+
+// Navigation
+// background-color: #fff;
+// color: #7d7d7d;
+// Navigation li:not(:first-child)
+// border-top: 1px solid rgba(#7d7d7d, 0.16);
+// Navigation a:hover
+// color: #5d91a1;
+
+// Overlay
+// background-color: rgba(#000, 0.20);
+
+// select
+// background-color: #fff;
+// color: #757675;
+// svg fill: rgba(#5e91a1, .87)
+// select.dark
+// background-color: #152640;
+// border-color: rgba(#bfd0d8, 0.2);
+// color: #fff;
+// svg fill: #bfd0d8
+
+// ServiceCard
+// color: #77919e;
+// background-color: #fff;
+// box-shadow: 0 22px 54px rgba(#6b778c, .21);
+
+// SkipLink:focus
+// background-color: #fff;
+// color: #5d91a1;
+
+// Statistic
+// color: #fff;
+// Statistic-icon
+// background-color: #fff;
+// box-shadow: 0 11px 46px rgba(#729ba8, .28);
+// color: #25395d;
+// Statistic-number
+// text-shadow: 0 0 34px #446975;
+// Statistic-label
+// text-shadow: 0 0 34px #446975;
+
+// SubNavigation
+// background-color: #fff;
+// border-bottom: 1px solid #fff;
+// color: #446975;
+// SubNavigation.is-sticky
+// border-bottom-color: rgba(#bfd0d8, .37);
+// SubNavigation::before
+// background: linear-gradient(to right, #fff 20%, rgba(#fff, 0) 100%);
+// SubNavigation::after
+// background: linear-gradient(to left, #fff 20%, rgba(#fff, 0) 100%);
+// SubNavigation-link:hover
+// color: rgba(#446975, .60);
+// SubNavigation-marker
+// background-color: #da745b;
+
+// Tagline--white
+// color: #fff; White
+
+// TeamMember-name
+// color: #25395d; Cloud Burst
+// TeamMember-title
+// color: #b5955d; Muddy Waters
+// TeamMember-panel
+// background-color: #fff; White
+// box-shadow: 0 42px 84px rgba(#000, .3); Black
+// TeamMember-bio
+// color: #8f9aa8; // Regent Gray
+
 // Background color
 $background-white: #fff;
 $background-blue: #1f6b9c;
@@ -7,7 +172,6 @@ $background-peach: #db755c;
 $background-yellow: #ffc83f;
 
 // Text color
-$color-text-overlay: #fff;
 $color-text-black: #000;
 
 // navy: #152640 #172741;
@@ -16,22 +180,26 @@ $color-text-black: #000;
 // teal: #5e91a2 #11779f;
 // light gray: #c8cdd1 #f0f1f3;
 
-// Border color
-$border-gray: #e4e4e4;
-$border-peach: #db755c;
-
+// ---------------------------------------------------------------------
 // Dimensions
+// ---------------------------------------------------------------------
 $min-width: 320;
 $max-width: 1290;
 
+// ---------------------------------------------------------------------
 // Fonts
-$font-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+// ---------------------------------------------------------------------
+$font-family-default: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
+// ---------------------------------------------------------------------
 // Typography
+// ---------------------------------------------------------------------
 $font-size-default: 16;
-$font-size-large: 96px;
-$font-size-medium: 56px;
-$font-size-small: 24px;
+$font-size-large: 96;
+$font-size-medium: 56;
+$font-size-small: 24;
+
+$font-size-heading-large: 32;
 
 $font-weight-light: 300;
 $font-weight-regular: 400;
@@ -42,23 +210,41 @@ $line-height-large: (104 / 96);
 $line-height-medium: (72 / 56);
 $line-height-small: (32 / 24);
 
+// ---------------------------------------------------------------------
 // Opacity
+// ---------------------------------------------------------------------
 
+// ---------------------------------------------------------------------
 // Spacing
+// ---------------------------------------------------------------------
 
+$spacing-gutter: 24;
+
+// ---------------------------------------------------------------------
 // Radius
+// ---------------------------------------------------------------------
 
+// ---------------------------------------------------------------------
 // Sizing
+// ---------------------------------------------------------------------
 
+// ---------------------------------------------------------------------
 // Shadow
+// ---------------------------------------------------------------------
 
+// ---------------------------------------------------------------------
 // Time
+// ---------------------------------------------------------------------
 
+// ---------------------------------------------------------------------
 // Media query
+// ---------------------------------------------------------------------
 $mq-max-480: #{(479 / $font-size-default) * 1em};
 $mq-min-480: #{(480 / $font-size-default) * 1em};
 
+// ---------------------------------------------------------------------
 // Z-index
+// ---------------------------------------------------------------------
 $z-index-toast: 10000;
 $z-index-modal: 9000;
 $z-index-overlay: 8000;

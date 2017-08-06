@@ -1,32 +1,29 @@
 {
   "name": "surgery-partners",
   "title": "Surgery Partners Component Library",
-  "version": "1.0.0",
-  "description": "Example app using Fractal",
+  "version": "1.0.0-beta",
+  "description": "Component library and documentation for surgery-partners.com",
   "main": "fractal.js",
+  "private": true,
   "scripts": {
     "start": "fractal start --sync",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run clean && webpack && fractal build",
     "assets:ci": "webpack --watch",
     "clean": "rimraf public && rimraf build",
-    "_scss": "node-sass src/components -o public",
-    "__scss": "node-sass --include-path src/components -o public",
-    "___scss": "node-sass src/main.scss public/main.css",
-    "scss": "NODE_ENV=development npm run clean && node ./scripts/scss.js",
-    "glob": "node ./scripts/glob.js -- --watcher=true",
     "scsslint": "scss-lint . --config .scsslint.yml",
-    "_sass": "node-sass --output-style=expanded src/main.scss public/main.b.css",
-    "_sass:ci": "node-sass --output-style=expanded src/main.scss public/main.b.css -w",
-    "_prefix": "postcss public/*.css --use autoprefixer -r --no-map",
-    "_prefix:ci": "postcss public/*.css --use autoprefixer -r --no-map -w",
-    "_ci": "NODE_ENV=development npm run glob && npm run sass:ci && npm run prefix:ci",
-    "ci": "NODE_ENV=development npm run start && npm run sass:ci && npm run prefix",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gh-pages": "npm run build -- -o build && gh-pages -d build",
-    "postpublish": "npm run gh-pages"
+    "gh-pages": "npm run build -- -o build && gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomasthesecond/sp.git"
   },
   "author": "Thomas Cunningham",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomasthesecond/sp/issues"
+  },
+  "homepage": "https://github.com/thomasthesecond/sp#readme",
   "theme": {
     "format": "json",
     "skin": "navy"
@@ -41,8 +38,8 @@
     "@frctl/mandelbrot": "^1.1.0",
     "babel-core": "^6.25.0",
     "babel-polyfill": "^6.23.0",
-    "handlebars-loader": "^1.5.0",
     "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0",
     "picturefill": "^3.0.2"
   },
   "devDependencies": {
@@ -54,20 +51,15 @@
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.2",
-    "fs-extra": "^3.0.1",
     "gh-pages": "^1.0.0",
-    "glob": "^7.1.1",
-    "glob-watcher": "^4.0.0",
+    "handlebars-loader": "^1.5.0",
     "node-sass": "^4.5.2",
-    "node-watch": "^0.5.5",
-    "normalize.css": "^7.0.0",
     "postcss": "^6.0.6",
     "postcss-cli": "^4.1.0",
     "postcss-loader": "^2.0.3",
     "pre-commit": "^1.2.2",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.4",
-    "shelljs": "^0.7.7",
     "style-loader": "^0.17.0",
     "webpack": "^3.2.0"
   }

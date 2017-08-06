@@ -2,6 +2,10 @@
 import "picturefill";
 import "normalize.css/normalize.css";
 import "./scss/global.scss";
+import "../components/03-components/heading/heading.scss";
+import "../components/03-components/list/list.scss";
+import "../components/03-components/paragraph/paragraph.scss";
+import "../components/03-components/table/table.scss";
 
 // Import icons
 import "../components/_02-icons/icons.scss";
@@ -10,11 +14,11 @@ import "../components/_02-icons/icons.scss";
 import "../components/_04-layout/layout.scss";
 
 // Import global components
+import "../components/03-components/_skip-link";
 import "../components/03-components/button";
 import GlobalFooter from "../components/03-components/global-footer";
 import GlobalHeader from "../components/03-components/global-header";
 import "../components/03-components/select";
-import "../components/03-components/skip-link";
 
 // Import global modules
 import "./scss/utils.scss";

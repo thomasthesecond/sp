@@ -3,17 +3,17 @@
     "teamMembers": [
       {
         "image": {
-          "src": "/team-doyle.jpg",
-          "title": ""
+          "src": "/team-doyle@2x.jpg",
+          "title": "Headshot of Michael Doyle"
         },
         "name": "Michael Doyle",
         "title": "Chief Executive Officer",
-        "bio": ""
+        "bio": "Mike Doyle serves as Chief Executive Officer of Surgery Partners. Prior to joining the company in 2004, he served as SVP of operations for HealthSouth. He brings 20-plus years’ experience in development, service line expansion and management of a wide variety of healthcare services."
       },
       {
         "image": {
-          "src": "/team-sparks.jpg",
-          "title": ""
+          "src": "/team-sparks@2x.jpg",
+          "title": "Headshot of Teresa Sparks"
         },
         "name": "Teresa Sparks",
         "title": "Chief Financial Officer",
@@ -21,57 +21,48 @@
       },
       {
         "image": {
-          "src": "/team-topke.jpg",
-          "title": ""
-        },
-        "name": "Chris Topke",
-        "title": "Ancilary Group President",
-        "bio": ""
-      },
-      {
-        "image": {
-          "src": "/team-baldock.jpg",
-          "title": ""
+          "src": "/team-baldock@2x.jpg",
+          "title": "Headshot of Jennifer Baldock"
         },
         "name": "Jennifer Baldock",
         "title": "SVP / General Council",
-        "bio": ""
+        "bio": "Jennifer Baldock has served as SVP and General Counsel of Surgery Partners since its acquisition of Symbion Healthcare in 2014, previously serving as General Counsel and Chief Compliance Officer of Symbion. She formerly served as Assistant General Counsel for both Ambulatory Services of America and Renal Care Group, and practiced law with Waller Lansden Dortch & Davis."
       },
       {
         "image": {
-          "src": "/team-taparo.jpg",
-          "title": ""
-        },
-        "name": "Tony Taparo",
-        "title": "Atlantic Group President",
-        "bio": ""
-      },
-      {
-        "image": {
-          "src": "/team-lingle.jpg",
-          "title": ""
-        },
-        "name": "Brandan Lingle",
-        "title": "Senior Vice President",
-        "bio": ""
-      },
-      {
-        "image": {
-          "src": "/team-crysel.jpg",
-          "title": ""
+          "src": "/team-crysel@2x.jpg",
+          "title": "Headshot of John Crysel"
         },
         "name": "John Crysel",
         "title": "National Group President",
-        "bio": ""
+        "bio": "John Crysel serves as President of Surgery Partners' National Group, a role he previously held with Symbion Healthcare prior to its acquisition in 2014. Before joining Symbion, he co-founded and served as President of Dover Resource Group. Prior to that, he served as Associate Administrator at Indian Path Medical Center, CEO at Crockett Hospital and CEO at Northside Hospital."
       },
       {
         "image": {
-          "src": "/team-goodwin.jpg",
-          "title": ""
+          "src": "/team-goodwin@2x.jpg",
+          "title": "Headshot of George Goodwin"
         },
         "name": "George Goodwin",
         "title": "American Group President",
-        "bio": ""
+        "bio": "George Goodwin serves as President of Surgery Partners’ American Group, previously a part of Symbion Healthcare which was acquired by Surgery Partners in November 2014.  Before joining Symbion as Vice President of Mergers and Acquisitions and later as SVP and CDO, he served as President and CEO of American Pathology Resources."
+      },
+      {
+        "image": {
+          "src": "/team-taparo@2x.jpg",
+          "title": "Headshot of Tony Taparo"
+        },
+        "name": "Tony Taparo",
+        "title": "Atlantic Group President",
+        "bio": "Tony Taparo serves as President of Surgery Partners’ Atlantic Group, previously a part of Symbion Healthcare which was acquired by Surgery Partners in November 2014. He served as RVP for Symbion from 1999-2006 and previously served as COO of Columbia Physician Services."
+      },
+      {
+        "image": {
+          "src": "/team-topke@2x.jpg",
+          "title": "Headshot of Chris Toepke"
+        },
+        "name": "Chris Topke",
+        "title": "Ancilary Group President",
+        "bio": "Chris Toepke joined Surgery Partners in 2014 and serves as Group President of Ancillary Services. Prior to joining Surgery Partners, he served as Business Unit President at One Call Care Management and previously served as a management consultant with Bain & Company."
       }
     ]
   }

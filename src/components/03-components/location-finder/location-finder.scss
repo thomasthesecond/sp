@@ -13,14 +13,58 @@ $location-finder-controls-width: $location-finder-fieldset-width - $location-fin
 $location-finder-button-width: 258;
 
 .LocationFinder {
+  // background-color: #fff;
+  // position: relative;
+  //
+  // @media (min-width: 670px) {
+  //   box-shadow: 0 2px 4px rgba(#000, .5),
+  //     0 36px 84px rgba(#042435, .39);
+  //   display: flex;
+  //   height: #{(90 / $max-width) * 100vw};
+  //   min-height: 60px;
+  //   max-height: 90px;
+  // }
+
+  @media (min-width: 670px) {
+    // background-color: rgba(#fff, 0);
+    // box-shadow: 0 2px 4px rgba(#000, 0),
+    //   0 36px 84px rgba(#042435, 0);
+    // transition: background-color 200ms, box-shadow 200ms;
+  }
+
+  &.is-sticky {
+    background-color: #fff;
+
+    @media (max-width: 669px) {
+      // box-shadow: 0 18px 42px rgba(#042435, .39);
+      box-shadow: 0 2px 4px rgba(#000, .19);
+      padding-top: #{$spacing-gutter}px;
+    }
+
+    @media (min-width: 670px) {
+      box-shadow: 0 2px 4px rgba(#000, .5),
+        0 36px 84px rgba(#042435, .39);
+    }
+  }
+}
+
+.LocationFinder-container {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(#000, 0.5),
-    0 36px 84px rgba(#042435, .39);
-  display: flex;
-  height: #{(90 / $max-width) * 100vw};
-  min-height: 60px;
-  max-height: 90px;
   position: relative;
+
+  @media (min-width: 670px) {
+    display: flex;
+    height: #{(90 / $max-width) * 100vw};
+    min-height: 60px;
+    max-height: 90px;
+  }
+
+  .LocationFinder:not(.is-sticky) & {
+    @media (min-width: 670px) {
+      box-shadow: 0 2px 4px rgba(#000, 0.5),
+        0 36px 84px rgba(#042435, .39);
+    }
+  }
 }
 
 .LocationFinder fieldset {
@@ -28,7 +72,16 @@ $location-finder-button-width: 258;
   margin: 0;
   padding: 0;
   // width: 100%;
-  width: #{($location-finder-fieldset-width / $max-width) * 100%};
+
+  @media (min-width: 670px) {
+    width: #{($location-finder-fieldset-width / $max-width) * 100%};
+  }
+}
+
+.LocationFinder.is-sticky fieldset {
+  @media (max-width: 669px) {
+    margin-bottom: -24px;
+  }
 }
 
 .LocationFinder legend {
@@ -68,25 +121,92 @@ $location-finder-button-width: 258;
 
 .LocationFinder select {
   border: 0;
-  border-left: 1px solid rgba(#bfd0d8, 0.27);
   height: 100%;
+  transition: opacity 200ms;
   width: 100%;
+
+  @media (max-width: 669px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 669px) {
+    border: 1px solid rgba(#bfd0d8, 0.27);
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: 670px) {
+    border-left: 1px solid rgba(#bfd0d8, 0.27);
+  }
+
+  &:first-of-type {
+    @media (min-width: 670px) and (max-width: 1023px) {
+      border-left: 0;
+    }
+  }
+
+  &:not(:first-of-type) {
+    @media (max-width: 669px) {
+      float: left;
+      width: calc(50% - 3px);
+    }
+  }
+
+  &:last-of-type {
+    @media (max-width: 669px) {
+      margin-left: 6px;
+    }
+  }
 }
 
-.LocationFinder .Button {
-  // padding-left: #{(100 / $max-width) * 100%};
-  // padding-right: #{(100 / $max-width) * 100%};
-  min-width: 128px;
-  // min-width: 258px;
-  // width: 258px;
-  width: #{($location-finder-button-width / $max-width) * 100%};
-  // width: #{(258 / 1075) * 100%};
+.LocationFinder.is-sticky select {
+  &:not(:first-of-type) {
+    @media (max-width: 669px) {
+      opacity: 0;
+    }
+  }
+}
+
+.LocationFinder-button {
+  transition: transform 200ms;
+  width: 100%;
+
+  @media (max-width: 669px) {
+    font-size: 12px;
+    // padding-bottom: 18px;
+    // padding-top: 18px;
+  }
+
+  @media (min-width: 670px) {
+    // padding-left: #{(100 / $max-width) * 100%};
+    // padding-right: #{(100 / $max-width) * 100%};
+    min-width: 128px;
+    // min-width: 258px;
+    // width: 258px;
+    // transition: border-radius 200ms, height 200ms;
+    width: #{($location-finder-button-width / $max-width) * 100%};
+    // width: #{(258 / 1075) * 100%};
+  }
+
+  .LocationFinder.is-sticky & {
+    @media (max-width: 669px) {
+      transform: translateY(-24px);
+      z-index: $z-index-default;
+    }
+
+    @media (min-width: 670px) {
+      align-self: center;
+      // border-radius: 56px;
+      height: 56px;
+    }
+  }
 }
 
 // Fixes a bug in Webkit browsers where flexbox
 // doesn’t work with fieldset
 .LocationFinder-controls {
-  display: flex;
-  height: 100%;
-  // width: #{($location-finder-controls-width / $max-width) * 100%};
+  @media (min-width: 670px) {
+    display: flex;
+    height: 100%;
+    // width: #{($location-finder-controls-width / $max-width) * 100%};
+  }
 }

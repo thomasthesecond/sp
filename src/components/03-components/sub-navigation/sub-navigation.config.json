@@ -1,24 +1,22 @@
 {
   "context": {
-    "subNavigation": {
-      "links": [
-        {
-          "label": "What we do",
-          "url": "#what-we-do"
-        },
-        {
-          "label": "How we’re different",
-          "url": "#how-were-different"
-        },
-        {
-          "label": "How we got here",
-          "url": "#how-we-got-here"
-        },
-        {
-          "label": "Leadership",
-          "url": "#leadership"
-        }
-      ]
-    }
+    "subNavigation": [
+      {
+        "label": "What we do",
+        "hash": "what-we-do"
+      },
+      {
+        "label": "How we’re different",
+        "hash": "how-were-different"
+      },
+      {
+        "label": "How we got here",
+        "hash": "how-we-got-here"
+      },
+      {
+        "label": "Leadership",
+        "hash": "leadership"
+      }
+    ]
   }
 }

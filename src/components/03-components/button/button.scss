@@ -23,7 +23,8 @@
   justify-content: center;
   letter-spacing: .7px;
   line-height: 1;
-  padding: 24px 40px;
+  // padding: 24px 40px;
+  padding: #{(24 / 14) * 1em} #{(40 / 14) * 1em};
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;

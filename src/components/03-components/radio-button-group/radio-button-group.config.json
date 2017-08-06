@@ -1,0 +1,31 @@
+{
+  "status": "wip",
+  "context": {
+    "items": [
+      {
+        "label": "More than 600,000 annual patients",
+        "name": "radio_buttons",
+        "id": "annual-patients",
+        "value": "More than 600,000 annual patients"
+      },
+      {
+        "label": "5,000 affiliated physicians",
+        "name": "radio_buttons",
+        "id": "affiliated-physicians",
+        "value": "5,000 affiliated physicians"
+      },
+      {
+        "label": "94% patient satisfaction",
+        "name": "radio_buttons",
+        "id": "patient-satisfaction",
+        "value": "94% patient satisfaction"
+        },
+      {
+        "label": "10% annual same-facility growth over the past five years",
+        "name": "radio_buttons",
+        "id": "facility-growth",
+        "value": "10% annual same-facility growth over the past five years"
+      }
+    ]
+  }
+}

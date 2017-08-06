@@ -1,0 +1,17 @@
+<article class="ImageBlock">
+  <a href="{{ block.link.url }}">
+    {{> @image--picture image=block.image }}
+  </a>
+
+  <div class="ImageBlock-text">
+    <h2>{{ block.title }}</h2>
+
+    {{#each block.content}}
+      <p>{{ this }}</p>
+    {{/each}}
+
+    {{#if block.link}}
+      {{> @more-link link=block.link }}
+    {{/if}}
+  </div>
+</article>

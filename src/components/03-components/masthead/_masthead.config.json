@@ -1,0 +1,47 @@
+{
+  "context": {
+    "title": "About us",
+    "coverPhoto": {
+      "src": "/masthead-image.jpg",
+      "title": ""
+    },
+    "tagline": {
+      "first": "We operate",
+      "second": "differently"
+    },
+    "link": {
+      "label": "Learn more",
+      "url": "/"
+    },
+    "video": {
+      "src": "https://media.lonelyplanet.com/mastheads/videos/new-york-city.mp4",
+      "type": "video/mp4",
+      "poster": "/masthead-image.jpg"
+    },
+    "masthead": {
+      "title": "About us",
+      "image": {
+        "sizes": [
+          {
+            "src": "/masthead-image@2x.jpg x2",
+            "title": ""
+          },
+          {
+            "src": "/masthead-image.jpg x1",
+            "title": ""
+          },
+          {
+            "src": "/masthead-image-sm@2x.jpg x2",
+            "title": ""
+          },
+          {
+            "src": "/masthead-image-sm.jpg x1",
+            "title": ""
+          }
+        ],
+        "src": "/masthead-image.jpg",
+        "title": ""
+      }
+    }
+  }
+}

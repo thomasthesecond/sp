@@ -4,7 +4,7 @@
       "heading": "Find a location",
       "description": "With our national network of surgical facilities, each serving the unique healthcare needs of its community, you are sure to find one convenient to you.",
       "map": {
-        "source": "/locations-map.png",
+        "source": "/footer-locations-map.png",
         "title": "Map of United States with locations highlighted"
       }
     },

@@ -1,46 +1,41 @@
 {
   "context": {
-    "title": "About us",
-    "coverPhoto": {
-      "src": "/masthead-image.jpg",
-      "title": ""
-    },
-    "tagline": {
-      "first": "We operate",
-      "second": "differently"
-    },
-    "link": {
-      "label": "Learn more",
-      "url": "/"
-    },
-    "video": {
-      "src": "https://media.lonelyplanet.com/mastheads/videos/new-york-city.mp4",
-      "type": "video/mp4",
-      "poster": "/masthead-image.jpg"
-    },
     "masthead": {
       "title": "About us",
-      "image": {
-        "sizes": [
+      "coverPhoto": {
+        "title": "A group of ER doctors smiling happily",
+        "src": "/about-masthead-sm.jpg",
+        "srcset": [
           {
-            "src": "/masthead-image@2x.jpg x2",
-            "title": ""
+            "src": "/about-masthead-sm@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
           },
           {
-            "src": "/masthead-image.jpg x1",
-            "title": ""
+            "src": "/about-masthead@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
           },
           {
-            "src": "/masthead-image-sm@2x.jpg x2",
-            "title": ""
+            "src": "/about-masthead-sm.jpg",
+            "media": "(max-width: 544px)"
           },
           {
-            "src": "/masthead-image-sm.jpg x1",
-            "title": ""
+            "src": "/about-masthead.jpg",
+            "media": ""
           }
-        ],
-        "src": "/masthead-image.jpg",
-        "title": ""
+        ]
+      },
+      "tagline": {
+        "first": "We operate",
+        "second": "differently"
+      },
+      "link": {
+        "label": "Learn more",
+        "url": "/"
+      },
+      "video": {
+        "src": "https://media.lonelyplanet.com/mastheads/videos/new-york-city.mp4",
+        "type": "video/mp4",
+        "poster": "/masthead-image.jpg"
       }
     }
   }

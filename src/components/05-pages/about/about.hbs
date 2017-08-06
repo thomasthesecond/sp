@@ -1,5 +1,4 @@
-{{> @skip-link }}
-{{> @global-header }}
+{{ render "@global-header" }}
 
 <main id="main" role="main" tabindex="0">
   {{> @masthead }}
@@ -12,77 +11,30 @@
     {{> @introduction }}
   </div>
 
-  <section class="section section--gradient js-spy-section" id="what-we-do">
+  <section class="section section--gradient js-spy-section" id="{{ sections.[0].id }}">
     <div class="container">
       <div class="column">
-        <div class="text-block">
-          <h2>What we do</h2>
-
-          <p>
-            Our diverse company operates multiple types of healthcare
-            businesses dedicated to improving the quality of care in a
-            convenient and cost-effective manner. The support of our
-            ancillary services is one of many unique attributes that
-            differentiates us from our competitors. These services
-            include multi-specialty physician practices, urgent care
-            facilities, anesthesia services, a diagnostic laboratory,
-            specialty pharmacy services, and optical services.
-          </p>
-        </div>
+        {{> @text-block block=sections.[0] }}
 
         {{> @service-cards }}
       </div>
     </div>
   </section>
 
-  <section class="section js-spy-section" id="how-were-different">
+  <section class="section js-spy-section" id="{{ sections.[1].id }}">
     <div class="container">
       <div class="column">
-        <h2>How we’re different</h2>
-
-        <p>
-          Our integrated approach to advancing markets allows for
-          flexibility to provide care on an individualized, local market
-          basis. Whether entering a new market with surgical facilities,
-          ancillary services or joint ventures with health systems, or
-          furthering an existing market’s growth potential by focusing
-          on base business, in-market development and new service lines,
-          our experience has shown us that no two markets are alike. We
-          see value in individuality.
-        </p>
-
-        <p>
-          Each community we serve is unique, so we work with our
-          partners to develop a customized strategy for each facility.
-          We are a leading healthcare services company with a
-          differentiated outpatient delivery model focused on providing
-          high quality, cost effective solutions for surgical and
-          related ancillary care in support of our patients and
-          physicians, as evidenced by our historically strong patient
-          satisfaction rates, physician retention trends, and
-          industry-leading track record of growth. The acquisition of
-          NSH, creates a leading, national musculoskeletal platform in
-          the United States.
-        </p>
+        {{> @text-block block=sections.[1] }}
       </div>
     </div>
 
-    {{> @feature }}
+    {{> @feature--highlights }}
   </section>
 
-  <section class="section js-spy-section" id="how-we-got-here">
+  <section class="section js-spy-section" id="{{ sections.[2].id }}">
     <div class="container">
       <div class="column">
-        <h2>How we got here</h2>
-
-        <p>
-          Far more than a business arrangement, Surgery Partners has a
-          rich history of reaching out to its partners, maintaining
-          accessibility to resources and expertise rarely found in our
-          industry. Surgery Partners' story is as simple as its business
-          style: We deliver quality at an exceptional value. We make
-          healthcare local, and more importantly, personal.
-        </p>
+        {{> @text-block block=sections.[2] }}
 
         {{> @timeline }}
       </div>
@@ -95,9 +47,13 @@
         <h2>Leadership</h2>
       </div>
 
-      {{ render "@leadership-team" }}
+      {{> @leadership-team }}
     </div>
   </section>
+
+  <div class="section section--border container">
+    {{> @pagination }}
+  </div>
 </main>
 
 {{ render "@global-footer" }}

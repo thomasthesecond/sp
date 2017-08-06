@@ -1,46 +1,86 @@
 {
+  "title": "About us page",
   "context": {
     "preview": "@preview",
     "title": "About us",
-    "name": "about",
+    "description": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 180 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients.",
+    "image": "/about-masthead.jpg",
+    "slug": "/about/",
+    "assetFileName": "about",
     "classname": "AboutPage",
     "meta": {
-      "title": "About us"
-    },
-    "coverPhoto": {
-      "src": "/masthead-image.jpg",
-      "title": ""
+      "title": "About us",
+      "description": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 180 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients.",
+      "image": "/about-masthead.jpg"
     },
     "masthead": {
       "title": "About us",
-      "image": {
-        "src": "/masthead-image.jpg",
-        "title": ""
+      "coverPhoto": {
+        "title": "A group of ER doctors smiling happily",
+        "src": "/about-masthead-sm.jpg",
+        "srcset": [
+          {
+            "src": "/about-masthead-sm@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+          },
+          {
+            "src": "/about-masthead@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+          },
+          {
+            "src": "/about-masthead-sm.jpg",
+            "media": "(max-width: 544px)"
+          },
+          {
+            "src": "/about-masthead.jpg",
+            "media": null
+          }
+        ]
       }
     },
-    "subNavigation": {
-      "links": [
-        {
-          "label": "What we do",
-          "url": "#what-we-do"
-        },
-        {
-          "label": "How we’re different",
-          "url": "#how-were-different"
-        },
-        {
-          "label": "How we got here",
-          "url": "#how-we-got-here"
-        },
-        {
-          "label": "Leadership",
-          "url": "#leadership"
-        }
-      ]
-    },
-    "introduction": {
-      "text": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 150 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients."
-    },
+    "subNavigation": [
+      {
+        "label": "What we do",
+        "hash": "what-we-do"
+      },
+      {
+        "label": "How we’re different",
+        "hash": "how-were-different"
+      },
+      {
+        "label": "How we got here",
+        "hash": "how-we-got-here"
+      },
+      {
+        "label": "Leadership",
+        "hash": "leadership"
+      }
+    ],
+    "introduction": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 180 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients.",
+    "sections": [
+      {
+        "id": "what-we-do",
+        "heading": "What we do",
+        "content": [
+          "Our diverse company operates multiple types of healthcare businesses dedicated to improving the quality of care in a convenient and cost-effective manner. The support of our ancillary services is one of many unique attributes that differentiate us from our competitors. These services include multi-specialty physician practices, urgent care facilities, anesthesia services, a diagnostic laboratory, specialty pharmacy services, and optical services."
+        ]
+      },
+      {
+        "id": "how-were-different",
+        "heading": "How we’re different",
+        "content": [
+          "Our integrated approach to advancing markets allows for flexibility to provide care on an individualized, local market basis. Whether entering into a new market with surgical facilities, ancillary services or joint ventures with health systems, or furthering an existing market’s growth potential by focusing on base business, in-market development and new service lines, our experience has shown us that no two markets are alike. We see value in individuality.",
+          "Each community we serve is unique, so we work with our partners to develop a customized strategy for each facility.  We are a leading healthcare services company with a differentiated outpatient delivery model focused on providing high quality, cost effective solutions for surgical and related ancillary care in support of our patients and physicians, as evidenced by our historically strong patient satisfaction rates, physician retention trends, and industry-leading track record of growth."
+        ]
+      },
+      {
+        "id": "how-we-got-here",
+        "heading": "How we got here",
+        "content": [
+          "Far more than a business arrangement, Surgery Partners has a rich history of reaching out to its partners, maintaining accessibility to resources and expertise rarely found in our industry.  Surgery Partners' story is as simple as its business style: We deliver quality at an exceptional value.  We make healthcare local, and more importantly, personal."
+        ]
+      }
+    ],
     "serviceCards": [
       {
         "icon": "icon-building-color",
@@ -69,10 +109,28 @@
     ],
     "feature": {
       "coverPhoto": {
-        "src": "/feature-image.jpg",
-        "title": ""
+        "title": "Two doctors looking at X-rays on a handheld tablet device",
+        "src": "/about-feature-sm.jpg",
+        "srcset": [
+          {
+            "src": "/about-feature-sm@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+          },
+          {
+            "src": "/about-feature@2x.jpg",
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+          },
+          {
+            "src": "/about-feature-sm.jpg",
+            "media": "(max-width: 544px)"
+          },
+          {
+            "src": "/about-feature.jpg",
+            "media": null
+          }
+        ]
       },
-      "statistics": [
+      "highlights": [
         {
           "icon": "icon-stethoscope",
           "number": "5,000 +",
@@ -102,11 +160,11 @@
       },
       {
         "headline": "2011",
-        "description": "We merged with NovaMed in 2011 with a focus on ophthalmology services."
+        "description": "We merged with NovaMed in 2011, expanding our specialty offerings, particularly in ophthalmology, and expanding our ancillary services reach."
       },
       {
         "headline": "2014",
-        "description": "After achieving a milestone of ten successful years, we merged with Symbion Healthcare, a large multispecialty provider of ambulatory surgery centers and hospitals."
+        "description": "After achieving a milestone of ten successful years, we merged with Symbion Healthcare, significantly diversifying our geographic footprint and furthering our multi-specialty offerings."
       },
       {
         "headline": "2015",
@@ -114,12 +172,82 @@
       },
       {
         "headline": "2017",
-        "description": "In 2017 we announced the acquisition of National Surgical Healthcare, representing a unique opportunity to establish the largest standalone, independent surgical facilities operator in the United States, with a strong presence in musculoskeletal procedures."
+        "description": "We merged with National Surgical Healthcare in 2017, representing a unique opportunity to establish the largest standalone, independent surgical facilities operator in the United States, with a strong presence in musculoskeletal procedures."
       },
       {
         "headline": "Today",
         "description": "We are an industry leader in surgical services, with a differentiated outpatient delivery  model backed by our suite of ancillary service offerings in support our physicians, including multi-specialty physician practices, urgent care facilities, anesthesia services, laboratory services, specialty pharmacy services, and optical services."
       }
-    ]
+    ],
+    "teamMembers": [
+      {
+        "image": {
+          "src": "/team-doyle@2x.jpg",
+          "title": "Headshot of Michael Doyle"
+        },
+        "name": "Michael Doyle",
+        "title": "Chief Executive Officer",
+        "bio": "Mike Doyle serves as Chief Executive Officer of Surgery Partners. Prior to joining the company in 2004, he served as SVP of operations for HealthSouth. He brings 20-plus years’ experience in development, service line expansion and management of a wide variety of healthcare services."
+      },
+      {
+        "image": {
+          "src": "/team-sparks@2x.jpg",
+          "title": "Headshot of Teresa Sparks"
+        },
+        "name": "Teresa Sparks",
+        "title": "Chief Financial Officer",
+        "bio": "Teresa Sparks serves as Executive Vice President and CFO of Surgery Partners and served as SVP and CFO of Symbion Healthcare until it's acquisition in 2014. She was Corporate Controller of Symbion from its inception until she was named VP in 2002. Prior to joining Symbion, she served as Assistant Controller for HealthWise of America, Inc., and senior healthcare auditor for Deloitte and Touche."
+      },
+      {
+        "image": {
+          "src": "/team-baldock@2x.jpg",
+          "title": "Headshot of Jennifer Baldock"
+        },
+        "name": "Jennifer Baldock",
+        "title": "SVP / General Council",
+        "bio": "Jennifer Baldock has served as SVP and General Counsel of Surgery Partners since its acquisition of Symbion Healthcare in 2014, previously serving as General Counsel and Chief Compliance Officer of Symbion. She formerly served as Assistant General Counsel for both Ambulatory Services of America and Renal Care Group, and practiced law with Waller Lansden Dortch & Davis."
+      },
+      {
+        "image": {
+          "src": "/team-crysel@2x.jpg",
+          "title": "Headshot of John Crysel"
+        },
+        "name": "John Crysel",
+        "title": "National Group President",
+        "bio": "John Crysel serves as President of Surgery Partners' National Group, a role he previously held with Symbion Healthcare prior to its acquisition in 2014. Before joining Symbion, he co-founded and served as President of Dover Resource Group. Prior to that, he served as Associate Administrator at Indian Path Medical Center, CEO at Crockett Hospital and CEO at Northside Hospital."
+      },
+      {
+        "image": {
+          "src": "/team-goodwin@2x.jpg",
+          "title": "Headshot of George Goodwin"
+        },
+        "name": "George Goodwin",
+        "title": "American Group President",
+        "bio": "George Goodwin serves as President of Surgery Partners’ American Group, previously a part of Symbion Healthcare which was acquired by Surgery Partners in November 2014.  Before joining Symbion as Vice President of Mergers and Acquisitions and later as SVP and CDO, he served as President and CEO of American Pathology Resources."
+      },
+      {
+        "image": {
+          "src": "/team-taparo@2x.jpg",
+          "title": "Headshot of Tony Taparo"
+        },
+        "name": "Tony Taparo",
+        "title": "Atlantic Group President",
+        "bio": "Tony Taparo serves as President of Surgery Partners’ Atlantic Group, previously a part of Symbion Healthcare which was acquired by Surgery Partners in November 2014. He served as RVP for Symbion from 1999-2006 and previously served as COO of Columbia Physician Services."
+      },
+      {
+        "image": {
+          "src": "/team-topke@2x.jpg",
+          "title": "Headshot of Chris Toepke"
+        },
+        "name": "Chris Topke",
+        "title": "Ancilary Group President",
+        "bio": "Chris Toepke joined Surgery Partners in 2014 and serves as Group President of Ancillary Services. Prior to joining Surgery Partners, he served as Business Unit President at One Call Care Management and previously served as a management consultant with Bain & Company."
+      }
+    ],
+    "pagination": {
+      "label": "Read next",
+      "title": "Partnerships",
+      "url": "/"
+    }
   }
 }

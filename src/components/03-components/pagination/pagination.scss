@@ -1,0 +1,70 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Pagination
+ * @type Organism
+ */
+
+.Pagination {
+  // border-top: 1px solid $color-border-default;
+  // padding-bottom: #{(170 / $max-width) * 100vw};
+  // padding-top: #{(176 / $max-width) * 100vw};
+  text-align: center;
+
+  // @media(min-width: 1290px) {
+  //   padding-bottom: 170px;
+  //   padding-top: 176px;
+  // }
+}
+
+.Pagination a {
+  color: $color-text-heading;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 200ms;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: rgba($color-text-heading, .7);
+
+    .Pagination-icon {
+      transform: translateX(#{((80 + 16) / 80) * 1em});
+    }
+  }
+}
+
+.Pagination-label {
+  color: #b5955d;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  @media (min-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+.Pagination-title {
+  color: currentColor;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+}
+
+.Pagination-icon {
+  @media (max-width: 599px) {
+    display: none;
+  }
+
+  color: #bfd0d8;
+  height: #{(40 / 80) * 1em};
+  font-size: #{(80 / $font-size-heading-large) * 1em};
+  position: absolute;
+  right: 0;
+  top: #{(9 / 80) * 1em};
+  transform: translateX(#{((80 + 32) / 80) * 1em});
+  transition: transform 200ms;
+}

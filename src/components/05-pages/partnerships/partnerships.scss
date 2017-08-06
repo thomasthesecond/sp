@@ -7,19 +7,34 @@
  * @type page
  */
 
- .Introduction {
-   margin-bottom: #{(168 / $max-width) * 100vw};
-   margin-top: #{(174 / $max-width) * 100vw};
-   // margin-bottom: 72px;
-   // margin-top: 88px;
-   //
-   // @media (min-width: 544px) {
-   //   margin-bottom: #{(168 / $max-width) * 100vw};
-   //   margin-top: #{(174 / $max-width) * 100vw};
-   // }
+.Introduction {
+  margin-bottom: #{(168 / $max-width) * 100vw};
+  margin-top: #{(174 / $max-width) * 100vw};
 
-   @media (min-width: 1290px) {
-     margin-bottom: 168px;
-     margin-top: 174px;
-   }
- }
+  // margin-bottom: 72px;
+  // margin-top: 88px;
+  //
+  // @media (min-width: 544px) {
+  //   margin-bottom: #{(168 / $max-width) * 100vw};
+  //   margin-top: #{(174 / $max-width) * 100vw};
+  // }
+
+  @media (min-width: 1290px) {
+    margin-bottom: 168px;
+    margin-top: 174px;
+  }
+}
+
+.divided {
+  border-bottom: 1px solid rgba($color-border-default, .27);
+  border-top: 1px solid rgba($color-border-default, .27);
+  margin-bottom: 184px;
+  margin-top: 184px;
+  padding-bottom: 120px;
+  padding-top: 120px;
+}
+
+.Testimonial {
+  margin-left: auto;
+  margin-right: auto;
+}

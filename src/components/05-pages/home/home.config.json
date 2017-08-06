@@ -1,19 +1,22 @@
 {
+  "status": "wip",
+  "title": "Home page",
   "context": {
     "preview": "@preview",
     "title": "",
-    "name": "home",
+    "description": "",
+    "image": "",
+    "slug": "/",
+    "assetFileName": "home",
     "classname": "HomePage",
     "meta": {
-      "title": ""
-    },
-    "coverPhoto": {
-      "src": "/masthead-image.jpg",
-      "title": ""
+      "title": "",
+      "description": "",
+      "image": ""
     },
     "masthead": {
       "title": "About us",
-      "image": {
+      "coverPhoto": {
         "src": "/masthead-image.jpg",
         "title": ""
       },
@@ -31,20 +34,12 @@
         "poster": "/masthead-image.jpg"
       }
     },
-    "introduction": {
-      "text": "Creating exceptional value for our patients and physicians through our unique healthcare delivery"
-    },
+    "introduction": "Creating exceptional value for our patients, physicians and payors through our unique healthcare model",
     "sections": [
       {
         "block": {
-          "title": "Partnerships",
-          "description": "We are able to structure a relationship in a way that best suits the physician, either as a partner, an affiliate or as an employed physician. We deliver strategy, resources and substantial industry knowledge.",
-          "link": {
-            "label": "Learn more",
-            "url": "/components/preview/partnerships"
-          },
           "image": {
-            "class": "HomeBlock-photo",
+            "class": "ImageBlock-photo",
             "title": "",
             "src": "/home-partnerships-sm.jpg",
             "srcset": [
@@ -62,23 +57,24 @@
               },
               {
                 "src": "/home-partnerships.jpg",
-                "media": ""
+                "media": null
               }
             ]
+          },
+          "title": "Partnerships",
+          "content": [
+            "We are able to structure a relationship in a way that best suits the physician, either as a partner, an affiliate or as an employed physician. We deliver strategy, resources and substantial industry knowledge."
+          ],
+          "link": {
+            "label": "Learn more",
+            "url": "/components/preview/partnerships"
           }
         }
       },
       {
         "block": {
-          "alternate": true,
-          "title": "Investors",
-          "description": "Surgery Partners is a leading healthcare services company with an integrated outpatient delivery model. We own and operate more than 150 locations in 29 states, including surgical facilities, a diagnostic laboratory, multi-specialty physician practices, anesthesia services and urgent care facilities.",
-          "link": {
-            "label": "Learn more",
-            "url": "/components/preview/investors"
-          },
           "image": {
-            "class": "HomeBlock-photo",
+            "class": "ImageBlock-photo",
             "title": "",
             "src": "/home-investors-sm.jpg",
             "srcset": [
@@ -96,22 +92,25 @@
               },
               {
                 "src": "/home-investors.jpg",
-                "media": ""
+                "media": null
               }
             ]
-          }
+          },
+          "title": "Investors",
+          "content": [
+            "Surgery Partners is a leading healthcare services company with an integrated outpatient delivery model. We own and operate more than 180 locations in 32 states, including surgical facilities, a diagnostic laboratory, physician practices, anesthesia services and urgent care facilities."
+          ],
+          "link": {
+            "label": "Learn more",
+            "url": "/components/preview/investors"
+          },
+          "alternate": true
         }
       },
       {
         "block": {
-          "title": "Careers",
-          "description": "Our Surgery Partners team is comprised of more than 5,000 employees and 4,000 affiliated physicians, serving more than 500,000 patients annually. Want to work with us? Check out our current employment opportunities.",
-          "link": {
-            "label": "View openings",
-            "url": "/components/preview/careers"
-          },
           "image": {
-            "class": "HomeBlock-photo",
+            "class": "ImageBlock-photo",
             "title": "",
             "src": "/home-careers-sm.jpg",
             "srcset": [
@@ -129,9 +128,17 @@
               },
               {
                 "src": "/home-careers.jpg",
-                "media": ""
+                "media": null
               }
             ]
+          },
+          "title": "Careers",
+          "content": [
+            "Our Surgery Partners team is comprised of more than 5,000 employees and 5,000 affiliated physicians, serving more than 600,000 patients annually. Want to work with us? Check out our current employment opportunities."
+          ],
+          "link": {
+            "label": "View openings",
+            "url": "/components/preview/careers"
           }
         }
       }

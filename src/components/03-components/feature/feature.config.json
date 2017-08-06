@@ -1,32 +1,58 @@
 {
-  "context": {
-    "feature": {
-      "coverPhoto": {
-        "src": "/feature-image.jpg",
-        "title": ""
-      },
-      "statistics": [
-        {
-          "icon": "icon-stethoscope",
-          "number": "5,000 +",
-          "label": "Affiliated physicians"
-        },
-        {
-          "icon": "icon-chart-line",
-          "number": "10%",
-          "label": "Annual same-facility growth over the past five years"
-        },
-        {
-          "icon": "icon-heart",
-          "number": "94%",
-          "label": "Patient satisfaction"
-        },
-        {
-          "icon": "icon-clipboard",
-          "number": "600,000 +",
-          "label": "Annual patients"
+  "title": "Feature",
+  "default": "quote",
+  "context": {},
+  "variants": [
+    {
+      "name": "quote",
+      "label": "Quote",
+      "context": {
+        "feature": {
+          "coverPhoto": {
+            "src": "/partnerships-feature@2x.jpg",
+            "title": ""
+          },
+          "testimonial": {
+            "quote": "We're able to structure a relationship in a way that best suits the physician, either as a partner, an affiliated physician or an employed physician.",
+            "citation": "Mike Doyle, CEO",
+            "location": "Surgery Partners"
+          }
         }
-      ]
+      }
+    },
+    {
+      "name": "highlights",
+      "label": "Highlights",
+      "context": {
+        "feature": {
+          "coverPhoto": {
+            "src": "/about-feature@2x.jpg",
+            "title": ""
+          },
+          "highlights": [
+            {
+              "icon": "icon-stethoscope",
+              "number": "5,000 +",
+              "label": "Affiliated physicians"
+            },
+            {
+              "icon": "icon-chart-line",
+              "number": "10%",
+              "label": "Annual same-facility growth over the past five years"
+            },
+            {
+              "icon": "icon-heart",
+              "number": "94%",
+              "label": "Patient satisfaction"
+            },
+            {
+              "icon": "icon-clipboard",
+              "number": "600,000 +",
+              "label": "Annual patients"
+            }
+          ]
+        }
+      }
     }
-  }
+  ]
 }

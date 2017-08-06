@@ -1,11 +1,57 @@
-{{> @skip-link }}
-{{> @global-header }}
+{{ render "@global-header" }}
 
 <main id="main" role="main" tabindex="0">
   {{> @masthead }}
 
+  <div class="sticky">
+    {{> @sub-navigation }}
+  </div>
+
+  {{!> @image-block block=this.block }}
+  {{!> @image-block--alternate block=this.block }}
+
   <div class="container">
     {{> @introduction }}
+
+    <section class="section js-spy-section" id="{{ sections.[0].id }}">
+      {{> @image-block block=sections.[0] }}
+
+      <div class="divided">
+        {{> @testimonial testimonial=testimonials.[0] }}
+      </div>
+    </section>
+
+    <section class="section js-spy-section" id="{{ sections.[1].id }}">
+      {{> @image-block--alternate block=sections.[1] }}
+
+      <div class="divided">
+        {{> @testimonial testimonial=testimonials.[1] }}
+      </div>
+    </section>
+  </div>
+
+  {{> @feature }}
+
+  <div class="container">
+    <section class="section js-spy-section" id="{{ sections.[2].id }}">
+      {{> @image-block--alternate block=sections.[2] }}
+
+      <div class="divided">
+        {{> @testimonial testimonial=testimonials.[2] }}
+      </div>
+    </section>
+
+    <section class="section js-spy-section" id="{{ sections.[3].id }}">
+      {{> @image-block block=sections.[3] }}
+
+      <div class="divided">
+        {{> @testimonial testimonial=testimonials.[3] }}
+      </div>
+    </section>
+  </div>
+
+  <div class="section section--border container">
+    {{> @pagination }}
   </div>
 </main>
 

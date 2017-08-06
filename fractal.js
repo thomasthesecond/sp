@@ -23,7 +23,7 @@ fractal.set("project.title", pkg.title);
 /**
  * How the collection of components will be referenced in navigation
  */
-fractal.components.set('label', 'Patterns');
+fractal.components.set("label", "Patterns");
 
 /**
  * Path to the directory where the components live

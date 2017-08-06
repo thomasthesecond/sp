@@ -1,0 +1,13 @@
+<table class="token-table">
+  <tr>
+    <th>Classname</th>
+    <th>Purpose</th>
+  </tr>
+
+  {{#each class}}
+    <tr>
+      <td><code>{{ @key }}</code></td>
+      <td>{{ this }}</td>
+    </tr>
+  {{/each}}
+</table>

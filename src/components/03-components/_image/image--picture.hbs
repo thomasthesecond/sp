@@ -1,11 +1,11 @@
 <picture>
   {{#each image.srcset}}
     <source
-      srcset="{{ this.src }}"
+      srcset="{{ path this.src }}"
       {{#if this.media}}media="{{ this.media }}"{{/if}}>
   {{/each}}
 
   <img{{#if image.class}} class="{{ image.class }}"{{/if}}
-    src="{{ image.src }}"
+    src="{{ path image.src }}"
     alt="{{ image.title }}">
 </picture>

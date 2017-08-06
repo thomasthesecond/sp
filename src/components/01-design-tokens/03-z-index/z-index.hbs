@@ -1,0 +1,13 @@
+<table class="token-table">
+  <tr>
+    <th>Token</th>
+    <th>Value</th>
+  </tr>
+
+  {{#each value}}
+    <tr>
+      <td><code>$z-index-{{ @key }}</code></td>
+      <td><code>{{ this }}</code></td>
+    </tr>
+  {{/each}}
+</table>

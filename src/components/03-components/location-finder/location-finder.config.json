@@ -97,10 +97,10 @@
           "name": "facility-select",
           "options": [
             { "label": "Facility type", "value": "all", "selected": "true" },
-            { "value": "Ambulatory Surgery Center" , "value": "surgery" },
-            { "value": "Physician Practice", "value": "practice" },
-            { "value": "Other", "value": "other" },
-            { "value": "Physician-Partnered Hospital", "value": "hospital" }
+            { "label": "Ambulatory Surgery Center", "value": "surgery" },
+            { "label": "Physician Practice", "value": "practice" },
+            { "label": "Other", "value": "other" },
+            { "label": "Physician-Partnered Hospital", "value": "hospital" }
           ]
         }
       }

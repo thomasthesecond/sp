@@ -1,0 +1,10 @@
+{
+  "status": "wip",
+  "title": "Spacing tokens",
+  "label": "Spacing",
+  "context": {
+    "value": {
+      "gutter": 24
+    }
+  }
+}

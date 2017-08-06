@@ -1,8 +1,8 @@
-{{> @skip-link }}
-{{> @global-header }}
+{{ render "@global-header" }}
 
 <main id="main" role="main" tabindex="0">
   {{> @masthead--video }}
+
   {{ render "@location-finder" }}
   {{ render "@location-finder-button" }}
 
@@ -11,11 +11,11 @@
 
     {{#each sections}}
       {{#unless this.block.alternate}}
-        {{> @home-block block=this.block }}
+        {{> @image-block block=this.block }}
       {{/unless}}
 
       {{#if this.block.alternate}}
-        {{> @home-block--alternate block=this.block }}
+        {{> @image-block--alternate block=this.block }}
       {{/if}}
     {{/each}}
   </div>
