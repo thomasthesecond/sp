@@ -10,12 +10,18 @@
 .Feature {
   align-items: center;
   display: flex;
-  height: #{(660 / 800) * 100vw};
+  height: #{(446 / 800) * 100vw};
   justify-content: center;
-  max-height: 996px;
-  min-height: 660px;
+  max-height: 508px;
+  min-height: 446px;
   position: relative;
   width: 100%;
+}
+
+.Feature--tall {
+  height: #{(660 / 800) * 100vw};
+  max-height: 1000px;
+  min-height: 660px;
 }
 
 .Feature-content {

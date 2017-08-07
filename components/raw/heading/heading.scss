@@ -1,0 +1,82 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Heading
+ * @type Atom
+ */
+
+h1,
+.heading-xlarge {
+  @include fluid-type(
+    $min-font-size: 40,
+    $max-font-size: 80,
+    $min-width: $min-width,
+    $max-width: $max-width
+  );
+
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+  // letter-spacing: -.5px;
+  // letter-spacing: -3px;
+}
+
+h2,
+.heading-large {
+  @include fluid-type(
+    $min-font-size: 24,
+    $max-font-size: 32,
+    $min-width: $min-width,
+    $max-width: $max-width
+  );
+
+  color: $color-text-heading;
+  font-weight: $font-weight-bold;
+  line-height: (56 / 32);
+  margin-bottom: .5em;
+  margin-top: .5em;
+  // margin: 0;
+  // letter-spacing: 0;
+  // letter-spacing: -1px;
+}
+
+h3,
+.heading-medium {
+  @include fluid-type(
+    $min-font-size: 16,
+    $max-font-size: 24,
+    $min-width: $min-width,
+    $max-width: $max-width
+  );
+
+  color: $color-text-heading;
+  font-weight: $font-weight-bold;
+  line-height: (32 / 24);
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
+
+h4,
+.heading-small {
+  // @include fluid-type(
+  //   $min-font-size: 14,
+  //   $max-font-size: 16,
+  //   $min-width: 480,
+  //   $max-width: $max-width
+  // );
+
+  color: $color-text-heading;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  line-height: (24 / 14);
+  margin-bottom: 1em;
+  margin-top: 1em;
+
+  @media (min-width: 700px) {
+    font-size: 16px;
+    line-height: (28 / 16);
+  }
+}

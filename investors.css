@@ -202,17 +202,17 @@
   line-height: 1.8;
   margin-left: auto;
   margin-right: auto;
-  max-width: 924px;
+  max-width: 856px;
   text-align: center;
 }
 
-@media (min-width: 30em) and (max-width: 57.75em) {
+@media (min-width: 30em) and (max-width: 53.5em) {
   .Introduction {
-    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (924 - 480));
+    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (856 - 480));
   }
 }
 
-@media (min-width: 57.75em) {
+@media (min-width: 53.5em) {
   .Introduction {
     font-size: 32px;
   }
@@ -234,8 +234,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 2.25em;
-    max-width: 408px;
-    width: 44.15584vw;
+    max-width: 264px;
+    width: 30.84112vw;
   }
 }
 /**

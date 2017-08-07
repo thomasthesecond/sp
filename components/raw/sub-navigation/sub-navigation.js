@@ -6,17 +6,24 @@ class SubNavigation {
     this.subNavigation = document.querySelector(".js-sub-navigation");
     this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
     this.subNavigationItems = this.subNavigation.querySelectorAll("li");
+    this.sections = document.querySelectorAll(".js-spy-section");
 
     this.updateMarker = this.updateMarker.bind(this);
+    this.makeMarkerVisible = this.makeMarkerVisible.bind(this);
+    this.makeMarkerInvisible = this.makeMarkerInvisible.bind(this);
     this.setMarkerWidth = this.setMarkerWidth.bind(this);
     this.setMarkerOffset = this.setMarkerOffset.bind(this);
     this.setMarkerTransition = this.setMarkerTransition.bind(this);
     this.listenForAnchorClick = this.listenForAnchorClick.bind(this);
     this.scrollSpy = this.scrollSpy.bind(this);
+    this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
+    this.setUpItems = this.setUpItems.bind(this);
+    // this.updateSubNavigationOffset = this.updateSubNavigationOffset.bind(this);
 
-    this.margin = 14;
-    this.subNavigationHeight = this.subNavigation.offsetHeight;
     this.activeClass = "is-active";
+    this.currentItem = null;
+    this.scrollSpySettings = [];
+    // this.subNavigationOffset = this.subNavigation.parentNode.offsetTop;
   }
 
   addActiveClass(item) {
@@ -33,8 +40,17 @@ class SubNavigation {
     const activeWidth = item.offsetWidth;
     const activeOffset = item.offsetLeft;
 
+    this.makeMarkerVisible();
     this.setMarkerWidth(activeWidth);
     this.setMarkerOffset(activeOffset);
+  }
+
+  makeMarkerVisible() {
+    this.subNavigationMarker.style.opacity = 1;
+  }
+
+  makeMarkerInvisible() {
+    this.subNavigationMarker.style.opacity = 0;
   }
 
   setMarkerWidth(width) {
@@ -46,9 +62,9 @@ class SubNavigation {
   }
 
   setMarkerTransition() {
-    if (this.subNavigationMarker.style.transition === "") {
-      this.subNavigationMarker.style.transition = "transform 200ms";
-    }
+    setTimeout(() => {
+      this.subNavigationMarker.style.transition = "opacity 200ms, transform 200ms";
+    }, 200);
   }
 
   listenForAnchorClick(anchor) {
@@ -56,90 +72,105 @@ class SubNavigation {
       const parent = anchor.parentNode;
       const hashId = anchor.hash.replace("#", "");
 
-      if (!parent.classList.contains("is-active")) {
-        this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));
-        this.addActiveClass(parent);
-      }
+      // if (!parent.classList.contains("is-active")) {
+      //   this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));
+      //   this.addActiveClass(parent);
+      // }
 
-      document.getElementById(hashId).scrollIntoView();
+      window.scroll({
+        top: document.getElementById(hashId).offsetTop,
+        left: 0,
+        behavior: "smooth"
+      });
 
-      this.setMarkerTransition();
-      this.updateMarker(anchor.parentNode);
+      // this.updateMarker(anchor.parentNode);
 
       event.preventDefault();
     });
   };
 
   scrollSpy(settings) {
-    // console.log(settings);
-    // console.log(window.scrollTop);
-    // console.log(document.body.scrollTop);
+    let currentId = null;
 
-    // console.log(window.pageYOffset || document.documentElement.scrollTop);
-    // console.log(
-    //   document.getElementById("what-we-do").offsetTop,
-    //   document.getElementById("what-we-do").offsetHeight
-    // );
+    settings.forEach((item) => {
+      const top = document.getElementById(item.id).offsetTop;
+      const bottom = top + document.getElementById(item.id).offsetHeight;
 
-    // settings.forEach((item) => {
-    //   console.log(
-    //     window.pageYOffset >= item.top && window.pageYOffset < item.bottom
-    //     ? item.id : null);
-    // });
+      if ((window.pageYOffset || document.documentElement.scrollTop) >= top && (window.pageYOffset || document.documentElement.scrollTop) < bottom) {
+        currentId = item.id;
+      }
+    });
 
-    // const top = document.getElementById("what-we-do").offsetTop;
-    // const bottom = top + document.getElementById("what-we-do").offsetHeight;
+    this.currentItem = this.subNavigation.querySelector(`#${currentId}-item`);
 
-    // console.log(window.pageYOffset,
-    //   window.pageYOffset >= top && window.pageYOffset < bottom
-    //   ? true : false);
+    if (this.currentItem && !this.currentItem.classList.contains(this.activeClass)) {
+      this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));
+      this.addActiveClass(this.currentItem);
+    }
+
+    if (this.currentItem) {
+      this.updateMarker(this.currentItem);
+    } else {
+      this.makeMarkerInvisible();
+      this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));
+    }
   }
 
-  render() {
-    const sections = document.querySelectorAll(".js-spy-section");
-    const scrollSpySettings = [];
-    // const scrollSpySettings = {};
-
-    sections.forEach((section) => {
-      scrollSpySettings.push({
+  setUpScrollSpy() {
+    this.sections.forEach((section) => {
+      this.scrollSpySettings.push({
         id: section.id,
         top: section.offsetTop,
         bottom: (section.offsetTop + section.offsetHeight),
         height: section.offsetHeight
       });
-      // scrollSpySettings[section.id] = {
-      //   top: section.offsetTop,
-      //   bottom: (section.offsetTop + section.offsetHeight),
-      //   height: section.offsetHeight,
-      // };
     });
 
-    // console.log(scrollSpySettings);
+    this.scrollSpy(this.scrollSpySettings);
 
-    // this.scrollSpy(scrollSpySettings);
-    // window.addEventListener("scroll", (event) => {
-    //   setTimeout(() => {
-    //     this.scrollSpy(scrollSpySettings);
-    //   }, 500);
-    // });
+    window.addEventListener("scroll", (event) => {
+      setTimeout(() => {
+        this.scrollSpy(this.scrollSpySettings);
 
+        if (this.currentItem) {
+          this.setMarkerTransition();
+        };
+
+        // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        //
+        // if (scrollPosition >= this.subNavigationOffset) {
+        //   this.subNavigation.classList.add("is-sticky");
+        // } else {
+        //   this.subNavigation.classList.remove("is-sticky");
+        // }
+      }, 100);
+    });
+  }
+
+  setUpItems() {
     this.subNavigationItems.forEach((item, index) => {
       const anchor = item.querySelector("a");
-      // const isFirstItem = index === 0;
 
       if (item.classList.contains(this.activeClass)) {
         this.updateMarker(item);
       }
 
-      // if ($item.classList.contains("is-active")) {
-      //   updateMarker($item);
-      // } else if (isFirstItem) {
-      //   addActiveClass($item);
-      //   updateMarker($item);
-      // }
-
       this.listenForAnchorClick(anchor);
     });
+  }
+
+  // updateSubNavigationOffset() {
+  //   window.addEventListener("resize", (event) => {
+  //     setTimeout(() => {
+  //       this.subNavigationOffset = this.subNavigation.offsetTop;
+  //     }, 200);
+  //   });
+  // }
+
+  render() {
+    this.setUpScrollSpy();
+    this.setUpItems();
+    // this.updateSubNavigationOffset();
   }
 }
 

@@ -13,6 +13,10 @@
   }
 }
 
+.section--border {
+  border-top: 1px solid $color-border-default;
+}
+
 .section--gradient {
   background: linear-gradient(to bottom, #fcfaf7 0%, #fff 100%);
   // padding-bottom: 120px;

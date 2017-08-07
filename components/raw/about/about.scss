@@ -57,13 +57,13 @@
 
 .GlobalFooter {
   // margin-top: 136px;
-  margin-top: #{(240 / $max-width) * 100vw};
+  // margin-top: #{(240 / $max-width) * 100vw};
 
   // @media (min-width: 544px) {
   //   margin-top: #{(240 / $max-width) * 100vw};
   // }
 
-  @media (min-width: 1290px) {
-    margin-top: 240px;
-  }
+  // @media (min-width: 1290px) {
+  //   margin-top: 240px;
+  // }
 }

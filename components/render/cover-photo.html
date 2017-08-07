@@ -1,8 +1,24 @@
 
 
 <div class="CoverPhoto">
-  <img
-    src="../../masthead-image.jpg"
-    alt="">
+
+    <picture>
+        <source
+          srcset="../../about-masthead-sm@2x.jpg"
+          media="(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)">
+        <source
+          srcset="../../about-masthead@2x.jpg"
+          media="(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)">
+        <source
+          srcset="../../about-masthead-sm.jpg"
+          media="(max-width: 544px)">
+        <source
+          srcset="../../about-masthead.jpg"
+          >
+    
+      <img
+        src="../../about-masthead-sm.jpg"
+        alt="A group of ER doctors smiling happily">
+    </picture>
 </div>
 

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 62);
+/******/ 	return __webpack_require__(__webpack_require__.s = 76);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -90,6 +90,12 @@
 
 __webpack_require__(4);
 
+__webpack_require__(0);
+
+__webpack_require__(1);
+
+__webpack_require__(2);
+
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
@@ -105,12 +111,6 @@ __webpack_require__(4);
 
 __webpack_require__(6);
 
-__webpack_require__(0);
-
-__webpack_require__(1);
-
-__webpack_require__(2);
-
 /***/ }),
 /* 6 */
 /***/ (function(module, exports) {
@@ -120,102 +120,52 @@ __webpack_require__(2);
 /***/ }),
 /* 7 */,
 /* 8 */,
-/* 9 */,
+/* 9 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 10 */,
 /* 11 */,
-/* 12 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
+/* 12 */,
+/* 13 */,
 /* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(44);
+__webpack_require__(16);
 
 __webpack_require__(0);
 
-__webpack_require__(12);
+__webpack_require__(9);
 
 /***/ }),
-/* 44 */
+/* 16 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 45 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(46);
+__webpack_require__(18);
 
 /***/ }),
-/* 46 */
+/* 18 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(13);
-
-__webpack_require__(48);
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 49 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -225,18 +175,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _subNavigation = __webpack_require__(50);
+var _subNavigation = __webpack_require__(20);
 
 var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-__webpack_require__(51);
+__webpack_require__(21);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _subNavigation2.default;
 
 /***/ }),
-/* 50 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -258,17 +208,24 @@ var SubNavigation = function () {
     this.subNavigation = document.querySelector(".js-sub-navigation");
     this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
     this.subNavigationItems = this.subNavigation.querySelectorAll("li");
+    this.sections = document.querySelectorAll(".js-spy-section");
 
     this.updateMarker = this.updateMarker.bind(this);
+    this.makeMarkerVisible = this.makeMarkerVisible.bind(this);
+    this.makeMarkerInvisible = this.makeMarkerInvisible.bind(this);
     this.setMarkerWidth = this.setMarkerWidth.bind(this);
     this.setMarkerOffset = this.setMarkerOffset.bind(this);
     this.setMarkerTransition = this.setMarkerTransition.bind(this);
     this.listenForAnchorClick = this.listenForAnchorClick.bind(this);
     this.scrollSpy = this.scrollSpy.bind(this);
+    this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
+    this.setUpItems = this.setUpItems.bind(this);
+    // this.updateSubNavigationOffset = this.updateSubNavigationOffset.bind(this);
 
-    this.margin = 14;
-    this.subNavigationHeight = this.subNavigation.offsetHeight;
     this.activeClass = "is-active";
+    this.currentItem = null;
+    this.scrollSpySettings = [];
+    // this.subNavigationOffset = this.subNavigation.parentNode.offsetTop;
   }
 
   _createClass(SubNavigation, [{
@@ -289,8 +246,19 @@ var SubNavigation = function () {
       var activeWidth = item.offsetWidth;
       var activeOffset = item.offsetLeft;
 
+      this.makeMarkerVisible();
       this.setMarkerWidth(activeWidth);
       this.setMarkerOffset(activeOffset);
+    }
+  }, {
+    key: "makeMarkerVisible",
+    value: function makeMarkerVisible() {
+      this.subNavigationMarker.style.opacity = 1;
+    }
+  }, {
+    key: "makeMarkerInvisible",
+    value: function makeMarkerInvisible() {
+      this.subNavigationMarker.style.opacity = 0;
     }
   }, {
     key: "setMarkerWidth",
@@ -305,28 +273,31 @@ var SubNavigation = function () {
   }, {
     key: "setMarkerTransition",
     value: function setMarkerTransition() {
-      if (this.subNavigationMarker.style.transition === "") {
-        this.subNavigationMarker.style.transition = "transform 200ms";
-      }
+      var _this = this;
+
+      setTimeout(function () {
+        _this.subNavigationMarker.style.transition = "opacity 200ms, transform 200ms";
+      }, 200);
     }
   }, {
     key: "listenForAnchorClick",
     value: function listenForAnchorClick(anchor) {
-      var _this = this;
-
       anchor.addEventListener("click", function (event) {
         var parent = anchor.parentNode;
         var hashId = anchor.hash.replace("#", "");
 
-        if (!parent.classList.contains("is-active")) {
-          _this.removeActiveClass(_this.subNavigation.querySelector("." + _this.activeClass));
-          _this.addActiveClass(parent);
-        }
+        // if (!parent.classList.contains("is-active")) {
+        //   this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));
+        //   this.addActiveClass(parent);
+        // }
 
-        document.getElementById(hashId).scrollIntoView();
+        window.scroll({
+          top: document.getElementById(hashId).offsetTop,
+          left: 0,
+          behavior: "smooth"
+        });
 
-        _this.setMarkerTransition();
-        _this.updateMarker(anchor.parentNode);
+        // this.updateMarker(anchor.parentNode);
 
         event.preventDefault();
       });
@@ -334,78 +305,95 @@ var SubNavigation = function () {
   }, {
     key: "scrollSpy",
     value: function scrollSpy(settings) {
-      // console.log(settings);
-      // console.log(window.scrollTop);
-      // console.log(document.body.scrollTop);
+      var currentId = null;
 
-      // console.log(window.pageYOffset || document.documentElement.scrollTop);
-      // console.log(
-      //   document.getElementById("what-we-do").offsetTop,
-      //   document.getElementById("what-we-do").offsetHeight
-      // );
+      settings.forEach(function (item) {
+        var top = document.getElementById(item.id).offsetTop;
+        var bottom = top + document.getElementById(item.id).offsetHeight;
 
-      // settings.forEach((item) => {
-      //   console.log(
-      //     window.pageYOffset >= item.top && window.pageYOffset < item.bottom
-      //     ? item.id : null);
-      // });
+        if ((window.pageYOffset || document.documentElement.scrollTop) >= top && (window.pageYOffset || document.documentElement.scrollTop) < bottom) {
+          currentId = item.id;
+        }
+      });
 
-      // const top = document.getElementById("what-we-do").offsetTop;
-      // const bottom = top + document.getElementById("what-we-do").offsetHeight;
+      this.currentItem = this.subNavigation.querySelector("#" + currentId + "-item");
 
-      // console.log(window.pageYOffset,
-      //   window.pageYOffset >= top && window.pageYOffset < bottom
-      //   ? true : false);
+      if (this.currentItem && !this.currentItem.classList.contains(this.activeClass)) {
+        this.removeActiveClass(this.subNavigation.querySelector("." + this.activeClass));
+        this.addActiveClass(this.currentItem);
+      }
+
+      if (this.currentItem) {
+        this.updateMarker(this.currentItem);
+      } else {
+        this.makeMarkerInvisible();
+        this.removeActiveClass(this.subNavigation.querySelector("." + this.activeClass));
+      }
     }
   }, {
-    key: "render",
-    value: function render() {
+    key: "setUpScrollSpy",
+    value: function setUpScrollSpy() {
       var _this2 = this;
 
-      var sections = document.querySelectorAll(".js-spy-section");
-      var scrollSpySettings = [];
-      // const scrollSpySettings = {};
-
-      sections.forEach(function (section) {
-        scrollSpySettings.push({
+      this.sections.forEach(function (section) {
+        _this2.scrollSpySettings.push({
           id: section.id,
           top: section.offsetTop,
           bottom: section.offsetTop + section.offsetHeight,
           height: section.offsetHeight
         });
-        // scrollSpySettings[section.id] = {
-        //   top: section.offsetTop,
-        //   bottom: (section.offsetTop + section.offsetHeight),
-        //   height: section.offsetHeight,
-        // };
       });
 
-      // console.log(scrollSpySettings);
+      this.scrollSpy(this.scrollSpySettings);
 
-      // this.scrollSpy(scrollSpySettings);
-      // window.addEventListener("scroll", (event) => {
-      //   setTimeout(() => {
-      //     this.scrollSpy(scrollSpySettings);
-      //   }, 500);
-      // });
+      window.addEventListener("scroll", function (event) {
+        setTimeout(function () {
+          _this2.scrollSpy(_this2.scrollSpySettings);
+
+          if (_this2.currentItem) {
+            _this2.setMarkerTransition();
+          };
+
+          // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+          //
+          // if (scrollPosition >= this.subNavigationOffset) {
+          //   this.subNavigation.classList.add("is-sticky");
+          // } else {
+          //   this.subNavigation.classList.remove("is-sticky");
+          // }
+        }, 100);
+      });
+    }
+  }, {
+    key: "setUpItems",
+    value: function setUpItems() {
+      var _this3 = this;
 
       this.subNavigationItems.forEach(function (item, index) {
         var anchor = item.querySelector("a");
-        // const isFirstItem = index === 0;
 
-        if (item.classList.contains(_this2.activeClass)) {
-          _this2.updateMarker(item);
+        if (item.classList.contains(_this3.activeClass)) {
+          _this3.updateMarker(item);
         }
 
-        // if ($item.classList.contains("is-active")) {
-        //   updateMarker($item);
-        // } else if (isFirstItem) {
-        //   addActiveClass($item);
-        //   updateMarker($item);
-        // }
-
-        _this2.listenForAnchorClick(anchor);
+        _this3.listenForAnchorClick(anchor);
       });
+    }
+
+    // updateSubNavigationOffset() {
+    //   window.addEventListener("resize", (event) => {
+    //     setTimeout(() => {
+    //       this.subNavigationOffset = this.subNavigation.offsetTop;
+    //     }, 200);
+    //   });
+    // }
+
+  }, {
+    key: "render",
+    value: function render() {
+      this.setUpScrollSpy();
+      this.setUpItems();
+      // this.updateSubNavigationOffset();
     }
   }]);
 
@@ -415,78 +403,159 @@ var SubNavigation = function () {
 exports.default = SubNavigation;
 
 /***/ }),
-/* 51 */
+/* 21 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-__webpack_require__(53);
+// removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
 /* 53 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-
-__webpack_require__(55);
-
-/***/ }),
-/* 55 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(63);
-
-__webpack_require__(43);
-
-__webpack_require__(3);
-
-__webpack_require__(45);
-
-__webpack_require__(5);
-
-__webpack_require__(47);
-
-var _subNavigation = __webpack_require__(49);
-
-var _subNavigation2 = _interopRequireDefault(_subNavigation);
-
-__webpack_require__(52);
 
 __webpack_require__(54);
 
+/***/ }),
+/* 54 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(25);
+
+__webpack_require__(56);
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(58);
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(60);
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(77);
+
+__webpack_require__(15);
+
+__webpack_require__(5);
+
+__webpack_require__(53);
+
+__webpack_require__(3);
+
+__webpack_require__(17);
+
+__webpack_require__(55);
+
+var _subNavigation = __webpack_require__(19);
+
+var _subNavigation2 = _interopRequireDefault(_subNavigation);
+
+__webpack_require__(57);
+
+__webpack_require__(59);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Import page module
+var subNavigation = new _subNavigation2.default();
+
 // Import page-specific components
-var subNavigation = new _subNavigation2.default(); // Import page module
 
 
 subNavigation.render();
@@ -494,16 +563,16 @@ subNavigation.render();
 console.info("About loaded");
 
 /***/ }),
-/* 63 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(64);
+__webpack_require__(78);
 
 /***/ }),
-/* 64 */
+/* 78 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 68);
+/******/ 	return __webpack_require__(__webpack_require__.s = 82);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,6 +94,12 @@
 
 __webpack_require__(4);
 
+__webpack_require__(0);
+
+__webpack_require__(1);
+
+__webpack_require__(2);
+
 /***/ }),
 
 /***/ 4:
@@ -111,12 +117,6 @@ __webpack_require__(4);
 
 __webpack_require__(6);
 
-__webpack_require__(0);
-
-__webpack_require__(1);
-
-__webpack_require__(2);
-
 /***/ }),
 
 /***/ 6:
@@ -126,34 +126,34 @@ __webpack_require__(2);
 
 /***/ }),
 
-/***/ 68:
+/***/ 82:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(69);
-
-__webpack_require__(3);
+__webpack_require__(83);
 
 __webpack_require__(5);
+
+__webpack_require__(3);
 
 // Import page-specific components
 console.info("Investors loaded"); // Import page module
 
 /***/ }),
 
-/***/ 69:
+/***/ 83:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(70);
+__webpack_require__(84);
 
 /***/ }),
 
-/***/ 70:
+/***/ 84:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

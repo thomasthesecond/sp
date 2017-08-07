@@ -202,17 +202,17 @@
   line-height: 1.8;
   margin-left: auto;
   margin-right: auto;
-  max-width: 924px;
+  max-width: 856px;
   text-align: center;
 }
 
-@media (min-width: 30em) and (max-width: 57.75em) {
+@media (min-width: 30em) and (max-width: 53.5em) {
   .Introduction {
-    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (924 - 480));
+    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (856 - 480));
   }
 }
 
-@media (min-width: 57.75em) {
+@media (min-width: 53.5em) {
   .Introduction {
     font-size: 32px;
   }
@@ -234,9 +234,606 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 2.25em;
-    max-width: 408px;
-    width: 44.15584vw;
+    max-width: 264px;
+    width: 30.84112vw;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Home block
+ * @type Organism
+ */
+@media (min-width: 544px) {
+  .ImageBlock {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.ImageBlock > a {
+  display: block;
+}
+
+@media (min-width: 544px) {
+  .ImageBlock--alternate {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.ImageBlock-photo {
+  display: block;
+  height: auto;
+}
+
+@media (max-width: 543px) {
+  .ImageBlock-photo {
+    margin-left: -24px;
+    width: calc(100% + 48px);
+  }
+}
+
+@media (min-width: 544px) {
+  .ImageBlock-photo {
+    max-height: 720px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 544px) {
+  .ImageBlock--alternate .ImageBlock-photo {
+    max-height: 668px;
+  }
+}
+
+@media (min-width: 544px) {
+  .ImageBlock-text {
+    margin-left: 10.54264%;
+    max-width: 400px;
+  }
+}
+
+.ImageBlock--alternate .ImageBlock-text {
+  margin-left: 0;
+}
+
+@media (min-width: 544px) {
+  .ImageBlock--alternate .ImageBlock-text {
+    margin-right: 9.30233%;
+  }
+}
+
+@media (min-width: 1088px) {
+  .ImageBlock--alternate .ImageBlock-text {
+    margin-left: 8.06202%;
+  }
+}
+
+.ImageBlock-text h2 {
+  color: #435e6c;
+  font-weight: 300;
+}
+
+@media (max-width: 544px) {
+  .ImageBlock-text h2 {
+    margin-top: 32px;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: More link
+ * @type Atom
+ */
+.MoreLink {
+  color: #12769f;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.35714;
+  position: relative;
+  text-decoration: none;
+}
+
+.MoreLink:hover .icon, .MoreLink:active .icon, .MoreLink:focus .icon {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.MoreLink--white {
+  color: #fff;
+}
+
+.MoreLink .icon {
+  display: block;
+  font-size: 24px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  -webkit-transform: translateX(36px);
+          transform: translateX(36px);
+  -webkit-transition: color 200ms, -webkit-transform 200ms;
+  transition: color 200ms, -webkit-transform 200ms;
+  transition: color 200ms, transform 200ms;
+  transition: color 200ms, transform 200ms, -webkit-transform 200ms;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Sub Navigation
+ * @type Molecule
+ */
+.SubNavigation {
+  background-color: #fff;
+  color: #446975;
+  font-size: 12px;
+  height: 64px;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  .SubNavigation {
+    font-size: 16px;
+    height: 90px;
+  }
+}
+
+.SubNavigation::after, .SubNavigation::before {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 24px;
+  z-index: 11;
+}
+
+.SubNavigation::before {
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #fff), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, #fff 20%, rgba(255, 255, 255, 0) 100%);
+  left: 0;
+}
+
+.SubNavigation::after {
+  background: -webkit-gradient(linear, right top, left top, color-stop(20%, #fff), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to left, #fff 20%, rgba(255, 255, 255, 0) 100%);
+  right: 0;
+}
+
+.SubNavigation-list {
+  border-bottom: 1px solid rgba(191, 208, 216, 0.37);
+  line-height: 1;
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+}
+
+@media (max-width: 1006px) {
+  .SubNavigation-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 1007px) {
+  .SubNavigation-list {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1290px;
+  }
+}
+
+.SubNavigation-item {
+  display: inline-block;
+  height: 100%;
+  margin-left: 14px;
+  margin-right: 14px;
+  padding-bottom: 22px;
+  padding-top: 29px;
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  .SubNavigation-item {
+    padding-bottom: 34px;
+    padding-top: 39px;
+  }
+}
+
+.SubNavigation-link {
+  color: currentColor;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
+.SubNavigation-item:not(.is-active) .SubNavigation-link:hover, .SubNavigation-item:not(.is-active) .SubNavigation-link:active {
+  color: rgba(68, 105, 117, 0.6);
+}
+
+.SubNavigation-marker {
+  background-color: #b5955d;
+  bottom: 0;
+  height: 7px;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+  width: 0;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Pagination
+ * @type Organism
+ */
+.Pagination {
+  text-align: center;
+}
+
+.Pagination a {
+  color: #25395d;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
+.Pagination a:hover, .Pagination a:active, .Pagination a:focus {
+  color: rgba(37, 57, 93, 0.7);
+}
+
+.Pagination a:hover .Pagination-icon, .Pagination a:active .Pagination-icon, .Pagination a:focus .Pagination-icon {
+  -webkit-transform: translateX(1.2em);
+          transform: translateX(1.2em);
+}
+
+.Pagination-label {
+  color: #b5955d;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+  .Pagination-label {
+    font-size: 14px;
+  }
+}
+
+.Pagination-title {
+  color: currentColor;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+}
+
+.Pagination-icon {
+  color: #bfd0d8;
+  height: 0.5em;
+  font-size: 2.5em;
+  position: absolute;
+  right: 0;
+  top: 0.1125em;
+  -webkit-transform: translateX(1.4em);
+          transform: translateX(1.4em);
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+@media (max-width: 599px) {
+  .Pagination-icon {
+    display: none;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Feature
+ * @type Organism
+ */
+.Feature {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 55.75vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 508px;
+  min-height: 446px;
+  position: relative;
+  width: 100%;
+}
+
+.Feature--tall {
+  height: 82.5vw;
+  max-height: 1000px;
+  min-height: 660px;
+}
+
+.Feature-content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 760px;
+  z-index: 1;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Highlight
+ * @type Molecule
+ */
+.Highlight {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Highlight-icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 11px 46px rgba(114, 155, 168, 0.28);
+          box-shadow: 0 11px 46px rgba(114, 155, 168, 0.28);
+  color: #25395d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-size: 24px;
+  height: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 24px;
+  width: 60px;
+}
+
+@media (min-width: 420px) {
+  .Highlight-icon {
+    font-size: 32px;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.Highlight-data {
+  max-width: 180px;
+  padding-top: 5px;
+  width: 100%;
+}
+
+@media (min-width: 420px) {
+  .Highlight-data {
+    max-width: 220px;
+  }
+}
+
+.Highlight-number {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  text-shadow: 0 0 34px #446975;
+}
+
+@media (min-width: 420px) {
+  .Highlight-number {
+    font-size: 32px;
+  }
+}
+
+.Highlight-label {
+  font-size: 12px;
+  line-height: 1.41667;
+  font-weight: 600;
+  margin-top: 7px;
+  text-shadow: 0 0 34px #446975;
+}
+
+@media (min-width: 420px) {
+  .Highlight-label {
+    font-size: 14px;
+    line-height: 1.35714;
+  }
+}
+
+.Feature .Highlight {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+}
+
+@media (min-width: 660px) {
+  .Feature .Highlight {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+  }
+}
+
+@media (max-width: 659px) {
+  .Feature .Highlight:not(:first-child) {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 660px) {
+  .Feature .Highlight:nth-child(3), .Feature .Highlight:nth-child(4) {
+    margin-top: 128px;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Testimonial
+ * @type Organism
+ */
+.Testimonial {
+  color: #25395d;
+  margin: 0;
+  max-width: 856px;
+  text-align: center;
+}
+
+.Testimonial--white {
+  color: #fff;
+}
+
+.Testimonial-quote {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  margin-top: 0;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .Testimonial-quote {
+    font-size: calc(16px + (20 - 16) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  .Testimonial-quote {
+    font-size: 20px;
+  }
+}
+
+.Testimonial--white .Testimonial-quote {
+  text-shadow: 0 2px 24px #000;
+}
+
+.Testimonial-citation {
+  display: inline-block;
+  max-width: 424px;
+  width: 80%;
+}
+
+@media (min-width: 480px) {
+  .Testimonial-citation {
+    width: 49.53271%;
+  }
+}
+
+.Testimonial-citation br {
+  display: none;
+}
+
+.Testimonial-person {
+  font-size: 14px;
+  display: block;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .Testimonial-person {
+    font-size: calc(14px + (16 - 14) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  .Testimonial-person {
+    font-size: 16px;
+  }
+}
+
+.Testimonial-location {
+  font-size: 10px;
+  color: #b5955d;
+  display: block;
+  line-height: 1.21429;
+  margin-top: 0.42857em;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .Testimonial-location {
+    font-size: calc(10px + (14 - 10) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  .Testimonial-location {
+    font-size: 14px;
+  }
+}
+
+.Testimonial--white .Testimonial-location {
+  color: inherit;
 }
 /**
  * Functions
@@ -258,4 +855,18 @@
     margin-bottom: 168px;
     margin-top: 174px;
   }
+}
+
+.divided {
+  border-bottom: 1px solid rgba(191, 208, 216, 0.27);
+  border-top: 1px solid rgba(191, 208, 216, 0.27);
+  margin-bottom: 184px;
+  margin-top: 184px;
+  padding-bottom: 120px;
+  padding-top: 120px;
+}
+
+.Testimonial {
+  margin-left: auto;
+  margin-right: auto;
 }

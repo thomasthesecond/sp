@@ -1,0 +1,82 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Testimonial
+ * @type Organism
+ */
+
+.Testimonial {
+  color: $color-text-heading;
+  margin: 0;
+  max-width: 856px;
+  text-align: center;
+}
+
+.Testimonial--white {
+  color: $color-text-overlay;
+}
+
+.Testimonial-quote {
+  @include fluid-type(
+    $min-font-size: 16,
+    $max-font-size: 20,
+    $min-width: 600,
+    $max-width: 1024
+  );
+
+  font-weight: $font-weight-light;
+  line-height: (32 / 20);
+  margin-bottom: #{(32 / 20) * 1em};
+  margin-top: 0;
+
+  .Testimonial--white & {
+    text-shadow: 0 2px 24px #000;
+  }
+}
+
+.Testimonial-citation {
+  display: inline-block;
+  max-width: 424px;
+  width: 80%;
+
+  @media (min-width: 480px) {
+    width: #{(424 / 856) * 100%};
+  }
+
+  br {
+    display: none;
+  }
+}
+
+.Testimonial-person {
+  @include fluid-type(
+    $min-font-size: 14,
+    $max-font-size: 16,
+    $min-width: 600,
+    $max-width: 1024
+  );
+
+  display: block;
+  font-weight: $font-weight-bold;
+  line-height: (24 / 16);
+}
+
+.Testimonial-location {
+  @include fluid-type(
+    $min-font-size: 10,
+    $max-font-size: 14,
+    $min-width: 600,
+    $max-width: 1024
+  );
+
+  color: #b5955d;
+  display: block;
+  line-height: (17 / 14);
+  margin-top: #{(6 / 14) * 1em};
+
+  .Testimonial--white & {
+    color: inherit;
+  }
+}

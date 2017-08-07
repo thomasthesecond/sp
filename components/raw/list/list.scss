@@ -1,0 +1,31 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: List
+ * @type Atom
+ */
+
+ul {}
+
+ol {}
+
+.list-style-square {
+  list-style-type: square;
+}
+
+.list-style-disc {
+  list-style-type: disc;
+}
+
+.list-style-disc {
+  list-style-type: disc;
+}
+
+.list-unstyled {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+dl {}

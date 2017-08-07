@@ -11,7 +11,7 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/navy.css?cachebust=1.1.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/navy.css?cachebust=1.2.0" type="text/css">
 
 
 <title>Sub Navigation | Surgery Partners Component Library</title>
@@ -159,22 +159,22 @@
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation js-sub-navigation"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-list"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"what-we-do-item"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#what-we-do"</span>&gt;</span>
           What we do
         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"how-were-different-item"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#how-were-different"</span>&gt;</span>
           How we’re different
         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"how-we-got-here-item"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#how-we-got-here"</span>&gt;</span>
           How we got here
         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"leadership-item"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#leadership"</span>&gt;</span>
           Leadership
         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -192,10 +192,10 @@
     <code class="Code Code--lang-handlebars">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation js-sub-navigation"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-list"</span>&gt;</span>
-    </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> subNavigation.links}}</span><span class="xml">
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> active}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> is-active</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{this.url}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-          </span><span class="hljs-template-variable">{{this.label}}</span><span class="xml">
+    </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> subNavigation}}</span><span class="xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ this.hash }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">-item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#</span></span></span><span class="hljs-template-variable">{{ this.hash }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+          </span><span class="hljs-template-variable">{{ this.label }}</span><span class="xml">
         <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">each</span></span>}}</span><span class="xml">
@@ -213,26 +213,24 @@
         
             
             <pre>{
-  <span class="hljs-attr">"subNavigation"</span>: {
-    <span class="hljs-attr">"links"</span>: [
-      {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"What we do"</span>,
-        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#what-we-do"</span>
-      },
-      {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"How we’re different"</span>,
-        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#how-were-different"</span>
-      },
-      {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"How we got here"</span>,
-        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#how-we-got-here"</span>
-      },
-      {
-        <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Leadership"</span>,
-        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"#leadership"</span>
-      }
-    ]
-  }
+  <span class="hljs-attr">"subNavigation"</span>: [
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"What we do"</span>,
+      <span class="hljs-attr">"hash"</span>: <span class="hljs-string">"what-we-do"</span>
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"How we’re different"</span>,
+      <span class="hljs-attr">"hash"</span>: <span class="hljs-string">"how-were-different"</span>
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"How we got here"</span>,
+      <span class="hljs-attr">"hash"</span>: <span class="hljs-string">"how-we-got-here"</span>
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Leadership"</span>,
+      <span class="hljs-attr">"hash"</span>: <span class="hljs-string">"leadership"</span>
+    }
+  ]
 }</pre>
             
         
@@ -250,17 +248,17 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-412401d9a4f90178dd6fc72dfa201c36">index.js</option>
+                <option value="file-eaa76b9676c15fb4438f8efc32a0ea9e">index.js</option>
                 
-                <option value="file-45cade9571a1cc69fcdfaa7aae7faf65">sub-navigation.js</option>
+                <option value="file-a320b4d2f284b79c8aaf5eaf76bb6147">sub-navigation.js</option>
                 
-                <option value="file-cf5ac2e5b9929778521db30912bcf7fe">sub-navigation.scss</option>
+                <option value="file-dcd8079b810ac40332975d72872251fc">sub-navigation.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-412401d9a4f90178dd6fc72dfa201c36" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-eaa76b9676c15fb4438f8efc32a0ea9e" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -293,7 +291,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-45cade9571a1cc69fcdfaa7aae7faf65" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-a320b4d2f284b79c8aaf5eaf76bb6147" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -309,17 +307,24 @@
     <span class="hljs-keyword">this</span>.subNavigation = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-sub-navigation"</span>);
     <span class="hljs-keyword">this</span>.subNavigationMarker = <span class="hljs-keyword">this</span>.subNavigation.querySelector(<span class="hljs-string">".js-sub-navigation-marker"</span>);
     <span class="hljs-keyword">this</span>.subNavigationItems = <span class="hljs-keyword">this</span>.subNavigation.querySelectorAll(<span class="hljs-string">"li"</span>);
+    <span class="hljs-keyword">this</span>.sections = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">".js-spy-section"</span>);
 
     <span class="hljs-keyword">this</span>.updateMarker = <span class="hljs-keyword">this</span>.updateMarker.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.makeMarkerVisible = <span class="hljs-keyword">this</span>.makeMarkerVisible.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.makeMarkerInvisible = <span class="hljs-keyword">this</span>.makeMarkerInvisible.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.setMarkerWidth = <span class="hljs-keyword">this</span>.setMarkerWidth.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.setMarkerOffset = <span class="hljs-keyword">this</span>.setMarkerOffset.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.setMarkerTransition = <span class="hljs-keyword">this</span>.setMarkerTransition.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.listenForAnchorClick = <span class="hljs-keyword">this</span>.listenForAnchorClick.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.scrollSpy = <span class="hljs-keyword">this</span>.scrollSpy.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.setUpScrollSpy = <span class="hljs-keyword">this</span>.setUpScrollSpy.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.setUpItems = <span class="hljs-keyword">this</span>.setUpItems.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-comment">// this.updateSubNavigationOffset = this.updateSubNavigationOffset.bind(this);</span>
 
-    <span class="hljs-keyword">this</span>.margin = <span class="hljs-number">14</span>;
-    <span class="hljs-keyword">this</span>.subNavigationHeight = <span class="hljs-keyword">this</span>.subNavigation.offsetHeight;
     <span class="hljs-keyword">this</span>.activeClass = <span class="hljs-string">"is-active"</span>;
+    <span class="hljs-keyword">this</span>.currentItem = <span class="hljs-literal">null</span>;
+    <span class="hljs-keyword">this</span>.scrollSpySettings = [];
+    <span class="hljs-comment">// this.subNavigationOffset = this.subNavigation.parentNode.offsetTop;</span>
   }
 
   addActiveClass(item) {
@@ -336,8 +341,17 @@
     <span class="hljs-keyword">const</span> activeWidth = item.offsetWidth;
     <span class="hljs-keyword">const</span> activeOffset = item.offsetLeft;
 
+    <span class="hljs-keyword">this</span>.makeMarkerVisible();
     <span class="hljs-keyword">this</span>.setMarkerWidth(activeWidth);
     <span class="hljs-keyword">this</span>.setMarkerOffset(activeOffset);
+  }
+
+  makeMarkerVisible() {
+    <span class="hljs-keyword">this</span>.subNavigationMarker.style.opacity = <span class="hljs-number">1</span>;
+  }
+
+  makeMarkerInvisible() {
+    <span class="hljs-keyword">this</span>.subNavigationMarker.style.opacity = <span class="hljs-number">0</span>;
   }
 
   setMarkerWidth(width) {
@@ -349,9 +363,9 @@
   }
 
   setMarkerTransition() {
-    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.subNavigationMarker.style.transition === <span class="hljs-string">""</span>) {
-      <span class="hljs-keyword">this</span>.subNavigationMarker.style.transition = <span class="hljs-string">"transform 200ms"</span>;
-    }
+    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      <span class="hljs-keyword">this</span>.subNavigationMarker.style.transition = <span class="hljs-string">"opacity 200ms, transform 200ms"</span>;
+    }, <span class="hljs-number">200</span>);
   }
 
   listenForAnchorClick(anchor) {
@@ -359,90 +373,105 @@
       <span class="hljs-keyword">const</span> parent = anchor.parentNode;
       <span class="hljs-keyword">const</span> hashId = anchor.hash.replace(<span class="hljs-string">"#"</span>, <span class="hljs-string">""</span>);
 
-      <span class="hljs-keyword">if</span> (!parent.classList.contains(<span class="hljs-string">"is-active"</span>)) {
-        <span class="hljs-keyword">this</span>.removeActiveClass(<span class="hljs-keyword">this</span>.subNavigation.querySelector(<span class="hljs-string">`.<span class="hljs-subst">${<span class="hljs-keyword">this</span>.activeClass}</span>`</span>));
-        <span class="hljs-keyword">this</span>.addActiveClass(parent);
-      }
+      <span class="hljs-comment">// if (!parent.classList.contains("is-active")) {</span>
+      <span class="hljs-comment">//   this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));</span>
+      <span class="hljs-comment">//   this.addActiveClass(parent);</span>
+      <span class="hljs-comment">// }</span>
 
-      <span class="hljs-built_in">document</span>.getElementById(hashId).scrollIntoView();
+      <span class="hljs-built_in">window</span>.scroll({
+        <span class="hljs-attr">top</span>: <span class="hljs-built_in">document</span>.getElementById(hashId).offsetTop,
+        <span class="hljs-attr">left</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">behavior</span>: <span class="hljs-string">"smooth"</span>
+      });
 
-      <span class="hljs-keyword">this</span>.setMarkerTransition();
-      <span class="hljs-keyword">this</span>.updateMarker(anchor.parentNode);
+      <span class="hljs-comment">// this.updateMarker(anchor.parentNode);</span>
 
       event.preventDefault();
     });
   };
 
   scrollSpy(settings) {
-    <span class="hljs-comment">// console.log(settings);</span>
-    <span class="hljs-comment">// console.log(window.scrollTop);</span>
-    <span class="hljs-comment">// console.log(document.body.scrollTop);</span>
+    <span class="hljs-keyword">let</span> currentId = <span class="hljs-literal">null</span>;
 
-    <span class="hljs-comment">// console.log(window.pageYOffset || document.documentElement.scrollTop);</span>
-    <span class="hljs-comment">// console.log(</span>
-    <span class="hljs-comment">//   document.getElementById("what-we-do").offsetTop,</span>
-    <span class="hljs-comment">//   document.getElementById("what-we-do").offsetHeight</span>
-    <span class="hljs-comment">// );</span>
+    settings.forEach(<span class="hljs-function">(<span class="hljs-params">item</span>) =&gt;</span> {
+      <span class="hljs-keyword">const</span> top = <span class="hljs-built_in">document</span>.getElementById(item.id).offsetTop;
+      <span class="hljs-keyword">const</span> bottom = top + <span class="hljs-built_in">document</span>.getElementById(item.id).offsetHeight;
 
-    <span class="hljs-comment">// settings.forEach((item) =&gt; {</span>
-    <span class="hljs-comment">//   console.log(</span>
-    <span class="hljs-comment">//     window.pageYOffset &gt;= item.top &amp;&amp; window.pageYOffset &lt; item.bottom</span>
-    <span class="hljs-comment">//     ? item.id : null);</span>
-    <span class="hljs-comment">// });</span>
+      <span class="hljs-keyword">if</span> ((<span class="hljs-built_in">window</span>.pageYOffset || <span class="hljs-built_in">document</span>.documentElement.scrollTop) &gt;= top &amp;&amp; (<span class="hljs-built_in">window</span>.pageYOffset || <span class="hljs-built_in">document</span>.documentElement.scrollTop) &lt; bottom) {
+        currentId = item.id;
+      }
+    });
 
-    <span class="hljs-comment">// const top = document.getElementById("what-we-do").offsetTop;</span>
-    <span class="hljs-comment">// const bottom = top + document.getElementById("what-we-do").offsetHeight;</span>
+    <span class="hljs-keyword">this</span>.currentItem = <span class="hljs-keyword">this</span>.subNavigation.querySelector(<span class="hljs-string">`#<span class="hljs-subst">${currentId}</span>-item`</span>);
 
-    <span class="hljs-comment">// console.log(window.pageYOffset,</span>
-    <span class="hljs-comment">//   window.pageYOffset &gt;= top &amp;&amp; window.pageYOffset &lt; bottom</span>
-    <span class="hljs-comment">//   ? true : false);</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.currentItem &amp;&amp; !<span class="hljs-keyword">this</span>.currentItem.classList.contains(<span class="hljs-keyword">this</span>.activeClass)) {
+      <span class="hljs-keyword">this</span>.removeActiveClass(<span class="hljs-keyword">this</span>.subNavigation.querySelector(<span class="hljs-string">`.<span class="hljs-subst">${<span class="hljs-keyword">this</span>.activeClass}</span>`</span>));
+      <span class="hljs-keyword">this</span>.addActiveClass(<span class="hljs-keyword">this</span>.currentItem);
+    }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.currentItem) {
+      <span class="hljs-keyword">this</span>.updateMarker(<span class="hljs-keyword">this</span>.currentItem);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">this</span>.makeMarkerInvisible();
+      <span class="hljs-keyword">this</span>.removeActiveClass(<span class="hljs-keyword">this</span>.subNavigation.querySelector(<span class="hljs-string">`.<span class="hljs-subst">${<span class="hljs-keyword">this</span>.activeClass}</span>`</span>));
+    }
   }
 
-  render() {
-    <span class="hljs-keyword">const</span> sections = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">".js-spy-section"</span>);
-    <span class="hljs-keyword">const</span> scrollSpySettings = [];
-    <span class="hljs-comment">// const scrollSpySettings = {};</span>
-
-    sections.forEach(<span class="hljs-function">(<span class="hljs-params">section</span>) =&gt;</span> {
-      scrollSpySettings.push({
+  setUpScrollSpy() {
+    <span class="hljs-keyword">this</span>.sections.forEach(<span class="hljs-function">(<span class="hljs-params">section</span>) =&gt;</span> {
+      <span class="hljs-keyword">this</span>.scrollSpySettings.push({
         <span class="hljs-attr">id</span>: section.id,
         <span class="hljs-attr">top</span>: section.offsetTop,
         <span class="hljs-attr">bottom</span>: (section.offsetTop + section.offsetHeight),
         <span class="hljs-attr">height</span>: section.offsetHeight
       });
-      <span class="hljs-comment">// scrollSpySettings[section.id] = {</span>
-      <span class="hljs-comment">//   top: section.offsetTop,</span>
-      <span class="hljs-comment">//   bottom: (section.offsetTop + section.offsetHeight),</span>
-      <span class="hljs-comment">//   height: section.offsetHeight,</span>
-      <span class="hljs-comment">// };</span>
     });
 
-    <span class="hljs-comment">// console.log(scrollSpySettings);</span>
+    <span class="hljs-keyword">this</span>.scrollSpy(<span class="hljs-keyword">this</span>.scrollSpySettings);
 
-    <span class="hljs-comment">// this.scrollSpy(scrollSpySettings);</span>
-    <span class="hljs-comment">// window.addEventListener("scroll", (event) =&gt; {</span>
-    <span class="hljs-comment">//   setTimeout(() =&gt; {</span>
-    <span class="hljs-comment">//     this.scrollSpy(scrollSpySettings);</span>
-    <span class="hljs-comment">//   }, 500);</span>
-    <span class="hljs-comment">// });</span>
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"scroll"</span>, (event) =&gt; {
+      setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">this</span>.scrollSpy(<span class="hljs-keyword">this</span>.scrollSpySettings);
 
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.currentItem) {
+          <span class="hljs-keyword">this</span>.setMarkerTransition();
+        };
+
+        <span class="hljs-comment">// const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;</span>
+        <span class="hljs-comment">//</span>
+        <span class="hljs-comment">// if (scrollPosition &gt;= this.subNavigationOffset) {</span>
+        <span class="hljs-comment">//   this.subNavigation.classList.add("is-sticky");</span>
+        <span class="hljs-comment">// } else {</span>
+        <span class="hljs-comment">//   this.subNavigation.classList.remove("is-sticky");</span>
+        <span class="hljs-comment">// }</span>
+      }, <span class="hljs-number">100</span>);
+    });
+  }
+
+  setUpItems() {
     <span class="hljs-keyword">this</span>.subNavigationItems.forEach(<span class="hljs-function">(<span class="hljs-params">item, index</span>) =&gt;</span> {
       <span class="hljs-keyword">const</span> anchor = item.querySelector(<span class="hljs-string">"a"</span>);
-      <span class="hljs-comment">// const isFirstItem = index === 0;</span>
 
       <span class="hljs-keyword">if</span> (item.classList.contains(<span class="hljs-keyword">this</span>.activeClass)) {
         <span class="hljs-keyword">this</span>.updateMarker(item);
       }
 
-      <span class="hljs-comment">// if ($item.classList.contains("is-active")) {</span>
-      <span class="hljs-comment">//   updateMarker($item);</span>
-      <span class="hljs-comment">// } else if (isFirstItem) {</span>
-      <span class="hljs-comment">//   addActiveClass($item);</span>
-      <span class="hljs-comment">//   updateMarker($item);</span>
-      <span class="hljs-comment">// }</span>
-
       <span class="hljs-keyword">this</span>.listenForAnchorClick(anchor);
     });
+  }
+
+  <span class="hljs-comment">// updateSubNavigationOffset() {</span>
+  <span class="hljs-comment">//   window.addEventListener("resize", (event) =&gt; {</span>
+  <span class="hljs-comment">//     setTimeout(() =&gt; {</span>
+  <span class="hljs-comment">//       this.subNavigationOffset = this.subNavigation.offsetTop;</span>
+  <span class="hljs-comment">//     }, 200);</span>
+  <span class="hljs-comment">//   });</span>
+  <span class="hljs-comment">// }</span>
+
+  render() {
+    <span class="hljs-keyword">this</span>.setUpScrollSpy();
+    <span class="hljs-keyword">this</span>.setUpItems();
+    <span class="hljs-comment">// this.updateSubNavigationOffset();</span>
   }
 }
 
@@ -463,12 +492,12 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4.3 KB</span>
+                    <span class="Meta-value">5.2 KB</span>
                 </li>
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-cf5ac2e5b9929778521db30912bcf7fe" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-dcd8079b810ac40332975d72872251fc" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -485,38 +514,34 @@
  * @type Molecule
  */</span>
 
-<span class="hljs-variable">$color--shark</span>: <span class="hljs-number">#bfd0d8</span>;
-<span class="hljs-variable">$color--riptide</span>: orange;
-<span class="hljs-variable">$color--blue-lagoon</span>: navy;
-<span class="hljs-variable">$color--pacific-blue</span>: blue;
-<span class="hljs-variable">$timing--fast</span>: <span class="hljs-number">200ms</span>;
-<span class="hljs-variable">$easing--default</span>: ease-in-out;
+<span class="hljs-comment">// $timing--fast: 200ms;</span>
+<span class="hljs-comment">// $easing--default: ease-in-out;</span>
 <span class="hljs-variable">$gutter</span>: <span class="hljs-number">24</span>;
 <span class="hljs-variable">$z--bottom</span>: <span class="hljs-number">10</span>;
 
 <span class="hljs-selector-class">.SubNavigation</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>;
-  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#fff</span>;
+  <span class="hljs-comment">// border-bottom: 1px solid #fff;</span>
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#446975</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
   <span class="hljs-comment">// height: 81px;</span>
   <span class="hljs-attribute">height</span>: <span class="hljs-number">64px</span>;
   <span class="hljs-attribute">overflow</span>: hidden;
-  <span class="hljs-attribute">transition</span>: border-color <span class="hljs-number">200ms</span>;
+  <span class="hljs-comment">// transition: border-color 200ms;</span>
   <span class="hljs-attribute">position</span>: relative;
 
-  @<span class="hljs-keyword">media</span> (max-width: 599px) {
-    <span class="hljs-attribute">border-bottom-color</span>: rgba(<span class="hljs-variable">$color--shark</span>, .<span class="hljs-number">37</span>);
-  }
+  <span class="hljs-comment">// @media (max-width: 599px) {</span>
+  <span class="hljs-comment">//   border-bottom-color: rgba(#bfd0d8, .37);</span>
+  <span class="hljs-comment">// }</span>
 
   @<span class="hljs-keyword">media</span> (min-width: 600px) {
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">90px</span>;
   }
 
-  &amp;<span class="hljs-selector-class">.is-sticky</span> {
-    <span class="hljs-attribute">border-bottom-color</span>: rgba(<span class="hljs-variable">$color--shark</span>, .<span class="hljs-number">37</span>);
-  }
+  <span class="hljs-comment">// &amp;.is-sticky {</span>
+  <span class="hljs-comment">//   border-bottom-color: rgba(#bfd0d8, .37);</span>
+  <span class="hljs-comment">// }</span>
 
   &amp;::after,
   &amp;::before {
@@ -541,6 +566,7 @@
 }
 
 <span class="hljs-selector-class">.SubNavigation-list</span> {
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-number">#bfd0d8</span>, .<span class="hljs-number">37</span>);
   <span class="hljs-comment">// color: currentColor;</span>
   <span class="hljs-comment">// font-family: sans-serif;</span>
   <span class="hljs-comment">// font-size: 16px;</span>
@@ -605,9 +631,10 @@
   <span class="hljs-comment">// }</span>
 
   &amp;:hover,
-  &amp;:active,
-  &amp;:focus {
-    <span class="hljs-attribute">color</span>: rgba(<span class="hljs-number">#446975</span>, .<span class="hljs-number">60</span>);
+  &amp;:active {
+    <span class="hljs-selector-class">.SubNavigation-item</span>:not(<span class="hljs-selector-class">.is-active</span>) &amp; {
+      <span class="hljs-attribute">color</span>: rgba(<span class="hljs-number">#446975</span>, .<span class="hljs-number">60</span>);
+    }
 
     <span class="hljs-comment">// &amp;::after {</span>
     <span class="hljs-comment">//   transform: scaleX(1);</span>
@@ -625,14 +652,12 @@
 }
 
 <span class="hljs-selector-class">.SubNavigation-marker</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#da745b</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#b5955d</span>;
   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-comment">// top: 0;</span>
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">4px</span>;
-  <span class="hljs-comment">// opacity: 0;</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">7px</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">position</span>: absolute;
-  <span class="hljs-comment">// transition: opacity 200ms, transform 200ms, width 200ms;</span>
-  <span class="hljs-comment">// transition: transform 200ms;</span>
+  <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
 }
 </pre>
@@ -697,10 +722,14 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(1)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
-                <a href="about.html">@<span>about</span></a>
+                <a href="sticky.html">@<span>sticky</span></a>, 
+            
+                <a href="about.html">@<span>about</span></a>, 
+            
+                <a href="partnerships.html">@<span>partnerships</span></a>
             
             </span>
         </li>
@@ -712,7 +741,9 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-2d2605acf66f369d9c900a21676d14d9-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+        <h2 id="sub-navigation-component">Sub-navigation component</h2>
+<p>The sub-navigation component can be wrapped in a <code>div</code> with the classname <code>sticky</code> to make the navigation stay fixed to the top of the viewport when scrolling.</p>
+
         
     </div>
 </div>
@@ -746,6 +777,166 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-design-tokens">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Design Tokens</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="background-colors.html" data-pjax>
+                <span>Background color</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="colors.html" data-pjax>
+                <span>Colors</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="typography.html" data-pjax>
+                <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="z-index.html" data-pjax>
+                <span>z-index</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="spacing.html" data-pjax>
+                <span>Spacing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="helper-classes.html" data-pjax>
+                <span>Helper Classes</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-components">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Components</span>
@@ -755,6 +946,30 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote.html" data-pjax>
+                <span>Blockquote</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-button">
@@ -823,6 +1038,54 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="checkbox.html" data-pjax>
+                <span>Checkbox</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
+                <span>Checkbox Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="cover-photo.html" data-pjax>
                 <span>Cover Photo</span>
                 
@@ -856,7 +1119,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -869,10 +1132,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-feature">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Feature</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="feature.html" data-pjax>
-                <span>Feature</span>
+            <a class="Tree-entityLink" href="feature--quote.html" data-pjax>
+                <span>Quote</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -889,6 +1163,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="feature--highlights.html" data-pjax>
+                <span>Highlights</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -941,21 +1244,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-hamburger">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Hamburger</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="hamburger--default.html" data-pjax>
-                <span>Default</span>
+            <a class="Tree-entityLink" href="hamburger.html" data-pjax>
+                <span>Hamburger</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -976,10 +1268,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-heading">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Heading</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="hamburger--white.html" data-pjax>
-                <span>White</span>
+            <a class="Tree-entityLink" href="heading--1.html" data-pjax>
+                <span>Heading 1</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -987,7 +1290,127 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--2.html" data-pjax>
+                <span>Heading 2</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--3.html" data-pjax>
+                <span>Heading 3</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--4.html" data-pjax>
+                <span>Heading 4</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--5.html" data-pjax>
+                <span>Heading 5</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--6.html" data-pjax>
+                <span>Heading 6</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1005,9 +1428,33 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-home-block">
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="highlight.html" data-pjax>
+                <span>Highlight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-image-block">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Home Block</span>
+                <span>Image Block</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -1018,7 +1465,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="home-block--default.html" data-pjax>
+            <a class="Tree-entityLink" href="image-block--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -1042,7 +1489,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="home-block--alternate.html" data-pjax>
+            <a class="Tree-entityLink" href="image-block--alternate.html" data-pjax>
                 <span>Alternate</span>
                 
 
@@ -1065,6 +1512,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="input.html" data-pjax>
+                <span>Input</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
@@ -1117,6 +1588,118 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-list">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>List</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--definition.html" data-pjax>
+                <span>Definition</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--ordered.html" data-pjax>
+                <span>Ordered</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--unordered.html" data-pjax>
+                <span>Unordered</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--unstyled.html" data-pjax>
+                <span>Unstyled</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="location-finder.html" data-pjax>
@@ -1145,6 +1728,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="location-finder-button.html" data-pjax>
                 <span>Location Finder Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="location-list.html" data-pjax>
+                <span>Location List</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="location-map-legend.html" data-pjax>
+                <span>Location Map Legend</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1201,6 +1832,30 @@
 
 
 <span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="map-widget.html" data-pjax>
+                <span>Map Widget</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1277,21 +1932,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-more-link">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="more-link.html" data-pjax>
                 <span>More Link</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="more-link--default.html" data-pjax>
-                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1308,35 +1952,6 @@
 
 
             </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="more-link--white.html" data-pjax>
-                <span>White</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -1376,6 +1991,30 @@
 <div class="Status-dots">
 
 
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="pagination.html" data-pjax>
+                <span>Pagination</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
 <span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
@@ -1391,8 +2030,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="search.html" data-pjax>
-                <span>Search</span>
+            <a class="Tree-entityLink" href="paragraph.html" data-pjax>
+                <span>Paragraph</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1401,6 +2040,54 @@
 
 
 <span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="radio-button.html" data-pjax>
+                <span>Radio Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
+                <span>Radio Button Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1486,54 +2173,6 @@
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="skip-link.html" data-pjax>
-                <span>Skip Link</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="statistic.html" data-pjax>
-                <span>Statistic</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>Sub Navigation</span>
@@ -1557,9 +2196,9 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-tagline">
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-table">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Tagline</span>
+                <span>Table</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -1570,7 +2209,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tagline--default.html" data-pjax>
+            <a class="Tree-entityLink" href="table--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -1579,7 +2218,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1594,8 +2233,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tagline--white.html" data-pjax>
-                <span>White</span>
+            <a class="Tree-entityLink" href="table--responsive.html" data-pjax>
+                <span>Responsive</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1603,7 +2242,31 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--striped.html" data-pjax>
+                <span>Striped</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1617,6 +2280,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tagline.html" data-pjax>
+                <span>Tagline</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
@@ -1645,10 +2332,258 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-testimonial">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Testimonial</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="testimonial--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="testimonial--white.html" data-pjax>
+                <span>White</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="textarea.html" data-pjax>
+                <span>Textarea</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="timeline.html" data-pjax>
                 <span>Timeline</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-layout">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Layout</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="column.html" data-pjax>
+                <span>Column</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="container.html" data-pjax>
+                <span>Container</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="grid.html" data-pjax>
+                <span>Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="section.html" data-pjax>
+                <span>Section</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="sticky.html" data-pjax>
+                <span>Sticky</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="text-block.html" data-pjax>
+                <span>Text Block</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1720,7 +2655,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1744,7 +2679,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1768,7 +2703,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1792,7 +2727,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1835,6 +2770,16 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
+                <span>Browser Support</span>
+                
+            </a>
+        </li>
+        
+    
 
     </ul>
 </div>
@@ -1855,7 +2800,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.1.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.0"></script>
 
 
 

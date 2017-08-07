@@ -11,10 +11,10 @@
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
     <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/navy.css?cachebust=1.1.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/navy.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Partnerships | Surgery Partners Component Library</title>
+<title>Partnerships page | Surgery Partners Component Library</title>
 
 </head>
 <body>
@@ -59,7 +59,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/partnerships.html" title="Component preview">
-            Partnerships
+            Partnerships page
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -71,7 +71,7 @@
 
 <div class="Status Status--tag">
 
-<label class="Status-label" style="background-color: #29CC29; border-color: #29CC29;">Ready</label>
+<label class="Status-label" style="background-color: #FF9233; border-color: #FF9233;">WIP</label>
 
 </div>
 
@@ -157,17 +157,17 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-779d3529e804baf132a29e1d0ada5af7-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SkipLink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#main"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span>&gt;</span>
-  Skip to Main Content
-<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"GlobalHeader container"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"GlobalHeader container"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Logo"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/components/preview/home"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../logo@2x.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Surgery Partners"</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">"../../logo@2x.png"</span>
+    <span class="hljs-attr">alt</span>=<span class="hljs-string">"Surgery Partners"</span>
+  &gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#footer-navigation"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger js-hamburger"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Navigation js-navigation"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"navigation"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
@@ -207,30 +207,270 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverPhoto"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../masthead-image.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-masthead-sm@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-masthead@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-masthead-sm.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(max-width: 544px)"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-masthead.jpg"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../partnerships-masthead-sm.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Two doctors analyzing CT scans of a human brain"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-        <span class="hljs-comment">&lt;!-- &lt;img src="" alt=""&gt; --&gt;</span>
-
-        <span class="hljs-comment">&lt;!-- &lt;img
-      src="/masthead-image-sm.jpg"
-      sizes="(min-width: 600px) 100vw, 50vw"
-      srcset="/masthead-image-sm.jpg 2x,
-        /masthead-image@.jpg,
-        /masthead-image@2x.jpg 2x"
-      alt=""
-    &gt; --&gt;</span>
-
-        <span class="hljs-comment">&lt;!-- 
-      &lt;img src="" alt=""&gt;
-     --&gt;</span>
-
-        <span class="hljs-comment">&lt;!--  --&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sticky"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation js-sub-navigation"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-list"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"physician-practices-item"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#physician-practices"</span>&gt;</span>
+              Physician practices
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ambulatory-surgery-centers-item"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#ambulatory-surgery-centers"</span>&gt;</span>
+              Ambulatory surgery centers
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"surgical-hospitals-item"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#surgical-hospitals"</span>&gt;</span>
+              Surgical hospitals
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-item"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"healthcare-systems-item"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#healthcare-systems"</span>&gt;</span>
+              Healthcare systems
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SubNavigation-marker js-sub-navigation-marker"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Introduction"</span>&gt;</span>
-            Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 150 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients.
+            Our flexible approach to physician engagement and physician-centric culture focused on customer service is what drives our success.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section js-spy-section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"physician-practices"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-physician-practices-sm@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-physician-practices@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-physician-practices-sm.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(max-width: 544px)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-physician-practices.jpg"</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock-photo"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../partnerships-physician-practices-sm.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock-text"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Physician practices<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Finding the right partner can bring significant rewards. Underlying our over 100 employed, 1,000 partnered and 4,000 affiliated physicians is a track record of demonstrated commitment, evidenced by our consistently high physician retention
+                        rate. Our partners benefit from efficient operations and corporate support services, enhanced revenue streams and expanded opportunities for professional and personal development. Your time is valuable and taking care of your patients
+                        is of upmost importance.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divided"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-quote"</span>&gt;</span>Surgery Partners’ invaluable expertise in the field has positioned my practice for tremendous growth. Their proven operations enable me to efficiently focus my efforts on providing quality care to my patients.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">cite</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-citation"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-person"</span>&gt;</span>
+              Robert Guirguis, DO, Medical Director
+            <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        
+              <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-location"</span>&gt;</span>
+                Tampa Pain Relief Centers • Tampa, Florida
+              <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section js-spy-section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"ambulatory-surgery-centers"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock ImageBlock--alternate"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-surgery-centers-sm@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-surgery-centers@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-surgery-centers-sm.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(max-width: 544px)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-surgery-centers.jpg"</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock-photo"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../partnerships-surgery-centers-sm.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock-text"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Ambulatory surgery centers<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Launching a new surgical facility or growing an existing one is no small task. It takes more than hard work; it demands strategy, resources and substantial industry knowledge. With a focus on growth and one of the industry&amp;#x27;s most
+                        experienced management teams, we are equally adept at acquiring existing facilities, as well as developing new facilities. We offer partners expertise and high-quality resources. Years of experience have shown us no two markets
+                        are alike. Each community we serve is unique, so we work with partners to develop a customized strategy for each facility.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divided"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-quote"</span>&gt;</span>Surgery Partners’ extensive surgery center experience has allowed them to provide critical guidance to our facility for many years. They share our physician partners’ focus on quality, efficiency and growth and provide resources and
+                        guidance that improve our ability to excel in each.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">cite</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-citation"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-person"</span>&gt;</span>
+              John Kagan, MD
+            <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        
+              <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-location"</span>&gt;</span>
+                Lee Island Coast Surgery Center • Fort Myers, Florida
+              <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Feature"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Feature-content"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial Testimonial--white"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-quote"</span>&gt;</span>We&amp;#x27;re able to structure a relationship in a way that best suits the physician, either as a partner, an affiliated physician or an employed physician.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">cite</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-citation"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-person"</span>&gt;</span>
+              Mike Doyle, CEO
+            <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        
+              <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-location"</span>&gt;</span>
+                Surgery Partners
+              <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverPhoto"</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-feature-sm@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-feature@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-feature-sm.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(max-width: 544px)"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-feature.jpg"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../partnerships-feature-sm.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Doctors moving around in an operating room"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section js-spy-section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"surgical-hospitals"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock ImageBlock--alternate"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-surgical-hospitals-sm@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-surgical-hospitals@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-surgical-hospitals-sm.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(max-width: 544px)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-surgical-hospitals.jpg"</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock-photo"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../partnerships-surgical-hospitals-sm.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock-text"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Surgical hospitals<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Building on our strong track record of success in the ambulatory surgery industry, we expanded our focus to include surgical hospitals. Our surgical hospitals are owned in partnership with physicians. They offer a specialized focus
+                        and have a high nurse-to-patient ratio. Each physician plays an active role in creating the mission and philosophy for the hospital. Every physician has a personal interest in the day-to-day operations and plays an integral role
+                        in developing the quality, spirit and direction of the hospital.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divided"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-quote"</span>&gt;</span>The relationship through Surgery Partners made it possible for us to achieve our goal of expanding our hospital services in an outstanding new facility bringing quality and compassionate care to our community.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">cite</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-citation"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-person"</span>&gt;</span>
+              Nancy Maynard, MD
+            <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        
+              <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-location"</span>&gt;</span>
+                Great Falls Clinic • Great Falls, Montana
+              <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section js-spy-section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"healthcare-systems"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-healthcare-systems-sm@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-healthcare-systems@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-healthcare-systems-sm.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(max-width: 544px)"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../partnerships-healthcare-systems.jpg"</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock-photo"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../partnerships-healthcare-systems-sm.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock-text"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Healthcare systems<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Surgery Partners has a longstanding history of partnering with healthcare systems to manage a variety of surgical facilities. Our experience developing and operating surgical facilities gives healthcare systems the freedom to focus
+                        on their core business while offering patients a high quality, low cost alternative for outpatient services. Through partnership with Surgery Partners, hospital systems can benefit from having stronger ties with physicians, additional
+                        market presence with limited investment, increased access to capital and operational efficiencies, among others. We currently have 14 facilities joint ventured with healthcare systems, including Baptist Memorial Health Services
+                        in Memphis, Tennessee and Vanderbilt Health Systems in Nashville, Tennessee.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divided"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-quote"</span>&gt;</span>Surgery Partners has made an excellent partner for Vanderbilt University Medical Center in development and management of a freestanding outpatient surgery center. Their seasoned team of professional healthcare surgery center managers
+                        has allowed us to expand into a community based surgery arena in which health systems generally do not have a great deal of experience. This environment has been a quality, cost effective enterprise appealing to patients, surgeons
+                        and staff.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">cite</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-citation"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-person"</span>&gt;</span>
+              David R. Posch, MS, Associate Vice Chancellor for Population Health
+            <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        
+              <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Testimonial-location"</span>&gt;</span>
+                VUMC and Vanderbilt Health Affiliated Network • Nashville, Tennessee
+              <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section--border container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Pagination"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Pagination-label"</span>&gt;</span>
+                    Read next
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Pagination-title heading-large"</span>&gt;</span>
+                    Investors
+                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon Pagination-icon"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
@@ -240,7 +480,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"GlobalFooter-location"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Find a location<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../locations-map.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Map of United States with locations highlighted"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../footer-locations-map.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Map of United States with locations highlighted"</span>&gt;</span>
 
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
                 With our national network of surgical facilities, each serving the unique healthcare needs of its community, you are sure to find one convenient to you.
@@ -409,14 +649,60 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-779d3529e804baf132a29e1d0ada5af7-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"></span><span class="hljs-template-variable">{{&gt; <a href="skip-link.html">@skip-link</a> }}</span><span class="xml">
-</span><span class="hljs-template-variable">{{&gt; <a href="global-header.html">@global-header</a> }}</span><span class="xml">
+        <pre><span class="xml"></span><span class="hljs-template-variable">{{ render "<a href="global-header.html">@global-header</a>" }}</span><span class="xml">
 
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>&gt;</span>
   </span><span class="hljs-template-variable">{{&gt; <a href="masthead.html">@masthead</a> }}</span><span class="xml">
 
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sticky"</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{&gt; <a href="sub-navigation.html">@sub-navigation</a> }}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  </span><span class="hljs-comment">{{!&gt; <a href="image-block.html">@image-block</a> block=this.block }}</span><span class="xml">
+  </span><span class="hljs-comment">{{!&gt; <a href="image-block.html">@image-block</a>--alternate block=this.block }}</span><span class="xml">
+
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
     </span><span class="hljs-template-variable">{{&gt; <a href="introduction.html">@introduction</a> }}</span><span class="xml">
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section js-spy-section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ sections.[0].id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+      </span><span class="hljs-template-variable">{{&gt; <a href="image-block.html">@image-block</a> block=sections.[0] }}</span><span class="xml">
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divided"</span>&gt;</span>
+        </span><span class="hljs-template-variable">{{&gt; <a href="testimonial.html">@testimonial</a> testimonial=testimonials.[0] }}</span><span class="xml">
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section js-spy-section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ sections.[1].id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+      </span><span class="hljs-template-variable">{{&gt; <a href="image-block.html">@image-block</a>--alternate block=sections.[1] }}</span><span class="xml">
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divided"</span>&gt;</span>
+        </span><span class="hljs-template-variable">{{&gt; <a href="testimonial.html">@testimonial</a> testimonial=testimonials.[1] }}</span><span class="xml">
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  </span><span class="hljs-template-variable">{{&gt; <a href="feature.html">@feature</a> }}</span><span class="xml">
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section js-spy-section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ sections.[2].id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+      </span><span class="hljs-template-variable">{{&gt; <a href="image-block.html">@image-block</a>--alternate block=sections.[2] }}</span><span class="xml">
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divided"</span>&gt;</span>
+        </span><span class="hljs-template-variable">{{&gt; <a href="testimonial.html">@testimonial</a> testimonial=testimonials.[2] }}</span><span class="xml">
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section js-spy-section"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ sections.[3].id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+      </span><span class="hljs-template-variable">{{&gt; <a href="image-block.html">@image-block</a> block=sections.[3] }}</span><span class="xml">
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"divided"</span>&gt;</span>
+        </span><span class="hljs-template-variable">{{&gt; <a href="testimonial.html">@testimonial</a> testimonial=testimonials.[3] }}</span><span class="xml">
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"section section--border container"</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{&gt; <a href="pagination.html">@pagination</a> }}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
 
@@ -432,24 +718,237 @@
             <pre>{
   <span class="hljs-attr">"preview"</span>: {},
   <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Partnerships"</span>,
-  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"partnerships"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Our flexible approach to physician engagement and physician-centric culture focused on customer service is what drives our success."</span>,
+  <span class="hljs-attr">"image"</span>: <span class="hljs-string">"/partnerships-masthead.jpg"</span>,
+  <span class="hljs-attr">"slug"</span>: <span class="hljs-string">"/partnerships/"</span>,
+  <span class="hljs-attr">"assetFileName"</span>: <span class="hljs-string">"partnerships"</span>,
   <span class="hljs-attr">"classname"</span>: <span class="hljs-string">"PartnershipsPage"</span>,
   <span class="hljs-attr">"meta"</span>: {
-    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Partnerships"</span>
-  },
-  <span class="hljs-attr">"coverPhoto"</span>: {
-    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/masthead-image.jpg"</span>,
-    <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Partnerships"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Our flexible approach to physician engagement and physician-centric culture focused on customer service is what drives our success."</span>,
+    <span class="hljs-attr">"image"</span>: <span class="hljs-string">"/partnerships-masthead.jpg"</span>
   },
   <span class="hljs-attr">"masthead"</span>: {
     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Partnerships"</span>,
-    <span class="hljs-attr">"image"</span>: {
-      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/masthead-image.jpg"</span>,
-      <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>
+    <span class="hljs-attr">"coverPhoto"</span>: {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Two doctors analyzing CT scans of a human brain"</span>,
+      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-masthead-sm.jpg"</span>,
+      <span class="hljs-attr">"srcset"</span>: [
+        {
+          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-masthead-sm@2x.jpg"</span>,
+          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>
+        },
+        {
+          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-masthead@2x.jpg"</span>,
+          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>
+        },
+        {
+          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-masthead-sm.jpg"</span>,
+          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(max-width: 544px)"</span>
+        },
+        {
+          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-masthead.jpg"</span>,
+          <span class="hljs-attr">"media"</span>: <span class="hljs-literal">null</span>
+        }
+      ]
     }
   },
-  <span class="hljs-attr">"introduction"</span>: {
-    <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 150 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients."</span>
+  <span class="hljs-attr">"subNavigation"</span>: [
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Physician practices"</span>,
+      <span class="hljs-attr">"hash"</span>: <span class="hljs-string">"physician-practices"</span>
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Ambulatory surgery centers"</span>,
+      <span class="hljs-attr">"hash"</span>: <span class="hljs-string">"ambulatory-surgery-centers"</span>
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Surgical hospitals"</span>,
+      <span class="hljs-attr">"hash"</span>: <span class="hljs-string">"surgical-hospitals"</span>
+    },
+    {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Healthcare systems"</span>,
+      <span class="hljs-attr">"hash"</span>: <span class="hljs-string">"healthcare-systems"</span>
+    }
+  ],
+  <span class="hljs-attr">"introduction"</span>: <span class="hljs-string">"Our flexible approach to physician engagement and physician-centric culture focused on customer service is what drives our success."</span>,
+  <span class="hljs-attr">"feature"</span>: {
+    <span class="hljs-attr">"coverPhoto"</span>: {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Doctors moving around in an operating room"</span>,
+      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-feature-sm.jpg"</span>,
+      <span class="hljs-attr">"srcset"</span>: [
+        {
+          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-feature-sm@2x.jpg"</span>,
+          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>
+        },
+        {
+          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-feature@2x.jpg"</span>,
+          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>
+        },
+        {
+          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-feature-sm.jpg"</span>,
+          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(max-width: 544px)"</span>
+        },
+        {
+          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-feature.jpg"</span>,
+          <span class="hljs-attr">"media"</span>: <span class="hljs-literal">null</span>
+        }
+      ]
+    },
+    <span class="hljs-attr">"testimonial"</span>: {
+      <span class="hljs-attr">"quote"</span>: <span class="hljs-string">"We're able to structure a relationship in a way that best suits the physician, either as a partner, an affiliated physician or an employed physician."</span>,
+      <span class="hljs-attr">"citation"</span>: <span class="hljs-string">"Mike Doyle, CEO"</span>,
+      <span class="hljs-attr">"location"</span>: <span class="hljs-string">"Surgery Partners"</span>
+    }
+  },
+  <span class="hljs-attr">"sections"</span>: [
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"physician-practices"</span>,
+      <span class="hljs-attr">"image"</span>: {
+        <span class="hljs-attr">"class"</span>: <span class="hljs-string">"ImageBlock-photo"</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-physician-practices-sm.jpg"</span>,
+        <span class="hljs-attr">"srcset"</span>: [
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-physician-practices-sm@2x.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-physician-practices@2x.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-physician-practices-sm.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(max-width: 544px)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-physician-practices.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-literal">null</span>
+          }
+        ]
+      },
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Physician practices"</span>,
+      <span class="hljs-attr">"content"</span>: [
+        <span class="hljs-string">"Finding the right partner can bring significant rewards. Underlying our over 100 employed, 1,000 partnered and 4,000 affiliated physicians is a track record of demonstrated commitment, evidenced by our consistently high physician retention rate. Our partners benefit from efficient operations and corporate support services, enhanced revenue streams and expanded opportunities for professional and personal development. Your time is valuable and taking care of your patients is of upmost importance."</span>
+      ]
+    },
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"ambulatory-surgery-centers"</span>,
+      <span class="hljs-attr">"image"</span>: {
+        <span class="hljs-attr">"class"</span>: <span class="hljs-string">"ImageBlock-photo"</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-surgery-centers-sm.jpg"</span>,
+        <span class="hljs-attr">"srcset"</span>: [
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-surgery-centers-sm@2x.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-surgery-centers@2x.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-surgery-centers-sm.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(max-width: 544px)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-surgery-centers.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-literal">null</span>
+          }
+        ]
+      },
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Ambulatory surgery centers"</span>,
+      <span class="hljs-attr">"content"</span>: [
+        <span class="hljs-string">"Launching a new surgical facility or growing an existing one is no small task. It takes more than hard work; it demands strategy, resources and substantial industry knowledge. With a focus on growth and one of the industry's most experienced management teams, we are equally adept at acquiring existing facilities, as well as developing new facilities. We offer partners expertise and high-quality resources. Years of experience have shown us no two markets are alike. Each community we serve is unique, so we work with partners to develop a customized strategy for each facility."</span>
+      ]
+    },
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"surgical-hospitals"</span>,
+      <span class="hljs-attr">"image"</span>: {
+        <span class="hljs-attr">"class"</span>: <span class="hljs-string">"ImageBlock-photo"</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-surgical-hospitals-sm.jpg"</span>,
+        <span class="hljs-attr">"srcset"</span>: [
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-surgical-hospitals-sm@2x.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-surgical-hospitals@2x.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-surgical-hospitals-sm.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(max-width: 544px)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-surgical-hospitals.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-literal">null</span>
+          }
+        ]
+      },
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Surgical hospitals"</span>,
+      <span class="hljs-attr">"content"</span>: [
+        <span class="hljs-string">"Building on our strong track record of success in the ambulatory surgery industry, we expanded our focus to include surgical hospitals. Our surgical hospitals are owned in partnership with physicians. They offer a specialized focus and have a high nurse-to-patient ratio. Each physician plays an active role in creating the mission and philosophy for the hospital. Every physician has a personal interest in the day-to-day operations and plays an integral role in developing the quality, spirit and direction of the hospital."</span>
+      ]
+    },
+    {
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"healthcare-systems"</span>,
+      <span class="hljs-attr">"image"</span>: {
+        <span class="hljs-attr">"class"</span>: <span class="hljs-string">"ImageBlock-photo"</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-healthcare-systems-sm.jpg"</span>,
+        <span class="hljs-attr">"srcset"</span>: [
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-healthcare-systems-sm@2x.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-healthcare-systems@2x.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-healthcare-systems-sm.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(max-width: 544px)"</span>
+          },
+          {
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/partnerships-healthcare-systems.jpg"</span>,
+            <span class="hljs-attr">"media"</span>: <span class="hljs-literal">null</span>
+          }
+        ]
+      },
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Healthcare systems"</span>,
+      <span class="hljs-attr">"content"</span>: [
+        <span class="hljs-string">"Surgery Partners has a longstanding history of partnering with healthcare systems to manage a variety of surgical facilities. Our experience developing and operating surgical facilities gives healthcare systems the freedom to focus on their core business while offering patients a high quality, low cost alternative for outpatient services. Through partnership with Surgery Partners, hospital systems can benefit from having stronger ties with physicians, additional market presence with limited investment, increased access to capital and operational efficiencies, among others. We currently have 14 facilities joint ventured with healthcare systems, including Baptist Memorial Health Services in Memphis, Tennessee and Vanderbilt Health Systems in Nashville, Tennessee."</span>
+      ]
+    }
+  ],
+  <span class="hljs-attr">"testimonials"</span>: [
+    {
+      <span class="hljs-attr">"quote"</span>: <span class="hljs-string">"Surgery Partners’ invaluable expertise in the field has positioned my practice for tremendous growth. Their proven operations enable me to efficiently focus my efforts on providing quality care to my patients."</span>,
+      <span class="hljs-attr">"citation"</span>: <span class="hljs-string">"Robert Guirguis, DO, Medical Director"</span>,
+      <span class="hljs-attr">"location"</span>: <span class="hljs-string">"Tampa Pain Relief Centers • Tampa, Florida"</span>
+    },
+    {
+      <span class="hljs-attr">"quote"</span>: <span class="hljs-string">"Surgery Partners’ extensive surgery center experience has allowed them to provide critical guidance to our facility for many years. They share our physician partners’ focus on quality, efficiency and growth and provide resources and guidance that improve our ability to excel in each."</span>,
+      <span class="hljs-attr">"citation"</span>: <span class="hljs-string">"John Kagan, MD"</span>,
+      <span class="hljs-attr">"location"</span>: <span class="hljs-string">"Lee Island Coast Surgery Center • Fort Myers, Florida"</span>
+    },
+    {
+      <span class="hljs-attr">"quote"</span>: <span class="hljs-string">"The relationship through Surgery Partners made it possible for us to achieve our goal of expanding our hospital services in an outstanding new facility bringing quality and compassionate care to our community."</span>,
+      <span class="hljs-attr">"citation"</span>: <span class="hljs-string">"Nancy Maynard, MD"</span>,
+      <span class="hljs-attr">"location"</span>: <span class="hljs-string">"Great Falls Clinic • Great Falls, Montana"</span>
+    },
+    {
+      <span class="hljs-attr">"quote"</span>: <span class="hljs-string">"Surgery Partners has made an excellent partner for Vanderbilt University Medical Center in development and management of a freestanding outpatient surgery center. Their seasoned team of professional healthcare surgery center managers has allowed us to expand into a community based surgery arena in which health systems generally do not have a great deal of experience. This environment has been a quality, cost effective enterprise appealing to patients, surgeons and staff."</span>,
+      <span class="hljs-attr">"citation"</span>: <span class="hljs-string">"David R. Posch, MS, Associate Vice Chancellor for Population Health"</span>,
+      <span class="hljs-attr">"location"</span>: <span class="hljs-string">"VUMC and Vanderbilt Health Affiliated Network • Nashville, Tennessee"</span>
+    }
+  ],
+  <span class="hljs-attr">"pagination"</span>: {
+    <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Read next"</span>,
+    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Investors"</span>,
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"/"</span>
   }
 }</pre>
             
@@ -468,15 +967,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-0f7914124bf16437a1f473d476e9d296">index.js</option>
+                <option value="file-5c9adfd185f53fa4cb5ae351d3b04600">index.js</option>
                 
-                <option value="file-727295759d2a491734ae17c530eaa522">partnerships.scss</option>
+                <option value="file-af8f1bc8291c1e95e0ee2d0a52787e34">partnerships.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-0f7914124bf16437a1f473d476e9d296" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-5c9adfd185f53fa4cb5ae351d3b04600" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -506,7 +1005,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-727295759d2a491734ae17c530eaa522" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-af8f1bc8291c1e95e0ee2d0a52787e34" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -523,22 +1022,37 @@
  * @type page
  */</span>
 
- <span class="hljs-selector-class">.Introduction</span> {
-   <span class="hljs-attribute">margin-bottom</span>: #{(<span class="hljs-number">168</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
-   <span class="hljs-attribute">margin-top</span>: #{(<span class="hljs-number">174</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
-   <span class="hljs-comment">// margin-bottom: 72px;</span>
-   <span class="hljs-comment">// margin-top: 88px;</span>
-   <span class="hljs-comment">//</span>
-   <span class="hljs-comment">// @media (min-width: 544px) {</span>
-   <span class="hljs-comment">//   margin-bottom: #{(168 / $max-width) * 100vw};</span>
-   <span class="hljs-comment">//   margin-top: #{(174 / $max-width) * 100vw};</span>
-   <span class="hljs-comment">// }</span>
+<span class="hljs-selector-class">.Introduction</span> {
+  <span class="hljs-attribute">margin-bottom</span>: #{(<span class="hljs-number">168</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
+  <span class="hljs-attribute">margin-top</span>: #{(<span class="hljs-number">174</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
 
-   @<span class="hljs-keyword">media</span> (min-width: 1290px) {
-     <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">168px</span>;
-     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">174px</span>;
-   }
- }
+  <span class="hljs-comment">// margin-bottom: 72px;</span>
+  <span class="hljs-comment">// margin-top: 88px;</span>
+  <span class="hljs-comment">//</span>
+  <span class="hljs-comment">// @media (min-width: 544px) {</span>
+  <span class="hljs-comment">//   margin-bottom: #{(168 / $max-width) * 100vw};</span>
+  <span class="hljs-comment">//   margin-top: #{(174 / $max-width) * 100vw};</span>
+  <span class="hljs-comment">// }</span>
+
+  @<span class="hljs-keyword">media</span> (min-width: 1290px) {
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">168px</span>;
+    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">174px</span>;
+  }
+}
+
+<span class="hljs-selector-class">.divided</span> {
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, .<span class="hljs-number">27</span>);
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, .<span class="hljs-number">27</span>);
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">184px</span>;
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">184px</span>;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">120px</span>;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">120px</span>;
+}
+
+<span class="hljs-selector-class">.Testimonial</span> {
+  <span class="hljs-attribute">margin-left</span>: auto;
+  <span class="hljs-attribute">margin-right</span>: auto;
+}
 </pre>
                             </code>
                             
@@ -555,7 +1069,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">581 Bytes</span>
+                    <span class="Meta-value">853 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -600,16 +1114,26 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(5)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(10)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
-            
-                <a href="skip-link.html">@<span>skip-link</span></a>, 
             
                 <a href="global-header.html">@<span>global-header</span></a>, 
             
                 <a href="masthead.html">@<span>masthead</span></a>, 
             
+                <a href="sub-navigation.html">@<span>sub-navigation</span></a>, 
+            
+                <a href="image-block.html">@<span>image-block</span></a>, 
+            
+                <a href="image-block--alternate.html">@<span>image-block--alternate</span></a>, 
+            
                 <a href="introduction.html">@<span>introduction</span></a>, 
+            
+                <a href="testimonial.html">@<span>testimonial</span></a>, 
+            
+                <a href="feature.html">@<span>feature</span></a>, 
+            
+                <a href="pagination.html">@<span>pagination</span></a>, 
             
                 <a href="global-footer.html">@<span>global-footer</span></a>
             
@@ -658,6 +1182,166 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-design-tokens">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Design Tokens</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="background-colors.html" data-pjax>
+                <span>Background color</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="colors.html" data-pjax>
+                <span>Colors</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="typography.html" data-pjax>
+                <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="z-index.html" data-pjax>
+                <span>z-index</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="spacing.html" data-pjax>
+                <span>Spacing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="helper-classes.html" data-pjax>
+                <span>Helper Classes</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-components">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Components</span>
@@ -667,6 +1351,30 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote.html" data-pjax>
+                <span>Blockquote</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-button">
@@ -735,6 +1443,54 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="checkbox.html" data-pjax>
+                <span>Checkbox</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
+                <span>Checkbox Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="cover-photo.html" data-pjax>
                 <span>Cover Photo</span>
                 
@@ -768,7 +1524,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -781,10 +1537,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-feature">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Feature</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="feature.html" data-pjax>
-                <span>Feature</span>
+            <a class="Tree-entityLink" href="feature--quote.html" data-pjax>
+                <span>Quote</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -801,6 +1568,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="feature--highlights.html" data-pjax>
+                <span>Highlights</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -853,21 +1649,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-hamburger">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Hamburger</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="hamburger--default.html" data-pjax>
-                <span>Default</span>
+            <a class="Tree-entityLink" href="hamburger.html" data-pjax>
+                <span>Hamburger</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -888,10 +1673,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-heading">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Heading</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="hamburger--white.html" data-pjax>
-                <span>White</span>
+            <a class="Tree-entityLink" href="heading--1.html" data-pjax>
+                <span>Heading 1</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -899,7 +1695,127 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--2.html" data-pjax>
+                <span>Heading 2</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--3.html" data-pjax>
+                <span>Heading 3</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--4.html" data-pjax>
+                <span>Heading 4</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--5.html" data-pjax>
+                <span>Heading 5</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading--6.html" data-pjax>
+                <span>Heading 6</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -917,9 +1833,33 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-home-block">
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="highlight.html" data-pjax>
+                <span>Highlight</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-image-block">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Home Block</span>
+                <span>Image Block</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -930,7 +1870,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="home-block--default.html" data-pjax>
+            <a class="Tree-entityLink" href="image-block--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -954,7 +1894,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="home-block--alternate.html" data-pjax>
+            <a class="Tree-entityLink" href="image-block--alternate.html" data-pjax>
                 <span>Alternate</span>
                 
 
@@ -977,6 +1917,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="input.html" data-pjax>
+                <span>Input</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
@@ -1029,6 +1993,118 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-list">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>List</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--definition.html" data-pjax>
+                <span>Definition</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--ordered.html" data-pjax>
+                <span>Ordered</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--unordered.html" data-pjax>
+                <span>Unordered</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="list--unstyled.html" data-pjax>
+                <span>Unstyled</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="location-finder.html" data-pjax>
@@ -1057,6 +2133,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="location-finder-button.html" data-pjax>
                 <span>Location Finder Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="location-list.html" data-pjax>
+                <span>Location List</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="location-map-legend.html" data-pjax>
+                <span>Location Map Legend</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1113,6 +2237,30 @@
 
 
 <span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="map-widget.html" data-pjax>
+                <span>Map Widget</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1189,21 +2337,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-more-link">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="more-link.html" data-pjax>
                 <span>More Link</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="more-link--default.html" data-pjax>
-                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1220,35 +2357,6 @@
 
 
             </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="more-link--white.html" data-pjax>
-                <span>White</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -1288,6 +2396,30 @@
 <div class="Status-dots">
 
 
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="pagination.html" data-pjax>
+                <span>Pagination</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
 <span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
@@ -1303,8 +2435,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="search.html" data-pjax>
-                <span>Search</span>
+            <a class="Tree-entityLink" href="paragraph.html" data-pjax>
+                <span>Paragraph</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1313,6 +2445,54 @@
 
 
 <span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="radio-button.html" data-pjax>
+                <span>Radio Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
+                <span>Radio Button Group</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1399,54 +2579,6 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="skip-link.html" data-pjax>
-                <span>Skip Link</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="statistic.html" data-pjax>
-                <span>Statistic</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="sub-navigation.html" data-pjax>
                 <span>Sub Navigation</span>
                 
@@ -1469,9 +2601,9 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-tagline">
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-table">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Tagline</span>
+                <span>Table</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -1482,7 +2614,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tagline--default.html" data-pjax>
+            <a class="Tree-entityLink" href="table--default.html" data-pjax>
                 <span>Default</span>
                 
 
@@ -1491,7 +2623,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1506,8 +2638,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tagline--white.html" data-pjax>
-                <span>White</span>
+            <a class="Tree-entityLink" href="table--responsive.html" data-pjax>
+                <span>Responsive</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1515,7 +2647,31 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="table--striped.html" data-pjax>
+                <span>Striped</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1529,6 +2685,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tagline.html" data-pjax>
+                <span>Tagline</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
@@ -1557,10 +2737,258 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-testimonial">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Testimonial</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="testimonial--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="testimonial--white.html" data-pjax>
+                <span>White</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="textarea.html" data-pjax>
+                <span>Textarea</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="timeline.html" data-pjax>
                 <span>Timeline</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-layout">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Layout</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="column.html" data-pjax>
+                <span>Column</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="container.html" data-pjax>
+                <span>Container</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="grid.html" data-pjax>
+                <span>Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="section.html" data-pjax>
+                <span>Section</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="sticky.html" data-pjax>
+                <span>Sticky</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="text-block.html" data-pjax>
+                <span>Text Block</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1632,7 +3060,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1656,7 +3084,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1680,7 +3108,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1704,7 +3132,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
 
 
 </div>
@@ -1747,6 +3175,16 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
+                <span>Browser Support</span>
+                
+            </a>
+        </li>
+        
+    
 
     </ul>
 </div>
@@ -1767,7 +3205,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.1.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.0"></script>
 
 
 

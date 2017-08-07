@@ -1,0 +1,95 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Highlight
+ * @type Molecule
+ */
+
+.Highlight {
+  align-items: flex-start;
+  color: #fff;
+  display: flex;
+}
+
+.Highlight-icon {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 11px 46px rgba(#729ba8, .28);
+  color: #25395d;
+  display: flex;
+  flex: 0 0 auto;
+  font-size: 24px;
+  height: 60px;
+  justify-content: center;
+  margin-right: 24px;
+  width: 60px;
+
+  @media (min-width: 420px) {
+    font-size: 32px;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.Highlight-data {
+  max-width: 180px;
+  padding-top: 5px;
+  width: 100%;
+
+  @media (min-width: 420px) {
+    max-width: 220px;
+  }
+}
+
+.Highlight-number {
+  font-size: 24px;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  text-shadow: 0 0 34px #446975;
+
+  @media (min-width: 420px) {
+    font-size: 32px;
+  }
+}
+
+.Highlight-label {
+  font-size: 12px;
+  line-height: (17 / 12);
+  font-weight: $font-weight-semibold;
+  margin-top: 7px;
+  text-shadow: 0 0 34px #446975;
+
+  @media (min-width: 420px) {
+    font-size: 14px;
+    line-height: (19 / 14);
+  }
+}
+
+
+
+// Implementation detail
+
+.Feature .Highlight {
+  flex: 1 0 100%;
+
+  @media (min-width: 660px) {
+    flex-basis: 300px;
+  }
+
+  &:not(:first-child) {
+    @media (max-width: 659px) {
+      margin-top: 60px;
+    }
+  }
+
+  &:nth-child(3),
+  &:nth-child(4) {
+    @media (min-width: 660px) {
+      margin-top: 128px;
+    }
+  }
+}

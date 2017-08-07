@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 74);
+/******/ 	return __webpack_require__(__webpack_require__.s = 88);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -90,6 +90,12 @@
 
 __webpack_require__(4);
 
+__webpack_require__(0);
+
+__webpack_require__(1);
+
+__webpack_require__(2);
+
 /***/ }),
 /* 4 */
 /***/ (function(module, exports) {
@@ -105,12 +111,6 @@ __webpack_require__(4);
 
 __webpack_require__(6);
 
-__webpack_require__(0);
-
-__webpack_require__(1);
-
-__webpack_require__(2);
-
 /***/ }),
 /* 6 */
 /***/ (function(module, exports) {
@@ -125,6 +125,35 @@ __webpack_require__(2);
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(11);
+
+__webpack_require__(8);
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -134,7 +163,369 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _hamburger = __webpack_require__(28);
+var _locationFinder = __webpack_require__(13);
+
+var _locationFinder2 = _interopRequireDefault(_locationFinder);
+
+__webpack_require__(14);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _locationFinder2.default;
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var LocationFinder = function () {
+  function LocationFinder() {
+    _classCallCheck(this, LocationFinder);
+
+    this.locationFinder = document.querySelector(".js-location-finder");
+    this.locationFinderButton = document.querySelector(".js-location-finder-button");
+    this.locationFinderSelect = this.locationFinder.querySelectorAll(".js-location-finder-select");
+
+    this.buildFilterUrl = this.buildFilterUrl.bind(this);
+  }
+
+  _createClass(LocationFinder, [{
+    key: "buildFilterUrl",
+    value: function buildFilterUrl(params) {
+      this.locationFinderButton.href = "/locations/" + Object.values(params).join("/");
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this = this;
+
+      var params = {};
+
+      this.locationFinderSelect.forEach(function (select, index) {
+        params[select.id] = select.value;
+
+        [select][0].onchange = function (event) {
+          params[select.id] = event.target.value;
+
+          _this.buildFilterUrl(params);
+        };
+      });
+
+      this.buildFilterUrl(params);
+    }
+  }]);
+
+  return LocationFinder;
+}();
+
+exports.default = LocationFinder;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(16);
+
+__webpack_require__(0);
+
+__webpack_require__(9);
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(18);
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _subNavigation = __webpack_require__(20);
+
+var _subNavigation2 = _interopRequireDefault(_subNavigation);
+
+__webpack_require__(21);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _subNavigation2.default;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SubNavigation = function () {
+  function SubNavigation(options) {
+    _classCallCheck(this, SubNavigation);
+
+    this.options = options;
+    this.subNavigation = document.querySelector(".js-sub-navigation");
+    this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
+    this.subNavigationItems = this.subNavigation.querySelectorAll("li");
+    this.sections = document.querySelectorAll(".js-spy-section");
+
+    this.updateMarker = this.updateMarker.bind(this);
+    this.makeMarkerVisible = this.makeMarkerVisible.bind(this);
+    this.makeMarkerInvisible = this.makeMarkerInvisible.bind(this);
+    this.setMarkerWidth = this.setMarkerWidth.bind(this);
+    this.setMarkerOffset = this.setMarkerOffset.bind(this);
+    this.setMarkerTransition = this.setMarkerTransition.bind(this);
+    this.listenForAnchorClick = this.listenForAnchorClick.bind(this);
+    this.scrollSpy = this.scrollSpy.bind(this);
+    this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
+    this.setUpItems = this.setUpItems.bind(this);
+    // this.updateSubNavigationOffset = this.updateSubNavigationOffset.bind(this);
+
+    this.activeClass = "is-active";
+    this.currentItem = null;
+    this.scrollSpySettings = [];
+    // this.subNavigationOffset = this.subNavigation.parentNode.offsetTop;
+  }
+
+  _createClass(SubNavigation, [{
+    key: "addActiveClass",
+    value: function addActiveClass(item) {
+      item.classList.add(this.activeClass);
+    }
+  }, {
+    key: "removeActiveClass",
+    value: function removeActiveClass(item) {
+      if (item) {
+        item.classList.remove(this.activeClass);
+      }
+    }
+  }, {
+    key: "updateMarker",
+    value: function updateMarker(item) {
+      var activeWidth = item.offsetWidth;
+      var activeOffset = item.offsetLeft;
+
+      this.makeMarkerVisible();
+      this.setMarkerWidth(activeWidth);
+      this.setMarkerOffset(activeOffset);
+    }
+  }, {
+    key: "makeMarkerVisible",
+    value: function makeMarkerVisible() {
+      this.subNavigationMarker.style.opacity = 1;
+    }
+  }, {
+    key: "makeMarkerInvisible",
+    value: function makeMarkerInvisible() {
+      this.subNavigationMarker.style.opacity = 0;
+    }
+  }, {
+    key: "setMarkerWidth",
+    value: function setMarkerWidth(width) {
+      this.subNavigationMarker.style.width = width + "px";
+    }
+  }, {
+    key: "setMarkerOffset",
+    value: function setMarkerOffset(offset) {
+      this.subNavigationMarker.style.transform = "translateX(" + offset + "px)";
+    }
+  }, {
+    key: "setMarkerTransition",
+    value: function setMarkerTransition() {
+      var _this = this;
+
+      setTimeout(function () {
+        _this.subNavigationMarker.style.transition = "opacity 200ms, transform 200ms";
+      }, 200);
+    }
+  }, {
+    key: "listenForAnchorClick",
+    value: function listenForAnchorClick(anchor) {
+      anchor.addEventListener("click", function (event) {
+        var parent = anchor.parentNode;
+        var hashId = anchor.hash.replace("#", "");
+
+        // if (!parent.classList.contains("is-active")) {
+        //   this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));
+        //   this.addActiveClass(parent);
+        // }
+
+        window.scroll({
+          top: document.getElementById(hashId).offsetTop,
+          left: 0,
+          behavior: "smooth"
+        });
+
+        // this.updateMarker(anchor.parentNode);
+
+        event.preventDefault();
+      });
+    }
+  }, {
+    key: "scrollSpy",
+    value: function scrollSpy(settings) {
+      var currentId = null;
+
+      settings.forEach(function (item) {
+        var top = document.getElementById(item.id).offsetTop;
+        var bottom = top + document.getElementById(item.id).offsetHeight;
+
+        if ((window.pageYOffset || document.documentElement.scrollTop) >= top && (window.pageYOffset || document.documentElement.scrollTop) < bottom) {
+          currentId = item.id;
+        }
+      });
+
+      this.currentItem = this.subNavigation.querySelector("#" + currentId + "-item");
+
+      if (this.currentItem && !this.currentItem.classList.contains(this.activeClass)) {
+        this.removeActiveClass(this.subNavigation.querySelector("." + this.activeClass));
+        this.addActiveClass(this.currentItem);
+      }
+
+      if (this.currentItem) {
+        this.updateMarker(this.currentItem);
+      } else {
+        this.makeMarkerInvisible();
+        this.removeActiveClass(this.subNavigation.querySelector("." + this.activeClass));
+      }
+    }
+  }, {
+    key: "setUpScrollSpy",
+    value: function setUpScrollSpy() {
+      var _this2 = this;
+
+      this.sections.forEach(function (section) {
+        _this2.scrollSpySettings.push({
+          id: section.id,
+          top: section.offsetTop,
+          bottom: section.offsetTop + section.offsetHeight,
+          height: section.offsetHeight
+        });
+      });
+
+      this.scrollSpy(this.scrollSpySettings);
+
+      window.addEventListener("scroll", function (event) {
+        setTimeout(function () {
+          _this2.scrollSpy(_this2.scrollSpySettings);
+
+          if (_this2.currentItem) {
+            _this2.setMarkerTransition();
+          };
+
+          // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+          //
+          // if (scrollPosition >= this.subNavigationOffset) {
+          //   this.subNavigation.classList.add("is-sticky");
+          // } else {
+          //   this.subNavigation.classList.remove("is-sticky");
+          // }
+        }, 100);
+      });
+    }
+  }, {
+    key: "setUpItems",
+    value: function setUpItems() {
+      var _this3 = this;
+
+      this.subNavigationItems.forEach(function (item, index) {
+        var anchor = item.querySelector("a");
+
+        if (item.classList.contains(_this3.activeClass)) {
+          _this3.updateMarker(item);
+        }
+
+        _this3.listenForAnchorClick(anchor);
+      });
+    }
+
+    // updateSubNavigationOffset() {
+    //   window.addEventListener("resize", (event) => {
+    //     setTimeout(() => {
+    //       this.subNavigationOffset = this.subNavigation.offsetTop;
+    //     }, 200);
+    //   });
+    // }
+
+  }, {
+    key: "render",
+    value: function render() {
+      this.setUpScrollSpy();
+      this.setUpItems();
+      // this.updateSubNavigationOffset();
+    }
+  }]);
+
+  return SubNavigation;
+}();
+
+exports.default = SubNavigation;
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _hamburger = __webpack_require__(45);
 
 var _hamburger2 = _interopRequireDefault(_hamburger);
 
@@ -145,37 +536,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _hamburger2.default;
 
 /***/ }),
-/* 9 */
+/* 23 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 10 */
+/* 24 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 11 */
+/* 25 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 12 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 14 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1764,10 +2143,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 		types["image/webp"] = detectTypeSupport("image/webp", "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==");
 	}
 })(window, document);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(27)(module)))
 
 /***/ }),
-/* 15 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1797,40 +2176,70 @@ module.exports = function (module) {
 };
 
 /***/ }),
-/* 16 */
+/* 28 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 17 */
+/* 29 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 18 */
+/* 30 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 19 */
+/* 31 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(20);
+__webpack_require__(37);
 
 /***/ }),
-/* 20 */
+/* 37 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 21 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1840,18 +2249,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _globalFooter = __webpack_require__(22);
+var _globalFooter = __webpack_require__(39);
 
 var _globalFooter2 = _interopRequireDefault(_globalFooter);
 
-__webpack_require__(25);
+__webpack_require__(42);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _globalFooter2.default;
 
 /***/ }),
-/* 22 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1864,7 +2273,7 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _locationSelect = __webpack_require__(23);
+var _locationSelect = __webpack_require__(40);
 
 var _locationSelect2 = _interopRequireDefault(_locationSelect);
 
@@ -1894,7 +2303,7 @@ var GlobalFooter = function () {
 exports.default = GlobalFooter;
 
 /***/ }),
-/* 23 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1904,7 +2313,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _locationSelect = __webpack_require__(24);
+var _locationSelect = __webpack_require__(41);
 
 var _locationSelect2 = _interopRequireDefault(_locationSelect);
 
@@ -1913,7 +2322,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _locationSelect2.default;
 
 /***/ }),
-/* 24 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1951,13 +2360,13 @@ var LocationSelect = function () {
 exports.default = LocationSelect;
 
 /***/ }),
-/* 25 */
+/* 42 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 26 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1967,26 +2376,26 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _globalHeader = __webpack_require__(27);
+var _globalHeader = __webpack_require__(44);
 
 var _globalHeader2 = _interopRequireDefault(_globalHeader);
 
-__webpack_require__(29);
+__webpack_require__(46);
 
 __webpack_require__(7);
 
-__webpack_require__(9);
+__webpack_require__(23);
 
-__webpack_require__(10);
+__webpack_require__(24);
 
-__webpack_require__(30);
+__webpack_require__(47);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _globalHeader2.default;
 
 /***/ }),
-/* 27 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1999,7 +2408,7 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _hamburger = __webpack_require__(8);
+var _hamburger = __webpack_require__(22);
 
 var _hamburger2 = _interopRequireDefault(_hamburger);
 
@@ -2101,7 +2510,7 @@ var GlobalHeader = function () {
 exports.default = GlobalHeader;
 
 /***/ }),
-/* 28 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2147,198 +2556,6 @@ var Hamburger = function () {
 exports.default = Hamburger;
 
 /***/ }),
-/* 29 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(32);
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(34);
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(37);
-
-__webpack_require__(11);
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _locationFinder = __webpack_require__(39);
-
-var _locationFinder2 = _interopRequireDefault(_locationFinder);
-
-__webpack_require__(40);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _locationFinder2.default;
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var LocationFinder = function () {
-  function LocationFinder() {
-    _classCallCheck(this, LocationFinder);
-
-    this.locationFinder = document.querySelector(".js-location-finder");
-    this.locationFinderButton = document.querySelector(".js-location-finder-button");
-    this.locationFinderSelect = this.locationFinder.querySelectorAll(".js-location-finder-select");
-
-    this.buildFilterUrl = this.buildFilterUrl.bind(this);
-  }
-
-  _createClass(LocationFinder, [{
-    key: "buildFilterUrl",
-    value: function buildFilterUrl(params) {
-      this.locationFinderButton.href = "/locations/" + Object.values(params).join("/");
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this = this;
-
-      var params = {};
-
-      this.locationFinderSelect.forEach(function (select, index) {
-        params[select.id] = select.value;
-
-        [select][0].onchange = function (event) {
-          params[select.id] = event.target.value;
-
-          _this.buildFilterUrl(params);
-        };
-      });
-
-      this.buildFilterUrl(params);
-    }
-  }]);
-
-  return LocationFinder;
-}();
-
-exports.default = LocationFinder;
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(42);
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 43 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(44);
-
-__webpack_require__(0);
-
-__webpack_require__(12);
-
-/***/ }),
-/* 44 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(46);
-
-/***/ }),
 /* 46 */
 /***/ (function(module, exports) {
 
@@ -2346,351 +2563,281 @@ __webpack_require__(46);
 
 /***/ }),
 /* 47 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-__webpack_require__(13);
-
-__webpack_require__(48);
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 48 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(49);
 
 /***/ }),
 /* 49 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _subNavigation = __webpack_require__(50);
-
-var _subNavigation2 = _interopRequireDefault(_subNavigation);
-
-__webpack_require__(51);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _subNavigation2.default;
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 50 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var SubNavigation = function () {
-  function SubNavigation(options) {
-    _classCallCheck(this, SubNavigation);
-
-    this.options = options;
-    this.subNavigation = document.querySelector(".js-sub-navigation");
-    this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
-    this.subNavigationItems = this.subNavigation.querySelectorAll("li");
-
-    this.updateMarker = this.updateMarker.bind(this);
-    this.setMarkerWidth = this.setMarkerWidth.bind(this);
-    this.setMarkerOffset = this.setMarkerOffset.bind(this);
-    this.setMarkerTransition = this.setMarkerTransition.bind(this);
-    this.listenForAnchorClick = this.listenForAnchorClick.bind(this);
-    this.scrollSpy = this.scrollSpy.bind(this);
-
-    this.margin = 14;
-    this.subNavigationHeight = this.subNavigation.offsetHeight;
-    this.activeClass = "is-active";
-  }
-
-  _createClass(SubNavigation, [{
-    key: "addActiveClass",
-    value: function addActiveClass(item) {
-      item.classList.add(this.activeClass);
-    }
-  }, {
-    key: "removeActiveClass",
-    value: function removeActiveClass(item) {
-      if (item) {
-        item.classList.remove(this.activeClass);
-      }
-    }
-  }, {
-    key: "updateMarker",
-    value: function updateMarker(item) {
-      var activeWidth = item.offsetWidth;
-      var activeOffset = item.offsetLeft;
-
-      this.setMarkerWidth(activeWidth);
-      this.setMarkerOffset(activeOffset);
-    }
-  }, {
-    key: "setMarkerWidth",
-    value: function setMarkerWidth(width) {
-      this.subNavigationMarker.style.width = width + "px";
-    }
-  }, {
-    key: "setMarkerOffset",
-    value: function setMarkerOffset(offset) {
-      this.subNavigationMarker.style.transform = "translateX(" + offset + "px)";
-    }
-  }, {
-    key: "setMarkerTransition",
-    value: function setMarkerTransition() {
-      if (this.subNavigationMarker.style.transition === "") {
-        this.subNavigationMarker.style.transition = "transform 200ms";
-      }
-    }
-  }, {
-    key: "listenForAnchorClick",
-    value: function listenForAnchorClick(anchor) {
-      var _this = this;
-
-      anchor.addEventListener("click", function (event) {
-        var parent = anchor.parentNode;
-        var hashId = anchor.hash.replace("#", "");
-
-        if (!parent.classList.contains("is-active")) {
-          _this.removeActiveClass(_this.subNavigation.querySelector("." + _this.activeClass));
-          _this.addActiveClass(parent);
-        }
-
-        document.getElementById(hashId).scrollIntoView();
-
-        _this.setMarkerTransition();
-        _this.updateMarker(anchor.parentNode);
-
-        event.preventDefault();
-      });
-    }
-  }, {
-    key: "scrollSpy",
-    value: function scrollSpy(settings) {
-      // console.log(settings);
-      // console.log(window.scrollTop);
-      // console.log(document.body.scrollTop);
-
-      // console.log(window.pageYOffset || document.documentElement.scrollTop);
-      // console.log(
-      //   document.getElementById("what-we-do").offsetTop,
-      //   document.getElementById("what-we-do").offsetHeight
-      // );
-
-      // settings.forEach((item) => {
-      //   console.log(
-      //     window.pageYOffset >= item.top && window.pageYOffset < item.bottom
-      //     ? item.id : null);
-      // });
-
-      // const top = document.getElementById("what-we-do").offsetTop;
-      // const bottom = top + document.getElementById("what-we-do").offsetHeight;
-
-      // console.log(window.pageYOffset,
-      //   window.pageYOffset >= top && window.pageYOffset < bottom
-      //   ? true : false);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var sections = document.querySelectorAll(".js-spy-section");
-      var scrollSpySettings = [];
-      // const scrollSpySettings = {};
-
-      sections.forEach(function (section) {
-        scrollSpySettings.push({
-          id: section.id,
-          top: section.offsetTop,
-          bottom: section.offsetTop + section.offsetHeight,
-          height: section.offsetHeight
-        });
-        // scrollSpySettings[section.id] = {
-        //   top: section.offsetTop,
-        //   bottom: (section.offsetTop + section.offsetHeight),
-        //   height: section.offsetHeight,
-        // };
-      });
-
-      // console.log(scrollSpySettings);
-
-      // this.scrollSpy(scrollSpySettings);
-      // window.addEventListener("scroll", (event) => {
-      //   setTimeout(() => {
-      //     this.scrollSpy(scrollSpySettings);
-      //   }, 500);
-      // });
-
-      this.subNavigationItems.forEach(function (item, index) {
-        var anchor = item.querySelector("a");
-        // const isFirstItem = index === 0;
-
-        if (item.classList.contains(_this2.activeClass)) {
-          _this2.updateMarker(item);
-        }
-
-        // if ($item.classList.contains("is-active")) {
-        //   updateMarker($item);
-        // } else if (isFirstItem) {
-        //   addActiveClass($item);
-        //   updateMarker($item);
-        // }
-
-        _this2.listenForAnchorClick(anchor);
-      });
-    }
-  }]);
-
-  return SubNavigation;
-}();
-
-exports.default = SubNavigation;
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 51 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(52);
 
 /***/ }),
 /* 52 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-__webpack_require__(53);
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 53 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(55);
+__webpack_require__(54);
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(25);
+
+__webpack_require__(56);
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(58);
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(60);
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(62);
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(64);
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(66);
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(68);
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 69 */,
 /* 70 */,
 /* 71 */,
 /* 72 */,
 /* 73 */,
-/* 74 */
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(14);
+__webpack_require__(26);
 
-__webpack_require__(16);
+__webpack_require__(28);
 
-__webpack_require__(17);
+__webpack_require__(29);
 
-__webpack_require__(75);
-
-__webpack_require__(18);
-
-__webpack_require__(19);
-
-__webpack_require__(76);
-
-__webpack_require__(77);
-
-__webpack_require__(43);
-
-var _globalFooter = __webpack_require__(21);
-
-var _globalFooter2 = _interopRequireDefault(_globalFooter);
-
-var _globalHeader = __webpack_require__(26);
-
-var _globalHeader2 = _interopRequireDefault(_globalHeader);
-
-__webpack_require__(8);
-
-__webpack_require__(36);
-
-__webpack_require__(3);
-
-__webpack_require__(45);
-
-var _locationFinder = __webpack_require__(38);
-
-var _locationFinder2 = _interopRequireDefault(_locationFinder);
-
-__webpack_require__(41);
-
-__webpack_require__(78);
-
-__webpack_require__(5);
-
-__webpack_require__(83);
-
-__webpack_require__(84);
-
-__webpack_require__(85);
+__webpack_require__(30);
 
 __webpack_require__(31);
 
-__webpack_require__(87);
-
-__webpack_require__(47);
+__webpack_require__(32);
 
 __webpack_require__(33);
 
-__webpack_require__(88);
-
-__webpack_require__(49);
-
 __webpack_require__(89);
 
-__webpack_require__(52);
-
-__webpack_require__(54);
+__webpack_require__(34);
 
 __webpack_require__(35);
+
+__webpack_require__(90);
+
+__webpack_require__(36);
+
+__webpack_require__(92);
+
+__webpack_require__(93);
+
+__webpack_require__(15);
+
+var _globalFooter = __webpack_require__(38);
+
+var _globalFooter2 = _interopRequireDefault(_globalFooter);
+
+var _globalHeader = __webpack_require__(43);
+
+var _globalHeader2 = _interopRequireDefault(_globalHeader);
+
+__webpack_require__(22);
+
+__webpack_require__(94);
+
+__webpack_require__(10);
+
+__webpack_require__(5);
+
+__webpack_require__(53);
+
+var _locationFinder = __webpack_require__(12);
+
+var _locationFinder2 = _interopRequireDefault(_locationFinder);
+
+__webpack_require__(51);
+
+__webpack_require__(61);
+
+__webpack_require__(63);
+
+__webpack_require__(95);
+
+__webpack_require__(65);
+
+__webpack_require__(3);
+
+__webpack_require__(100);
+
+__webpack_require__(101);
+
+__webpack_require__(17);
+
+__webpack_require__(48);
+
+__webpack_require__(102);
+
+__webpack_require__(55);
+
+__webpack_require__(19);
+
+__webpack_require__(103);
+
+__webpack_require__(57);
+
+__webpack_require__(67);
+
+__webpack_require__(59);
+
+__webpack_require__(50);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2698,15 +2845,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 
 // Import layout modules
-// Import global modules
 if (document.querySelector(".GlobalFooter")) {
   var globalFooter = new _globalFooter2.default();
   globalFooter.render();
 }
 
 // Import components
-// import "../components/03-components/alert";
-// import "../components/03-components/blockquote";
+
+
+// Import icons
+// Import global modules
 
 
 if (document.querySelector(".GlobalHeader")) {
@@ -2730,13 +2878,28 @@ doc.className = doc.className.replace("no-js", "js");
 console.info("Styleguide loaded");
 
 /***/ }),
-/* 75 */
+/* 89 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 76 */
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(91);
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2745,7 +2908,7 @@ console.info("Styleguide loaded");
 __webpack_require__(0);
 
 /***/ }),
-/* 77 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2754,7 +2917,7 @@ __webpack_require__(0);
 __webpack_require__(1);
 
 /***/ }),
-/* 78 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2762,93 +2925,78 @@ __webpack_require__(1);
 
 __webpack_require__(9);
 
-__webpack_require__(79);
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(80);
+"use strict";
 
-__webpack_require__(81);
 
-__webpack_require__(82);
+__webpack_require__(23);
+
+__webpack_require__(96);
+
+__webpack_require__(97);
+
+__webpack_require__(98);
+
+__webpack_require__(99);
 
 /***/ }),
-/* 79 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "logo.png";
 
 /***/ }),
-/* 80 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "logo@2x.png";
 
 /***/ }),
-/* 81 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "logo-white.png";
 
 /***/ }),
-/* 82 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "logo-white@2x.png";
 
 /***/ }),
-/* 83 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(11);
+__webpack_require__(8);
 
 /***/ }),
-/* 84 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(10);
+__webpack_require__(24);
 
 __webpack_require__(7);
 
 /***/ }),
-/* 85 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(86);
+__webpack_require__(25);
 
 /***/ }),
-/* 86 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 87 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(13);
-
-/***/ }),
-/* 88 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(12);
-
-/***/ }),
-/* 89 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
