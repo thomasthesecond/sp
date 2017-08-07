@@ -1,39 +1,5 @@
 {
-  "status": "wip",
-  "title": "Locations page",
   "context": {
-    "preview": "@preview",
-    "title": "Locations",
-    "assetFileName": "locations",
-    "classname": "LocationsPage",
-    "meta": {
-      "title": "Locations"
-    },
-    "masthead": {
-      "title": "Locations",
-      "coverPhoto": {
-        "title": "A doctor writing on a clipboard as another doctor observes",
-        "src": "/locations-masthead-sm.jpg",
-        "srcset": [
-          {
-            "src": "/locations-masthead-sm@2x.jpg",
-            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
-          },
-          {
-            "src": "/locations-masthead@2x.jpg",
-            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
-          },
-          {
-            "src": "/locations-masthead-sm.jpg",
-            "media": "(max-width: 544px)"
-          },
-          {
-            "src": "/locations-masthead.jpg",
-            "media": ""
-          }
-        ]
-      }
-    },
     "locations": [
       {
         "state": "Alabama",

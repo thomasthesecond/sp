@@ -1,16 +1,7 @@
 <div class="text-block">
-  <h2>What we do</h2>
+  <h2>{{ block.heading }}</h2>
 
-  <p>
-    Our diverse company operates multiple types of
-    healthcare businesses dedicated to improving the
-    quality of care in a convenient and cost-effective
-    manner. The support of our ancillary services is
-    one of many unique attributes that differentiates
-    us from our competitors. These services include
-    multi-specialty physician practices, urgent care
-    facilities, anesthesia services, a diagnostic
-    laboratory, specialty pharmacy services, and
-    optical services.
-  </p>
+  {{#each block.content}}
+    <p>{{ this }}</p>
+  {{/each}}
 </div>

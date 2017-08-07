@@ -32,6 +32,27 @@ textarea {
   font-family: inherit;
 }
 
+a {
+  color: $color-text-link-default;
+  text-decoration: none;
+  transition: color 200ms;
+
+  // &:link,
+  // &:visited {
+  //   color: $color-text-link-default;
+  // }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-text-link-default-hover;
+  }
+
+  &[href^="tel:"] {
+    color: inherit;
+  }
+}
+
 abbr[title] {
   text-decoration: none;
 }

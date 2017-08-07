@@ -1,0 +1,15 @@
+{
+  "context": {
+    "location": {
+      "name": "Birmingham Surgery Center",
+      "address": {
+        "street": "2621 19th Street South",
+        "city": "Birmingham",
+        "state": "Alabama",
+        "postalCode": "35209"
+      },
+      "phone": "(205) 271-8200",
+      "websiteUrl": "http://www.birminghamsurgerycenter.com/"
+    }
+  }
+}

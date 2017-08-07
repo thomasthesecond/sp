@@ -12,7 +12,7 @@
     "assets:ci": "webpack --watch",
     "clean": "rimraf public && rimraf build",
     "scsslint": "scss-lint . --config .scsslint.yml",
-    "gh-pages": "npm run build -- -o build && gh-pages -d build"
+    "gh-pages": "npm run build && gh-pages -d build"
   },
   "repository": {
     "type": "git",

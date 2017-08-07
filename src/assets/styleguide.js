@@ -12,7 +12,7 @@ import "./scss/styleguide.scss";
 import "../components/_02-icons/icons.scss";
 
 // Import layout modules
-import "../components/_04-layout/layout.scss";
+import "../components/04-layout/layout.scss";
 
 // Import components
 import "../components/03-components/blockquote";
@@ -30,8 +30,10 @@ import "../components/03-components/leadership-team";
 import LocationFinder from "../components/03-components/location-finder";
 // import LocationSelect from "../components/03-components/location-select";
 import "../components/03-components/location-finder-button";
+import "../components/03-components/location-list";
 import "../components/03-components/location-map-legend";
 import "../components/03-components/logo";
+import "../components/03-components/map-widget";
 import "../components/03-components/masthead";
 import "../components/03-components/more-link";
 import "../components/03-components/navigation";

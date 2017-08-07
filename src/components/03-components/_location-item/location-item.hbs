@@ -1,0 +1,26 @@
+<div class="LocationItem" itemscope itemtype="http://schema.org/MedicalOrganization">
+  <h4 itemprop="name">
+    {{ location.name }}
+  </h4>
+
+  <p>
+    {{#if location.phone}}
+      <a href="tel:+1{{ location.phone }}" itemprop="telephone">
+        {{ location.phone }}
+      </a><br>
+    {{/if}}
+
+    <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="streetAddress">{{ location.address.street }}</span><br>
+      <span itemprop="addressLocality">{{ location.address.city }}</span>,
+      <span itemprop="addressRegion">{{ location.address.state }}</span>
+      <span itemprop="postalCode">{{ location.address.postalCode }}</span>
+    </span>
+
+    {{#if location.websiteUrl}}
+      <br><a href="{{ location.websiteUrl }}" itemprop="url" target=_blank rel="nofollow noreferrer">
+        Website
+      </a>
+    {{/if}}
+  </p>
+</div>

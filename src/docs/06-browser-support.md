@@ -34,4 +34,4 @@ Vendor prefixing is done automatically with [Autoprefixer](https://github.com/po
 
 ## Resources
 
-* [Vendor prefixes on MDN](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix)
+* [Vendor prefixes at MDN](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix)

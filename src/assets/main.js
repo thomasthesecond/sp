@@ -11,7 +11,7 @@ import "../components/03-components/table/table.scss";
 import "../components/_02-icons/icons.scss";
 
 // Import layout modules
-import "../components/_04-layout/layout.scss";
+import "../components/04-layout/layout.scss";
 
 // Import global components
 import "../components/03-components/_skip-link";

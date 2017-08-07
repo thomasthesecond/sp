@@ -61,15 +61,22 @@ h3,
 
 h4,
 .heading-small {
-  @include fluid-type(
-    $min-font-size: 14,
-    $max-font-size: 16,
-    $min-width: $min-width,
-    $max-width: $max-width
-  );
+  // @include fluid-type(
+  //   $min-font-size: 14,
+  //   $max-font-size: 16,
+  //   $min-width: 480,
+  //   $max-width: $max-width
+  // );
 
+  color: $color-text-heading;
+  font-size: 14px;
   font-weight: $font-weight-bold;
   line-height: (24 / 14);
-  line-height: (28 / 16);
-  margin: 0;
+  margin-bottom: 1em;
+  margin-top: 1em;
+
+  @media (min-width: 700px) {
+    font-size: 16px;
+    line-height: (28 / 16);
+  }
 }
