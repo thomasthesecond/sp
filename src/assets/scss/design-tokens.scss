@@ -19,7 +19,7 @@ $color-text-overlay: #fff; // rgb(255, 255, 255) // White
 $color-text-introduction: #819ba3; // rgb(129, 155, 163) // Gumbo
 $color-text-hamburger: #275e70; // rgb(39, 94, 112) // Casal
 $color-text-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
-$color-text-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
+// $color-text-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
 $color-text-link-default: #619ab1; // rgb(97, 154, 177) // Hippie Blue
 $color-text-link-default-hover: #819ba3; // rgb(129, 155, 163) // Gumbo
 
@@ -244,8 +244,12 @@ $spacing-gutter: 24;
 // ---------------------------------------------------------------------
 // Media query
 // ---------------------------------------------------------------------
-$mq-max-480: #{(479 / $font-size-default) * 1em};
+$mq-max-480: #{((480 - 1) / $font-size-default) * 1em};
 $mq-min-480: #{(480 / $font-size-default) * 1em};
+$mq-max-670: #{((670 - 1) / $font-size-default) * 1em};
+$mq-min-670: #{(670 / $font-size-default) * 1em};
+$mq-max-container: #{((($max-width + ($spacing-gutter * 2)) - 1) / $font-size-default) * 1em};
+$mq-min-container: #{(($max-width + ($spacing-gutter * 2)) / $font-size-default) * 1em};
 
 // ---------------------------------------------------------------------
 // Z-index

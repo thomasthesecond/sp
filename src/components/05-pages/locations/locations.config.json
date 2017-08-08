@@ -1,13 +1,19 @@
 {
   "status": "wip",
   "title": "Locations page",
+  "default": "list",
   "context": {
     "preview": "@preview",
     "title": "Locations",
+    "description": "",
+    "image": "/locations-masthead.jpg",
+    "slug": "/locations/",
     "assetFileName": "locations",
     "classname": "LocationsPage",
     "meta": {
-      "title": "Locations"
+      "title": "Locations",
+      "description": "",
+      "image": "/locations-masthead.jpg"
     },
     "masthead": {
       "title": "Locations",
@@ -33,64 +39,116 @@
           }
         ]
       }
-    },
-    "locations": [
-      {
-        "state": "Alabama",
+    }
+  },
+  "variants": [
+    {
+      "name": "list",
+      "label": "List",
+      "context": {
         "locations": [
           {
-            "name": "Birmingham Surgery Center",
-            "address": {
-              "street": "2621 19th Street South",
-              "city": "Birmingham",
-              "state": "Alabama",
-              "postalCode": "35209"
-            },
-            "phone": "(205) 271-8200",
-            "websiteUrl": "http://www.birminghamsurgerycenter.com/"
-          }
-        ]
-      },
-      {
-        "state": "Arkansas",
-        "locations": [
-          {
-            "name": "Novamed Surgery Center Of Jonesboro",
-            "address": {
-              "street": "601 East Matthews Avenue",
-              "city": "Jonesboro",
-              "state": "Arkansas",
-              "postalCode": "72401"
-            },
-            "phone": "(870) 935-6396"
-          }
-        ]
-      },
-      {
-        "state": "California",
-        "locations": [
-          {
-            "name": "Center for Outpatient Surgery",
-            "address": {
-              "street": "15141 Whittier Boulevard, Suite 130",
-              "city": "Whittier",
-              "state": "California",
-              "postalCode": "90603"
-            },
-            "phone": "(562) 945-2832"
+            "state": "Alabama",
+            "locations": [
+              {
+                "name": "Birmingham Surgery Center",
+                "address": {
+                  "street": "2621 19th Street South",
+                  "city": "Birmingham",
+                  "state": "Alabama",
+                  "postalCode": "35209"
+                },
+                "phone": "(205) 271-8200",
+                "websiteUrl": "http://www.birminghamsurgerycenter.com/"
+              }
+            ]
           },
           {
-            "name": "Mission Hills Surgicenter",
-            "address": {
-              "street": "25982 Pala, Suite 280",
-              "city": "Mission Viejo",
-              "state": "California",
-              "postalCode": "92691"
-            },
-            "phone": "(949) 297-3838"
+            "state": "Arkansas",
+            "locations": [
+              {
+                "name": "Novamed Surgery Center Of Jonesboro",
+                "address": {
+                  "street": "601 East Matthews Avenue",
+                  "city": "Jonesboro",
+                  "state": "Arkansas",
+                  "postalCode": "72401"
+                },
+                "phone": "(870) 935-6396"
+              }
+            ]
+          },
+          {
+            "state": "California",
+            "locations": [
+              {
+                "name": "Center for Outpatient Surgery",
+                "address": {
+                  "street": "15141 Whittier Boulevard, Suite 130",
+                  "city": "Whittier",
+                  "state": "California",
+                  "postalCode": "90603"
+                },
+                "phone": "(562) 945-2832"
+              },
+              {
+                "name": "Mission Hills Surgicenter",
+                "address": {
+                  "street": "25982 Pala, Suite 280",
+                  "city": "Mission Viejo",
+                  "state": "California",
+                  "postalCode": "92691"
+                },
+                "phone": "(949) 297-3838"
+              },
+              {
+                "name": "Pain Specialists of Orange County - Fountain Valley",
+                "address": {
+                  "street": "10221 Slater Avenue, Suite 114",
+                  "city": "Fountain Valley",
+                  "state": "California",
+                  "postalCode": "92708"
+                },
+                "phone": "(949) 297-3838"
+              },
+              {
+                "name": "Pain Specialists of Orange County - Irvine",
+                "address": {
+                  "street": "35 Creek Road",
+                  "city": "Irvine",
+                  "state": "California",
+                  "postalCode": "92604"
+                },
+                "phone": "(949) 297-3838"
+              },
+              {
+                "name": "Pain Specialists of Orange County - Laguna Hills",
+                "address": {
+                  "street": "24953 Paseo De Valencia, Building A, Suite 5A",
+                  "city": "Laguna Hills",
+                  "state": "California",
+                  "postalCode": "92653"
+                },
+                "phone": "(949) 297-3838"
+              }
+            ]
           }
         ]
       }
-    ]
-  }
+    },
+    {
+      "name": "no-results",
+      "label": "No results",
+      "context": {
+        "noResults": {
+          "title": "No results",
+          "message": "No matches. Reset filters to see all locations.",
+          "action": {
+            "label": "Reset filters",
+            "url": "/locations"
+          }
+        }
+      }
+    }
+  ]
 }

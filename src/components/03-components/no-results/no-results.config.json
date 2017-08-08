@@ -1,0 +1,12 @@
+{
+  "context": {
+    "noResults": {
+      "title": "No results",
+      "message": "No matches. Reset filters to see all locations.",
+      "action": {
+        "label": "Reset filters",
+        "url": "/locations"
+      }
+    }
+  }
+}

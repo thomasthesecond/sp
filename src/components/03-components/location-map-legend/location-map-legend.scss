@@ -44,3 +44,14 @@
     margin-left: 16px;
   }
 }
+
+// Implementation
+
+.LocationMap .LocationMapLegend {
+  // margin-top: #{(32 / 12) * 1em};
+  margin-top: 24px;
+
+  @media(min-width: 600px) {
+    margin-top: 32px;
+  }
+}

@@ -54,6 +54,36 @@
               "postalCode": "92691"
             },
             "phone": "(949) 297-3838"
+          },
+          {
+            "name": "Pain Specialists of Orange County - Fountain Valley",
+            "address": {
+              "street": "10221 Slater Avenue, Suite 114",
+              "city": "Fountain Valley",
+              "state": "California",
+              "postalCode": "92708"
+            },
+            "phone": "(949) 297-3838"
+          },
+          {
+            "name": "Pain Specialists of Orange County - Irvine",
+            "address": {
+              "street": "35 Creek Road",
+              "city": "Irvine",
+              "state": "California",
+              "postalCode": "92604"
+            },
+            "phone": "(949) 297-3838"
+          },
+          {
+            "name": "Pain Specialists of Orange County - Laguna Hills",
+            "address": {
+              "street": "24953 Paseo De Valencia, Building A, Suite 5A",
+              "city": "Laguna Hills",
+              "state": "California",
+              "postalCode": "92653"
+            },
+            "phone": "(949) 297-3838"
           }
         ]
       }

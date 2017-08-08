@@ -4,24 +4,23 @@
   "context": {
     "preview": "@preview",
     "title": "Investors",
+    "description": "",
+    "image": "/masthead-image.jpg",
+    "slug": "/investors/",
     "assetFileName": "investors",
     "classname": "InvestorsPage",
     "meta": {
-      "title": "Investors"
-    },
-    "coverPhoto": {
-      "src": "/masthead-image.jpg",
-      "title": ""
+      "title": "Investors",
+      "description": "",
+      "image": "/masthead-image.jpg"
     },
     "masthead": {
       "title": "Investors",
-      "image": {
+      "coverPhoto": {
         "src": "/masthead-image.jpg",
         "title": ""
       }
     },
-    "introduction": {
-      "text": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 150 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients."
-    }
+    "introduction": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 150 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients."
   }
 }

@@ -1,3 +1,7 @@
+@import "./design-tokens";
+@import "./mixins";
+@import "./functions";
+
 /**
  * Styleguide
  * @note Not for production
@@ -57,4 +61,62 @@ abbr[title] {
   td:not(:first-child) {
     border-left: 1px solid #d4d4d8;
   }
+}
+
+.font-family-benton-sans {
+  font-family: $font-family-default;
+}
+
+.font-weight-light {
+  font-weight: $font-weight-light;
+}
+
+.font-weight-regular {
+  font-weight: $font-weight-regular;
+}
+
+.font-weight-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.font-weight-bold {
+  font-weight: $font-weight-bold;
+}
+
+.font-preview {
+  color: $color-text-heading;
+  overflow: hidden;
+}
+
+.font-preview-info {
+  float: left;
+  // width: 14%;
+  font-size: #{$font-size-default}px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
+
+  span {
+    color: $color-text-default;
+  }
+}
+
+.font-preview-characters {
+  float: left;
+  // width: 86%;
+  overflow: hidden;
+}
+
+.font-preview-characters-aa {
+  float: left;
+  font-size: 120px;
+  line-height: 1;
+}
+
+.font-preview-characters-az {
+  float: left;
+  font-size: #{$font-size-small}px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
 }

@@ -1,0 +1,24 @@
+<table class="token-table">
+  <tr>
+    <th>Token</th>
+    <th>Value</th>
+    <th><abbr title="For reference only; cannot be used in code">Reference name</abbr></th>
+    <th>Example</th>
+  </tr>
+
+  {{#each color}}
+    <tr>
+      <td><code>$color-text-{{ @key }}</code></td>
+      <td>
+        <code>{{ this.hex }}</code><br>
+        <code>{{ this.rgb }}</code>
+      </td>
+      <td>{{ this.name }}</td>
+      <td>
+        <div
+          style="width: 24px; height: 24px; background-color:{{ this.hex }}; border: 1px solid rgba(0, 0, 0, .2);">
+        </div>
+      </td>
+    </tr>
+  {{/each}}
+</table>

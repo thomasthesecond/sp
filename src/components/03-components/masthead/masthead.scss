@@ -10,10 +10,10 @@
 .Masthead {
   align-items: center;
   display: flex;
-  height: #{(368 / 600) * 100vw};
+  height: #{(466 / $max-width) * 100vw};
   justify-content: center;
-  max-height: 435px;
-  min-height: 368px;
+  max-height: 466px;
+  min-height: 178px;
   position: relative;
   text-align: center;
   width: 100%;
