@@ -516,62 +516,6 @@ template {
 .float-right {
   float: right;
 }
-/**
- * Styleguide
- * @note Not for production
- */
-abbr[title] {
-  border-bottom: none;
-  cursor: help;
-  text-decoration: none;
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-
-.swatch {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-.swatch--light {
-  color: #000;
-}
-
-.token-table {
-  border-bottom: 1px solid #d4d4d8;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.token-table tr:nth-child(odd) {
-  background-color: #f6f6f6;
-}
-
-.token-table th {
-  text-align: left;
-}
-
-.token-table th,
-.token-table td {
-  border-bottom: 1px solid #d4d4d8;
-  padding: 16px;
-}
-
-.token-table th:not(:first-child),
-.token-table td:not(:first-child) {
-  border-left: 1px solid #d4d4d8;
-}
 @charset "UTF-8";
 /**
  * Mixins
@@ -637,6 +581,203 @@ cite {
 
 main {
   outline: none;
+}
+/**
+ * Mixins
+ */
+/**
+ * Functions
+ */
+/**
+ * Styleguide
+ * @note Not for production
+ */
+abbr[title] {
+  border-bottom: none;
+  cursor: help;
+  text-decoration: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+.swatch {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.swatch--light {
+  color: #000;
+}
+
+.token-table {
+  border-bottom: 1px solid #d4d4d8;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.token-table tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+.token-table th {
+  text-align: left;
+}
+
+.token-table th,
+.token-table td {
+  border-bottom: 1px solid #d4d4d8;
+  padding: 16px;
+}
+
+.token-table th:not(:first-child),
+.token-table td:not(:first-child) {
+  border-left: 1px solid #d4d4d8;
+}
+
+.font-family-benton-sans {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-regular {
+  font-weight: 400;
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.font-preview {
+  color: #25395d;
+  overflow: hidden;
+}
+
+.font-preview-info {
+  float: left;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
+}
+
+.font-preview-info span {
+  color: #8f9aa8;
+}
+
+.font-preview-characters {
+  float: left;
+  overflow: hidden;
+}
+
+.font-preview-characters-aa {
+  float: left;
+  font-size: 120px;
+  line-height: 1;
+}
+
+.font-preview-characters-az {
+  float: left;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Module: column
+ * @type Layout module
+ */
+.column {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 630px;
+  position: relative;
+  width: 100%;
+}
+
+/**
+ * Module: container
+ * @type Layout module
+ */
+.container {
+  margin-left: 24px;
+  margin-right: 24px;
+  max-width: 1290px;
+}
+
+@media (min-width: 83.625em) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/**
+ * Module: grid
+ * @type Layout module
+ */
+.grid {
+  display: grid;
+}
+
+/**
+ * Module: section
+ * @type Layout module
+ */
+.section {
+  padding-bottom: 9.30233vw;
+  padding-top: 9.30233vw;
+}
+
+@media (min-width: 1290px) {
+  .section {
+    padding-bottom: 120px;
+    padding-top: 120px;
+  }
+}
+
+.section--border {
+  border-top: 1px solid #bfd0d8;
+}
+
+.section--gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fcfaf7), to(#fff));
+  background: linear-gradient(to bottom, #fcfaf7 0%, #fff 100%);
+}
+
+/**
+ * Module: sticky
+ * @type Layout module
+ */
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 /**
  * Functions
@@ -735,85 +876,6 @@ h4,
     font-size: 16px;
     line-height: 1.75;
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Module: column
- * @type Layout module
- */
-.column {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 630px;
-  position: relative;
-  width: 100%;
-}
-
-/**
- * Module: container
- * @type Layout module
- */
-.container {
-  margin-left: 24px;
-  margin-right: 24px;
-  max-width: 1290px;
-}
-
-@media (min-width: 83.625em) {
-  .container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/**
- * Module: grid
- * @type Layout module
- */
-.grid {
-  display: grid;
-}
-
-/**
- * Module: section
- * @type Layout module
- */
-.section {
-  padding-bottom: 9.30233vw;
-  padding-top: 9.30233vw;
-}
-
-@media (min-width: 1290px) {
-  .section {
-    padding-bottom: 120px;
-    padding-top: 120px;
-  }
-}
-
-.section--border {
-  border-top: 1px solid #bfd0d8;
-}
-
-.section--gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(#fcfaf7), to(#fff));
-  background: linear-gradient(to bottom, #fcfaf7 0%, #fff 100%);
-}
-
-/**
- * Module: sticky
- * @type Layout module
- */
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
 }
 /**
  * Functions
@@ -1195,6 +1257,58 @@ select.dark {
 .Overlay.is-open {
   opacity: 1;
   visibility: visible;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Button
+ * @type Atom
+ */
+.Button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #5d91a1;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: .7px;
+  line-height: 1;
+  padding: 1.71429em 2.85714em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: background-color 200ms, color 200ms;
+  transition: background-color 200ms, color 200ms;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.Button:hover, .Button:active, .Button:focus {
+  color: #fff;
+}
+
+.Button--dark {
+  background-color: #152640;
+  border: 1px solid rgba(191, 208, 216, 0.2);
+  color: #fff;
 }
 /**
  * Functions
@@ -1646,58 +1760,6 @@ select.dark {
  * Mixins
  */
 /**
- * Component: Button
- * @type Atom
- */
-.Button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background-color: #5d91a1;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: 14px;
-  font-weight: 600;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  letter-spacing: .7px;
-  line-height: 1;
-  padding: 1.71429em 2.85714em;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  -webkit-transition: background-color 200ms, color 200ms;
-  transition: background-color 200ms, color 200ms;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.Button:hover, .Button:active, .Button:focus {
-  color: #fff;
-}
-
-.Button--dark {
-  background-color: #152640;
-  border: 1px solid rgba(191, 208, 216, 0.2);
-  color: #fff;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Location finder button
  * @type Atom
  */
@@ -1714,6 +1776,59 @@ select.dark {
   padding: 0;
   text-transform: none;
   width: 100%;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Masthead
+ * @type Atom
+ */
+.Masthead {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 36.12403vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 466px;
+  min-height: 178px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.Masthead--video {
+  max-height: 732px;
+  min-height: 420px;
+}
+
+.Masthead .container {
+  position: relative;
+  z-index: 1;
+}
+
+.Masthead-title {
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 0 54px #6facc1;
+}
+
+.Masthead .MoreLink {
+  margin-top: 9.30233vw;
+}
+
+@media (min-width: 1290px) {
+  .Masthead .MoreLink {
+    margin-top: 120px;
+  }
 }
 /**
  * Functions
@@ -1914,59 +2029,6 @@ select.dark {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Masthead
- * @type Atom
- */
-.Masthead {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 61.33333vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-height: 435px;
-  min-height: 368px;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-.Masthead--video {
-  max-height: 732px;
-  min-height: 420px;
-}
-
-.Masthead .container {
-  position: relative;
-  z-index: 1;
-}
-
-.Masthead-title {
-  color: #fff;
-  margin: 0;
-  text-shadow: 0 0 54px #6facc1;
-}
-
-.Masthead .MoreLink {
-  margin-top: 9.30233vw;
-}
-
-@media (min-width: 1290px) {
-  .Masthead .MoreLink {
-    margin-top: 120px;
   }
 }
 /**
@@ -2179,6 +2241,7 @@ select.dark {
 
 .ImageBlock > a {
   display: block;
+  overflow: hidden;
 }
 
 @media (min-width: 544px) {
@@ -2206,6 +2269,14 @@ select.dark {
   .ImageBlock-photo {
     max-height: 720px;
     max-width: 100%;
+    -webkit-transition: -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
+    transition: -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
+    transition: transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
+    transition: transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77), -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
+  }
+  .ImageBlock > a:hover .ImageBlock-photo {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
   }
 }
 
@@ -2700,8 +2771,10 @@ select.dark {
  * Component: Pagination
  * @type Organism
  */
-.Pagination {
-  text-align: center;
+@media (min-width: 600px) {
+  .Pagination {
+    text-align: center;
+  }
 }
 
 .Pagination a {
@@ -2754,12 +2827,6 @@ select.dark {
   transition: -webkit-transform 200ms;
   transition: transform 200ms;
   transition: transform 200ms, -webkit-transform 200ms;
-}
-
-@media (max-width: 599px) {
-  .Pagination-icon {
-    display: none;
-  }
 }
 /**
  * Functions
@@ -2970,10 +3037,31 @@ select.dark {
     margin-top: 128px;
   }
 }
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: No results
+ * @type Organism
+ */
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Map widget
+ * @type Atom
+ */
 .MapWidget {
   background-color: rgba(0, 0, 0, 0.1);
-  height: 550px;
-  max-width: 550px;
+  height: 42.63566vw;
+  max-height: 550px;
+  min-height: 200px;
   width: 100%;
 }
 /**
@@ -3033,6 +3121,16 @@ select.dark {
     margin-left: 16px;
   }
 }
+
+.LocationMap .LocationMapLegend {
+  margin-top: 24px;
+}
+
+@media (min-width: 600px) {
+  .LocationMap .LocationMapLegend {
+    margin-top: 32px;
+  }
+}
 /**
  * Functions
  */
@@ -3045,8 +3143,15 @@ select.dark {
  */
 .LocationList h2:not(:first-of-type) {
   border-top: 1px solid rgba(191, 208, 216, 0.47);
-  margin-top: 72px;
-  padding-top: 64px;
+  margin-top: 48px;
+  padding-top: 40px;
+}
+
+@media (min-width: 600px) {
+  .LocationList h2:not(:first-of-type) {
+    margin-top: 72px;
+    padding-top: 64px;
+  }
 }
 
 .LocationList-item h4 {

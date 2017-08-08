@@ -11,7 +11,10 @@
   // border-top: 1px solid $color-border-default;
   // padding-bottom: #{(170 / $max-width) * 100vw};
   // padding-top: #{(176 / $max-width) * 100vw};
-  text-align: center;
+
+  @media(min-width: 600px) {
+    text-align: center;
+  }
 
   // @media(min-width: 1290px) {
   //   padding-bottom: 170px;
@@ -55,9 +58,9 @@
 }
 
 .Pagination-icon {
-  @media (max-width: 599px) {
-    display: none;
-  }
+  // @media (max-width: 599px) {
+  //   display: none;
+  // }
 
   color: #bfd0d8;
   height: #{(40 / 80) * 1em};

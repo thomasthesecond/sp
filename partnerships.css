@@ -15,12 +15,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 61.33333vw;
+  height: 36.12403vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-height: 435px;
-  min-height: 368px;
+  max-height: 466px;
+  min-height: 178px;
   position: relative;
   text-align: center;
   width: 100%;
@@ -261,6 +261,7 @@
 
 .ImageBlock > a {
   display: block;
+  overflow: hidden;
 }
 
 @media (min-width: 544px) {
@@ -288,6 +289,14 @@
   .ImageBlock-photo {
     max-height: 720px;
     max-width: 100%;
+    -webkit-transition: -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
+    transition: -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
+    transition: transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
+    transition: transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77), -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
+  }
+  .ImageBlock > a:hover .ImageBlock-photo {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
   }
 }
 
@@ -500,8 +509,10 @@
  * Component: Pagination
  * @type Organism
  */
-.Pagination {
-  text-align: center;
+@media (min-width: 600px) {
+  .Pagination {
+    text-align: center;
+  }
 }
 
 .Pagination a {
@@ -554,12 +565,6 @@
   transition: -webkit-transform 200ms;
   transition: transform 200ms;
   transition: transform 200ms, -webkit-transform 200ms;
-}
-
-@media (max-width: 599px) {
-  .Pagination-icon {
-    display: none;
-  }
 }
 /**
  * Functions

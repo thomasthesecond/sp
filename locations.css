@@ -5,6 +5,59 @@
  * Mixins
  */
 /**
+ * Component: Masthead
+ * @type Atom
+ */
+.Masthead {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 36.12403vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 466px;
+  min-height: 178px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.Masthead--video {
+  max-height: 732px;
+  min-height: 420px;
+}
+
+.Masthead .container {
+  position: relative;
+  z-index: 1;
+}
+
+.Masthead-title {
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 0 54px #6facc1;
+}
+
+.Masthead .MoreLink {
+  margin-top: 9.30233vw;
+}
+
+@media (min-width: 1290px) {
+  .Masthead .MoreLink {
+    margin-top: 120px;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Location finder
  * @type Organism
  */
@@ -206,59 +259,6 @@
  * Mixins
  */
 /**
- * Component: Masthead
- * @type Atom
- */
-.Masthead {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 61.33333vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-height: 435px;
-  min-height: 368px;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-.Masthead--video {
-  max-height: 732px;
-  min-height: 420px;
-}
-
-.Masthead .container {
-  position: relative;
-  z-index: 1;
-}
-
-.Masthead-title {
-  color: #fff;
-  margin: 0;
-  text-shadow: 0 0 54px #6facc1;
-}
-
-.Masthead .MoreLink {
-  margin-top: 9.30233vw;
-}
-
-@media (min-width: 1290px) {
-  .Masthead .MoreLink {
-    margin-top: 120px;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Cover photo
  * @type Atom
  */
@@ -385,10 +385,31 @@
 .Tagline--white {
   color: #fff;
 }
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: No results
+ * @type Organism
+ */
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Map widget
+ * @type Atom
+ */
 .MapWidget {
   background-color: rgba(0, 0, 0, 0.1);
-  height: 550px;
-  max-width: 550px;
+  height: 42.63566vw;
+  max-height: 550px;
+  min-height: 200px;
   width: 100%;
 }
 /**
@@ -448,6 +469,16 @@
     margin-left: 16px;
   }
 }
+
+.LocationMap .LocationMapLegend {
+  margin-top: 24px;
+}
+
+@media (min-width: 600px) {
+  .LocationMap .LocationMapLegend {
+    margin-top: 32px;
+  }
+}
 /**
  * Functions
  */
@@ -460,8 +491,15 @@
  */
 .LocationList h2:not(:first-of-type) {
   border-top: 1px solid rgba(191, 208, 216, 0.47);
-  margin-top: 72px;
-  padding-top: 64px;
+  margin-top: 48px;
+  padding-top: 40px;
+}
+
+@media (min-width: 600px) {
+  .LocationList h2:not(:first-of-type) {
+    margin-top: 72px;
+    padding-top: 64px;
+  }
 }
 
 .LocationList-item h4 {
@@ -481,57 +519,118 @@
  * Page: Locations
  * @type page
  */
-.LocationsPage .grid {
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-}
-
-@media (min-width: 600px) {
-  .LocationsPage .grid {
-    grid-template-columns: 108px 444px auto 550px;
-    grid-template-rows: auto;
-  }
-}
-
-@media (min-width: 600px) {
-  .LocationsPage .grid .MapWidget {
-    grid-column: 4 / 5;
-    grid-row: 1;
-  }
-}
-
-@media (min-width: 600px) {
-  .LocationsPage .grid .LocationList {
-    grid-column: 2 / 3;
-    grid-row: 1;
-  }
-}
-
-.LocationsPage .grid .l-content {
-  margin-left: 108px;
-  width: 444px;
-}
-
-.LocationsPage .grid .l-sidebar {
-  margin-left: 188px;
-  width: 550px;
-}
-
 .LocationFinder {
-  margin-bottom: 56px;
   margin-top: 48px;
 }
 
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   .LocationFinder {
-    margin-bottom: 216px;
     margin-top: -3.48837vw;
-    z-index: 1000;
   }
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 83.625em) {
   .LocationFinder {
     margin-top: -45px;
+  }
+}
+
+.LocationsPage-grid {
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  margin-top: 48px;
+}
+
+@media (min-width: 41.875em) {
+  .LocationsPage-grid {
+    grid-template-columns: 38.60465% 14.57364% 46.82171%;
+    margin-top: 19.06977vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .LocationsPage-grid {
+    grid-template-columns: 108px 444px 188px 550px;
+    margin-top: 246px;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationsPage-content {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .LocationsPage-content {
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationsPage-aside {
+    margin-bottom: 60px;
+    margin-left: -24px;
+    margin-right: -24px;
+    width: calc(100% + 48px);
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationsPage-aside {
+    -ms-flex-item-align: start;
+        align-self: start;
+    grid-column: 3 / 4;
+    grid-row: 1;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 19.06977vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .LocationsPage-aside {
+    grid-column: 4 / 5;
+    top: 246px;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationMapLegend {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationList {
+    margin-left: -24px;
+    margin-right: -24px;
+    width: calc(100% + 48px);
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationList h2,
+  .LocationList-item {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.GlobalFooter {
+  margin-top: 110px;
+}
+
+@media (min-width: 645px) {
+  .GlobalFooter {
+    margin-top: 17.05426vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .GlobalFooter {
+    margin-top: 220px;
   }
 }

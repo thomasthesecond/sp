@@ -15,12 +15,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 61.33333vw;
+  height: 36.12403vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-height: 435px;
-  min-height: 368px;
+  max-height: 466px;
+  min-height: 178px;
   position: relative;
   text-align: center;
   width: 100%;
@@ -648,8 +648,10 @@
  * Component: Pagination
  * @type Organism
  */
-.Pagination {
-  text-align: center;
+@media (min-width: 600px) {
+  .Pagination {
+    text-align: center;
+  }
 }
 
 .Pagination a {
@@ -702,12 +704,6 @@
   transition: -webkit-transform 200ms;
   transition: transform 200ms;
   transition: transform 200ms, -webkit-transform 200ms;
-}
-
-@media (max-width: 599px) {
-  .Pagination-icon {
-    display: none;
-  }
 }
 /**
  * Functions

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 88);
+/******/ 	return __webpack_require__(__webpack_require__.s = 90);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2726,8 +2726,21 @@ __webpack_require__(68);
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 69 */,
-/* 70 */,
+/* 69 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(70);
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 71 */,
 /* 72 */,
 /* 73 */,
@@ -2745,7 +2758,9 @@ __webpack_require__(68);
 /* 85 */,
 /* 86 */,
 /* 87 */,
-/* 88 */
+/* 88 */,
+/* 89 */,
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2765,19 +2780,19 @@ __webpack_require__(32);
 
 __webpack_require__(33);
 
-__webpack_require__(89);
+__webpack_require__(91);
 
 __webpack_require__(34);
 
 __webpack_require__(35);
 
-__webpack_require__(90);
+__webpack_require__(92);
 
 __webpack_require__(36);
 
-__webpack_require__(92);
+__webpack_require__(94);
 
-__webpack_require__(93);
+__webpack_require__(95);
 
 __webpack_require__(15);
 
@@ -2791,7 +2806,7 @@ var _globalHeader2 = _interopRequireDefault(_globalHeader);
 
 __webpack_require__(22);
 
-__webpack_require__(94);
+__webpack_require__(96);
 
 __webpack_require__(10);
 
@@ -2809,31 +2824,33 @@ __webpack_require__(61);
 
 __webpack_require__(63);
 
-__webpack_require__(95);
+__webpack_require__(97);
 
 __webpack_require__(65);
 
 __webpack_require__(3);
 
-__webpack_require__(100);
+__webpack_require__(102);
 
-__webpack_require__(101);
+__webpack_require__(103);
+
+__webpack_require__(67);
 
 __webpack_require__(17);
 
 __webpack_require__(48);
 
-__webpack_require__(102);
+__webpack_require__(104);
 
 __webpack_require__(55);
 
 __webpack_require__(19);
 
-__webpack_require__(103);
+__webpack_require__(105);
 
 __webpack_require__(57);
 
-__webpack_require__(67);
+__webpack_require__(69);
 
 __webpack_require__(59);
 
@@ -2841,20 +2858,19 @@ __webpack_require__(50);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import LocationSelect from "../components/03-components/location-select";
-
-
-// Import layout modules
-if (document.querySelector(".GlobalFooter")) {
-  var globalFooter = new _globalFooter2.default();
-  globalFooter.render();
-}
-
 // Import components
 
 
 // Import icons
 // Import global modules
+if (document.querySelector(".GlobalFooter")) {
+  var globalFooter = new _globalFooter2.default();
+  globalFooter.render();
+}
+// import LocationSelect from "../components/03-components/location-select";
+
+
+// Import layout modules
 
 
 if (document.querySelector(".GlobalHeader")) {
@@ -2878,21 +2894,6 @@ doc.className = doc.className.replace("no-js", "js");
 console.info("Styleguide loaded");
 
 /***/ }),
-/* 89 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 90 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(91);
-
-/***/ }),
 /* 91 */
 /***/ (function(module, exports) {
 
@@ -2905,16 +2906,13 @@ __webpack_require__(91);
 "use strict";
 
 
-__webpack_require__(0);
+__webpack_require__(93);
 
 /***/ }),
 /* 93 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-__webpack_require__(1);
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 94 */
@@ -2923,7 +2921,7 @@ __webpack_require__(1);
 "use strict";
 
 
-__webpack_require__(9);
+__webpack_require__(0);
 
 /***/ }),
 /* 95 */
@@ -2932,42 +2930,60 @@ __webpack_require__(9);
 "use strict";
 
 
-__webpack_require__(23);
-
-__webpack_require__(96);
-
-__webpack_require__(97);
-
-__webpack_require__(98);
-
-__webpack_require__(99);
+__webpack_require__(1);
 
 /***/ }),
 /* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "logo.png";
+"use strict";
+
+
+__webpack_require__(9);
 
 /***/ }),
 /* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "logo@2x.png";
+"use strict";
+
+
+__webpack_require__(23);
+
+__webpack_require__(98);
+
+__webpack_require__(99);
+
+__webpack_require__(100);
+
+__webpack_require__(101);
 
 /***/ }),
 /* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "logo-white.png";
+module.exports = __webpack_require__.p + "logo.png";
 
 /***/ }),
 /* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "logo-white@2x.png";
+module.exports = __webpack_require__.p + "logo@2x.png";
 
 /***/ }),
 /* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "logo-white.png";
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "logo-white@2x.png";
+
+/***/ }),
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2976,7 +2992,7 @@ module.exports = __webpack_require__.p + "logo-white@2x.png";
 __webpack_require__(8);
 
 /***/ }),
-/* 101 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2987,7 +3003,7 @@ __webpack_require__(24);
 __webpack_require__(7);
 
 /***/ }),
-/* 102 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2996,7 +3012,7 @@ __webpack_require__(7);
 __webpack_require__(25);
 
 /***/ }),
-/* 103 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
