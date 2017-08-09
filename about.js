@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 78);
+/******/ 	return __webpack_require__(__webpack_require__.s = 80);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -445,28 +445,13 @@ exports.default = SubNavigation;
 /* 50 */,
 /* 51 */,
 /* 52 */,
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(54);
-
-/***/ }),
-/* 54 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
+/* 53 */,
+/* 54 */,
 /* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-
-__webpack_require__(25);
 
 __webpack_require__(56);
 
@@ -482,6 +467,8 @@ __webpack_require__(56);
 
 "use strict";
 
+
+__webpack_require__(25);
 
 __webpack_require__(58);
 
@@ -507,8 +494,21 @@ __webpack_require__(60);
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 61 */,
-/* 62 */,
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(62);
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 63 */,
 /* 64 */,
 /* 65 */,
@@ -524,33 +524,35 @@ __webpack_require__(60);
 /* 75 */,
 /* 76 */,
 /* 77 */,
-/* 78 */
+/* 78 */,
+/* 79 */,
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(79);
+__webpack_require__(81);
 
 __webpack_require__(15);
 
 __webpack_require__(5);
 
-__webpack_require__(53);
+__webpack_require__(55);
 
 __webpack_require__(3);
 
 __webpack_require__(17);
 
-__webpack_require__(55);
+__webpack_require__(57);
 
 var _subNavigation = __webpack_require__(19);
 
 var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-__webpack_require__(57);
-
 __webpack_require__(59);
+
+__webpack_require__(61);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -565,16 +567,16 @@ subNavigation.render();
 console.info("About loaded");
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(80);
+__webpack_require__(82);
 
 /***/ }),
-/* 80 */
+/* 82 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

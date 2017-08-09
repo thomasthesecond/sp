@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 71);
+/******/ 	return __webpack_require__(__webpack_require__.s = 73);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2155,13 +2155,26 @@ __webpack_require__(49);
 
 /***/ }),
 /* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(51);
+
+/***/ }),
+/* 51 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 51 */,
-/* 52 */,
+/* 52 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 53 */,
 /* 54 */,
 /* 55 */,
@@ -2180,7 +2193,9 @@ __webpack_require__(49);
 /* 68 */,
 /* 69 */,
 /* 70 */,
-/* 71 */
+/* 71 */,
+/* 72 */,
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2204,7 +2219,7 @@ __webpack_require__(34);
 
 __webpack_require__(35);
 
-__webpack_require__(72);
+__webpack_require__(74);
 
 __webpack_require__(36);
 
@@ -2220,21 +2235,23 @@ __webpack_require__(48);
 
 __webpack_require__(50);
 
-__webpack_require__(74);
+__webpack_require__(52);
+
+__webpack_require__(76);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Import global modules
 
 
-// Import layout modules
-// Import global modules
-console.info("Main loaded");
-
 // Import global components
 
 
 // Import icons
+console.info("Main loaded");
+
+// Import layout modules
+// Import global modules
 
 
 var globalFooter = new _globalFooter2.default();
@@ -2247,22 +2264,22 @@ globalHeader.render();
 doc.className = doc.className.replace("no-js", "js");
 
 /***/ }),
-/* 72 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(73);
+__webpack_require__(75);
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

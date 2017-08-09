@@ -301,6 +301,11 @@
 <span class="hljs-selector-class">.ImageBlock</span> &gt; <span class="hljs-selector-tag">a</span> {
   <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">overflow</span>: hidden;
+
+  @<span class="hljs-keyword">media</span> (max-width: 543px) {
+    <span class="hljs-attribute">margin-left</span>: -#{<span class="hljs-variable">$spacing-gutter</span>}px;
+    <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">100%</span> + #{(<span class="hljs-variable">$spacing-gutter</span> * <span class="hljs-number">2</span>)}px);
+  }
 }
 
 <span class="hljs-selector-class">.ImageBlock--alternate</span> {
@@ -312,15 +317,10 @@
 <span class="hljs-selector-class">.ImageBlock-photo</span> {
   <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">height</span>: auto;
-
-  @<span class="hljs-keyword">media</span> (max-width: 543px) {
-    <span class="hljs-attribute">margin-left</span>: -#{<span class="hljs-variable">$spacing-gutter</span>}px;
-    <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">100%</span> + #{(<span class="hljs-variable">$spacing-gutter</span> * <span class="hljs-number">2</span>)}px);
-  }
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
 
   @<span class="hljs-keyword">media</span> (min-width: 544px) {
     <span class="hljs-attribute">max-height</span>: <span class="hljs-number">720px</span>;
-    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
     <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">600ms</span> cubic-bezier(<span class="hljs-number">0.45</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">0.41</span>, <span class="hljs-number">0.77</span>);
 
     <span class="hljs-selector-class">.ImageBlock</span> &gt; <span class="hljs-selector-tag">a</span>:hover &amp; {
@@ -1227,6 +1227,70 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-hr">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Hr</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="hr--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="hr--dark.html" data-pjax>
+                <span>Dark</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 84);
+/******/ 	return __webpack_require__(__webpack_require__.s = 86);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -126,13 +126,13 @@ __webpack_require__(6);
 
 /***/ }),
 
-/***/ 84:
+/***/ 86:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(85);
+__webpack_require__(87);
 
 __webpack_require__(5);
 
@@ -143,17 +143,17 @@ console.info("Investors loaded"); // Import page module
 
 /***/ }),
 
-/***/ 85:
+/***/ 87:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(86);
+__webpack_require__(88);
 
 /***/ }),
 
-/***/ 86:
+/***/ 88:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -15,7 +15,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 36.12403vw;
+  height: 55vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -648,7 +648,7 @@
  * Component: Pagination
  * @type Organism
  */
-@media (min-width: 600px) {
+@media (min-width: 480px) {
   .Pagination {
     text-align: center;
   }
@@ -925,37 +925,143 @@
  * @type page
  */
 .Introduction {
-  margin-bottom: 13.02326vw;
-  margin-top: 13.48837vw;
+  margin-bottom: 130px;
+  margin-top: 90px;
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 468px) {
   .Introduction {
-    margin-bottom: 168px;
-    margin-top: 174px;
+    margin-top: 19.22481vw;
+  }
+}
+
+@media (min-width: 630px) {
+  .Introduction {
+    margin-bottom: 20.62016vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .Introduction {
+    margin-bottom: 266px;
+    margin-top: 248px;
+  }
+}
+
+.section-gradient {
+  padding-top: 92px;
+}
+
+@media (min-width: 571px) {
+  .section-gradient {
+    padding-top: 16.12403vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .section-gradient {
+    padding-top: 208px;
   }
 }
 
 .ServiceCards {
-  margin-top: 60px;
+  margin-bottom: 136px;
+  margin-top: 70px;
+}
+
+@media (min-width: 731px) {
+  .ServiceCards {
+    margin-bottom: 18.60465vw;
+  }
+}
+
+@media (min-width: 1004px) {
+  .ServiceCards {
+    margin-top: 6.97674vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .ServiceCards {
+    margin-bottom: 240px;
+    margin-top: 90px;
+  }
 }
 
 .Feature {
-  margin-top: 11.16279vw;
+  margin-bottom: 92px;
+  margin-top: 92px;
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 620px) {
   .Feature {
-    margin-top: 144px;
+    margin-bottom: 14.88372vw;
+    margin-top: 14.88372vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .Feature {
+    margin-bottom: 192px;
+    margin-top: 192px;
+  }
+}
+
+.Timeline {
+  margin-bottom: 68px;
+}
+
+@media (min-width: 976px) {
+  .Timeline {
+    margin-bottom: 6.97674vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .Timeline {
+    margin-bottom: 90px;
   }
 }
 
 .LeadershipTeam {
-  margin-top: 11.78295vw;
+  margin-bottom: 130px;
+  margin-top: 40px;
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 332px) {
   .LeadershipTeam {
-    margin-top: 152px;
+    margin-top: 12.09302vw;
+  }
+}
+
+@media (min-width: 656px) {
+  .LeadershipTeam {
+    margin-bottom: 19.84496vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .LeadershipTeam {
+    margin-bottom: 256px;
+    margin-top: 156px;
+  }
+}
+
+.Pagination {
+  margin-bottom: 92px;
+  margin-top: 92px;
+}
+
+@media (min-width: 660px) {
+  .Pagination {
+    margin-bottom: 13.95349vw;
+    margin-top: 13.95349vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .Pagination {
+    margin-bottom: 180px;
+    margin-top: 180px;
   }
 }

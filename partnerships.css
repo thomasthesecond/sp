@@ -15,7 +15,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 36.12403vw;
+  height: 55vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -264,6 +264,13 @@
   overflow: hidden;
 }
 
+@media (max-width: 543px) {
+  .ImageBlock > a {
+    margin-left: -24px;
+    width: calc(100% + 48px);
+  }
+}
+
 @media (min-width: 544px) {
   .ImageBlock--alternate {
     -webkit-box-orient: horizontal;
@@ -276,19 +283,12 @@
 .ImageBlock-photo {
   display: block;
   height: auto;
-}
-
-@media (max-width: 543px) {
-  .ImageBlock-photo {
-    margin-left: -24px;
-    width: calc(100% + 48px);
-  }
+  max-width: 100%;
 }
 
 @media (min-width: 544px) {
   .ImageBlock-photo {
     max-height: 720px;
-    max-width: 100%;
     -webkit-transition: -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
     transition: -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
     transition: transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
@@ -509,7 +509,7 @@
  * Component: Pagination
  * @type Organism
  */
-@media (min-width: 600px) {
+@media (min-width: 480px) {
   .Pagination {
     text-align: center;
   }
@@ -851,27 +851,105 @@
  * @type page
  */
 .Introduction {
-  margin-bottom: 13.02326vw;
-  margin-top: 13.48837vw;
+  margin-bottom: 130px;
+  margin-top: 90px;
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 468px) {
   .Introduction {
-    margin-bottom: 168px;
-    margin-top: 174px;
+    margin-top: 19.22481vw;
   }
 }
 
-.divided {
-  border-bottom: 1px solid rgba(191, 208, 216, 0.27);
-  border-top: 1px solid rgba(191, 208, 216, 0.27);
-  margin-bottom: 184px;
-  margin-top: 184px;
-  padding-bottom: 120px;
-  padding-top: 120px;
+@media (min-width: 630px) {
+  .Introduction {
+    margin-bottom: 20.62016vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .Introduction {
+    margin-bottom: 266px;
+    margin-top: 248px;
+  }
+}
+
+.ImageBlock {
+  margin-bottom: 104px;
+  margin-top: 104px;
+}
+
+@media (min-width: 746px) {
+  .ImageBlock {
+    margin-bottom: 13.95349vw;
+    margin-top: 13.95349vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .ImageBlock {
+    margin-bottom: 180px;
+    margin-top: 180px;
+  }
 }
 
 .Testimonial {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 86px auto;
+}
+
+@media (min-width: 957px) {
+  .Testimonial {
+    margin-bottom: 8.99225vw;
+    margin-top: 8.99225vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .Testimonial {
+    margin-bottom: 116px;
+    margin-top: 116px;
+  }
+}
+
+.Feature {
+  margin-bottom: 104px;
+  margin-top: 104px;
+}
+
+@media (min-width: 516px) {
+  .Feature {
+    margin-bottom: 20.15504vw;
+  }
+}
+
+@media (min-width: 746px) {
+  .Feature {
+    margin-top: 13.95349vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .Feature {
+    margin-bottom: 260px;
+    margin-top: 180px;
+  }
+}
+
+.Pagination {
+  margin-bottom: 92px;
+  margin-top: 92px;
+}
+
+@media (min-width: 660px) {
+  .Pagination {
+    margin-bottom: 13.95349vw;
+    margin-top: 13.95349vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .Pagination {
+    margin-bottom: 180px;
+    margin-top: 180px;
+  }
 }
