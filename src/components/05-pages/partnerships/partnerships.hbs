@@ -7,50 +7,51 @@
     {{> @sub-navigation }}
   </div>
 
-  {{!> @image-block block=this.block }}
-  {{!> @image-block--alternate block=this.block }}
-
   <div class="container">
     {{> @introduction }}
 
-    <section class="section js-spy-section" id="{{ sections.[0].id }}">
+    <section class="js-spy-section" id="{{ sections.[0].id }}">
       {{> @image-block block=sections.[0] }}
 
-      <div class="divided">
-        {{> @testimonial testimonial=testimonials.[0] }}
-      </div>
+      <hr>
+
+      {{> @testimonial testimonial=testimonials.[0] }}
     </section>
 
-    <section class="section js-spy-section" id="{{ sections.[1].id }}">
+    <hr>
+
+    <section class="js-spy-section" id="{{ sections.[1].id }}">
       {{> @image-block--alternate block=sections.[1] }}
 
-      <div class="divided">
-        {{> @testimonial testimonial=testimonials.[1] }}
-      </div>
+      <hr>
+
+      {{> @testimonial testimonial=testimonials.[1] }}
     </section>
   </div>
 
   {{> @feature }}
 
   <div class="container">
-    <section class="section js-spy-section" id="{{ sections.[2].id }}">
+    <section class="js-spy-section" id="{{ sections.[2].id }}">
       {{> @image-block--alternate block=sections.[2] }}
 
-      <div class="divided">
-        {{> @testimonial testimonial=testimonials.[2] }}
-      </div>
+      <hr>
+
+      {{> @testimonial testimonial=testimonials.[2] }}
     </section>
 
-    <section class="section js-spy-section" id="{{ sections.[3].id }}">
+    <hr>
+
+    <section class="js-spy-section" id="{{ sections.[3].id }}">
       {{> @image-block block=sections.[3] }}
 
-      <div class="divided">
-        {{> @testimonial testimonial=testimonials.[3] }}
-      </div>
-    </section>
-  </div>
+      <hr>
 
-  <div class="section section--border container">
+      {{> @testimonial testimonial=testimonials.[3] }}
+    </section>
+
+    <hr class="dark">
+
     {{> @pagination }}
   </div>
 </main>

@@ -1,0 +1,20 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Horizontal rule
+ * @type Atom
+ */
+
+hr {
+  background-color: rgba($color-border-default, .27);
+  border: 0;
+  height: 1px;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  &.dark {
+    background-color: $color-border-default;
+  }
+}

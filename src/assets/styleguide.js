@@ -24,6 +24,7 @@ import GlobalFooter from "../components/03-components/global-footer";
 import GlobalHeader from "../components/03-components/global-header";
 import "../components/03-components/hamburger";
 import "../components/03-components/highlight";
+import "../components/03-components/hr";
 import "../components/03-components/image-block";
 import "../components/03-components/introduction";
 import "../components/03-components/leadership-team";

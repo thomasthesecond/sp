@@ -11,7 +11,7 @@
     {{> @introduction }}
   </div>
 
-  <section class="section section--gradient js-spy-section" id="{{ sections.[0].id }}">
+  <section class="section-gradient js-spy-section" id="{{ sections.[0].id }}">
     <div class="container">
       <div class="column">
         {{> @text-block block=sections.[0] }}
@@ -21,7 +21,7 @@
     </div>
   </section>
 
-  <section class="section js-spy-section" id="{{ sections.[1].id }}">
+  <section class="js-spy-section" id="{{ sections.[1].id }}">
     <div class="container">
       <div class="column">
         {{> @text-block block=sections.[1] }}
@@ -31,7 +31,7 @@
     {{> @feature--highlights }}
   </section>
 
-  <section class="section js-spy-section" id="{{ sections.[2].id }}">
+  <section class="js-spy-section" id="{{ sections.[2].id }}">
     <div class="container">
       <div class="column">
         {{> @text-block block=sections.[2] }}
@@ -41,7 +41,7 @@
     </div>
   </section>
 
-  <section class="section section--gradient js-spy-section" id="leadership">
+  <section class="section-gradient js-spy-section" id="leadership">
     <div class="container">
       <div class="column align-center">
         <h2>Leadership</h2>
@@ -51,7 +51,9 @@
     </div>
   </section>
 
-  <div class="section section--border container">
+  <div class="container">
+    <hr class="dark">
+
     {{> @pagination }}
   </div>
 </main>

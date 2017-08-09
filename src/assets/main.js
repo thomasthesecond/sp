@@ -18,6 +18,7 @@ import "../components/03-components/_skip-link";
 import "../components/03-components/button";
 import GlobalFooter from "../components/03-components/global-footer";
 import GlobalHeader from "../components/03-components/global-header";
+import "../components/03-components/hr";
 import "../components/03-components/select";
 
 // Import global modules
