@@ -39,24 +39,27 @@
         ]
       }
     },
-    "subNavigation": [
-      {
-        "label": "Physician practices",
-        "hash": "physician-practices"
-      },
-      {
-        "label": "Ambulatory surgery centers",
-        "hash": "ambulatory-surgery-centers"
-      },
-      {
-        "label": "Surgical hospitals",
-        "hash": "surgical-hospitals"
-      },
-      {
-        "label": "Healthcare systems",
-        "hash": "healthcare-systems"
-      }
-    ],
+    "subNavigation": {
+      "useScrollSpy": true,
+      "items": [
+        {
+          "label": "Physician practices",
+          "hash": "physician-practices"
+        },
+        {
+          "label": "Ambulatory surgery centers",
+          "hash": "ambulatory-surgery-centers"
+        },
+        {
+          "label": "Surgical hospitals",
+          "hash": "surgical-hospitals"
+        },
+        {
+          "label": "Healthcare systems",
+          "hash": "healthcare-systems"
+        }
+      ]
+    },
     "introduction": "Our flexible approach to physician engagement and physician-centric culture focused on customer service is what drives our success.",
     "feature": {
       "coverPhoto": {
@@ -231,7 +234,7 @@
         "location": "VUMC and Vanderbilt Health Affiliated Network • Nashville, Tennessee"
       }
     ],
-    "pagination": {
+    "nextPage": {
       "label": "Read next",
       "title": "Investors",
       "url": "/"

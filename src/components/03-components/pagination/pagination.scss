@@ -8,66 +8,82 @@
  */
 
 .Pagination {
-  // border-top: 1px solid $color-border-default;
-  // padding-bottom: #{(170 / $max-width) * 100vw};
-  // padding-top: #{(176 / $max-width) * 100vw};
-
-  @media(min-width: 480px) {
-    text-align: center;
-  }
-
-  // @media(min-width: 1290px) {
-  //   padding-bottom: 170px;
-  //   padding-top: 176px;
-  // }
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  text-align: center;
 }
 
-.Pagination a {
-  color: $color-text-heading;
+.Pagination-link {
+  &:first-child {
+    margin-right: 8px;
+
+    @media (min-width: 600px) {
+      margin-right: 20px;
+    }
+  }
+
+  &:last-child {
+    margin-left: 8px;
+
+    @media (min-width: 600px) {
+      margin-left: 20px;
+    }
+  }
+
+  @media (max-width: 599px) {
+    font-size: 12px;
+  }
+}
+
+.Pagination-page {
+  border: 1px solid $color-border-default;
   display: inline-block;
-  text-decoration: none;
-  transition: color 200ms;
+  flex-shrink: 0;
+  height: 30px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  transition: background-color 200ms;
+  width: 30px;
 
   &:hover,
   &:active,
   &:focus {
-    color: rgba($color-text-heading, .7);
+    background-color: $color-background-pagination-hover;
+  }
 
-    .Pagination-icon {
-      transform: translateX(#{((80 + 16) / 80) * 1em});
+  &.is-active {
+    border-color: $color-border-pagination-active;
+  }
+
+  @media (max-width: 599px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 600px) {
+  }
+
+  .Pagination-more ~ & {
+    @media (max-width: 599px) {
+      &:not(:nth-last-child(2)) {
+        display: none;
+      }
     }
   }
 }
 
-.Pagination-label {
-  color: #b5955d;
-  font-size: 10px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.Pagination-more {
+  align-self: flex-start;
+  color: $color-text-link-default;
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
 
   @media (min-width: 600px) {
-    font-size: 14px;
+    display: none;
   }
-}
-
-.Pagination-title {
-  color: currentColor;
-  margin-bottom: 0;
-  margin-top: 0;
-  position: relative;
-}
-
-.Pagination-icon {
-  // @media (max-width: 599px) {
-  //   display: none;
-  // }
-
-  color: #bfd0d8;
-  height: #{(40 / 80) * 1em};
-  font-size: #{(80 / $font-size-heading-large) * 1em};
-  position: absolute;
-  right: 0;
-  top: #{(9 / 80) * 1em};
-  transform: translateX(#{((80 + 32) / 80) * 1em});
-  transition: transform 200ms;
 }

@@ -1,0 +1,27 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Utility links
+ * @type molecule
+ */
+
+.UtilityLinks {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 560px) {
+    border-top: 1px solid rgba($color-border-default, .37);
+    flex-wrap: wrap;
+    line-height: (56 / 12);
+  }
+
+  a {
+    @media (max-width: 560px) {
+      width: 50%;
+    }
+  }
+}

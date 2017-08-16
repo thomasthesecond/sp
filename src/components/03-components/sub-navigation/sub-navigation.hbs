@@ -1,14 +1,24 @@
-<nav class="SubNavigation js-sub-navigation">
+<nav class="SubNavigation{{#if subNavigation.useScrollSpy}} SubNavigation--scrollSpy js-sub-navigation{{/if}}">
   <ul class="SubNavigation-list">
-    {{#each subNavigation}}
-      <li class="SubNavigation-item" id="{{ this.hash }}-item">
-        <a class="SubNavigation-link" href="#{{ this.hash }}">
-          {{ this.label }}
-        </a>
+    {{#each subNavigation.items}}
+      <li class="SubNavigation-item{{#if this.url}}{{#if this.selected}} is-active{{/if}}{{/if}}" id="{{#if this.hash}}{{ this.hash }}-item{{/if}}">
+        {{#if this.hash}}
+          <a class="SubNavigation-link" href="#{{ this.hash }}">
+            {{ this.label }}
+          </a>
+        {{/if}}
+
+        {{#if this.url}}
+          <a class="SubNavigation-link" href="{{ this.url }}">
+            {{ this.label }}
+          </a>
+        {{/if}}
       </li>
     {{/each}}
 
-    <div class="SubNavigation-marker js-sub-navigation-marker"
-      aria-hidden="true"></div>
+    {{#if subNavigation.useScrollSpy}}
+      <div class="SubNavigation-marker js-sub-navigation-marker"
+        aria-hidden="true"></div>
+    {{/if}}
   </ul>
 </nav>

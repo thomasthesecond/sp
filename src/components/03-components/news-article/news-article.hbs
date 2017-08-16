@@ -1,0 +1,15 @@
+<article class="NewsArticle">
+  <h1>{{ newsArticle.title }}</h1>
+
+  <div class="NewsArticle-article">
+    {{#each newsArticle.article}}
+      <p>{{ this }}</p>
+    {{/each}}
+
+    <div class="NewsArticle-bio">
+      {{> @press-release-bio pressReleaseBio=newsArticle.pressRelease.bio }}
+    </div>
+
+    {{> @press-release-contact pressReleaseContact=newsArticle.pressRelease.contact }}
+  </div>
+</article>

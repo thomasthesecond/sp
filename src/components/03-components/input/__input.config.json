@@ -1,0 +1,55 @@
+{
+  "default": "text",
+  "context": {
+    "required": false
+  },
+  "variants": [
+    {
+      "name": "text",
+      "label": "Text",
+      "context": {
+        "input": {
+          "name": "text-input-component",
+          "id": "text-input-component",
+          "placeholder": "Text input"
+        }
+      }
+    },
+    {
+      "name": "dark",
+      "label": "Text (dark)",
+      "context": {
+        "input": {
+          "name": "text-input-component",
+          "id": "text-input-component",
+          "placeholder": "Text input"
+        }
+      }
+    },
+    {
+      "name": "email",
+      "label": "Email",
+      "context": {
+        "input": {
+          "name": "email-input-component",
+          "id": "email-input-component",
+          "required": true,
+          "placeholder": "Email address"
+        }
+      }
+    },
+    {
+      "name": "number",
+      "label": "Number",
+      "context": {
+        "input": {
+          "name": "number-input-component",
+          "id": "number-input-component",
+          "min": 0,
+          "max": 10,
+          "placeholder": "0"
+        }
+      }
+    }
+  ]
+}

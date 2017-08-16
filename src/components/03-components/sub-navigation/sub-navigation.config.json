@@ -1,22 +1,25 @@
 {
   "context": {
-    "subNavigation": [
-      {
-        "label": "What we do",
-        "hash": "what-we-do"
-      },
-      {
-        "label": "How we’re different",
-        "hash": "how-were-different"
-      },
-      {
-        "label": "How we got here",
-        "hash": "how-we-got-here"
-      },
-      {
-        "label": "Leadership",
-        "hash": "leadership"
-      }
-    ]
+    "subNavigation": {
+      "useScrollSpy": true,
+      "items": [
+        {
+          "label": "What we do",
+          "hash": "what-we-do"
+        },
+        {
+          "label": "How we’re different",
+          "hash": "how-were-different"
+        },
+        {
+          "label": "How we got here",
+          "hash": "how-we-got-here"
+        },
+        {
+          "label": "Leadership",
+          "hash": "leadership"
+        }
+      ]
+    }
   }
 }

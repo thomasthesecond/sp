@@ -1,0 +1,8 @@
+{
+  "context": {
+    "helpTip": {
+      "label": "View search tips",
+      "onClick": "javascript:openCapsule('http://media.corporate-ir.net/media_files/IROL/global_html/searchTips.htm', 'srchelp', 'scrollbars=yes,toolbar=no,status=no,resizable=no,width=400,height=500,top=140,left=140');"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Input
+ * @type Atom
+ */
+
+input {
+  appearance: none;
+  background-color: $color-background-input;
+  border: 1px solid $color-border-default;
+  border-radius: 0;
+  color: $color-text-input;
+  display: block;
+  font-size: 100%;
+  font-weight: $font-weight-light;
+  line-height: 2;
+  padding: #{(12 / 16) * 1em}
+    #{(54 / 16) * 1em}
+    #{(10 / 16) * 1em}
+    #{(24 / 16) * 1em};
+
+  &::-webkit-input-placeholder {
+    color: currentColor;
+  }
+
+  &::-moz-placeholder {
+    color: currentColor;
+  }
+
+  &:-ms-input-placeholder {
+    color: currentColor;
+  }
+
+  &:-moz-placeholder {
+    color: currentColor;
+  }
+
+  &.dark {
+    background-color: $color-background-input-dark;
+    border-color: $color-border-input-dark;
+    color: $color-text-input-dark;
+  }
+}

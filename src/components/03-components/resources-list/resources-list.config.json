@@ -1,0 +1,19 @@
+{
+  "context": {
+    "resourcesList": {
+      "heading": "Committee Charters",
+      "resources": [
+        {
+          "title": "Audit Committee Charter",
+          "url": "/",
+          "type": "pdf"
+        },
+        {
+          "title": "Compensation Committee Charter",
+          "url": "/",
+          "type": "pdf"
+        }
+      ]
+    }
+  }
+}

@@ -8,13 +8,6 @@
  */
 
 .Tagline {
-  @include fluid-type(
-    $min-font-size: 40,
-    $max-font-size: 96,
-    $min-width: 600,
-    $max-width: $max-width
-  );
-
   font-weight: $font-weight-light;
   letter-spacing: -.5px;
   line-height: 1;
@@ -38,5 +31,5 @@
 }
 
 .Tagline--white {
-  color: #fff;
+  color: $color-text-overlay;
 }

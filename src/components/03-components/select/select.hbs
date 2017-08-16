@@ -1,7 +1,8 @@
 <select
-  id="{{ select.id }}"
-  class="{{ select.class }}"
-  name="{{ select.name }}">
+  {{#if select.class}}class="{{ select.class }}"{{/if}}
+  {{#if select.id}}id="{{ select.id }}"{{/if}}
+  {{#if select.name}}name="{{ select.name }}"{{/if}}
+  {{#if select.required}}required{{/if}}>
   {{#each select.options}}
     <option value="{{ this.value }}"{{#if this.selected }} selected="selected"{{/if}}>
       {{ this.label }}

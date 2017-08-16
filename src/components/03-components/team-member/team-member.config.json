@@ -1,13 +1,34 @@
 {
-  "context": {
-    "teamMember": {
-      "image": {
-        "src": "/team-sparks@2x.jpg",
-        "title": "Headshot of Teresa Sparks"
-      },
-      "name": "Teresa Sparks",
-      "title": "Chief Financial Officer",
-      "bio": "Teresa Sparks serves as Executive Vice President and CFO of Surgery Partners and served as SVP and CFO of Symbion Healthcare until it's acquisition in 2014. She was Corporate Controller of Symbion from its inception until she was named VP in 2002. Prior to joining Symbion, she served as Assistant Controller for HealthWise of America, Inc., and senior healthcare auditor for Deloitte and Touche."
+  "default": "large",
+  "context": {},
+  "variants": [
+    {
+      "name": "large",
+      "label": "Large",
+      "context": {
+        "teamMember": {
+          "image": {
+            "src": "/team-sparks@2x.jpg",
+            "title": "Headshot of Teresa Sparks"
+          },
+          "name": "Teresa Sparks",
+          "title": "Chief Financial Officer",
+          "bio": "Teresa Sparks serves as Executive Vice President and CFO of Surgery Partners and served as SVP and CFO of Symbion Healthcare until it's acquisition in 2014. She was Corporate Controller of Symbion from its inception until she was named VP in 2002. Prior to joining Symbion, she served as Assistant Controller for HealthWise of America, Inc., and senior healthcare auditor for Deloitte and Touche."
+        }
+      }
+    },
+    {
+      "name": "small",
+      "label": "Small",
+      "context": {
+        "teamMember": {
+          "name": "Teresa Sparks",
+          "title": "Chief Financial Officer",
+          "link": {
+            "url": "#"
+          }
+        }
+      }
     }
-  }
+  ]
 }

@@ -4,9 +4,9 @@
 
     {{#each state.locations as |location locationKey|}}
       <div class="LocationList-item" itemscope itemtype="http://schema.org/MedicalOrganization">
-        <h4 itemprop="name">
+        <h5 itemprop="name">
           {{ location.name }}
-        </h4>
+        </h5>
 
         <p>
           {{#if location.phone}}

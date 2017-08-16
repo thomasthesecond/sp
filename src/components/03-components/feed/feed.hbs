@@ -1,0 +1,24 @@
+<section class="Feed">
+  <h2>{{ feed.heading }}</h2>
+
+  {{#unless feed.items}}
+    {{#if feed.noResults}}
+      <p>{{ feed.noResults }}</p>
+    {{/if}}
+  {{/unless}}
+
+  {{#if feed.items}}
+    {{#each feed.items}}
+      <article>
+        <p>
+          <a href="{{ this.url }}">
+            <time datetime="{{ this.date.iso }}">
+              {{ this.date.formatted }}
+            </time><br>
+            {{ this.title }}
+          </a>
+        </p>
+      </article>
+    {{/each}}
+  {{/if}}
+</section>

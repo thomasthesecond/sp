@@ -1,0 +1,29 @@
+<div class="StockPriceCard">
+  <header class="StockPriceCard-header">
+    <b>{{ stockPrice.symbol }} –</b> August 7, 4:00PM EDT
+  </header>
+
+  <div class="StockPriceCard-priceInfo">
+    <span class="StockPriceCard-price">
+      {{ stockPrice.price }}
+    </span>
+
+    <span class="StockPriceCard-ticker StockPriceCard-ticker--down">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32">
+        <title>Stock is down</title>
+        <path d="M32 32l-32-32h64z"></path>
+      </svg>
+      0.55 (3.03%)
+    </span>
+  </div>
+
+  <div class="StockPriceCard-highLow">
+    <span>High 22.85</span>
+    <span>Low $22.30</span>
+  </div>
+
+  <footer class="StockPriceCard-footer">
+    <time datetime="2017-07-02T16:00:00">July 2, 2017 4:00pm ET</time><br>
+    <a href="#">Read more</a>
+  </footer>
+</div>

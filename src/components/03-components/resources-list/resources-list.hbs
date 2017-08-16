@@ -1,0 +1,15 @@
+<div class="ResourcesList">
+  <h4 class="ResourcesList-heading">
+    {{ resourcesList.heading }}
+  </h4>
+
+  <ul class="ResourcesList-list">
+    {{#each resourcesList.resources}}
+      <li class="ResourcesList-item">
+        <a href="{{ this.url }}">
+          {{ this.title }}
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+</div>

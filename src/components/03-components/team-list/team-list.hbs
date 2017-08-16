@@ -1,0 +1,9 @@
+<div class="TeamList">
+  <h2 class="TeamList-heading">
+    {{ teamList.heading }}
+  </h2>
+
+  {{#each teamList.team}}
+    {{> @team-member--small teamMember=this }}
+  {{/each}}
+</div>

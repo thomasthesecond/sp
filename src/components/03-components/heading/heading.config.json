@@ -1,5 +1,4 @@
 {
-  "status": "wip",
   "title": "Heading",
   "default": "1",
   "context": {
@@ -7,51 +6,59 @@
   },
   "variants": [
     {
+      "name": "super",
+      "label": "Heading super",
+      "notes": "Heading super styles can be applied to any text element by using the `heading-super` classname.",
+      "context": {
+        "classname": "heading-super"
+      }
+    },
+    {
       "name": "1",
       "label": "Heading 1",
-      "notes": "H1 styles can be applied to any text element by using the `heading-xlarge` classname.",
+      "notes": "Heading 1 styles can be applied to any text element by using the `heading-1` classname.",
       "context": {
-        "classname": "heading-xlarge"
+        "classname": "heading-1"
       }
     },
     {
       "name": "2",
       "label": "Heading 2",
-      "notes": "H2 styles can be applied to any text element by using the `heading-large` classname.",
+      "notes": "Heading 2 styles can be applied to any text element by using the `heading-2` classname.",
       "context": {
-        "classname": "heading-large"
+        "classname": "heading-2"
       }
     },
     {
       "name": "3",
       "label": "Heading 3",
-      "notes": "H3 styles can be applied to any text element by using the `heading-medium` classname.",
+      "notes": "Heading 3 styles can be applied to any text element by using the `heading-3` classname.",
       "context": {
-        "classname": "heading-medium"
+        "classname": "heading-3"
       }
     },
     {
       "name": "4",
       "label": "Heading 4",
-      "notes": "H4 styles can be applied to any text element by using the `heading-small` classname.",
+      "notes": "Heading 4 styles can be applied to any text element by using the `heading-4` classname.",
       "context": {
-        "classname": "heading-small"
+        "classname": "heading-4"
       }
     },
     {
       "name": "5",
       "label": "Heading 5",
-      "notes": "H5 styles can be applied to any text element by using the `heading-xsmall` classname.",
+      "notes": "Heading 5 styles can be applied to any text element by using the `heading-5` classname.",
       "context": {
-        "classname": "heading-xsmall"
+        "classname": "heading-5"
       }
     },
     {
       "name": "6",
       "label": "Heading 6",
-      "notes": "H6 styles can be applied to any text element by using the `heading-xxsmall` classname.",
+      "notes": "Heading 6 styles can be applied to any text element by using the `heading-6` classname.",
       "context": {
-        "classname": "heading-xxsmall"
+        "classname": "heading-6"
       }
     }
   ]

@@ -1,6 +1,8 @@
 // ---------------------------------------------------------------------
 // Colors
 // ---------------------------------------------------------------------
+
+// Background colors
 $color-background-default: #fff; // rgb(255, 255, 255) // White
 $color-background-footer: #152640; // rgb(21, 38, 64) // Big Stone
 $color-background-cover-gradient-start: #b5955d; // rgb(181, 149, 93) // Muddy Waters
@@ -8,20 +10,36 @@ $color-background-cover-gradient-end: #5d91a1; // rgb(93, 145, 161) // Horizon
 $color-background-overlay: #000; // rgb(0, 0, 0) // Black
 $color-background-button-default: #5d91a1; // rgb(93, 145, 161) // Horizon
 $color-background-button-dark: #152640; // rgb(21, 38, 64) // Big Stone
+$color-background-pagination-hover: rgba(#619ab1, .06); // rgb(97, 154, 177) // Hippie Blue
+$color-background-input: #fff; // rgb(255, 255, 255) // White
+$color-background-input-dark: #152640; // rgb(21, 38, 64) // Big Stone
 
+// Border colors
 $color-border-default: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
 $color-border-introduction: #b5955d; // rgb(181, 149, 93) // Muddy Waters
 $color-border-button-dark: rgba($color-border-default, .2); // rgb(191, 208, 216) // Jungle Mist
+$color-border-pagination-active: #619ab1; // rgb(97, 154, 177) // Hippie Blue
+$color-border-input: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
+$color-border-input-dark: rgba(#bfd0d8, .2); // rgb(191, 208, 216) // Jungle Mist
 
+// Text colors
 $color-text-default: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
 $color-text-heading: #25395d; // rgb(37, 57, 93) // Cloud Burst
 $color-text-overlay: #fff; // rgb(255, 255, 255) // White
 $color-text-introduction: #819ba3; // rgb(129, 155, 163) // Gumbo
 $color-text-hamburger: #275e70; // rgb(39, 94, 112) // Casal
+$color-text-service-card: #77919e; // rgb(119, 145, 158) // Gothic
 $color-text-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
 // $color-text-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
 $color-text-link-default: #619ab1; // rgb(97, 154, 177) // Hippie Blue
 $color-text-link-default-hover: #819ba3; // rgb(129, 155, 163) // Gumbo
+$color-text-input: #77919e; // rgb(119, 145, 158) // Gothic
+$color-text-input-dark: #fff; // rgb(255, 255, 255) // White
+$color-text-help-tip: #6facc1; // rgb(111, 172, 193) // Glacier
+$color-text-help-tip-hover: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
+$color-text-search-button: #6facc1; // rgb(111, 172, 193) // Glacier
+$color-text-search-button-hover: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
+$color-text-news-date: #b5955d; // rgb(181, 149, 93) // Muddy Waters
 
 // h2
 // color: #21365a;
@@ -186,12 +204,6 @@ $color-text-black: #000;
 // light gray: #c8cdd1 #f0f1f3;
 
 // ---------------------------------------------------------------------
-// Dimensions
-// ---------------------------------------------------------------------
-$min-width: 320;
-$max-width: 1290;
-
-// ---------------------------------------------------------------------
 // Fonts
 // ---------------------------------------------------------------------
 $font-family-default: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -199,21 +211,79 @@ $font-family-default: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI"
 // ---------------------------------------------------------------------
 // Typography
 // ---------------------------------------------------------------------
+
+// Font size
 $font-size-default: 16;
-$font-size-large: 96;
-$font-size-medium: 56;
-$font-size-small: 24;
+$font-size-default-min: 14;
 
-$font-size-heading-large: 32;
+$font-size-body-small: 14;
+$font-size-body-small-min: 12;
 
+$font-size-heading-masthead-super: 96;
+$font-size-heading-masthead-super-min: 40;
+
+$font-size-heading-masthead: 80;
+$font-size-heading-masthead-min: 40;
+
+$font-size-heading-super: 72;
+$font-size-heading-super-min: 32;
+
+$font-size-heading-1: 48;
+$font-size-heading-1-min: 32;
+
+$font-size-heading-2: 32;
+$font-size-heading-2-min: 24;
+
+$font-size-heading-3: 24;
+$font-size-heading-3-min: 16;
+
+$font-size-heading-4: 20;
+$font-size-heading-4-min: 16;
+
+$font-size-heading-5: 16;
+$font-size-heading-5-min: 14;
+
+// $font-size-heading-5: 14;
+// $font-size-heading-5-min: 12;
+
+$font-size-heading-6: 12;
+$font-size-heading-6-min: 10;
+
+// Font weight
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
-$line-height-large: (104 / 96);
-$line-height-medium: (72 / 56);
-$line-height-small: (32 / 24);
+// Line height
+$line-height-default: (28 / $font-size-default);
+// $line-height-default-min: (24 / $font-size-default-min);
+
+$line-height-body-small: (19 / $font-size-body-small);
+// $line-height-body-small-min: (17 / $font-size-body-small-min);
+
+$line-height-heading-super: (80 / $font-size-heading-super);
+// $line-height-heading-super-min: (43 / $font-size-heading-super-min);
+
+$line-height-heading-1: (64 / $font-size-heading-1);
+// $line-height-heading-1-min: (43 / $font-size-heading-1-min);
+
+$line-height-heading-2: (56 / $font-size-heading-2);
+// $line-height-heading-2-min: (42 / $font-size-heading-2-min);
+
+$line-height-heading-3: (32 / $font-size-heading-3);
+// $line-height-heading-3-min: (24 / $font-size-heading-3-min);
+
+$line-height-heading-4: (28 / $font-size-heading-4);
+// $line-height-heading-4-min: (24 / $font-size-heading-4-min);
+
+$line-height-heading-5: (24 / $font-size-heading-5);
+// $line-height-heading-5-min: (20 / $font-size-heading-5-min);
+
+$line-height-heading-6: (20 / $font-size-heading-6);
+// $line-height-heading-6-min: (16 / $font-size-heading-6-min);
+
+$line-height-reset: 1;
 
 // ---------------------------------------------------------------------
 // Opacity
@@ -222,8 +292,16 @@ $line-height-small: (32 / 24);
 // ---------------------------------------------------------------------
 // Spacing
 // ---------------------------------------------------------------------
-
 $spacing-gutter: 24;
+$spacing-investors-page: 106;
+
+// ---------------------------------------------------------------------
+// Dimensions
+// ---------------------------------------------------------------------
+$min-width: 320;
+$max-width: 1290;
+$max-width-investors-page: $max-width - ($spacing-investors-page * 2);
+$max-width-investors-article: 630;
 
 // ---------------------------------------------------------------------
 // Radius

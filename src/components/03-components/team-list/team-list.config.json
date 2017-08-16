@@ -1,0 +1,44 @@
+{
+  "context": {
+    "teamList": {
+      "heading": "Board of directors",
+      "team": [
+        {
+          "name": "Michael T. Doyle",
+          "title": "Chief Executive Officer, Director",
+          "link": {
+            "url": "#"
+          }
+        },
+        {
+          "name": "Matthew I. Lozow",
+          "title": "Board of Directors",
+          "link": {
+            "url": "#"
+          }
+        },
+        {
+          "name": "Adam Feinstein",
+          "title": "Board of Directors",
+          "link": {
+            "url": "#"
+          }
+        },
+        {
+          "name": "Brent Turner",
+          "title": "Board of Directors",
+          "link": {
+            "url": "#"
+          }
+        },
+        {
+          "name": "Dr. Teresa DeLuca",
+          "title": "Board of Directors",
+          "link": {
+            "url": "#"
+          }
+        }
+      ]
+    }
+  }
+}

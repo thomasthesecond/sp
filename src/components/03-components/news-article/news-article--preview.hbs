@@ -1,0 +1,17 @@
+<article class="NewsArticle NewsArticle--preview">
+  <p class="NewsArticle-date">
+    <time datetime="{{ newsArticle.date.iso }}">
+      {{ newsArticle.date.formatted }}
+    </time>
+  </p>
+
+  <h4>{{ newsArticle.title }}</h4>
+
+  <p>{{ newsArticle.excerpt }}</p>
+
+  <p>
+    <a href="{{ newsArticle.url }}">
+      Read more
+    </a>
+  </p>
+</article>

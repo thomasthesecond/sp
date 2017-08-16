@@ -11,30 +11,28 @@ $select-arrow-color: rgba(#5e91a1, .87);
 
 select {
   appearance: none;
-  background-color: #fff;
+  background-color: $color-background-input;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#{$select-arrow-color}' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
   background-position: calc(100% - 24px) calc(50% + 2px);
   background-repeat: no-repeat;
   background-size: 8px;
-  border: 1px solid inherit;
+  border: 1px solid $color-border-default;
   border-radius: 0;
-  color: #757675;
+  color: $color-text-input;
   cursor: pointer;
   display: block;
-  line-height: 2;
-  font-size: 16px;
+  font-size: 100%;
   font-weight: $font-weight-light;
+  line-height: 2;
   padding: #{(12 / 16) * 1em}
     #{(54 / 16) * 1em}
     #{(10 / 16) * 1em}
     #{(24 / 16) * 1em};
 
   &.dark {
-    background-color: #152640;
+    background-color: $color-background-input-dark;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#bfd0d8' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
-    border-color: rgba(#bfd0d8, 0.2);
-    color: #fff;
+    border-color: $color-border-input-dark;
+    color: $color-text-input-dark;
   }
-
-  &:focus {}
 }

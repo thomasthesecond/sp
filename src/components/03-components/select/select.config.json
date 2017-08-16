@@ -3,6 +3,7 @@
     "select": {
       "name": "select-component",
       "id": "select-component",
+      "required": false,
       "options": [
         { "label": "Select an option", "value": "", "selected": "true" },
         { "label": "Option 1", "value": "1" },

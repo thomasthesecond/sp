@@ -1,0 +1,18 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Breadcrumbs
+ */
+
+.Breadcrumbs {
+  font-size: 14px;
+  letter-spacing: .6px;
+  line-height: $line-height-reset;
+
+  .icon {
+    font-size: #{(10 / 14)}em;
+    margin-right: 1px;
+  }
+}

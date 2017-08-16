@@ -1,0 +1,34 @@
+{
+  "context": {
+    "feed": {
+      "heading": "Latest news",
+      "noResults": "There is no news to show.",
+      "items": [
+        {
+          "title": "Surgery Partners, Inc. Announces Second Quarter 2017 Results",
+          "url": "/",
+          "date": {
+            "iso": "2017-08-08",
+            "formatted": "August 6, 2017"
+          }
+        },
+        {
+          "title": "Surgery Partners, Inc. Announces Second Quarter 2017 Earnings Release Date and Conference Call Details",
+          "url": "/",
+          "date": {
+            "iso": "2017-07-25",
+            "formatted": "July 25, 2017"
+          }
+        },
+        {
+          "title": "Surgery Partners, Inc. Announces Pricing of $370 Million Senior Note Offering",
+          "url": "/",
+          "date": {
+            "iso": "2017-06-16",
+            "formatted": "June 19, 2017"
+          }
+        }
+      ]
+    }
+  }
+}

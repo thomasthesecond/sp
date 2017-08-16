@@ -1,5 +1,11 @@
 <a class="MoreLink MoreLink--white" href="{{ link.url }}">
-  {{ link.label }}
+  {{#if link.label}}
+    {{ link.label }}
+  {{/if}}
+
+  {{#unless link.label}}
+    Learn more
+  {{/unless}}
 
   {{> @icon id="icon-arrow" }}
 </a>

@@ -1,0 +1,22 @@
+{
+  "title": "Stock price card",
+  "default": "up",
+  "context": {
+    "stockPrice": {
+      "symbol": "NASDAQ: SRGRY",
+      "price": "$22.85"
+    }
+  },
+  "variants": [
+    {
+      "name": "up",
+      "label": "Stock price up",
+      "context": {}
+    },
+    {
+      "name": "down",
+      "label": "Stock price down",
+      "context": {}
+    }
+  ]
+}

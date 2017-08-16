@@ -1,4 +1,11 @@
 {
-  "status": "wip",
-  "context": {}
+  "context": {
+    "input": {
+      "type": "text",
+      "name": "text-input-component",
+      "id": "text-input-component",
+      "placeholder": "Text input",
+      "required": false
+    }
+  }
 }

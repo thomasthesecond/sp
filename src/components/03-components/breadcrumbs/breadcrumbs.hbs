@@ -1,0 +1,8 @@
+<div class="Breadcrumbs">
+  {{#each breadcrumbs}}
+    <a href="{{ this.url }}">
+      {{> @icon id="icon-carot-left" }}
+      {{ this.label }}
+    </a>
+  {{/each}}
+</div>

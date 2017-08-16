@@ -1,0 +1,60 @@
+{
+  "context": {
+    "filter": {
+      "keyword": {
+        "label": "SEC Filing",
+        "helpTip": {
+          "label": "View search tips",
+          "onClick": "javascript:return false;"
+        },
+        "input": {
+          "type": "text",
+          "name": "keyword-search-input",
+          "id": "keyword-search-input",
+          "placeholder": "Search keywords",
+          "required": false
+        }
+      },
+      "years": {
+        "label": "Year",
+        "select": {
+          "name": "years-select",
+          "id": "years-select",
+          "required": false,
+          "options": [
+            { "label": "All years", "value": "", "selected": "true" },
+            { "label": "2017", "value": "2017" },
+            { "label": "2016", "value": "2016" },
+            { "label": "2015", "value": "2015" }
+          ]
+        }
+      },
+      "groupings": {
+        "label": "Groupings",
+        "helpTip": {
+          "label": "View SEC Groupings descriptions",
+          "onClick": "javascript:return false;"
+        },
+        "select": {
+          "name": "groupings-select",
+          "id": "groupings-select",
+          "required": false,
+          "options": [
+            { "label": "All forms", "value": "0", "selected": "true" },
+            { "label": "3,4,5", "value": "5" },
+            { "label": "Annual filings", "value": "1" },
+            { "label": "Current reports", "value": "3" },
+            { "label": "Other", "value": "8" },
+            { "label": "Proxy filings", "value": "7" },
+            { "label": "Quarterly filings", "value": "2" },
+            { "label": "Registration statements", "value": "4" }
+          ]
+        }
+      },
+      "filingsLink": {
+        "label": "View Section 16 Filings (3,4,5)",
+        "url": "http://ir.surgerypartners.com/phoenix.zhtml?c=254156&p=irol-sec&control_selectgroup=3,4,5"
+      }
+    }
+  }
+}

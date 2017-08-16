@@ -3,10 +3,10 @@
 @import "../../../assets/scss/mixins";
 
 /**
- * Component: Search
- * @type Molecule
+ * Component: Team list
  */
 
-.Search {
-  position: relative;
+.TeamList-heading {
+  margin-bottom: 40px;
+  margin-top: 0;
 }

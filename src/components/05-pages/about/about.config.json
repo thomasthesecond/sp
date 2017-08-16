@@ -39,24 +39,27 @@
         ]
       }
     },
-    "subNavigation": [
-      {
-        "label": "What we do",
-        "hash": "what-we-do"
-      },
-      {
-        "label": "How we’re different",
-        "hash": "how-were-different"
-      },
-      {
-        "label": "How we got here",
-        "hash": "how-we-got-here"
-      },
-      {
-        "label": "Leadership",
-        "hash": "leadership"
-      }
-    ],
+    "subNavigation": {
+      "useScrollSpy": true,
+      "items": [
+        {
+          "label": "What we do",
+          "hash": "what-we-do"
+        },
+        {
+          "label": "How we’re different",
+          "hash": "how-were-different"
+        },
+        {
+          "label": "How we got here",
+          "hash": "how-we-got-here"
+        },
+        {
+          "label": "Leadership",
+          "hash": "leadership"
+        }
+      ]
+    },
     "introduction": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 180 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients.",
     "sections": [
       {
@@ -245,7 +248,7 @@
         "bio": "Chris Toepke joined Surgery Partners in 2014 and serves as Group President of Ancillary Services. Prior to joining Surgery Partners, he served as Business Unit President at One Call Care Management and previously served as a management consultant with Bain & Company."
       }
     ],
-    "pagination": {
+    "nextPage": {
       "label": "Read next",
       "title": "Partnerships",
       "url": "/"
