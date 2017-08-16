@@ -1,0 +1,120 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Stock price card
+ * @type Molecule
+ */
+
+.StockPriceCard {
+  background: linear-gradient(to bottom, rgba(#b5955d, .07) 0%, rgba(#5e91a1, .07) 100%);
+  padding: 48px 24px;
+
+  @media (min-width: 387px) {
+    padding-left: #{(80 / $max-width) * 100vw};
+    padding-right: #{(80 / $max-width) * 100vw};
+  }
+
+  @media (min-width: 500px) {
+    padding-bottom: #{(124 / $max-width) * 100vw};
+    padding-top: #{(124 / $max-width) * 100vw};
+  }
+
+  @media (max-width: 499px) {
+    font-size: 12px;
+  }
+
+  @media (min-width: $mq-min-container) {
+    padding: 124px 80px;
+  }
+}
+
+.StockPriceCard-header {
+  line-height: (22 / 16);
+  margin-bottom: 24px;
+
+  b {
+    color: $color-text-heading;
+    font-weight: normal;
+  }
+}
+
+.StockPriceCard-priceInfo {
+  display: flex;
+}
+
+.StockPriceCard-price {
+  color: $color-text-heading;
+  font-size: 32px;
+  line-height: 1;
+
+  @media (min-width: 500px) {
+    font-size: 48px;
+  }
+}
+
+.StockPriceCard-ticker {
+  align-items: center;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: $font-weight-semibold;
+  line-height: 1;
+  margin-left: 32px;
+
+  @media (min-width: 500px) {
+    font-size: 18px;
+    margin-left: 10px;
+    padding-top: 14px;
+  }
+
+  svg {
+    fill: currentColor;
+    height: 6px;
+    margin-right: 8px;
+    width: 12px;
+  }
+}
+
+.StockPriceCard-ticker--up {
+  color: #6fc179;
+}
+
+.StockPriceCard-ticker--down {
+  color: #bf6f6f;
+}
+
+.StockPriceCard-highLow {
+  color: $color-text-heading;
+  line-height: 1;
+  margin-top: 18px;
+
+  @media (min-width: 500px) {
+    margin-top: 12px;
+  }
+
+  span + span {
+    margin-left: 32px;
+  }
+}
+
+.StockPriceCard-footer {
+  border-top: 1px solid rgba($color-border-default, .27);
+  color: $color-text-heading;
+  line-height: (32 / 16);
+  margin-top: 48px;
+  padding-top: 24px;
+
+  @media (min-width: 484px) {
+    margin-top: #{(128 / $max-width) * 100vw};
+  }
+
+  @media (min-width: 968px) {
+    padding-top: #{(32 / $max-width) * 100vw};
+  }
+
+  @media (min-width: $mq-min-container) {
+    margin-top: 128px;
+    padding-top: 32px;
+  }
+}

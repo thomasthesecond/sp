@@ -7,76 +7,134 @@
  * @type Atom
  */
 
-h1,
-.heading-xlarge {
+.heading-masthead-super {
   @include fluid-type(
-    $min-font-size: 40,
-    $max-font-size: 80,
-    $min-width: $min-width,
-    $max-width: $max-width
+    $min-font-size: $font-size-heading-masthead-super-min,
+    $max-font-size: $font-size-heading-masthead-super,
+    $min-width: 600
   );
 
+  color: $color-text-heading;
   font-weight: $font-weight-bold;
-  line-height: 1;
+  line-height: $line-height-reset;
   margin-bottom: 0;
   margin-top: 0;
-  // letter-spacing: -.5px;
-  // letter-spacing: -3px;
+}
+
+.heading-masthead {
+  @include fluid-type(
+    $min-font-size: $font-size-heading-masthead-min,
+    $max-font-size: $font-size-heading-masthead,
+    $min-width: 600
+  );
+
+  color: $color-text-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-reset;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.heading-super {
+  @include fluid-type(
+    $min-font-size: $font-size-heading-super-min,
+    $max-font-size: $font-size-heading-super,
+    $min-width: 600
+  );
+
+  color: $color-text-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading-super;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h1,
+.heading-1 {
+  @include fluid-type(
+    $min-font-size: $font-size-heading-1-min,
+    $max-font-size: $font-size-heading-1,
+    $min-width: 480
+  );
+
+  color: $color-text-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading-1;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 h2,
-.heading-large {
+.heading-2 {
   @include fluid-type(
-    $min-font-size: 24,
-    $max-font-size: 32,
-    $min-width: $min-width,
-    $max-width: $max-width
+    $min-font-size: $font-size-heading-2-min,
+    $max-font-size: $font-size-heading-2,
+    $min-width: 480
   );
 
   color: $color-text-heading;
   font-weight: $font-weight-bold;
-  line-height: (56 / 32);
+  line-height: $line-height-heading-2;
   margin-bottom: .5em;
   margin-top: .5em;
-  // margin: 0;
-  // letter-spacing: 0;
-  // letter-spacing: -1px;
 }
 
 h3,
-.heading-medium {
+.heading-3 {
   @include fluid-type(
-    $min-font-size: 16,
-    $max-font-size: 24,
-    $min-width: $min-width,
-    $max-width: $max-width
+    $min-font-size: $font-size-heading-3-min,
+    $max-font-size: $font-size-heading-3,
+    $min-width: 480
   );
 
   color: $color-text-heading;
   font-weight: $font-weight-bold;
-  line-height: (32 / 24);
+  line-height: $line-height-heading-3;
   margin-bottom: .5em;
   margin-top: .5em;
 }
 
 h4,
-.heading-small {
-  // @include fluid-type(
-  //   $min-font-size: 14,
-  //   $max-font-size: 16,
-  //   $min-width: 480,
-  //   $max-width: $max-width
-  // );
+.heading-4 {
+  @include fluid-type(
+    $min-font-size: $font-size-heading-4-min,
+    $max-font-size: $font-size-heading-4,
+    $min-width: 480
+  );
 
   color: $color-text-heading;
-  font-size: 14px;
   font-weight: $font-weight-bold;
-  line-height: (24 / 14);
+  line-height: $line-height-heading-4;
   margin-bottom: 1em;
   margin-top: 1em;
+}
 
-  @media (min-width: 700px) {
-    font-size: 16px;
-    line-height: (28 / 16);
-  }
+h5,
+.heading-5 {
+  @include fluid-type(
+    $min-font-size: $font-size-heading-5-min,
+    $max-font-size: $font-size-heading-5,
+    $min-width: 480
+  );
+
+  color: $color-text-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading-5;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+h6,
+.heading-6 {
+  @include fluid-type(
+    $min-font-size: $font-size-heading-6-min,
+    $max-font-size: $font-size-heading-6,
+    $min-width: 480
+  );
+
+  color: $color-text-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading-6;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }

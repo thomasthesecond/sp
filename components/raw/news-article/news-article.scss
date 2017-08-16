@@ -1,0 +1,35 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: News article
+ */
+
+.NewsArticle h1 {
+  margin-bottom: 1em;
+}
+
+.NewsArticle--preview h4 {
+  margin-bottom: 0;
+  margin-top: #{(2 / $font-size-heading-4) * 1em};
+}
+
+.NewsArticle-article {
+  @media (min-width: 800px) {
+    max-width: #{$max-width-investors-article}px;
+    width: #{($max-width-investors-article / $max-width-investors-page) * 100%};
+  }
+}
+
+.NewsArticle-date {
+  @include fluid-type(
+    $min-font-size: $font-size-body-small-min,
+    $max-font-size: $font-size-body-small,
+    $min-width: 600
+  );
+
+  color: $color-text-news-date;
+  margin-bottom: 0;
+  margin-top: 0;
+}

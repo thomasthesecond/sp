@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 89);
+/******/ 	return __webpack_require__(__webpack_require__.s = 118);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -85,72 +85,15 @@
 "use strict";
 
 
-__webpack_require__(11);
-
-__webpack_require__(8);
-
-/***/ }),
-
-/***/ 11:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 15:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(16);
-
-__webpack_require__(0);
-
-__webpack_require__(9);
-
-/***/ }),
-
-/***/ 16:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 17:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(18);
-
-/***/ }),
-
-/***/ 18:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 19:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _subNavigation = __webpack_require__(20);
+var _subNavigation = __webpack_require__(11);
 
 var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-__webpack_require__(21);
+__webpack_require__(12);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -158,14 +101,24 @@ exports.default = _subNavigation2.default;
 
 /***/ }),
 
-/***/ 2:
+/***/ 100:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(101);
+
+/***/ }),
+
+/***/ 101:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 20:
+/***/ 11:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -383,7 +336,116 @@ exports.default = SubNavigation;
 
 /***/ }),
 
+/***/ 118:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(119);
+
+__webpack_require__(21);
+
+__webpack_require__(6);
+
+__webpack_require__(16);
+
+__webpack_require__(3);
+
+__webpack_require__(8);
+
+var _subNavigation = __webpack_require__(10);
+
+var _subNavigation2 = _interopRequireDefault(_subNavigation);
+
+__webpack_require__(100);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Import page module
+var subNavigation = new _subNavigation2.default();
+
+// Import page-specific components
+
+
+subNavigation.render();
+
+console.info("Partnerships loaded");
+
+/***/ }),
+
+/***/ 119:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(120);
+
+/***/ }),
+
+/***/ 12:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 120:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 15:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 16:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(17);
+
+__webpack_require__(5);
+
+/***/ }),
+
+/***/ 17:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 21:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(22);
+
+__webpack_require__(0);
+
+__webpack_require__(15);
+
+/***/ }),
+
+/***/ 22:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -414,33 +476,23 @@ __webpack_require__(2);
 /***/ }),
 
 /***/ 5:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(6);
-
-/***/ }),
-
-/***/ 6:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 71:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(72);
+__webpack_require__(7);
 
 /***/ }),
 
-/***/ 72:
+/***/ 7:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -448,68 +500,16 @@ __webpack_require__(72);
 /***/ }),
 
 /***/ 8:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 89:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(90);
-
-__webpack_require__(15);
-
-__webpack_require__(5);
-
-__webpack_require__(10);
-
-__webpack_require__(3);
-
-__webpack_require__(17);
-
-var _subNavigation = __webpack_require__(19);
-
-var _subNavigation2 = _interopRequireDefault(_subNavigation);
-
-__webpack_require__(71);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Import page module
-var subNavigation = new _subNavigation2.default();
-
-// Import page-specific components
-
-
-subNavigation.render();
-
-console.info("Partnerships loaded");
+__webpack_require__(9);
 
 /***/ }),
 
 /***/ 9:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 90:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(91);
-
-/***/ }),
-
-/***/ 91:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

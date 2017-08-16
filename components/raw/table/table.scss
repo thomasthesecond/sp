@@ -4,11 +4,120 @@
 
 /**
  * Component: Table
- * @type Atom
+ * @type Molecule
  */
 
-table {}
+table {
+  border: 0;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
-.table-striped {}
+.table-striped {
+}
 
-.table-responsive {}
+.table-responsive {
+  @media(max-width: 599px) {
+    border-top: 1px solid rgba($color-border-default, .27);
+  }
+}
+
+thead {
+  .table-responsive & {
+    @media(max-width: 599px) {
+      @include visuallyhidden;
+    }
+  }
+}
+
+tr {
+  tbody & {
+    border-top: 1px solid rgba($color-border-default, .27);
+  }
+
+  .table-responsive & {
+    @media(max-width: 599px) {
+      border-top: 0;
+      box-shadow: 0 14px 34px rgba(#000, .09);
+      display: block;
+      margin-bottom: #{$spacing-gutter}px;
+      margin-top: #{$spacing-gutter}px;
+      padding-bottom: 12px;
+      padding-top: 12px;
+    }
+  }
+}
+
+th,
+td {
+  padding-bottom: #{$spacing-gutter}px;
+  padding-top: #{$spacing-gutter}px;
+  vertical-align: top;
+
+  &:not(:first-of-type) {
+    padding-left: #{(72 / $max-width)* 100%};
+  }
+
+  .table-responsive & {
+    @media(max-width: 599px) {
+      padding: 12px #{$spacing-gutter}px;
+    }
+  }
+}
+
+th {
+  @include fluid-type(
+    $min-font-size: 14,
+    $max-font-size: 16,
+    $min-width: 600
+  );
+
+  color: $color-text-heading;
+  font-weight: $font-weight-semibold;
+  text-align: left;
+}
+
+td {
+  @include fluid-type(
+    $min-font-size: 12,
+    $max-font-size: 16,
+    $min-width: 600
+  );
+
+  // table:not(.table-striped) tr:hover &,
+  // table:not(.table-responsive) tr:hover & {
+  tr:hover & {
+    background-color: rgba($color-border-default, .07);
+  }
+
+  .table-striped tr:hover & {
+    background-color: inherit;
+  }
+
+  .table-striped tr:nth-child(odd) & {
+    background-color: rgba($color-border-default, .07);
+  }
+
+  .table-responsive & {
+    @media(max-width: 599px) {
+      // border-bottom: 1px solid green;
+      display: block;
+
+      &::before {
+        color: $color-text-heading;
+        content: attr(data-label);
+        display: block;
+        font-weight: $font-weight-semibold;
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  .table-responsive tr:hover & {
+    @media(max-width: 599px) {
+      background-color: inherit;
+    }
+  }
+}

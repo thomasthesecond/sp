@@ -74,31 +74,35 @@
   </header>
 
   <div class="sticky">
-    <nav class="SubNavigation js-sub-navigation">
+    <nav class="SubNavigation SubNavigation--scrollSpy js-sub-navigation">
       <ul class="SubNavigation-list">
           <li class="SubNavigation-item" id="physician-practices-item">
-            <a class="SubNavigation-link" href="#physician-practices">
-              Physician practices
-            </a>
+              <a class="SubNavigation-link" href="#physician-practices">
+                Physician practices
+              </a>
+    
           </li>
           <li class="SubNavigation-item" id="ambulatory-surgery-centers-item">
-            <a class="SubNavigation-link" href="#ambulatory-surgery-centers">
-              Ambulatory surgery centers
-            </a>
+              <a class="SubNavigation-link" href="#ambulatory-surgery-centers">
+                Ambulatory surgery centers
+              </a>
+    
           </li>
           <li class="SubNavigation-item" id="surgical-hospitals-item">
-            <a class="SubNavigation-link" href="#surgical-hospitals">
-              Surgical hospitals
-            </a>
+              <a class="SubNavigation-link" href="#surgical-hospitals">
+                Surgical hospitals
+              </a>
+    
           </li>
           <li class="SubNavigation-item" id="healthcare-systems-item">
-            <a class="SubNavigation-link" href="#healthcare-systems">
-              Healthcare systems
-            </a>
+              <a class="SubNavigation-link" href="#healthcare-systems">
+                Healthcare systems
+              </a>
+    
           </li>
     
-        <div class="SubNavigation-marker js-sub-navigation-marker"
-          aria-hidden="true"></div>
+          <div class="SubNavigation-marker js-sub-navigation-marker"
+            aria-hidden="true"></div>
       </ul>
     </nav>
   </div>
@@ -355,15 +359,15 @@
 
     <hr class="dark">
 
-    <div class="Pagination">
+    <div class="NextPage">
       <a href="/">
-        <div class="Pagination-label">
+        <div class="NextPage-label">
           Read next
         </div>
     
-        <div class="Pagination-title heading-large">
+        <div class="NextPage-title heading-2">
           Investors
-          <svg class="icon Pagination-icon">
+          <svg class="icon NextPage-icon">
             <use xlink:href="#icon-arrow"></use>
           </svg>
         </div>
@@ -386,9 +390,10 @@
       </p>
 
       <select
-  id="footer-locations"
   class="dark js-location-select"
-  name="footer-locations">
+  id="footer-locations"
+  name="footer-locations"
+  >
     <option value="" selected="selected">
       Select a state
     </option>

@@ -1,0 +1,18 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Press release contact
+ */
+
+.PressReleaseContact {
+
+  // Implementation detail
+
+  .NewsArticle & {
+    border-top: 1px solid $color-border-default;
+    margin-top: 3em;
+    padding-top: 2em;
+  }
+}

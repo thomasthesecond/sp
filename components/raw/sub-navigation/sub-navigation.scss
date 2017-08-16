@@ -12,6 +12,13 @@
 $gutter: 24;
 $z--bottom: 10;
 
+@mixin marker() {
+  background-color: #b5955d;
+  bottom: 0;
+  height: 7px;
+  position: absolute;
+}
+
 .SubNavigation {
   background-color: #fff;
   // border-bottom: 1px solid #fff;
@@ -87,6 +94,14 @@ $z--bottom: 10;
     margin-right: auto;
     max-width: #{$max-width}px;
   }
+
+  .SubNavigation:not(.SubNavigation--scrollSpy) & {
+    border-bottom-color: #fff;
+
+    .InvestorsPage & {
+      border-bottom-color: rgba($color-border-default, .27);
+    }
+  }
 }
 
 .SubNavigation-item {
@@ -100,7 +115,17 @@ $z--bottom: 10;
 
   @media (min-width: 600px) {
     padding-bottom: 34px;
-    padding-top: 39px
+    padding-top: 39px;
+  }
+}
+
+.SubNavigation-item.is-active::after {
+  .SubNavigation:not(.SubNavigation--scrollSpy) & {
+    @include marker();
+    content: "";
+    left: 0;
+    opacity: 1;
+    width: 100%;
   }
 }
 
@@ -145,11 +170,8 @@ $z--bottom: 10;
 }
 
 .SubNavigation-marker {
-  background-color: #b5955d;
-  bottom: 0;
-  height: 7px;
+  @include marker();
   opacity: 0;
-  position: absolute;
   transition: opacity 200ms;
   width: 0;
 }

@@ -1,0 +1,16 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Press release bio
+ */
+
+.PressReleaseBio {
+
+  // Implementation detail
+
+  .NewsArticle & {
+    margin-top: 3em;
+  }
+}

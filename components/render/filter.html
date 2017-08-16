@@ -1,0 +1,100 @@
+
+
+<form class="Filter">
+  <div class="Filter-controls">
+    <div class="Filter-fieldset">
+      <label for="keyword-search-input">
+        SEC Filing
+        <a
+          class="HelpTip"
+          href="#"
+          title="View search tips"
+          aria-label="View search tips"
+          onclick="javascript:return false;">?</a>
+      </label>
+
+      <input
+        type="text"
+        
+        id="keyword-search-input"
+        name="keyword-search-input"
+        placeholder="Search keywords"
+        >
+    </div>
+
+    <div class="Filter-fieldset">
+      <label for="years-select">
+        Year
+      </label>
+
+      <select
+        
+        id="years-select"
+        name="years-select"
+        >
+          <option value="" selected="selected">
+            All years
+          </option>
+          <option value="2017">
+            2017
+          </option>
+          <option value="2016">
+            2016
+          </option>
+          <option value="2015">
+            2015
+          </option>
+      </select>
+    </div>
+
+    <div class="Filter-fieldset">
+      <label for="groupings-select">
+        Groupings
+        <a
+          class="HelpTip"
+          href="#"
+          title="View SEC Groupings descriptions"
+          aria-label="View SEC Groupings descriptions"
+          onclick="javascript:return false;">?</a>
+      </label>
+
+      <select
+        
+        id="groupings-select"
+        name="groupings-select"
+        >
+          <option value="0" selected="selected">
+            All forms
+          </option>
+          <option value="5">
+            3,4,5
+          </option>
+          <option value="1">
+            Annual filings
+          </option>
+          <option value="3">
+            Current reports
+          </option>
+          <option value="8">
+            Other
+          </option>
+          <option value="7">
+            Proxy filings
+          </option>
+          <option value="2">
+            Quarterly filings
+          </option>
+          <option value="4">
+            Registration statements
+          </option>
+      </select>
+    </div>
+
+    <button class="Filter-button Button" type="submit">Search</button>
+  </div>
+
+  <a class="Filter-link" href="http://ir.surgerypartners.com/phoenix.zhtml?c&#x3D;254156&amp;p&#x3D;irol-sec&amp;control_selectgroup&#x3D;3,4,5">
+    View Section 16 Filings (3,4,5)
+  </a>
+</form>
+

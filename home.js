@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 77);
+/******/ 	return __webpack_require__(__webpack_require__.s = 106);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -79,26 +79,77 @@
 
 /***/ }),
 
-/***/ 10:
+/***/ 106:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(11);
+__webpack_require__(107);
 
-__webpack_require__(8);
+__webpack_require__(16);
+
+__webpack_require__(6);
+
+__webpack_require__(3);
+
+var _locationFinder = __webpack_require__(18);
+
+var _locationFinder2 = _interopRequireDefault(_locationFinder);
+
+__webpack_require__(58);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Import page module
+var locationFinder = new _locationFinder2.default();
+
+// Import page-specific components
+
+
+locationFinder.render();
+
+console.info("Home loaded");
 
 /***/ }),
 
-/***/ 11:
+/***/ 107:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(108);
+
+/***/ }),
+
+/***/ 108:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 12:
+/***/ 16:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(17);
+
+__webpack_require__(5);
+
+/***/ }),
+
+/***/ 17:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -108,11 +159,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _locationFinder = __webpack_require__(13);
+var _locationFinder = __webpack_require__(19);
 
 var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
-__webpack_require__(14);
+__webpack_require__(20);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -120,7 +171,7 @@ exports.default = _locationFinder2.default;
 
 /***/ }),
 
-/***/ 13:
+/***/ 19:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -178,14 +229,14 @@ exports.default = LocationFinder;
 
 /***/ }),
 
-/***/ 14:
+/***/ 2:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 2:
+/***/ 20:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -216,26 +267,23 @@ __webpack_require__(2);
 /***/ }),
 
 /***/ 5:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(6);
+__webpack_require__(59);
 
 /***/ }),
 
-/***/ 53:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(54);
-
-/***/ }),
-
-/***/ 54:
+/***/ 59:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -243,64 +291,16 @@ __webpack_require__(54);
 /***/ }),
 
 /***/ 6:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 77:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(78);
-
-__webpack_require__(10);
-
-__webpack_require__(5);
-
-__webpack_require__(3);
-
-var _locationFinder = __webpack_require__(12);
-
-var _locationFinder2 = _interopRequireDefault(_locationFinder);
-
-__webpack_require__(53);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Import page module
-var locationFinder = new _locationFinder2.default();
-
-// Import page-specific components
-
-
-locationFinder.render();
-
-console.info("Home loaded");
+__webpack_require__(7);
 
 /***/ }),
 
-/***/ 78:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(79);
-
-/***/ }),
-
-/***/ 79:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 8:
+/***/ 7:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

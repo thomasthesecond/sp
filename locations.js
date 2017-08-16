@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 83);
+/******/ 	return __webpack_require__(__webpack_require__.s = 112);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -79,7 +79,78 @@
 
 /***/ }),
 
-/***/ 12:
+/***/ 112:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(113);
+
+var _locationFinder = __webpack_require__(18);
+
+var _locationFinder2 = _interopRequireDefault(_locationFinder);
+
+__webpack_require__(66);
+
+__webpack_require__(68);
+
+__webpack_require__(70);
+
+__webpack_require__(3);
+
+__webpack_require__(72);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Import page-specific components
+var locationFinder = new _locationFinder2.default(); // Import page module
+
+
+locationFinder.render();
+
+var loc = document.querySelector(".js-location-finder");
+
+window.addEventListener("scroll", function (event) {
+  setTimeout(function () {
+    var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    console.log(scrollPosition, loc.parentNode.offsetTop);
+
+    if (scrollPosition >= loc.parentNode.offsetTop) {
+      loc.classList.add("is-sticky");
+      // loc.parentNode.classList.remove("container");
+      // console.log("is-sticky");
+    } else {
+      loc.classList.remove("is-sticky");
+      // loc.parentNode.classList.add("container");
+      // console.log("is-not-sticky");
+    }
+  }, 100);
+});
+
+console.info("Locations loaded");
+
+/***/ }),
+
+/***/ 113:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(114);
+
+/***/ }),
+
+/***/ 114:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -89,11 +160,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _locationFinder = __webpack_require__(13);
+var _locationFinder = __webpack_require__(19);
 
 var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
-__webpack_require__(14);
+__webpack_require__(20);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -101,7 +172,7 @@ exports.default = _locationFinder2.default;
 
 /***/ }),
 
-/***/ 13:
+/***/ 19:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -159,14 +230,14 @@ exports.default = LocationFinder;
 
 /***/ }),
 
-/***/ 14:
+/***/ 2:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 2:
+/***/ 20:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -196,139 +267,68 @@ __webpack_require__(2);
 
 /***/ }),
 
-/***/ 63:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(64);
-
-/***/ }),
-
-/***/ 64:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 65:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(66);
-
-/***/ }),
-
 /***/ 66:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(67);
 
 /***/ }),
 
 /***/ 67:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-__webpack_require__(68);
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
 /***/ 68:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(69);
 
 /***/ }),
 
 /***/ 69:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(70);
-
-/***/ }),
-
-/***/ 70:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 83:
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(84);
-
-var _locationFinder = __webpack_require__(12);
-
-var _locationFinder2 = _interopRequireDefault(_locationFinder);
-
-__webpack_require__(63);
-
-__webpack_require__(65);
-
-__webpack_require__(67);
-
-__webpack_require__(3);
-
-__webpack_require__(69);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Import page-specific components
-var locationFinder = new _locationFinder2.default(); // Import page module
-
-
-locationFinder.render();
-
-var loc = document.querySelector(".js-location-finder");
-
-window.addEventListener("scroll", function (event) {
-  setTimeout(function () {
-    var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-    console.log(scrollPosition, loc.parentNode.offsetTop);
-
-    if (scrollPosition >= loc.parentNode.offsetTop) {
-      loc.classList.add("is-sticky");
-      // loc.parentNode.classList.remove("container");
-      // console.log("is-sticky");
-    } else {
-      loc.classList.remove("is-sticky");
-      // loc.parentNode.classList.add("container");
-      // console.log("is-not-sticky");
-    }
-  }, 100);
-});
-
-console.info("Locations loaded");
+__webpack_require__(71);
 
 /***/ }),
 
-/***/ 84:
+/***/ 71:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 72:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(85);
+__webpack_require__(73);
 
 /***/ }),
 
-/***/ 85:
+/***/ 73:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

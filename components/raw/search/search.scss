@@ -4,9 +4,45 @@
 
 /**
  * Component: Search
- * @type Molecule
  */
 
 .Search {
-  position: relative;
+  background-color: $color-background-default;
+  border: 1px solid $color-border-default;
+  display: flex;
+  height: 44px;
+}
+
+.Search-label {
+  @include visuallyhidden();
+}
+
+.Search-input {
+  background-color: transparent;
+  border: 0;
+  flex: 0 1 auto;
+  font-size: 14px;
+  margin: 4px;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.Search-button {
+  background-color: transparent;
+  border: 0;
+  color: $color-text-search-button;
+  cursor: pointer;
+  display: block;
+  flex: 0 1 auto;
+  font-weight: $font-weight-semibold;
+  line-height: 1;
+  margin: 4px;
+  padding: 0 28px;
+  transition: color 200ms;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-text-search-button-hover;
+  }
 }

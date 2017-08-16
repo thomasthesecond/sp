@@ -8,20 +8,12 @@
  */
 
 .TeamMember {
-  align-items: center;
-  backface-visibility: hidden;
-  // box-shadow: 0 42px 84px rgba(#000, 0.3);
-  // box-sizing: content-box;
-  display: flex;
-  flex-direction: column;
-  // max-width: (248px + 35px + 35px);
-  max-width: 248px;
-  // padding: 42px 35px 60px;
-  position: relative;
-  text-align: center;
-
   .LeadershipTeam & {
     max-width: none;
+  }
+
+  .TeamList & {
+    margin-top: 48px;
   }
 
   // &::after {
@@ -44,11 +36,25 @@
   //   z-index: $z-index-below;
   // }
 
-  &:hover {
+  &:not(.TeamMember--small) {
+    align-items: center;
+    backface-visibility: hidden;
+    // box-shadow: 0 42px 84px rgba(#000, 0.3);
+    // box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    // max-width: (248px + 35px + 35px);
+    max-width: 248px;
+    // padding: 42px 35px 60px;
+    position: relative;
+    text-align: center;
+  }
+
+  &:not(.TeamMember--small):hover {
     z-index: $z-index-default + 1;
   }
 
-  &:hover::after {
+  &:not(.TeamMember--small):hover::after {
     opacity: 1;
     visibility: visible;
   }
@@ -71,14 +77,21 @@
   // font-size: 14px;
   // line-height: (24 / 14);
   margin-bottom: 0;
-  margin-top: 28px;
 
   // @media (min-width: 480px) {
   //   font-size: 16px;
   //   line-height: (28 / 16);
   // }
 
-  .TeamMember:hover & {
+  .TeamMember:not(.TeamMember--small) & {
+    margin-top: 28px;
+  }
+
+  .TeamMember--small & {
+    margin-top: 0;
+  }
+
+  .TeamMember:not(.TeamMember--small):hover & {
     @media (min-width: 1015px) {
       position: relative;
       z-index: 2;
@@ -99,7 +112,7 @@
     line-height: (28 / 14);
   }
 
-  .TeamMember:hover & {
+  .TeamMember:not(.TeamMember--small):hover & {
     @media (min-width: 1015px) {
       position: relative;
       z-index: 2;
@@ -143,4 +156,9 @@
   line-height: (28 / 16);
   margin-bottom: 0;
   margin-top: 16px;
+}
+
+.TeamMember-link {
+  margin-bottom: 0;
+  margin-top: 0;
 }

@@ -1,0 +1,1 @@
+import "./help-tip.scss";

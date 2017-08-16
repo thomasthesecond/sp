@@ -1,0 +1,12 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Team list
+ */
+
+.TeamList-heading {
+  margin-bottom: 40px;
+  margin-top: 0;
+}

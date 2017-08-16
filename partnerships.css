@@ -5,6 +5,48 @@
  * Mixins
  */
 /**
+ * Component: More link
+ * @type Atom
+ */
+.MoreLink {
+  color: #12769f;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.35714;
+  position: relative;
+  text-decoration: none;
+}
+
+.MoreLink:hover .icon, .MoreLink:active .icon, .MoreLink:focus .icon {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.MoreLink--white {
+  color: #fff;
+}
+
+.MoreLink .icon {
+  display: block;
+  font-size: 24px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  -webkit-transform: translateX(36px);
+          transform: translateX(36px);
+  -webkit-transition: color 200ms, -webkit-transform 200ms;
+  transition: color 200ms, -webkit-transform 200ms;
+  transition: color 200ms, transform 200ms;
+  transition: color 200ms, transform 200ms, -webkit-transform 200ms;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Masthead
  * @type Atom
  */
@@ -142,7 +184,6 @@
  * @type Atom
  */
 .Tagline {
-  font-size: 40px;
   font-weight: 300;
   letter-spacing: -.5px;
   line-height: 1;
@@ -150,18 +191,6 @@
   margin-right: auto;
   max-width: 64vw;
   text-align: center;
-}
-
-@media (min-width: 37.5em) and (max-width: 80.625em) {
-  .Tagline {
-    font-size: calc(40px + (96 - 40) * (100vw - 600px) / (1290 - 600));
-  }
-}
-
-@media (min-width: 80.625em) {
-  .Tagline {
-    font-size: 96px;
-  }
 }
 
 @media (min-width: 600px) {
@@ -346,48 +375,6 @@
  * Mixins
  */
 /**
- * Component: More link
- * @type Atom
- */
-.MoreLink {
-  color: #12769f;
-  display: inline-block;
-  font-size: 14px;
-  line-height: 1.35714;
-  position: relative;
-  text-decoration: none;
-}
-
-.MoreLink:hover .icon, .MoreLink:active .icon, .MoreLink:focus .icon {
-  -webkit-transform: translateX(30px);
-          transform: translateX(30px);
-}
-
-.MoreLink--white {
-  color: #fff;
-}
-
-.MoreLink .icon {
-  display: block;
-  font-size: 24px;
-  height: 10px;
-  position: absolute;
-  right: 0;
-  top: 5px;
-  -webkit-transform: translateX(36px);
-          transform: translateX(36px);
-  -webkit-transition: color 200ms, -webkit-transform 200ms;
-  transition: color 200ms, -webkit-transform 200ms;
-  transition: color 200ms, transform 200ms;
-  transition: color 200ms, transform 200ms, -webkit-transform 200ms;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Sub Navigation
  * @type Molecule
  */
@@ -460,6 +447,14 @@
   }
 }
 
+.SubNavigation:not(.SubNavigation--scrollSpy) .SubNavigation-list {
+  border-bottom-color: #fff;
+}
+
+.InvestorsPage .SubNavigation:not(.SubNavigation--scrollSpy) .SubNavigation-list {
+  border-bottom-color: rgba(191, 208, 216, 0.27);
+}
+
 .SubNavigation-item {
   display: inline-block;
   height: 100%;
@@ -475,6 +470,17 @@
     padding-bottom: 34px;
     padding-top: 39px;
   }
+}
+
+.SubNavigation:not(.SubNavigation--scrollSpy) .SubNavigation-item.is-active::after {
+  background-color: #b5955d;
+  bottom: 0;
+  height: 7px;
+  position: absolute;
+  content: "";
+  left: 0;
+  opacity: 1;
+  width: 100%;
 }
 
 .SubNavigation-link {
@@ -493,8 +499,8 @@
   background-color: #b5955d;
   bottom: 0;
   height: 7px;
-  opacity: 0;
   position: absolute;
+  opacity: 0;
   -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
   width: 0;
@@ -506,16 +512,16 @@
  * Mixins
  */
 /**
- * Component: Pagination
+ * Component: Next page
  * @type Organism
  */
 @media (min-width: 480px) {
-  .Pagination {
+  .NextPage {
     text-align: center;
   }
 }
 
-.Pagination a {
+.NextPage a {
   color: #25395d;
   display: inline-block;
   text-decoration: none;
@@ -523,16 +529,16 @@
   transition: color 200ms;
 }
 
-.Pagination a:hover, .Pagination a:active, .Pagination a:focus {
+.NextPage a:hover, .NextPage a:active, .NextPage a:focus {
   color: rgba(37, 57, 93, 0.7);
 }
 
-.Pagination a:hover .Pagination-icon, .Pagination a:active .Pagination-icon, .Pagination a:focus .Pagination-icon {
+.NextPage a:hover .NextPage-icon, .NextPage a:active .NextPage-icon, .NextPage a:focus .NextPage-icon {
   -webkit-transform: translateX(1.2em);
           transform: translateX(1.2em);
 }
 
-.Pagination-label {
+.NextPage-label {
   color: #b5955d;
   font-size: 10px;
   letter-spacing: 1px;
@@ -540,19 +546,19 @@
 }
 
 @media (min-width: 600px) {
-  .Pagination-label {
+  .NextPage-label {
     font-size: 14px;
   }
 }
 
-.Pagination-title {
+.NextPage-title {
   color: currentColor;
   margin-bottom: 0;
   margin-top: 0;
   position: relative;
 }
 
-.Pagination-icon {
+.NextPage-icon {
   color: #bfd0d8;
   height: 0.5em;
   font-size: 2.5em;
@@ -935,20 +941,20 @@
   }
 }
 
-.Pagination {
+.NextPage {
   margin-bottom: 92px;
   margin-top: 92px;
 }
 
 @media (min-width: 660px) {
-  .Pagination {
+  .NextPage {
     margin-bottom: 13.95349vw;
     margin-top: 13.95349vw;
   }
 }
 
 @media (min-width: 83.625em) {
-  .Pagination {
+  .NextPage {
     margin-bottom: 180px;
     margin-top: 180px;
   }

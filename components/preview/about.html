@@ -160,31 +160,35 @@
   </header>
 
   <div class="sticky">
-    <nav class="SubNavigation js-sub-navigation">
+    <nav class="SubNavigation SubNavigation--scrollSpy js-sub-navigation">
       <ul class="SubNavigation-list">
           <li class="SubNavigation-item" id="what-we-do-item">
-            <a class="SubNavigation-link" href="#what-we-do">
-              What we do
-            </a>
+              <a class="SubNavigation-link" href="#what-we-do">
+                What we do
+              </a>
+    
           </li>
           <li class="SubNavigation-item" id="how-were-different-item">
-            <a class="SubNavigation-link" href="#how-were-different">
-              How we’re different
-            </a>
+              <a class="SubNavigation-link" href="#how-were-different">
+                How we’re different
+              </a>
+    
           </li>
           <li class="SubNavigation-item" id="how-we-got-here-item">
-            <a class="SubNavigation-link" href="#how-we-got-here">
-              How we got here
-            </a>
+              <a class="SubNavigation-link" href="#how-we-got-here">
+                How we got here
+              </a>
+    
           </li>
           <li class="SubNavigation-item" id="leadership-item">
-            <a class="SubNavigation-link" href="#leadership">
-              Leadership
-            </a>
+              <a class="SubNavigation-link" href="#leadership">
+                Leadership
+              </a>
+    
           </li>
     
-        <div class="SubNavigation-marker js-sub-navigation-marker"
-          aria-hidden="true"></div>
+          <div class="SubNavigation-marker js-sub-navigation-marker"
+            aria-hidden="true"></div>
       </ul>
     </nav>
   </div>
@@ -444,9 +448,9 @@
               src="../../team-doyle@2x.jpg"
               alt="Headshot of Michael Doyle">
           
-            <h4 class="TeamMember-name" itemprop="name">
+            <h5 class="TeamMember-name" itemprop="name">
               Michael Doyle
-            </h4>
+            </h5>
           
             <p class="TeamMember-title" itemprop="jobTitle">
               Chief Executive Officer
@@ -464,9 +468,9 @@
               src="../../team-sparks@2x.jpg"
               alt="Headshot of Teresa Sparks">
           
-            <h4 class="TeamMember-name" itemprop="name">
+            <h5 class="TeamMember-name" itemprop="name">
               Teresa Sparks
-            </h4>
+            </h5>
           
             <p class="TeamMember-title" itemprop="jobTitle">
               Chief Financial Officer
@@ -484,9 +488,9 @@
               src="../../team-baldock@2x.jpg"
               alt="Headshot of Jennifer Baldock">
           
-            <h4 class="TeamMember-name" itemprop="name">
+            <h5 class="TeamMember-name" itemprop="name">
               Jennifer Baldock
-            </h4>
+            </h5>
           
             <p class="TeamMember-title" itemprop="jobTitle">
               SVP / General Council
@@ -504,9 +508,9 @@
               src="../../team-crysel@2x.jpg"
               alt="Headshot of John Crysel">
           
-            <h4 class="TeamMember-name" itemprop="name">
+            <h5 class="TeamMember-name" itemprop="name">
               John Crysel
-            </h4>
+            </h5>
           
             <p class="TeamMember-title" itemprop="jobTitle">
               National Group President
@@ -524,9 +528,9 @@
               src="../../team-goodwin@2x.jpg"
               alt="Headshot of George Goodwin">
           
-            <h4 class="TeamMember-name" itemprop="name">
+            <h5 class="TeamMember-name" itemprop="name">
               George Goodwin
-            </h4>
+            </h5>
           
             <p class="TeamMember-title" itemprop="jobTitle">
               American Group President
@@ -544,9 +548,9 @@
               src="../../team-taparo@2x.jpg"
               alt="Headshot of Tony Taparo">
           
-            <h4 class="TeamMember-name" itemprop="name">
+            <h5 class="TeamMember-name" itemprop="name">
               Tony Taparo
-            </h4>
+            </h5>
           
             <p class="TeamMember-title" itemprop="jobTitle">
               Atlantic Group President
@@ -564,9 +568,9 @@
               src="../../team-topke@2x.jpg"
               alt="Headshot of Chris Toepke">
           
-            <h4 class="TeamMember-name" itemprop="name">
+            <h5 class="TeamMember-name" itemprop="name">
               Chris Topke
-            </h4>
+            </h5>
           
             <p class="TeamMember-title" itemprop="jobTitle">
               Ancilary Group President
@@ -585,15 +589,15 @@
   <div class="container">
     <hr class="dark">
 
-    <div class="Pagination">
+    <div class="NextPage">
       <a href="/">
-        <div class="Pagination-label">
+        <div class="NextPage-label">
           Read next
         </div>
     
-        <div class="Pagination-title heading-large">
+        <div class="NextPage-title heading-2">
           Partnerships
-          <svg class="icon Pagination-icon">
+          <svg class="icon NextPage-icon">
             <use xlink:href="#icon-arrow"></use>
           </svg>
         </div>
@@ -616,9 +620,10 @@
       </p>
 
       <select
-  id="footer-locations"
   class="dark js-location-select"
-  name="footer-locations">
+  id="footer-locations"
+  name="footer-locations"
+  >
     <option value="" selected="selected">
       Select a state
     </option>
@@ -809,6 +814,16 @@
           <path fill="#6091a1" d="M22.5 16.6h5.7v1h-5.7v-1z"></path>
           <path fill="#6091a1" d="M22.5 22h5.7v1h-5.7v-1z"></path>
           <path fill="#6091a1" d="M6.9 21.6h5.9v6.4h-5.9v-6.4z"></path>
+        </symbol>
+    
+        <symbol id="icon-carot-left" viewBox="0 0 32 32">
+          <title>Left-pointing carot icon</title>
+          <path d="M24 0l-16 16 16 16v-5.3l-10.7-10.7 10.7-10.7z"></path>
+        </symbol>
+    
+        <symbol id="icon-carot-right" viewBox="0 0 32 32">
+          <title>Right-pointing carot icon</title>
+          <path d="M24 0l-16 16 16 16v-5.3l-10.7-10.7 10.7-10.7z" transform="rotate(180 16 16)"></path>
         </symbol>
     
         <symbol id="icon-chart-line" viewBox="0 0 32 32">
