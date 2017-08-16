@@ -217,6 +217,31 @@
       }
     },
     {
+      "name": "stock-info",
+      "label": "Stock information",
+      "context": {
+        "title": "Stock information",
+        "subNavigation": {
+          "useScrollSpy": false,
+          "items": [
+            { "label": "Overview", "url": "/investors" },
+            { "label": "Highlights", "url": "/investors/highlights" },
+            { "label": "Stock", "url": "/investors/stock", "selected": true },
+            { "label": "SEC filings", "url": "/investors/sec-filings" },
+            { "label": "News", "url": "/investors/news" },
+            { "label": "Presentations", "url": "/investors/presentations" },
+            { "label": "Shareholders", "url": "/investors/shareholders" },
+            { "label": "Financial reports", "url": "/investors/financial-reports" }
+          ]
+        },
+        "nextPage": {
+          "label": "Next",
+          "title": "SEC filings",
+          "url": "/investors/sec-filings"
+        }
+      }
+    },
+    {
       "name": "highlights",
       "label": "Company highlights",
       "context": {

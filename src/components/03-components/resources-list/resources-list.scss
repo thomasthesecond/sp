@@ -8,18 +8,22 @@
 
 .ResourcesList-heading {
   border-bottom: 1px solid rgba($color-border-default, .6);
-  font-size: 20px;
   font-weight: $font-weight-light;
-  line-height: (28 / 20);
-  margin-bottom: 16px;
+  margin-bottom: #{(16 / $font-size-heading-4) * 1em};
   margin-top: 0;
-  padding-bottom: 24px;
+  padding-bottom: #{(24 / $font-size-heading-4) * 1em};
 }
 
 .ResourcesList-list {
+  @include fluid-type(
+    $min-font-size: $font-size-default-min,
+    $max-font-size: $font-size-default,
+    $min-width: 600
+  );
+
+  line-height: (45 / $font-size-default);
   list-style: none;
-  padding-left: 0;
   margin-bottom: 0;
   margin-top: 0;
-  line-height: (45 / 16);
+  padding-left: 0;
 }

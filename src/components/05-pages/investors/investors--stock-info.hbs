@@ -1,0 +1,21 @@
+{{ render "@global-header" }}
+
+<main id="main" role="main" tabindex="0">
+  {{> @sub-navigation }}
+
+  <div class="InvestorsPage-container">
+    <div class="InvestorsPage-filings container">
+      <h1>{{ title }}</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    {{> @utility-links}}
+
+    <hr class="dark">
+
+    {{> @next-page }}
+  </div>
+</main>
+
+{{ render "@global-footer" }}

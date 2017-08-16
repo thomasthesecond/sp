@@ -8,11 +8,11 @@
  */
 
 .Filter {
-  align-items: flex-end;
-  display: flex;
-  flex-wrap: wrap;
   max-width: #{960}px;
   width: 100%;
+
+  @media (min-width: 922px) {
+  }
 
   label {
     display: inline-block;
@@ -34,21 +34,91 @@
   }
 }
 
+.Filter-controls {
+  align-items: flex-end;
+  display: flex;
+  width: 100%;
+
+  @media (max-width: 699px) {
+    flex-wrap: wrap;
+  }
+}
+
+.Filter-fieldset:nth-child(1) {
+  width: 100%;
+
+  @media (max-width: 699px) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 700px) {
+    width: #{(300 / 960) * 100%};
+  }
+}
+
+.Filter-fieldset:nth-child(2),
+.Filter-fieldset:nth-child(3) {
+  width: calc(50% - 8px);
+
+  @media (min-width: 700px) {
+    width: #{(190 / 960) * 100%};
+  }
+}
+
+.Filter-fieldset:nth-child(3) {
+  @media (max-width: 699px) {
+    margin-left: 16px;
+  }
+}
+
+.Filter-fieldset {
+  label {
+    @media (min-width: 922px) {
+      padding-left: 24px;
+    }
+  }
+
+  input,
+  select {
+    display: block;
+    width: 100%;
+
+    @media (max-width: 699px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
 .Filter-button,
 .Filter-fieldset + .Filter-fieldset {
-  // margin-left: #{(32 / $max-width) * 100%};
-  margin-left: 32px;
+  @media (min-width: 700px) {
+    margin-left: 8px;
+  }
+
+  @media (min-width: 840px) {
+    margin-left: 32px;
+  }
 }
 
-.Filter-button,
-.Filter-fieldset {
-  // flex: 1 0 auto;
-}
+.Filter-button {
+  border-radius: 22px;
 
-// .Filter-button {
-//   border-radius: 22px;
-// }
+  @media (max-width: 699px) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: 700px) {
+    width: #{(184 / 960) * 100%};
+  }
+}
 
 .Filter-link {
-  margin-top: 48px;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 24px;
+
+  @media (min-width: 700px) {
+    margin-top: 48px;
+  }
 }

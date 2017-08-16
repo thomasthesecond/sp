@@ -19,6 +19,9 @@ table {
 }
 
 .table-responsive {
+  @media(max-width: 599px) {
+    border-top: 1px solid rgba($color-border-default, .27);
+  }
 }
 
 thead {
@@ -30,7 +33,9 @@ thead {
 }
 
 tr {
-  border-top: 1px solid rgba($color-border-default, .27);
+  tbody & {
+    border-top: 1px solid rgba($color-border-default, .27);
+  }
 
   .table-responsive & {
     @media(max-width: 599px) {

@@ -31,6 +31,10 @@
 }
 
 .InvestorsPage-highlights {
+  h1 {
+    margin-bottom: 1em;
+  }
+
   @supports (display: grid) {
     @media (min-width: 860px) {
       display: grid;
@@ -60,9 +64,13 @@
   }
 
   .InvestorsPage-highlightsResources {
+    margin-top: 56px;
+
     @media (min-width: 860px) {
       float: right;
       margin-top: 8px;
+      position: sticky;
+      top: 24px;
       width: #{(332 / $max-width-investors-page) * 100%};
     }
 
@@ -77,27 +85,57 @@
   }
 
   .InvestorsPage-highlightsTeam {
+    margin-top: 56px;
+
     @media (min-width: 860px) {
-      clear: both;
+      border-top: 1px solid rgba($color-border-default, .47);
+      float: left;
+      padding-top: 56px;
       width: #{(630 / $max-width-investors-page) * 100%};
     }
 
     @supports (display: grid) {
       @media (min-width: 860px) {
-        clear: none;
+        float: none;
         grid-column: 1 / 2;
         grid-row: 2 / auto;
         width: auto;
       }
     }
   }
+
+  .ResourcesList + .ResourcesList {
+    margin-top: #{(40 / $font-size-default) * 1em};
+  }
 }
 
 .InvestorsPage-filings {
+  .Filter {
+    margin-top: 32px;
+
+    @media (min-width: 430px) {
+      margin-top: #{(96 / $max-width) * 100vw};
+    }
+
+    @media (min-width: $mq-min-container) {
+      margin-top: 96px;
+    }
+  }
+
   table {
+    margin-top: 80px;
+
     @media (max-width: 599px) {
       margin-left: -#{$spacing-gutter}px;
       width: calc(100% + #{$spacing-gutter * 2}px);
+    }
+
+    @media (min-width: 993px) {
+      margin-top: #{(104 / $max-width) * 100vw};
+    }
+
+    @media (min-width: $mq-min-container) {
+      margin-top: 104px;
     }
   }
 }
