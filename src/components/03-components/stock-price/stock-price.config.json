@@ -1,0 +1,36 @@
+{
+  "default": "up",
+  "context": {
+    "stockPrice": {
+      "price": "22.85",
+      "points": "0.55",
+      "percent": "3.03",
+      "range": {
+        "high": "22.85",
+        "low": "22.30"
+      }
+    }
+  },
+  "variants": [
+    {
+      "name": "up",
+      "label": "Up",
+      "context": {
+        "stockPrice": {
+          "direction": "up",
+          "up": true
+        }
+      }
+    },
+    {
+      "name": "down",
+      "label": "Down",
+      "context": {
+        "stockPrice": {
+          "direction": "down",
+          "down": true
+        }
+      }
+    }
+  ]
+}

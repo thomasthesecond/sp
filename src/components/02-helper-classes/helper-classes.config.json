@@ -11,7 +11,10 @@
       "align-right": "Right align text",
       "align-center": "Center align text",
       "float-left": "Float content left",
-      "float-right": "Float content right"
+      "float-right": "Float content right",
+      "text-tiny": "Sets font size to “tiny”",
+      "text-positive": "Colors text green; used to signal a positive action",
+      "text-negative": "Colors text red; used to signal a negative action"
     }
   }
 }

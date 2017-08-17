@@ -4,8 +4,68 @@
   {{> @sub-navigation }}
 
   <div class="InvestorsPage-container">
-    <div class="InvestorsPage-filings container">
+    <div class="InvestorsPage-stock container">
       <h1>{{ title }}</h1>
+
+      <hr>
+
+      <div class="InvestorsPage-stockChart">
+        {{> @stock-chart-filter }}
+
+        {{ render "@stock-chart" }}
+      </div>
+
+      <hr>
+
+      <div class="InvestorsPage-stockTable">
+        <h4>SRGRY (Common stock)</h4>
+
+        <table>
+          <tbody>
+            <tr>
+              <td><b>Price</b></td>
+              <td>17.60</td>
+              <td><b>Change</b></td>
+              <td>
+                <span class="text-negative">
+                  0.55
+                  {{> @icon class="text-tiny" id="icon-stock-price-down" }}
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><b>Volume</b></td>
+              <td>218,352</td>
+              <td><b>% Change</b></td>
+              <td><span class="text-negative">3.03%</span></td>
+            </tr>
+            <tr>
+              <td><b>Intraday high</b></td>
+              <td>18.20</td>
+              <td><b>52 week high</b></td>
+              <td>22.85</td>
+            </tr>
+            <tr>
+              <td><b>Intraday low</b></td>
+              <td>17.45</td>
+              <td><b>52 week low</b></td>
+              <td>12.95</td>
+            </tr>
+            <tr>
+              <td><b>Today’s open</b></td>
+              <td>18.15</td>
+              <td><b>Currency</b></td>
+              <td>US Dollar</td>
+            </tr>
+            <tr>
+              <td><b>Previous close</b></td>
+              <td>17.85</td>
+              <td><b>Exchange</b></td>
+              <td>NASDAQ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 

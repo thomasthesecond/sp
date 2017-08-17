@@ -2,21 +2,30 @@
   "title": "Stock price card",
   "default": "up",
   "context": {
-    "stockPrice": {
+    "stockPriceCard": {
       "symbol": "NASDAQ: SRGRY",
-      "price": "$22.85"
+      "date": {
+        "formatted": "August 7, 4:00PM ET",
+        "iso": "2017-08-07T16:00"
+      },
+      "update": {
+        "date": {
+          "formatted": "July 2, 2017 4:00pm ET",
+          "iso": "2017-07-02T16:00:00"
+        },
+        "url": "/"
+      },
+      "price": {
+        "price": "22.85",
+        "points": "0.55",
+        "percent": "3.03",
+        "direction": "up",
+        "up": true,
+        "range": {
+          "high": "22.85",
+          "low": "22.30"
+        }
+      }
     }
-  },
-  "variants": [
-    {
-      "name": "up",
-      "label": "Stock price up",
-      "context": {}
-    },
-    {
-      "name": "down",
-      "label": "Stock price down",
-      "context": {}
-    }
-  ]
+  }
 }

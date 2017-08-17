@@ -53,3 +53,15 @@
 .float-right {
   float: right;
 }
+
+.text-tiny {
+  font-size: #{$font-size-body-tiny}px;
+}
+
+.text-positive {
+  color: $color-text-positive;
+}
+
+.text-negative {
+  color: $color-text-negative;
+}

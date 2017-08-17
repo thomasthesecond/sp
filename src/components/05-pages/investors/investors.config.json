@@ -238,6 +238,35 @@
             { "label": "Financial reports", "url": "/investors/financial-reports" }
           ]
         },
+        "stockPrice": {
+          "price": "22.85",
+          "points": "0.55",
+          "percent": "3.03",
+          "up": true,
+          "direction": "up"
+        },
+        "filter1": {
+          "name": "filter1",
+          "id": "filter1",
+          "required": false,
+          "options": [
+            { "label": "Select", "value": "", "selected": "true" },
+            { "label": "Option 1", "value": "1" },
+            { "label": "Option 2", "value": "2" },
+            { "label": "Option 3", "value": "3" }
+          ]
+        },
+        "filter2": {
+          "name": "filter2",
+          "id": "filter2",
+          "required": false,
+          "options": [
+            { "label": "Select", "value": "", "selected": "true" },
+            { "label": "Option 1", "value": "1" },
+            { "label": "Option 2", "value": "2" },
+            { "label": "Option 3", "value": "3" }
+          ]
+        },
         "nextPage": {
           "label": "Next",
           "title": "SEC filings",

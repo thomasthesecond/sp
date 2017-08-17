@@ -1,30 +1,22 @@
 <div class="StockPriceCard">
   <header class="StockPriceCard-header">
-    <b>NASDAQ: SRGRY –</b>
-    <time datetime="2017-08-07T16:00">August 7, 4:00PM EDT</time>
+    <b>{{ stockPriceCard.symbol }} –</b>
+    <time datetime="{{ stockPriceCard.date.iso }}">
+      {{ stockPriceCard.date.formatted }}
+    </time>
   </header>
 
-  <div class="StockPriceCard-priceInfo">
-    <span class="StockPriceCard-price heading-1">
-      $22.85
-    </span>
+  {{> @stock-price stockPrice=stockPriceCard.price }}
 
-    <span class="StockPriceCard-ticker StockPriceCard-ticker--up">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32">
-        <title>Stock is up</title>
-        <path d="M32 0l32 32h-64z"></path>
-      </svg>
-      0.55 (3.03%)
-    </span>
-  </div>
+  {{#if stockPriceCard.update}}
+    <footer class="StockPriceCard-footer">
+      <time datetime="{{ stockPriceCard.update.date.iso }}">
+        {{ stockPriceCard.update.date.formatted }}
+      </time><br>
 
-  <div class="StockPriceCard-highLow">
-    <span>High 22.85</span>
-    <span>Low $22.30</span>
-  </div>
-
-  <footer class="StockPriceCard-footer">
-    <time datetime="2017-07-02T16:00:00">July 2, 2017 4:00pm ET</time><br>
-    <a href="#">Read more</a>
-  </footer>
+      <a href="{{ stockPriceCard.update.url }}">
+        Read more
+      </a>
+    </footer>
+  {{/if}}
 </div>

@@ -1,0 +1,26 @@
+<div class="StockPrice">
+  <div class="StockPrice-price heading-1">
+    ${{ stockPrice.price }}
+  </div>
+
+  {{#if stockPrice.up}}
+    <div class="StockPrice-ticker text-positive">
+      {{> @icon id="icon-stock-price-up" }}
+      {{ stockPrice.points }} ({{ stockPrice.percent }}%)
+    </div>
+  {{/if}}
+
+  {{#if stockPrice.down}}
+    <div class="StockPrice-ticker text-negative">
+      {{> @icon id="icon-stock-price-down" }}
+      {{ stockPrice.points }} ({{ stockPrice.percent }}%)
+    </div>
+  {{/if}}
+
+  {{#if stockPrice.range}}
+    <div class="StockPrice-range">
+      <span>High ${{ stockPrice.range.high }}</span>
+      <span>Low ${{ stockPrice.range.low }}</span>
+    </div>
+  {{/if}}
+</div>

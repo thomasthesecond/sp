@@ -1,0 +1,61 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Stock price
+ */
+
+.StockPrice {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.StockPrice-price {
+  font-weight: $font-weight-regular;
+  line-height: $line-height-reset;
+  margin-right: 32px;
+
+  @media (min-width: 500px) {
+    margin-right: 10px;
+  }
+}
+
+.StockPrice-ticker {
+  @include fluid-type(
+    $min-font-size: 14,
+    $max-font-size: 18,
+    $min-width: 480
+  );
+
+  align-items: center;
+  display: inline-flex;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-reset;
+
+  @media (min-width: 500px) {
+    padding-top: 14px;
+  }
+}
+
+.StockPrice-ticker .icon {
+  fill: currentColor;
+  height: 6px;
+  margin-right: 8px;
+  width: 12px;
+}
+
+.StockPrice-range {
+  color: $color-text-heading;
+  line-height: $line-height-reset;
+  margin-top: 18px;
+  width: 100%;
+
+  @media (min-width: 500px) {
+    margin-top: 12px;
+  }
+
+  span + span {
+    margin-left: 32px;
+  }
+}

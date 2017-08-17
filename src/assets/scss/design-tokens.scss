@@ -40,6 +40,8 @@ $color-text-help-tip-hover: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
 $color-text-search-button: #6facc1; // rgb(111, 172, 193) // Glacier
 $color-text-search-button-hover: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
 $color-text-news-date: #b5955d; // rgb(181, 149, 93) // Muddy Waters
+$color-text-positive: #6fc179;
+$color-text-negative: #d90a0a;
 
 // h2
 // color: #21365a;
@@ -219,14 +221,13 @@ $font-size-default-min: 14;
 $font-size-body-small: 14;
 $font-size-body-small-min: 12;
 
+$font-size-body-tiny: 10;
+
 $font-size-heading-masthead-super: 96;
 $font-size-heading-masthead-super-min: 40;
 
 $font-size-heading-masthead: 80;
 $font-size-heading-masthead-min: 40;
-
-$font-size-heading-super: 72;
-$font-size-heading-super-min: 32;
 
 $font-size-heading-1: 48;
 $font-size-heading-1-min: 32;
@@ -261,9 +262,6 @@ $line-height-default-min: (24 / $font-size-default-min);
 
 $line-height-body-small: (19 / $font-size-body-small);
 // $line-height-body-small-min: (17 / $font-size-body-small-min);
-
-$line-height-heading-super: (80 / $font-size-heading-super);
-// $line-height-heading-super-min: (43 / $font-size-heading-super-min);
 
 $line-height-heading-1: (58 / $font-size-heading-1);
 // $line-height-heading-1-min: (43 / $font-size-heading-1-min);

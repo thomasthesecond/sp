@@ -66,4 +66,15 @@
   h3 {
     page-break-after: avoid;
   }
+
+  // Hide navigational elements
+
+  .GlobalHeader,
+  .GlobalFooter,
+  .SubNavigation,
+  .UtilityLinks,
+  .Pagination,
+  .NextPage {
+    display: none !important;
+  }
 }
