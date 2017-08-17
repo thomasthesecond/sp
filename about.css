@@ -270,7 +270,19 @@
 }
 
 .TeamList .TeamMember {
-  margin-top: 48px;
+  margin-top: 24px;
+}
+
+@media (min-width: 645px) {
+  .TeamList .TeamMember {
+    margin-top: 3.72093vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .TeamList .TeamMember {
+    margin-top: 48px;
+  }
 }
 
 .TeamMember:not(.TeamMember--small) {
@@ -333,18 +345,14 @@
 
 .TeamMember-title {
   color: #b5955d;
-  font-size: 10px;
-  font-weight: 300;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.5;
   margin-bottom: 0;
   margin-top: 0;
 }
 
-@media (min-width: 480px) {
-  .TeamMember-title {
-    font-size: 14px;
-    line-height: 2;
-  }
+.TeamMember--small .TeamMember-title {
+  margin-top: 2px;
 }
 
 @media (min-width: 1015px) {
@@ -400,6 +408,10 @@
   margin-bottom: 0;
   margin-top: 0;
 }
+
+.TeamMember--small .TeamMember-link {
+  margin-top: 12px;
+}
 /**
  * Functions
  */
@@ -412,7 +424,7 @@
  */
 .SubNavigation {
   background-color: #fff;
-  color: #446975;
+  color: #646e7e;
   font-size: 12px;
   height: 64px;
   overflow: hidden;
@@ -483,17 +495,13 @@
   border-bottom-color: #fff;
 }
 
-.InvestorsPage .SubNavigation:not(.SubNavigation--scrollSpy) .SubNavigation-list {
-  border-bottom-color: rgba(191, 208, 216, 0.27);
-}
-
 .SubNavigation-item {
   display: inline-block;
   height: 100%;
   margin-left: 14px;
   margin-right: 14px;
   padding-bottom: 22px;
-  padding-top: 29px;
+  padding-top: 26px;
   position: relative;
 }
 
@@ -507,7 +515,7 @@
 .SubNavigation:not(.SubNavigation--scrollSpy) .SubNavigation-item.is-active::after {
   background-color: #b5955d;
   bottom: 0;
-  height: 7px;
+  height: 3px;
   position: absolute;
   content: "";
   left: 0;
@@ -530,7 +538,7 @@
 .SubNavigation-marker {
   background-color: #b5955d;
   bottom: 0;
-  height: 7px;
+  height: 3px;
   position: absolute;
   opacity: 0;
   -webkit-transition: opacity 200ms;
@@ -668,7 +676,6 @@
  */
 /**
  * Component: Next page
- * @type Organism
  */
 @media (min-width: 480px) {
   .NextPage {
@@ -689,39 +696,60 @@
 }
 
 .NextPage a:hover .NextPage-icon, .NextPage a:active .NextPage-icon, .NextPage a:focus .NextPage-icon {
-  -webkit-transform: translateX(1.2em);
-          transform: translateX(1.2em);
+  -webkit-transform: translateX(1.24242em);
+          transform: translateX(1.24242em);
 }
 
 .NextPage-label {
-  color: #b5955d;
   font-size: 10px;
+  color: #b5955d;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 30em) and (max-width: 80.625em) {
+  .NextPage-label {
+    font-size: calc(10px + (14 - 10) * (100vw - 480px) / (1290 - 480));
+  }
+}
+
+@media (min-width: 80.625em) {
   .NextPage-label {
     font-size: 14px;
   }
 }
 
 .NextPage-title {
+  font-size: 20px;
   color: currentColor;
-  margin-bottom: 0;
-  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.20833;
+  margin-top: 8px;
   position: relative;
+}
+
+@media (min-width: 30em) and (max-width: 80.625em) {
+  .NextPage-title {
+    font-size: calc(20px + (48 - 20) * (100vw - 480px) / (1290 - 480));
+  }
+}
+
+@media (min-width: 80.625em) {
+  .NextPage-title {
+    font-size: 48px;
+  }
 }
 
 .NextPage-icon {
   color: #bfd0d8;
-  height: 0.5em;
-  font-size: 2.5em;
+  font-size: 1.375em;
+  height: 0.33333em;
   position: absolute;
   right: 0;
-  top: 0.1125em;
-  -webkit-transform: translateX(1.4em);
-          transform: translateX(1.4em);
+  top: 0.33333em;
+  -webkit-transform: translateX(1.72727em);
+          transform: translateX(1.72727em);
   -webkit-transition: -webkit-transform 200ms;
   transition: -webkit-transform 200ms;
   transition: transform 200ms;

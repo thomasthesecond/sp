@@ -163,7 +163,7 @@
             Read next
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"NextPage-title heading-2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"NextPage-title"</span>&gt;</span>
             Partnerships
             <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon NextPage-icon"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
@@ -184,7 +184,7 @@
       </span><span class="hljs-template-variable">{{ nextPage.label }}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"NextPage-title heading-2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"NextPage-title"</span>&gt;</span>
       </span><span class="hljs-template-variable">{{ nextPage.title }}</span><span class="xml">
       </span><span class="hljs-template-variable">{{&gt; <a href="icon.html">@icon</a> id="icon-arrow" class="NextPage-icon" }}</span><span class="xml">
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -273,22 +273,12 @@
 
 <span class="hljs-comment">/**
  * Component: Next page
- * @type Organism
  */</span>
 
 <span class="hljs-selector-class">.NextPage</span> {
-  <span class="hljs-comment">// border-top: 1px solid $color-border-default;</span>
-  <span class="hljs-comment">// padding-bottom: #{(170 / $max-width) * 100vw};</span>
-  <span class="hljs-comment">// padding-top: #{(176 / $max-width) * 100vw};</span>
-
   @<span class="hljs-keyword">media</span>(min-width: 480px) {
     <span class="hljs-attribute">text-align</span>: center;
   }
-
-  <span class="hljs-comment">// @media(min-width: 1290px) {</span>
-  <span class="hljs-comment">//   padding-bottom: 170px;</span>
-  <span class="hljs-comment">//   padding-top: 176px;</span>
-  <span class="hljs-comment">// }</span>
 }
 
 <span class="hljs-selector-class">.NextPage</span> <span class="hljs-selector-tag">a</span> {
@@ -303,41 +293,46 @@
     <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-heading</span>, .<span class="hljs-number">7</span>);
 
     <span class="hljs-selector-class">.NextPage-icon</span> {
-      <span class="hljs-attribute">transform</span>: translateX(#{((<span class="hljs-number">80</span> + <span class="hljs-number">16</span>) / <span class="hljs-number">80</span>) * <span class="hljs-number">1em</span>});
+      <span class="hljs-attribute">transform</span>: translateX(#{((<span class="hljs-number">66</span> + <span class="hljs-number">16</span>) / <span class="hljs-number">66</span>) * <span class="hljs-number">1em</span>});
     }
   }
 }
 
 <span class="hljs-selector-class">.NextPage-label</span> {
+  @<span class="hljs-keyword">include</span> fluid-type(
+    <span class="hljs-variable">$min-font-size</span>: 10,
+    <span class="hljs-variable">$max-font-size</span>: 14,
+    <span class="hljs-variable">$min-width</span>: 480
+  );
+
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#b5955d</span>;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">10px</span>;
   <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">1px</span>;
   <span class="hljs-attribute">text-transform</span>: uppercase;
-
-  @<span class="hljs-keyword">media</span> (min-width: 600px) {
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">14px</span>;
-  }
 }
 
 <span class="hljs-selector-class">.NextPage-title</span> {
+  @<span class="hljs-keyword">include</span> fluid-type(
+    <span class="hljs-variable">$min-font-size</span>: <span class="hljs-variable">$font-size-heading-4</span>,
+    <span class="hljs-variable">$max-font-size</span>: <span class="hljs-variable">$font-size-heading-1</span>,
+    <span class="hljs-variable">$min-width</span>: 480
+  );
+
   <span class="hljs-attribute">color</span>: currentColor;
-  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-bold</span>;
+  <span class="hljs-attribute">letter-spacing</span>: -<span class="hljs-number">1px</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-heading-1</span>;
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">8px</span>;
   <span class="hljs-attribute">position</span>: relative;
 }
 
 <span class="hljs-selector-class">.NextPage-icon</span> {
-  <span class="hljs-comment">// @media (max-width: 599px) {</span>
-  <span class="hljs-comment">//   display: none;</span>
-  <span class="hljs-comment">// }</span>
-
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#bfd0d8</span>;
-  <span class="hljs-attribute">height</span>: #{(<span class="hljs-number">40</span> / <span class="hljs-number">80</span>) * <span class="hljs-number">1em</span>};
-  <span class="hljs-attribute">font-size</span>: #{(<span class="hljs-number">80</span> / <span class="hljs-variable">$font-size-heading-2</span>) * <span class="hljs-number">1em</span>};
+  <span class="hljs-attribute">font-size</span>: #{(<span class="hljs-number">66</span> / <span class="hljs-variable">$font-size-heading-1</span>) * <span class="hljs-number">1em</span>};
+  <span class="hljs-attribute">height</span>: #{(<span class="hljs-number">22</span> / <span class="hljs-number">66</span>) * <span class="hljs-number">1em</span>};
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">top</span>: #{(<span class="hljs-number">9</span> / <span class="hljs-number">80</span>) * <span class="hljs-number">1em</span>};
-  <span class="hljs-attribute">transform</span>: translateX(#{((<span class="hljs-number">80</span> + <span class="hljs-variable">$font-size-heading-2</span>) / <span class="hljs-number">80</span>) * <span class="hljs-number">1em</span>});
+  <span class="hljs-attribute">top</span>: #{(<span class="hljs-number">22</span> / <span class="hljs-number">66</span>) * <span class="hljs-number">1em</span>};
+  <span class="hljs-attribute">transform</span>: translateX(#{((<span class="hljs-number">66</span> + <span class="hljs-variable">$font-size-heading-1</span>) / <span class="hljs-number">66</span>) * <span class="hljs-number">1em</span>});
   <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">200ms</span>;
 }
 </pre>
@@ -356,7 +351,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.4 KB</span>
+                    <span class="Meta-value">1.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -411,7 +406,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(8)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(9)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="about.html">@<span>about</span></a>, 
@@ -427,6 +422,8 @@
                 <a href="investors--stock-info.html">@<span>investors--stock-info</span></a>, 
             
                 <a href="investors--highlights.html">@<span>investors--highlights</span></a>, 
+            
+                <a href="investors--full-page.html">@<span>investors--full-page</span></a>, 
             
                 <a href="partnerships.html">@<span>partnerships</span></a>
             
@@ -3172,6 +3169,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="investors--highlights.html" data-pjax>
                 <span>Company highlights</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="investors--full-page.html" data-pjax>
+                <span>Full width page layout</span>
                 
 
 <div class="Status Status--unlabelled">

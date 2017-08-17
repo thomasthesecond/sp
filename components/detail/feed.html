@@ -158,9 +158,11 @@
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Feed"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Latest news<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Feed-heading"</span>&gt;</span>
+        Latest news
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Feed-article"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"2017-08-08"</span>&gt;</span>
@@ -170,7 +172,7 @@
           <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Feed-article"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"2017-07-25"</span>&gt;</span>
@@ -180,7 +182,7 @@
           <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Feed-article"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"2017-06-16"</span>&gt;</span>
@@ -199,7 +201,9 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-f8e6d86026677c099da6b5ac93acb4a6-panel-view">
     <code class="Code Code--lang-handlebars">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Feed"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span></span><span class="hljs-template-variable">{{ feed.heading }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Feed-heading"</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{ feed.heading }}</span><span class="xml">
+  <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
   </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">unless</span></span> feed.items}}</span><span class="xml">
     </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> feed.noResults}}</span><span class="xml">
@@ -209,7 +213,7 @@
 
   </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> feed.items}}</span><span class="xml">
     </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> feed.items}}</span><span class="xml">
-      <span class="hljs-tag">&lt;<span class="hljs-name">article</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Feed-article"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
           <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ this.url }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ this.date.iso }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
@@ -300,36 +304,37 @@
 
 <span class="hljs-comment">/**
  * Component: Feed
- * @type Organism
  */</span>
 
 <span class="hljs-selector-class">.Feed</span> {
-  <span class="hljs-selector-tag">h2</span> {
-    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">24px</span>;
-  }
-
   <span class="hljs-selector-tag">time</span> {
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-default</span>;
   }
+}
 
-  <span class="hljs-selector-tag">article</span> + <span class="hljs-selector-tag">article</span> {
-    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, .<span class="hljs-number">27</span>);
-    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">24px</span>;
-    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">12px</span>;
+<span class="hljs-selector-class">.Feed-heading</span> {
+  <span class="hljs-comment">// margin-bottom: 24px;</span>
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
+}
 
-    @<span class="hljs-keyword">media</span> (min-width: 645px) {
-      <span class="hljs-attribute">padding-top</span>: #{(<span class="hljs-number">24</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
-    }
+<span class="hljs-selector-class">.Feed-article</span> + <span class="hljs-selector-class">.Feed-article</span> {
+  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, .<span class="hljs-number">27</span>);
+  <span class="hljs-comment">// margin-top: 24px;</span>
+  <span class="hljs-comment">// padding-top: 12px;</span>
 
-    @<span class="hljs-keyword">media</span> (min-width: 775px) {
-      <span class="hljs-attribute">margin-top</span>: #{(<span class="hljs-number">40</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
-    }
-
-    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-container</span>) {
-      <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">40px</span>;
-      <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">24px</span>;
-    }
-  }
+  <span class="hljs-comment">// @media (min-width: 645px) {</span>
+  <span class="hljs-comment">//   padding-top: #{(24 / $max-width) * 100vw};</span>
+  <span class="hljs-comment">// }</span>
+  <span class="hljs-comment">//</span>
+  <span class="hljs-comment">// @media (min-width: 775px) {</span>
+  <span class="hljs-comment">//   margin-top: #{(40 / $max-width) * 100vw};</span>
+  <span class="hljs-comment">// }</span>
+  <span class="hljs-comment">//</span>
+  <span class="hljs-comment">// @media (min-width: $mq-min-container) {</span>
+  <span class="hljs-comment">//   margin-top: 40px;</span>
+  <span class="hljs-comment">//   padding-top: 24px;</span>
+  <span class="hljs-comment">// }</span>
 }
 </pre>
                             </code>
@@ -347,7 +352,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">673 Bytes</span>
+                    <span class="Meta-value">726 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -3170,6 +3175,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="investors--highlights.html" data-pjax>
                 <span>Company highlights</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="investors--full-page.html" data-pjax>
+                <span>Full width page layout</span>
                 
 
 <div class="Status Status--unlabelled">

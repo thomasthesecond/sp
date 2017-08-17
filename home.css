@@ -9,12 +9,24 @@
  * @type Atom
  */
 .MoreLink {
+  font-size: 12px;
   color: #12769f;
   display: inline-block;
-  font-size: 14px;
   line-height: 1.35714;
   position: relative;
   text-decoration: none;
+}
+
+@media (min-width: 37.5em) and (max-width: 80.625em) {
+  .MoreLink {
+    font-size: calc(12px + (14 - 12) * (100vw - 600px) / (1290 - 600));
+  }
+}
+
+@media (min-width: 80.625em) {
+  .MoreLink {
+    font-size: 14px;
+  }
 }
 
 .MoreLink:hover .icon, .MoreLink:active .icon, .MoreLink:focus .icon {
@@ -63,59 +75,6 @@
   padding: 0;
   text-transform: none;
   width: 100%;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Masthead
- * @type Atom
- */
-.Masthead {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 55vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-height: 466px;
-  min-height: 178px;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-.Masthead--video {
-  max-height: 732px;
-  min-height: 420px;
-}
-
-.Masthead .container {
-  position: relative;
-  z-index: 1;
-}
-
-.Masthead-title {
-  color: #fff;
-  margin: 0;
-  text-shadow: 0 0 54px #6facc1;
-}
-
-.Masthead .MoreLink {
-  margin-top: 9.30233vw;
-}
-
-@media (min-width: 1290px) {
-  .Masthead .MoreLink {
-    margin-top: 120px;
-  }
 }
 /**
  * Functions
@@ -316,6 +275,59 @@
     display: -ms-flexbox;
     display: flex;
     height: 100%;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Masthead
+ * @type Atom
+ */
+.Masthead {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 55vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 466px;
+  min-height: 178px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.Masthead--video {
+  max-height: 732px;
+  min-height: 420px;
+}
+
+.Masthead .container {
+  position: relative;
+  z-index: 1;
+}
+
+.Masthead-title {
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 0 54px #6facc1;
+}
+
+.Masthead .MoreLink {
+  margin-top: 9.30233vw;
+}
+
+@media (min-width: 1290px) {
+  .Masthead .MoreLink {
+    margin-top: 120px;
   }
 }
 /**

@@ -160,6 +160,12 @@
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"NewsArticle"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Surgery Partners, Inc. Announces Fourth Quarter and Full Year 2016 Results<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"NewsArticle-date"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"2017-07-25T16:02"</span>&gt;</span>
+      July 25, 2017 - 4:02 p.m.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"NewsArticle-article"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>NASHVILLE, Tenn., July 25, 2017 (GLOBE NEWSWIRE) -- Surgery Partners, Inc. (NASDAQ:SGRY) (“Surgery Partners”), a leading healthcare services company, today announced that the Company will release its second quarter 2017 results after the market
             close on Tuesday, August 8, 2017, to be followed by a conference call on Wednesday, August 9 at 8:30 a.m. (Eastern Time).<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -206,6 +212,12 @@
     <code class="Code Code--lang-handlebars">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"NewsArticle"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span></span><span class="hljs-template-variable">{{ newsArticle.title }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"NewsArticle-date"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">time</span> <span class="hljs-attr">datetime</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ newsArticle.date.iso }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+      </span><span class="hljs-template-variable">{{ newsArticle.date.formatted }}</span><span class="xml">
+    <span class="hljs-tag">&lt;/<span class="hljs-name">time</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"NewsArticle-article"</span>&gt;</span>
     </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">each</span></span> newsArticle.article}}</span><span class="xml">
@@ -308,7 +320,12 @@
 
 <span class="hljs-selector-class">.NewsArticle--preview</span> <span class="hljs-selector-tag">h4</span> {
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">margin-top</span>: #{(<span class="hljs-number">2</span> / <span class="hljs-variable">$font-size-heading-4</span>) * <span class="hljs-number">1em</span>};
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">3px</span>;
+}
+
+<span class="hljs-selector-class">.NewsArticle--preview</span> <span class="hljs-selector-tag">h4</span> + <span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">24px</span>;
 }
 
 <span class="hljs-selector-class">.NewsArticle-article</span> {
@@ -328,6 +345,14 @@
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-news-date</span>;
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
+
+  <span class="hljs-selector-class">.NewsArticle</span>:not(<span class="hljs-selector-class">.NewsArticle--preview</span>) &amp; {
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, .<span class="hljs-number">47</span>);
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">8px</span>;
+    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">48px</span>;
+    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">24px</span>;
+  }
 }
 </pre>
                             </code>
@@ -345,7 +370,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">729 Bytes</span>
+                    <span class="Meta-value">984 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -3166,6 +3191,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="investors--highlights.html" data-pjax>
                 <span>Company highlights</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="investors--full-page.html" data-pjax>
+                <span>Full width page layout</span>
                 
 
 <div class="Status Status--unlabelled">

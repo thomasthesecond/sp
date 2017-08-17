@@ -13,7 +13,19 @@
 }
 
 .TeamList .TeamMember {
-  margin-top: 48px;
+  margin-top: 24px;
+}
+
+@media (min-width: 645px) {
+  .TeamList .TeamMember {
+    margin-top: 3.72093vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .TeamList .TeamMember {
+    margin-top: 48px;
+  }
 }
 
 .TeamMember:not(.TeamMember--small) {
@@ -76,18 +88,14 @@
 
 .TeamMember-title {
   color: #b5955d;
-  font-size: 10px;
-  font-weight: 300;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.5;
   margin-bottom: 0;
   margin-top: 0;
 }
 
-@media (min-width: 480px) {
-  .TeamMember-title {
-    font-size: 14px;
-    line-height: 2;
-  }
+.TeamMember--small .TeamMember-title {
+  margin-top: 2px;
 }
 
 @media (min-width: 1015px) {
@@ -143,6 +151,10 @@
   margin-bottom: 0;
   margin-top: 0;
 }
+
+.TeamMember--small .TeamMember-link {
+  margin-top: 12px;
+}
 /**
  * Functions
  */
@@ -155,7 +167,7 @@
  */
 .SubNavigation {
   background-color: #fff;
-  color: #446975;
+  color: #646e7e;
   font-size: 12px;
   height: 64px;
   overflow: hidden;
@@ -226,17 +238,13 @@
   border-bottom-color: #fff;
 }
 
-.InvestorsPage .SubNavigation:not(.SubNavigation--scrollSpy) .SubNavigation-list {
-  border-bottom-color: rgba(191, 208, 216, 0.27);
-}
-
 .SubNavigation-item {
   display: inline-block;
   height: 100%;
   margin-left: 14px;
   margin-right: 14px;
   padding-bottom: 22px;
-  padding-top: 29px;
+  padding-top: 26px;
   position: relative;
 }
 
@@ -250,7 +258,7 @@
 .SubNavigation:not(.SubNavigation--scrollSpy) .SubNavigation-item.is-active::after {
   background-color: #b5955d;
   bottom: 0;
-  height: 7px;
+  height: 3px;
   position: absolute;
   content: "";
   left: 0;
@@ -273,7 +281,7 @@
 .SubNavigation-marker {
   background-color: #b5955d;
   bottom: 0;
-  height: 7px;
+  height: 3px;
   position: absolute;
   opacity: 0;
   -webkit-transition: opacity 200ms;
@@ -288,7 +296,6 @@
  */
 /**
  * Component: Next page
- * @type Organism
  */
 @media (min-width: 480px) {
   .NextPage {
@@ -309,39 +316,60 @@
 }
 
 .NextPage a:hover .NextPage-icon, .NextPage a:active .NextPage-icon, .NextPage a:focus .NextPage-icon {
-  -webkit-transform: translateX(1.2em);
-          transform: translateX(1.2em);
+  -webkit-transform: translateX(1.24242em);
+          transform: translateX(1.24242em);
 }
 
 .NextPage-label {
-  color: #b5955d;
   font-size: 10px;
+  color: #b5955d;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 30em) and (max-width: 80.625em) {
+  .NextPage-label {
+    font-size: calc(10px + (14 - 10) * (100vw - 480px) / (1290 - 480));
+  }
+}
+
+@media (min-width: 80.625em) {
   .NextPage-label {
     font-size: 14px;
   }
 }
 
 .NextPage-title {
+  font-size: 20px;
   color: currentColor;
-  margin-bottom: 0;
-  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.20833;
+  margin-top: 8px;
   position: relative;
+}
+
+@media (min-width: 30em) and (max-width: 80.625em) {
+  .NextPage-title {
+    font-size: calc(20px + (48 - 20) * (100vw - 480px) / (1290 - 480));
+  }
+}
+
+@media (min-width: 80.625em) {
+  .NextPage-title {
+    font-size: 48px;
+  }
 }
 
 .NextPage-icon {
   color: #bfd0d8;
-  height: 0.5em;
-  font-size: 2.5em;
+  font-size: 1.375em;
+  height: 0.33333em;
   position: absolute;
   right: 0;
-  top: 0.1125em;
-  -webkit-transform: translateX(1.4em);
-          transform: translateX(1.4em);
+  top: 0.33333em;
+  -webkit-transform: translateX(1.72727em);
+          transform: translateX(1.72727em);
   -webkit-transition: -webkit-transform 200ms;
   transition: -webkit-transform 200ms;
   transition: transform 200ms;
@@ -373,7 +401,7 @@
     border-top: 1px solid rgba(191, 208, 216, 0.37);
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    line-height: 4.66667;
+    line-height: 2.33333;
   }
 }
 
@@ -392,8 +420,27 @@
  * Component: Team list
  */
 .TeamList-heading {
-  margin-bottom: 40px;
+  margin-bottom: 0;
   margin-top: 0;
+}
+
+@media (min-width: 480px) {
+  .TeamList-members {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 480px) {
+  .TeamList-members .TeamMember {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    padding-right: 8px;
+  }
 }
 /**
  * Functions
@@ -411,23 +458,15 @@
   padding: 48px 24px;
 }
 
-@media (min-width: 387px) {
-  .StockPriceCard {
-    padding-left: 6.20155vw;
-    padding-right: 6.20155vw;
-  }
-}
-
-@media (min-width: 500px) {
-  .StockPriceCard {
-    padding-bottom: 9.6124vw;
-    padding-top: 9.6124vw;
-  }
-}
-
 @media (max-width: 499px) {
   .StockPriceCard {
     font-size: 12px;
+  }
+}
+
+@media (min-width: 940px) {
+  .StockPriceCard {
+    padding: 6.20155vw 3.10078vw;
   }
 }
 
@@ -438,6 +477,11 @@
 }
 
 .StockPriceCard-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   line-height: 1.375;
   margin-bottom: 24px;
 }
@@ -447,41 +491,56 @@
   font-weight: normal;
 }
 
+.StockPriceCard-header b::after {
+  content: "\A0";
+}
+
 .StockPriceCard-priceInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .StockPriceCard-price {
-  color: #25395d;
-  font-size: 32px;
+  font-weight: 400;
   line-height: 1;
+  margin-right: 32px;
 }
 
 @media (min-width: 500px) {
   .StockPriceCard-price {
-    font-size: 48px;
+    margin-right: 10px;
   }
 }
 
 .StockPriceCard-ticker {
+  font-size: 14px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-size: 14px;
   font-weight: 600;
   line-height: 1;
-  margin-left: 32px;
+}
+
+@media (min-width: 30em) and (max-width: 80.625em) {
+  .StockPriceCard-ticker {
+    font-size: calc(14px + (18 - 14) * (100vw - 480px) / (1290 - 480));
+  }
+}
+
+@media (min-width: 80.625em) {
+  .StockPriceCard-ticker {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 500px) {
   .StockPriceCard-ticker {
-    font-size: 18px;
-    margin-left: 10px;
     padding-top: 14px;
   }
 }
@@ -618,14 +677,13 @@
  */
 .ResourcesList-heading {
   border-bottom: 1px solid rgba(191, 208, 216, 0.6);
-  font-weight: 300;
   margin-bottom: 0.8em;
   margin-top: 0;
   padding-bottom: 1.2em;
 }
 
 .ResourcesList-list {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 2.8125;
   list-style: none;
   margin-bottom: 0;
@@ -635,13 +693,13 @@
 
 @media (min-width: 37.5em) and (max-width: 80.625em) {
   .ResourcesList-list {
-    font-size: calc(14px + (16 - 14) * (100vw - 600px) / (1290 - 600));
+    font-size: calc(12px + (14 - 12) * (100vw - 600px) / (1290 - 600));
   }
 }
 
 @media (min-width: 80.625em) {
   .ResourcesList-list {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 /**
@@ -785,7 +843,12 @@
 
 .NewsArticle--preview h4 {
   margin-bottom: 0;
-  margin-top: 0.1em;
+  margin-top: 3px;
+}
+
+.NewsArticle--preview h4 + p {
+  margin-bottom: 24px;
+  margin-top: 24px;
 }
 
 @media (min-width: 800px) {
@@ -812,6 +875,14 @@
   .NewsArticle-date {
     font-size: 14px;
   }
+}
+
+.NewsArticle:not(.NewsArticle--preview) .NewsArticle-date {
+  border-top: 1px solid rgba(191, 208, 216, 0.47);
+  display: inline-block;
+  margin-bottom: 8px;
+  padding-right: 48px;
+  padding-top: 24px;
 }
 /**
  * Functions
@@ -932,12 +1003,6 @@
   }
 }
 
-@media (min-width: 922px) {
-  .Filter-fieldset label {
-    padding-left: 24px;
-  }
-}
-
 .Filter-fieldset input,
 .Filter-fieldset select {
   display: block;
@@ -1001,39 +1066,18 @@
  */
 /**
  * Component: Feed
- * @type Organism
  */
-.Feed h2 {
-  margin-bottom: 24px;
-}
-
 .Feed time {
-  color: #8f9aa8;
+  color: #646e7e;
 }
 
-.Feed article + article {
+.Feed-heading {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.Feed-article + .Feed-article {
   border-top: 1px solid rgba(191, 208, 216, 0.27);
-  margin-top: 24px;
-  padding-top: 12px;
-}
-
-@media (min-width: 645px) {
-  .Feed article + article {
-    padding-top: 1.86047vw;
-  }
-}
-
-@media (min-width: 775px) {
-  .Feed article + article {
-    margin-top: 3.10078vw;
-  }
-}
-
-@media (min-width: 83.625em) {
-  .Feed article + article {
-    margin-top: 40px;
-    padding-top: 24px;
-  }
 }
 /**
  * Functions
@@ -1069,25 +1113,107 @@
 }
 
 .InvestorsPage-container {
-  margin-top: 70px;
+  margin-top: 64px;
 }
 
-@media (min-width: 628px) {
+@media (min-width: 645px) {
   .InvestorsPage-container {
-    margin-top: 11.16279vw;
+    margin-top: 9.92248vw;
   }
 }
 
 @media (min-width: 83.625em) {
   .InvestorsPage-container {
-    margin-top: 144px;
+    margin-top: 128px;
   }
 }
 
 @media (min-width: 83.625em) {
-  .InvestorsPage-container > .container {
+  .InvestorsPage-container > .container:not(.InvestorsPage-overview) {
     padding-left: 106px;
     padding-right: 106px;
+  }
+}
+
+@media (min-width: 720px) {
+  .InvestorsPage-overview {
+    overflow: hidden;
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 720px) {
+    .InvestorsPage-overview {
+      display: grid;
+      grid-template-columns: 48.83721% auto 40.46512%;
+      grid-template-rows: auto 1fr;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .InvestorsPage-overview .InvestorsPage-overviewIntro {
+    float: left;
+    width: 48.83721%;
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 720px) {
+    .InvestorsPage-overview .InvestorsPage-overviewIntro {
+      float: none;
+      grid-column: 1 / 2;
+      grid-row: 1 / auto;
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 719px) {
+  .InvestorsPage-overview .StockPriceCard {
+    margin-left: -24px;
+    margin-right: -24px;
+    margin-top: 64px;
+  }
+}
+
+@media (min-width: 720px) {
+  .InvestorsPage-overview .StockPriceCard {
+    float: right;
+    width: 40.46512%;
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 720px) {
+    .InvestorsPage-overview .StockPriceCard {
+      -ms-flex-item-align: start;
+          align-self: start;
+      float: none;
+      grid-column: 3 / 4;
+      grid-row: 1 / -1;
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .InvestorsPage-overview .InvestorsPage-overviewFeed {
+    clear: left;
+    float: left;
+    width: 48.83721%;
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 720px) {
+    .InvestorsPage-overview .InvestorsPage-overviewFeed {
+      clear: none;
+      float: none;
+      grid-column: 1 / 2;
+      grid-row: 2 / auto;
+      width: auto;
+    }
   }
 }
 
@@ -1158,11 +1284,23 @@
   margin-top: 56px;
 }
 
+@media (min-width: 903px) {
+  .InvestorsPage-highlights .InvestorsPage-highlightsTeam {
+    margin-top: 6.20155vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .InvestorsPage-highlights .InvestorsPage-highlightsTeam {
+    margin-top: 80px;
+  }
+}
+
 @media (min-width: 860px) {
   .InvestorsPage-highlights .InvestorsPage-highlightsTeam {
     border-top: 1px solid rgba(191, 208, 216, 0.47);
     float: left;
-    padding-top: 56px;
+    padding-top: 80px;
     width: 58.44156%;
   }
 }
@@ -1175,6 +1313,22 @@
       grid-row: 2 / auto;
       width: auto;
     }
+  }
+}
+
+.InvestorsPage-highlights .TeamList + .TeamList {
+  margin-top: 56px;
+}
+
+@media (min-width: 903px) {
+  .InvestorsPage-highlights .TeamList + .TeamList {
+    margin-top: 6.20155vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .InvestorsPage-highlights .TeamList + .TeamList {
+    margin-top: 80px;
   }
 }
 
@@ -1209,15 +1363,21 @@
   }
 }
 
-@media (min-width: 993px) {
+@media (min-width: 600px) {
   .InvestorsPage-filings table {
-    margin-top: 8.06202vw;
+    margin-bottom: 80px;
   }
 }
 
-@media (min-width: 83.625em) {
-  .InvestorsPage-filings table {
-    margin-top: 104px;
+@media (max-width: 599px) {
+  .InvestorsPage-filings table + hr {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .InvestorsPage-filings .Pagination {
+    margin-top: 32px;
   }
 }
 
@@ -1334,29 +1494,41 @@
   margin-top: -38px;
 }
 
-.Feed + .Feed {
-  margin-top: 80px;
+.Feed {
+  margin-top: 64px;
 }
 
-@media (min-width: 993px) {
-  .Feed + .Feed {
+@media (min-width: 794px) {
+  .Feed {
     margin-top: 8.06202vw;
   }
 }
 
 @media (min-width: 83.625em) {
-  .Feed + .Feed {
+  .Feed {
     margin-top: 104px;
   }
 }
 
 .UtilityLinks {
   margin-bottom: 40px;
-  margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 80px;
   max-width: 600px;
   padding-top: 40px;
+}
+
+@media (min-width: 404px) {
+  .UtilityLinks {
+    margin-top: 19.84496vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .UtilityLinks {
+    margin-top: 256px;
+  }
 }
 
 .NextPage {

@@ -8,9 +8,14 @@
  */
 
 .MoreLink {
+  @include fluid-type(
+    $min-font-size: 12,
+    $max-font-size: 14,
+    $min-width: 600
+  );
+
   color: #12769f;
   display: inline-block;
-  font-size: 14px;
   line-height: (19 / 14);
   position: relative;
   text-decoration: none;

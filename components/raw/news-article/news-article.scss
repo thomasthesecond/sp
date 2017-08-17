@@ -12,7 +12,12 @@
 
 .NewsArticle--preview h4 {
   margin-bottom: 0;
-  margin-top: #{(2 / $font-size-heading-4) * 1em};
+  margin-top: 3px;
+}
+
+.NewsArticle--preview h4 + p {
+  margin-bottom: 24px;
+  margin-top: 24px;
 }
 
 .NewsArticle-article {
@@ -32,4 +37,12 @@
   color: $color-text-news-date;
   margin-bottom: 0;
   margin-top: 0;
+
+  .NewsArticle:not(.NewsArticle--preview) & {
+    border-top: 1px solid rgba($color-border-default, .47);
+    display: inline-block;
+    margin-bottom: 8px;
+    padding-right: 48px;
+    padding-top: 24px;
+  }
 }

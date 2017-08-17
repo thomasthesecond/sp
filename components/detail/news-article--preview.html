@@ -170,8 +170,13 @@
         of surgical services, today announced results for the fourth quarter and full year ended December 31, 2016. Highlights for the Fourth Quarter of 2016: Revenues increased 16.2% to $306.0 million over fourth quarter 2015 Same-faci…<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
-      Read more
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"MoreLink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span>
+    
+        Learn more
+    
+      <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span></pre>
@@ -194,9 +199,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span></span><span class="hljs-template-variable">{{ newsArticle.excerpt }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ newsArticle.url }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-      Read more
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    </span><span class="hljs-template-variable">{{&gt; <a href="more-link.html">@more-link</a> }}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">article</span>&gt;</span></span></pre>
     </code>
@@ -215,7 +218,9 @@
       <span class="hljs-attr">"iso"</span>: <span class="hljs-string">"2017-03-09T16:02"</span>
     },
     <span class="hljs-attr">"excerpt"</span>: <span class="hljs-string">"Fourth quarter revenues increase 16% over prior year period driven by strong same facility revenue growth NASHVILLE, Tenn., March 09, 2017 (GLOBE NEWSWIRE) -- Surgery Partners, Inc. (NASDAQ:SGRY) (“Surgery Partners” or the “Company”), a leading provider of surgical services, today announced results for the fourth quarter and full year ended December 31, 2016. Highlights for the Fourth Quarter of 2016: Revenues increased 16.2% to $306.0 million over fourth quarter 2015 Same-faci…"</span>,
-    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"/"</span>
+    <span class="hljs-attr">"link"</span>: {
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"/"</span>
+    }
   }
 }</pre>
             
@@ -294,7 +299,12 @@
 
 <span class="hljs-selector-class">.NewsArticle--preview</span> <span class="hljs-selector-tag">h4</span> {
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">margin-top</span>: #{(<span class="hljs-number">2</span> / <span class="hljs-variable">$font-size-heading-4</span>) * <span class="hljs-number">1em</span>};
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">3px</span>;
+}
+
+<span class="hljs-selector-class">.NewsArticle--preview</span> <span class="hljs-selector-tag">h4</span> + <span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">24px</span>;
 }
 
 <span class="hljs-selector-class">.NewsArticle-article</span> {
@@ -314,6 +324,14 @@
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-news-date</span>;
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
+
+  <span class="hljs-selector-class">.NewsArticle</span>:not(<span class="hljs-selector-class">.NewsArticle--preview</span>) &amp; {
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, .<span class="hljs-number">47</span>);
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">8px</span>;
+    <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">48px</span>;
+    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">24px</span>;
+  }
 }
 </pre>
                             </code>
@@ -331,7 +349,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">729 Bytes</span>
+                    <span class="Meta-value">984 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -389,6 +407,15 @@
             <strong class="Meta-key">Filesystem Path:</strong>
             <span class="Meta-value">src/components/03-components/news-article/news-article--preview.hbs</span>
         </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="more-link.html">@<span>more-link</span></a>
+            
+            </span>
+        </li class="Meta-item">
         
         
         <li class="Meta-item">
@@ -3139,6 +3166,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="investors--highlights.html" data-pjax>
                 <span>Company highlights</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="investors--full-page.html" data-pjax>
+                <span>Full width page layout</span>
                 
 
 <div class="Status Status--unlabelled">
