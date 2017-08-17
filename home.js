@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 106);
+/******/ 	return __webpack_require__(__webpack_require__.s = 112);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -79,13 +79,13 @@
 
 /***/ }),
 
-/***/ 106:
+/***/ 112:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(107);
+__webpack_require__(113);
 
 __webpack_require__(16);
 
@@ -113,17 +113,17 @@ console.info("Home loaded");
 
 /***/ }),
 
-/***/ 107:
+/***/ 113:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(108);
+__webpack_require__(114);
 
 /***/ }),
 
-/***/ 108:
+/***/ 114:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

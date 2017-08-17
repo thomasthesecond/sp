@@ -86,6 +86,11 @@ td {
     $min-width: 600
   );
 
+  > b {
+    color: #8993a3;
+    font-weight: $font-weight-regular;
+  }
+
   // table:not(.table-striped) tr:hover &,
   // table:not(.table-responsive) tr:hover & {
   tr:hover & {

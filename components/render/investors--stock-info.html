@@ -98,8 +98,127 @@
   </nav>
 
   <div class="InvestorsPage-container">
-    <div class="InvestorsPage-filings container">
+    <div class="InvestorsPage-stock container">
       <h1>Stock information</h1>
+
+      <hr>
+
+      <div class="InvestorsPage-stockChart">
+        <div class="StockChartFilter">
+          <div class="StockPrice">
+            <div class="StockPrice-price heading-1">
+              $22.85
+            </div>
+          
+              <div class="StockPrice-ticker text-positive">
+                <svg class="icon">
+                  <use xlink:href="#icon-stock-price-up"></use>
+                </svg>
+                0.55 (3.03%)
+              </div>
+          
+          
+          </div>
+        
+          <div class="StockChartFilter-controls">
+            <select
+              
+              id="filter1"
+              name="filter1"
+              >
+                <option value="" selected="selected">
+                  Select
+                </option>
+                <option value="1">
+                  Option 1
+                </option>
+                <option value="2">
+                  Option 2
+                </option>
+                <option value="3">
+                  Option 3
+                </option>
+            </select>
+            <select
+              
+              id="filter2"
+              name="filter2"
+              >
+                <option value="" selected="selected">
+                  Select
+                </option>
+                <option value="1">
+                  Option 1
+                </option>
+                <option value="2">
+                  Option 2
+                </option>
+                <option value="3">
+                  Option 3
+                </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="StockChart">
+  <img src="../../example-chart@2x.png" alt="Stock chart">
+</div>
+
+      </div>
+
+      <hr>
+
+      <div class="InvestorsPage-stockTable">
+        <h4>SRGRY (Common stock)</h4>
+
+        <table>
+          <tbody>
+            <tr>
+              <td><b>Price</b></td>
+              <td>17.60</td>
+              <td><b>Change</b></td>
+              <td>
+                <span class="text-negative">
+                  0.55
+                  <svg class="icon text-tiny">
+                    <use xlink:href="#icon-stock-price-down"></use>
+                  </svg>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><b>Volume</b></td>
+              <td>218,352</td>
+              <td><b>% Change</b></td>
+              <td><span class="text-negative">3.03%</span></td>
+            </tr>
+            <tr>
+              <td><b>Intraday high</b></td>
+              <td>18.20</td>
+              <td><b>52 week high</b></td>
+              <td>22.85</td>
+            </tr>
+            <tr>
+              <td><b>Intraday low</b></td>
+              <td>17.45</td>
+              <td><b>52 week low</b></td>
+              <td>12.95</td>
+            </tr>
+            <tr>
+              <td><b>Today’s open</b></td>
+              <td>18.15</td>
+              <td><b>Currency</b></td>
+              <td>US Dollar</td>
+            </tr>
+            <tr>
+              <td><b>Previous close</b></td>
+              <td>17.85</td>
+              <td><b>Exchange</b></td>
+              <td>NASDAQ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 

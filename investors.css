@@ -495,87 +495,6 @@
   content: "\A0";
 }
 
-.StockPriceCard-priceInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.StockPriceCard-price {
-  font-weight: 400;
-  line-height: 1;
-  margin-right: 32px;
-}
-
-@media (min-width: 500px) {
-  .StockPriceCard-price {
-    margin-right: 10px;
-  }
-}
-
-.StockPriceCard-ticker {
-  font-size: 14px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  line-height: 1;
-}
-
-@media (min-width: 30em) and (max-width: 80.625em) {
-  .StockPriceCard-ticker {
-    font-size: calc(14px + (18 - 14) * (100vw - 480px) / (1290 - 480));
-  }
-}
-
-@media (min-width: 80.625em) {
-  .StockPriceCard-ticker {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 500px) {
-  .StockPriceCard-ticker {
-    padding-top: 14px;
-  }
-}
-
-.StockPriceCard-ticker svg {
-  fill: currentColor;
-  height: 6px;
-  margin-right: 8px;
-  width: 12px;
-}
-
-.StockPriceCard-ticker--up {
-  color: #6fc179;
-}
-
-.StockPriceCard-ticker--down {
-  color: #bf6f6f;
-}
-
-.StockPriceCard-highLow {
-  color: #25395d;
-  line-height: 1;
-  margin-top: 18px;
-}
-
-@media (min-width: 500px) {
-  .StockPriceCard-highLow {
-    margin-top: 12px;
-  }
-}
-
-.StockPriceCard-highLow span + span {
-  margin-left: 32px;
-}
-
 .StockPriceCard-footer {
   border-top: 1px solid rgba(191, 208, 216, 0.27);
   color: #25395d;
@@ -601,6 +520,160 @@
     margin-top: 128px;
     padding-top: 32px;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Stock price
+ */
+.StockPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.StockPrice-price {
+  font-weight: 400;
+  line-height: 1;
+  margin-right: 32px;
+}
+
+@media (min-width: 500px) {
+  .StockPrice-price {
+    margin-right: 10px;
+  }
+}
+
+.StockPrice-ticker {
+  font-size: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  line-height: 1;
+}
+
+@media (min-width: 30em) and (max-width: 80.625em) {
+  .StockPrice-ticker {
+    font-size: calc(14px + (18 - 14) * (100vw - 480px) / (1290 - 480));
+  }
+}
+
+@media (min-width: 80.625em) {
+  .StockPrice-ticker {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 500px) {
+  .StockPrice-ticker {
+    padding-top: 14px;
+  }
+}
+
+.StockPrice-ticker .icon {
+  fill: currentColor;
+  height: 6px;
+  margin-right: 8px;
+  width: 12px;
+}
+
+.StockPrice-range {
+  color: #25395d;
+  line-height: 1;
+  margin-top: 18px;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .StockPrice-range {
+    margin-top: 12px;
+  }
+}
+
+.StockPrice-range span + span {
+  margin-left: 32px;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Stock chart filter
+ */
+.StockChartFilter {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.StockChartFilter-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 719px) {
+  .StockChartFilter-controls {
+    margin-top: 40px;
+    width: 100%;
+  }
+}
+
+.StockChartFilter-controls select {
+  height: 44px;
+  padding-bottom: 0;
+  padding-top: 0;
+  width: calc(50% - 4px);
+}
+
+@media (min-width: 436px) {
+  .StockChartFilter-controls select {
+    width: 190px;
+  }
+}
+
+.StockChartFilter-controls select + select {
+  margin-left: 8px;
+}
+
+@media (min-width: 720px) {
+  .StockChartFilter-controls select + select {
+    margin-left: 24px;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Stock chart
+ */
+.StockChart img {
+  display: block;
+  max-width: 100%;
 }
 /**
  * Functions
@@ -1215,6 +1288,23 @@
       width: auto;
     }
   }
+}
+
+.InvestorsPage-stock h1 {
+  margin-bottom: 56px;
+}
+
+.InvestorsPage-stock .InvestorsPage-stockChart {
+  margin-bottom: 128px;
+  margin-top: 32px;
+}
+
+.InvestorsPage-stock .StockChartFilter {
+  margin-bottom: 56px;
+}
+
+.InvestorsPage-stock .InvestorsPage-stockTable {
+  margin-top: 88px;
 }
 
 .InvestorsPage-highlights h1 {

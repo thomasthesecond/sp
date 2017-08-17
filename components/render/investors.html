@@ -119,32 +119,39 @@
       <div class="StockPriceCard">
   <header class="StockPriceCard-header">
     <b>NASDAQ: SRGRY –</b>
-    <time datetime="2017-08-07T16:00">August 7, 4:00PM EDT</time>
+    <time datetime="2017-08-07T16:00">
+      August 7, 4:00PM ET
+    </time>
   </header>
 
-  <div class="StockPriceCard-priceInfo">
-    <span class="StockPriceCard-price heading-1">
+  <div class="StockPrice">
+    <div class="StockPrice-price heading-1">
       $22.85
-    </span>
-
-    <span class="StockPriceCard-ticker StockPriceCard-ticker--up">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32">
-        <title>Stock is up</title>
-        <path d="M32 0l32 32h-64z"></path>
-      </svg>
-      0.55 (3.03%)
-    </span>
+    </div>
+  
+      <div class="StockPrice-ticker text-positive">
+        <svg class="icon">
+          <use xlink:href="#icon-stock-price-up"></use>
+        </svg>
+        0.55 (3.03%)
+      </div>
+  
+  
+      <div class="StockPrice-range">
+        <span>High $22.85</span>
+        <span>Low $22.30</span>
+      </div>
   </div>
 
-  <div class="StockPriceCard-highLow">
-    <span>High 22.85</span>
-    <span>Low $22.30</span>
-  </div>
+    <footer class="StockPriceCard-footer">
+      <time datetime="2017-07-02T16:00:00">
+        July 2, 2017 4:00pm ET
+      </time><br>
 
-  <footer class="StockPriceCard-footer">
-    <time datetime="2017-07-02T16:00:00">July 2, 2017 4:00pm ET</time><br>
-    <a href="#">Read more</a>
-  </footer>
+      <a href="/">
+        Read more
+      </a>
+    </footer>
 </div>
 
 

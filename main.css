@@ -519,6 +519,18 @@ template {
 .float-right {
   float: right;
 }
+
+.text-tiny {
+  font-size: 10px;
+}
+
+.text-positive {
+  color: #6fc179;
+}
+
+.text-negative {
+  color: #d90a0a;
+}
 @media print {
   *,
   *::before,
@@ -575,6 +587,14 @@ template {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+  .GlobalHeader,
+  .GlobalFooter,
+  .SubNavigation,
+  .UtilityLinks,
+  .Pagination,
+  .NextPage {
+    display: none !important;
   }
 }
 @charset "UTF-8";
@@ -769,27 +789,6 @@ main {
 @media (min-width: 80.625em) {
   .heading-masthead {
     font-size: 80px;
-  }
-}
-
-.heading-super {
-  font-size: 32px;
-  color: #25395d;
-  font-weight: 700;
-  line-height: 1.11111;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-@media (min-width: 37.5em) and (max-width: 80.625em) {
-  .heading-super {
-    font-size: calc(32px + (72 - 32) * (100vw - 600px) / (1290 - 600));
-  }
-}
-
-@media (min-width: 80.625em) {
-  .heading-super {
-    font-size: 72px;
   }
 }
 
@@ -1097,6 +1096,11 @@ td {
   td {
     font-size: 16px;
   }
+}
+
+td > b {
+  color: #8993a3;
+  font-weight: 400;
 }
 
 tr:hover td {
@@ -1581,57 +1585,6 @@ hr.dark {
  * Mixins
  */
 /**
- * Component: Button
- * @type Atom
- */
-.Button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background-color: #5d91a1;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: 14px;
-  font-weight: 600;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  letter-spacing: .7px;
-  line-height: 1;
-  padding: 1.71429em 2.85714em;
-  text-align: center;
-  text-decoration: none;
-  -webkit-transition: background-color 200ms, color 200ms;
-  transition: background-color 200ms, color 200ms;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.Button:hover, .Button:active, .Button:focus {
-  color: #fff;
-}
-
-.Button--dark {
-  background-color: #152640;
-  border: 1px solid rgba(191, 208, 216, 0.2);
-  color: #fff;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Global footer
  * @type Organism
  */
@@ -2069,6 +2022,57 @@ hr.dark {
         -ms-flex-order: -1;
             order: -1;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Button
+ * @type Atom
+ */
+.Button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #5d91a1;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: .7px;
+  line-height: 1;
+  padding: 1.71429em 2.85714em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 200ms, color 200ms;
+  transition: background-color 200ms, color 200ms;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.Button:hover, .Button:active, .Button:focus {
+  color: #fff;
+}
+
+.Button--dark {
+  background-color: #152640;
+  border: 1px solid rgba(191, 208, 216, 0.2);
+  color: #fff;
 }
 /**
  * Functions

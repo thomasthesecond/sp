@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 115);
+/******/ 	return __webpack_require__(__webpack_require__.s = 121);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -578,8 +578,6 @@ __webpack_require__(95);
 
 __webpack_require__(97);
 
-__webpack_require__(13);
-
 /***/ }),
 /* 97 */
 /***/ (function(module, exports) {
@@ -602,12 +600,53 @@ __webpack_require__(99);
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 100 */,
-/* 101 */,
-/* 102 */,
-/* 103 */,
-/* 104 */,
-/* 105 */,
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(101);
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(103);
+
+__webpack_require__(13);
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(105);
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 106 */,
 /* 107 */,
 /* 108 */,
@@ -617,13 +656,19 @@ __webpack_require__(99);
 /* 112 */,
 /* 113 */,
 /* 114 */,
-/* 115 */
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(116);
+__webpack_require__(122);
 
 __webpack_require__(74);
 
@@ -649,28 +694,36 @@ __webpack_require__(92);
 
 __webpack_require__(94);
 
-__webpack_require__(10);
-
 __webpack_require__(96);
-
-__webpack_require__(23);
 
 __webpack_require__(98);
 
+__webpack_require__(100);
+
+__webpack_require__(10);
+
+__webpack_require__(102);
+
+__webpack_require__(23);
+
+__webpack_require__(104);
+
+// Import page module
+console.info("Investors loaded");
+
 // Import page-specific components
-console.info("Investors loaded"); // Import page module
 
 /***/ }),
-/* 116 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(117);
+__webpack_require__(123);
 
 /***/ }),
-/* 117 */
+/* 123 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

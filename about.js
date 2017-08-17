@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 109);
+/******/ 	return __webpack_require__(__webpack_require__.s = 115);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,48 +98,6 @@ __webpack_require__(12);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _subNavigation2.default;
-
-/***/ }),
-
-/***/ 109:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(110);
-
-__webpack_require__(21);
-
-__webpack_require__(6);
-
-__webpack_require__(60);
-
-__webpack_require__(3);
-
-__webpack_require__(8);
-
-__webpack_require__(62);
-
-var _subNavigation = __webpack_require__(10);
-
-var _subNavigation2 = _interopRequireDefault(_subNavigation);
-
-__webpack_require__(23);
-
-__webpack_require__(64);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Import page module
-var subNavigation = new _subNavigation2.default();
-
-// Import page-specific components
-
-
-subNavigation.render();
-
-console.info("About loaded");
 
 /***/ }),
 
@@ -361,17 +319,59 @@ exports.default = SubNavigation;
 
 /***/ }),
 
-/***/ 110:
+/***/ 115:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(111);
+__webpack_require__(116);
+
+__webpack_require__(21);
+
+__webpack_require__(6);
+
+__webpack_require__(60);
+
+__webpack_require__(3);
+
+__webpack_require__(8);
+
+__webpack_require__(62);
+
+var _subNavigation = __webpack_require__(10);
+
+var _subNavigation2 = _interopRequireDefault(_subNavigation);
+
+__webpack_require__(23);
+
+__webpack_require__(64);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Import page module
+var subNavigation = new _subNavigation2.default();
+
+// Import page-specific components
+
+
+subNavigation.render();
+
+console.info("About loaded");
 
 /***/ }),
 
-/***/ 111:
+/***/ 116:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(117);
+
+/***/ }),
+
+/***/ 117:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

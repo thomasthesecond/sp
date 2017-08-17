@@ -195,6 +195,18 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>float-right<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Float content right<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>text-tiny<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Sets font size to “tiny”<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>text-positive<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Colors text green; used to signal a positive action<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>text-negative<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Colors text red; used to signal a negative action<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></pre>
         
     </code>
@@ -234,7 +246,10 @@
     <span class="hljs-attr">"align-right"</span>: <span class="hljs-string">"Right align text"</span>,
     <span class="hljs-attr">"align-center"</span>: <span class="hljs-string">"Center align text"</span>,
     <span class="hljs-attr">"float-left"</span>: <span class="hljs-string">"Float content left"</span>,
-    <span class="hljs-attr">"float-right"</span>: <span class="hljs-string">"Float content right"</span>
+    <span class="hljs-attr">"float-right"</span>: <span class="hljs-string">"Float content right"</span>,
+    <span class="hljs-attr">"text-tiny"</span>: <span class="hljs-string">"Sets font size to “tiny”"</span>,
+    <span class="hljs-attr">"text-positive"</span>: <span class="hljs-string">"Colors text green; used to signal a positive action"</span>,
+    <span class="hljs-attr">"text-negative"</span>: <span class="hljs-string">"Colors text red; used to signal a negative action"</span>
   }
 }</pre>
             
@@ -928,30 +943,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="heading--1.html" data-pjax>
                 <span>Heading 1</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="heading--super.html" data-pjax>
-                <span>Heading super</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2201,21 +2192,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-stock-price-card">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Stock Price Card</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="stock-price-card--up.html" data-pjax>
-                <span>Stock price up</span>
+            <a class="Tree-entityLink" href="stock-chart.html" data-pjax>
+                <span>Stock Chart</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2238,8 +2218,67 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="stock-price-card--down.html" data-pjax>
-                <span>Stock price down</span>
+            <a class="Tree-entityLink" href="stock-chart-filter.html" data-pjax>
+                <span>Stock Chart Filter</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-stock-price">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Stock Price</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="stock-price--up.html" data-pjax>
+                <span>Up</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="stock-price--down.html" data-pjax>
+                <span>Down</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2261,6 +2300,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="stock-price-card.html" data-pjax>
+                <span>Stock Price Card</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
