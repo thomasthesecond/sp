@@ -4,26 +4,30 @@
   {{> @sub-navigation }}
 
   <div class="InvestorsPage-container">
-    <div class="container">
-      <h1>{{ title }}</h1>
+    <div class="InvestorsPage-overview container">
+      <div class="InvestorsPage-overviewIntro">
+        <h1>{{ title }}</h1>
 
-      <p>
-        Headquartered in Nashville, Tennessee, Surgery Partners is a
-        leading healthcare services company with a differentiated
-        outpatient delivery model focused on providing high quality, cost
-        effective solutions for surgical and related ancillary care in
-        support of both patients and physicians. Founded in 2004, Surgery
-        Partners is one of the largest and fastest growing surgical
-        services businesses in the country, with more than 150 locations
-        in 29 states, including ambulatory surgical facilities, surgical
-        hospitals, a diagnostic laboratory, multi-specialty physician
-        practices and urgent care facilities.
-      </p>
+        <p>
+          Headquartered in Nashville, Tennessee, Surgery Partners is a
+          leading healthcare services company with a differentiated
+          outpatient delivery model focused on providing high quality, cost
+          effective solutions for surgical and related ancillary care in
+          support of both patients and physicians. Founded in 2004, Surgery
+          Partners is one of the largest and fastest growing surgical
+          services businesses in the country, with more than 150 locations
+          in 29 states, including ambulatory surgical facilities, surgical
+          hospitals, a diagnostic laboratory, multi-specialty physician
+          practices and urgent care facilities.
+        </p>
+      </div>
 
       {{ render "@stock-price-card" }}
 
-      {{> @feed feed=feeds.news }}
-      {{> @feed feed=feeds.events }}
+      <div class="InvestorsPage-overviewFeed">
+        {{> @feed feed=feeds.news }}
+        {{> @feed feed=feeds.events }}
+      </div>
     </div>
   </div>
 

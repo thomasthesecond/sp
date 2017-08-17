@@ -14,43 +14,6 @@
       "description": "",
       "image": "/masthead-image.jpg"
     },
-    "feeds": {
-      "news": {
-        "heading": "Latest news",
-        "noResults": "There is no news to show.",
-        "items": [
-          {
-            "title": "Surgery Partners, Inc. Announces Second Quarter 2017 Results",
-            "url": "/",
-            "date": {
-              "iso": "2017-08-08",
-              "formatted": "August 6, 2017"
-            }
-          },
-          {
-            "title": "Surgery Partners, Inc. Announces Second Quarter 2017 Earnings Release Date and Conference Call Details",
-            "url": "/",
-            "date": {
-              "iso": "2017-07-25",
-              "formatted": "July 25, 2017"
-            }
-          },
-          {
-            "title": "Surgery Partners, Inc. Announces Pricing of $370 Million Senior Note Offering",
-            "url": "/",
-            "date": {
-              "iso": "2017-06-16",
-              "formatted": "June 19, 2017"
-            }
-          }
-        ]
-      },
-      "events": {
-        "heading": "Upcoming events",
-        "noResults": "There are currently no events scheduled.",
-        "items": []
-      }
-    },
     "utilityLinks": [
       { "href": "#", "label": "Print page" },
       { "href": "#", "label": "RSS Feeds" },
@@ -77,6 +40,43 @@
             { "label": "Shareholders", "url": "/investors/shareholders" },
             { "label": "Financial reports", "url": "/investors/financial-reports" }
           ]
+        },
+        "feeds": {
+          "news": {
+            "heading": "Latest news",
+            "noResults": "There is no news to show.",
+            "items": [
+              {
+                "title": "Surgery Partners, Inc. Announces Second Quarter 2017 Results",
+                "url": "/",
+                "date": {
+                  "iso": "2017-08-08",
+                  "formatted": "August 6, 2017"
+                }
+              },
+              {
+                "title": "Surgery Partners, Inc. Announces Second Quarter 2017 Earnings Release Date and Conference Call Details",
+                "url": "/",
+                "date": {
+                  "iso": "2017-07-25",
+                  "formatted": "July 25, 2017"
+                }
+              },
+              {
+                "title": "Surgery Partners, Inc. Announces Pricing of $370 Million Senior Note Offering",
+                "url": "/",
+                "date": {
+                  "iso": "2017-06-16",
+                  "formatted": "June 19, 2017"
+                }
+              }
+            ]
+          },
+          "events": {
+            "heading": "Upcoming events",
+            "noResults": "There are currently no events scheduled.",
+            "items": []
+          }
         },
         "nextPage": {
           "label": "Next",
@@ -111,7 +111,7 @@
             },
             "title": "Surgery Partners, Inc. Announces Fourth Quarter and Full Year 2016 Results",
             "excerpt": "Fourth quarter revenues increase 16% over prior year period driven by strong same facility revenue growth NASHVILLE, Tenn., March 09, 2017 (GLOBE NEWSWIRE) -- Surgery Partners, Inc. (NASDAQ:SGRY) (“Surgery Partners” or the “Company”), a leading provider of surgical services, today announced results for the fourth quarter and full year ended December 31, 2016. Highlights for the Fourth Quarter of 2016: Revenues increased 16.2% to $306.0 million over fourth quarter 2015 Same-faci…",
-            "url": "/"
+            "link": { "url": "/" }
           },
           {
             "date": {
@@ -120,7 +120,7 @@
             },
             "title": "Surgery Partners, Inc. Announces Fourth Quarter and Full Year 2016 Results",
             "excerpt": "Fourth quarter revenues increase 16% over prior year period driven by strong same facility revenue growth NASHVILLE, Tenn., March 09, 2017 (GLOBE NEWSWIRE) -- Surgery Partners, Inc. (NASDAQ:SGRY) (“Surgery Partners” or the “Company”), a leading provider of surgical services, today announced results for the fourth quarter and full year ended December 31, 2016. Highlights for the Fourth Quarter of 2016: Revenues increased 16.2% to $306.0 million over fourth quarter 2015 Same-faci…",
-            "url": "/"
+            "link": { "url": "/" }
           },
           {
             "date": {
@@ -129,7 +129,7 @@
             },
             "title": "Surgery Partners, Inc. Announces Fourth Quarter and Full Year 2016 Results",
             "excerpt": "Fourth quarter revenues increase 16% over prior year period driven by strong same facility revenue growth NASHVILLE, Tenn., March 09, 2017 (GLOBE NEWSWIRE) -- Surgery Partners, Inc. (NASDAQ:SGRY) (“Surgery Partners” or the “Company”), a leading provider of surgical services, today announced results for the fourth quarter and full year ended December 31, 2016. Highlights for the Fourth Quarter of 2016: Revenues increased 16.2% to $306.0 million over fourth quarter 2015 Same-faci…",
-            "url": "/"
+            "link": { "url": "/" }
           }
         ],
         "nextPage": {
@@ -164,6 +164,10 @@
           }
         ],
         "newsArticle": {
+          "date": {
+            "formatted": "July 25, 2017 - 4:02 p.m.",
+            "iso": "2017-07-25T16:02"
+          },
           "title": "Surgery Partners, Inc. Announces Fourth Quarter and Full Year 2016 Results",
           "article": [
             "NASHVILLE, Tenn., July 25, 2017 (GLOBE NEWSWIRE) -- Surgery Partners, Inc. (NASDAQ:SGRY) (“Surgery Partners”), a leading healthcare services company, today announced that the Company will release its second quarter 2017 results after the market close on Tuesday, August 8, 2017, to be followed by a conference call on Wednesday, August 9 at 8:30 a.m. (Eastern Time).",
@@ -266,27 +270,42 @@
               {
                 "name": "Michael T. Doyle",
                 "title": "Chief Executive Officer, Director",
-                "link": { "url": "#" }
+                "link": {
+                  "label": "Read bio",
+                  "url": "#"
+                }
               },
               {
                 "name": "Matthew I. Lozow",
                 "title": "Board of Directors",
-                "link": { "url": "#" }
+                "link": {
+                  "label": "Read bio",
+                  "url": "#"
+                }
               },
               {
                 "name": "Adam Feinstein",
                 "title": "Board of Directors",
-                "link": { "url": "#" }
+                "link": {
+                  "label": "Read bio",
+                  "url": "#"
+                }
               },
               {
                 "name": "Brent Turner",
                 "title": "Board of Directors",
-                "link": { "url": "#" }
+                "link": {
+                  "label": "Read bio",
+                  "url": "#"
+                }
               },
               {
                 "name": "Dr. Teresa DeLuca",
                 "title": "Board of Directors",
-                "link": { "url": "#" }
+                "link": {
+                  "label": "Read bio",
+                  "url": "#"
+                }
               }
             ]
           },
@@ -296,27 +315,42 @@
               {
                 "name": "Michael T. Doyle",
                 "title": "Chief Executive Officer, Director",
-                "link": { "url": "#" }
+                "link": {
+                  "label": "Read bio",
+                  "url": "#"
+                }
               },
               {
                 "name": "Matthew I. Lozow",
                 "title": "Board of Directors",
-                "link": { "url": "#" }
+                "link": {
+                  "label": "Read bio",
+                  "url": "#"
+                }
               },
               {
                 "name": "Adam Feinstein",
                 "title": "Board of Directors",
-                "link": { "url": "#" }
+                "link": {
+                  "label": "Read bio",
+                  "url": "#"
+                }
               },
               {
                 "name": "Brent Turner",
                 "title": "Board of Directors",
-                "link": { "url": "#" }
+                "link": {
+                  "label": "Read bio",
+                  "url": "#"
+                }
               },
               {
                 "name": "Dr. Teresa DeLuca",
                 "title": "Board of Directors",
-                "link": { "url": "#" }
+                "link": {
+                  "label": "Read bio",
+                  "url": "#"
+                }
               }
             ]
           }
@@ -357,6 +391,31 @@
           "label": "Next",
           "title": "Stock information",
           "url": "/investors/stock"
+        }
+      }
+    },
+    {
+      "name": "full-page",
+      "label": "Full width page layout",
+      "context": {
+        "title": "Full width page layout",
+        "subNavigation": {
+          "useScrollSpy": false,
+          "items": [
+            { "label": "Overview", "url": "/investors" },
+            { "label": "Highlights", "url": "/investors/highlights" },
+            { "label": "Stock", "url": "/investors/stock" },
+            { "label": "SEC filings", "url": "/investors/sec-filings" },
+            { "label": "News", "url": "/investors/news" },
+            { "label": "Presentations", "url": "/investors/presentations" },
+            { "label": "Shareholders", "url": "/investors/shareholders" },
+            { "label": "Financial reports", "url": "/investors/financial-reports" }
+          ]
+        },
+        "nextPage": {
+          "label": "Next",
+          "title": "SEC filings",
+          "url": "/investors/sec-filings"
         }
       }
     }

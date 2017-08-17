@@ -8,7 +8,6 @@
 
 .ResourcesList-heading {
   border-bottom: 1px solid rgba($color-border-default, .6);
-  font-weight: $font-weight-light;
   margin-bottom: #{(16 / $font-size-heading-4) * 1em};
   margin-top: 0;
   padding-bottom: #{(24 / $font-size-heading-4) * 1em};
@@ -16,8 +15,8 @@
 
 .ResourcesList-list {
   @include fluid-type(
-    $min-font-size: $font-size-default-min,
-    $max-font-size: $font-size-default,
+    $min-font-size: 12,
+    $max-font-size: 14,
     $min-width: 600
   );
 

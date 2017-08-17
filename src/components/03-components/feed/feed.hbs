@@ -1,5 +1,7 @@
 <section class="Feed">
-  <h2>{{ feed.heading }}</h2>
+  <h2 class="Feed-heading">
+    {{ feed.heading }}
+  </h2>
 
   {{#unless feed.items}}
     {{#if feed.noResults}}
@@ -9,7 +11,7 @@
 
   {{#if feed.items}}
     {{#each feed.items}}
-      <article>
+      <article class="Feed-article">
         <p>
           <a href="{{ this.url }}">
             <time datetime="{{ this.date.iso }}">

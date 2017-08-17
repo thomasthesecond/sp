@@ -72,12 +72,6 @@
 }
 
 .Filter-fieldset {
-  label {
-    @media (min-width: 922px) {
-      padding-left: 24px;
-    }
-  }
-
   input,
   select {
     display: block;

@@ -3,7 +3,9 @@
     {{ teamList.heading }}
   </h2>
 
-  {{#each teamList.team}}
-    {{> @team-member--small teamMember=this }}
-  {{/each}}
+  <div class="TeamList-members">
+    {{#each teamList.team}}
+      {{> @team-member--small teamMember=this }}
+    {{/each}}
+  </div>
 </div>

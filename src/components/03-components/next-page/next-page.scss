@@ -4,22 +4,12 @@
 
 /**
  * Component: Next page
- * @type Organism
  */
 
 .NextPage {
-  // border-top: 1px solid $color-border-default;
-  // padding-bottom: #{(170 / $max-width) * 100vw};
-  // padding-top: #{(176 / $max-width) * 100vw};
-
   @media(min-width: 480px) {
     text-align: center;
   }
-
-  // @media(min-width: 1290px) {
-  //   padding-bottom: 170px;
-  //   padding-top: 176px;
-  // }
 }
 
 .NextPage a {
@@ -34,40 +24,45 @@
     color: rgba($color-text-heading, .7);
 
     .NextPage-icon {
-      transform: translateX(#{((80 + 16) / 80) * 1em});
+      transform: translateX(#{((66 + 16) / 66) * 1em});
     }
   }
 }
 
 .NextPage-label {
+  @include fluid-type(
+    $min-font-size: 10,
+    $max-font-size: 14,
+    $min-width: 480
+  );
+
   color: #b5955d;
-  font-size: 10px;
   letter-spacing: 1px;
   text-transform: uppercase;
-
-  @media (min-width: 600px) {
-    font-size: 14px;
-  }
 }
 
 .NextPage-title {
+  @include fluid-type(
+    $min-font-size: $font-size-heading-4,
+    $max-font-size: $font-size-heading-1,
+    $min-width: 480
+  );
+
   color: currentColor;
-  margin-bottom: 0;
-  margin-top: 0;
+  font-weight: $font-weight-bold;
+  letter-spacing: -1px;
+  line-height: $line-height-heading-1;
+  margin-top: 8px;
   position: relative;
 }
 
 .NextPage-icon {
-  // @media (max-width: 599px) {
-  //   display: none;
-  // }
-
   color: #bfd0d8;
-  height: #{(40 / 80) * 1em};
-  font-size: #{(80 / $font-size-heading-2) * 1em};
+  font-size: #{(66 / $font-size-heading-1) * 1em};
+  height: #{(22 / 66) * 1em};
   position: absolute;
   right: 0;
-  top: #{(9 / 80) * 1em};
-  transform: translateX(#{((80 + $font-size-heading-2) / 80) * 1em});
+  top: #{(22 / 66) * 1em};
+  transform: translateX(#{((66 + $font-size-heading-1) / 66) * 1em});
   transition: transform 200ms;
 }

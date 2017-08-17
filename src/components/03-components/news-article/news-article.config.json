@@ -11,6 +11,10 @@
       "label": "Full",
       "context": {
         "newsArticle": {
+          "date": {
+            "formatted": "July 25, 2017 - 4:02 p.m.",
+            "iso": "2017-07-25T16:02"
+          },
           "article": [
             "NASHVILLE, Tenn., July 25, 2017 (GLOBE NEWSWIRE) -- Surgery Partners, Inc. (NASDAQ:SGRY) (“Surgery Partners”), a leading healthcare services company, today announced that the Company will release its second quarter 2017 results after the market close on Tuesday, August 8, 2017, to be followed by a conference call on Wednesday, August 9 at 8:30 a.m. (Eastern Time).",
             "The conference call can be accessed live over the phone by dialing 1-877-407-0792, or for international callers, 1-201-689-8263. A replay will be available two hours after the call and can be accessed by dialing 1-844-512-2921, or for international callers, 1-412-317-6671. The passcode for the live call and the replay is 13667317. The replay will be available until August 23, 2017.",
@@ -42,7 +46,7 @@
             "iso": "2017-03-09T16:02"
           },
           "excerpt": "Fourth quarter revenues increase 16% over prior year period driven by strong same facility revenue growth NASHVILLE, Tenn., March 09, 2017 (GLOBE NEWSWIRE) -- Surgery Partners, Inc. (NASDAQ:SGRY) (“Surgery Partners” or the “Company”), a leading provider of surgical services, today announced results for the fourth quarter and full year ended December 31, 2016. Highlights for the Fourth Quarter of 2016: Revenues increased 16.2% to $306.0 million over fourth quarter 2015 Same-faci…",
-          "url": "/"
+          "link": { "url": "/" }
         }
       }
     }

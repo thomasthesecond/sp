@@ -1,6 +1,12 @@
 <article class="NewsArticle">
   <h1>{{ newsArticle.title }}</h1>
 
+  <p class="NewsArticle-date">
+    <time datetime="{{ newsArticle.date.iso }}">
+      {{ newsArticle.date.formatted }}
+    </time>
+  </p>
+
   <div class="NewsArticle-article">
     {{#each newsArticle.article}}
       <p>{{ this }}</p>

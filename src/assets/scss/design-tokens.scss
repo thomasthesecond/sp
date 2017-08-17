@@ -23,7 +23,7 @@ $color-border-input: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
 $color-border-input-dark: rgba(#bfd0d8, .2); // rgb(191, 208, 216) // Jungle Mist
 
 // Text colors
-$color-text-default: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
+$color-text-default: #646e7e; // #8f9aa8; // rgb(143, 154, 168) // Regent Gray
 $color-text-heading: #25395d; // rgb(37, 57, 93) // Cloud Burst
 $color-text-overlay: #fff; // rgb(255, 255, 255) // White
 $color-text-introduction: #819ba3; // rgb(129, 155, 163) // Gumbo
@@ -257,7 +257,7 @@ $font-weight-bold: 700;
 
 // Line height
 $line-height-default: (28 / $font-size-default);
-// $line-height-default-min: (24 / $font-size-default-min);
+$line-height-default-min: (24 / $font-size-default-min);
 
 $line-height-body-small: (19 / $font-size-body-small);
 // $line-height-body-small-min: (17 / $font-size-body-small-min);
@@ -265,7 +265,7 @@ $line-height-body-small: (19 / $font-size-body-small);
 $line-height-heading-super: (80 / $font-size-heading-super);
 // $line-height-heading-super-min: (43 / $font-size-heading-super-min);
 
-$line-height-heading-1: (64 / $font-size-heading-1);
+$line-height-heading-1: (58 / $font-size-heading-1);
 // $line-height-heading-1-min: (43 / $font-size-heading-1-min);
 
 $line-height-heading-2: (56 / $font-size-heading-2);

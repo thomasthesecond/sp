@@ -8,13 +8,15 @@
  */
 
 p {
-  font-size: #{(14 / 16) * 1em};
-  line-height: (24 / 14);
-  margin-bottom: 1em;
-  margin-top: 1em;
+  font-size: #{$font-size-default-min}px;
+  line-height: $line-height-default-min;
+  margin-bottom: #{(24 / $font-size-default-min) * 1em};
+  margin-top: #{(24 / $font-size-default-min) * 1em};
 
-  @media (min-width: 700px) {
-    font-size: 1em;
-    line-height: (28 / 16);
+  @media (min-width: 600px) {
+    font-size: #{$font-size-default}px;
+    line-height: $line-height-default;
+    margin-bottom: #{(32 / $font-size-default) * 1em};
+    margin-top: #{(32 / $font-size-default) * 1em};
   }
 }

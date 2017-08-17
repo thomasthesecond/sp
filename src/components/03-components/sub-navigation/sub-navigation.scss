@@ -15,14 +15,14 @@ $z--bottom: 10;
 @mixin marker() {
   background-color: #b5955d;
   bottom: 0;
-  height: 7px;
+  height: 3px;
   position: absolute;
 }
 
 .SubNavigation {
   background-color: #fff;
   // border-bottom: 1px solid #fff;
-  color: #446975;
+  color: $color-text-default;
   font-size: 12px;
   // height: 81px;
   height: 64px;
@@ -97,10 +97,6 @@ $z--bottom: 10;
 
   .SubNavigation:not(.SubNavigation--scrollSpy) & {
     border-bottom-color: #fff;
-
-    .InvestorsPage & {
-      border-bottom-color: rgba($color-border-default, .27);
-    }
   }
 }
 
@@ -110,7 +106,7 @@ $z--bottom: 10;
   margin-left: 14px;
   margin-right: 14px;
   padding-bottom: 22px;
-  padding-top: 29px;
+  padding-top: 26px;
   position: relative;
 
   @media (min-width: 600px) {
