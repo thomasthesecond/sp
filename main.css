@@ -1632,37 +1632,6 @@ hr.dark {
  * Mixins
  */
 /**
- * Component: Skip link
- * @type Atom
- */
-.SkipLink {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  margin: 0;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-}
-
-.SkipLink:focus {
-  background-color: #fff;
-  clip: auto;
-  color: #446975;
-  height: auto;
-  line-height: 40px;
-  padding: 10px 20px;
-  text-decoration: none;
-  top: 90px;
-  width: auto;
-  z-index: 1000;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Global footer
  * @type Organism
  */
@@ -2100,4 +2069,35 @@ hr.dark {
         -ms-flex-order: -1;
             order: -1;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Skip link
+ * @type Atom
+ */
+.SkipLink {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.SkipLink:focus {
+  background-color: #fff;
+  clip: auto;
+  color: #446975;
+  height: auto;
+  line-height: 40px;
+  padding: 10px 20px;
+  text-decoration: none;
+  top: 90px;
+  width: auto;
+  z-index: 1000;
 }
