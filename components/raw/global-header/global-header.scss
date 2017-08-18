@@ -17,13 +17,6 @@
   // width: 100%;
   z-index: $z-index-dropdown;
 
-  @media (max-width: 619px) {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: #{$spacing-gutter}px;
-    padding-right: #{$spacing-gutter}px;
-  }
-
   @media (min-width: 768px) {
     height: 90px;
   }

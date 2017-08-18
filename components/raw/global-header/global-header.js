@@ -70,7 +70,7 @@ export default class GlobalHeader {
   }
 
   enableScrolling() {
-    document.documentElement.style = null;
+    document.documentElement.removeAttribute("style");
   }
 
   disableScrolling() {

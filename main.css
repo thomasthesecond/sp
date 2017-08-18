@@ -1325,15 +1325,6 @@ hr.dark {
   z-index: 7000;
 }
 
-@media (max-width: 619px) {
-  .GlobalHeader {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
 @media (min-width: 768px) {
   .GlobalHeader {
     height: 90px;
@@ -1468,15 +1459,6 @@ hr.dark {
 
 @media (max-width: 619px) {
   .Navigation {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     text-align: center;
   }
 }
@@ -1503,6 +1485,12 @@ hr.dark {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 619px) {
+  .Navigation ul {
+    margin-top: 48px;
+  }
 }
 
 @media (min-width: 620px) {
@@ -1572,12 +1560,13 @@ hr.dark {
 
 @media (max-width: 619px) {
   .GlobalHeader .Navigation {
+    border-top: 1px solid rgba(191, 208, 216, 0.37);
     height: calc(100vh - 48px);
     max-width: 100%;
     opacity: 0;
     position: fixed;
     right: 0;
-    top: 48px;
+    top: 47px;
     -webkit-transition: opacity 400ms, visibility 400ms;
     transition: opacity 400ms, visibility 400ms;
     visibility: hidden;

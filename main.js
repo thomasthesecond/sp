@@ -2070,7 +2070,7 @@ var GlobalHeader = function () {
   }, {
     key: "enableScrolling",
     value: function enableScrolling() {
-      document.documentElement.style = null;
+      document.documentElement.removeAttribute("style");
     }
   }, {
     key: "disableScrolling",
