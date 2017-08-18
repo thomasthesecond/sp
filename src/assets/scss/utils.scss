@@ -65,3 +65,10 @@
 .text-negative {
   color: $color-text-negative;
 }
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
