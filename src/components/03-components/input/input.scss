@@ -7,7 +7,9 @@
  * @type Atom
  */
 
-input {
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
   appearance: none;
   background-color: $color-background-input;
   border: 1px solid $color-border-default;
