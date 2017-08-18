@@ -6,7 +6,7 @@ The grid layout module uses CSS grid layout by applying the `grid` classname.
 
 [View browser support on Can I use](http://caniuse.com/#feat=css-grid)
 
-For browsers that do not support grid, fallback styles can be added using flexbox or floats. The `@supports` at-rule can be used to isolate grid styles.
+For browsers that do not support grid, fallback styles can be added using flexbox or floats. The `@supports` at-rule, a.k.a feature queries, can be used to isolate grid styles.
 
 ### Resources
 

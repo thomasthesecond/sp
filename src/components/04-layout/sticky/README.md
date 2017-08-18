@@ -4,7 +4,7 @@ The sticky layout module uses `position: sticky;` to fix itself and its children
 
 > You must specify a threshold with at least one of `top`, `right`, `bottom`, or `left` for sticky positioning to behave as expected. Otherwise, it will be indistinguishable from relative positioning.
 
-Because browser support for `position: sticky;` is limited, this feature is considered an enhancement reserved for Tier 1 browsers. If the feature is not supported, the `position` value will fallback to `relative`.
+Because browser support for `position: sticky;` is limited, this feature is considered an enhancement reserved for Tier 1 browsers. If the feature is not supported, the browser will ignore the rule and use the initial value for `position` which is `static`.
 
 ### Resources
 
