@@ -1468,6 +1468,15 @@ hr.dark {
 
 @media (max-width: 619px) {
   .Navigation {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
   }
 }
@@ -1494,12 +1503,6 @@ hr.dark {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-@media (max-width: 619px) {
-  .Navigation ul {
-    margin-top: 80px;
-  }
 }
 
 @media (min-width: 620px) {
