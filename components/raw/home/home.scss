@@ -9,17 +9,22 @@
 
 .GlobalHeader {
   @media (max-width: 619px) {
-    background-color: transparent;
-    position: absolute;
     left: 0;
+    position: absolute;
     right: 0;
     top: 0;
   }
 }
 
-.Hamburger {
+.GlobalHeader:not(.is-open) {
   @media (max-width: 619px) {
-    color: #fff;
+    background-color: transparent;
+  }
+}
+
+.Hamburger:not(.is-open) {
+  @media (max-width: 619px) {
+    color: $color-text-hamburger-overlay;
   }
 }
 

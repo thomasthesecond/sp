@@ -530,6 +530,13 @@ template {
 .text-negative {
   color: #d90a0a;
 }
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 @charset "UTF-8";
 /**
  * Mixins
@@ -1362,18 +1369,10 @@ hr.dark {
  * @type Organism
  */
 .GlobalHeader {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 48px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
   z-index: 7000;
 }
 
@@ -1383,7 +1382,21 @@ hr.dark {
   }
 }
 
-.GlobalHeader--transparent {
+.GlobalHeader-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.GlobalHeader--transparent:not(.is-open) {
   background-color: transparent;
 }
 /**
@@ -1397,22 +1410,21 @@ hr.dark {
  * @type Atom
  */
 .Hamburger {
-  background-color: transparent;
-  border: 0;
   color: #275e70;
-  cursor: pointer;
   padding: 18px 14px;
   position: relative;
 }
 
-.Hamburger.-white {
-  color: #fff;
+.Hamburger:hover, .Hamburger:active, .Hamburger:focus {
+  color: #275e70;
 }
 
 .Hamburger-icon {
   display: block;
   height: 9px;
   position: relative;
+  text-indent: -999em;
+  white-space: nowrap;
   width: 17px;
 }
 
@@ -1423,10 +1435,10 @@ hr.dark {
   height: 2px;
   left: 0;
   position: absolute;
-  -webkit-transition: -webkit-transform 200ms;
-  transition: -webkit-transform 200ms;
-  transition: transform 200ms;
-  transition: transform 200ms, -webkit-transform 200ms;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
   width: 100%;
 }
 

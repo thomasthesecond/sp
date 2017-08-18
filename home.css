@@ -617,16 +617,21 @@
  */
 @media (max-width: 619px) {
   .GlobalHeader {
-    background-color: transparent;
-    position: absolute;
     left: 0;
+    position: absolute;
     right: 0;
     top: 0;
   }
 }
 
 @media (max-width: 619px) {
-  .Hamburger {
+  .GlobalHeader:not(.is-open) {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 619px) {
+  .Hamburger:not(.is-open) {
     color: #fff;
   }
 }

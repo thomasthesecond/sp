@@ -158,7 +158,7 @@
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#footer-navigation"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger js-hamburger"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-icon"</span>&gt;</span>Open menu<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
         
     </code>
@@ -168,7 +168,7 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-506cc2723393f603212bd5e2a58d4492-panel-view">
     <code class="Code Code--lang-handlebars">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#footer-navigation"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger js-hamburger"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Hamburger-icon"</span>&gt;</span>Open menu<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -219,15 +219,26 @@
   <span class="hljs-keyword">constructor</span>(options) {
     <span class="hljs-keyword">this</span>.options = options;
     <span class="hljs-keyword">this</span>.hamburger = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-hamburger"</span>);
+    <span class="hljs-keyword">this</span>.icon = <span class="hljs-keyword">this</span>.hamburger.querySelector(<span class="hljs-string">".Hamburger-icon"</span>);
     <span class="hljs-keyword">this</span>.onClick = <span class="hljs-keyword">this</span>.onClick.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.setIconLabel = <span class="hljs-keyword">this</span>.setIconLabel.bind(<span class="hljs-keyword">this</span>);
   }
 
   onClick(event) {
     <span class="hljs-keyword">const</span> { onClick } = <span class="hljs-keyword">this</span>.options;
 
     onClick();
+    <span class="hljs-keyword">this</span>.setIconLabel();
 
     event.preventDefault();
+  }
+
+  setIconLabel() {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.hamburger.classList.contains(<span class="hljs-string">"is-open"</span>)) {
+      <span class="hljs-keyword">this</span>.icon.innerHTML = <span class="hljs-string">"Close menu"</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">this</span>.icon.innerHTML = <span class="hljs-string">"Open menu"</span>;
+    }
   }
 
   render() {
@@ -252,7 +263,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">410 Bytes</span>
+                    <span class="Meta-value">736 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -275,24 +286,24 @@
  */</span>
 
 <span class="hljs-selector-class">.Hamburger</span> {
-  <span class="hljs-attribute">background-color</span>: transparent;
-  <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#275e70</span>;
-  <span class="hljs-attribute">cursor</span>: pointer;
-  <span class="hljs-comment">// box-sizing: content-box;</span>
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-hamburger</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">18px</span> <span class="hljs-number">14px</span>;
   <span class="hljs-attribute">position</span>: relative;
 
-  &amp;<span class="hljs-selector-class">.-white</span> {
-    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  &amp;:hover,
+  &amp;:active,
+  &amp;:focus {
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-hamburger</span>;
   }
 }
 
 <span class="hljs-selector-class">.Hamburger-icon</span> {
   <span class="hljs-attribute">display</span>: block;
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">9px</span>; <span class="hljs-comment">// 8px;</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">9px</span>;
   <span class="hljs-attribute">position</span>: relative;
-  <span class="hljs-attribute">width</span>: <span class="hljs-number">17px</span>; <span class="hljs-comment">// 16px;</span>
+  <span class="hljs-attribute">text-indent</span>: -<span class="hljs-number">999em</span>;
+  <span class="hljs-attribute">white-space</span>: nowrap;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">17px</span>;
 
   &amp;::before,
   &amp;::after {
@@ -302,7 +313,7 @@
     <span class="hljs-attribute">height</span>: <span class="hljs-number">2px</span>;
     <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">position</span>: absolute;
-    <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">200ms</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">400ms</span>;
     <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   }
 
@@ -406,21 +417,6 @@
         
         
         
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(2)</em>:</strong>
-            <span class="Meta-value Meta-value--linkList">
-            
-                <a href="hamburger--default.html">
-                    <span>Default</span>
-                </a>, 
-            
-                <a href="hamburger--white.html">
-                    <span>White</span>
-                </a>
-            
-            </span>
-        </li>
         
         <li class="Meta-item">
             <strong class="Meta-key">Preview:</strong>

@@ -2435,6 +2435,7 @@ var GlobalHeader = function () {
 
     this.options = options;
 
+    this.document = document.documentElement;
     this.header = document.querySelector(".js-global-header");
     this.hamburger = document.querySelector(".js-hamburger");
     this.navigation = document.querySelector(".js-navigation");
@@ -2446,10 +2447,9 @@ var GlobalHeader = function () {
     this.checkScreenSize = this.checkScreenSize.bind(this);
     this.hideNavigation = this.hideNavigation.bind(this);
     this.showNavigation = this.showNavigation.bind(this);
+    this.toggleNavigation = this.toggleNavigation.bind(this);
     this.clickOutside = this.clickOutside.bind(this);
     this.onEscapePress = this.onEscapePress.bind(this);
-    this.enableScrolling = this.enableScrolling.bind(this);
-    this.disableScrolling = this.disableScrolling.bind(this);
   }
 
   _createClass(GlobalHeader, [{
@@ -2464,9 +2464,10 @@ var GlobalHeader = function () {
     value: function hideNavigation() {
       if (this.navigation.classList.contains(this.openClassName)) {
         this.isOpen = false;
+        this.document.classList.remove("no-scroll");
+        this.header.classList.remove(this.openClassName);
         this.navigation.classList.remove(this.openClassName);
         this.hamburger.classList.remove(this.openClassName);
-        this.enableScrolling();
       }
     }
   }, {
@@ -2474,10 +2475,16 @@ var GlobalHeader = function () {
     value: function showNavigation() {
       if (!this.navigation.classList.contains(this.openClassName)) {
         this.isOpen = true;
+        this.document.classList.add("no-scroll");
+        this.header.classList.add(this.openClassName);
         this.navigation.classList.add(this.openClassName);
         this.hamburger.classList.add(this.openClassName);
-        this.disableScrolling();
       }
+    }
+  }, {
+    key: "toggleNavigation",
+    value: function toggleNavigation() {
+      return this.isOpen ? this.hideNavigation() : this.showNavigation();
     }
   }, {
     key: "clickOutside",
@@ -2505,30 +2512,13 @@ var GlobalHeader = function () {
       };
     }
   }, {
-    key: "enableScrolling",
-    value: function enableScrolling() {
-      document.documentElement.removeAttribute("style");
-    }
-  }, {
-    key: "disableScrolling",
-    value: function disableScrolling() {
-      document.documentElement.style.overflow = "hidden";
-      document.documentElement.style.position = "fixed";
-      document.documentElement.style.top = 0;
-      document.documentElement.style.width = "100%";
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
       var hamburger = new _hamburger2.default({
         onClick: function onClick() {
-          if (_this2.isOpen) {
-            _this2.hideNavigation();
-          } else {
-            _this2.showNavigation();
-          }
+          _this2.toggleNavigation();
 
           document.addEventListener("click", _this2.clickOutside, false);
         }
@@ -2569,7 +2559,9 @@ var Hamburger = function () {
 
     this.options = options;
     this.hamburger = document.querySelector(".js-hamburger");
+    this.icon = this.hamburger.querySelector(".Hamburger-icon");
     this.onClick = this.onClick.bind(this);
+    this.setIconLabel = this.setIconLabel.bind(this);
   }
 
   _createClass(Hamburger, [{
@@ -2579,8 +2571,18 @@ var Hamburger = function () {
 
 
       onClick();
+      this.setIconLabel();
 
       event.preventDefault();
+    }
+  }, {
+    key: "setIconLabel",
+    value: function setIconLabel() {
+      if (this.hamburger.classList.contains("is-open")) {
+        this.icon.innerHTML = "Close menu";
+      } else {
+        this.icon.innerHTML = "Open menu";
+      }
     }
   }, {
     key: "render",
