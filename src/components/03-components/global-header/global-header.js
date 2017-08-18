@@ -6,6 +6,7 @@ export default class GlobalHeader {
   constructor(options) {
     this.options = options;
 
+    this.document = document.documentElement;
     this.header = document.querySelector(".js-global-header");
     this.hamburger = document.querySelector(".js-hamburger");
     this.navigation = document.querySelector(".js-navigation");
@@ -17,10 +18,9 @@ export default class GlobalHeader {
     this.checkScreenSize = this.checkScreenSize.bind(this);
     this.hideNavigation = this.hideNavigation.bind(this);
     this.showNavigation = this.showNavigation.bind(this);
+    this.toggleNavigation = this.toggleNavigation.bind(this);
     this.clickOutside = this.clickOutside.bind(this);
     this.onEscapePress = this.onEscapePress.bind(this);
-    this.enableScrolling = this.enableScrolling.bind(this);
-    this.disableScrolling = this.disableScrolling.bind(this);
   }
 
   checkScreenSize(mql) {
@@ -33,19 +33,25 @@ export default class GlobalHeader {
   hideNavigation() {
     if (this.navigation.classList.contains(this.openClassName)) {
       this.isOpen = false;
+      this.document.classList.remove("no-scroll");
+      this.header.classList.remove(this.openClassName);
       this.navigation.classList.remove(this.openClassName);
       this.hamburger.classList.remove(this.openClassName);
-      this.enableScrolling();
     }
   }
 
   showNavigation() {
     if (!this.navigation.classList.contains(this.openClassName)) {
       this.isOpen = true;
+      this.document.classList.add("no-scroll");
+      this.header.classList.add(this.openClassName);
       this.navigation.classList.add(this.openClassName);
       this.hamburger.classList.add(this.openClassName);
-      this.disableScrolling();
     }
+  }
+
+  toggleNavigation() {
+    return this.isOpen ? this.hideNavigation() : this.showNavigation();
   }
 
   clickOutside(event) {
@@ -69,25 +75,10 @@ export default class GlobalHeader {
     }
   }
 
-  enableScrolling() {
-    document.documentElement.removeAttribute("style");
-  }
-
-  disableScrolling() {
-    document.documentElement.style.overflow = "hidden";
-    document.documentElement.style.position = "fixed";
-    document.documentElement.style.top = 0;
-    document.documentElement.style.width = "100%";
-  }
-
   render() {
     const hamburger = new Hamburger({
       onClick: () => {
-        if (this.isOpen) {
-          this.hideNavigation();
-        } else {
-          this.showNavigation();
-        }
+        this.toggleNavigation();
 
         document.addEventListener("click", this.clickOutside, false);
       }
