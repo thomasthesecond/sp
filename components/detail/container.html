@@ -308,7 +308,14 @@
     <div class="Prose Prose--condensed">
         
         <h2 id="container-layout-module">Container layout module</h2>
-<p>The container layout module is used to center blocks of content horizontally within the viewport and prevent content from touching the left and right edge of the viewport. This is achieved by setting a maximum width along with left and right margins on the module. Wrap any content blocks with this module.</p>
+<p>The container layout module is used to:</p>
+<ul>
+<li>center blocks of content horizontally within the viewport (above a specified media query), and</li>
+<li>prevent content from touching the left and right edges of the viewport (below a specified media query).</li>
+</ul>
+<p>This is achieved by setting a maximum width (<code>1290px</code>) along with left and right margins (<code>24px</code>) on the module.</p>
+<p>Any type of content blocks can be wrapped with this module as it’s intended to be used many times per page when building layouts.</p>
+<p>Avoid nesting containers because this will increase the horizontal spacing from the edge of the screen. There may be instances where this behavior is desirable, but in many cases it’s not.</p>
 
         
     </div>

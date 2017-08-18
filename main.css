@@ -462,14 +462,13 @@ template {
 
 .visuallyhidden {
   border: 0;
-  clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
+  display: inline-block;
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
-  position: absolute;
   white-space: nowrap;
   width: 1px;
 }
@@ -482,8 +481,8 @@ template {
   margin: 0;
   overflow: visible;
   position: static;
-  width: auto;
   white-space: inherit;
+  width: auto;
 }
 
 .invisible {
@@ -1014,14 +1013,13 @@ table {
 @media (max-width: 599px) {
   .table-responsive thead {
     border: 0;
-    clip: rect(0 0 0 0);
     -webkit-clip-path: inset(50%);
             clip-path: inset(50%);
+    display: inline-block;
     height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
-    position: absolute;
     white-space: nowrap;
     width: 1px;
   }
@@ -1233,7 +1231,9 @@ select.dark {
  * Component: Input
  * @type Atom
  */
-input {
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1248,23 +1248,33 @@ input {
   padding: 0.75em 1.5em 0.625em;
 }
 
-input::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder,
+input[type="email"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder {
   color: currentColor;
 }
 
-input::-moz-placeholder {
+input[type="text"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder {
   color: currentColor;
 }
 
-input:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder,
+input[type="email"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder {
   color: currentColor;
 }
 
-input:-moz-placeholder {
+input[type="text"]:-moz-placeholder,
+input[type="email"]:-moz-placeholder,
+input[type="tel"]:-moz-placeholder {
   color: currentColor;
 }
 
-input.dark {
+input[type="text"].dark,
+input[type="email"].dark,
+input[type="tel"].dark {
   background-color: #152640;
   border-color: rgba(191, 208, 216, 0.2);
   color: #fff;
@@ -1313,6 +1323,15 @@ hr.dark {
           justify-content: space-between;
   position: relative;
   z-index: 7000;
+}
+
+@media (max-width: 619px) {
+  .GlobalHeader {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1376,20 +1395,14 @@ hr.dark {
   top: 7px;
 }
 
-.is-active .Hamburger-icon::before {
-  top: 3px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: center;
-          transform-origin: center;
+.is-open .Hamburger-icon::before {
+  -webkit-transform: translateY(3px) rotate(135deg);
+          transform: translateY(3px) rotate(135deg);
 }
 
-.is-active .Hamburger-icon::after {
-  top: 3px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transform-origin: center;
-          transform-origin: center;
+.is-open .Hamburger-icon::after {
+  -webkit-transform: translateY(-4px) rotate(45deg);
+          transform: translateY(-4px) rotate(45deg);
 }
 
 @media (max-width: 619px) {
@@ -1446,16 +1459,16 @@ hr.dark {
 .Navigation {
   background-color: #fff;
   color: #25395d;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 2.66667;
+  line-height: 3;
   max-width: 464px;
   width: 100%;
 }
 
 @media (max-width: 619px) {
   .Navigation {
-    padding: 24px;
+    text-align: center;
   }
 }
 
@@ -1483,6 +1496,12 @@ hr.dark {
   padding: 0;
 }
 
+@media (max-width: 619px) {
+  .Navigation ul {
+    margin-top: 80px;
+  }
+}
+
 @media (min-width: 620px) {
   .Navigation ul {
     display: -webkit-box;
@@ -1495,8 +1514,38 @@ hr.dark {
 }
 
 @media (max-width: 619px) {
-  .Navigation li:not(:first-child) {
-    border-top: 1px solid rgba(125, 125, 125, 0.16);
+  .Navigation li {
+    opacity: 0;
+    -webkit-transform: translateY(-26px);
+            transform: translateY(-26px);
+    -webkit-transition: opacity 200ms, -webkit-transform 200ms;
+    transition: opacity 200ms, -webkit-transform 200ms;
+    transition: opacity 200ms, transform 200ms;
+    transition: opacity 200ms, transform 200ms, -webkit-transform 200ms;
+  }
+  .Navigation li:nth-child(1) {
+    -webkit-transition-delay: 200ms;
+            transition-delay: 200ms;
+  }
+  .Navigation li:nth-child(2) {
+    -webkit-transition-delay: 250ms;
+            transition-delay: 250ms;
+  }
+  .Navigation li:nth-child(3) {
+    -webkit-transition-delay: 300ms;
+            transition-delay: 300ms;
+  }
+  .Navigation li:nth-child(4) {
+    -webkit-transition-delay: 350ms;
+            transition-delay: 350ms;
+  }
+}
+
+@media (max-width: 619px) {
+  .Navigation.is-open li {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -1510,6 +1559,7 @@ hr.dark {
 @media (max-width: 619px) {
   .Navigation a {
     display: block;
+    -webkit-tap-highlight-color: rgba(191, 208, 216, 0.07);
   }
 }
 
@@ -1519,19 +1569,16 @@ hr.dark {
 
 @media (max-width: 619px) {
   .GlobalHeader .Navigation {
-    height: 100vh;
-    max-width: 70vw;
+    height: calc(100vh - 48px);
+    max-width: 100%;
     opacity: 0;
     position: fixed;
     right: 0;
-    top: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: opacity 200ms, -webkit-transform 200ms;
-    transition: opacity 200ms, -webkit-transform 200ms;
-    transition: opacity 200ms, transform 200ms;
-    transition: opacity 200ms, transform 200ms, -webkit-transform 200ms;
+    top: 48px;
+    -webkit-transition: opacity 400ms, visibility 400ms;
+    transition: opacity 400ms, visibility 400ms;
     visibility: hidden;
+    width: 100vw;
     z-index: 9000;
   }
 }
@@ -1545,38 +1592,8 @@ hr.dark {
 @media (max-width: 619px) {
   .GlobalHeader .Navigation.is-open {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
     visibility: visible;
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Overlay
- * @type Atom
- */
-.Overlay {
-  background-color: rgba(0, 0, 0, 0.2);
-  height: 100vh;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  -webkit-transition: opacity 200ms, visibility 200ms;
-  transition: opacity 200ms, visibility 200ms;
-  visibility: hidden;
-  width: 100vw;
-  z-index: 8000;
-}
-
-.Overlay.is-open {
-  opacity: 1;
-  visibility: visible;
 }
 /**
  * Functions

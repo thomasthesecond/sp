@@ -47,17 +47,13 @@
     top: 7px;
   }
 
-  .is-active & {
+  .is-open & {
     &::before {
-      top: 3px;
-      transform: rotate(45deg);
-      transform-origin: center;
+      transform: translateY(3px) rotate(135deg);
     }
 
     &::after {
-      top: 3px;
-      transform: rotate(-45deg);
-      transform-origin: center;
+      transform: translateY(-4px) rotate(45deg);
     }
   }
 }

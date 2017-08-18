@@ -7,11 +7,6 @@
  * @type Molecule
  */
 
-// $timing--fast: 200ms;
-// $easing--default: ease-in-out;
-$gutter: 24;
-$z--bottom: 10;
-
 @mixin marker() {
   background-color: #b5955d;
   bottom: 0;
@@ -20,12 +15,12 @@ $z--bottom: 10;
 }
 
 .SubNavigation {
-  background-color: #fff;
+  background-color: $color-background-default;
   // border-bottom: 1px solid #fff;
   color: $color-text-default;
   font-size: 12px;
   // height: 81px;
-  height: 64px;
+  height: 61px;
   overflow: hidden;
   // transition: border-color 200ms;
   position: relative;
@@ -47,26 +42,34 @@ $z--bottom: 10;
   &::before {
     content: "";
     display: block;
-    height: 100%;
+    height: calc(100% - 1px);
     position: absolute;
     top: 0;
-    width: #{$gutter}px;
-    z-index: $z--bottom + 1;
+    width: #{$spacing-gutter}px;
+    z-index: $z-index-default;
   }
 
   &::before {
-    background: linear-gradient(to right, #fff 20%, rgba(#fff, 0) 100%);
+    background: linear-gradient(
+      to right,
+      $color-background-default 20%,
+      rgba($color-background-default, 0) 100%
+    );
     left: 0;
   }
 
   &::after {
-    background: linear-gradient(to left, #fff 20%, rgba(#fff, 0) 100%);
+    background: linear-gradient(
+      to left,
+      $color-background-default 20%,
+      rgba($color-background-default, 0) 100%
+    );
     right: 0;
   }
 }
 
 .SubNavigation-list {
-  border-bottom: 1px solid rgba(#bfd0d8, .37);
+  // border-bottom: 1px solid rgba($color-border-default, .37);
   // color: currentColor;
   // font-family: sans-serif;
   // font-size: 16px;
@@ -85,8 +88,8 @@ $z--bottom: 10;
   width: 100%;
 
   @media (max-width: 1006px) {
-    padding-left: #{($gutter - 14)}px;
-    padding-right: #{($gutter - 14)}px;
+    padding-left: #{($spacing-gutter - 14)}px;
+    padding-right: #{($spacing-gutter - 14)}px;
   }
 
   @media (min-width: 1007px) {
@@ -95,9 +98,9 @@ $z--bottom: 10;
     max-width: #{$max-width}px;
   }
 
-  .SubNavigation:not(.SubNavigation--scrollSpy) & {
-    border-bottom-color: #fff;
-  }
+  // .SubNavigation:not(.SubNavigation--scrollSpy) & {
+  //   border-bottom-color: #fff;
+  // }
 }
 
 .SubNavigation-item {

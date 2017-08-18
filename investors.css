@@ -169,7 +169,7 @@
   background-color: #fff;
   color: #646e7e;
   font-size: 12px;
-  height: 64px;
+  height: 61px;
   overflow: hidden;
   position: relative;
 }
@@ -184,11 +184,11 @@
 .SubNavigation::after, .SubNavigation::before {
   content: "";
   display: block;
-  height: 100%;
+  height: calc(100% - 1px);
   position: absolute;
   top: 0;
   width: 24px;
-  z-index: 11;
+  z-index: 1;
 }
 
 .SubNavigation::before {
@@ -204,7 +204,6 @@
 }
 
 .SubNavigation-list {
-  border-bottom: 1px solid rgba(191, 208, 216, 0.37);
   line-height: 1;
   list-style: none;
   margin-bottom: 0;
@@ -232,10 +231,6 @@
     margin-right: auto;
     max-width: 1290px;
   }
-}
-
-.SubNavigation:not(.SubNavigation--scrollSpy) .SubNavigation-list {
-  border-bottom-color: #fff;
 }
 
 .SubNavigation-item {
@@ -695,14 +690,13 @@
 
 .Search-label {
   border: 0;
-  clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
+  display: inline-block;
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
-  position: absolute;
   white-space: nowrap;
   width: 1px;
 }

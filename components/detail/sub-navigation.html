@@ -531,11 +531,6 @@
  * @type Molecule
  */</span>
 
-<span class="hljs-comment">// $timing--fast: 200ms;</span>
-<span class="hljs-comment">// $easing--default: ease-in-out;</span>
-<span class="hljs-variable">$gutter</span>: <span class="hljs-number">24</span>;
-<span class="hljs-variable">$z--bottom</span>: <span class="hljs-number">10</span>;
-
 @<span class="hljs-keyword">mixin</span> marker() {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#b5955d</span>;
   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
@@ -544,12 +539,12 @@
 }
 
 <span class="hljs-selector-class">.SubNavigation</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
   <span class="hljs-comment">// border-bottom: 1px solid #fff;</span>
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-default</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
   <span class="hljs-comment">// height: 81px;</span>
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">64px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">61px</span>;
   <span class="hljs-attribute">overflow</span>: hidden;
   <span class="hljs-comment">// transition: border-color 200ms;</span>
   <span class="hljs-attribute">position</span>: relative;
@@ -571,26 +566,34 @@
   &amp;::before {
     <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
     <span class="hljs-attribute">display</span>: block;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">height</span>: calc(<span class="hljs-number">100%</span> - <span class="hljs-number">1px</span>);
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">width</span>: #{<span class="hljs-variable">$gutter</span>}px;
-    <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z--bottom</span> + <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">width</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-default</span>;
   }
 
   &amp;::before {
-    <span class="hljs-attribute">background</span>: linear-gradient(to right, <span class="hljs-number">#fff</span> <span class="hljs-number">20%</span>, rgba(<span class="hljs-number">#fff</span>, <span class="hljs-number">0</span>) <span class="hljs-number">100%</span>);
+    <span class="hljs-attribute">background</span>: linear-gradient(
+      to right,
+      <span class="hljs-variable">$color-background-default</span> <span class="hljs-number">20%</span>,
+      rgba(<span class="hljs-variable">$color-background-default</span>, <span class="hljs-number">0</span>) <span class="hljs-number">100%</span>
+    );
     <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
   }
 
   &amp;::after {
-    <span class="hljs-attribute">background</span>: linear-gradient(to left, <span class="hljs-number">#fff</span> <span class="hljs-number">20%</span>, rgba(<span class="hljs-number">#fff</span>, <span class="hljs-number">0</span>) <span class="hljs-number">100%</span>);
+    <span class="hljs-attribute">background</span>: linear-gradient(
+      to left,
+      <span class="hljs-variable">$color-background-default</span> <span class="hljs-number">20%</span>,
+      rgba(<span class="hljs-variable">$color-background-default</span>, <span class="hljs-number">0</span>) <span class="hljs-number">100%</span>
+    );
     <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
   }
 }
 
 <span class="hljs-selector-class">.SubNavigation-list</span> {
-  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-number">#bfd0d8</span>, .<span class="hljs-number">37</span>);
+  <span class="hljs-comment">// border-bottom: 1px solid rgba($color-border-default, .37);</span>
   <span class="hljs-comment">// color: currentColor;</span>
   <span class="hljs-comment">// font-family: sans-serif;</span>
   <span class="hljs-comment">// font-size: 16px;</span>
@@ -609,8 +612,8 @@
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 
   @<span class="hljs-keyword">media</span> (max-width: 1006px) {
-    <span class="hljs-attribute">padding-left</span>: #{(<span class="hljs-variable">$gutter</span> - <span class="hljs-number">14</span>)}px;
-    <span class="hljs-attribute">padding-right</span>: #{(<span class="hljs-variable">$gutter</span> - <span class="hljs-number">14</span>)}px;
+    <span class="hljs-attribute">padding-left</span>: #{(<span class="hljs-variable">$spacing-gutter</span> - <span class="hljs-number">14</span>)}px;
+    <span class="hljs-attribute">padding-right</span>: #{(<span class="hljs-variable">$spacing-gutter</span> - <span class="hljs-number">14</span>)}px;
   }
 
   @<span class="hljs-keyword">media</span> (min-width: 1007px) {
@@ -619,9 +622,9 @@
     <span class="hljs-attribute">max-width</span>: #{<span class="hljs-variable">$max-width</span>}px;
   }
 
-  <span class="hljs-selector-class">.SubNavigation</span>:not(<span class="hljs-selector-class">.SubNavigation--scrollSpy</span>) &amp; {
-    <span class="hljs-attribute">border-bottom-color</span>: <span class="hljs-number">#fff</span>;
-  }
+  <span class="hljs-comment">// .SubNavigation:not(.SubNavigation--scrollSpy) &amp; {</span>
+  <span class="hljs-comment">//   border-bottom-color: #fff;</span>
+  <span class="hljs-comment">// }</span>
 }
 
 <span class="hljs-selector-class">.SubNavigation-item</span> {
@@ -711,7 +714,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.3 KB</span>
+                    <span class="Meta-value">3.4 KB</span>
                 </li>
             </ul>
         </div>

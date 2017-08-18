@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 108);
+/******/ 	return __webpack_require__(__webpack_require__.s = 107);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1966,8 +1966,6 @@ __webpack_require__(25);
 
 __webpack_require__(26);
 
-__webpack_require__(49);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _globalHeader2.default;
@@ -2000,18 +1998,21 @@ var GlobalHeader = function () {
 
     this.options = options;
 
+    this.header = document.querySelector(".js-global-header");
     this.hamburger = document.querySelector(".js-hamburger");
     this.navigation = document.querySelector(".js-navigation");
-    this.overlay = document.querySelector(".js-overlay");
     this.mql = window.matchMedia("(max-width: 619px)");
 
     this.openClassName = "is-open";
+    this.isOpen = false;
 
     this.checkScreenSize = this.checkScreenSize.bind(this);
     this.hideNavigation = this.hideNavigation.bind(this);
     this.showNavigation = this.showNavigation.bind(this);
     this.clickOutside = this.clickOutside.bind(this);
     this.onEscapePress = this.onEscapePress.bind(this);
+    this.enableScrolling = this.enableScrolling.bind(this);
+    this.disableScrolling = this.disableScrolling.bind(this);
   }
 
   _createClass(GlobalHeader, [{
@@ -2025,25 +2026,30 @@ var GlobalHeader = function () {
     key: "hideNavigation",
     value: function hideNavigation() {
       if (this.navigation.classList.contains(this.openClassName)) {
+        this.isOpen = false;
         this.navigation.classList.remove(this.openClassName);
-        this.overlay.classList.remove(this.openClassName);
+        this.hamburger.classList.remove(this.openClassName);
+        this.enableScrolling();
       }
     }
   }, {
     key: "showNavigation",
     value: function showNavigation() {
       if (!this.navigation.classList.contains(this.openClassName)) {
+        this.isOpen = true;
         this.navigation.classList.add(this.openClassName);
-        this.overlay.classList.add(this.openClassName);
+        this.hamburger.classList.add(this.openClassName);
+        this.disableScrolling();
       }
     }
   }, {
     key: "clickOutside",
     value: function clickOutside(event) {
+      var isHeader = this.header.contains(event.target);
       var isHamburger = this.hamburger.contains(event.target);
       var isNavigation = this.navigation.contains(event.target);
 
-      if (!isHamburger && !isNavigation) {
+      if (!isHeader && !isHamburger && !isNavigation) {
         this.hideNavigation();
         document.removeEventListener("click", this.clickOutside, false);
       }
@@ -2062,13 +2068,31 @@ var GlobalHeader = function () {
       };
     }
   }, {
+    key: "enableScrolling",
+    value: function enableScrolling() {
+      document.documentElement.style = null;
+    }
+  }, {
+    key: "disableScrolling",
+    value: function disableScrolling() {
+      document.documentElement.style.overflow = "hidden";
+      document.documentElement.style.position = "fixed";
+      document.documentElement.style.top = 0;
+      document.documentElement.style.width = "100%";
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
       var hamburger = new _hamburger2.default({
-        onClick: function onClick(event) {
-          _this2.showNavigation();
+        onClick: function onClick() {
+          if (_this2.isOpen) {
+            _this2.hideNavigation();
+          } else {
+            _this2.showNavigation();
+          }
+
           document.addEventListener("click", _this2.clickOutside, false);
         }
       });
@@ -2141,42 +2165,36 @@ exports.default = Hamburger;
 
 /***/ }),
 /* 49 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(50);
 
 /***/ }),
 /* 50 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-__webpack_require__(51);
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 51 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(53);
+__webpack_require__(52);
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2185,13 +2203,19 @@ __webpack_require__(53);
 __webpack_require__(5);
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(56);
+__webpack_require__(55);
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 56 */
@@ -2200,12 +2224,7 @@ __webpack_require__(56);
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 57 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
+/* 57 */,
 /* 58 */,
 /* 59 */,
 /* 60 */,
@@ -2255,8 +2274,7 @@ __webpack_require__(56);
 /* 104 */,
 /* 105 */,
 /* 106 */,
-/* 107 */,
-/* 108 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2280,7 +2298,7 @@ __webpack_require__(36);
 
 __webpack_require__(37);
 
-__webpack_require__(109);
+__webpack_require__(108);
 
 __webpack_require__(38);
 
@@ -2292,17 +2310,17 @@ var _globalHeader = __webpack_require__(45);
 
 var _globalHeader2 = _interopRequireDefault(_globalHeader);
 
-__webpack_require__(50);
+__webpack_require__(49);
 
-__webpack_require__(52);
+__webpack_require__(51);
+
+__webpack_require__(53);
 
 __webpack_require__(54);
 
-__webpack_require__(55);
+__webpack_require__(56);
 
-__webpack_require__(57);
-
-__webpack_require__(111);
+__webpack_require__(110);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2329,22 +2347,22 @@ globalHeader.render();
 doc.className = doc.className.replace("no-js", "js");
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(110);
+__webpack_require__(109);
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

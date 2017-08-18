@@ -314,17 +314,13 @@
     <span class="hljs-attribute">top</span>: <span class="hljs-number">7px</span>;
   }
 
-  <span class="hljs-selector-class">.is-active</span> &amp; {
+  <span class="hljs-selector-class">.is-open</span> &amp; {
     &amp;::before {
-      <span class="hljs-attribute">top</span>: <span class="hljs-number">3px</span>;
-      <span class="hljs-attribute">transform</span>: rotate(<span class="hljs-number">45deg</span>);
-      <span class="hljs-attribute">transform-origin</span>: center;
+      <span class="hljs-attribute">transform</span>: translateY(<span class="hljs-number">3px</span>) rotate(<span class="hljs-number">135deg</span>);
     }
 
     &amp;::after {
-      <span class="hljs-attribute">top</span>: <span class="hljs-number">3px</span>;
-      <span class="hljs-attribute">transform</span>: rotate(-<span class="hljs-number">45deg</span>);
-      <span class="hljs-attribute">transform-origin</span>: center;
+      <span class="hljs-attribute">transform</span>: translateY(-<span class="hljs-number">4px</span>) rotate(<span class="hljs-number">45deg</span>);
     }
   }
 }
@@ -356,7 +352,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.2 KB</span>
+                    <span class="Meta-value">1.1 KB</span>
                 </li>
             </ul>
         </div>

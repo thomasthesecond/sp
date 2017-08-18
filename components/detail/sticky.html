@@ -336,7 +336,7 @@
 <blockquote>
 <p>You must specify a threshold with at least one of <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> for sticky positioning to behave as expected. Otherwise, it will be indistinguishable from relative positioning.</p>
 </blockquote>
-<p>Because browser support for <code>position: sticky;</code> is limited, this feature is considered an enhancement reserved for Tier 1 browsers. If the feature is not supported, the <code>position</code> value will fallback to <code>relative</code>.</p>
+<p>Because browser support for <code>position: sticky;</code> is limited, this feature is considered an enhancement reserved for Tier 1 browsers. If the feature is not supported, the browser will ignore the rule and use the initial value for <code>position</code> which is <code>static</code>.</p>
 <h3 id="resources">Resources</h3>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position#Sticky_positioning">CSS sticky positioning at MDN</a></li>

@@ -157,7 +157,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-e2b24e0fed94f9beae35c27eb42f0c3f-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"GlobalHeader container"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"GlobalHeader container js-global-header"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Logo"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/components/preview/home"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">img</span>
     <span class="hljs-attr">src</span>=<span class="hljs-string">"../../logo@2x.png"</span>
@@ -194,8 +194,6 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Overlay js-overlay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></pre>
         
     </code>
@@ -204,11 +202,10 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-e2b24e0fed94f9beae35c27eb42f0c3f-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"GlobalHeader container"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"GlobalHeader container js-global-header"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"banner"</span>&gt;</span>
   </span><span class="hljs-template-variable">{{ render "<a href="logo.html">@logo</a>" }}</span><span class="xml">
   </span><span class="hljs-template-variable">{{ render "<a href="hamburger.html">@hamburger</a>" }}</span><span class="xml">
   </span><span class="hljs-template-variable">{{ render "<a href="navigation.html">@navigation</a>" }}</span><span class="xml">
-  </span><span class="hljs-template-variable">{{ render "<a href="overlay.html">@overlay</a>" }}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -282,18 +279,21 @@
   <span class="hljs-keyword">constructor</span>(options) {
     <span class="hljs-keyword">this</span>.options = options;
 
+    <span class="hljs-keyword">this</span>.header = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-global-header"</span>);
     <span class="hljs-keyword">this</span>.hamburger = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-hamburger"</span>);
     <span class="hljs-keyword">this</span>.navigation = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-navigation"</span>);
-    <span class="hljs-keyword">this</span>.overlay = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-overlay"</span>);
     <span class="hljs-keyword">this</span>.mql = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(max-width: 619px)"</span>);
 
     <span class="hljs-keyword">this</span>.openClassName = <span class="hljs-string">"is-open"</span>;
+    <span class="hljs-keyword">this</span>.isOpen = <span class="hljs-literal">false</span>;
 
     <span class="hljs-keyword">this</span>.checkScreenSize = <span class="hljs-keyword">this</span>.checkScreenSize.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.hideNavigation = <span class="hljs-keyword">this</span>.hideNavigation.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.showNavigation = <span class="hljs-keyword">this</span>.showNavigation.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.clickOutside = <span class="hljs-keyword">this</span>.clickOutside.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.onEscapePress = <span class="hljs-keyword">this</span>.onEscapePress.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.enableScrolling = <span class="hljs-keyword">this</span>.enableScrolling.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.disableScrolling = <span class="hljs-keyword">this</span>.disableScrolling.bind(<span class="hljs-keyword">this</span>);
   }
 
   checkScreenSize(mql) {
@@ -305,23 +305,28 @@
 
   hideNavigation() {
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.navigation.classList.contains(<span class="hljs-keyword">this</span>.openClassName)) {
+      <span class="hljs-keyword">this</span>.isOpen = <span class="hljs-literal">false</span>;
       <span class="hljs-keyword">this</span>.navigation.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
-      <span class="hljs-keyword">this</span>.overlay.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
+      <span class="hljs-keyword">this</span>.hamburger.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
+      <span class="hljs-keyword">this</span>.enableScrolling();
     }
   }
 
   showNavigation() {
     <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.navigation.classList.contains(<span class="hljs-keyword">this</span>.openClassName)) {
+      <span class="hljs-keyword">this</span>.isOpen = <span class="hljs-literal">true</span>;
       <span class="hljs-keyword">this</span>.navigation.classList.add(<span class="hljs-keyword">this</span>.openClassName);
-      <span class="hljs-keyword">this</span>.overlay.classList.add(<span class="hljs-keyword">this</span>.openClassName);
+      <span class="hljs-keyword">this</span>.hamburger.classList.add(<span class="hljs-keyword">this</span>.openClassName);
+      <span class="hljs-keyword">this</span>.disableScrolling();
     }
   }
 
   clickOutside(event) {
+    <span class="hljs-keyword">const</span> isHeader = <span class="hljs-keyword">this</span>.header.contains(event.target);
     <span class="hljs-keyword">const</span> isHamburger = <span class="hljs-keyword">this</span>.hamburger.contains(event.target);
     <span class="hljs-keyword">const</span> isNavigation = <span class="hljs-keyword">this</span>.navigation.contains(event.target);
 
-    <span class="hljs-keyword">if</span> (!isHamburger &amp;&amp; !isNavigation) {
+    <span class="hljs-keyword">if</span> (!isHeader &amp;&amp; !isHamburger &amp;&amp; !isNavigation) {
       <span class="hljs-keyword">this</span>.hideNavigation();
       <span class="hljs-built_in">document</span>.removeEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.clickOutside, <span class="hljs-literal">false</span>);
     }
@@ -337,10 +342,26 @@
     }
   }
 
+  enableScrolling() {
+    <span class="hljs-built_in">document</span>.documentElement.style = <span class="hljs-literal">null</span>;
+  }
+
+  disableScrolling() {
+    <span class="hljs-built_in">document</span>.documentElement.style.overflow = <span class="hljs-string">"hidden"</span>;
+    <span class="hljs-built_in">document</span>.documentElement.style.position = <span class="hljs-string">"fixed"</span>;
+    <span class="hljs-built_in">document</span>.documentElement.style.top = <span class="hljs-number">0</span>;
+    <span class="hljs-built_in">document</span>.documentElement.style.width = <span class="hljs-string">"100%"</span>;
+  }
+
   render() {
     <span class="hljs-keyword">const</span> hamburger = <span class="hljs-keyword">new</span> Hamburger({
-      <span class="hljs-attr">onClick</span>: <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
-        <span class="hljs-keyword">this</span>.showNavigation();
+      <span class="hljs-attr">onClick</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isOpen) {
+          <span class="hljs-keyword">this</span>.hideNavigation();
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">this</span>.showNavigation();
+        }
+
         <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.clickOutside, <span class="hljs-literal">false</span>);
       }
     });
@@ -369,7 +390,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.1 KB</span>
+                    <span class="Meta-value">2.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -393,13 +414,20 @@
 
 <span class="hljs-selector-class">.GlobalHeader</span> {
   <span class="hljs-attribute">align-items</span>: center;
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
   <span class="hljs-attribute">display</span>: flex;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">48px</span>;
   <span class="hljs-attribute">justify-content</span>: space-between;
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-comment">// width: 100%;</span>
   <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-dropdown</span>;
+
+  @<span class="hljs-keyword">media</span> (max-width: 619px) {
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding-left</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
+    <span class="hljs-attribute">padding-right</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
+  }
 
   @<span class="hljs-keyword">media</span> (min-width: 768px) {
     <span class="hljs-attribute">height</span>: <span class="hljs-number">90px</span>;
@@ -425,7 +453,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">505 Bytes</span>
+                    <span class="Meta-value">683 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -443,7 +471,6 @@
 <span class="hljs-keyword">import</span> <span class="hljs-string">"../hamburger/hamburger.scss"</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">"../logo/logo.scss"</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">"../navigation/navigation.scss"</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">"../overlay/overlay.scss"</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> GlobalHeader;
 </pre>
@@ -462,7 +489,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">248 Bytes</span>
+                    <span class="Meta-value">214 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -507,16 +534,14 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(4)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="logo.html">@<span>logo</span></a>, 
             
                 <a href="hamburger.html">@<span>hamburger</span></a>, 
             
-                <a href="navigation.html">@<span>navigation</span></a>, 
-            
-                <a href="overlay.html">@<span>overlay</span></a>
+                <a href="navigation.html">@<span>navigation</span></a>
             
             </span>
         </li class="Meta-item">
