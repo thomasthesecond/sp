@@ -15,10 +15,15 @@
 }
 
 .SubNavigation {
+  @include fluid-type(
+    $min-font-size: 12,
+    $max-font-size: $font-size-default,
+    $min-width: 600
+  );
+
   background-color: $color-background-default;
   // border-bottom: 1px solid #fff;
   color: $color-text-default;
-  font-size: 12px;
   // height: 81px;
   height: 61px;
   overflow: hidden;
@@ -30,7 +35,6 @@
   // }
 
   @media (min-width: 600px) {
-    font-size: 16px;
     height: 90px;
   }
 
