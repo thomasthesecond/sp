@@ -1,7 +1,6 @@
-<div class="CoverVideo">
-  <video poster="{{ path video.poster }}" preload="auto" loop>
-    <source
-      src="{{ video.src }}"
-      type="{{ video.type }}">
-  </video>
+<div class="CoverVideo js-cover-video"
+  data-src="{{ path coverVideo.src }}"
+  data-type="{{ coverVideo.type }}"
+  data-autoplay="{{ coverVideo.autoplay }}">
+  {{> @image image=coverVideo.poster }}
 </div>
