@@ -15,6 +15,7 @@ import "../components/_02-icons/icons.scss";
 import "../components/04-layout/layout.scss";
 
 // Import components
+import Banner from "../components/03-components/banner";
 import "../components/03-components/blockquote";
 import "../components/03-components/breadcrumbs";
 import "../components/03-components/button";
@@ -24,7 +25,6 @@ import "../components/03-components/feature";
 import "../components/03-components/feed";
 import "../components/03-components/filter";
 import GlobalFooter from "../components/03-components/global-footer";
-import GlobalHeader from "../components/03-components/global-header";
 import "../components/03-components/hamburger";
 import "../components/03-components/help-tip";
 import "../components/03-components/highlight";
@@ -78,9 +78,9 @@ if (document.querySelector(".GlobalFooter")) {
   globalFooter.render();
 }
 
-if (document.querySelector(".GlobalHeader")) {
-  const globalHeader = new GlobalHeader();
-  globalHeader.render();
+if (document.querySelector(".Banner")) {
+  const banner = new Banner();
+  banner.render();
 }
 
 if (document.querySelector(".js-location-finder")) {

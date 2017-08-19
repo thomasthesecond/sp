@@ -2,12 +2,12 @@
 
 import Hamburger from "../hamburger";
 
-export default class GlobalHeader {
+export default class Banner {
   constructor(options) {
     this.options = options;
 
     this.document = document.documentElement;
-    this.header = document.querySelector(".js-global-header");
+    this.header = document.querySelector(".js-banner");
     this.hamburger = document.querySelector(".js-hamburger");
     this.navigation = document.querySelector(".js-navigation");
     this.mql = window.matchMedia("(max-width: 619px)");

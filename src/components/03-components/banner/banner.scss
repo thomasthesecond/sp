@@ -3,11 +3,11 @@
 @import "../../../assets/scss/mixins";
 
 /**
- * Component: Global Header
+ * Component: Banner
  * @type Organism
  */
 
-.GlobalHeader {
+.Banner {
   background-color: $color-background-default;
   height: 48px;
   // width: 100%;
@@ -19,7 +19,7 @@
   }
 }
 
-.GlobalHeader .container {
+.Banner .container {
   align-items: center;
   display: flex;
   height: 100%;
@@ -27,6 +27,6 @@
   position: relative;
 }
 
-.GlobalHeader--transparent:not(.is-open) {
+.Banner--transparent:not(.is-open) {
   background-color: transparent;
 }

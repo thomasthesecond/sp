@@ -15,9 +15,9 @@ import "../components/04-layout/layout.scss";
 
 // Import global components
 import "../components/03-components/_skip-link";
+import Banner from "../components/03-components/banner";
 import "../components/03-components/button";
 import GlobalFooter from "../components/03-components/global-footer";
-import GlobalHeader from "../components/03-components/global-header";
 import "../components/03-components/hr";
 import "../components/03-components/input";
 import "../components/03-components/more-link";
@@ -30,10 +30,10 @@ import "./scss/print.scss";
 console.info("Main loaded");
 
 const globalFooter = new GlobalFooter();
-const globalHeader = new GlobalHeader();
+const banner = new Banner();
 const doc = document.documentElement;
 
 globalFooter.render();
-globalHeader.render();
+banner.render();
 
 doc.className = doc.className.replace("no-js", "js");

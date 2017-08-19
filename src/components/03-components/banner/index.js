@@ -1,7 +1,7 @@
-import GlobalHeader from "./global-header.js";
-import "./global-header.scss";
+import Banner from "./banner.js";
+import "./banner.scss";
 import "../hamburger/hamburger.scss";
 import "../logo/logo.scss";
 import "../navigation/navigation.scss";
 
-export default GlobalHeader;
+export default Banner;
