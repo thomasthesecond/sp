@@ -1,6 +1,6 @@
-<footer class="GlobalFooter" role="contentinfo">
+<footer class="Contentinfo" role="contentinfo">
   <div class="container">
-    <div class="GlobalFooter-location">
+    <div class="Contentinfo-location">
       <h4>{{ location.heading }}</h4>
 
       <img
@@ -13,12 +13,12 @@
 
       {{ render "@location-select" }}
 
-      <a class="GlobalFooter-locationButton Button Button--dark" href="/locations">
+      <a class="Contentinfo-locationButton Button Button--dark" href="/locations">
         Find a location
       </a>
     </div>
 
-    <div class="GlobalFooter-contact">
+    <div class="Contentinfo-contact">
       <h4>{{ contact.heading }}</h4>
 
       <p>
@@ -29,8 +29,8 @@
       </p>
     </div>
 
-    <div class="GlobalFooter-navigation" id="footer-navigation">
-      <nav class="GlobalFooter-links">
+    <div class="Contentinfo-navigation" id="footer-navigation">
+      <nav class="Contentinfo-links">
         {{#each navigation.links}}
           <span>
             <a href="{{ this.url }}">
@@ -40,7 +40,7 @@
         {{/each}}
       </nav>
 
-      <div class="GlobalFooter-copyright">
+      <div class="Contentinfo-copyright">
         &copy;2017 <a href="/">Surgery Partners</a>
       </div>
     </div>

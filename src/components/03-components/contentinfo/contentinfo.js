@@ -2,7 +2,7 @@
 
 import LocationSelect from "../location-select";
 
-export default class GlobalFooter {
+export default class Contentinfo {
   constructor(options) {
     this.options = options;
   }

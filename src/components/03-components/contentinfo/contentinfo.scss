@@ -3,7 +3,7 @@
 @import "../../../assets/scss/mixins";
 
 /**
- * Component: Global footer
+ * Component: Contentinfo
  * @type Organism
  */
 
@@ -24,7 +24,7 @@ $location-column-width: column-width($location-container-width);
 $contact-column-margin: column-width($contact-margin);
 $contact-column-width: column-width(($contact-width + $contact-padding));
 
-.GlobalFooter {
+.Contentinfo {
   @include fluid-type(
     $min-font-size: 12,
     $max-font-size: 16,
@@ -42,7 +42,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   }
 }
 
-.GlobalFooter .container {
+.Contentinfo .container {
   overflow: hidden;
 
   @supports (display: grid) {
@@ -57,7 +57,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   }
 }
 
-.GlobalFooter h4 {
+.Contentinfo h4 {
   @include fluid-type(
     $min-font-size: $font-size-default,
     $max-font-size: $font-size-heading-2
@@ -70,7 +70,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   margin-top: 0;
 }
 
-.GlobalFooter a:not(.Button) {
+.Contentinfo a:not(.Button) {
   color: inherit;
   text-decoration: none;
   transition: color 200ms;
@@ -82,7 +82,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   }
 }
 
-.GlobalFooter-location {
+.Contentinfo-location {
   @media (min-width: 800px) {
     align-items: flex-end;
     display: flex;
@@ -213,7 +213,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   }
 }
 
-.GlobalFooter-contact {
+.Contentinfo-contact {
   line-height: (36 / 16);
 
   @media (max-width: 799px) {
@@ -240,12 +240,12 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   }
 }
 
-.GlobalFooter-contact p {
+.Contentinfo-contact p {
   margin-bottom: 0;
   margin-top: 19px;
 }
 
-.GlobalFooter-navigation {
+.Contentinfo-navigation {
   border-top: 1px solid rgba(#bfd0d8, 0.2);
   line-height: 1;
   margin-top: 32px;
@@ -280,7 +280,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   }
 }
 
-.GlobalFooter-links {
+.Contentinfo-links {
   @media (max-width: 649px) {
     overflow: hidden;
   }
@@ -330,7 +330,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   }
 }
 
-.GlobalFooter-copyright {
+.Contentinfo-copyright {
   @media (max-width: 319px) {
     margin-top: 0;
   }

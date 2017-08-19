@@ -24,7 +24,7 @@ import CoverVideo from "../components/03-components/cover-video";
 import "../components/03-components/feature";
 import "../components/03-components/feed";
 import "../components/03-components/filter";
-import GlobalFooter from "../components/03-components/global-footer";
+import Contentinfo from "../components/03-components/contentinfo";
 import "../components/03-components/hamburger";
 import "../components/03-components/help-tip";
 import "../components/03-components/highlight";
@@ -73,9 +73,9 @@ if (document.querySelector(".CoverVideo")) {
   coverVideo.render();
 }
 
-if (document.querySelector(".GlobalFooter")) {
-  const globalFooter = new GlobalFooter();
-  globalFooter.render();
+if (document.querySelector(".Contentinfo")) {
+  const contentinfo = new Contentinfo();
+  contentinfo.render();
 }
 
 if (document.querySelector(".Banner")) {
