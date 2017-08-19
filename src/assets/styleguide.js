@@ -19,7 +19,7 @@ import "../components/03-components/blockquote";
 import "../components/03-components/breadcrumbs";
 import "../components/03-components/button";
 import "../components/03-components/cover-photo";
-import "../components/03-components/cover-video";
+import CoverVideo from "../components/03-components/cover-video";
 import "../components/03-components/feature";
 import "../components/03-components/feed";
 import "../components/03-components/filter";
@@ -67,6 +67,11 @@ import "../components/03-components/timeline";
 import "../components/03-components/utility-links";
 
 import "./scss/utils.scss";
+
+if (document.querySelector(".CoverVideo")) {
+  const coverVideo = new CoverVideo();
+  coverVideo.render();
+}
 
 if (document.querySelector(".GlobalFooter")) {
   const globalFooter = new GlobalFooter();
