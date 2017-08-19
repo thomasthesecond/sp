@@ -7,7 +7,7 @@
  * @type page
  */
 
-.GlobalHeader {
+.Banner {
   @media (max-width: 619px) {
     left: 0;
     position: absolute;
@@ -16,7 +16,7 @@
   }
 }
 
-.GlobalHeader:not(.is-open) {
+.Banner:not(.is-open) {
   @media (max-width: 619px) {
     background-color: transparent;
   }
@@ -89,7 +89,7 @@
   }
 }
 
-.GlobalFooter {
+.Contentinfo {
   margin-top: 136px;
 
   @media (min-width: 544px) {
