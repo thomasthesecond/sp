@@ -38,6 +38,10 @@
   color: #fff;
 }
 
+.MoreLink--white:hover, .MoreLink--white:active, .MoreLink--white:focus {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .MoreLink .icon {
   display: block;
   font-size: 24px;

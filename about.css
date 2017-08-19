@@ -833,6 +833,10 @@
   min-height: 660px;
 }
 
+.Feature .container {
+  z-index: 1;
+}
+
 .Feature-content {
   -webkit-box-align: center;
       -ms-flex-align: center;

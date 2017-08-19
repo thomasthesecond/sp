@@ -38,6 +38,10 @@
   color: #fff;
 }
 
+.MoreLink--white:hover, .MoreLink--white:active, .MoreLink--white:focus {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .MoreLink .icon {
   display: block;
   font-size: 24px;
@@ -638,6 +642,10 @@
   height: 82.5vw;
   max-height: 1000px;
   min-height: 660px;
+}
+
+.Feature .container {
+  z-index: 1;
 }
 
 .Feature-content {

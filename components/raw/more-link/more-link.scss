@@ -45,9 +45,15 @@
 }
 
 .MoreLink--white {
-  color: #fff;
+  color: $color-text-overlay;
   // font-size: 16px;
   // font-weight: $font-weight-semibold;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: rgba($color-text-overlay, .8);
+  }
 }
 
 .MoreLink .icon {
