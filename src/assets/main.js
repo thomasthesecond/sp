@@ -17,7 +17,7 @@ import "../components/04-layout/layout.scss";
 import "../components/03-components/_skip-link";
 import Banner from "../components/03-components/banner";
 import "../components/03-components/button";
-import GlobalFooter from "../components/03-components/global-footer";
+import Contentinfo from "../components/03-components/contentinfo";
 import "../components/03-components/hr";
 import "../components/03-components/input";
 import "../components/03-components/more-link";
@@ -29,11 +29,11 @@ import "./scss/print.scss";
 
 console.info("Main loaded");
 
-const globalFooter = new GlobalFooter();
+const contentinfo = new Contentinfo();
 const banner = new Banner();
 const doc = document.documentElement;
 
-globalFooter.render();
+contentinfo.render();
 banner.render();
 
 doc.className = doc.className.replace("no-js", "js");
