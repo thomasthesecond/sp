@@ -1,6 +1,4 @@
 {
-  "title": "Helper classes",
-  "status": "ready",
   "context": {
     "class": {
       "hidden": "Hide content visually and from screen readers; can also use the HTML5 boolean `hidden`",
@@ -14,7 +12,8 @@
       "float-right": "Float content right",
       "text-tiny": "Sets font size to “tiny”",
       "text-positive": "Colors text green; used to signal a positive action",
-      "text-negative": "Colors text red; used to signal a negative action"
+      "text-negative": "Colors text red; used to signal a negative action",
+      "no-scroll": "Disable scrolling; typically only used for root `html` element"
     }
   }
 }
