@@ -1,42 +1,62 @@
 {
-  "context": {
-    "masthead": {
-      "title": "About us",
-      "coverPhoto": {
-        "title": "A group of ER doctors smiling happily",
-        "src": "/about-masthead-sm.jpg",
-        "srcset": [
-          {
-            "src": "/about-masthead-sm@2x.jpg",
-            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
-          },
-          {
-            "src": "/about-masthead@2x.jpg",
-            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
-          },
-          {
+  "default": "image",
+  "context": {},
+  "variants": [
+    {
+      "name": "image",
+      "label": "Image",
+      "context": {
+        "masthead": {
+          "title": "About us",
+          "coverPhoto": {
+            "title": "A group of ER doctors smiling happily",
             "src": "/about-masthead-sm.jpg",
-            "media": "(max-width: 544px)"
-          },
-          {
-            "src": "/about-masthead.jpg",
-            "media": ""
+            "srcset": [
+              {
+                "src": "/about-masthead-sm@2x.jpg",
+                "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+              },
+              {
+                "src": "/about-masthead@2x.jpg",
+                "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
+              },
+              {
+                "src": "/about-masthead-sm.jpg",
+                "media": "(max-width: 544px)"
+              },
+              {
+                "src": "/about-masthead.jpg",
+                "media": ""
+              }
+            ]
           }
-        ]
-      },
-      "tagline": {
-        "first": "We operate",
-        "second": "differently"
-      },
-      "link": {
-        "label": "Learn more",
-        "url": "/"
-      },
-      "video": {
-        "src": "https://media.lonelyplanet.com/mastheads/videos/new-york-city.mp4",
-        "type": "video/mp4",
-        "poster": "/masthead-image.jpg"
+        }
+      }
+    },
+    {
+      "name": "video",
+      "label": "Video",
+      "context": {
+        "masthead": {
+          "tagline": {
+            "first": "We operate",
+            "second": "differently"
+          },
+          "coverVideo": {
+            "src": "/home-video.mp4",
+            "type": "video/mp4",
+            "poster": {
+              "title": "",
+              "src": "/home-video-poster.jpg"
+            },
+            "autoplay": false
+          },
+          "link": {
+            "label": "Learn more",
+            "url": "/"
+          }
+        }
       }
     }
-  }
+  ]
 }
