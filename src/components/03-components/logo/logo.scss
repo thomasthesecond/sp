@@ -12,6 +12,12 @@
   display: block;
   max-width: 256px;
   min-width: 148px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: currentColor;
+  }
 }
 
 .Logo-icon {
