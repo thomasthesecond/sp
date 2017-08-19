@@ -24,6 +24,10 @@
   min-height: 660px;
 }
 
+.Feature .container {
+  z-index: $z-index-default;
+}
+
 .Feature-content {
   align-items: center;
   display: flex;
