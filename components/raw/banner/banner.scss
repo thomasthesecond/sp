@@ -1,0 +1,29 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Banner
+ * @type Organism
+ */
+
+.Banner {
+  background-color: $color-background-default;
+  height: #{(90 / $max-width) * 100vw};
+  max-height: 90px;
+  min-height: 48px;
+  transition: background-color 200ms;
+  z-index: $z-index-dropdown;
+}
+
+.Banner--transparent:not(.is-open) {
+  background-color: transparent;
+}
+
+.Banner .container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+}

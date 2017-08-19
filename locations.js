@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 117);
+/******/ 	return __webpack_require__(__webpack_require__.s = 119);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -79,27 +79,27 @@
 
 /***/ }),
 
-/***/ 117:
+/***/ 119:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(118);
+__webpack_require__(120);
 
 var _locationFinder = __webpack_require__(18);
 
 var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
-__webpack_require__(65);
-
 __webpack_require__(67);
 
 __webpack_require__(69);
 
+__webpack_require__(71);
+
 __webpack_require__(3);
 
-__webpack_require__(71);
+__webpack_require__(73);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -133,17 +133,17 @@ console.info("Locations loaded");
 
 /***/ }),
 
-/***/ 118:
+/***/ 120:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(119);
+__webpack_require__(121);
 
 /***/ }),
 
-/***/ 119:
+/***/ 121:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -267,23 +267,6 @@ __webpack_require__(2);
 
 /***/ }),
 
-/***/ 65:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(66);
-
-/***/ }),
-
-/***/ 66:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -329,6 +312,23 @@ __webpack_require__(72);
 /***/ }),
 
 /***/ 72:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 73:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(74);
+
+/***/ }),
+
+/***/ 74:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

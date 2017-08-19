@@ -1,67 +1,28 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr" class="no-js">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-    window.frctl = {
-        env: 'static'
-    };
-    </script>
-    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
-    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
-
-<link rel="stylesheet" href="../../themes/mandelbrot/css/navy.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Error rendering component masthead--video | Surgery Partners Component Library</title>
-
-</head>
-<body>
-
-
-
-<div class="Frame Frame--full" id="frame">
-
-
-<div class="Error Error--render">
-    <h4 class="Error-title">Error rendering component</h4>
-    <div class="Error-message Prose">
-        <p>Cannot read property &#39;includes&#39; of undefined</p>
-
+<header class="Masthead Masthead--video">
+  <div class="container">
+    <div class="Tagline Tagline--white heading-masthead-super">
+      We operate
+      <b>differently</b>
     </div>
+    <a class="MoreLink MoreLink--white" href="/">
+        Learn more
     
-    <code class="Error-stack">
-        <pre>TypeError: Cannot read property 'includes' of undefined
-    at Object.staticPath (/Users/tomc/Github/sp/node_modules/@frctl/handlebars/src/helpers/path.js:14:17)
-    at Object.helperWrapper (/Users/tomc/Github/sp/node_modules/promised-handlebars/index.js:130:23)
-    at Object.<anonymous> (/Users/tomc/Github/sp/node_modules/promised-handlebars/lib/utils.js:29:28)
-    at Object.eval [as main] (eval at createFunctionContext (/Users/tomc/Github/sp/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:254:23), <anonymous>:6:81)
-    at main (/Users/tomc/Github/sp/node_modules/handlebars/dist/cjs/handlebars/runtime.js:175:32)
-    at ret (/Users/tomc/Github/sp/node_modules/handlebars/dist/cjs/handlebars/runtime.js:178:12)
-    at ret (/Users/tomc/Github/sp/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js:526:21)
-    at prepareAndResolveMarkers (/Users/tomc/Github/sp/node_modules/promised-handlebars/index.js:92:17)
-    at /Users/tomc/Github/sp/node_modules/promised-handlebars/lib/utils.js:29:28
-    at Object.invokePartial (/Users/tomc/Github/sp/node_modules/handlebars/dist/cjs/handlebars/runtime.js:283:12)
-    at Object.hbs.VM.invokePartial (/Users/tomc/Github/sp/node_modules/@frctl/handlebars/src/adapter.js:73:38)
-    at Object.hbs.VM.invokePartial (/Users/tomc/Github/sp/node_modules/@frctl/handlebars/src/adapter.js:73:38)
-    at Object.invokePartialWrapper [as invokePartial] (/Users/tomc/Github/sp/node_modules/handlebars/dist/cjs/handlebars/runtime.js:68:39)
-    at Object.eval [as main] (eval at createFunctionContext (/Users/tomc/Github/sp/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js:254:23), <anonymous>:9:28)
-    at main (/Users/tomc/Github/sp/node_modules/handlebars/dist/cjs/handlebars/runtime.js:175:32)
-    at ret (/Users/tomc/Github/sp/node_modules/handlebars/dist/cjs/handlebars/runtime.js:178:12)</pre>
-    </code>
     
-</div>
+      <svg class="icon">
+        <use xlink:href="#icon-arrow"></use>
+      </svg>
+    </a>
+  </div>
 
+  <div class="CoverVideo js-cover-video"
+    data-src="../../home-video.mp4"
+    data-type="video/mp4"
+    data-autoplay="">
+    <img
+      src="../../home-video-poster.jpg"
+      alt="">
+  </div>
+</header>
 
-</div>
-
-
-
-
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.0"></script>
-
-
-
-</body>
-</html>

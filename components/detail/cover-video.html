@@ -71,7 +71,7 @@
 
 <div class="Status Status--tag">
 
-<label class="Status-label" style="background-color: #FF9233; border-color: #FF9233;">WIP</label>
+<label class="Status-label" style="background-color: #29CC29; border-color: #29CC29;">Ready</label>
 
 </div>
 
@@ -157,12 +157,8 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-9d17492354f8cf3dc4cd52e5655db548-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverVideo"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">"../../masthead-image.jpg"</span> <span class="hljs-attr">preload</span>=<span class="hljs-string">"auto"</span> <span class="hljs-attr">loop</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">source</span>
-      <span class="hljs-attr">src</span>=<span class="hljs-string">"https://media.lonelyplanet.com/mastheads/videos/new-york-city.mp4"</span>
-      <span class="hljs-attr">type</span>=<span class="hljs-string">"video/mp4"</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverVideo js-cover-video"</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"../../home-video.mp4"</span> <span class="hljs-attr">data-type</span>=<span class="hljs-string">"video/mp4"</span> <span class="hljs-attr">data-autoplay</span>=<span class="hljs-string">""</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../home-video-poster.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -171,12 +167,11 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-9d17492354f8cf3dc4cd52e5655db548-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverVideo"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path video.poster }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">preload</span>=<span class="hljs-string">"auto"</span> <span class="hljs-attr">loop</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">source</span>
-      <span class="hljs-attr">src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ video.src }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
-      <span class="hljs-attr">type</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ video.type }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverVideo js-cover-video"</span>
+  <span class="hljs-attr">data-src</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ path coverVideo.src }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+  <span class="hljs-attr">data-type</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ coverVideo.type }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+  <span class="hljs-attr">data-autoplay</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ coverVideo.autoplay }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+  </span><span class="hljs-template-variable">{{&gt; <a href="image.html">@image</a> image=coverVideo.poster }}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -187,10 +182,14 @@
         
             
             <pre>{
-  <span class="hljs-attr">"video"</span>: {
-    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://media.lonelyplanet.com/mastheads/videos/new-york-city.mp4"</span>,
+  <span class="hljs-attr">"coverVideo"</span>: {
+    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/home-video.mp4"</span>,
     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"video/mp4"</span>,
-    <span class="hljs-attr">"poster"</span>: <span class="hljs-string">"/masthead-image.jpg"</span>
+    <span class="hljs-attr">"poster"</span>: {
+      <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/home-video-poster.jpg"</span>
+    },
+    <span class="hljs-attr">"autoplay"</span>: <span class="hljs-literal">null</span>
   }
 }</pre>
             
@@ -209,6 +208,8 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
+                <option value="file-c3798ac08e37e6cc1a63fae60a032633">cover-video.js</option>
+                
                 <option value="file-5cd8af374bf2bf6b217339049d8497e8">cover-video.scss</option>
                 
                 <option value="file-5cac33d4886bd6b5c0507dc8c35d270a">index.js</option>
@@ -217,7 +218,114 @@
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-5cd8af374bf2bf6b217339049d8497e8" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-c3798ac08e37e6cc1a63fae60a032633" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code">
+                                <pre><span class="hljs-meta">"use strict"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CoverVideo</span> </span>{
+  <span class="hljs-keyword">constructor</span>(options) {
+    <span class="hljs-keyword">this</span>.options = options;
+
+    <span class="hljs-keyword">this</span>.container = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-cover-video"</span>);
+    <span class="hljs-keyword">this</span>.image = <span class="hljs-keyword">this</span>.container.querySelector(<span class="hljs-string">"img"</span>);
+    <span class="hljs-keyword">this</span>.video = <span class="hljs-keyword">this</span>.container.querySelector(<span class="hljs-string">"video"</span>);
+    <span class="hljs-keyword">this</span>.mql = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(min-width: 768px)"</span>);
+
+    <span class="hljs-keyword">this</span>.checkScreenSize = <span class="hljs-keyword">this</span>.checkScreenSize.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.createVideo = <span class="hljs-keyword">this</span>.createVideo.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.pauseVideo = <span class="hljs-keyword">this</span>.pauseVideo.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.addVideo = <span class="hljs-keyword">this</span>.addVideo.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.removeVideo = <span class="hljs-keyword">this</span>.removeVideo.bind(<span class="hljs-keyword">this</span>);
+  }
+
+  checkScreenSize(mql) {
+    <span class="hljs-keyword">if</span> (mql.matches) {
+      <span class="hljs-keyword">this</span>.addVideo();
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">this</span>.removeVideo();
+    }
+  }
+
+  createVideo() {
+    <span class="hljs-keyword">const</span> src = <span class="hljs-keyword">this</span>.container.dataset.src;
+    <span class="hljs-keyword">const</span> type = <span class="hljs-keyword">this</span>.container.dataset.type;
+
+    <span class="hljs-keyword">this</span>.video = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"video"</span>);
+    <span class="hljs-keyword">this</span>.video.setAttribute(<span class="hljs-string">"poster"</span>, <span class="hljs-keyword">this</span>.image.src);
+    <span class="hljs-keyword">this</span>.video.setAttribute(<span class="hljs-string">"preload"</span>, <span class="hljs-string">"auto"</span>);
+    <span class="hljs-keyword">this</span>.video.setAttribute(<span class="hljs-string">"loop"</span>, <span class="hljs-string">""</span>);
+    <span class="hljs-keyword">this</span>.video.setAttribute(<span class="hljs-string">"muted"</span>, <span class="hljs-string">""</span>);
+
+    <span class="hljs-keyword">const</span> source = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"source"</span>);
+    source.setAttribute(<span class="hljs-string">"src"</span>, src);
+    source.setAttribute(<span class="hljs-string">"type"</span>, type);
+
+    <span class="hljs-keyword">this</span>.video.appendChild(source);
+
+    <span class="hljs-keyword">this</span>.video.addEventListener(<span class="hljs-string">"click"</span>, (event) =&gt; {
+      <span class="hljs-keyword">this</span>.pauseVideo(event.target);
+    });
+  }
+
+  pauseVideo(video) {
+    <span class="hljs-keyword">if</span> (video.paused) {
+      video.play();
+    } <span class="hljs-keyword">else</span> {
+      video.pause();
+    }
+  }
+
+  addVideo() {
+    <span class="hljs-keyword">const</span> autoplay = !!<span class="hljs-keyword">this</span>.container.dataset.autoplay;
+    <span class="hljs-keyword">this</span>.container.replaceChild(<span class="hljs-keyword">this</span>.video, <span class="hljs-keyword">this</span>.image);
+
+    <span class="hljs-keyword">if</span> (autoplay) {
+      <span class="hljs-keyword">this</span>.video.play();
+    }
+  }
+
+  removeVideo() {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.video &amp;&amp; <span class="hljs-keyword">this</span>.video.parentNode) {
+      <span class="hljs-keyword">this</span>.video.currentTime = <span class="hljs-number">0</span>;
+      <span class="hljs-keyword">this</span>.video.removeEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.pauseVideo);
+      <span class="hljs-keyword">this</span>.container.replaceChild(<span class="hljs-keyword">this</span>.image, <span class="hljs-keyword">this</span>.video);
+    }
+  }
+
+  render() {
+    <span class="hljs-keyword">this</span>.createVideo();
+    <span class="hljs-keyword">this</span>.checkScreenSize(<span class="hljs-keyword">this</span>.mql);
+    <span class="hljs-keyword">this</span>.mql.addListener(<span class="hljs-keyword">this</span>.checkScreenSize);
+  }
+}
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/cover-video/cover-video.js"><span>/components/raw/cover-video/cover-video.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/components/03-components/cover-video/cover-video.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">2 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-5cd8af374bf2bf6b217339049d8497e8" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -241,7 +349,6 @@
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-below</span>;
 
   &amp;::after {
     <span class="hljs-attribute">background</span>: linear-gradient(to bottom, <span class="hljs-number">#b5955d</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#5e91a1</span> <span class="hljs-number">100%</span>);
@@ -249,12 +356,14 @@
     <span class="hljs-attribute">display</span>: block;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
     <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.26</span>;
+    <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">26</span>;
+    <span class="hljs-attribute">pointer-events</span>: none;
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   }
 
+  <span class="hljs-selector-tag">img</span>,
   <span class="hljs-selector-tag">video</span> {
     <span class="hljs-attribute">display</span>: block;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
@@ -278,7 +387,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">633 Bytes</span>
+                    <span class="Meta-value">638 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -291,7 +400,10 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
-                                <pre><span class="hljs-keyword">import</span> <span class="hljs-string">"./cover-video.scss"</span>;
+                                <pre><span class="hljs-keyword">import</span> CoverVideo <span class="hljs-keyword">from</span> <span class="hljs-string">"./cover-video.js"</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">"./cover-video.scss"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> CoverVideo;
 </pre>
                             </code>
                             
@@ -308,7 +420,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">29 Bytes</span>
+                    <span class="Meta-value">100 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -351,6 +463,15 @@
             <strong class="Meta-key">Filesystem Path:</strong>
             <span class="Meta-value">src/components/03-components/cover-video/cover-video.hbs</span>
         </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="image.html">@<span>image</span></a>
+            
+            </span>
+        </li class="Meta-item">
         
         
         <li class="Meta-item">
@@ -509,80 +630,8 @@
         </li>
         
     
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="z-index.html" data-pjax>
-                <span>z-index</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="spacing.html" data-pjax>
-                <span>Spacing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
 
             </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="helper-classes.html" data-pjax>
-                <span>Helper Classes</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
         </li>
         
     
@@ -596,6 +645,30 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="banner.html" data-pjax>
+                <span>Banner</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         
@@ -760,6 +833,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="contentinfo.html" data-pjax>
+                <span>Contentinfo</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="cover-photo.html" data-pjax>
                 <span>Cover Photo</span>
                 
@@ -793,7 +890,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -898,54 +995,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="filter.html" data-pjax>
                 <span>Filter</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="global-footer.html" data-pjax>
-                <span>Global Footer</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="global-header.html" data-pjax>
-                <span>Global Header</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1755,8 +1804,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="masthead--default.html" data-pjax>
-                <span>Default</span>
+            <a class="Tree-entityLink" href="masthead--image.html" data-pjax>
+                <span>Image</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3319,9 +3368,177 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
+                <span>Design Tokens</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/accessibility.html" data-pjax>
+                <span>Accessibility</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/code-style.html" data-pjax>
+                <span>Code Style</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/helper-classes.html" data-pjax>
+                <span>Helper Classes</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/icons.html" data-pjax>
+                <span>Icons</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/open-graph.html" data-pjax>
+                <span>Open Graph</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/schema.html" data-pjax>
+                <span>Schema</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         

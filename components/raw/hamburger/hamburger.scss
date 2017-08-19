@@ -60,12 +60,12 @@
 
 // Implementation detail
 
-.GlobalHeader .Hamburger {
-  @media (max-width: 619px) {
+.Banner .Hamburger {
+  @media (max-width: $mq-max-banner) {
     margin-right: -14px;
   }
 
-  @media (min-width: 620px) {
+  @media (min-width: $mq-min-banner) {
     display: none;
   }
 }

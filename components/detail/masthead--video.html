@@ -51,10 +51,6 @@
 
     
     
-        
-        
-        
-    
 
 <div class="Pen" data-behaviour="pen" id="pen-22ffdbbcdb7704e44f799a5dbd063008">
 
@@ -87,16 +83,14 @@
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
-<div class="Error Error--render">
-    <h4 class="Error-title">Error rendering component</h4>
-    <div class="Error-message Prose">
-        <p>Cannot read property &#39;includes&#39; of undefined</p>
-
-    </div>
-    
-</div>
-
-            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/masthead--video.html"
+                sandbox="allow-same-origin allow-scripts allow-forms"
+                 style=""
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
         </div>
         <div class="Preview-handle" data-role="resize-handle"></div>
         <div class="Preview-overlay"></div>
@@ -163,7 +157,26 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-22ffdbbcdb7704e44f799a5dbd063008-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><!-- Error rendering component:  --></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Masthead Masthead--video"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Tagline Tagline--white heading-masthead-super"</span>&gt;</span>
+            We operate
+            <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>differently<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"MoreLink MoreLink--white"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
+        Learn more
+    
+    
+      <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverVideo js-cover-video"</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"../../home-video.mp4"</span> <span class="hljs-attr">data-type</span>=<span class="hljs-string">"video/mp4"</span> <span class="hljs-attr">data-autoplay</span>=<span class="hljs-string">""</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../home-video-poster.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -177,7 +190,7 @@
     </span><span class="hljs-template-variable">{{&gt; <a href="more-link--white.html">@more-link--white</a> link=masthead.link }}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  </span><span class="hljs-template-variable">{{&gt; <a href="cover-video.html">@cover-video</a> video=masthead.video }}</span><span class="xml">
+  </span><span class="hljs-template-variable">{{&gt; <a href="cover-video.html">@cover-video</a> coverVideo=masthead.coverVideo }}</span><span class="xml">
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></span></pre>
     </code>
 </div>
@@ -188,47 +201,23 @@
         
             
             <pre>{
-  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"About us"</span>,
-  <span class="hljs-attr">"coverPhoto"</span>: {
-    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/masthead-image.jpg"</span>,
-    <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>
-  },
-  <span class="hljs-attr">"tagline"</span>: {
-    <span class="hljs-attr">"first"</span>: <span class="hljs-string">"We operate"</span>,
-    <span class="hljs-attr">"second"</span>: <span class="hljs-string">"differently"</span>
-  },
-  <span class="hljs-attr">"link"</span>: {
-    <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Learn more"</span>,
-    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"/"</span>
-  },
-  <span class="hljs-attr">"video"</span>: {
-    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"https://media.lonelyplanet.com/mastheads/videos/new-york-city.mp4"</span>,
-    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"video/mp4"</span>,
-    <span class="hljs-attr">"poster"</span>: <span class="hljs-string">"/masthead-image.jpg"</span>
-  },
   <span class="hljs-attr">"masthead"</span>: {
-    <span class="hljs-attr">"title"</span>: <span class="hljs-string">"About us"</span>,
-    <span class="hljs-attr">"image"</span>: {
-      <span class="hljs-attr">"sizes"</span>: [
-        {
-          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/masthead-image@2x.jpg x2"</span>,
-          <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>
-        },
-        {
-          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/masthead-image.jpg x1"</span>,
-          <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>
-        },
-        {
-          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/masthead-image-sm@2x.jpg x2"</span>,
-          <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>
-        },
-        {
-          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/masthead-image-sm.jpg x1"</span>,
-          <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>
-        }
-      ],
-      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/masthead-image.jpg"</span>,
-      <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>
+    <span class="hljs-attr">"tagline"</span>: {
+      <span class="hljs-attr">"first"</span>: <span class="hljs-string">"We operate"</span>,
+      <span class="hljs-attr">"second"</span>: <span class="hljs-string">"differently"</span>
+    },
+    <span class="hljs-attr">"coverVideo"</span>: {
+      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/home-video.mp4"</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"video/mp4"</span>,
+      <span class="hljs-attr">"poster"</span>: {
+        <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/home-video-poster.jpg"</span>
+      },
+      <span class="hljs-attr">"autoplay"</span>: <span class="hljs-literal">null</span>
+    },
+    <span class="hljs-attr">"link"</span>: {
+      <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Learn more"</span>,
+      <span class="hljs-attr">"url"</span>: <span class="hljs-string">"/"</span>
     }
   }
 }</pre>
@@ -313,6 +302,7 @@
   <span class="hljs-attribute">justify-content</span>: center;
   <span class="hljs-attribute">max-height</span>: <span class="hljs-number">466px</span>;
   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">178px</span>;
+  <span class="hljs-attribute">overflow</span>: hidden;
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
@@ -357,7 +347,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">739 Bytes</span>
+                    <span class="Meta-value">759 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -383,8 +373,8 @@
             <strong class="Meta-key">Variants <em class="Meta-count">(2)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
-                <a href="masthead--default.html">
-                    <span>Default</span>
+                <a href="masthead--image.html">
+                    <span>Image</span>
                 </a>, 
             
                 <a href="">
@@ -586,80 +576,8 @@
         </li>
         
     
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="z-index.html" data-pjax>
-                <span>z-index</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="spacing.html" data-pjax>
-                <span>Spacing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
 
             </ul>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="helper-classes.html" data-pjax>
-                <span>Helper Classes</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
         </li>
         
     
@@ -673,6 +591,30 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="banner.html" data-pjax>
+                <span>Banner</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         
@@ -837,6 +779,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="contentinfo.html" data-pjax>
+                <span>Contentinfo</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="cover-photo.html" data-pjax>
                 <span>Cover Photo</span>
                 
@@ -870,7 +836,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -975,54 +941,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="filter.html" data-pjax>
                 <span>Filter</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="global-footer.html" data-pjax>
-                <span>Global Footer</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="global-header.html" data-pjax>
-                <span>Global Header</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1832,8 +1750,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="masthead--default.html" data-pjax>
-                <span>Default</span>
+            <a class="Tree-entityLink" href="masthead--image.html" data-pjax>
+                <span>Image</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3396,9 +3314,177 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
+                <span>Design Tokens</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/accessibility.html" data-pjax>
+                <span>Accessibility</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/code-style.html" data-pjax>
+                <span>Code Style</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/helper-classes.html" data-pjax>
+                <span>Helper Classes</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/icons.html" data-pjax>
+                <span>Icons</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/open-graph.html" data-pjax>
+                <span>Open Graph</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/schema.html" data-pjax>
+                <span>Schema</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         

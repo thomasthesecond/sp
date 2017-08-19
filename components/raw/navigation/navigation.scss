@@ -8,29 +8,25 @@
  */
 
 .Navigation {
+  @include fluid-type(
+    $min-font-size: 12,
+    $max-font-size: $font-size-default,
+    $min-width: $max-width-banner,
+    $max-width: 954
+  );
+
   background-color: $color-background-default;
   color: $color-text-heading;
   font-size: 24px;
   font-weight: $font-weight-semibold;
   line-height: (72 / 24);
-  max-width: 464px;
-  // min-width: 464px;
-  width: 100%;
 
-  @media (max-width: 619px) {
+  @media (max-width: $mq-max-banner) {
     text-align: center;
   }
 
-  @media (min-width: 620px) {
+  @media (min-width: $mq-min-banner) {
     line-height: $line-height-reset;
-  }
-
-  @media (min-width: 620px) and (max-width: 699px) {
-    font-size: #{$font-size-default-min}px;
-  }
-
-  @media (min-width: 700px) {
-    font-size: #{$font-size-default}px;
   }
 }
 
@@ -39,28 +35,72 @@
   margin: 0;
   padding: 0;
 
-  @media (max-width: 619px) {
-    margin-top: 48px;
-  }
-
-  @media (min-width: 620px) {
+  @media (min-width: $mq-min-banner) {
     display: flex;
-    // flex-direction: column;
     justify-content: space-between;
   }
 }
 
-.Navigation li {
-  @media (max-width: 619px) {
+.Navigation a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 200ms;
+
+  @media (max-width: $mq-max-banner) {
+    display: block;
+    -webkit-tap-highlight-color: rgba($color-border-default, .07);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #5d91a1;
+  }
+}
+
+// Implementation detail
+
+.Banner .Navigation {
+  max-width: 464px;
+  width: 78%;
+
+  @media (max-width: $mq-max-banner) {
+    border-top: 1px solid rgba($color-border-default, .37);
+    height: calc(100vh - 48px);
+    max-width: 100%;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 48px - 1px;
+    transition: opacity 400ms, visibility 400ms;
+    visibility: hidden;
+    width: 100vw;
+    z-index: $z-index-modal;
+  }
+
+  @media (min-width: $mq-min-banner) {
+    margin-left: auto;
+  }
+}
+
+.Banner .Navigation.is-open {
+  @media (max-width: $mq-max-banner) {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.Banner .Navigation ul {
+  @media (max-width: $mq-max-banner) {
+    margin-top: 48px;
+  }
+}
+
+.Banner .Navigation li {
+  @media (max-width: $mq-max-banner) {
     opacity: 0;
     transform: translateY(-26px);
     transition: opacity 200ms, transform 200ms;
-    // transition: opacity 200ms cubic-bezier(.8,.02,.45,.91),
-    //   transform 200ms cubic-bezier(.8,.02,.45,.91);
-
-    // &:not(:first-child) {
-    //   border-top: 1px solid rgba($color-border-default, .47);
-    // }
 
     &:nth-child(1) {
       transition-delay: 200ms;
@@ -80,62 +120,9 @@
   }
 }
 
-.Navigation.is-open li {
-  @media (max-width: 619px) {
+.Banner .Navigation.is-open li {
+  @media (max-width: $mq-max-banner) {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-.Navigation a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 200ms;
-
-  @media (max-width: 619px) {
-    display: block;
-    -webkit-tap-highlight-color: rgba($color-border-default, .07);
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: #5d91a1;
-  }
-}
-
-// Implementation detail
-
-// .Navigation--mobile,
-.GlobalHeader .Navigation {
-  @media (max-width: 619px) {
-    border-top: 1px solid rgba($color-border-default, .37);
-    height: calc(100vh - 48px);
-    max-width: 100%;
-    opacity: 0;
-    position: fixed;
-    right: 0;
-    top: 48px - 1px;
-    // transform: translateY(0);
-    // transform: translate3d(0, 100vh, 0);
-    transition: opacity 400ms, visibility 400ms;
-    // transition: opacity 200ms cubic-bezier(.8,.02,.45,.91),
-    //   transform 200ms cubic-bezier(.8,.02,.45,.91);
-    visibility: hidden;
-    width: 100vw;
-    z-index: $z-index-modal;
-  }
-
-  @media (min-width: 620px) {
-    margin-left: auto;
-  }
-
-  &.is-open {
-    @media (max-width: 619px) {
-      opacity: 1;
-      // transform: translateY(48px);
-      // transform: translate3d(0, 48px, 0);
-      visibility: visible;
-    }
   }
 }

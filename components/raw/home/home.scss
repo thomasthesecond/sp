@@ -7,7 +7,7 @@
  * @type page
  */
 
-.GlobalHeader {
+.Banner {
   @media (max-width: 619px) {
     left: 0;
     position: absolute;
@@ -16,7 +16,7 @@
   }
 }
 
-.GlobalHeader:not(.is-open) {
+.Banner:not(.is-open) {
   @media (max-width: 619px) {
     background-color: transparent;
   }
@@ -28,11 +28,18 @@
   }
 }
 
-// .Logo {
-//   @media (max-width: 619px) {
-//     filter: sepia(100%) contrast(1500%) saturate(0%);
-//   }
-// }
+
+.Banner:not(.is-open) .Logo {
+  @media (max-width: 619px) {
+    color: $color-text-overlay;
+  }
+}
+
+.Banner:not(.is-open) .Logo-arrow {
+  @media (max-width: 619px) {
+    fill: $color-text-overlay;
+  }
+}
 
 .LocationFinder {
   z-index: $z-index-sticky;
@@ -89,7 +96,7 @@
   }
 }
 
-.GlobalFooter {
+.Contentinfo {
   margin-top: 136px;
 
   @media (min-width: 544px) {

@@ -8,23 +8,35 @@
  */
 
 .Logo {
+  color: #717271;
   display: block;
-  max-width: 259px;
+  max-width: 256px;
   min-width: 148px;
 }
 
-.Logo img {
+.Logo-icon {
   display: block;
+  fill: currentColor;
+  height: auto;
   width: 100%;
+}
+
+.Logo-arrow--left {
+  fill: #c0cdd5;
+}
+
+.Logo-arrow--right {
+  fill: #6199af;
 }
 
 // Implementation detail
 
-.GlobalHeader .Logo {
-  margin-right: 48px;
-  // min-width: 148px;
-
-  @media (max-width: 619px) {
+.Banner .Logo {
+  @media (max-width: $mq-max-banner) {
     width: 148px;
+  }
+
+  @media (min-width: $mq-min-banner) {
+    margin-right: 72px;
   }
 }

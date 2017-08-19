@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 111);
+/******/ 	return __webpack_require__(__webpack_require__.s = 113);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -79,13 +79,17 @@
 
 /***/ }),
 
-/***/ 111:
+/***/ 113:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(112);
+__webpack_require__(114);
+
+var _coverVideo = __webpack_require__(57);
+
+var _coverVideo2 = _interopRequireDefault(_coverVideo);
 
 __webpack_require__(16);
 
@@ -97,33 +101,33 @@ var _locationFinder = __webpack_require__(18);
 
 var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
-__webpack_require__(57);
+__webpack_require__(59);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Import page module
+// Import page-specific components
+var coverVideo = new _coverVideo2.default(); // Import page module
+
 var locationFinder = new _locationFinder2.default();
 
-// Import page-specific components
-
-
+coverVideo.render();
 locationFinder.render();
 
 console.info("Home loaded");
 
 /***/ }),
 
-/***/ 112:
+/***/ 114:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(113);
+__webpack_require__(115);
 
 /***/ }),
 
-/***/ 113:
+/***/ 115:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -279,14 +283,138 @@ __webpack_require__(2);
 "use strict";
 
 
-__webpack_require__(58);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _coverVideo = __webpack_require__(58);
+
+var _coverVideo2 = _interopRequireDefault(_coverVideo);
+
+__webpack_require__(1);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _coverVideo2.default;
 
 /***/ }),
 
 /***/ 58:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CoverVideo = function () {
+  function CoverVideo(options) {
+    _classCallCheck(this, CoverVideo);
+
+    this.options = options;
+
+    this.container = document.querySelector(".js-cover-video");
+    this.image = this.container.querySelector("img");
+    this.video = this.container.querySelector("video");
+    this.mql = window.matchMedia("(min-width: 768px)");
+
+    this.checkScreenSize = this.checkScreenSize.bind(this);
+    this.createVideo = this.createVideo.bind(this);
+    this.pauseVideo = this.pauseVideo.bind(this);
+    this.addVideo = this.addVideo.bind(this);
+    this.removeVideo = this.removeVideo.bind(this);
+  }
+
+  _createClass(CoverVideo, [{
+    key: "checkScreenSize",
+    value: function checkScreenSize(mql) {
+      if (mql.matches) {
+        this.addVideo();
+      } else {
+        this.removeVideo();
+      }
+    }
+  }, {
+    key: "createVideo",
+    value: function createVideo() {
+      var _this = this;
+
+      var src = this.container.dataset.src;
+      var type = this.container.dataset.type;
+
+      this.video = document.createElement("video");
+      this.video.setAttribute("poster", this.image.src);
+      this.video.setAttribute("preload", "auto");
+      this.video.setAttribute("loop", "");
+      this.video.setAttribute("muted", "");
+
+      var source = document.createElement("source");
+      source.setAttribute("src", src);
+      source.setAttribute("type", type);
+
+      this.video.appendChild(source);
+
+      this.video.addEventListener("click", function (event) {
+        _this.pauseVideo(event.target);
+      });
+    }
+  }, {
+    key: "pauseVideo",
+    value: function pauseVideo(video) {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+  }, {
+    key: "addVideo",
+    value: function addVideo() {
+      var autoplay = !!this.container.dataset.autoplay;
+      this.container.replaceChild(this.video, this.image);
+
+      if (autoplay) {
+        this.video.play();
+      }
+    }
+  }, {
+    key: "removeVideo",
+    value: function removeVideo() {
+      if (this.video && this.video.parentNode) {
+        this.video.currentTime = 0;
+        this.video.removeEventListener("click", this.pauseVideo);
+        this.container.replaceChild(this.image, this.video);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      this.createVideo();
+      this.checkScreenSize(this.mql);
+      this.mql.addListener(this.checkScreenSize);
+    }
+  }]);
+
+  return CoverVideo;
+}();
+
+exports.default = CoverVideo;
+
+/***/ }),
+
+/***/ 59:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(60);
 
 /***/ }),
 
@@ -297,6 +425,13 @@ __webpack_require__(58);
 
 
 __webpack_require__(7);
+
+/***/ }),
+
+/***/ 60:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

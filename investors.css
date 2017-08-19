@@ -166,17 +166,28 @@
  * @type Molecule
  */
 .SubNavigation {
+  font-size: 12px;
   background-color: #fff;
   color: #646e7e;
-  font-size: 12px;
   height: 61px;
   overflow: hidden;
   position: relative;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) and (max-width: 80.625em) {
+  .SubNavigation {
+    font-size: calc(12px + (16 - 12) * (100vw - 600px) / (1290 - 600));
+  }
+}
+
+@media (min-width: 80.625em) {
   .SubNavigation {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 600px) {
+  .SubNavigation {
     height: 90px;
   }
 }
@@ -1175,7 +1186,7 @@
  * Page: Investors
  * @type page
  */
-.GlobalHeader {
+.Banner {
   border-bottom: 1px solid rgba(191, 208, 216, 0.37);
 }
 

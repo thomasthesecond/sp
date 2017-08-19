@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 114);
+/******/ 	return __webpack_require__(__webpack_require__.s = 116);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -319,25 +319,25 @@ exports.default = SubNavigation;
 
 /***/ }),
 
-/***/ 114:
+/***/ 116:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(115);
+__webpack_require__(117);
 
 __webpack_require__(21);
 
 __webpack_require__(6);
 
-__webpack_require__(59);
+__webpack_require__(61);
 
 __webpack_require__(3);
 
 __webpack_require__(8);
 
-__webpack_require__(61);
+__webpack_require__(63);
 
 var _subNavigation = __webpack_require__(10);
 
@@ -345,7 +345,7 @@ var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
 __webpack_require__(23);
 
-__webpack_require__(63);
+__webpack_require__(65);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -361,17 +361,17 @@ console.info("About loaded");
 
 /***/ }),
 
-/***/ 115:
+/***/ 117:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(116);
+__webpack_require__(118);
 
 /***/ }),
 
-/***/ 116:
+/***/ 118:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -467,16 +467,6 @@ __webpack_require__(2);
 
 /***/ }),
 
-/***/ 59:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(60);
-
-/***/ }),
-
 /***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -487,20 +477,11 @@ __webpack_require__(7);
 
 /***/ }),
 
-/***/ 60:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 61:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-
-__webpack_require__(27);
 
 __webpack_require__(62);
 
@@ -519,11 +500,30 @@ __webpack_require__(62);
 "use strict";
 
 
+__webpack_require__(27);
+
 __webpack_require__(64);
 
 /***/ }),
 
 /***/ 64:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 65:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(66);
+
+/***/ }),
+
+/***/ 66:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
