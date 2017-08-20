@@ -25,7 +25,7 @@
   // border-bottom: 1px solid #fff;
   color: $color-text-default;
   // height: 81px;
-  height: 61px;
+  height: 60px;
   overflow: hidden;
   // transition: border-color 200ms;
   position: relative;
@@ -46,7 +46,7 @@
   &::before {
     content: "";
     display: block;
-    height: calc(100% - 1px);
+    height: 100%;
     position: absolute;
     top: 0;
     width: #{$spacing-gutter}px;
@@ -78,6 +78,7 @@
   // font-family: sans-serif;
   // font-size: 16px;
   // height: calc(100% + 15px);
+  height: 100%;
   line-height: 1;
   list-style: none;
   margin-bottom: 0;
