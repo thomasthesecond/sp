@@ -152,6 +152,7 @@ var SubNavigation = function () {
     this.scrollSpy = this.scrollSpy.bind(this);
     this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
     this.setUpItems = this.setUpItems.bind(this);
+    this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
     // this.updateSubNavigationOffset = this.updateSubNavigationOffset.bind(this);
 
     this.activeClass = "is-active";
@@ -173,14 +174,32 @@ var SubNavigation = function () {
       }
     }
   }, {
+    key: "scrollActiveMarkerIntoView",
+    value: function scrollActiveMarkerIntoView(offset) {
+      var list = this.subNavigation.querySelector("ul");
+
+      list.scroll({
+        top: 0,
+        left: offset - 24,
+        behavior: "smooth"
+      });
+    }
+  }, {
     key: "updateMarker",
     value: function updateMarker(item) {
+      var mql = window.matchMedia("(max-width: 1006px)");
       var activeWidth = item.offsetWidth;
       var activeOffset = item.offsetLeft;
 
+      var padding = function padding() {
+        return mql.matches ? 10 : 0;
+      };
+      mql.addListener(padding);
+
       this.makeMarkerVisible();
       this.setMarkerWidth(activeWidth);
-      this.setMarkerOffset(activeOffset);
+      this.setMarkerOffset(activeOffset - padding());
+      this.scrollActiveMarkerIntoView(activeOffset);
     }
   }, {
     key: "makeMarkerVisible",
@@ -237,6 +256,8 @@ var SubNavigation = function () {
   }, {
     key: "scrollSpy",
     value: function scrollSpy(settings) {
+      var _this2 = this;
+
       var currentId = null;
 
       settings.forEach(function (item) {
@@ -257,6 +278,11 @@ var SubNavigation = function () {
 
       if (this.currentItem) {
         this.updateMarker(this.currentItem);
+        window.addEventListener("resize", function () {
+          setTimeout(function () {
+            _this2.updateMarker(_this2.currentItem);
+          }, 200);
+        });
       } else {
         this.makeMarkerInvisible();
         this.removeActiveClass(this.subNavigation.querySelector("." + this.activeClass));
@@ -265,10 +291,10 @@ var SubNavigation = function () {
   }, {
     key: "setUpScrollSpy",
     value: function setUpScrollSpy() {
-      var _this2 = this;
+      var _this3 = this;
 
       this.sections.forEach(function (section) {
-        _this2.scrollSpySettings.push({
+        _this3.scrollSpySettings.push({
           id: section.id,
           top: section.offsetTop,
           bottom: section.offsetTop + section.offsetHeight,
@@ -280,10 +306,10 @@ var SubNavigation = function () {
 
       window.addEventListener("scroll", function (event) {
         setTimeout(function () {
-          _this2.scrollSpy(_this2.scrollSpySettings);
+          _this3.scrollSpy(_this3.scrollSpySettings);
 
-          if (_this2.currentItem) {
-            _this2.setMarkerTransition();
+          if (_this3.currentItem) {
+            _this3.setMarkerTransition();
           };
 
           // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -299,16 +325,16 @@ var SubNavigation = function () {
   }, {
     key: "setUpItems",
     value: function setUpItems() {
-      var _this3 = this;
+      var _this4 = this;
 
       this.subNavigationItems.forEach(function (item, index) {
         var anchor = item.querySelector("a");
 
-        if (item.classList.contains(_this3.activeClass)) {
-          _this3.updateMarker(item);
+        if (item.classList.contains(_this4.activeClass)) {
+          _this4.updateMarker(item);
         }
 
-        _this3.listenForAnchorClick(anchor);
+        _this4.listenForAnchorClick(anchor);
       });
     }
 

@@ -18,6 +18,7 @@ class SubNavigation {
     this.scrollSpy = this.scrollSpy.bind(this);
     this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
     this.setUpItems = this.setUpItems.bind(this);
+    this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
     // this.updateSubNavigationOffset = this.updateSubNavigationOffset.bind(this);
 
     this.activeClass = "is-active";
@@ -36,13 +37,28 @@ class SubNavigation {
     }
   }
 
+  scrollActiveMarkerIntoView(offset) {
+    const list = this.subNavigation.querySelector("ul");
+
+    list.scroll({
+      top: 0,
+      left: (offset - 24),
+      behavior: "smooth"
+    });
+  }
+
   updateMarker(item) {
+    const mql = window.matchMedia("(max-width: 1006px)");
     const activeWidth = item.offsetWidth;
     const activeOffset = item.offsetLeft;
 
+    const padding = () => mql.matches ? 10 : 0;
+    mql.addListener(padding);
+
     this.makeMarkerVisible();
     this.setMarkerWidth(activeWidth);
-    this.setMarkerOffset(activeOffset);
+    this.setMarkerOffset(activeOffset - padding());
+    this.scrollActiveMarkerIntoView(activeOffset);
   }
 
   makeMarkerVisible() {
@@ -110,6 +126,11 @@ class SubNavigation {
 
     if (this.currentItem) {
       this.updateMarker(this.currentItem);
+      window.addEventListener("resize", () => {
+        setTimeout(() => {
+          this.updateMarker(this.currentItem);
+        }, 200);
+      });
     } else {
       this.makeMarkerInvisible();
       this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));

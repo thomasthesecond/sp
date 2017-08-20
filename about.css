@@ -427,7 +427,7 @@
   font-size: 12px;
   background-color: #fff;
   color: #646e7e;
-  height: 61px;
+  height: 60px;
   overflow: hidden;
   position: relative;
 }
@@ -453,7 +453,7 @@
 .SubNavigation::after, .SubNavigation::before {
   content: "";
   display: block;
-  height: calc(100% - 1px);
+  height: 100%;
   position: absolute;
   top: 0;
   width: 24px;
@@ -473,6 +473,7 @@
 }
 
 .SubNavigation-list {
+  height: 100%;
   line-height: 1;
   list-style: none;
   margin-bottom: 0;

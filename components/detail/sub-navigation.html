@@ -336,6 +336,7 @@
     <span class="hljs-keyword">this</span>.scrollSpy = <span class="hljs-keyword">this</span>.scrollSpy.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.setUpScrollSpy = <span class="hljs-keyword">this</span>.setUpScrollSpy.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.setUpItems = <span class="hljs-keyword">this</span>.setUpItems.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.scrollActiveMarkerIntoView = <span class="hljs-keyword">this</span>.scrollActiveMarkerIntoView.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-comment">// this.updateSubNavigationOffset = this.updateSubNavigationOffset.bind(this);</span>
 
     <span class="hljs-keyword">this</span>.activeClass = <span class="hljs-string">"is-active"</span>;
@@ -354,13 +355,28 @@
     }
   }
 
+  scrollActiveMarkerIntoView(offset) {
+    <span class="hljs-keyword">const</span> list = <span class="hljs-keyword">this</span>.subNavigation.querySelector(<span class="hljs-string">"ul"</span>);
+
+    list.scroll({
+      <span class="hljs-attr">top</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">left</span>: (offset - <span class="hljs-number">24</span>),
+      <span class="hljs-attr">behavior</span>: <span class="hljs-string">"smooth"</span>
+    });
+  }
+
   updateMarker(item) {
+    <span class="hljs-keyword">const</span> mql = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(max-width: 1006px)"</span>);
     <span class="hljs-keyword">const</span> activeWidth = item.offsetWidth;
     <span class="hljs-keyword">const</span> activeOffset = item.offsetLeft;
 
+    <span class="hljs-keyword">const</span> padding = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> mql.matches ? <span class="hljs-number">10</span> : <span class="hljs-number">0</span>;
+    mql.addListener(padding);
+
     <span class="hljs-keyword">this</span>.makeMarkerVisible();
     <span class="hljs-keyword">this</span>.setMarkerWidth(activeWidth);
-    <span class="hljs-keyword">this</span>.setMarkerOffset(activeOffset);
+    <span class="hljs-keyword">this</span>.setMarkerOffset(activeOffset - padding());
+    <span class="hljs-keyword">this</span>.scrollActiveMarkerIntoView(activeOffset);
   }
 
   makeMarkerVisible() {
@@ -428,6 +444,11 @@
 
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.currentItem) {
       <span class="hljs-keyword">this</span>.updateMarker(<span class="hljs-keyword">this</span>.currentItem);
+      <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"resize"</span>, () =&gt; {
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          <span class="hljs-keyword">this</span>.updateMarker(<span class="hljs-keyword">this</span>.currentItem);
+        }, <span class="hljs-number">200</span>);
+      });
     } <span class="hljs-keyword">else</span> {
       <span class="hljs-keyword">this</span>.makeMarkerInvisible();
       <span class="hljs-keyword">this</span>.removeActiveClass(<span class="hljs-keyword">this</span>.subNavigation.querySelector(<span class="hljs-string">`.<span class="hljs-subst">${<span class="hljs-keyword">this</span>.activeClass}</span>`</span>));
@@ -509,7 +530,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">5.2 KB</span>
+                    <span class="Meta-value">5.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -549,7 +570,7 @@
   <span class="hljs-comment">// border-bottom: 1px solid #fff;</span>
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-default</span>;
   <span class="hljs-comment">// height: 81px;</span>
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">61px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">60px</span>;
   <span class="hljs-attribute">overflow</span>: hidden;
   <span class="hljs-comment">// transition: border-color 200ms;</span>
   <span class="hljs-attribute">position</span>: relative;
@@ -570,7 +591,7 @@
   &amp;::before {
     <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
     <span class="hljs-attribute">display</span>: block;
-    <span class="hljs-attribute">height</span>: calc(<span class="hljs-number">100%</span> - <span class="hljs-number">1px</span>);
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">width</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
@@ -602,6 +623,7 @@
   <span class="hljs-comment">// font-family: sans-serif;</span>
   <span class="hljs-comment">// font-size: 16px;</span>
   <span class="hljs-comment">// height: calc(100% + 15px);</span>
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;
   <span class="hljs-attribute">list-style</span>: none;
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
