@@ -41,11 +41,13 @@ import "../components/03-components/location-map-legend";
 import "../components/03-components/logo";
 import "../components/03-components/map-widget";
 import "../components/03-components/masthead";
+import Modal from "../components/03-components/modal";
 import "../components/03-components/more-link";
 import "../components/03-components/navigation";
 import "../components/03-components/news-article";
 import "../components/03-components/next-page";
 import "../components/03-components/no-results";
+import "../components/03-components/overlay";
 import "../components/03-components/pagination";
 import "../components/03-components/press-release-bio";
 import "../components/03-components/press-release-contact";
@@ -92,6 +94,11 @@ if (document.querySelector(".js-location-finder")) {
 //   const locationSelect = new LocationSelect();
 //   locationSelect.render();
 // }
+
+if (document.querySelector(".Modal")) {
+  const modal = new Modal();
+  modal.render();
+}
 
 const doc = document.documentElement;
 doc.className = doc.className.replace("no-js", "js");
