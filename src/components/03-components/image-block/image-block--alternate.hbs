@@ -1,4 +1,5 @@
-<article class="ImageBlock ImageBlock--alternate">
+<article class="ImageBlock ImageBlock--alternate{{#if block.class}} {{ block.class }}{{/if}}"
+  {{#if block.id}}id="{{ block.id }}"{{/if}}>
   <a href="{{ block.link.url }}">
     {{> @image--picture image=block.image }}
   </a>
