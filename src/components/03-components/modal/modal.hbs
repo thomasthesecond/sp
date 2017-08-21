@@ -1,0 +1,20 @@
+<div
+  class="Modal js-modal"
+  id="{{ modal.id }}"
+  role="alertdialog" tabindex="-1" aria-hidden="true"
+  aria-labelledby="{{ modal.id }}-title"
+  aria-describedby="{{ modal.id }}-description">
+  <button class="Modal-close js-modal-close" title="Close" aria-label="Close">
+    {{> @icon id="icon-close" hidden=true }}
+  </button>
+
+  <h2 class="Modal-title" id="{{ modal.id }}-title">
+    Modal title
+  </h2>
+
+  <div class="Modal-content" id="{{ modal.id }}-description">
+    <p>
+      Modal content
+    </p>
+  </div>
+</div>
