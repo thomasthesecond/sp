@@ -28,6 +28,7 @@ $color-text-heading: #25395d; // rgb(37, 57, 93) // Cloud Burst
 $color-text-overlay: #fff; // rgb(255, 255, 255) // White
 $color-text-introduction: #819ba3; // rgb(129, 155, 163) // Gumbo
 $color-text-hamburger: #275e70; // rgb(39, 94, 112) // Casal
+$color-text-hamburger-overlay: #fff; // rgb(255, 255, 255) // White
 $color-text-service-card: #77919e; // rgb(119, 145, 158) // Gothic
 $color-text-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
 // $color-text-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
@@ -42,6 +43,15 @@ $color-text-search-button-hover: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
 $color-text-news-date: #b5955d; // rgb(181, 149, 93) // Muddy Waters
 $color-text-positive: #6fc179;
 $color-text-negative: #d90a0a;
+
+// ---------------------------------------------------------------------
+// Gradients
+// ---------------------------------------------------------------------
+
+// section-gradient
+// background: linear-gradient(to bottom, #fcfaf7 0%, #fff 100%);
+// cover-photo
+// background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
 
 // h2
 // color: #21365a;
@@ -67,23 +77,23 @@ $color-text-negative: #d90a0a;
 // CoverPhoto, CoverVideo
 // background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
 
-// GlobalFooter
+// Contentinfo
 // background-color: #152640;
 // color: rgba(#fff, 0.57);
-// GlobalFooter h4
+// Contentinfo h4
 // color: #fff;
-// GlobalFooter a:hover
+// Contentinfo a:hover
 // color: rgba(#fff, 0.77);
-// GlobalFooter-contact
+// Contentinfo-contact
 // border-left: 1px solid rgba(#bfd0d8, 0.07);
-// GlobalFooter-navigation
+// Contentinfo-navigation
 // border-top: 1px solid rgba(#bfd0d8, 0.2);
-// GlobalFooter-link span::before
+// Contentinfo-link span::before
 // background-color: rgba(#bfd0d8, 0.07);
-// GlobalFooter-copyright
+// Contentinfo-copyright
 // border-top: 1px solid rgba(#bfd0d8, 0.2);
 
-// GlobalHeader
+// Banner
 // background-color: #fff;
 
 // Hamburger
@@ -300,6 +310,7 @@ $min-width: 320;
 $max-width: 1290;
 $max-width-investors-page: $max-width - ($spacing-investors-page * 2);
 $max-width-investors-article: 630;
+$max-width-banner: 620;
 
 // ---------------------------------------------------------------------
 // Radius
@@ -326,6 +337,8 @@ $mq-max-670: #{((670 - 1) / $font-size-default) * 1em};
 $mq-min-670: #{(670 / $font-size-default) * 1em};
 $mq-max-container: #{((($max-width + ($spacing-gutter * 2)) - 1) / $font-size-default) * 1em};
 $mq-min-container: #{(($max-width + ($spacing-gutter * 2)) / $font-size-default) * 1em};
+$mq-max-banner: #{(($max-width-banner - 1) / $font-size-default) * 1em};
+$mq-min-banner: #{($max-width-banner / $font-size-default) * 1em};
 
 // ---------------------------------------------------------------------
 // Z-index
