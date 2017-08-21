@@ -532,6 +532,7 @@ template {
 }
 
 .no-scroll {
+  height: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -2645,6 +2646,7 @@ hr.dark {
 .ImageBlock > a {
   display: block;
   overflow: hidden;
+  position: relative;
 }
 
 @media (max-width: 543px) {
@@ -2680,6 +2682,17 @@ hr.dark {
   .ImageBlock > a:hover .ImageBlock-photo {
     -webkit-transform: scale(1.02);
             transform: scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .ImageBlock-photo {
+    -webkit-transition: none;
+    transition: none;
+  }
+  .ImageBlock > a:hover .ImageBlock-photo {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -4493,6 +4506,110 @@ hr.dark {
 
 .Testimonial--white .Testimonial-location {
   color: inherit;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Overlay
+ * @type Atom
+ */
+.Overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transition: opacity 200ms, visibility 200ms;
+  transition: opacity 200ms, visibility 200ms;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 8000;
+}
+
+.Overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Modal
+ */
+.Modal {
+  background-color: #fff;
+  bottom: 0;
+  -webkit-box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
+          box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
+  height: 96vh;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  padding: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: translateY(10vh);
+          transform: translateY(10vh);
+  -webkit-transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
+  transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
+  transition: opacity 200ms, transform 200ms, visibility 200ms;
+  transition: opacity 200ms, transform 200ms, visibility 200ms, -webkit-transform 200ms;
+  visibility: hidden;
+  width: 96vw;
+  z-index: 9000;
+}
+
+@media (min-width: 480px) {
+  .Modal {
+    height: 80vh;
+    max-height: 80vh;
+    max-width: 80vw;
+    width: 80vw;
+  }
+}
+
+@media (min-width: 800px) {
+  .Modal {
+    max-width: 50vw;
+    width: 50vw;
+  }
+}
+
+.Modal.is-open {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+}
+
+.Modal-close {
+  background-color: transparent;
+  border: 0;
+  color: rgba(100, 110, 126, 0.4);
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+  height: 24px;
+  padding: 0;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+  width: 24px;
+}
+
+.Modal-close:hover, .Modal-close:active, .Modal-close:focus {
+  color: rgba(100, 110, 126, 0.8);
 }
 /**
  * Functions

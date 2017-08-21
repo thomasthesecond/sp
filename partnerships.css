@@ -308,6 +308,7 @@
 .ImageBlock > a {
   display: block;
   overflow: hidden;
+  position: relative;
 }
 
 @media (max-width: 543px) {
@@ -343,6 +344,17 @@
   .ImageBlock > a:hover .ImageBlock-photo {
     -webkit-transform: scale(1.02);
             transform: scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .ImageBlock-photo {
+    -webkit-transition: none;
+    transition: none;
+  }
+  .ImageBlock > a:hover .ImageBlock-photo {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 

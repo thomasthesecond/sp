@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 113);
+/******/ 	return __webpack_require__(__webpack_require__.s = 114);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -79,13 +79,15 @@
 
 /***/ }),
 
-/***/ 113:
+/***/ 114:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(114);
+var _home = __webpack_require__(115);
+
+var _home2 = _interopRequireDefault(_home);
 
 var _coverVideo = __webpack_require__(57);
 
@@ -106,10 +108,12 @@ __webpack_require__(59);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Import page-specific components
-var coverVideo = new _coverVideo2.default(); // Import page module
+var homePage = new _home2.default(); // Import page module
 
+var coverVideo = new _coverVideo2.default();
 var locationFinder = new _locationFinder2.default();
 
+homePage.render();
 coverVideo.render();
 locationFinder.render();
 
@@ -117,17 +121,154 @@ console.info("Home loaded");
 
 /***/ }),
 
-/***/ 114:
+/***/ 115:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(115);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _home = __webpack_require__(116);
+
+var _home2 = _interopRequireDefault(_home);
+
+__webpack_require__(117);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _home2.default;
 
 /***/ }),
 
-/***/ 115:
+/***/ 116:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var HomePage = function () {
+  _createClass(HomePage, null, [{
+    key: "debounce",
+    value: function debounce(callback) {
+      setTimeout(function () {
+        callback();
+      }, 200);
+    }
+  }]);
+
+  function HomePage(options) {
+    _classCallCheck(this, HomePage);
+
+    this.options = options;
+
+    this.document = document.documentElement;
+    this.sections = document.querySelectorAll(".js-animate-section");
+
+    this.introduction = document.querySelector(".Introduction");
+    this.partnerships = document.getElementById("partnerships-section");
+    this.investors = document.getElementById("investors-section");
+    this.careers = document.getElementById("careers-section");
+
+    this.mql = window.matchMedia("(min-width: 1024px)");
+    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
+
+    this.checkScreenSize = this.checkScreenSize.bind(this);
+    this.reset = this.reset.bind(this);
+    this.animate = this.animate.bind(this);
+  }
+
+  _createClass(HomePage, [{
+    key: "reset",
+    value: function reset() {
+      this.introduction.classList.remove("can-animate");
+      this.partnerships.classList.remove("can-animate");
+      this.investors.classList.remove("can-animate");
+      this.careers.classList.remove("can-animate");
+
+      this.introduction.classList.remove("will-animate");
+      this.partnerships.classList.remove("will-animate");
+      this.investors.classList.remove("will-animate");
+      this.careers.classList.remove("will-animate");
+    }
+  }, {
+    key: "checkScreenSize",
+    value: function checkScreenSize(mql) {
+      if (mql.matches) {
+        this.animate();
+        window.addEventListener("scroll", this.animate, false);
+      } else {
+        this.reset();
+        window.removeEventListener("scroll", this.animate, false);
+      }
+    }
+  }, {
+    key: "animate",
+    value: function animate() {
+      this.introduction.classList.add("can-animate");
+      this.partnerships.classList.add("can-animate");
+      this.investors.classList.add("can-animate");
+      this.careers.classList.add("can-animate");
+
+      if ((window.pageYOffset || document.documentElement.scrollTop) >= this.introduction.offsetTop - 400) {
+        if (!this.introduction.classList.contains("will-animate")) {
+          this.introduction.classList.add("will-animate");
+          console.log("introduction");
+        }
+      }
+
+      if ((window.pageYOffset || document.documentElement.scrollTop) >= this.partnerships.offsetTop - 400) {
+        if (!this.partnerships.classList.contains("will-animate")) {
+          this.partnerships.classList.add("will-animate");
+          console.log("partnerships");
+        }
+      }
+
+      if ((window.pageYOffset || document.documentElement.scrollTop) >= this.investors.offsetTop - 400) {
+        if (!this.investors.classList.contains("will-animate")) {
+          this.investors.classList.add("will-animate");
+          console.log("investors");
+        }
+      }
+
+      if ((window.pageYOffset || document.documentElement.scrollTop) >= this.careers.offsetTop - 400) {
+        if (!this.careers.classList.contains("will-animate")) {
+          this.careers.classList.add("will-animate");
+          console.log("careers");
+        }
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      this.reset();
+
+      if (!this.motionQuery.matches) {
+        window.scrollTo(0, 0);
+        this.checkScreenSize(this.mql);
+        this.mql.addListener(this.checkScreenSize);
+      }
+    }
+  }]);
+
+  return HomePage;
+}();
+
+exports.default = HomePage;
+
+/***/ }),
+
+/***/ 117:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -323,6 +464,7 @@ var CoverVideo = function () {
     this.image = this.container.querySelector("img");
     this.video = this.container.querySelector("video");
     this.mql = window.matchMedia("(min-width: 768px)");
+    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
 
     this.checkScreenSize = this.checkScreenSize.bind(this);
     this.createVideo = this.createVideo.bind(this);
@@ -379,7 +521,7 @@ var CoverVideo = function () {
       var autoplay = !!this.container.dataset.autoplay;
       this.container.replaceChild(this.video, this.image);
 
-      if (autoplay) {
+      if (autoplay && !this.motionQuery.matches) {
         this.video.play();
       }
     }

@@ -533,6 +533,7 @@
 .ImageBlock > a {
   display: block;
   overflow: hidden;
+  position: relative;
 }
 
 @media (max-width: 543px) {
@@ -568,6 +569,17 @@
   .ImageBlock > a:hover .ImageBlock-photo {
     -webkit-transform: scale(1.02);
             transform: scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .ImageBlock-photo {
+    -webkit-transition: none;
+    transition: none;
+  }
+  .ImageBlock > a:hover .ImageBlock-photo {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -616,6 +628,110 @@
 /**
  * Mixins
  */
+@-webkit-keyframes image-scale {
+  0% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes image-scale {
+  0% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (min-width: 64em) {
+  .js .Introduction.can-animate {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    -webkit-transition: opacity 400ms, -webkit-transform 400ms;
+    transition: opacity 400ms, -webkit-transform 400ms;
+    transition: opacity 400ms, transform 400ms;
+    transition: opacity 400ms, transform 400ms, -webkit-transform 400ms;
+  }
+  .js .Introduction.can-animate::after {
+    -webkit-transition: width 400ms 400ms;
+    transition: width 400ms 400ms;
+    width: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .js .Introduction.will-animate {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .js .Introduction.will-animate::after {
+    width: 20.46512vw;
+  }
+}
+
+@media (min-width: 64em) {
+  .js .ImageBlock.can-animate > a::after {
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: -webkit-transform 2000ms;
+    transition: -webkit-transform 2000ms;
+    transition: transform 2000ms;
+    transition: transform 2000ms, -webkit-transform 2000ms;
+    width: 100%;
+  }
+}
+
+@media (min-width: 64em) {
+  .js .ImageBlock.will-animate > a::after {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@media (min-width: 64em) {
+  .js .ImageBlock.can-animate .ImageBlock-text {
+    opacity: 0;
+    -webkit-transition: opacity 1000ms 800ms;
+    transition: opacity 1000ms 800ms;
+  }
+}
+
+@media (min-width: 64em) {
+  .js .ImageBlock.will-animate .ImageBlock-photo {
+    -webkit-animation-name: image-scale;
+            animation-name: image-scale;
+    -webkit-animation-duration: 2500ms;
+            animation-duration: 2500ms;
+    -webkit-animation-delay: 500ms;
+            animation-delay: 500ms;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+}
+
+@media (min-width: 64em) {
+  .js .ImageBlock.will-animate .ImageBlock-text {
+    opacity: 1;
+  }
+}
+
 /**
  * Page: Home
  * @type page

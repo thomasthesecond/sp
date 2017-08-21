@@ -1,0 +1,66 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Modal
+ */
+
+.Modal {
+  background-color: $color-background-default;
+  bottom: 0;
+  box-shadow: 0 36px 84px rgba(#042435, .39);
+  height: 96vh;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  padding: #{$spacing-gutter}px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(10vh);
+  transition: opacity 200ms, transform 200ms, visibility 200ms;
+  visibility: hidden;
+  width: 96vw;
+  z-index: $z-index-modal;
+
+  @media (min-width: 480px) {
+    height: 80vh;
+    max-height: 80vh;
+    max-width: 80vw;
+    width: 80vw;
+  }
+
+  @media (min-width: 800px) {
+    max-width: 50vw;
+    width: 50vw;
+  }
+
+  &.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+.Modal-close {
+  background-color: transparent;
+  border: 0;
+  color: rgba($color-text-default, .4);
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+  height: 24px;
+  padding: 0;
+  position: absolute;
+  right: #{$spacing-gutter}px;
+  top: #{$spacing-gutter}px;
+  transition: color 200ms;
+  width: 24px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: rgba($color-text-default, .8);
+  }
+}

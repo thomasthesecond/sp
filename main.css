@@ -532,6 +532,7 @@ template {
 }
 
 .no-scroll {
+  height: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;

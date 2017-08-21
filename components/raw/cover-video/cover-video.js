@@ -8,6 +8,7 @@ export default class CoverVideo {
     this.image = this.container.querySelector("img");
     this.video = this.container.querySelector("video");
     this.mql = window.matchMedia("(min-width: 768px)");
+    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
 
     this.checkScreenSize = this.checkScreenSize.bind(this);
     this.createVideo = this.createVideo.bind(this);
@@ -57,7 +58,7 @@ export default class CoverVideo {
     const autoplay = !!this.container.dataset.autoplay;
     this.container.replaceChild(this.video, this.image);
 
-    if (autoplay) {
+    if (autoplay && !this.motionQuery.matches) {
       this.video.play();
     }
   }

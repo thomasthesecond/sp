@@ -236,6 +236,7 @@
     <span class="hljs-keyword">this</span>.image = <span class="hljs-keyword">this</span>.container.querySelector(<span class="hljs-string">"img"</span>);
     <span class="hljs-keyword">this</span>.video = <span class="hljs-keyword">this</span>.container.querySelector(<span class="hljs-string">"video"</span>);
     <span class="hljs-keyword">this</span>.mql = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(min-width: 768px)"</span>);
+    <span class="hljs-keyword">this</span>.motionQuery = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(prefers-reduced-motion)"</span>);
 
     <span class="hljs-keyword">this</span>.checkScreenSize = <span class="hljs-keyword">this</span>.checkScreenSize.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.createVideo = <span class="hljs-keyword">this</span>.createVideo.bind(<span class="hljs-keyword">this</span>);
@@ -285,7 +286,7 @@
     <span class="hljs-keyword">const</span> autoplay = !!<span class="hljs-keyword">this</span>.container.dataset.autoplay;
     <span class="hljs-keyword">this</span>.container.replaceChild(<span class="hljs-keyword">this</span>.video, <span class="hljs-keyword">this</span>.image);
 
-    <span class="hljs-keyword">if</span> (autoplay) {
+    <span class="hljs-keyword">if</span> (autoplay &amp;&amp; !<span class="hljs-keyword">this</span>.motionQuery.matches) {
       <span class="hljs-keyword">this</span>.video.play();
     }
   }
@@ -320,7 +321,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2 KB</span>
+                    <span class="Meta-value">2.1 KB</span>
                 </li>
             </ul>
         </div>
@@ -1830,6 +1831,70 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="masthead--video.html" data-pjax>
                 <span>Video</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-modal">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Modal</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="modal--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="modal--with-trigger.html" data-pjax>
+                <span>With Trigger</span>
                 
 
 <div class="Status Status--unlabelled">

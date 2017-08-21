@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 128);
+/******/ 	return __webpack_require__(__webpack_require__.s = 130);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2734,6 +2734,7 @@ var CoverVideo = function () {
     this.image = this.container.querySelector("img");
     this.video = this.container.querySelector("video");
     this.mql = window.matchMedia("(min-width: 768px)");
+    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
 
     this.checkScreenSize = this.checkScreenSize.bind(this);
     this.createVideo = this.createVideo.bind(this);
@@ -2790,7 +2791,7 @@ var CoverVideo = function () {
       var autoplay = !!this.container.dataset.autoplay;
       this.container.replaceChild(this.video, this.image);
 
-      if (autoplay) {
+      if (autoplay && !this.motionQuery.matches) {
         this.video.play();
       }
     }
@@ -3197,7 +3198,12 @@ __webpack_require__(108);
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 109 */,
+/* 109 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 110 */,
 /* 111 */,
 /* 112 */,
@@ -3216,7 +3222,9 @@ __webpack_require__(108);
 /* 125 */,
 /* 126 */,
 /* 127 */,
-/* 128 */
+/* 128 */,
+/* 129 */,
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3236,7 +3244,7 @@ __webpack_require__(34);
 
 __webpack_require__(35);
 
-__webpack_require__(129);
+__webpack_require__(131);
 
 __webpack_require__(36);
 
@@ -3246,7 +3254,7 @@ var _banner = __webpack_require__(38);
 
 var _banner2 = _interopRequireDefault(_banner);
 
-__webpack_require__(130);
+__webpack_require__(132);
 
 __webpack_require__(75);
 
@@ -3256,7 +3264,7 @@ var _contentinfo = __webpack_require__(44);
 
 var _contentinfo2 = _interopRequireDefault(_contentinfo);
 
-__webpack_require__(132);
+__webpack_require__(134);
 
 var _coverVideo = __webpack_require__(57);
 
@@ -3272,7 +3280,7 @@ __webpack_require__(24);
 
 __webpack_require__(81);
 
-__webpack_require__(133);
+__webpack_require__(135);
 
 __webpack_require__(49);
 
@@ -3294,21 +3302,27 @@ __webpack_require__(67);
 
 __webpack_require__(69);
 
-__webpack_require__(134);
+__webpack_require__(136);
 
 __webpack_require__(71);
 
 __webpack_require__(3);
 
+var _modal = __webpack_require__(137);
+
+var _modal2 = _interopRequireDefault(_modal);
+
 __webpack_require__(53);
 
-__webpack_require__(135);
+__webpack_require__(140);
 
 __webpack_require__(83);
 
 __webpack_require__(8);
 
 __webpack_require__(73);
+
+__webpack_require__(141);
 
 __webpack_require__(85);
 
@@ -3322,7 +3336,7 @@ __webpack_require__(93);
 
 __webpack_require__(54);
 
-__webpack_require__(136);
+__webpack_require__(142);
 
 __webpack_require__(63);
 
@@ -3336,7 +3350,7 @@ __webpack_require__(101);
 
 __webpack_require__(10);
 
-__webpack_require__(137);
+__webpack_require__(143);
 
 __webpack_require__(103);
 
@@ -3387,25 +3401,15 @@ if (document.querySelector(".js-location-finder")) {
 //   locationSelect.render();
 // }
 
+if (document.querySelector(".Modal")) {
+  var modal = new _modal2.default();
+  modal.render();
+}
+
 var doc = document.documentElement;
 doc.className = doc.className.replace("no-js", "js");
 
 console.info("Styleguide loaded");
-
-/***/ }),
-/* 129 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 130 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(131);
 
 /***/ }),
 /* 131 */
@@ -3420,16 +3424,13 @@ __webpack_require__(131);
 "use strict";
 
 
-__webpack_require__(0);
+__webpack_require__(133);
 
 /***/ }),
 /* 133 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-__webpack_require__(15);
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 134 */
@@ -3438,10 +3439,165 @@ __webpack_require__(15);
 "use strict";
 
 
-__webpack_require__(25);
+__webpack_require__(0);
 
 /***/ }),
 /* 135 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(15);
+
+/***/ }),
+/* 136 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(25);
+
+/***/ }),
+/* 137 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _modal = __webpack_require__(138);
+
+var _modal2 = _interopRequireDefault(_modal);
+
+__webpack_require__(139);
+
+__webpack_require__(109);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _modal2.default;
+
+/***/ }),
+/* 138 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+  function Modal(options) {
+    _classCallCheck(this, Modal);
+
+    this.options = options;
+
+    this.document = document.documentElement;
+    this.modal = document.querySelector(".js-modal");
+    this.trigger = document.querySelector(".js-modal-trigger");
+    this.close = document.querySelector(".js-modal-close");
+    this.mql = window.matchMedia("(min-width: 768px)");
+
+    this.openClassName = "is-open";
+
+    this.checkScreenSize = this.checkScreenSize.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.clickOutside = this.clickOutside.bind(this);
+    this.onEscapePress = this.onEscapePress.bind(this);
+  }
+
+  _createClass(Modal, [{
+    key: "checkScreenSize",
+    value: function checkScreenSize(mql) {
+      if (mql.matches) {
+        console.log("matches");
+      } else {
+        console.log("no matches");
+      }
+    }
+  }, {
+    key: "closeModal",
+    value: function closeModal() {
+      if (this.modal.classList.contains(this.openClassName)) {
+        this.document.classList.remove("no-scroll");
+        this.modal.classList.remove(this.openClassName);
+        this.close.removeEventListener("click", this.closeModal, false);
+      }
+    }
+  }, {
+    key: "openModal",
+    value: function openModal() {
+      if (!this.modal.classList.contains(this.openClassName)) {
+        this.document.classList.add("no-scroll");
+        this.modal.classList.add(this.openClassName);
+        this.close.addEventListener("click", this.closeModal, false);
+        document.addEventListener("click", this.clickOutside, false);
+        this.onEscapePress();
+      }
+    }
+  }, {
+    key: "clickOutside",
+    value: function clickOutside(event) {
+      var isModal = this.modal.contains(event.target);
+      var isTrigger = this.trigger.contains(event.target);
+
+      if (!isModal && !isTrigger) {
+        this.closeModal();
+        document.removeEventListener("click", this.clickOutside, false);
+      }
+
+      event.preventDefault();
+    }
+  }, {
+    key: "onEscapePress",
+    value: function onEscapePress() {
+      var _this = this;
+
+      document.onkeyup = function (event) {
+        if (event.keyCode === 27) {
+          _this.closeModal();
+        }
+      };
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      this.checkScreenSize(this.mql);
+      this.mql.addListener(this.checkScreenSize);
+
+      this.trigger.addEventListener("click", function (event) {
+        _this2.openModal();
+      });
+    }
+  }]);
+
+  return Modal;
+}();
+
+exports.default = Modal;
+
+/***/ }),
+/* 139 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3452,7 +3608,16 @@ __webpack_require__(26);
 __webpack_require__(14);
 
 /***/ }),
-/* 136 */
+/* 141 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(109);
+
+/***/ }),
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3461,7 +3626,7 @@ __webpack_require__(14);
 __webpack_require__(27);
 
 /***/ }),
-/* 137 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
