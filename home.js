@@ -223,28 +223,24 @@ var HomePage = function () {
       if ((window.pageYOffset || document.documentElement.scrollTop) >= this.introduction.offsetTop - 400) {
         if (!this.introduction.classList.contains("will-animate")) {
           this.introduction.classList.add("will-animate");
-          console.log("introduction");
         }
       }
 
       if ((window.pageYOffset || document.documentElement.scrollTop) >= this.partnerships.offsetTop - 400) {
         if (!this.partnerships.classList.contains("will-animate")) {
           this.partnerships.classList.add("will-animate");
-          console.log("partnerships");
         }
       }
 
       if ((window.pageYOffset || document.documentElement.scrollTop) >= this.investors.offsetTop - 400) {
         if (!this.investors.classList.contains("will-animate")) {
           this.investors.classList.add("will-animate");
-          console.log("investors");
         }
       }
 
       if ((window.pageYOffset || document.documentElement.scrollTop) >= this.careers.offsetTop - 400) {
         if (!this.careers.classList.contains("will-animate")) {
           this.careers.classList.add("will-animate");
-          console.log("careers");
         }
       }
     }
