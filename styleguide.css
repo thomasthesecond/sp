@@ -2611,8 +2611,8 @@ hr.dark {
 
 @media (min-width: 30em) {
   .Introduction::after {
-    content: "";
     background-color: #b5955d;
+    content: "";
     display: block;
     height: 4px;
     margin-left: auto;

@@ -8,8 +8,8 @@
  */
 
 .Introduction {
-  $min-font-size: 20;
-  $max-font-size: 32;
+  $min-font-size: $font-size-heading-4;
+  $max-font-size: $font-size-heading-2;
   $min-width: 480;
   $max-width: 856;
 
@@ -20,7 +20,7 @@
     $max-width
   );
 
-  color: #819ba3;
+  color: $color-text-introduction;
   font-weight: $font-weight-light;
   letter-spacing: -.9px;
   line-height: (36 / $min-font-size);
@@ -36,8 +36,8 @@
 
   &::after {
     @media (min-width: $mq-min-480) {
+      background-color: $color-border-introduction;
       content: "";
-      background-color: #b5955d;
       display: block;
       height: 4px;
       margin-left: auto;
