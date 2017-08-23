@@ -29,7 +29,7 @@
   height: 100%;
   justify-content: center;
   position: relative;
-  width: 100%;
+  width: calc(100% - #{$spacing-gutter + $spacing-gutter}px);
   z-index: $z-index-default;
 }
 

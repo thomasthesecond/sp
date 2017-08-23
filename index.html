@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="themes/mandelbrot/css/navy.css?cachebust=1.2.0" type="text/css">
 
 
-<title>Surgery Partners Component Library | Surgery Partners Component Library</title>
+<title>Surgery Partners Pattern Library | Surgery Partners Component Library</title>
 
 </head>
 <body>
@@ -52,8 +52,14 @@
 
     <div class="Document-header">
         
-        <h1 class="Document-title">Surgery Partners Component Library</h1>
+        <h1 class="Document-title">Surgery Partners Pattern Library</h1>
         
+
+<div class="Status Status--tag">
+
+<label class="Status-label" style="background-color: #FF3333; border-color: #FF3333;">Draft</label>
+
+</div>
 
 
         
@@ -69,19 +75,72 @@
 
     
     
-    <p>You are viewing the front-end component library for Surgery Partners. It is built with <a href="http://fractal.build">Fractal</a>, a tool that enables rapid development of components, templates and pages.</p>
-<!-- ### Component categories
-
-* **Utilities:** Components with a single purpose and specific role
-* **Common:** Components that may appear anywhere on the site
-* **Global:** Components that appear on every page on the site
-* **Layout:** Components concerned with macro layout
-* **Scopes:** Components used to style scoped areas of content
-* **Templates:** Templates for particular page types
-
-### Source code
-
-The [source code is available on GitHub](https://github.com/24ways/frontend). See the [README](https://github.com/24ways/frontend/blob/master/README.md) for installation instructions. -->
+    <p>You are viewing the front-end pattern library for Surgery Partners. It’s built with <a href="http://fractal.build">Fractal</a>, a tool that enables rapid development of components, templates and pages.</p>
+<p>The patterns are split into three groups:</p>
+<ul>
+<li><strong>Components</strong>: The building blocks of the site; when combined, create pages; each component has a specific purpose</li>
+<li><strong>Pages</strong>: Fully formed webpages composed of components</li>
+<li><strong>Layout</strong>: Modules that are general-purpose and easily reusable; generally these modules wrap components and help layout sections on a page  </li>
+</ul>
+<h3 id="source-vs-build-files">Source vs. build files</h3>
+<p>The source code exists within the <code>src</code> directory at the root of the project.</p>
+<p>Compiled build files are contained within the <code>www</code> directory at the root of the project.</p>
+<p>When making a change to component or page, only the source files should be edited. <a href="https://github.com/webpack/webpack">Webpack</a> is used to build and bundle the source files for each component and page; more about that below.</p>
+<h2 id="setting-up-the-project-for-development">Setting up the project for development</h2>
+<p>If you made it this far, chances are you’re already up and running, but just incase you’re not, here’s what you need to do. <em>This information is also contained within the project’s README file at the root.</em></p>
+<h3 id="requirements">Requirements</h3>
+<h4 id="node-js">Node.js</h4>
+<p><a href="http://fractal.build/">Fractal</a>, and therefore this project, requires Node.js v4.4.7+ to run. While you can install Node a variety of ways, we highly recommend using <a href="https://github.com/creationix/nvm">Node Version Manager</a> to install and manage Node versions.</p>
+<h4 id="yarn">Yarn</h4>
+<p><a href="https://yarnpkg.com/en/">Yarn</a> is a package manager for Node.js. Yarn is preferred over <a href="https://www.npmjs.com/">npm</a> because it’s faster. However, if npm is already installed or you prefer it to Yarn, then <code>yarn</code> scripts can be replaced with <code>npm</code>.</p>
+<p><a href="https://yarnpkg.com/en/docs/install">https://yarnpkg.com/en/docs/install</a></p>
+<h3 id="getting-started">Getting started</h3>
+<p>Once you’ve installed Node and Yarn, you’re ready to install the project’s dependencies. To do that, run simply run <code>yarn</code> (or <code>npm install</code>).</p>
+<p>To run the project and develop locally, you’ll first need to start the local web server by running <code>yarn start</code>. This will start Fractal and run a local server at <a href="http://localhost:3000/">http://localhost:3000/</a>.</p>
+<p>You will also need to start Webpack to watch and compile changes to the assets. In a separate console window, run <code>yarn run assets:ci</code>. This command starts Webpack with the <code>--watch</code> flag.</p>
+<p>Now you may open <a href="http://localhost:3000/">http://localhost:3000/</a> in a web browser and begin developing.</p>
+<h3 id="commands">Commands</h3>
+<p>All commands should be run through <code>yarn run</code>.</p>
+<code><pre><span class="hljs-string">"start"</span>: <span class="hljs-string">"fractal start --sync"</span>,
+<span class="hljs-string">"test"</span>: <span class="hljs-string">"echo \"</span><span class="hljs-keyword">Error</span>: <span class="hljs-keyword">no</span> <span class="hljs-keyword">test</span> specified\<span class="hljs-string">" &amp;&amp; exit 1"</span>,
+<span class="hljs-string">"build"</span>: <span class="hljs-string">"npm run clean &amp;&amp; webpack &amp;&amp; fractal build"</span>,
+<span class="hljs-string">"assets:ci"</span>: <span class="hljs-string">"webpack --watch"</span>,
+<span class="hljs-string">"clean"</span>: <span class="hljs-string">"rimraf tmp &amp;&amp; rimraf www"</span>,
+<span class="hljs-string">"scsslint"</span>: <span class="hljs-string">"scss-lint . --config .scsslint.yml"</span>,
+<span class="hljs-string">"gh-pages"</span>: <span class="hljs-string">"npm run build &amp;&amp; gh-pages -d www"</span></pre></code><h3 id="dependencies">Dependencies</h3>
+<p>All dependencies are installed by running <code>yarn</code>. Here’s a brief overview of each dependency and its purpose.</p>
+<code><pre><span class="hljs-string">"@frctl/fractal"</span>: <span class="hljs-string">"^1.1.4"</span>,
+<span class="hljs-string">"@frctl/mandelbrot"</span>: <span class="hljs-string">"^1.1.0"</span>,
+<span class="hljs-string">"babel-core"</span>: <span class="hljs-string">"^6.25.0"</span>,
+<span class="hljs-string">"babel-polyfill"</span>: <span class="hljs-string">"^6.23.0"</span>,
+<span class="hljs-string">"jquery"</span>: <span class="hljs-string">"^3.2.1"</span>,
+<span class="hljs-string">"no-scroll"</span>: <span class="hljs-string">"^2.1.0"</span>,
+<span class="hljs-string">"normalize.css"</span>: <span class="hljs-string">"^7.0.0"</span>,
+<span class="hljs-string">"picturefill"</span>: <span class="hljs-string">"^3.0.2"</span></pre></code><code><pre><span class="hljs-string">"autoprefixer"</span>: <span class="hljs-string">"^7.0.1"</span>,
+<span class="hljs-string">"babel-loader"</span>: <span class="hljs-string">"^7.1.1"</span>,
+<span class="hljs-string">"babel-plugin-transform-decorators-legacy"</span>: <span class="hljs-string">"^1.3.4"</span>,
+<span class="hljs-string">"babel-preset-es2015"</span>: <span class="hljs-string">"^6.24.1"</span>,
+<span class="hljs-string">"color"</span>: <span class="hljs-string">"^2.0.0"</span>,
+<span class="hljs-string">"copy-webpack-plugin"</span>: <span class="hljs-string">"^4.0.1"</span>,
+<span class="hljs-string">"css-loader"</span>: <span class="hljs-string">"^0.28.1"</span>,
+<span class="hljs-string">"extract-text-webpack-plugin"</span>: <span class="hljs-string">"^2.1.0"</span>,
+<span class="hljs-string">"file-loader"</span>: <span class="hljs-string">"^0.11.2"</span>,
+<span class="hljs-string">"gh-pages"</span>: <span class="hljs-string">"^1.0.0"</span>,
+<span class="hljs-string">"handlebars-loader"</span>: <span class="hljs-string">"^1.5.0"</span>,
+<span class="hljs-string">"node-sass"</span>: <span class="hljs-string">"^4.5.2"</span>,
+<span class="hljs-string">"postcss"</span>: <span class="hljs-string">"^6.0.6"</span>,
+<span class="hljs-string">"postcss-cli"</span>: <span class="hljs-string">"^4.1.0"</span>,
+<span class="hljs-string">"postcss-loader"</span>: <span class="hljs-string">"^2.0.3"</span>,
+<span class="hljs-string">"pre-commit"</span>: <span class="hljs-string">"^1.2.2"</span>,
+<span class="hljs-string">"rimraf"</span>: <span class="hljs-string">"^2.6.1"</span>,
+<span class="hljs-string">"sass-loader"</span>: <span class="hljs-string">"^6.0.4"</span>,
+<span class="hljs-string">"style-loader"</span>: <span class="hljs-string">"^0.17.0"</span>,
+<span class="hljs-string">"webpack"</span>: <span class="hljs-string">"^3.2.0"</span></pre></code><h2 id="languages-used">Languages used</h2>
+<ul>
+<li><strong>Handlebars</strong>: HTML templating</li>
+<li><strong>SCSS</strong>: CSS pre-processing</li>
+<li><strong>JavaScript</strong>: vanilla JavaScript using ES6 spec</li>
+</ul>
 <!-- ## Atomic design
 
 This component library uses [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) principles which classifies components into five distinct groups:
@@ -3154,6 +3213,20 @@ Components follow the [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>Overview</span>
                 
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         
@@ -3291,8 +3364,8 @@ Components follow the [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="docs/open-graph.html" data-pjax>
-                <span>Open Graph</span>
+            <a class="Tree-entityLink" href="docs/layout-modules.html" data-pjax>
+                <span>Layout Modules</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3315,8 +3388,28 @@ Components follow the [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="docs/open-graph.html" data-pjax>
+                <span>Open Graph</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="docs/schema.html" data-pjax>
                 <span>Schema</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="docs/url-redirects.html" data-pjax>
+                <span>Url Redirects</span>
                 
 
 <div class="Status Status--unlabelled">

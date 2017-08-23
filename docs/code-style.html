@@ -75,8 +75,26 @@
 
     
     
-    <h2 id="naming-components">Naming components</h2>
+    <p>This document details the coding style and conventions used in this project.</p>
+<h2 id="javascript">JavaScript</h2>
+<p>To enforce a consistent JavaScript code style, this project uses <a href="https://eslint.org/">ESLint</a> and <a href="https://github.com/airbnb/javascript">Airbnb’s style guide</a>. Some additional rules are defined in <code>.eslintrc</code> which lives at the project root. Run <code>yarn run eslint</code> to run the linter on .js files.</p>
+<h2 id="css-scss">CSS / SCSS</h2>
+<h2 id="editorconfig">editorconfig</h2>
+<blockquote>
+<p><a href="http://editorconfig.org/">EditorConfig</a> helps developers define and maintain consistent coding styles between different editors and IDEs.</p>
+</blockquote>
+<p>The <code>.editorconfig</code> file at the root of this project defines the desired coding style. For the config file to work, you must <a href="http://editorconfig.org/#download">install a plugin</a> for your editor.</p>
+<h2 id="naming-components">Naming components</h2>
 <p>Components follow the <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">SUIT CSS</a> naming convention.</p>
+<code><pre><span class="hljs-selector-class">.ComponentName</span> { … }
+<span class="hljs-selector-class">.ComponentName--modifierName</span> { … }
+<span class="hljs-selector-class">.ComponentName-descendentName</span> { … }
+<span class="hljs-selector-class">.ComponentName-descendentName--modifierName</span> { … }
+<span class="hljs-selector-class">.ComponentName</span><span class="hljs-selector-class">.is-stateOfComponent</span> { … }</pre></code><p>JavaScript modules for the corresponding component are named the same, however, they should not need to use the <code>modifierName</code> or <code>descendentName</code> pattern.</p>
+<code><pre><span class="hljs-builtin-name">export</span><span class="hljs-built_in"> default </span>class ComponentName { … }</pre></code><p>Utility classnames are the exception to the SUIT CSS naming methodology. They are not prefixed with <code>u-</code> nor are they written in camelCase; they are written lowercase and hyphenated.</p>
+<code><pre><span class="hljs-selector-class">.container</span> { … }
+<span class="hljs-selector-class">.text-block</span> { … }</pre></code><h2 id="naming-files">Naming files</h2>
+<p>File and folder names are lowercase and hyphenated.</p>
 
     
 
@@ -3136,6 +3154,20 @@
             <a class="Tree-entityLink" href="../index.html" data-pjax>
                 <span>Overview</span>
                 
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         
@@ -3273,8 +3305,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="open-graph.html" data-pjax>
-                <span>Open Graph</span>
+            <a class="Tree-entityLink" href="layout-modules.html" data-pjax>
+                <span>Layout Modules</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3297,8 +3329,28 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="open-graph.html" data-pjax>
+                <span>Open Graph</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="schema.html" data-pjax>
                 <span>Schema</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="url-redirects.html" data-pjax>
+                <span>Url Redirects</span>
                 
 
 <div class="Status Status--unlabelled">
