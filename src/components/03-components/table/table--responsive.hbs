@@ -15,7 +15,12 @@
       <td data-label="Form"><a href="#">4</a></td>
       <td data-label="Description">Statement of changes in beneficial ownership of securities</td>
       <td data-label="Filing Group">3,4,5</td>
-      <td data-label="Downloads"></td>
+      <td data-label="Downloads">
+        {{ render "@file-download--doc-on" }}
+        {{ render "@file-download--pdf-on" }}
+        {{ render "@file-download--xls-on" }}
+        {{ render "@file-download--xbrl-off" }}
+      </td>
     </tr>
 
     <tr>
@@ -23,7 +28,12 @@
       <td data-label="Form"><a href="#">4</a></td>
       <td data-label="Description">Statement of changes in beneficial ownership of securities</td>
       <td data-label="Filing Group">3,4,5</td>
-      <td data-label="Downloads"></td>
+      <td data-label="Downloads">
+        {{ render "@file-download--doc-off" }}
+        {{ render "@file-download--pdf-on" }}
+        {{ render "@file-download--xls-off" }}
+        {{ render "@file-download--xbrl-on" }}
+      </td>
     </tr>
 
     <tr>
@@ -31,7 +41,12 @@
       <td data-label="Form"><a href="#">4</a></td>
       <td data-label="Description">Statement of changes in beneficial ownership of securities</td>
       <td data-label="Filing Group">3,4,5</td>
-      <td data-label="Downloads"></td>
+      <td data-label="Downloads">
+        {{ render "@file-download--doc-on" }}
+        {{ render "@file-download--pdf-on" }}
+        {{ render "@file-download--xls-on" }}
+        {{ render "@file-download--xbrl-on" }}
+      </td>
     </tr>
 
     <tr>
@@ -39,7 +54,12 @@
       <td data-label="Form"><a href="#">4</a></td>
       <td data-label="Description">Statement of changes in beneficial ownership of securities</td>
       <td data-label="Filing Group">3,4,5</td>
-      <td data-label="Downloads"></td>
+      <td data-label="Downloads">
+        {{ render "@file-download--doc-on" }}
+        {{ render "@file-download--pdf-off" }}
+        {{ render "@file-download--xls-off" }}
+        {{ render "@file-download--xbrl-off" }}
+      </td>
     </tr>
   </tbody>
 </table>
