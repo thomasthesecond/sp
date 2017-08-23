@@ -19,8 +19,6 @@
       <meta property="og:image" content="../../assets/images/masthead-image.jpg">
   		<meta property="og:url" content="https://www.surgerypartners.com/investors/">
     <meta property="og:site_name" content="Surgery Partners">
-		<meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@surgerypartners">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" title="favicon">
 
@@ -43,40 +41,11 @@
           "addressCountry": "United States"
         },
         "name": "Surgery Partners",
-        "alternateName": [
-        ],
-        "legalName": "",
-        "containedInPlace": "",
         "telephone": "615-234-5900",
         "faxNumber": "615-234-5998",
         "url": "https://www.surgerypartners.com/",
         "logo": "",
-        "email": "",
-        "description": "",
-        "sameAs": [
-        ],
-        "image": [
-          {
-            "@type": "ImageObject",
-      			"url": "",
-      			"description": ""
-      		},
-      		{
-            "@type": "ImageObject",
-      			"url": "",
-      			"description": ""
-          },
-          {
-            "@type": "ImageObject",
-      			"url": "",
-      			"description": ""
-          },
-          {
-            "@type": "ImageObject",
-      			"url": "",
-      			"description": ""
-      		}
-      	]
+        "description": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 180 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients."
       }
     </script>
   </head>
@@ -226,40 +195,94 @@
           </div>
         
           <div class="StockChartFilter-controls">
+            <label class="visuallyhidden" for="time-frame-select">Time frame</label>
             <select
               
-              id="filter1"
-              name="filter1"
+              id="time-frame-select"
+              name="time-frame-select"
               >
-                <option value="" selected="selected">
-                  Select
+                <option value="1hr">
+                  1 Hour
                 </option>
-                <option value="1">
-                  Option 1
+                <option value="1dy" selected="selected">
+                  1 Day
                 </option>
-                <option value="2">
-                  Option 2
+                <option value="2dy">
+                  2 Days
                 </option>
-                <option value="3">
-                  Option 3
+                <option value="3dy">
+                  3 Days
+                </option>
+                <option value="5dy">
+                  5 Days
+                </option>
+                <option value="10dy">
+                  10 Days
+                </option>
+                <option value="1mo">
+                  1 Month
+                </option>
+                <option value="2mo">
+                  2 Months
+                </option>
+                <option value="3mo">
+                  3 Months
+                </option>
+                <option value="6mo">
+                  6 Months
+                </option>
+                <option value="1yr">
+                  1 Year
+                </option>
+                <option value="2yr">
+                  2 Years
+                </option>
+                <option value="3yr">
+                  3 Years
+                </option>
+                <option value="4yr">
+                  4 Years
+                </option>
+                <option value="5yr">
+                  5 Years
+                </option>
+                <option value="10yr">
+                  10 Years
+                </option>
+                <option value="Ytd">
+                  Year-to-Date
+                </option>
+                <option value="All">
+                  All Data
                 </option>
             </select>
+        
+            <label class="visuallyhidden" for="chart-type-select">Chart type</label>
             <select
               
-              id="filter2"
-              name="filter2"
+              id="chart-type-select"
+              name="chart-type-select"
               >
-                <option value="" selected="selected">
-                  Select
+                <option value="mountain" selected="selected">
+                  Mountain
                 </option>
-                <option value="1">
-                  Option 1
+                <option value="ohlc">
+                  OHLC
                 </option>
-                <option value="2">
-                  Option 2
+                <option value="candlestick">
+                  Candlestick
                 </option>
-                <option value="3">
-                  Option 3
+                <option value="candlestickcolor">
+                  Candlestick Red/Green
+                </option>
+                <option value="line">
+                  Close Line
+                </option>
+                <option value="fillclip">
+                  % Change Fill
+                </option>
+                <option value="lineclip">
+                  % Change Line
                 </option>
             </select>
           </div>

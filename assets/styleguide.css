@@ -2192,6 +2192,45 @@ hr.dark {
  * Mixins
  */
 /**
+ * Component: Cover photo
+ * @type Atom
+ */
+.CoverPhoto {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.CoverPhoto::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5e91a1));
+  background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: .26;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.CoverPhoto img {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Masthead
  * @type Atom
  */
@@ -2444,45 +2483,6 @@ hr.dark {
     display: flex;
     height: 100%;
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Cover photo
- * @type Atom
- */
-.CoverPhoto {
-  display: block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.CoverPhoto::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5e91a1));
-  background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
-  content: "";
-  display: block;
-  height: 100%;
-  left: 0;
-  opacity: .26;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.CoverPhoto img {
-  display: block;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
 }
 /**
  * Functions
@@ -3886,12 +3886,12 @@ hr.dark {
   }
 }
 
-.StockChartFilter-controls select + select {
+.StockChartFilter-controls select:not(:first-of-type) {
   margin-left: 8px;
 }
 
 @media (min-width: 720px) {
-  .StockChartFilter-controls select + select {
+  .StockChartFilter-controls select:not(:first-of-type) {
     margin-left: 24px;
   }
 }

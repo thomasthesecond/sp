@@ -676,12 +676,12 @@
   }
 }
 
-.StockChartFilter-controls select + select {
+.StockChartFilter-controls select:not(:first-of-type) {
   margin-left: 8px;
 }
 
 @media (min-width: 720px) {
-  .StockChartFilter-controls select + select {
+  .StockChartFilter-controls select:not(:first-of-type) {
     margin-left: 24px;
   }
 }
