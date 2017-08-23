@@ -9,7 +9,7 @@
       "context": {
         "feature": {
           "coverPhoto": {
-            "src": "/partnerships-feature@2x.jpg",
+            "src": "/assets/images/partnerships-feature@2x.jpg",
             "title": ""
           },
           "testimonial": {
@@ -26,7 +26,7 @@
       "context": {
         "feature": {
           "coverPhoto": {
-            "src": "/about-feature@2x.jpg",
+            "src": "/assets/images/about-feature@2x.jpg",
             "title": ""
           },
           "highlights": [

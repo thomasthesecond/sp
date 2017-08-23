@@ -5,35 +5,35 @@
     "preview": "@preview",
     "title": "About us",
     "description": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 180 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients.",
-    "image": "/about-masthead.jpg",
+    "image": "/assets/images/about-masthead.jpg",
     "slug": "/about/",
     "assetFileName": "about",
     "classname": "AboutPage",
     "meta": {
       "title": "About us",
       "description": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 180 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients.",
-      "image": "/about-masthead.jpg"
+      "image": "/assets/images/about-masthead.jpg"
     },
     "masthead": {
       "title": "About us",
       "coverPhoto": {
         "title": "A group of ER doctors smiling happily",
-        "src": "/about-masthead@2x.jpg",
+        "src": "/assets/images/about-masthead@2x.jpg",
         "srcset": [
           {
-            "src": "/about-masthead-sm@2x.jpg",
+            "src": "/assets/images/about-masthead-sm@2x.jpg",
             "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
           },
           {
-            "src": "/about-masthead@2x.jpg",
+            "src": "/assets/images/about-masthead@2x.jpg",
             "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
           },
           {
-            "src": "/about-masthead-sm.jpg",
+            "src": "/assets/images/about-masthead-sm.jpg",
             "media": "(max-width: 544px)"
           },
           {
-            "src": "/about-masthead.jpg",
+            "src": "/assets/images/about-masthead.jpg",
             "media": null
           }
         ]
@@ -114,22 +114,22 @@
     "feature": {
       "coverPhoto": {
         "title": "Two doctors looking at X-rays on a handheld tablet device",
-        "src": "/about-feature@2x.jpg",
+        "src": "/assets/images/about-feature@2x.jpg",
         "srcset": [
           {
-            "src": "/about-feature-sm@2x.jpg",
+            "src": "/assets/images/about-feature-sm@2x.jpg",
             "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
           },
           {
-            "src": "/about-feature@2x.jpg",
+            "src": "/assets/images/about-feature@2x.jpg",
             "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
           },
           {
-            "src": "/about-feature-sm.jpg",
+            "src": "/assets/images/about-feature-sm.jpg",
             "media": "(max-width: 544px)"
           },
           {
-            "src": "/about-feature.jpg",
+            "src": "/assets/images/about-feature.jpg",
             "media": null
           }
         ]
@@ -186,7 +186,7 @@
     "teamMembers": [
       {
         "image": {
-          "src": "/team-doyle@2x.jpg",
+          "src": "/assets/images/team-doyle@2x.jpg",
           "title": "Headshot of Michael Doyle"
         },
         "name": "Michael Doyle",
@@ -195,7 +195,7 @@
       },
       {
         "image": {
-          "src": "/team-sparks@2x.jpg",
+          "src": "/assets/images/team-sparks@2x.jpg",
           "title": "Headshot of Teresa Sparks"
         },
         "name": "Teresa Sparks",
@@ -204,7 +204,7 @@
       },
       {
         "image": {
-          "src": "/team-baldock@2x.jpg",
+          "src": "/assets/images/team-baldock@2x.jpg",
           "title": "Headshot of Jennifer Baldock"
         },
         "name": "Jennifer Baldock",
@@ -213,7 +213,7 @@
       },
       {
         "image": {
-          "src": "/team-crysel@2x.jpg",
+          "src": "/assets/images/team-crysel@2x.jpg",
           "title": "Headshot of John Crysel"
         },
         "name": "John Crysel",
@@ -222,7 +222,7 @@
       },
       {
         "image": {
-          "src": "/team-goodwin@2x.jpg",
+          "src": "/assets/images/team-goodwin@2x.jpg",
           "title": "Headshot of George Goodwin"
         },
         "name": "George Goodwin",
@@ -231,7 +231,7 @@
       },
       {
         "image": {
-          "src": "/team-taparo@2x.jpg",
+          "src": "/assets/images/team-taparo@2x.jpg",
           "title": "Headshot of Tony Taparo"
         },
         "name": "Tony Taparo",
@@ -240,7 +240,7 @@
       },
       {
         "image": {
-          "src": "/team-topke@2x.jpg",
+          "src": "/assets/images/team-topke@2x.jpg",
           "title": "Headshot of Chris Toepke"
         },
         "name": "Chris Topke",

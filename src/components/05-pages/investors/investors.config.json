@@ -5,14 +5,14 @@
   "context": {
     "preview": "@preview",
     "description": "",
-    "image": "/masthead-image.jpg",
+    "image": "/assets/images/masthead-image.jpg",
     "slug": "/investors/",
     "assetFileName": "investors",
     "classname": "InvestorsPage",
     "meta": {
       "title": "Investors",
       "description": "",
-      "image": "/masthead-image.jpg"
+      "image": "/assets/images/masthead-image.jpg"
     },
     "utilityLinks": [
       { "href": "#", "label": "Print page" },

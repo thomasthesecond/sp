@@ -3,7 +3,7 @@
     "teamMembers": [
       {
         "image": {
-          "src": "/team-doyle@2x.jpg",
+          "src": "/assets/images/team-doyle@2x.jpg",
           "title": "Headshot of Michael Doyle"
         },
         "name": "Michael Doyle",
@@ -12,7 +12,7 @@
       },
       {
         "image": {
-          "src": "/team-sparks@2x.jpg",
+          "src": "/assets/images/team-sparks@2x.jpg",
           "title": "Headshot of Teresa Sparks"
         },
         "name": "Teresa Sparks",
@@ -21,7 +21,7 @@
       },
       {
         "image": {
-          "src": "/team-baldock@2x.jpg",
+          "src": "/assets/images/team-baldock@2x.jpg",
           "title": "Headshot of Jennifer Baldock"
         },
         "name": "Jennifer Baldock",
@@ -30,7 +30,7 @@
       },
       {
         "image": {
-          "src": "/team-crysel@2x.jpg",
+          "src": "/assets/images/team-crysel@2x.jpg",
           "title": "Headshot of John Crysel"
         },
         "name": "John Crysel",
@@ -39,7 +39,7 @@
       },
       {
         "image": {
-          "src": "/team-goodwin@2x.jpg",
+          "src": "/assets/images/team-goodwin@2x.jpg",
           "title": "Headshot of George Goodwin"
         },
         "name": "George Goodwin",
@@ -48,7 +48,7 @@
       },
       {
         "image": {
-          "src": "/team-taparo@2x.jpg",
+          "src": "/assets/images/team-taparo@2x.jpg",
           "title": "Headshot of Tony Taparo"
         },
         "name": "Tony Taparo",
@@ -57,7 +57,7 @@
       },
       {
         "image": {
-          "src": "/team-topke@2x.jpg",
+          "src": "/assets/images/team-topke@2x.jpg",
           "title": "Headshot of Chris Toepke"
         },
         "name": "Chris Topke",

@@ -20,11 +20,11 @@
         "second": "differently"
       },
       "coverVideo": {
-        "src": "/home-video.mp4",
+        "src": "/assets/images/home-video.mp4",
         "type": "video/mp4",
         "poster": {
           "title": "",
-          "src": "/home-video-poster.jpg"
+          "src": "/assets/images/home-video-poster.jpg"
         },
         "autoplay": true
       },
@@ -41,22 +41,22 @@
           "image": {
             "class": "ImageBlock-photo",
             "title": "",
-            "src": "/home-partnerships-sm.jpg",
+            "src": "/assets/images/home-partnerships-sm.jpg",
             "srcset": [
               {
-                "src": "/home-partnerships-sm@2x.jpg",
+                "src": "/assets/images/home-partnerships-sm@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
               },
               {
-                "src": "/home-partnerships@2x.jpg",
+                "src": "/assets/images/home-partnerships@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
               },
               {
-                "src": "/home-partnerships-sm.jpg",
+                "src": "/assets/images/home-partnerships-sm.jpg",
                 "media": "(max-width: 544px)"
               },
               {
-                "src": "/home-partnerships.jpg",
+                "src": "/assets/images/home-partnerships.jpg",
                 "media": null
               }
             ]
@@ -77,22 +77,22 @@
           "image": {
             "class": "ImageBlock-photo",
             "title": "",
-            "src": "/home-investors-sm.jpg",
+            "src": "/assets/images/home-investors-sm.jpg",
             "srcset": [
               {
-                "src": "/home-investors-sm@2x.jpg",
+                "src": "/assets/images/home-investors-sm@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
               },
               {
-                "src": "/home-investors@2x.jpg",
+                "src": "/assets/images/home-investors@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
               },
               {
-                "src": "/home-investors-sm.jpg",
+                "src": "/assets/images/home-investors-sm.jpg",
                 "media": "(max-width: 544px)"
               },
               {
-                "src": "/home-investors.jpg",
+                "src": "/assets/images/home-investors.jpg",
                 "media": null
               }
             ]
@@ -114,22 +114,22 @@
           "image": {
             "class": "ImageBlock-photo",
             "title": "",
-            "src": "/home-careers-sm.jpg",
+            "src": "/assets/images/home-careers-sm.jpg",
             "srcset": [
               {
-                "src": "/home-careers-sm@2x.jpg",
+                "src": "/assets/images/home-careers-sm@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
               },
               {
-                "src": "/home-careers@2x.jpg",
+                "src": "/assets/images/home-careers@2x.jpg",
                 "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
               },
               {
-                "src": "/home-careers-sm.jpg",
+                "src": "/assets/images/home-careers-sm.jpg",
                 "media": "(max-width: 544px)"
               },
               {
-                "src": "/home-careers.jpg",
+                "src": "/assets/images/home-careers.jpg",
                 "media": null
               }
             ]

@@ -1,11 +1,11 @@
 {
   "context": {
     "coverVideo": {
-      "src": "/home-video.mp4",
+      "src": "/assets/images/home-video.mp4",
       "type": "video/mp4",
       "poster": {
         "title": "",
-        "src": "/home-video-poster.jpg"
+        "src": "/assets/images/home-video-poster.jpg"
       },
       "autoplay": false
     }

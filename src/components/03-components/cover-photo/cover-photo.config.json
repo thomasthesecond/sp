@@ -2,22 +2,22 @@
   "context": {
     "coverPhoto": {
       "title": "A group of ER doctors smiling happily",
-      "src": "/about-masthead@2x.jpg",
+      "src": "/assets/images/about-masthead@2x.jpg",
       "srcset": [
         {
-          "src": "/about-masthead-sm@2x.jpg",
+          "src": "/assets/images/about-masthead-sm@2x.jpg",
           "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
         },
         {
-          "src": "/about-masthead@2x.jpg",
+          "src": "/assets/images/about-masthead@2x.jpg",
           "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"
         },
         {
-          "src": "/about-masthead-sm.jpg",
+          "src": "/assets/images/about-masthead-sm.jpg",
           "media": "(max-width: 544px)"
         },
         {
-          "src": "/about-masthead.jpg",
+          "src": "/assets/images/about-masthead.jpg",
           "media": ""
         }
       ]

@@ -44,7 +44,7 @@ module.exports = {
     styleguide: "./src/assets/styleguide.js"
   },
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "tmp/assets"),
     filename: "[name].js"
   },
   module: {
@@ -85,7 +85,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin("[name].css"),
     new CopyWebpackPlugin([
-      { from: "src/content" }
+      { from: "src/assets/images", to: "images" }
     ])
   ]
 };

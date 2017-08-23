@@ -31,8 +31,8 @@
     {{/if}}
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mate|Open+Sans:300,400,600,700">
-    <link rel="stylesheet" href="{{ path '/main.css' }}">
-    <link rel="stylesheet" href="{{ path '/{{ _target.context.assetFileName }}.css' }}">
+    <link rel="stylesheet" href="{{ path '/assets/main.css' }}">
+    <link rel="stylesheet" href="{{ path '/assets/{{ _target.context.assetFileName }}.css' }}">
 
     <script type="application/ld+json">
       {
@@ -92,7 +92,7 @@
 
     {{> @icon-sprite }}
 
-    <script src="{{ path '/main.js' }}"></script>
-    <script src="{{ path '/{{ _target.context.assetFileName }}.js' }}"></script>
+    <script src="{{ path '/assets/main.js' }}"></script>
+    <script src="{{ path '/assets/{{ _target.context.assetFileName }}.js' }}"></script>
   </body>
 </html>

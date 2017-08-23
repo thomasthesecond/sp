@@ -1,7 +1,7 @@
 {
   "context": {
     "stockChart": {
-      "src": "/example-chart@2x.png"
+      "src": "/assets/images/example-chart@2x.png"
     }
   }
 }
