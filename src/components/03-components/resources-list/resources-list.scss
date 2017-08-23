@@ -26,3 +26,15 @@
   margin-top: 0;
   padding-left: 0;
 }
+
+.ResourcesList-item > a {
+  display: inline-block;
+}
+
+.ResourcesList-icon {
+  display: inline-block;
+  height: auto;
+  margin-right: 4px;
+  vertical-align: -2px;
+  width: 14px;
+}
