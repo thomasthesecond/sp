@@ -109,12 +109,12 @@ console.info("Styleguide loaded");
 /**
  * Polyfill object-fit: cover
  */
-if ("objectFit" in document.documentElement.style === false) {
+if ("objectFit" in document.documentElement.style === true) {
 	document.addEventListener("DOMContentLoaded", () => {
-		Array.prototype.forEach.call(document.querySelectorAll(".CoverPhoto img"), (image) => {
-			(image.runtimeStyle || image.style).background = `url("${image.src}") no-repeat 50% / cover`;
-
-			image.src = `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="${image.width}" height="${image.height}" %3E%3C/svg%3E`;
+		Array.prototype.forEach.call(document.querySelectorAll(".CoverPhoto"), (el) => {
+      const image = el.querySelector("img");
+			(el.runtimeStyle || el.style).background = `url("${image.src}") no-repeat 50% / cover`;
+      (image.runtimeStyle || image.style).display = "none";
 		});
 	});
 }
