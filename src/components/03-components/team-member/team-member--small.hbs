@@ -1,4 +1,4 @@
-<div class="TeamMember TeamMember--small" itemprop="employee" itemscope itemtype="http://schema.org/Person">
+<div class="TeamMember TeamMember--small js-team-member" itemprop="employee" itemscope itemtype="http://schema.org/Person">
   <h5 class="TeamMember-name" itemprop="name">
     {{ teamMember.name }}
   </h5>
@@ -7,7 +7,15 @@
     {{ teamMember.title }}
   </p>
 
+  <p class="TeamMember-bio" itemprop="description" hidden>
+    {{ teamMember.bio }}
+  </p>
+
   <p class="TeamMember-link">
-    {{> "@more-link" link=teamMember.link }}
+    {{!> "@more-link" link=teamMember.link }}
+    <a class="MoreLink js-modal-trigger" href="#">
+      Read bio
+      {{> @icon id="icon-arrow" }}
+    </a>
   </p>
 </div>
