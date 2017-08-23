@@ -31,7 +31,7 @@
 
 .NextPage-label {
   @include fluid-type(
-    $min-font-size: 10,
+    $min-font-size: 12,
     $max-font-size: 14,
     $min-width: 480
   );
@@ -43,7 +43,7 @@
 
 .NextPage-title {
   @include fluid-type(
-    $min-font-size: $font-size-heading-4,
+    $min-font-size: $font-size-heading-1-min,
     $max-font-size: $font-size-heading-1,
     $min-width: 480
   );
