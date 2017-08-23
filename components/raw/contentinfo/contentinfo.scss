@@ -132,6 +132,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
 
     @media (min-width: 800px) {
       align-self: flex-start;
+      left: 0;
       margin-left: #{($image-margin / $location-container-width) * 100%};
       order: -1;
       position: absolute;
