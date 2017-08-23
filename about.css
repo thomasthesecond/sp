@@ -30,10 +30,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  width: 100%;
   z-index: 1;
 }
 

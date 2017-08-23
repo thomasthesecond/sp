@@ -2217,10 +2217,12 @@ hr.dark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  width: 100%;
   z-index: 1;
 }
 
@@ -4236,6 +4238,28 @@ hr.dark {
  * Mixins
  */
 /**
+ * Component: File download
+ */
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Filter
  * @type Organism
  */
@@ -4368,28 +4392,6 @@ hr.dark {
   .Filter-link {
     margin-top: 48px;
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: File download
- */
-.FileDownload {
-  display: inline-block;
-}
-
-.FileDownload img {
-  display: block;
-  height: auto;
-  width: 14px;
-}
-
-.FileDownload + .FileDownload {
-  margin-left: 24px;
 }
 /**
  * Functions
