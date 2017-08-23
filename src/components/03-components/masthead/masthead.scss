@@ -8,10 +8,7 @@
  */
 
 .Masthead {
-  align-items: center;
-  display: flex;
   height: 55vw;
-  justify-content: center;
   max-height: 466px;
   min-height: 178px;
   overflow: hidden;
@@ -26,6 +23,9 @@
 }
 
 .Masthead .container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   position: relative;
   z-index: $z-index-default;
 }
