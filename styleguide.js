@@ -3685,6 +3685,19 @@ doc.className = doc.className.replace("no-js", "js");
 
 console.info("Styleguide loaded");
 
+/**
+ * Polyfill object-fit: cover
+ */
+if ("objectFit" in document.documentElement.style === false) {
+  document.addEventListener("DOMContentLoaded", function () {
+    Array.prototype.forEach.call(document.querySelectorAll(".CoverPhoto img"), function (image) {
+      (image.runtimeStyle || image.style).background = "url(\"" + image.src + "\") no-repeat 50%/cover)";
+
+      image.src = "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"" + image.width + "\" height=\"" + image.height + "\" %3E%3C/svg%3E";
+    });
+  });
+}
+
 /***/ }),
 /* 139 */
 /***/ (function(module, exports) {
