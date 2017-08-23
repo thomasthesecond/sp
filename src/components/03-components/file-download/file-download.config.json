@@ -1,0 +1,78 @@
+{
+  "default": "doc-on",
+  "context": {},
+  "variants": [
+    {
+      "name": "doc-on",
+      "label": "doc (on)",
+      "context": {
+        "name": "doc",
+        "file": "#",
+        "on": true
+      }
+    },
+    {
+      "name": "doc-off",
+      "label": "doc (off)",
+      "context": {
+        "name": "doc",
+        "file": "#",
+        "on": false
+      }
+    },
+    {
+      "name": "pdf-on",
+      "label": "pdf (on)",
+      "context": {
+        "name": "pdf",
+        "file": "#",
+        "on": true
+      }
+    },
+    {
+      "name": "pdf-off",
+      "label": "pdf (off)",
+      "context": {
+        "name": "pdf",
+        "file": "#",
+        "on": false
+      }
+    },
+    {
+      "name": "xls-on",
+      "label": "xls (on)",
+      "context": {
+        "name": "xls",
+        "file": "#",
+        "on": true
+      }
+    },
+    {
+      "name": "xls-off",
+      "label": "xls (off)",
+      "context": {
+        "name": "xls",
+        "file": "#",
+        "on": false
+      }
+    },
+    {
+      "name": "xbrl-on",
+      "label": "xbrl (on)",
+      "context": {
+        "name": "xbrl",
+        "file": "#",
+        "on": true
+      }
+    },
+    {
+      "name": "xbrl-off",
+      "label": "xbrl (off)",
+      "context": {
+        "name": "xbrl",
+        "file": "#",
+        "on": false
+      }
+    }
+  ]
+}
