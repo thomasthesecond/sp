@@ -26,7 +26,7 @@ $color-border-input-dark: rgba(#bfd0d8, .2); // rgb(191, 208, 216) // Jungle Mis
 $color-text-default: #646e7e; // #8f9aa8; // rgb(143, 154, 168) // Regent Gray
 $color-text-heading: #25395d; // rgb(37, 57, 93) // Cloud Burst
 $color-text-overlay: #fff; // rgb(255, 255, 255) // White
-$color-text-introduction: #819ba3; // rgb(129, 155, 163) // Gumbo
+$color-text-introduction: #25395d; // rgb(37, 57, 93) // Cloud Burst
 $color-text-hamburger: #275e70; // rgb(39, 94, 112) // Casal
 $color-text-hamburger-overlay: #fff; // rgb(255, 255, 255) // White
 $color-text-service-card: #77919e; // rgb(119, 145, 158) // Gothic
@@ -43,6 +43,7 @@ $color-text-search-button-hover: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
 $color-text-news-date: #b5955d; // rgb(181, 149, 93) // Muddy Waters
 $color-text-positive: #6fc179;
 $color-text-negative: #d90a0a;
+$color-text-testimonial: #25395d; // rgb(37, 57, 93) // Cloud Burst
 
 // ---------------------------------------------------------------------
 // Gradients
@@ -218,7 +219,8 @@ $color-text-black: #000;
 // ---------------------------------------------------------------------
 // Fonts
 // ---------------------------------------------------------------------
-$font-family-default: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-family-serif: "Mate", Georgia, sans-serif;
 
 // ---------------------------------------------------------------------
 // Typography
@@ -233,11 +235,8 @@ $font-size-body-small-min: 12;
 
 $font-size-body-tiny: 10;
 
-$font-size-heading-masthead-super: 96;
-$font-size-heading-masthead-super-min: 40;
-
-$font-size-heading-masthead: 80;
-$font-size-heading-masthead-min: 40;
+$font-size-heading-super: 72;
+$font-size-heading-super-min: 32;
 
 $font-size-heading-1: 48;
 $font-size-heading-1-min: 32;
@@ -276,7 +275,7 @@ $line-height-body-small: (19 / $font-size-body-small);
 $line-height-heading-1: (58 / $font-size-heading-1);
 // $line-height-heading-1-min: (43 / $font-size-heading-1-min);
 
-$line-height-heading-2: (56 / $font-size-heading-2);
+$line-height-heading-2: (40 / $font-size-heading-2);
 // $line-height-heading-2-min: (42 / $font-size-heading-2-min);
 
 $line-height-heading-3: (32 / $font-size-heading-3);
@@ -324,6 +323,10 @@ $max-width-banner: 620;
 // ---------------------------------------------------------------------
 // Shadow
 // ---------------------------------------------------------------------
+
+$shadow-location-finder: 0 2px 34px rgba(#1c2d3e, .09), 0 36px 84px rgba(#042435, .39);
+$shadow-location-finder-sticky: 0 2px 34px rgba(#1c2d3e, .09);
+$shadow-modal: 0 36px 84px rgba(#042435, .39);
 
 // ---------------------------------------------------------------------
 // Time
