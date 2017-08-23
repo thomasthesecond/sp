@@ -7,24 +7,10 @@
  * @type Atom
  */
 
-.heading-masthead-super {
+.heading-super {
   @include fluid-type(
-    $min-font-size: $font-size-heading-masthead-super-min,
-    $max-font-size: $font-size-heading-masthead-super,
-    $min-width: 600
-  );
-
-  color: $color-text-heading;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-reset;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.heading-masthead {
-  @include fluid-type(
-    $min-font-size: $font-size-heading-masthead-min,
-    $max-font-size: $font-size-heading-masthead,
+    $min-font-size: $font-size-heading-super-min,
+    $max-font-size: $font-size-heading-super,
     $min-width: 600
   );
 
