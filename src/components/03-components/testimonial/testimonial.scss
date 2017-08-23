@@ -8,14 +8,10 @@
  */
 
 .Testimonial {
-  color: $color-text-heading;
+  color: $color-text-testimonial;
   margin: 0;
   max-width: 856px;
   text-align: center;
-}
-
-.Testimonial--white {
-  color: $color-text-overlay;
 }
 
 .Testimonial-quote {
@@ -26,14 +22,11 @@
     $max-width: 1024
   );
 
+  font-family: $font-family-serif;
   font-weight: $font-weight-light;
   line-height: (32 / 20);
   margin-bottom: #{(32 / 20) * 1em};
   margin-top: 0;
-
-  .Testimonial--white & {
-    text-shadow: 0 2px 24px #000;
-  }
 }
 
 .Testimonial-citation {
@@ -75,8 +68,18 @@
   display: block;
   line-height: (17 / 14);
   margin-top: #{(6 / 14) * 1em};
+}
 
-  .Testimonial--white & {
-    color: inherit;
-  }
+// Implementation detail
+
+.Feature .Testimonial {
+  color: $color-text-overlay;
+}
+
+.Feature .Testimonial-quote {
+  text-shadow: 0 2px 24px #000;
+}
+
+.Feature .Testimonial-location {
+  color: inherit;
 }
