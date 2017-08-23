@@ -921,31 +921,6 @@ h6,
  * Mixins
  */
 /**
- * Component: Paragraph
- * @type Atom
- */
-p {
-  font-size: 14px;
-  line-height: 1.71429;
-  margin-bottom: 1.71429em;
-  margin-top: 1.71429em;
-}
-
-@media (min-width: 600px) {
-  p {
-    font-size: 16px;
-    line-height: 1.75;
-    margin-bottom: 2em;
-    margin-top: 2em;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: List
  * @type Atom
  */
@@ -964,6 +939,31 @@ p {
 .list-unstyled {
   list-style-type: none;
   padding-left: 0;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Paragraph
+ * @type Atom
+ */
+p {
+  font-size: 14px;
+  line-height: 1.71429;
+  margin-bottom: 1.71429em;
+  margin-top: 1.71429em;
+}
+
+@media (min-width: 600px) {
+  p {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
 }
 /**
  * Functions
@@ -1301,57 +1301,6 @@ hr {
 
 hr.dark {
   background-color: #bfd0d8;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Button
- * @type Atom
- */
-.Button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background-color: #5d91a1;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: 14px;
-  font-weight: 600;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  letter-spacing: .7px;
-  line-height: 1;
-  padding: 1.71429em 2.85714em;
-  text-align: center;
-  text-decoration: none;
-  -webkit-transition: background-color 200ms, color 200ms;
-  transition: background-color 200ms, color 200ms;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.Button:hover, .Button:active, .Button:focus {
-  color: #fff;
-}
-
-.Button--dark {
-  background-color: #152640;
-  border: 1px solid rgba(191, 208, 216, 0.2);
-  color: #fff;
 }
 /**
  * Functions
@@ -1798,6 +1747,57 @@ hr.dark {
         -ms-flex-order: -1;
             order: -1;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Button
+ * @type Atom
+ */
+.Button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #5d91a1;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: .7px;
+  line-height: 1;
+  padding: 1.71429em 2.85714em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 200ms, color 200ms;
+  transition: background-color 200ms, color 200ms;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.Button:hover, .Button:active, .Button:focus {
+  color: #fff;
+}
+
+.Button--dark {
+  background-color: #152640;
+  border: 1px solid rgba(191, 208, 216, 0.2);
+  color: #fff;
 }
 /**
  * Functions
