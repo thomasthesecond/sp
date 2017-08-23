@@ -6,7 +6,11 @@
   <ul class="ResourcesList-list">
     {{#each resourcesList.resources}}
       <li class="ResourcesList-item">
-        <a href="{{ this.url }}">
+        <a href="{{ this.file }}" title="Download {{ this.title }}">
+          <img
+            class="ResourcesList-icon"
+            src="{{ path '/icon-{{ this.type }}-on.png' }}"
+            alt="Download {{ this.title }}">
           {{ this.title }}
         </a>
       </li>
