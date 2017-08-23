@@ -42,7 +42,7 @@ doc.className = doc.className.replace("no-js", "js");
 /**
  * Polyfill object-fit: cover
  */
-if ("objectFit" in document.documentElement.style === true) {
+if ("objectFit" in document.documentElement.style === false) {
 	document.addEventListener("DOMContentLoaded", () => {
 		Array.prototype.forEach.call(document.querySelectorAll(".CoverPhoto"), (el) => {
       const image = el.querySelector("img");
