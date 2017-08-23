@@ -5,6 +5,148 @@
  * Mixins
  */
 /**
+ * Component: Sub Navigation
+ * @type Molecule
+ */
+.SubNavigation {
+  font-size: 12px;
+  background-color: #fff;
+  color: #646e7e;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 37.5em) and (max-width: 80.625em) {
+  .SubNavigation {
+    font-size: calc(12px + (16 - 12) * (100vw - 600px) / (1290 - 600));
+  }
+}
+
+@media (min-width: 80.625em) {
+  .SubNavigation {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 600px) {
+  .SubNavigation {
+    height: 90px;
+  }
+}
+
+.SubNavigation::after, .SubNavigation::before {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 24px;
+  z-index: 1;
+}
+
+.SubNavigation::before {
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #fff), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, #fff 20%, rgba(255, 255, 255, 0) 100%);
+  left: 0;
+}
+
+.SubNavigation::after {
+  background: -webkit-gradient(linear, right top, left top, color-stop(20%, #fff), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to left, #fff 20%, rgba(255, 255, 255, 0) 100%);
+  right: 0;
+}
+
+.SubNavigation-list {
+  height: 100%;
+  line-height: 1;
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+}
+
+@media (max-width: 1006px) {
+  .SubNavigation-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 1007px) {
+  .SubNavigation-list {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1290px;
+  }
+}
+
+.SubNavigation-item {
+  display: inline-block;
+  height: 100%;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-bottom: 22px;
+  padding-top: 26px;
+  position: relative;
+}
+
+@media (min-width: 600px) {
+  .SubNavigation-item {
+    margin-left: 14px;
+    margin-right: 14px;
+    padding-bottom: 34px;
+    padding-top: 39px;
+  }
+}
+
+.SubNavigation:not(.SubNavigation--scrollSpy) .SubNavigation-item.is-active::after {
+  background-color: #b5955d;
+  bottom: 0;
+  height: 3px;
+  position: absolute;
+  content: "";
+  left: 0;
+  opacity: 1;
+  width: 100%;
+}
+
+.SubNavigation-link {
+  color: currentColor;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+}
+
+.SubNavigation-item:not(.is-active) .SubNavigation-link:hover, .SubNavigation-item:not(.is-active) .SubNavigation-link:active {
+  color: rgba(68, 105, 117, 0.6);
+}
+
+.SubNavigation-marker {
+  background-color: #b5955d;
+  bottom: 0;
+  height: 3px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+  width: 0;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Team member
  * @type Molecule
  */
@@ -168,148 +310,6 @@
 
 .Modal .TeamMember-bio {
   margin-bottom: 28px;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Sub Navigation
- * @type Molecule
- */
-.SubNavigation {
-  font-size: 12px;
-  background-color: #fff;
-  color: #646e7e;
-  height: 60px;
-  overflow: hidden;
-  position: relative;
-}
-
-@media (min-width: 37.5em) and (max-width: 80.625em) {
-  .SubNavigation {
-    font-size: calc(12px + (16 - 12) * (100vw - 600px) / (1290 - 600));
-  }
-}
-
-@media (min-width: 80.625em) {
-  .SubNavigation {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 600px) {
-  .SubNavigation {
-    height: 90px;
-  }
-}
-
-.SubNavigation::after, .SubNavigation::before {
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 24px;
-  z-index: 1;
-}
-
-.SubNavigation::before {
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #fff), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to right, #fff 20%, rgba(255, 255, 255, 0) 100%);
-  left: 0;
-}
-
-.SubNavigation::after {
-  background: -webkit-gradient(linear, right top, left top, color-stop(20%, #fff), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to left, #fff 20%, rgba(255, 255, 255, 0) 100%);
-  right: 0;
-}
-
-.SubNavigation-list {
-  height: 100%;
-  line-height: 1;
-  list-style: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: 100%;
-}
-
-@media (max-width: 1006px) {
-  .SubNavigation-list {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
-@media (min-width: 1007px) {
-  .SubNavigation-list {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1290px;
-  }
-}
-
-.SubNavigation-item {
-  display: inline-block;
-  height: 100%;
-  margin-left: 8px;
-  margin-right: 8px;
-  padding-bottom: 22px;
-  padding-top: 26px;
-  position: relative;
-}
-
-@media (min-width: 600px) {
-  .SubNavigation-item {
-    margin-left: 14px;
-    margin-right: 14px;
-    padding-bottom: 34px;
-    padding-top: 39px;
-  }
-}
-
-.SubNavigation:not(.SubNavigation--scrollSpy) .SubNavigation-item.is-active::after {
-  background-color: #b5955d;
-  bottom: 0;
-  height: 3px;
-  position: absolute;
-  content: "";
-  left: 0;
-  opacity: 1;
-  width: 100%;
-}
-
-.SubNavigation-link {
-  color: currentColor;
-  position: relative;
-  text-decoration: none;
-  -webkit-transition: color 200ms;
-  transition: color 200ms;
-}
-
-.SubNavigation-item:not(.is-active) .SubNavigation-link:hover, .SubNavigation-item:not(.is-active) .SubNavigation-link:active {
-  color: rgba(68, 105, 117, 0.6);
-}
-
-.SubNavigation-marker {
-  background-color: #b5955d;
-  bottom: 0;
-  height: 3px;
-  position: absolute;
-  opacity: 0;
-  -webkit-transition: opacity 200ms;
-  transition: opacity 200ms;
-  width: 0;
 }
 /**
  * Functions
