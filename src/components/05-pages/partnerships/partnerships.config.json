@@ -18,7 +18,7 @@
       "title": "Partnerships",
       "coverPhoto": {
         "title": "Two doctors analyzing CT scans of a human brain",
-        "src": "/partnerships-masthead-sm.jpg",
+        "src": "/partnerships-masthead@2x.jpg",
         "srcset": [
           {
             "src": "/partnerships-masthead-sm@2x.jpg",
@@ -64,7 +64,7 @@
     "feature": {
       "coverPhoto": {
         "title": "Doctors moving around in an operating room",
-        "src": "/partnerships-feature-sm.jpg",
+        "src": "/partnerships-feature@2x.jpg",
         "srcset": [
           {
             "src": "/partnerships-feature-sm@2x.jpg",

@@ -18,7 +18,7 @@
       "title": "About us",
       "coverPhoto": {
         "title": "A group of ER doctors smiling happily",
-        "src": "/about-masthead-sm.jpg",
+        "src": "/about-masthead@2x.jpg",
         "srcset": [
           {
             "src": "/about-masthead-sm@2x.jpg",
@@ -114,7 +114,7 @@
     "feature": {
       "coverPhoto": {
         "title": "Two doctors looking at X-rays on a handheld tablet device",
-        "src": "/about-feature-sm.jpg",
+        "src": "/about-feature@2x.jpg",
         "srcset": [
           {
             "src": "/about-feature-sm@2x.jpg",
