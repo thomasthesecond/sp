@@ -3316,16 +3316,7 @@ hr.dark {
  * @type Organism
  */
 .Feature {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 55.75vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   max-height: 508px;
   min-height: 446px;
   position: relative;
@@ -3339,6 +3330,18 @@ hr.dark {
 }
 
 .Feature .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
   z-index: 1;
 }
 
@@ -4238,28 +4241,6 @@ hr.dark {
  * Mixins
  */
 /**
- * Component: File download
- */
-.FileDownload {
-  display: inline-block;
-}
-
-.FileDownload img {
-  display: block;
-  height: auto;
-  width: 14px;
-}
-
-.FileDownload + .FileDownload {
-  margin-left: 24px;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Filter
  * @type Organism
  */
@@ -4392,6 +4373,28 @@ hr.dark {
   .Filter-link {
     margin-top: 48px;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: File download
+ */
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
 }
 /**
  * Functions
