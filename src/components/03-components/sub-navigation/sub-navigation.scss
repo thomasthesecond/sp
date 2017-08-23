@@ -49,7 +49,7 @@
     height: 100%;
     position: absolute;
     top: 0;
-    width: #{$spacing-sub-navigation-gutter}px;
+    width: #{$spacing-gutter}px;
     z-index: $z-index-default;
   }
 
@@ -111,13 +111,15 @@
 .SubNavigation-item {
   display: inline-block;
   height: 100%;
-  margin-left: 14px;
-  margin-right: 14px;
+  margin-left: 8px;
+  margin-right: 8px;
   padding-bottom: 22px;
   padding-top: 26px;
   position: relative;
 
   @media (min-width: 600px) {
+    margin-left: 14px;
+    margin-right: 14px;
     padding-bottom: 34px;
     padding-top: 39px;
   }
