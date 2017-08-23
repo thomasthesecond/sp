@@ -3690,10 +3690,10 @@ console.info("Styleguide loaded");
  */
 if ("objectFit" in document.documentElement.style === false) {
   document.addEventListener("DOMContentLoaded", function () {
-    Array.prototype.forEach.call(document.querySelectorAll(".CoverPhoto img"), function (image) {
-      (image.runtimeStyle || image.style).background = "url(\"" + image.src + "\") no-repeat 50% / cover";
-
-      image.src = "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"" + image.width + "\" height=\"" + image.height + "\" %3E%3C/svg%3E";
+    Array.prototype.forEach.call(document.querySelectorAll(".CoverPhoto"), function (el) {
+      var image = el.querySelector("img");
+      (el.runtimeStyle || el.style).background = "url(\"" + image.src + "\") no-repeat 50% / cover";
+      (image.runtimeStyle || image.style).display = "none";
     });
   });
 }
