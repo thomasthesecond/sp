@@ -5,13 +5,23 @@
       "resources": [
         {
           "title": "Audit Committee Charter",
-          "url": "/",
-          "type": "pdf"
+          "file": "#",
+          "type": "doc"
         },
         {
           "title": "Compensation Committee Charter",
-          "url": "/",
+          "file": "#",
           "type": "pdf"
+        },
+        {
+          "title": "Audit Committee Charter",
+          "file": "#",
+          "type": "xls"
+        },
+        {
+          "title": "Compensation Committee Charter",
+          "file": "#",
+          "type": "xbrl"
         }
       ]
     }
