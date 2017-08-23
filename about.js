@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 118);
+/******/ 	return __webpack_require__(__webpack_require__.s = 124);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -120,6 +120,7 @@ var SubNavigation = function () {
     _classCallCheck(this, SubNavigation);
 
     this.options = options;
+
     this.subNavigation = document.querySelector(".js-sub-navigation");
     this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
     this.subNavigationItems = this.subNavigation.querySelectorAll("li");
@@ -136,12 +137,12 @@ var SubNavigation = function () {
     this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
     this.setUpItems = this.setUpItems.bind(this);
     this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
-    // this.updateSubNavigationOffset = this.updateSubNavigationOffset.bind(this);
 
     this.activeClass = "is-active";
     this.currentItem = null;
     this.scrollSpySettings = [];
-    // this.subNavigationOffset = this.subNavigation.parentNode.offsetTop;
+
+    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
   }
 
   _createClass(SubNavigation, [{
@@ -220,18 +221,11 @@ var SubNavigation = function () {
         var parent = anchor.parentNode;
         var hashId = anchor.hash.replace("#", "");
 
-        // if (!parent.classList.contains("is-active")) {
-        //   this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));
-        //   this.addActiveClass(parent);
-        // }
-
         window.scroll({
           top: document.getElementById(hashId).offsetTop,
           left: 0,
           behavior: "smooth"
         });
-
-        // this.updateMarker(anchor.parentNode);
 
         event.preventDefault();
       });
@@ -291,17 +285,9 @@ var SubNavigation = function () {
         setTimeout(function () {
           _this3.scrollSpy(_this3.scrollSpySettings);
 
-          if (_this3.currentItem) {
+          if (_this3.currentItem && !_this3.motionQuery.matches) {
             _this3.setMarkerTransition();
           };
-
-          // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-          //
-          // if (scrollPosition >= this.subNavigationOffset) {
-          //   this.subNavigation.classList.add("is-sticky");
-          // } else {
-          //   this.subNavigation.classList.remove("is-sticky");
-          // }
         }, 100);
       });
     }
@@ -320,21 +306,11 @@ var SubNavigation = function () {
         _this4.listenForAnchorClick(anchor);
       });
     }
-
-    // updateSubNavigationOffset() {
-    //   window.addEventListener("resize", (event) => {
-    //     setTimeout(() => {
-    //       this.subNavigationOffset = this.subNavigation.offsetTop;
-    //     }, 200);
-    //   });
-    // }
-
   }, {
     key: "render",
     value: function render() {
       this.setUpScrollSpy();
       this.setUpItems();
-      // this.updateSubNavigationOffset();
     }
   }]);
 
@@ -345,33 +321,40 @@ exports.default = SubNavigation;
 
 /***/ }),
 
-/***/ 118:
+/***/ 12:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 124:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(119);
+__webpack_require__(125);
 
-__webpack_require__(21);
+__webpack_require__(22);
 
 __webpack_require__(6);
 
-__webpack_require__(61);
+__webpack_require__(63);
 
 __webpack_require__(3);
 
 __webpack_require__(8);
 
-__webpack_require__(63);
+__webpack_require__(65);
 
 var _subNavigation = __webpack_require__(10);
 
 var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-__webpack_require__(23);
+__webpack_require__(24);
 
-__webpack_require__(65);
+__webpack_require__(67);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -387,24 +370,17 @@ console.info("About loaded");
 
 /***/ }),
 
-/***/ 119:
+/***/ 125:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(120);
+__webpack_require__(126);
 
 /***/ }),
 
-/***/ 12:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 120:
+/***/ 126:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -418,7 +394,7 @@ __webpack_require__(120);
 
 /***/ }),
 
-/***/ 15:
+/***/ 16:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -432,28 +408,28 @@ __webpack_require__(120);
 
 /***/ }),
 
-/***/ 21:
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(22);
+__webpack_require__(23);
 
 __webpack_require__(0);
 
-__webpack_require__(15);
+__webpack_require__(16);
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 23:
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -463,7 +439,7 @@ __webpack_require__(13);
 
 /***/ }),
 
-/***/ 27:
+/***/ 28:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -503,30 +479,11 @@ __webpack_require__(7);
 
 /***/ }),
 
-/***/ 61:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(62);
-
-/***/ }),
-
-/***/ 62:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 63:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-
-__webpack_require__(27);
 
 __webpack_require__(64);
 
@@ -545,11 +502,30 @@ __webpack_require__(64);
 "use strict";
 
 
+__webpack_require__(28);
+
 __webpack_require__(66);
 
 /***/ }),
 
 /***/ 66:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 67:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(68);
+
+/***/ }),
+
+/***/ 68:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

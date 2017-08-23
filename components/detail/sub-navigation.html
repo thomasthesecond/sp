@@ -321,6 +321,7 @@
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SubNavigation</span> </span>{
   <span class="hljs-keyword">constructor</span>(options) {
     <span class="hljs-keyword">this</span>.options = options;
+
     <span class="hljs-keyword">this</span>.subNavigation = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-sub-navigation"</span>);
     <span class="hljs-keyword">this</span>.subNavigationMarker = <span class="hljs-keyword">this</span>.subNavigation.querySelector(<span class="hljs-string">".js-sub-navigation-marker"</span>);
     <span class="hljs-keyword">this</span>.subNavigationItems = <span class="hljs-keyword">this</span>.subNavigation.querySelectorAll(<span class="hljs-string">"li"</span>);
@@ -337,12 +338,12 @@
     <span class="hljs-keyword">this</span>.setUpScrollSpy = <span class="hljs-keyword">this</span>.setUpScrollSpy.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.setUpItems = <span class="hljs-keyword">this</span>.setUpItems.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.scrollActiveMarkerIntoView = <span class="hljs-keyword">this</span>.scrollActiveMarkerIntoView.bind(<span class="hljs-keyword">this</span>);
-    <span class="hljs-comment">// this.updateSubNavigationOffset = this.updateSubNavigationOffset.bind(this);</span>
 
     <span class="hljs-keyword">this</span>.activeClass = <span class="hljs-string">"is-active"</span>;
     <span class="hljs-keyword">this</span>.currentItem = <span class="hljs-literal">null</span>;
     <span class="hljs-keyword">this</span>.scrollSpySettings = [];
-    <span class="hljs-comment">// this.subNavigationOffset = this.subNavigation.parentNode.offsetTop;</span>
+
+    <span class="hljs-keyword">this</span>.motionQuery = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(prefers-reduced-motion)"</span>);
   }
 
   addActiveClass(item) {
@@ -406,18 +407,11 @@
       <span class="hljs-keyword">const</span> parent = anchor.parentNode;
       <span class="hljs-keyword">const</span> hashId = anchor.hash.replace(<span class="hljs-string">"#"</span>, <span class="hljs-string">""</span>);
 
-      <span class="hljs-comment">// if (!parent.classList.contains("is-active")) {</span>
-      <span class="hljs-comment">//   this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));</span>
-      <span class="hljs-comment">//   this.addActiveClass(parent);</span>
-      <span class="hljs-comment">// }</span>
-
       <span class="hljs-built_in">window</span>.scroll({
         <span class="hljs-attr">top</span>: <span class="hljs-built_in">document</span>.getElementById(hashId).offsetTop,
         <span class="hljs-attr">left</span>: <span class="hljs-number">0</span>,
         <span class="hljs-attr">behavior</span>: <span class="hljs-string">"smooth"</span>
       });
-
-      <span class="hljs-comment">// this.updateMarker(anchor.parentNode);</span>
 
       event.preventDefault();
     });
@@ -471,17 +465,9 @@
       setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
         <span class="hljs-keyword">this</span>.scrollSpy(<span class="hljs-keyword">this</span>.scrollSpySettings);
 
-        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.currentItem) {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.currentItem &amp;&amp; !<span class="hljs-keyword">this</span>.motionQuery.matches) {
           <span class="hljs-keyword">this</span>.setMarkerTransition();
         };
-
-        <span class="hljs-comment">// const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;</span>
-        <span class="hljs-comment">//</span>
-        <span class="hljs-comment">// if (scrollPosition &gt;= this.subNavigationOffset) {</span>
-        <span class="hljs-comment">//   this.subNavigation.classList.add("is-sticky");</span>
-        <span class="hljs-comment">// } else {</span>
-        <span class="hljs-comment">//   this.subNavigation.classList.remove("is-sticky");</span>
-        <span class="hljs-comment">// }</span>
       }, <span class="hljs-number">100</span>);
     });
   }
@@ -498,18 +484,9 @@
     });
   }
 
-  <span class="hljs-comment">// updateSubNavigationOffset() {</span>
-  <span class="hljs-comment">//   window.addEventListener("resize", (event) =&gt; {</span>
-  <span class="hljs-comment">//     setTimeout(() =&gt; {</span>
-  <span class="hljs-comment">//       this.subNavigationOffset = this.subNavigation.offsetTop;</span>
-  <span class="hljs-comment">//     }, 200);</span>
-  <span class="hljs-comment">//   });</span>
-  <span class="hljs-comment">// }</span>
-
   render() {
     <span class="hljs-keyword">this</span>.setUpScrollSpy();
     <span class="hljs-keyword">this</span>.setUpItems();
-    <span class="hljs-comment">// this.updateSubNavigationOffset();</span>
   }
 }
 
@@ -530,7 +507,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">5.8 KB</span>
+                    <span class="Meta-value">4.9 KB</span>
                 </li>
             </ul>
         </div>
@@ -594,7 +571,7 @@
     <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">width</span>: #{<span class="hljs-variable">$spacing-sub-navigation-gutter</span>}px;
+    <span class="hljs-attribute">width</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
     <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-default</span>;
   }
 
@@ -656,13 +633,15 @@
 <span class="hljs-selector-class">.SubNavigation-item</span> {
   <span class="hljs-attribute">display</span>: inline-block;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">14px</span>;
-  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">14px</span>;
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8px</span>;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">8px</span>;
   <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">22px</span>;
   <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">26px</span>;
   <span class="hljs-attribute">position</span>: relative;
 
   @<span class="hljs-keyword">media</span> (min-width: 600px) {
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">14px</span>;
+    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">14px</span>;
     <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">34px</span>;
     <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">39px</span>;
   }
@@ -1318,6 +1297,214 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-file-download">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>File Download</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--doc-on.html" data-pjax>
+                <span>doc (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--doc-off.html" data-pjax>
+                <span>doc (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--pdf-on.html" data-pjax>
+                <span>pdf (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--pdf-off.html" data-pjax>
+                <span>pdf (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xls-on.html" data-pjax>
+                <span>xls (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xls-off.html" data-pjax>
+                <span>xls (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xbrl-on.html" data-pjax>
+                <span>xbrl (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xbrl-off.html" data-pjax>
+                <span>xbrl (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -2946,21 +3133,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-tagline">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tagline.html" data-pjax>
                 <span>Tagline</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tagline--default.html" data-pjax>
-                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2977,35 +3153,6 @@
 
 
             </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tagline--white.html" data-pjax>
-                <span>White</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -3098,21 +3245,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-testimonial">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="testimonial.html" data-pjax>
                 <span>Testimonial</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="testimonial--default.html" data-pjax>
-                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3129,35 +3265,6 @@
 
 
             </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="testimonial--white.html" data-pjax>
-                <span>White</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     

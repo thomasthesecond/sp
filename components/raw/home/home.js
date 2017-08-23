@@ -1,12 +1,6 @@
 "use strict";
 
 export default class HomePage {
-  static debounce(callback) {
-    setTimeout(() => {
-      callback();
-    }, 200);
-  }
-
   constructor(options) {
     this.options = options;
 

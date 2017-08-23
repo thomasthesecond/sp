@@ -293,6 +293,8 @@
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-meta">"use strict"</span>;
 
+<span class="hljs-keyword">import</span> noScroll <span class="hljs-keyword">from</span> <span class="hljs-string">"no-scroll"</span>;
+
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Modal</span> </span>{
   <span class="hljs-keyword">constructor</span>(options) {
     <span class="hljs-keyword">this</span>.options = options;
@@ -300,41 +302,80 @@
     <span class="hljs-keyword">this</span>.document = <span class="hljs-built_in">document</span>.documentElement;
     <span class="hljs-keyword">this</span>.modal = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal"</span>);
     <span class="hljs-keyword">this</span>.trigger = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal-trigger"</span>);
+    <span class="hljs-keyword">this</span>.content = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal-content"</span>);
     <span class="hljs-keyword">this</span>.close = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal-close"</span>);
+    <span class="hljs-keyword">this</span>.overlay = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-overlay"</span>);
     <span class="hljs-keyword">this</span>.mql = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(min-width: 768px)"</span>);
 
     <span class="hljs-keyword">this</span>.openClassName = <span class="hljs-string">"is-open"</span>;
 
-    <span class="hljs-keyword">this</span>.checkScreenSize = <span class="hljs-keyword">this</span>.checkScreenSize.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-comment">// this.checkScreenSize = this.checkScreenSize.bind(this);</span>
     <span class="hljs-keyword">this</span>.closeModal = <span class="hljs-keyword">this</span>.closeModal.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.openModal = <span class="hljs-keyword">this</span>.openModal.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.clickOutside = <span class="hljs-keyword">this</span>.clickOutside.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.onEscapePress = <span class="hljs-keyword">this</span>.onEscapePress.bind(<span class="hljs-keyword">this</span>);
   }
 
-  checkScreenSize(mql) {
-    <span class="hljs-keyword">if</span> (mql.matches) {
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"matches"</span>);
-    } <span class="hljs-keyword">else</span> {
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"no matches"</span>);
-    }
-  }
+  <span class="hljs-comment">// checkScreenSize(mql) {</span>
+  <span class="hljs-comment">//   if (mql.matches) {</span>
+  <span class="hljs-comment">//     console.log("matches");</span>
+  <span class="hljs-comment">//   } else {</span>
+  <span class="hljs-comment">//     console.log("no matches");</span>
+  <span class="hljs-comment">//   }</span>
+  <span class="hljs-comment">// }</span>
 
   closeModal() {
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.modal.classList.contains(<span class="hljs-keyword">this</span>.openClassName)) {
-      <span class="hljs-keyword">this</span>.document.classList.remove(<span class="hljs-string">"no-scroll"</span>);
-      <span class="hljs-keyword">this</span>.modal.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
+      noScroll.off();
       <span class="hljs-keyword">this</span>.close.removeEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.closeModal, <span class="hljs-literal">false</span>);
+
+      <span class="hljs-keyword">this</span>.modal.setAttribute(<span class="hljs-string">"tabindex"</span>, <span class="hljs-string">"-1"</span>);
+      <span class="hljs-keyword">this</span>.modal.setAttribute(<span class="hljs-string">"aria-hidden"</span>, <span class="hljs-string">"true"</span>);
+      <span class="hljs-keyword">this</span>.modal.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
+      <span class="hljs-keyword">this</span>.overlay.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
+
+      setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">this</span>.modal.classList.add(<span class="hljs-string">"hidden"</span>);
+        <span class="hljs-keyword">this</span>.overlay.classList.add(<span class="hljs-string">"hidden"</span>);
+        <span class="hljs-comment">// this.modal.style.display = "none";</span>
+        <span class="hljs-comment">// this.overlay.style.display = "none";</span>
+        <span class="hljs-keyword">this</span>.content.innerHTML = <span class="hljs-string">""</span>;
+      }, <span class="hljs-number">200</span>);
+
+      <span class="hljs-comment">// this.overlay.classList.remove(this.openClassName);</span>
+      <span class="hljs-comment">// setTimeout(() =&gt; {</span>
+      <span class="hljs-comment">//   document.body.removeChild(this.overlay);</span>
+      <span class="hljs-comment">// }, 200);</span>
+
+      <span class="hljs-built_in">document</span>.removeEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.clickOutside, <span class="hljs-literal">false</span>);
     }
   }
 
-  openModal() {
+  openModal(content) {
     <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.modal.classList.contains(<span class="hljs-keyword">this</span>.openClassName)) {
-      <span class="hljs-keyword">this</span>.document.classList.add(<span class="hljs-string">"no-scroll"</span>);
-      <span class="hljs-keyword">this</span>.modal.classList.add(<span class="hljs-keyword">this</span>.openClassName);
+      noScroll.on();
       <span class="hljs-keyword">this</span>.close.addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.closeModal, <span class="hljs-literal">false</span>);
       <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.clickOutside, <span class="hljs-literal">false</span>);
       <span class="hljs-keyword">this</span>.onEscapePress();
+
+      <span class="hljs-keyword">this</span>.modal.setAttribute(<span class="hljs-string">"tabindex"</span>, <span class="hljs-string">"0"</span>);
+      <span class="hljs-keyword">this</span>.modal.setAttribute(<span class="hljs-string">"aria-hidden"</span>, <span class="hljs-string">"false"</span>);
+      <span class="hljs-comment">// this.modal.style.display = "block";</span>
+      <span class="hljs-comment">// this.overlay.style.display = "block";</span>
+      <span class="hljs-keyword">this</span>.modal.classList.remove(<span class="hljs-string">"hidden"</span>);
+      <span class="hljs-keyword">this</span>.overlay.classList.remove(<span class="hljs-string">"hidden"</span>);
+
+      setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">this</span>.modal.classList.add(<span class="hljs-keyword">this</span>.openClassName);
+        <span class="hljs-keyword">this</span>.overlay.classList.add(<span class="hljs-keyword">this</span>.openClassName);
+      }, <span class="hljs-number">10</span>);
+
+      <span class="hljs-keyword">this</span>.content.innerHTML = content;
+
+      <span class="hljs-comment">// document.body.appendChild(this.overlay);</span>
+      <span class="hljs-comment">// setTimeout(() =&gt; {</span>
+      <span class="hljs-comment">//   this.overlay.classList.add(this.openClassName);</span>
+      <span class="hljs-comment">// }, 10);</span>
     }
   }
 
@@ -344,7 +385,6 @@
 
     <span class="hljs-keyword">if</span> (!isModal &amp;&amp; !isTrigger) {
       <span class="hljs-keyword">this</span>.closeModal();
-      <span class="hljs-built_in">document</span>.removeEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.clickOutside, <span class="hljs-literal">false</span>);
     }
 
     event.preventDefault();
@@ -359,12 +399,27 @@
   }
 
   render() {
-    <span class="hljs-keyword">this</span>.checkScreenSize(<span class="hljs-keyword">this</span>.mql);
-    <span class="hljs-keyword">this</span>.mql.addListener(<span class="hljs-keyword">this</span>.checkScreenSize);
+    <span class="hljs-comment">// this.checkScreenSize(this.mql);</span>
+    <span class="hljs-comment">// this.mql.addListener(this.checkScreenSize);</span>
+
+    <span class="hljs-comment">// console.log(this.overlay());</span>
+    <span class="hljs-comment">// console.log(this.mod());</span>
+
+    <span class="hljs-comment">// this.modal.style.display = "none";</span>
+    <span class="hljs-comment">// this.overlay.style.display = "none";</span>
 
     <span class="hljs-keyword">this</span>.trigger.addEventListener(<span class="hljs-string">"click"</span>, (event) =&gt; {
       <span class="hljs-keyword">this</span>.openModal();
-    })
+
+
+      <span class="hljs-comment">// document.body.innerHTML = this.overlay();</span>
+      <span class="hljs-comment">// $("body").append(this.overlay());</span>
+      <span class="hljs-comment">// $("body").find(".js-overlay").addClass("is-open");</span>
+      <span class="hljs-comment">// this.document.querySelector(".js-overlay").classList.add("is-open");</span>
+
+      <span class="hljs-comment">// console.log(this.overlay());</span>
+      <span class="hljs-comment">// document.body.appendChild();</span>
+    });
   }
 }
 </pre>
@@ -383,7 +438,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.1 KB</span>
+                    <span class="Meta-value">3.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -406,38 +461,53 @@
 
 <span class="hljs-selector-class">.Modal</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
-  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">36px</span> <span class="hljs-number">84px</span> rgba(<span class="hljs-number">#042435</span>, .<span class="hljs-number">39</span>);
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">96vh</span>;
+  <span class="hljs-comment">// bottom: 0;</span>
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-modal</span>;
+  <span class="hljs-comment">// height: 100vh;</span>
   <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">margin</span>: auto;
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">padding</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
-  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-comment">// padding: #{$spacing-gutter}px;</span>
+  <span class="hljs-attribute">padding-bottom</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
+  <span class="hljs-attribute">padding-top</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
+  <span class="hljs-attribute">position</span>: fixed;
   <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-comment">// top: 0;</span>
   <span class="hljs-attribute">transform</span>: translateY(<span class="hljs-number">10vh</span>);
   <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>, transform <span class="hljs-number">200ms</span>, visibility <span class="hljs-number">200ms</span>;
   <span class="hljs-attribute">visibility</span>: hidden;
-  <span class="hljs-attribute">width</span>: <span class="hljs-number">96vw</span>;
+  <span class="hljs-comment">// width: 100vw;</span>
   <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-modal</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 480px) {
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">80vh</span>;
-    <span class="hljs-attribute">max-height</span>: <span class="hljs-number">80vh</span>;
-    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">80vw</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">80vw</span>;
+  @<span class="hljs-keyword">media</span> (max-width: 479px) {
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100vw</span>;
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 800px) {
-    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50vw</span>;
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">50vw</span>;
+  @<span class="hljs-keyword">media</span> (min-width: 480px) {
+    <span class="hljs-comment">// height: 80vh;</span>
+    <span class="hljs-attribute">max-height</span>: <span class="hljs-number">80vh</span>;
+    <span class="hljs-comment">// max-width: 80vw;</span>
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">800px</span>;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-comment">// width: 80vw;</span>
   }
+
+  <span class="hljs-comment">// @media (min-width: 800px) {</span>
+  <span class="hljs-comment">//   max-width: 50vw;</span>
+  <span class="hljs-comment">//   width: 50vw;</span>
+  <span class="hljs-comment">// }</span>
 
   &amp;<span class="hljs-selector-class">.is-open</span> {
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
     <span class="hljs-attribute">transform</span>: translateY(<span class="hljs-number">0</span>);
     <span class="hljs-attribute">visibility</span>: visible;
+
+    @<span class="hljs-keyword">media</span> (min-width: 480px) {
+      <span class="hljs-attribute">transform</span>: translateY(-<span class="hljs-number">50%</span>);
+    }
   }
 }
 
@@ -462,6 +532,13 @@
     <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-default</span>, .<span class="hljs-number">8</span>);
   }
 }
+
+<span class="hljs-selector-class">.Modal-content</span> {
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">overflow-y</span>: auto;
+  <span class="hljs-attribute">padding-left</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
+  <span class="hljs-attribute">padding-right</span>: #{<span class="hljs-variable">$spacing-gutter</span> * <span class="hljs-number">2</span>}px;
+}
 </pre>
                             </code>
                             
@@ -478,7 +555,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.2 KB</span>
+                    <span class="Meta-value">1.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -1051,6 +1128,214 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-file-download">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>File Download</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--doc-on.html" data-pjax>
+                <span>doc (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--doc-off.html" data-pjax>
+                <span>doc (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--pdf-on.html" data-pjax>
+                <span>pdf (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--pdf-off.html" data-pjax>
+                <span>pdf (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xls-on.html" data-pjax>
+                <span>xls (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xls-off.html" data-pjax>
+                <span>xls (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xbrl-on.html" data-pjax>
+                <span>xbrl (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xbrl-off.html" data-pjax>
+                <span>xbrl (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -2679,21 +2964,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-tagline">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tagline.html" data-pjax>
                 <span>Tagline</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tagline--default.html" data-pjax>
-                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2710,35 +2984,6 @@
 
 
             </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tagline--white.html" data-pjax>
-                <span>White</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -2831,21 +3076,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-testimonial">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="testimonial.html" data-pjax>
                 <span>Testimonial</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="testimonial--default.html" data-pjax>
-                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2862,35 +3096,6 @@
 
 
             </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="testimonial--white.html" data-pjax>
-                <span>White</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     

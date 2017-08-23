@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 127);
+/******/ 	return __webpack_require__(__webpack_require__.s = 135);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -101,23 +101,6 @@ exports.default = _subNavigation2.default;
 
 /***/ }),
 
-/***/ 107:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(108);
-
-/***/ }),
-
-/***/ 108:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 11:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -137,6 +120,7 @@ var SubNavigation = function () {
     _classCallCheck(this, SubNavigation);
 
     this.options = options;
+
     this.subNavigation = document.querySelector(".js-sub-navigation");
     this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
     this.subNavigationItems = this.subNavigation.querySelectorAll("li");
@@ -153,12 +137,12 @@ var SubNavigation = function () {
     this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
     this.setUpItems = this.setUpItems.bind(this);
     this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
-    // this.updateSubNavigationOffset = this.updateSubNavigationOffset.bind(this);
 
     this.activeClass = "is-active";
     this.currentItem = null;
     this.scrollSpySettings = [];
-    // this.subNavigationOffset = this.subNavigation.parentNode.offsetTop;
+
+    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
   }
 
   _createClass(SubNavigation, [{
@@ -237,18 +221,11 @@ var SubNavigation = function () {
         var parent = anchor.parentNode;
         var hashId = anchor.hash.replace("#", "");
 
-        // if (!parent.classList.contains("is-active")) {
-        //   this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));
-        //   this.addActiveClass(parent);
-        // }
-
         window.scroll({
           top: document.getElementById(hashId).offsetTop,
           left: 0,
           behavior: "smooth"
         });
-
-        // this.updateMarker(anchor.parentNode);
 
         event.preventDefault();
       });
@@ -308,17 +285,9 @@ var SubNavigation = function () {
         setTimeout(function () {
           _this3.scrollSpy(_this3.scrollSpySettings);
 
-          if (_this3.currentItem) {
+          if (_this3.currentItem && !_this3.motionQuery.matches) {
             _this3.setMarkerTransition();
           };
-
-          // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-          //
-          // if (scrollPosition >= this.subNavigationOffset) {
-          //   this.subNavigation.classList.add("is-sticky");
-          // } else {
-          //   this.subNavigation.classList.remove("is-sticky");
-          // }
         }, 100);
       });
     }
@@ -337,21 +306,11 @@ var SubNavigation = function () {
         _this4.listenForAnchorClick(anchor);
       });
     }
-
-    // updateSubNavigationOffset() {
-    //   window.addEventListener("resize", (event) => {
-    //     setTimeout(() => {
-    //       this.subNavigationOffset = this.subNavigation.offsetTop;
-    //     }, 200);
-    //   });
-    // }
-
   }, {
     key: "render",
     value: function render() {
       this.setUpScrollSpy();
       this.setUpItems();
-      // this.updateSubNavigationOffset();
     }
   }]);
 
@@ -362,6 +321,23 @@ exports.default = SubNavigation;
 
 /***/ }),
 
+/***/ 114:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(115);
+
+/***/ }),
+
+/***/ 115:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 12:
 /***/ (function(module, exports) {
 
@@ -369,19 +345,19 @@ exports.default = SubNavigation;
 
 /***/ }),
 
-/***/ 127:
+/***/ 135:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(128);
+__webpack_require__(136);
 
-__webpack_require__(21);
+__webpack_require__(22);
 
 __webpack_require__(6);
 
-__webpack_require__(16);
+__webpack_require__(17);
 
 __webpack_require__(3);
 
@@ -391,7 +367,7 @@ var _subNavigation = __webpack_require__(10);
 
 var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-__webpack_require__(107);
+__webpack_require__(114);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -407,24 +383,17 @@ console.info("Partnerships loaded");
 
 /***/ }),
 
-/***/ 128:
+/***/ 136:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(129);
+__webpack_require__(137);
 
 /***/ }),
 
-/***/ 129:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 15:
+/***/ 137:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -432,18 +401,25 @@ __webpack_require__(129);
 /***/ }),
 
 /***/ 16:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 17:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(17);
+__webpack_require__(18);
 
 __webpack_require__(5);
 
 /***/ }),
 
-/***/ 17:
+/***/ 18:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -457,21 +433,21 @@ __webpack_require__(5);
 
 /***/ }),
 
-/***/ 21:
+/***/ 22:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(22);
+__webpack_require__(23);
 
 __webpack_require__(0);
 
-__webpack_require__(15);
+__webpack_require__(16);
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

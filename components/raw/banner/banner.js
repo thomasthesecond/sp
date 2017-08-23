@@ -1,5 +1,6 @@
 "use strict";
 
+import noScroll from "no-scroll";
 import Hamburger from "../hamburger";
 
 export default class Banner {
@@ -33,17 +34,18 @@ export default class Banner {
   hideNavigation() {
     if (this.navigation.classList.contains(this.openClassName)) {
       this.isOpen = false;
-      this.document.classList.remove("no-scroll");
+      noScroll.off();
       this.header.classList.remove(this.openClassName);
       this.navigation.classList.remove(this.openClassName);
       this.hamburger.classList.remove(this.openClassName);
+      document.removeEventListener("click", this.clickOutside, false);
     }
   }
 
   showNavigation() {
     if (!this.navigation.classList.contains(this.openClassName)) {
       this.isOpen = true;
-      this.document.classList.add("no-scroll");
+      noScroll.on();
       this.header.classList.add(this.openClassName);
       this.navigation.classList.add(this.openClassName);
       this.hamburger.classList.add(this.openClassName);
@@ -61,7 +63,6 @@ export default class Banner {
 
     if (!isHeader && !isHamburger && !isNavigation) {
       this.hideNavigation();
-      document.removeEventListener("click", this.clickOutside, false);
     }
 
     event.preventDefault();

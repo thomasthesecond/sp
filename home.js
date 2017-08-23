@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 114);
+/******/ 	return __webpack_require__(__webpack_require__.s = 120);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -79,31 +79,31 @@
 
 /***/ }),
 
-/***/ 114:
+/***/ 120:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _home = __webpack_require__(115);
+var _home = __webpack_require__(121);
 
 var _home2 = _interopRequireDefault(_home);
 
-var _coverVideo = __webpack_require__(57);
+var _coverVideo = __webpack_require__(59);
 
 var _coverVideo2 = _interopRequireDefault(_coverVideo);
 
-__webpack_require__(16);
+__webpack_require__(17);
 
 __webpack_require__(6);
 
 __webpack_require__(3);
 
-var _locationFinder = __webpack_require__(18);
+var _locationFinder = __webpack_require__(19);
 
 var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
-__webpack_require__(59);
+__webpack_require__(61);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -121,7 +121,7 @@ console.info("Home loaded");
 
 /***/ }),
 
-/***/ 115:
+/***/ 121:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -131,11 +131,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _home = __webpack_require__(116);
+var _home = __webpack_require__(122);
 
 var _home2 = _interopRequireDefault(_home);
 
-__webpack_require__(117);
+__webpack_require__(123);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -143,7 +143,7 @@ exports.default = _home2.default;
 
 /***/ }),
 
-/***/ 116:
+/***/ 122:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -158,15 +158,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var HomePage = function () {
-  _createClass(HomePage, null, [{
-    key: "debounce",
-    value: function debounce(callback) {
-      setTimeout(function () {
-        callback();
-      }, 200);
-    }
-  }]);
-
   function HomePage(options) {
     _classCallCheck(this, HomePage);
 
@@ -264,33 +255,33 @@ exports.default = HomePage;
 
 /***/ }),
 
-/***/ 117:
+/***/ 123:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 16:
+/***/ 17:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(17);
+__webpack_require__(18);
 
 __webpack_require__(5);
 
 /***/ }),
 
-/***/ 17:
+/***/ 18:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 18:
+/***/ 19:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -300,11 +291,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _locationFinder = __webpack_require__(19);
+var _locationFinder = __webpack_require__(20);
 
 var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
-__webpack_require__(20);
+__webpack_require__(21);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -312,7 +303,14 @@ exports.default = _locationFinder2.default;
 
 /***/ }),
 
-/***/ 19:
+/***/ 2:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -340,7 +338,8 @@ var LocationFinder = function () {
   _createClass(LocationFinder, [{
     key: "buildFilterUrl",
     value: function buildFilterUrl(params) {
-      this.locationFinderButton.href = "/locations/" + Object.values(params).join("/");
+      var url = this.locationFinder.dataset.locationUrl;
+      this.locationFinderButton.href = url + "/" + Object.values(params).join("/");
     }
   }, {
     key: "render",
@@ -370,14 +369,7 @@ exports.default = LocationFinder;
 
 /***/ }),
 
-/***/ 2:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 20:
+/***/ 21:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -414,7 +406,7 @@ __webpack_require__(2);
 
 /***/ }),
 
-/***/ 57:
+/***/ 59:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -424,7 +416,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _coverVideo = __webpack_require__(58);
+var _coverVideo = __webpack_require__(60);
 
 var _coverVideo2 = _interopRequireDefault(_coverVideo);
 
@@ -436,7 +428,17 @@ exports.default = _coverVideo2.default;
 
 /***/ }),
 
-/***/ 58:
+/***/ 6:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(7);
+
+/***/ }),
+
+/***/ 60:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -546,27 +548,17 @@ exports.default = CoverVideo;
 
 /***/ }),
 
-/***/ 59:
+/***/ 61:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(60);
+__webpack_require__(62);
 
 /***/ }),
 
-/***/ 6:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(7);
-
-/***/ }),
-
-/***/ 60:
+/***/ 62:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

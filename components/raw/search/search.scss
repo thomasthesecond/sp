@@ -17,7 +17,7 @@
   @include visuallyhidden();
 }
 
-.Search-input {
+.Search-input[type="text"] {
   background-color: transparent;
   border: 0;
   flex: 0 1 auto;

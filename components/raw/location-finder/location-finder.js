@@ -10,7 +10,8 @@ export default class LocationFinder {
   }
 
   buildFilterUrl(params) {
-    this.locationFinderButton.href = `/locations/${Object.values(params).join("/")}`;
+    const url = this.locationFinder.dataset.locationUrl;
+    this.locationFinderButton.href = `${url}/${Object.values(params).join("/")}`;
   }
 
   render() {

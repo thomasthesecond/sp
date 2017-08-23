@@ -282,14 +282,10 @@
  */</span>
 
 <span class="hljs-selector-class">.Testimonial</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-heading</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-testimonial</span>;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">856px</span>;
   <span class="hljs-attribute">text-align</span>: center;
-}
-
-<span class="hljs-selector-class">.Testimonial--white</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-overlay</span>;
 }
 
 <span class="hljs-selector-class">.Testimonial-quote</span> {
@@ -300,14 +296,11 @@
     <span class="hljs-variable">$max-width</span>: 1024
   );
 
+  <span class="hljs-attribute">font-family</span>: <span class="hljs-variable">$font-family-serif</span>;
   <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-light</span>;
   <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">32</span> / <span class="hljs-number">20</span>);
   <span class="hljs-attribute">margin-bottom</span>: #{(<span class="hljs-number">32</span> / <span class="hljs-number">20</span>) * <span class="hljs-number">1em</span>};
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
-
-  <span class="hljs-selector-class">.Testimonial--white</span> &amp; {
-    <span class="hljs-attribute">text-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-number">24px</span> <span class="hljs-number">#000</span>;
-  }
 }
 
 <span class="hljs-selector-class">.Testimonial-citation</span> {
@@ -349,10 +342,20 @@
   <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">17</span> / <span class="hljs-number">14</span>);
   <span class="hljs-attribute">margin-top</span>: #{(<span class="hljs-number">6</span> / <span class="hljs-number">14</span>) * <span class="hljs-number">1em</span>};
+}
 
-  <span class="hljs-selector-class">.Testimonial--white</span> &amp; {
-    <span class="hljs-attribute">color</span>: inherit;
-  }
+<span class="hljs-comment">// Implementation detail</span>
+
+<span class="hljs-selector-class">.Feature</span> <span class="hljs-selector-class">.Testimonial</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-overlay</span>;
+}
+
+<span class="hljs-selector-class">.Feature</span> <span class="hljs-selector-class">.Testimonial-quote</span> {
+  <span class="hljs-attribute">text-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-number">24px</span> <span class="hljs-number">#000</span>;
+}
+
+<span class="hljs-selector-class">.Feature</span> <span class="hljs-selector-class">.Testimonial-location</span> {
+  <span class="hljs-attribute">color</span>: inherit;
 }
 </pre>
                             </code>
@@ -393,21 +396,6 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(2)</em>:</strong>
-            <span class="Meta-value Meta-value--linkList">
-            
-                <a href="testimonial--default.html">
-                    <span>Default</span>
-                </a>, 
-            
-                <a href="testimonial--white.html">
-                    <span>White</span>
-                </a>
-            
-            </span>
-        </li>
-        
-        <li class="Meta-item">
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
@@ -434,9 +422,9 @@
             <strong class="Meta-key">Referenced by <em class="Meta-count">(2)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
-                <a href="partnerships.html">@<span>partnerships</span></a>, 
+                <a href="feature.html">@<span>feature</span></a>, 
             
-                <a href="feature.html">@<span>feature</span></a>
+                <a href="partnerships.html">@<span>partnerships</span></a>
             
             </span>
         </li>
@@ -945,6 +933,214 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-file-download">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>File Download</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--doc-on.html" data-pjax>
+                <span>doc (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--doc-off.html" data-pjax>
+                <span>doc (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--pdf-on.html" data-pjax>
+                <span>pdf (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--pdf-off.html" data-pjax>
+                <span>pdf (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xls-on.html" data-pjax>
+                <span>xls (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xls-off.html" data-pjax>
+                <span>xls (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xbrl-on.html" data-pjax>
+                <span>xbrl (on)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="file-download--xbrl-off.html" data-pjax>
+                <span>xbrl (off)</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -2573,21 +2769,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-tagline">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="tagline.html" data-pjax>
                 <span>Tagline</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tagline--default.html" data-pjax>
-                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2604,35 +2789,6 @@
 
 
             </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="tagline--white.html" data-pjax>
-                <span>White</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -2725,21 +2881,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-testimonial">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
                 <span>Testimonial</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="testimonial--default.html" data-pjax>
-                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2756,35 +2901,6 @@
 
 
             </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="testimonial--white.html" data-pjax>
-                <span>White</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     

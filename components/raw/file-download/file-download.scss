@@ -1,0 +1,21 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: File download
+ */
+
+.FileDownload {
+  display: inline-block;
+
+  img {
+    display: block;
+    height: auto;
+    width: 14px;
+  }
+
+  + .FileDownload {
+    margin-left: 24px;
+  }
+}

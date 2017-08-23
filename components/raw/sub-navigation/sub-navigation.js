@@ -3,6 +3,7 @@
 class SubNavigation {
   constructor(options) {
     this.options = options;
+
     this.subNavigation = document.querySelector(".js-sub-navigation");
     this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
     this.subNavigationItems = this.subNavigation.querySelectorAll("li");
@@ -19,12 +20,12 @@ class SubNavigation {
     this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
     this.setUpItems = this.setUpItems.bind(this);
     this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
-    // this.updateSubNavigationOffset = this.updateSubNavigationOffset.bind(this);
 
     this.activeClass = "is-active";
     this.currentItem = null;
     this.scrollSpySettings = [];
-    // this.subNavigationOffset = this.subNavigation.parentNode.offsetTop;
+
+    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
   }
 
   addActiveClass(item) {
@@ -88,18 +89,11 @@ class SubNavigation {
       const parent = anchor.parentNode;
       const hashId = anchor.hash.replace("#", "");
 
-      // if (!parent.classList.contains("is-active")) {
-      //   this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));
-      //   this.addActiveClass(parent);
-      // }
-
       window.scroll({
         top: document.getElementById(hashId).offsetTop,
         left: 0,
         behavior: "smooth"
       });
-
-      // this.updateMarker(anchor.parentNode);
 
       event.preventDefault();
     });
@@ -153,17 +147,9 @@ class SubNavigation {
       setTimeout(() => {
         this.scrollSpy(this.scrollSpySettings);
 
-        if (this.currentItem) {
+        if (this.currentItem && !this.motionQuery.matches) {
           this.setMarkerTransition();
         };
-
-        // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        //
-        // if (scrollPosition >= this.subNavigationOffset) {
-        //   this.subNavigation.classList.add("is-sticky");
-        // } else {
-        //   this.subNavigation.classList.remove("is-sticky");
-        // }
       }, 100);
     });
   }
@@ -180,18 +166,9 @@ class SubNavigation {
     });
   }
 
-  // updateSubNavigationOffset() {
-  //   window.addEventListener("resize", (event) => {
-  //     setTimeout(() => {
-  //       this.subNavigationOffset = this.subNavigation.offsetTop;
-  //     }, 200);
-  //   });
-  // }
-
   render() {
     this.setUpScrollSpy();
     this.setUpItems();
-    // this.updateSubNavigationOffset();
   }
 }
 

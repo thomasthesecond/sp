@@ -34,14 +34,6 @@
           transform: translateX(30px);
 }
 
-.MoreLink--white {
-  color: #fff;
-}
-
-.MoreLink--white:hover, .MoreLink--white:active, .MoreLink--white:focus {
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .MoreLink .icon {
   display: block;
   font-size: 24px;
@@ -55,6 +47,34 @@
   transition: color 200ms, -webkit-transform 200ms;
   transition: color 200ms, transform 200ms;
   transition: color 200ms, transform 200ms, -webkit-transform 200ms;
+}
+
+.Masthead .MoreLink {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 4.96124vw;
+}
+
+@media (min-width: 37.5em) and (max-width: 80.625em) {
+  .Masthead .MoreLink {
+    font-size: calc(14px + (16 - 14) * (100vw - 600px) / (1290 - 600));
+  }
+}
+
+@media (min-width: 80.625em) {
+  .Masthead .MoreLink {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1290px) {
+  .Masthead .MoreLink {
+    margin-top: 64px;
+  }
+}
+
+.Masthead .MoreLink:hover, .Masthead .MoreLink:active, .Masthead .MoreLink:focus {
+  color: rgba(255, 255, 255, 0.8);
 }
 /**
  * Functions
@@ -87,48 +107,100 @@
  * Mixins
  */
 /**
+ * Component: Masthead
+ * @type Atom
+ */
+.Masthead {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 55vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 466px;
+  min-height: 178px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.Masthead--video {
+  max-height: 80vh;
+  min-height: 420px;
+}
+
+.Masthead .container {
+  position: relative;
+  z-index: 1;
+}
+
+.Masthead-title {
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 0 72px rgba(13, 60, 77, 0.4);
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Location finder
  * @type Organism
  */
 .LocationFinder.is-sticky {
   background-color: #fff;
+  -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
+          box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
 }
 
 @media (max-width: 669px) {
   .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
-    padding-top: 24px;
+    height: 70px;
+    overflow: hidden;
   }
 }
 
 @media (min-width: 670px) {
   .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
-.LocationFinder-container {
+.LocationFinder .container {
   background-color: #fff;
   position: relative;
 }
 
 @media (min-width: 670px) {
-  .LocationFinder-container {
+  .LocationFinder .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 6.97674vw;
-    min-height: 60px;
     max-height: 90px;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 669px) {
+  .LocationFinder.is-sticky .container {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 @media (min-width: 670px) {
-  .LocationFinder:not(.is-sticky) .LocationFinder-container {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+  .LocationFinder:not(.is-sticky) .container {
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
@@ -153,9 +225,8 @@
 .LocationFinder legend {
   color: rgba(37, 57, 93, 0.79);
   display: block;
-  font-size: 16px;
-  font-weight: 700;
   float: left;
+  font-weight: 700;
   height: 100%;
   line-height: 1;
   width: 22.48062%;
@@ -187,8 +258,6 @@
 .LocationFinder select {
   border: 0;
   height: 100%;
-  -webkit-transition: opacity 200ms;
-  transition: opacity 200ms;
   width: 100%;
 }
 
@@ -231,16 +300,22 @@
 }
 
 @media (max-width: 669px) {
+  .LocationFinder.is-sticky select:first-of-type {
+    border: 0;
+    margin-bottom: 0;
+    padding-bottom: 22px;
+    padding-left: 24px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 669px) {
   .LocationFinder.is-sticky select:not(:first-of-type) {
-    opacity: 0;
+    display: none;
   }
 }
 
 .LocationFinder-button {
-  -webkit-transition: -webkit-transform 200ms;
-  transition: -webkit-transform 200ms;
-  transition: transform 200ms;
-  transition: transform 200ms, -webkit-transform 200ms;
   width: 100%;
 }
 
@@ -259,9 +334,7 @@
 
 @media (max-width: 669px) {
   .LocationFinder.is-sticky .LocationFinder-button {
-    -webkit-transform: translateY(-24px);
-            transform: translateY(-24px);
-    z-index: 1;
+    display: none;
   }
 }
 
@@ -279,60 +352,6 @@
     display: -ms-flexbox;
     display: flex;
     height: 100%;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Masthead
- * @type Atom
- */
-.Masthead {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 55vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-height: 466px;
-  min-height: 178px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-.Masthead--video {
-  max-height: 732px;
-  min-height: 420px;
-}
-
-.Masthead .container {
-  position: relative;
-  z-index: 1;
-}
-
-.Masthead-title {
-  color: #fff;
-  margin: 0;
-  text-shadow: 0 0 54px #6facc1;
-}
-
-.Masthead .MoreLink {
-  margin-top: 9.30233vw;
-}
-
-@media (min-width: 1290px) {
-  .Masthead .MoreLink {
-    margin-top: 120px;
   }
 }
 /**
@@ -428,17 +447,14 @@
 .Tagline {
   font-weight: 300;
   letter-spacing: -.5px;
-  line-height: 1;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 64vw;
+  line-height: 1.4;
   text-align: center;
 }
 
 @media (min-width: 600px) {
   .Tagline {
     letter-spacing: -1.2px;
-    max-width: 50vw;
+    line-height: 1.2;
   }
 }
 
@@ -452,8 +468,22 @@
   }
 }
 
-.Tagline--white {
+.Masthead .Tagline {
   color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 375px) {
+  .Masthead .Tagline {
+    max-width: 50vw;
+  }
+}
+
+@media (min-width: 1290px) {
+  .Masthead .Tagline {
+    max-width: 480px;
+  }
 }
 /**
  * Functions
@@ -467,7 +497,7 @@
  */
 .Introduction {
   font-size: 20px;
-  color: #819ba3;
+  color: #25395d;
   font-weight: 300;
   letter-spacing: -.9px;
   line-height: 1.8;
@@ -504,9 +534,8 @@
     height: 4px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2.25em;
-    max-width: 264px;
-    width: 30.84112vw;
+    margin-top: 1.25em;
+    width: 80px;
   }
 }
 /**
@@ -561,25 +590,6 @@
 @media (min-width: 544px) {
   .ImageBlock-photo {
     max-height: 720px;
-    -webkit-transition: -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
-    transition: -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
-    transition: transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
-    transition: transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77), -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
-  }
-  .ImageBlock > a:hover .ImageBlock-photo {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .ImageBlock-photo {
-    -webkit-transition: none;
-    transition: none;
-  }
-  .ImageBlock > a:hover .ImageBlock-photo {
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 
@@ -596,6 +606,12 @@
   }
 }
 
+@media (max-width: 544px) {
+  .ImageBlock-text h2 {
+    margin-top: 32px;
+  }
+}
+
 .ImageBlock--alternate .ImageBlock-text {
   margin-left: 0;
 }
@@ -609,17 +625,6 @@
 @media (min-width: 1088px) {
   .ImageBlock--alternate .ImageBlock-text {
     margin-left: 8.06202%;
-  }
-}
-
-.ImageBlock-text h2 {
-  color: #435e6c;
-  font-weight: 300;
-}
-
-@media (max-width: 544px) {
-  .ImageBlock-text h2 {
-    margin-top: 32px;
   }
 }
 /**
@@ -659,11 +664,6 @@
     transition: opacity 400ms, transform 400ms;
     transition: opacity 400ms, transform 400ms, -webkit-transform 400ms;
   }
-  .js .Introduction.can-animate::after {
-    -webkit-transition: width 400ms 400ms;
-    transition: width 400ms 400ms;
-    width: 0;
-  }
 }
 
 @media (min-width: 64em) {
@@ -671,9 +671,6 @@
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-  }
-  .js .Introduction.will-animate::after {
-    width: 20.46512vw;
   }
 }
 

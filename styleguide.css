@@ -530,14 +530,6 @@ template {
 .text-negative {
   color: #d90a0a;
 }
-
-.no-scroll {
-  height: 100%;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 @charset "UTF-8";
 /**
  * Mixins
@@ -744,7 +736,7 @@ abbr[title] {
   border-left: 1px solid #d4d4d8;
 }
 
-.font-family-benton-sans {
+.font-family-open-sans {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -809,8 +801,8 @@ abbr[title] {
  * Component: Heading
  * @type Atom
  */
-.heading-masthead-super {
-  font-size: 40px;
+.heading-super {
+  font-size: 32px;
   color: #25395d;
   font-weight: 700;
   line-height: 1;
@@ -819,35 +811,14 @@ abbr[title] {
 }
 
 @media (min-width: 37.5em) and (max-width: 80.625em) {
-  .heading-masthead-super {
-    font-size: calc(40px + (96 - 40) * (100vw - 600px) / (1290 - 600));
+  .heading-super {
+    font-size: calc(32px + (72 - 32) * (100vw - 600px) / (1290 - 600));
   }
 }
 
 @media (min-width: 80.625em) {
-  .heading-masthead-super {
-    font-size: 96px;
-  }
-}
-
-.heading-masthead {
-  font-size: 40px;
-  color: #25395d;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-@media (min-width: 37.5em) and (max-width: 80.625em) {
-  .heading-masthead {
-    font-size: calc(40px + (80 - 40) * (100vw - 600px) / (1290 - 600));
-  }
-}
-
-@media (min-width: 80.625em) {
-  .heading-masthead {
-    font-size: 80px;
+  .heading-super {
+    font-size: 72px;
   }
 }
 
@@ -881,7 +852,7 @@ h2,
   font-size: 24px;
   color: #25395d;
   font-weight: 700;
-  line-height: 1.75;
+  line-height: 1.25;
   margin-bottom: .5em;
   margin-top: .5em;
 }
@@ -1263,14 +1234,6 @@ select.dark {
           transform: translateX(30px);
 }
 
-.MoreLink--white {
-  color: #fff;
-}
-
-.MoreLink--white:hover, .MoreLink--white:active, .MoreLink--white:focus {
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .MoreLink .icon {
   display: block;
   font-size: 24px;
@@ -1284,6 +1247,34 @@ select.dark {
   transition: color 200ms, -webkit-transform 200ms;
   transition: color 200ms, transform 200ms;
   transition: color 200ms, transform 200ms, -webkit-transform 200ms;
+}
+
+.Masthead .MoreLink {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 4.96124vw;
+}
+
+@media (min-width: 37.5em) and (max-width: 80.625em) {
+  .Masthead .MoreLink {
+    font-size: calc(14px + (16 - 14) * (100vw - 600px) / (1290 - 600));
+  }
+}
+
+@media (min-width: 80.625em) {
+  .Masthead .MoreLink {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1290px) {
+  .Masthead .MoreLink {
+    margin-top: 64px;
+  }
+}
+
+.Masthead .MoreLink:hover, .Masthead .MoreLink:active, .Masthead .MoreLink:focus {
+  color: rgba(255, 255, 255, 0.8);
 }
 /**
  * Functions
@@ -1362,6 +1353,57 @@ hr {
 
 hr.dark {
   background-color: #bfd0d8;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Button
+ * @type Atom
+ */
+.Button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #5d91a1;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: .7px;
+  line-height: 1;
+  padding: 1.71429em 2.85714em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 200ms, color 200ms;
+  transition: background-color 200ms, color 200ms;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.Button:hover, .Button:active, .Button:focus {
+  color: #fff;
+}
+
+.Button--dark {
+  background-color: #152640;
+  border: 1px solid rgba(191, 208, 216, 0.2);
+  color: #fff;
 }
 /**
  * Functions
@@ -1815,57 +1857,6 @@ hr.dark {
  * Mixins
  */
 /**
- * Component: Button
- * @type Atom
- */
-.Button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background-color: #5d91a1;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: 14px;
-  font-weight: 600;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  letter-spacing: .7px;
-  line-height: 1;
-  padding: 1.71429em 2.85714em;
-  text-align: center;
-  text-decoration: none;
-  -webkit-transition: background-color 200ms, color 200ms;
-  transition: background-color 200ms, color 200ms;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.Button:hover, .Button:active, .Button:focus {
-  color: #fff;
-}
-
-.Button--dark {
-  background-color: #152640;
-  border: 1px solid rgba(191, 208, 216, 0.2);
-  color: #fff;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Banner
  * @type Organism
  */
@@ -2200,48 +2191,100 @@ hr.dark {
  * Mixins
  */
 /**
+ * Component: Masthead
+ * @type Atom
+ */
+.Masthead {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 55vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 466px;
+  min-height: 178px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.Masthead--video {
+  max-height: 80vh;
+  min-height: 420px;
+}
+
+.Masthead .container {
+  position: relative;
+  z-index: 1;
+}
+
+.Masthead-title {
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 0 72px rgba(13, 60, 77, 0.4);
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Location finder
  * @type Organism
  */
 .LocationFinder.is-sticky {
   background-color: #fff;
+  -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
+          box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
 }
 
 @media (max-width: 669px) {
   .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
-    padding-top: 24px;
+    height: 70px;
+    overflow: hidden;
   }
 }
 
 @media (min-width: 670px) {
   .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
-.LocationFinder-container {
+.LocationFinder .container {
   background-color: #fff;
   position: relative;
 }
 
 @media (min-width: 670px) {
-  .LocationFinder-container {
+  .LocationFinder .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 6.97674vw;
-    min-height: 60px;
     max-height: 90px;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 669px) {
+  .LocationFinder.is-sticky .container {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 @media (min-width: 670px) {
-  .LocationFinder:not(.is-sticky) .LocationFinder-container {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+  .LocationFinder:not(.is-sticky) .container {
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
@@ -2266,9 +2309,8 @@ hr.dark {
 .LocationFinder legend {
   color: rgba(37, 57, 93, 0.79);
   display: block;
-  font-size: 16px;
-  font-weight: 700;
   float: left;
+  font-weight: 700;
   height: 100%;
   line-height: 1;
   width: 22.48062%;
@@ -2300,8 +2342,6 @@ hr.dark {
 .LocationFinder select {
   border: 0;
   height: 100%;
-  -webkit-transition: opacity 200ms;
-  transition: opacity 200ms;
   width: 100%;
 }
 
@@ -2344,16 +2384,22 @@ hr.dark {
 }
 
 @media (max-width: 669px) {
+  .LocationFinder.is-sticky select:first-of-type {
+    border: 0;
+    margin-bottom: 0;
+    padding-bottom: 22px;
+    padding-left: 24px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 669px) {
   .LocationFinder.is-sticky select:not(:first-of-type) {
-    opacity: 0;
+    display: none;
   }
 }
 
 .LocationFinder-button {
-  -webkit-transition: -webkit-transform 200ms;
-  transition: -webkit-transform 200ms;
-  transition: transform 200ms;
-  transition: transform 200ms, -webkit-transform 200ms;
   width: 100%;
 }
 
@@ -2372,9 +2418,7 @@ hr.dark {
 
 @media (max-width: 669px) {
   .LocationFinder.is-sticky .LocationFinder-button {
-    -webkit-transform: translateY(-24px);
-            transform: translateY(-24px);
-    z-index: 1;
+    display: none;
   }
 }
 
@@ -2392,60 +2436,6 @@ hr.dark {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Masthead
- * @type Atom
- */
-.Masthead {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 55vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-height: 466px;
-  min-height: 178px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-.Masthead--video {
-  max-height: 732px;
-  min-height: 420px;
-}
-
-.Masthead .container {
-  position: relative;
-  z-index: 1;
-}
-
-.Masthead-title {
-  color: #fff;
-  margin: 0;
-  text-shadow: 0 0 54px #6facc1;
-}
-
-.Masthead .MoreLink {
-  margin-top: 9.30233vw;
-}
-
-@media (min-width: 1290px) {
-  .Masthead .MoreLink {
-    margin-top: 120px;
   }
 }
 /**
@@ -2541,17 +2531,14 @@ hr.dark {
 .Tagline {
   font-weight: 300;
   letter-spacing: -.5px;
-  line-height: 1;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 64vw;
+  line-height: 1.4;
   text-align: center;
 }
 
 @media (min-width: 600px) {
   .Tagline {
     letter-spacing: -1.2px;
-    max-width: 50vw;
+    line-height: 1.2;
   }
 }
 
@@ -2565,8 +2552,22 @@ hr.dark {
   }
 }
 
-.Tagline--white {
+.Masthead .Tagline {
   color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 375px) {
+  .Masthead .Tagline {
+    max-width: 50vw;
+  }
+}
+
+@media (min-width: 1290px) {
+  .Masthead .Tagline {
+    max-width: 480px;
+  }
 }
 /**
  * Functions
@@ -2580,7 +2581,7 @@ hr.dark {
  */
 .Introduction {
   font-size: 20px;
-  color: #819ba3;
+  color: #25395d;
   font-weight: 300;
   letter-spacing: -.9px;
   line-height: 1.8;
@@ -2617,9 +2618,8 @@ hr.dark {
     height: 4px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2.25em;
-    max-width: 264px;
-    width: 30.84112vw;
+    margin-top: 1.25em;
+    width: 80px;
   }
 }
 /**
@@ -2674,25 +2674,6 @@ hr.dark {
 @media (min-width: 544px) {
   .ImageBlock-photo {
     max-height: 720px;
-    -webkit-transition: -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
-    transition: -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
-    transition: transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
-    transition: transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77), -webkit-transform 600ms cubic-bezier(0.45, 0.2, 0.41, 0.77);
-  }
-  .ImageBlock > a:hover .ImageBlock-photo {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .ImageBlock-photo {
-    -webkit-transition: none;
-    transition: none;
-  }
-  .ImageBlock > a:hover .ImageBlock-photo {
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 
@@ -2709,6 +2690,12 @@ hr.dark {
   }
 }
 
+@media (max-width: 544px) {
+  .ImageBlock-text h2 {
+    margin-top: 32px;
+  }
+}
+
 .ImageBlock--alternate .ImageBlock-text {
   margin-left: 0;
 }
@@ -2722,17 +2709,6 @@ hr.dark {
 @media (min-width: 1088px) {
   .ImageBlock--alternate .ImageBlock-text {
     margin-left: 8.06202%;
-  }
-}
-
-.ImageBlock-text h2 {
-  color: #435e6c;
-  font-weight: 300;
-}
-
-@media (max-width: 544px) {
-  .ImageBlock-text h2 {
-    margin-top: 32px;
   }
 }
 /**
@@ -2775,26 +2751,6 @@ hr.dark {
  * Component: Team member
  * @type Molecule
  */
-.LeadershipTeam .TeamMember {
-  max-width: none;
-}
-
-.TeamList .TeamMember {
-  margin-top: 24px;
-}
-
-@media (min-width: 645px) {
-  .TeamList .TeamMember {
-    margin-top: 3.72093vw;
-  }
-}
-
-@media (min-width: 83.625em) {
-  .TeamList .TeamMember {
-    margin-top: 48px;
-  }
-}
-
 .TeamMember:not(.TeamMember--small) {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2922,6 +2878,40 @@ hr.dark {
 .TeamMember--small .TeamMember-link {
   margin-top: 12px;
 }
+
+.LeadershipTeam .TeamMember {
+  max-width: none;
+}
+
+.TeamList .TeamMember {
+  margin-top: 24px;
+}
+
+@media (min-width: 645px) {
+  .TeamList .TeamMember {
+    margin-top: 3.72093vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .TeamList .TeamMember {
+    margin-top: 48px;
+  }
+}
+
+.Modal .TeamMember {
+  display: block;
+  max-width: none;
+  text-align: left;
+}
+
+.Modal .TeamMember-title {
+  font-size: 16px;
+}
+
+.Modal .TeamMember-bio {
+  margin-bottom: 28px;
+}
 /**
  * Functions
  */
@@ -2965,7 +2955,7 @@ hr.dark {
   height: 100%;
   position: absolute;
   top: 0;
-  width: 10px;
+  width: 24px;
   z-index: 1;
 }
 
@@ -3015,8 +3005,8 @@ hr.dark {
 .SubNavigation-item {
   display: inline-block;
   height: 100%;
-  margin-left: 14px;
-  margin-right: 14px;
+  margin-left: 8px;
+  margin-right: 8px;
   padding-bottom: 22px;
   padding-top: 26px;
   position: relative;
@@ -3024,6 +3014,8 @@ hr.dark {
 
 @media (min-width: 600px) {
   .SubNavigation-item {
+    margin-left: 14px;
+    margin-right: 14px;
     padding-bottom: 34px;
     padding-top: 39px;
   }
@@ -3218,7 +3210,7 @@ hr.dark {
 }
 
 .NextPage-label {
-  font-size: 10px;
+  font-size: 12px;
   color: #b5955d;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -3226,7 +3218,7 @@ hr.dark {
 
 @media (min-width: 30em) and (max-width: 80.625em) {
   .NextPage-label {
-    font-size: calc(10px + (14 - 10) * (100vw - 480px) / (1290 - 480));
+    font-size: calc(12px + (14 - 12) * (100vw - 480px) / (1290 - 480));
   }
 }
 
@@ -3237,7 +3229,7 @@ hr.dark {
 }
 
 .NextPage-title {
-  font-size: 20px;
+  font-size: 32px;
   color: currentColor;
   font-weight: 700;
   letter-spacing: -1px;
@@ -3248,7 +3240,7 @@ hr.dark {
 
 @media (min-width: 30em) and (max-width: 80.625em) {
   .NextPage-title {
-    font-size: calc(20px + (48 - 20) * (100vw - 480px) / (1290 - 480));
+    font-size: calc(32px + (48 - 32) * (100vw - 480px) / (1290 - 480));
   }
 }
 
@@ -3940,7 +3932,7 @@ hr.dark {
   width: 1px;
 }
 
-.Search-input {
+.Search-input[type="text"] {
   background-color: transparent;
   border: 0;
   -webkit-box-flex: 0;
@@ -4007,6 +3999,18 @@ hr.dark {
   .ResourcesList-list {
     font-size: 14px;
   }
+}
+
+.ResourcesList-item > a {
+  display: inline-block;
+}
+
+.ResourcesList-icon {
+  display: inline-block;
+  height: auto;
+  margin-right: 4px;
+  vertical-align: -2px;
+  width: 14px;
 }
 /**
  * Functions
@@ -4371,6 +4375,28 @@ hr.dark {
  * Mixins
  */
 /**
+ * Component: File download
+ */
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Feed
  */
 .Feed time {
@@ -4411,6 +4437,122 @@ hr.dark {
  * Mixins
  */
 /**
+ * Component: Modal
+ */
+.Modal {
+  background-color: #fff;
+  -webkit-box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
+          box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  position: fixed;
+  right: 0;
+  -webkit-transform: translateY(10vh);
+          transform: translateY(10vh);
+  -webkit-transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
+  transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
+  transition: opacity 200ms, transform 200ms, visibility 200ms;
+  transition: opacity 200ms, transform 200ms, visibility 200ms, -webkit-transform 200ms;
+  visibility: hidden;
+  z-index: 9000;
+}
+
+@media (max-width: 479px) {
+  .Modal {
+    bottom: 0;
+    height: 100vh;
+    top: 0;
+    width: 100vw;
+  }
+}
+
+@media (min-width: 480px) {
+  .Modal {
+    max-height: 80vh;
+    max-width: 800px;
+    top: 50%;
+  }
+}
+
+.Modal.is-open {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+}
+
+@media (min-width: 480px) {
+  .Modal.is-open {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+.Modal-close {
+  background-color: transparent;
+  border: 0;
+  color: rgba(100, 110, 126, 0.4);
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+  height: 24px;
+  padding: 0;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+  width: 24px;
+}
+
+.Modal-close:hover, .Modal-close:active, .Modal-close:focus {
+  color: rgba(100, 110, 126, 0.8);
+}
+
+.Modal-content {
+  height: 100%;
+  overflow-y: auto;
+  padding-left: 24px;
+  padding-right: 48px;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Overlay
+ * @type Atom
+ */
+.Overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transition: opacity 200ms, visibility 200ms;
+  transition: opacity 200ms, visibility 200ms;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 8000;
+}
+
+.Overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Testimonial
  * @type Organism
  */
@@ -4421,12 +4563,9 @@ hr.dark {
   text-align: center;
 }
 
-.Testimonial--white {
-  color: #fff;
-}
-
 .Testimonial-quote {
   font-size: 16px;
+  font-family: "Mate", Georgia, sans-serif;
   font-weight: 300;
   line-height: 1.6;
   margin-bottom: 1.6em;
@@ -4443,10 +4582,6 @@ hr.dark {
   .Testimonial-quote {
     font-size: 20px;
   }
-}
-
-.Testimonial--white .Testimonial-quote {
-  text-shadow: 0 2px 24px #000;
 }
 
 .Testimonial-citation {
@@ -4504,112 +4639,16 @@ hr.dark {
   }
 }
 
-.Testimonial--white .Testimonial-location {
+.Feature .Testimonial {
+  color: #fff;
+}
+
+.Feature .Testimonial-quote {
+  text-shadow: 0 2px 24px #000;
+}
+
+.Feature .Testimonial-location {
   color: inherit;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Overlay
- * @type Atom
- */
-.Overlay {
-  background-color: rgba(0, 0, 0, 0.2);
-  height: 100vh;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  -webkit-transition: opacity 200ms, visibility 200ms;
-  transition: opacity 200ms, visibility 200ms;
-  visibility: hidden;
-  width: 100vw;
-  z-index: 8000;
-}
-
-.Overlay.is-open {
-  opacity: 1;
-  visibility: visible;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Modal
- */
-.Modal {
-  background-color: #fff;
-  bottom: 0;
-  -webkit-box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
-          box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
-  height: 96vh;
-  left: 0;
-  margin: auto;
-  opacity: 0;
-  padding: 24px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  -webkit-transform: translateY(10vh);
-          transform: translateY(10vh);
-  -webkit-transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
-  transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
-  transition: opacity 200ms, transform 200ms, visibility 200ms;
-  transition: opacity 200ms, transform 200ms, visibility 200ms, -webkit-transform 200ms;
-  visibility: hidden;
-  width: 96vw;
-  z-index: 9000;
-}
-
-@media (min-width: 480px) {
-  .Modal {
-    height: 80vh;
-    max-height: 80vh;
-    max-width: 80vw;
-    width: 80vw;
-  }
-}
-
-@media (min-width: 800px) {
-  .Modal {
-    max-width: 50vw;
-    width: 50vw;
-  }
-}
-
-.Modal.is-open {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  visibility: visible;
-}
-
-.Modal-close {
-  background-color: transparent;
-  border: 0;
-  color: rgba(100, 110, 126, 0.4);
-  cursor: pointer;
-  display: block;
-  font-size: 24px;
-  height: 24px;
-  padding: 0;
-  position: absolute;
-  right: 24px;
-  top: 24px;
-  -webkit-transition: color 200ms;
-  transition: color 200ms;
-  width: 24px;
-}
-
-.Modal-close:hover, .Modal-close:active, .Modal-close:focus {
-  color: rgba(100, 110, 126, 0.8);
 }
 /**
  * Functions
