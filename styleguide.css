@@ -1361,57 +1361,6 @@ hr.dark {
  * Mixins
  */
 /**
- * Component: Button
- * @type Atom
- */
-.Button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background-color: #5d91a1;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: 14px;
-  font-weight: 600;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  letter-spacing: .7px;
-  line-height: 1;
-  padding: 1.71429em 2.85714em;
-  text-align: center;
-  text-decoration: none;
-  -webkit-transition: background-color 200ms, color 200ms;
-  transition: background-color 200ms, color 200ms;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.Button:hover, .Button:active, .Button:focus {
-  color: #fff;
-}
-
-.Button--dark {
-  background-color: #152640;
-  border: 1px solid rgba(191, 208, 216, 0.2);
-  color: #fff;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Contentinfo
  * @type Organism
  */
@@ -1850,6 +1799,57 @@ hr.dark {
         -ms-flex-order: -1;
             order: -1;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Button
+ * @type Atom
+ */
+.Button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #5d91a1;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: .7px;
+  line-height: 1;
+  padding: 1.71429em 2.85714em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 200ms, color 200ms;
+  transition: background-color 200ms, color 200ms;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.Button:hover, .Button:active, .Button:focus {
+  color: #fff;
+}
+
+.Button--dark {
+  background-color: #152640;
+  border: 1px solid rgba(191, 208, 216, 0.2);
+  color: #fff;
 }
 /**
  * Functions
@@ -4236,6 +4236,28 @@ hr.dark {
  * Mixins
  */
 /**
+ * Component: File download
+ */
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Filter
  * @type Organism
  */
@@ -4368,28 +4390,6 @@ hr.dark {
   .Filter-link {
     margin-top: 48px;
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: File download
- */
-.FileDownload {
-  display: inline-block;
-}
-
-.FileDownload img {
-  display: block;
-  height: auto;
-  width: 14px;
-}
-
-.FileDownload + .FileDownload {
-  margin-left: 24px;
 }
 /**
  * Functions
