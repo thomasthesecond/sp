@@ -38,4 +38,5 @@ Please note that the URL for the logo may need to be updated depending on where 
 * http://schema.org/
 * https://schema.org/docs/gs.html
 * https://developers.google.com/search/docs/guides/intro-structured-data
+* https://search.google.com/structured-data/testing-tool
 * https://moz.com/learn/seo/schema-structured-data
