@@ -2,7 +2,10 @@
   {{> @stock-price }}
 
   <div class="StockChartFilter-controls">
-    {{> @select select=filter1 }}
-    {{> @select select=filter2 }}
+    <label class="visuallyhidden" for="time-frame-select">Time frame</label>
+    {{> @select select=timeFrame }}
+
+    <label class="visuallyhidden" for="chart-type-select">Chart type</label>
+    {{> @select select=chartType }}
   </div>
 </div>

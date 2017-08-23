@@ -244,26 +244,43 @@
           "up": true,
           "direction": "up"
         },
-        "filter1": {
-          "name": "filter1",
-          "id": "filter1",
+        "timeFrame": {
+          "name": "time-frame-select",
+          "id": "time-frame-select",
           "required": false,
           "options": [
-            { "label": "Select", "value": "", "selected": "true" },
-            { "label": "Option 1", "value": "1" },
-            { "label": "Option 2", "value": "2" },
-            { "label": "Option 3", "value": "3" }
+            { "label": "1 Hour", "value": "1hr" },
+            { "label": "1 Day", "value": "1dy", "selected": "true" },
+            { "label": "2 Days", "value": "2dy" },
+            { "label": "3 Days", "value": "3dy" },
+            { "label": "5 Days", "value": "5dy" },
+            { "label": "10 Days", "value": "10dy" },
+            { "label": "1 Month", "value": "1mo" },
+            { "label": "2 Months", "value": "2mo" },
+            { "label": "3 Months", "value": "3mo" },
+            { "label": "6 Months", "value": "6mo" },
+            { "label": "1 Year", "value": "1yr" },
+            { "label": "2 Years", "value": "2yr" },
+            { "label": "3 Years", "value": "3yr" },
+            { "label": "4 Years", "value": "4yr" },
+            { "label": "5 Years", "value": "5yr" },
+            { "label": "10 Years", "value": "10yr" },
+            { "label": "Year-to-Date", "value": "Ytd" },
+            { "label": "All Data", "value": "All" }
           ]
         },
-        "filter2": {
-          "name": "filter2",
-          "id": "filter2",
+        "chartType": {
+          "name": "chart-type-select",
+          "id": "chart-type-select",
           "required": false,
           "options": [
-            { "label": "Select", "value": "", "selected": "true" },
-            { "label": "Option 1", "value": "1" },
-            { "label": "Option 2", "value": "2" },
-            { "label": "Option 3", "value": "3" }
+    				{ "label": "Mountain", "value": "mountain", "selected": "true" },
+    				{ "label": "OHLC", "value": "ohlc" },
+    				{ "label": "Candlestick", "value": "candlestick" },
+    				{ "label": "Candlestick Red/Green", "value": "candlestickcolor" },
+    				{ "label": "Close Line", "value": "line" },
+    				{ "label": "% Change Fill", "value": "fillclip" },
+    				{ "label": "% Change Line", "value": "lineclip" }
           ]
         },
         "nextPage": {
