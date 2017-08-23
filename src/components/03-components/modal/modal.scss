@@ -82,7 +82,12 @@
 
 .Modal-content {
   height: 100%;
+  -webkit-overflow-scrolling: touch;
   overflow-y: auto;
   padding-left: #{$spacing-gutter}px;
   padding-right: #{$spacing-gutter * 2}px;
+
+  @media (min-width: 480px) {
+    padding-left: #{$spacing-gutter * 2}px;
+  }
 }
