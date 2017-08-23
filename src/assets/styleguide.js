@@ -24,6 +24,7 @@ import "../components/03-components/cover-photo";
 import CoverVideo from "../components/03-components/cover-video";
 import "../components/03-components/feature";
 import "../components/03-components/feed";
+import "../components/03-components/file-download";
 import "../components/03-components/filter";
 import "../components/03-components/hamburger";
 import "../components/03-components/help-tip";
