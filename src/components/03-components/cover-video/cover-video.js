@@ -1,6 +1,14 @@
 "use strict";
 
 export default class CoverVideo {
+  static pauseVideo(video) {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+
   constructor(options) {
     this.options = options;
 
@@ -12,9 +20,10 @@ export default class CoverVideo {
 
     this.checkScreenSize = this.checkScreenSize.bind(this);
     this.createVideo = this.createVideo.bind(this);
-    this.pauseVideo = this.pauseVideo.bind(this);
     this.addVideo = this.addVideo.bind(this);
     this.removeVideo = this.removeVideo.bind(this);
+
+    this.shouldLoadVideo = "objectFit" in document.documentElement.style;
   }
 
   checkScreenSize(mql) {
@@ -42,16 +51,8 @@ export default class CoverVideo {
     this.video.appendChild(source);
 
     this.video.addEventListener("click", (event) => {
-      this.pauseVideo(event.target);
+      CoverVideo.pauseVideo(event.target);
     });
-  }
-
-  pauseVideo(video) {
-    if (video.paused) {
-      video.play();
-    } else {
-      video.pause();
-    }
   }
 
   addVideo() {
@@ -66,14 +67,16 @@ export default class CoverVideo {
   removeVideo() {
     if (this.video && this.video.parentNode) {
       this.video.currentTime = 0;
-      this.video.removeEventListener("click", this.pauseVideo);
+      this.video.removeEventListener("click", CoverVideo.pauseVideo);
       this.container.replaceChild(this.image, this.video);
     }
   }
 
   render() {
-    this.createVideo();
-    this.checkScreenSize(this.mql);
-    this.mql.addListener(this.checkScreenSize);
+    if (this.shouldLoadVideo) {
+      this.createVideo();
+      this.checkScreenSize(this.mql);
+      this.mql.addListener(this.checkScreenSize);
+    }
   }
 }
