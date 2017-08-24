@@ -4,31 +4,23 @@
 
 /**
  * Component: Service cards
- * @type Molecule
  */
 
 .ServiceCards {
-  display: grid;
-  grid-column-gap: 0;
-  grid-row-gap: 64px;
-  grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: 630px;
 
-  @media (min-width: 480px) {
-    grid-gap: 30px;
-    grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
-  }
+  @supports (display: grid) {
+    display: grid;
+    grid-column-gap: 0;
+    grid-row-gap: 64px;
+    grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
 
-  .ServiceCard {
-    width: auto;
-
-    @media (max-width: 479px) {
-      background-color: transparent;
-      border-radius: 0;
-      box-shadow: none;
-      font-size: 14px;
-      height: auto;
-      line-height: (19 / 14);
+    @media (min-width: 480px) {
+      grid-gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
     }
   }
 }
