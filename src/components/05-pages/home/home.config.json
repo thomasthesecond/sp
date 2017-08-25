@@ -15,7 +15,6 @@
       "image": ""
     },
     "masthead": {
-      "className": "js-masthead",
       "tagline": {
         "first": "We operate",
         "second": "differently"
