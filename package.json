@@ -7,9 +7,8 @@
   "private": true,
   "scripts": {
     "start": "fractal start --sync",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean && webpack && fractal build",
-    "assets:ci": "webpack --watch",
+    "assets": "webpack --watch",
+    "build": "yarn run clean && webpack && fractal build",
     "clean": "rimraf tmp && rimraf www",
     "scsslint": "scss-lint . --config .scsslint.yml",
     "gh-pages": "npm run build && gh-pages -d www"
