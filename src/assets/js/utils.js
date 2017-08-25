@@ -10,6 +10,13 @@ const forEach = (array, callback, scope) => {
 };
 
 /**
+ * Replace no-js className
+ */
+const replaceNoJsClassName = () => {
+  document.documentElement.className = document.documentElement.className.replace("no-js", "js");
+};
+
+/**
  * Polyfill object-fit: cover
  */
 const objectFitCover = () => {
@@ -28,5 +35,6 @@ const objectFitCover = () => {
 
 export {
   forEach,
+  replaceNoJsClassName,
   objectFitCover,
 };
