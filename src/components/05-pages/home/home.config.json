@@ -15,6 +15,7 @@
       "image": ""
     },
     "masthead": {
+      "className": "js-masthead",
       "tagline": {
         "first": "We operate",
         "second": "differently"
@@ -38,8 +39,9 @@
       {
         "block": {
           "id": "partnerships-section",
+          "className": "js-partnerships-section",
           "image": {
-            "class": "ImageBlock-photo",
+            "className": "ImageBlock-photo",
             "title": "",
             "src": "/assets/images/home-partnerships-sm.jpg",
             "srcset": [
@@ -74,8 +76,9 @@
       {
         "block": {
           "id": "investors-section",
+          "className": "js-investors-section",
           "image": {
-            "class": "ImageBlock-photo",
+            "className": "ImageBlock-photo",
             "title": "",
             "src": "/assets/images/home-investors-sm.jpg",
             "srcset": [
@@ -111,8 +114,9 @@
       {
         "block": {
           "id": "careers-section",
+          "className": "js-careers-section",
           "image": {
-            "class": "ImageBlock-photo",
+            "className": "ImageBlock-photo",
             "title": "",
             "src": "/assets/images/home-careers-sm.jpg",
             "srcset": [

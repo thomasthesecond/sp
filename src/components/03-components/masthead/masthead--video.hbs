@@ -1,4 +1,4 @@
-<header class="Masthead Masthead--video">
+<header class="Masthead Masthead--video{{#if masthead.className}} {{masthead.className}}{{/if}}">
   <div class="container">
     {{> @tagline tagline=masthead.tagline }}
     {{> @more-link link=masthead.link }}

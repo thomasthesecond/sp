@@ -2,7 +2,7 @@
   "hidden": true,
   "context": {
     "image": {
-      "class": "",
+      "className": null,
       "title": "",
       "src": "/assets/images/home-careers-sm.jpg",
       "srcset": [

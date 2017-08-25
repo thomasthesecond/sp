@@ -2,7 +2,7 @@
   "context": {
     "select": {
       "id": "footer-locations",
-      "class": "dark js-location-select",
+      "className": "dark js-location-select",
       "name": "footer-locations",
       "options": [
         { "label": "Select a state", "value": "", "selected": "true" },

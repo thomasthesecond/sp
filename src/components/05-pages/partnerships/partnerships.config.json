@@ -94,7 +94,7 @@
       {
         "id": "physician-practices",
         "image": {
-          "class": "ImageBlock-photo",
+          "className": "ImageBlock-photo",
           "title": "",
           "src": "/assets/images/partnerships-physician-practices-sm.jpg",
           "srcset": [
@@ -124,7 +124,7 @@
       {
         "id": "ambulatory-surgery-centers",
         "image": {
-          "class": "ImageBlock-photo",
+          "className": "ImageBlock-photo",
           "title": "",
           "src": "/assets/images/partnerships-surgery-centers-sm.jpg",
           "srcset": [
@@ -154,7 +154,7 @@
       {
         "id": "surgical-hospitals",
         "image": {
-          "class": "ImageBlock-photo",
+          "className": "ImageBlock-photo",
           "title": "",
           "src": "/assets/images/partnerships-surgical-hospitals-sm.jpg",
           "srcset": [
@@ -184,7 +184,7 @@
       {
         "id": "healthcare-systems",
         "image": {
-          "class": "ImageBlock-photo",
+          "className": "ImageBlock-photo",
           "title": "",
           "src": "/assets/images/partnerships-healthcare-systems-sm.jpg",
           "srcset": [

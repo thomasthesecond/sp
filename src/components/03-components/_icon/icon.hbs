@@ -1,3 +1,4 @@
-<svg class="icon{{#if class}} {{ class }}{{/if}}">
+<svg class="icon{{#if className}} {{ className }}{{/if}}"
+  {{#if hidden}}aria-hidden="true"{{/if}}>
   <use xlink:href="#{{ id }}"></use>
 </svg>

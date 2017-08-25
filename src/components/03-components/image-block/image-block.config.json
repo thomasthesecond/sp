@@ -1,8 +1,10 @@
 {
   "context": {
     "block": {
+      "id": "",
+      "className": null,
       "image": {
-        "class": "ImageBlock-photo",
+        "className": "ImageBlock-photo",
         "title": "",
         "src": "/assets/images/home-careers-sm.jpg",
         "srcset": [
