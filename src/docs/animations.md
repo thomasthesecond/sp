@@ -6,7 +6,7 @@ The home, about and partnership pages contain scrolling animations.
 
 [ScrollMagic](http://scrollmagic.io/) is used to handle the animations.
 
-Animations for each page is configured in their respective JavaScript module files located in `src/components/05-pages`.
+Animations for each page are configured in their respective JavaScript module files located in `src/components/05-pages`.
 
 All of the animation styles are contained in a single Sass partial, `home/animate.scss`.
 
