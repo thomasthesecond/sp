@@ -80,12 +80,8 @@
 <ul>
 <li><strong>Components</strong>: The building blocks of the site; when combined, create pages; each component has a specific purpose</li>
 <li><strong>Pages</strong>: Fully formed webpages composed of components</li>
-<li><strong>Layout</strong>: Modules that are general-purpose and easily reusable; generally these modules wrap components and help layout sections on a page  </li>
+<li><strong>Layout</strong>: Modules that are general-purpose and easily reusable; generally these modules wrap components and help lay out sections on a page  </li>
 </ul>
-<h3 id="source-vs-build-files">Source vs. build files</h3>
-<p>The source code exists within the <code>src</code> directory at the root of the project.</p>
-<p>Compiled build files are contained within the <code>www</code> directory at the root of the project.</p>
-<p>When making a change to component or page, only the source files should be edited. <a href="https://github.com/webpack/webpack">Webpack</a> is used to build and bundle the source files for each component and page; more about that below.</p>
 <h2 id="setting-up-the-project-for-development">Setting up the project for development</h2>
 <p>If you made it this far, chances are you’re already up and running, but just incase you’re not, here’s what you need to do. <em>This information is also contained within the project’s README file at the root.</em></p>
 <h3 id="requirements">Requirements</h3>
@@ -96,64 +92,222 @@
 <p><a href="https://yarnpkg.com/en/docs/install">https://yarnpkg.com/en/docs/install</a></p>
 <h3 id="getting-started">Getting started</h3>
 <p>Once you’ve installed Node and Yarn, you’re ready to install the project’s dependencies. To do that, run simply run <code>yarn</code> (or <code>npm install</code>).</p>
-<p>To run the project and develop locally, you’ll first need to start the local web server by running <code>yarn start</code>. This will start Fractal and run a local server at <a href="http://localhost:3000/">http://localhost:3000/</a>.</p>
-<p>You will also need to start Webpack to watch and compile changes to the assets. In a separate console window, run <code>yarn run assets:ci</code>. This command starts Webpack with the <code>--watch</code> flag.</p>
+<p>To run the project and develop locally, run  <code>yarn start</code>. This will start Fractal and run a local development server at the address displayed by Fractal in your terminal window, usually the address is <a href="http://localhost:3000/">http://localhost:3000/</a>.</p>
+<p>You will also need to start webpack to watch and compile changes to the assets. In a separate console window, run <code>yarn run assets</code>. This command starts webpack with the <code>--watch</code> flag.</p>
 <p>Now you may open <a href="http://localhost:3000/">http://localhost:3000/</a> in a web browser and begin developing.</p>
 <h3 id="commands">Commands</h3>
 <p>All commands should be run through <code>yarn run</code>.</p>
-<code><pre><span class="hljs-string">"start"</span>: <span class="hljs-string">"fractal start --sync"</span>,
-<span class="hljs-string">"test"</span>: <span class="hljs-string">"echo \"</span><span class="hljs-keyword">Error</span>: <span class="hljs-keyword">no</span> <span class="hljs-keyword">test</span> specified\<span class="hljs-string">" &amp;&amp; exit 1"</span>,
-<span class="hljs-string">"build"</span>: <span class="hljs-string">"npm run clean &amp;&amp; webpack &amp;&amp; fractal build"</span>,
-<span class="hljs-string">"assets:ci"</span>: <span class="hljs-string">"webpack --watch"</span>,
-<span class="hljs-string">"clean"</span>: <span class="hljs-string">"rimraf tmp &amp;&amp; rimraf www"</span>,
-<span class="hljs-string">"scsslint"</span>: <span class="hljs-string">"scss-lint . --config .scsslint.yml"</span>,
-<span class="hljs-string">"gh-pages"</span>: <span class="hljs-string">"npm run build &amp;&amp; gh-pages -d www"</span></pre></code><h3 id="dependencies">Dependencies</h3>
-<p>All dependencies are installed by running <code>yarn</code>. Here’s a brief overview of each dependency and its purpose.</p>
-<code><pre><span class="hljs-string">"@frctl/fractal"</span>: <span class="hljs-string">"^1.1.4"</span>,
-<span class="hljs-string">"@frctl/mandelbrot"</span>: <span class="hljs-string">"^1.1.0"</span>,
-<span class="hljs-string">"babel-core"</span>: <span class="hljs-string">"^6.25.0"</span>,
-<span class="hljs-string">"babel-polyfill"</span>: <span class="hljs-string">"^6.23.0"</span>,
-<span class="hljs-string">"jquery"</span>: <span class="hljs-string">"^3.2.1"</span>,
-<span class="hljs-string">"no-scroll"</span>: <span class="hljs-string">"^2.1.0"</span>,
-<span class="hljs-string">"normalize.css"</span>: <span class="hljs-string">"^7.0.0"</span>,
-<span class="hljs-string">"picturefill"</span>: <span class="hljs-string">"^3.0.2"</span></pre></code><code><pre><span class="hljs-string">"autoprefixer"</span>: <span class="hljs-string">"^7.0.1"</span>,
-<span class="hljs-string">"babel-loader"</span>: <span class="hljs-string">"^7.1.1"</span>,
-<span class="hljs-string">"babel-plugin-transform-decorators-legacy"</span>: <span class="hljs-string">"^1.3.4"</span>,
-<span class="hljs-string">"babel-preset-es2015"</span>: <span class="hljs-string">"^6.24.1"</span>,
-<span class="hljs-string">"color"</span>: <span class="hljs-string">"^2.0.0"</span>,
-<span class="hljs-string">"copy-webpack-plugin"</span>: <span class="hljs-string">"^4.0.1"</span>,
-<span class="hljs-string">"css-loader"</span>: <span class="hljs-string">"^0.28.1"</span>,
-<span class="hljs-string">"extract-text-webpack-plugin"</span>: <span class="hljs-string">"^2.1.0"</span>,
-<span class="hljs-string">"file-loader"</span>: <span class="hljs-string">"^0.11.2"</span>,
-<span class="hljs-string">"gh-pages"</span>: <span class="hljs-string">"^1.0.0"</span>,
-<span class="hljs-string">"handlebars-loader"</span>: <span class="hljs-string">"^1.5.0"</span>,
-<span class="hljs-string">"node-sass"</span>: <span class="hljs-string">"^4.5.2"</span>,
-<span class="hljs-string">"postcss"</span>: <span class="hljs-string">"^6.0.6"</span>,
-<span class="hljs-string">"postcss-cli"</span>: <span class="hljs-string">"^4.1.0"</span>,
-<span class="hljs-string">"postcss-loader"</span>: <span class="hljs-string">"^2.0.3"</span>,
-<span class="hljs-string">"pre-commit"</span>: <span class="hljs-string">"^1.2.2"</span>,
-<span class="hljs-string">"rimraf"</span>: <span class="hljs-string">"^2.6.1"</span>,
-<span class="hljs-string">"sass-loader"</span>: <span class="hljs-string">"^6.0.4"</span>,
-<span class="hljs-string">"style-loader"</span>: <span class="hljs-string">"^0.17.0"</span>,
-<span class="hljs-string">"webpack"</span>: <span class="hljs-string">"^3.2.0"</span></pre></code><h2 id="languages-used">Languages used</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>start</code></td>
+<td>Starts Fractal and the local development server</td>
+</tr>
+<tr>
+<td><code>assets</code></td>
+<td>Watches and compiles JS and SCSS assests with webpack</td>
+</tr>
+<tr>
+<td><code>build</code></td>
+<td>Builds and compiles production-ready files</td>
+</tr>
+<tr>
+<td><code>clean</code></td>
+<td>Deletes the build directories <code>tmp</code> and <code>www</code>; used within the <code>build</code> script</td>
+</tr>
+<tr>
+<td><code>eslint</code></td>
+<td>Lints JavaScript files with ESLint</td>
+</tr>
+<tr>
+<td><code>stylelint</code></td>
+<td>Lints SCSS files with stylelint</td>
+</tr>
+<tr>
+<td><code>lint</code></td>
+<td>Runs both <code>eslint</code> and <code>stylelint</code> scripts at once</td>
+</tr>
+<tr>
+<td><code>gh-pages</code></td>
+<td>Builds and deploys the project to Github pages</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dependencies">Dependencies</h3>
+<p>All dependencies are installed by running <code>yarn</code>. Here’s a brief overview of each dependency and its purpose. These packages will be compiled and run within the browser.</p>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fractal</code></td>
+<td>Component library framework</td>
+</tr>
+<tr>
+<td><code>mandelbrot</code></td>
+<td>Default web UI theme for Fractal</td>
+</tr>
+<tr>
+<td><code>babel-core</code></td>
+<td>Babel compiler core; ES6/ES2015+ to ES5 JavaScript transpiler</td>
+</tr>
+<tr>
+<td><code>babel-polyfill</code></td>
+<td>Provides polyfills necessary for a full ES2015+ environment</td>
+</tr>
+<tr>
+<td><code>jquery</code></td>
+<td>JavaScript library for DOM operations</td>
+</tr>
+<tr>
+<td><code>no-scroll</code></td>
+<td>Disable the document’s scrolling</td>
+</tr>
+<tr>
+<td><code>normalize.css</code></td>
+<td>A modern alternative to CSS resets</td>
+</tr>
+<tr>
+<td><code>picturefill</code></td>
+<td>A responsive image polyfill</td>
+</tr>
+<tr>
+<td><code>scrollmagic</code></td>
+<td>JavaScript library for scroll interactions</td>
+</tr>
+</tbody>
+</table>
+<p>A separate list of <code>devDependencies</code> are used for compiling and building the project. These packages will not see the browser and are only run within the Node environment.</p>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>autoprefixer</code></td>
+<td>Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website</td>
+</tr>
+<tr>
+<td><code>babel-eslint</code></td>
+<td>Custom parser for ESLint</td>
+</tr>
+<tr>
+<td><code>babel-loader</code></td>
+<td>Babel loader module for webpack</td>
+</tr>
+<tr>
+<td><code>babel-plugin-transform-decorators-legacy</code></td>
+<td>A plugin for Babel 6 that (mostly) replicates the old decorator behavior from Babel 5</td>
+</tr>
+<tr>
+<td><code>babel-preset-es2015</code></td>
+<td>Babel preset for all ES2015 plugins</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Color conversion and manipulation with CSS string support</td>
+</tr>
+<tr>
+<td><code>copy-webpack-plugin</code></td>
+<td>Copy files and directories in webpack</td>
+</tr>
+<tr>
+<td><code>css-loader</code></td>
+<td>CSS loader module for webpack</td>
+</tr>
+<tr>
+<td><code>eslint</code></td>
+<td>An AST-based pattern checker for JavaScript</td>
+</tr>
+<tr>
+<td><code>eslint-config-airbnb-base</code></td>
+<td>Airbnb’s base JS ESLint config</td>
+</tr>
+<tr>
+<td><code>eslint-plugin-import</code></td>
+<td>Supports linting of ES6+/ES2015+ import/export syntax</td>
+</tr>
+<tr>
+<td><code>extract-text-webpack-plugin</code></td>
+<td>Extract text from bundle into a file</td>
+</tr>
+<tr>
+<td><code>file-loader</code></td>
+<td>File loader module for webpack</td>
+</tr>
+<tr>
+<td><code>gh-pages</code></td>
+<td>Publish to a gh-pages branch on GitHub</td>
+</tr>
+<tr>
+<td><code>handlebars-loader</code></td>
+<td>Handlebars loader module for webpack</td>
+</tr>
+<tr>
+<td><code>node-sass</code></td>
+<td>Wrapper around libsass to compile Sass/SCSS to CSS</td>
+</tr>
+<tr>
+<td><code>postcss</code></td>
+<td>Tool for transforming styles with JS plugins</td>
+</tr>
+<tr>
+<td><code>postcss-cli</code></td>
+<td>CLI for PostCSS</td>
+</tr>
+<tr>
+<td><code>postcss-loader</code></td>
+<td>PostCSS loader module for webpack</td>
+</tr>
+<tr>
+<td><code>pre-commit</code></td>
+<td>Automatically install pre-commit hooks for npm modules</td>
+</tr>
+<tr>
+<td><code>rimraf</code></td>
+<td>A deep deletion module for node</td>
+</tr>
+<tr>
+<td><code>sass-loader</code></td>
+<td>Sass loader module for webpack</td>
+</tr>
+<tr>
+<td><code>style-loader</code></td>
+<td>Style loader module for webpack</td>
+</tr>
+<tr>
+<td><code>stylelint</code></td>
+<td>A mighty, modern CSS linter</td>
+</tr>
+<tr>
+<td><code>webpack</code></td>
+<td>Packs CommonJs/AMD modules for the browser</td>
+</tr>
+</tbody>
+</table>
+<h3 id="source-vs-build-files">Source vs. build files</h3>
+<p>The source code exists within the <code>src</code> directory at the root of the project.</p>
+<p>Compiled build files are contained within the <code>www</code> directory at the root of the project.</p>
+<p>When making a change to component or page, only the source files should be edited.</p>
+<h2 id="languages-used">Languages used</h2>
 <ul>
 <li><strong>Handlebars</strong>: HTML templating</li>
 <li><strong>SCSS</strong>: CSS pre-processing</li>
 <li><strong>JavaScript</strong>: vanilla JavaScript using ES6 spec</li>
 </ul>
-<!-- ## Atomic design
-
-This component library uses [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) principles which classifies components into five distinct groups:
-
-* atoms
-* molecules
-* organisms
-* templates
-* pages
-
-## Naming components
-
-Components follow the [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) naming convention. -->
 
     
 
@@ -271,6 +425,54 @@ Components follow the [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="components/detail/typography.html" data-pjax>
                 <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/z-index.html" data-pjax>
+                <span>z-index</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="components/detail/spacing.html" data-pjax>
+                <span>Spacing</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3309,20 +3511,6 @@ Components follow the [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc
             <a class="Tree-entityLink" href="docs/browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3331,7 +3519,7 @@ Components follow the [SUIT CSS](https://github.com/suitcss/suit/blob/master/doc
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="docs/helper-classes.html" data-pjax>
-                <span>Helper Classes</span>
+                <span>Helper classes</span>
                 
             </a>
         </li>

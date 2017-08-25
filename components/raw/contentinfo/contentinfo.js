@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this */
+
 "use strict";
 
 import LocationSelect from "../location-select";

@@ -8,7 +8,7 @@ export default class LocationsPage {
   }
 
   render() {
-    window.addEventListener("scroll", (event) => {
+    window.addEventListener("scroll", () => {
       setTimeout(() => {
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 

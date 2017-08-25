@@ -1,6 +1,22 @@
 "use strict";
 
+import { forEach } from "../../../assets/js/utils";
+
 class SubNavigation {
+  static listenForAnchorClick(anchor) {
+    anchor.addEventListener("click", (event) => {
+      const hashId = anchor.hash.replace("#", "");
+
+      window.scroll({
+        top: document.getElementById(hashId).offsetTop,
+        left: 0,
+        behavior: "smooth",
+      });
+
+      event.preventDefault();
+    });
+  }
+
   constructor(options) {
     this.options = options;
 
@@ -15,7 +31,6 @@ class SubNavigation {
     this.setMarkerWidth = this.setMarkerWidth.bind(this);
     this.setMarkerOffset = this.setMarkerOffset.bind(this);
     this.setMarkerTransition = this.setMarkerTransition.bind(this);
-    this.listenForAnchorClick = this.listenForAnchorClick.bind(this);
     this.scrollSpy = this.scrollSpy.bind(this);
     this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
     this.setUpItems = this.setUpItems.bind(this);
@@ -44,7 +59,7 @@ class SubNavigation {
     list.scroll({
       top: 0,
       left: (offset - 24),
-      behavior: "smooth"
+      behavior: "smooth",
     });
   }
 
@@ -53,7 +68,7 @@ class SubNavigation {
     const activeWidth = item.offsetWidth;
     const activeOffset = item.offsetLeft;
 
-    const padding = () => mql.matches ? 10 : 0;
+    const padding = () => (mql.matches ? 10 : 0);
     mql.addListener(padding);
 
     this.makeMarkerVisible();
@@ -84,21 +99,6 @@ class SubNavigation {
     }, 200);
   }
 
-  listenForAnchorClick(anchor) {
-    anchor.addEventListener("click", (event) => {
-      const parent = anchor.parentNode;
-      const hashId = anchor.hash.replace("#", "");
-
-      window.scroll({
-        top: document.getElementById(hashId).offsetTop,
-        left: 0,
-        behavior: "smooth"
-      });
-
-      event.preventDefault();
-    });
-  };
-
   scrollSpy(settings) {
     let currentId = null;
 
@@ -106,7 +106,10 @@ class SubNavigation {
       const top = document.getElementById(item.id).offsetTop;
       const bottom = top + document.getElementById(item.id).offsetHeight;
 
-      if ((window.pageYOffset || document.documentElement.scrollTop) >= top && (window.pageYOffset || document.documentElement.scrollTop) < bottom) {
+      if (
+        (window.pageYOffset || document.documentElement.scrollTop) >= top &&
+        (window.pageYOffset || document.documentElement.scrollTop) < bottom
+      ) {
         currentId = item.id;
       }
     });
@@ -132,37 +135,37 @@ class SubNavigation {
   }
 
   setUpScrollSpy() {
-    this.sections.forEach((section) => {
+    forEach(this.sections, (index, section) => {
       this.scrollSpySettings.push({
         id: section.id,
         top: section.offsetTop,
         bottom: (section.offsetTop + section.offsetHeight),
-        height: section.offsetHeight
+        height: section.offsetHeight,
       });
     });
 
     this.scrollSpy(this.scrollSpySettings);
 
-    window.addEventListener("scroll", (event) => {
+    window.addEventListener("scroll", () => {
       setTimeout(() => {
         this.scrollSpy(this.scrollSpySettings);
 
         if (this.currentItem && !this.motionQuery.matches) {
           this.setMarkerTransition();
-        };
+        }
       }, 100);
     });
   }
 
   setUpItems() {
-    this.subNavigationItems.forEach((item, index) => {
+    forEach(this.subNavigationItems, (index, item) => {
       const anchor = item.querySelector("a");
 
       if (item.classList.contains(this.activeClass)) {
         this.updateMarker(item);
       }
 
-      this.listenForAnchorClick(anchor);
+      SubNavigation.listenForAnchorClick(anchor);
     });
   }
 

@@ -60,15 +60,57 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 127);
+/******/ 	return __webpack_require__(__webpack_require__.s = 132);
 /******/ })
 /************************************************************************/
 /******/ ({
 
 /***/ 0:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+/**
+ * forEach for NodeList
+ */
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var forEach = function forEach(array, callback, scope) {
+  for (var i = 0; i < array.length; i += 1) {
+    callback.call(scope, i, array[i]);
+  }
+};
+
+/**
+ * Replace no-js className
+ */
+var replaceNoJsClassName = function replaceNoJsClassName() {
+  document.documentElement.className = document.documentElement.className.replace("no-js", "js");
+};
+
+/**
+ * Polyfill object-fit: cover
+ */
+var objectFitCover = function objectFitCover() {
+  if ("objectFit" in document.documentElement.style === false) {
+    document.addEventListener("DOMContentLoaded", function () {
+      var nodes = document.querySelectorAll(".object-fit-cover");
+
+      forEach(nodes, function (index, node) {
+        var image = node.querySelector("img");
+        (node.runtimeStyle || node.style).background = "url(\"" + image.src + "\") no-repeat 50% / cover";
+        (image.runtimeStyle || image.style).display = "none";
+      });
+    });
+  }
+};
+
+exports.forEach = forEach;
+exports.replaceNoJsClassName = replaceNoJsClassName;
+exports.objectFitCover = objectFitCover;
 
 /***/ }),
 
@@ -79,45 +121,48 @@
 
 /***/ }),
 
-/***/ 127:
+/***/ 132:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _locations = __webpack_require__(128);
+// Import page module
+
+var _locations = __webpack_require__(133);
 
 var _locations2 = _interopRequireDefault(_locations);
+
+__webpack_require__(2);
 
 var _locationFinder = __webpack_require__(19);
 
 var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
-__webpack_require__(69);
-
-__webpack_require__(71);
-
 __webpack_require__(73);
-
-__webpack_require__(3);
 
 __webpack_require__(75);
 
+__webpack_require__(77);
+
+__webpack_require__(3);
+
+__webpack_require__(79);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var locationsPage = new _locations2.default();
+
 // Import page-specific components
-var locationsPage = new _locations2.default(); // Import page module
 
 var locationFinder = new _locationFinder2.default();
 
 locationsPage.render();
 locationFinder.render();
 
-console.info("Locations loaded");
-
 /***/ }),
 
-/***/ 128:
+/***/ 133:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -127,11 +172,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _locations = __webpack_require__(129);
+var _locations = __webpack_require__(134);
 
 var _locations2 = _interopRequireDefault(_locations);
 
-__webpack_require__(130);
+__webpack_require__(135);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -139,7 +184,7 @@ exports.default = _locations2.default;
 
 /***/ }),
 
-/***/ 129:
+/***/ 134:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -167,7 +212,7 @@ var LocationsPage = function () {
     value: function render() {
       var _this = this;
 
-      window.addEventListener("scroll", function (event) {
+      window.addEventListener("scroll", function () {
         setTimeout(function () {
           var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -194,7 +239,7 @@ exports.default = LocationsPage;
 
 /***/ }),
 
-/***/ 130:
+/***/ 135:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -224,9 +269,12 @@ exports.default = _locationFinder2.default;
 /***/ }),
 
 /***/ 2:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(1);
 
 /***/ }),
 
@@ -239,8 +287,11 @@ exports.default = _locationFinder2.default;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _utils = __webpack_require__(0);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -268,7 +319,7 @@ var LocationFinder = function () {
 
       var params = {};
 
-      this.locationFinderSelect.forEach(function (select, index) {
+      (0, _utils.forEach)(this.locationFinderSelect, function (index, select) {
         params[select.id] = select.value;
 
         [select][0].onchange = function (event) {
@@ -304,49 +355,9 @@ exports.default = LocationFinder;
 
 __webpack_require__(4);
 
-__webpack_require__(0);
-
-__webpack_require__(1);
-
-__webpack_require__(2);
-
 /***/ }),
 
 /***/ 4:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 69:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(70);
-
-/***/ }),
-
-/***/ 70:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 71:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(72);
-
-/***/ }),
-
-/***/ 72:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -381,6 +392,40 @@ __webpack_require__(76);
 /***/ }),
 
 /***/ 76:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 77:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(78);
+
+/***/ }),
+
+/***/ 78:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 79:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(80);
+
+/***/ }),
+
+/***/ 80:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

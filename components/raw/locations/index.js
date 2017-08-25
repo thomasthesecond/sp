@@ -1,4 +1,4 @@
-import LocationsPage from "./locations.js";
+import LocationsPage from "./locations";
 import "./locations.scss";
 
-export default LocationsPage
+export default LocationsPage;

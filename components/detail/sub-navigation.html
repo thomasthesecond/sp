@@ -318,7 +318,23 @@
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-meta">"use strict"</span>;
 
+<span class="hljs-keyword">import</span> { forEach } <span class="hljs-keyword">from</span> <span class="hljs-string">"../../../assets/js/utils"</span>;
+
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SubNavigation</span> </span>{
+  <span class="hljs-keyword">static</span> listenForAnchorClick(anchor) {
+    anchor.addEventListener(<span class="hljs-string">"click"</span>, (event) =&gt; {
+      <span class="hljs-keyword">const</span> hashId = anchor.hash.replace(<span class="hljs-string">"#"</span>, <span class="hljs-string">""</span>);
+
+      <span class="hljs-built_in">window</span>.scroll({
+        <span class="hljs-attr">top</span>: <span class="hljs-built_in">document</span>.getElementById(hashId).offsetTop,
+        <span class="hljs-attr">left</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">behavior</span>: <span class="hljs-string">"smooth"</span>,
+      });
+
+      event.preventDefault();
+    });
+  }
+
   <span class="hljs-keyword">constructor</span>(options) {
     <span class="hljs-keyword">this</span>.options = options;
 
@@ -333,7 +349,6 @@
     <span class="hljs-keyword">this</span>.setMarkerWidth = <span class="hljs-keyword">this</span>.setMarkerWidth.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.setMarkerOffset = <span class="hljs-keyword">this</span>.setMarkerOffset.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.setMarkerTransition = <span class="hljs-keyword">this</span>.setMarkerTransition.bind(<span class="hljs-keyword">this</span>);
-    <span class="hljs-keyword">this</span>.listenForAnchorClick = <span class="hljs-keyword">this</span>.listenForAnchorClick.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.scrollSpy = <span class="hljs-keyword">this</span>.scrollSpy.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.setUpScrollSpy = <span class="hljs-keyword">this</span>.setUpScrollSpy.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.setUpItems = <span class="hljs-keyword">this</span>.setUpItems.bind(<span class="hljs-keyword">this</span>);
@@ -362,7 +377,7 @@
     list.scroll({
       <span class="hljs-attr">top</span>: <span class="hljs-number">0</span>,
       <span class="hljs-attr">left</span>: (offset - <span class="hljs-number">24</span>),
-      <span class="hljs-attr">behavior</span>: <span class="hljs-string">"smooth"</span>
+      <span class="hljs-attr">behavior</span>: <span class="hljs-string">"smooth"</span>,
     });
   }
 
@@ -371,7 +386,7 @@
     <span class="hljs-keyword">const</span> activeWidth = item.offsetWidth;
     <span class="hljs-keyword">const</span> activeOffset = item.offsetLeft;
 
-    <span class="hljs-keyword">const</span> padding = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> mql.matches ? <span class="hljs-number">10</span> : <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">const</span> padding = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> (mql.matches ? <span class="hljs-number">10</span> : <span class="hljs-number">0</span>);
     mql.addListener(padding);
 
     <span class="hljs-keyword">this</span>.makeMarkerVisible();
@@ -402,21 +417,6 @@
     }, <span class="hljs-number">200</span>);
   }
 
-  listenForAnchorClick(anchor) {
-    anchor.addEventListener(<span class="hljs-string">"click"</span>, (event) =&gt; {
-      <span class="hljs-keyword">const</span> parent = anchor.parentNode;
-      <span class="hljs-keyword">const</span> hashId = anchor.hash.replace(<span class="hljs-string">"#"</span>, <span class="hljs-string">""</span>);
-
-      <span class="hljs-built_in">window</span>.scroll({
-        <span class="hljs-attr">top</span>: <span class="hljs-built_in">document</span>.getElementById(hashId).offsetTop,
-        <span class="hljs-attr">left</span>: <span class="hljs-number">0</span>,
-        <span class="hljs-attr">behavior</span>: <span class="hljs-string">"smooth"</span>
-      });
-
-      event.preventDefault();
-    });
-  };
-
   scrollSpy(settings) {
     <span class="hljs-keyword">let</span> currentId = <span class="hljs-literal">null</span>;
 
@@ -424,7 +424,10 @@
       <span class="hljs-keyword">const</span> top = <span class="hljs-built_in">document</span>.getElementById(item.id).offsetTop;
       <span class="hljs-keyword">const</span> bottom = top + <span class="hljs-built_in">document</span>.getElementById(item.id).offsetHeight;
 
-      <span class="hljs-keyword">if</span> ((<span class="hljs-built_in">window</span>.pageYOffset || <span class="hljs-built_in">document</span>.documentElement.scrollTop) &gt;= top &amp;&amp; (<span class="hljs-built_in">window</span>.pageYOffset || <span class="hljs-built_in">document</span>.documentElement.scrollTop) &lt; bottom) {
+      <span class="hljs-keyword">if</span> (
+        (<span class="hljs-built_in">window</span>.pageYOffset || <span class="hljs-built_in">document</span>.documentElement.scrollTop) &gt;= top &amp;&amp;
+        (<span class="hljs-built_in">window</span>.pageYOffset || <span class="hljs-built_in">document</span>.documentElement.scrollTop) &lt; bottom
+      ) {
         currentId = item.id;
       }
     });
@@ -450,37 +453,37 @@
   }
 
   setUpScrollSpy() {
-    <span class="hljs-keyword">this</span>.sections.forEach(<span class="hljs-function">(<span class="hljs-params">section</span>) =&gt;</span> {
+    forEach(<span class="hljs-keyword">this</span>.sections, (index, section) =&gt; {
       <span class="hljs-keyword">this</span>.scrollSpySettings.push({
         <span class="hljs-attr">id</span>: section.id,
         <span class="hljs-attr">top</span>: section.offsetTop,
         <span class="hljs-attr">bottom</span>: (section.offsetTop + section.offsetHeight),
-        <span class="hljs-attr">height</span>: section.offsetHeight
+        <span class="hljs-attr">height</span>: section.offsetHeight,
       });
     });
 
     <span class="hljs-keyword">this</span>.scrollSpy(<span class="hljs-keyword">this</span>.scrollSpySettings);
 
-    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"scroll"</span>, (event) =&gt; {
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"scroll"</span>, () =&gt; {
       setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
         <span class="hljs-keyword">this</span>.scrollSpy(<span class="hljs-keyword">this</span>.scrollSpySettings);
 
         <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.currentItem &amp;&amp; !<span class="hljs-keyword">this</span>.motionQuery.matches) {
           <span class="hljs-keyword">this</span>.setMarkerTransition();
-        };
+        }
       }, <span class="hljs-number">100</span>);
     });
   }
 
   setUpItems() {
-    <span class="hljs-keyword">this</span>.subNavigationItems.forEach(<span class="hljs-function">(<span class="hljs-params">item, index</span>) =&gt;</span> {
+    forEach(<span class="hljs-keyword">this</span>.subNavigationItems, (index, item) =&gt; {
       <span class="hljs-keyword">const</span> anchor = item.querySelector(<span class="hljs-string">"a"</span>);
 
       <span class="hljs-keyword">if</span> (item.classList.contains(<span class="hljs-keyword">this</span>.activeClass)) {
         <span class="hljs-keyword">this</span>.updateMarker(item);
       }
 
-      <span class="hljs-keyword">this</span>.listenForAnchorClick(anchor);
+      SubNavigation.listenForAnchorClick(anchor);
     });
   }
 
@@ -635,15 +638,11 @@
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8px</span>;
   <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">8px</span>;
-  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">22px</span>;
-  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">26px</span>;
   <span class="hljs-attribute">position</span>: relative;
 
   @<span class="hljs-keyword">media</span> (min-width: 600px) {
     <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">14px</span>;
     <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">14px</span>;
-    <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">34px</span>;
-    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">39px</span>;
   }
 }
 
@@ -659,9 +658,17 @@
 
 <span class="hljs-selector-class">.SubNavigation-link</span> {
   <span class="hljs-attribute">color</span>: currentColor;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">22px</span>;
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">26px</span>;
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">text-decoration</span>: none;
   <span class="hljs-attribute">transition</span>: color <span class="hljs-number">200ms</span>;
+
+  @<span class="hljs-keyword">media</span> (min-width: 600px) {
+    <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">34px</span>;
+    <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">39px</span>;
+  }
 
   <span class="hljs-comment">// &amp;::after {</span>
   <span class="hljs-comment">//   background-color: currentColor;</span>
@@ -719,7 +726,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.5 KB</span>
+                    <span class="Meta-value">3.6 KB</span>
                 </li>
             </ul>
         </div>
@@ -921,6 +928,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="typography.html" data-pjax>
                 <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="z-index.html" data-pjax>
+                <span>z-index</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="spacing.html" data-pjax>
+                <span>Spacing</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3959,20 +4014,6 @@
             <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3981,7 +4022,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/helper-classes.html" data-pjax>
-                <span>Helper Classes</span>
+                <span>Helper classes</span>
                 
             </a>
         </li>

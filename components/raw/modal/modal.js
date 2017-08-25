@@ -99,10 +99,10 @@ export default class Modal {
 
   onEscapePress() {
     document.onkeyup = (event) => {
-      if(event.keyCode === 27) {
+      if (event.keyCode === 27) {
         this.closeModal();
       }
-    }
+    };
   }
 
   render() {
@@ -115,7 +115,7 @@ export default class Modal {
     // this.modal.style.display = "none";
     // this.overlay.style.display = "none";
 
-    this.trigger.addEventListener("click", (event) => {
+    this.trigger.addEventListener("click", () => {
       this.openModal();
 
 

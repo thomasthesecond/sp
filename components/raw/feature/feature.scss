@@ -11,6 +11,7 @@
   height: #{(446 / 800) * 100vw};
   max-height: 508px;
   min-height: 446px;
+  overflow: hidden;
   position: relative;
   width: 100%;
 }

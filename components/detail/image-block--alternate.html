@@ -192,8 +192,8 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-a0f77c36b7b80732aab83d920a392f6b-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock ImageBlock--alternate</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> block.class}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{ block.class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
-  </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> block.id}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ block.id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">article</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ImageBlock ImageBlock--alternate</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> block.className}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{ block.className }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+  </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">unless</span></span> noId}}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> block.id}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ block.id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">unless</span></span>}}</span><span class="xml"><span class="hljs-tag">&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ block.link.url }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
     </span><span class="hljs-template-variable">{{&gt; <a href="image--picture.html">@image--picture</a> image=block.image }}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -220,8 +220,10 @@
             
             <pre>{
   <span class="hljs-attr">"block"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"className"</span>: <span class="hljs-literal">null</span>,
     <span class="hljs-attr">"image"</span>: {
-      <span class="hljs-attr">"class"</span>: <span class="hljs-string">"ImageBlock-photo"</span>,
+      <span class="hljs-attr">"className"</span>: <span class="hljs-string">"ImageBlock-photo"</span>,
       <span class="hljs-attr">"title"</span>: <span class="hljs-literal">null</span>,
       <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/assets/images/home-careers-sm.jpg"</span>,
       <span class="hljs-attr">"srcset"</span>: [
@@ -388,7 +390,6 @@
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-keyword">import</span> <span class="hljs-string">"./image-block.scss"</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">"../more-link/more-link.scss"</span>;
 </pre>
                             </code>
                             
@@ -405,7 +406,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">67 Bytes</span>
+                    <span class="Meta-value">29 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -615,6 +616,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="typography.html" data-pjax>
                 <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="z-index.html" data-pjax>
+                <span>z-index</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="spacing.html" data-pjax>
+                <span>Spacing</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3653,20 +3702,6 @@
             <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3675,7 +3710,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/helper-classes.html" data-pjax>
-                <span>Helper Classes</span>
+                <span>Helper classes</span>
                 
             </a>
         </li>

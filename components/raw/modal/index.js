@@ -1,4 +1,4 @@
-import Modal from "./modal.js";
+import Modal from "./modal";
 import "./modal.scss";
 import "../overlay/overlay.scss";
 

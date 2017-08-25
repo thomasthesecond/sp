@@ -1,82 +1,101 @@
 "use strict";
 
+import ScrollMagic from "scrollmagic";
+import { forEach } from "../../../assets/js/utils";
+
 export default class HomePage {
-  constructor(options) {
-    this.options = options;
-
-    this.document = document.documentElement;
-    this.sections = document.querySelectorAll(".js-animate-section");
-
-    this.introduction = document.querySelector(".Introduction");
-    this.partnerships = document.getElementById("partnerships-section");
-    this.investors = document.getElementById("investors-section");
-    this.careers = document.getElementById("careers-section");
+  constructor() {
+    this.controller = null;
+    this.className = "animate";
 
     this.mql = window.matchMedia("(min-width: 1024px)");
-    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
+    this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
 
     this.checkScreenSize = this.checkScreenSize.bind(this);
-    this.reset = this.reset.bind(this);
+    this.create = this.create.bind(this);
     this.animate = this.animate.bind(this);
-  }
-
-  reset() {
-    this.introduction.classList.remove("can-animate");
-    this.partnerships.classList.remove("can-animate");
-    this.investors.classList.remove("can-animate");
-    this.careers.classList.remove("can-animate");
-
-    this.introduction.classList.remove("will-animate");
-    this.partnerships.classList.remove("will-animate");
-    this.investors.classList.remove("will-animate");
-    this.careers.classList.remove("will-animate");
+    this.destroy = this.destroy.bind(this);
   }
 
   checkScreenSize(mql) {
     if (mql.matches) {
       this.animate();
-      window.addEventListener("scroll", this.animate, false);
     } else {
-      this.reset();
-      window.removeEventListener("scroll", this.animate, false);
+      this.destroy();
+    }
+  }
+
+  create() {
+    this.controller = new ScrollMagic.Controller({
+      globalSceneOptions: {
+        reverse: false,
+        triggerHook: "onEnter",
+      },
+    });
+  }
+
+  destroy() {
+    if (this.controller) {
+      const nodes = document.querySelectorAll(`.${this.className}`);
+
+      forEach(nodes, (index, node) => {
+        node.classList.remove(this.className);
+      });
+
+      this.controller.destroy(true);
     }
   }
 
   animate() {
-    this.introduction.classList.add("can-animate");
-    this.partnerships.classList.add("can-animate");
-    this.investors.classList.add("can-animate");
-    this.careers.classList.add("can-animate");
-
-    if ((window.pageYOffset || document.documentElement.scrollTop) >= (this.introduction.offsetTop - 400)) {
-      if (!this.introduction.classList.contains("will-animate")) {
-        this.introduction.classList.add("will-animate");
-      }
+    if (!this.controller) {
+      this.create();
     }
 
-    if ((window.pageYOffset || document.documentElement.scrollTop) >= (this.partnerships.offsetTop - 400)) {
-      if (!this.partnerships.classList.contains("will-animate")) {
-        this.partnerships.classList.add("will-animate");
-      }
-    }
+    // new ScrollMagic.Scene({ triggerElement: ".js-banner" })
+    //   .setClassToggle(".Banner", this.className)
+    //   .addTo(this.controller);
 
-    if ((window.pageYOffset || document.documentElement.scrollTop) >= (this.investors.offsetTop - 400)) {
-      if (!this.investors.classList.contains("will-animate")) {
-        this.investors.classList.add("will-animate");
-      }
-    }
+    new ScrollMagic.Scene({ triggerElement: ".js-masthead" })
+      .setClassToggle(".Masthead", this.className)
+      .addTo(this.controller);
 
-    if ((window.pageYOffset || document.documentElement.scrollTop) >= (this.careers.offsetTop - 400)) {
-      if (!this.careers.classList.contains("will-animate")) {
-        this.careers.classList.add("will-animate");
-      }
-    }
+    new ScrollMagic.Scene({ triggerElement: ".js-masthead" })
+      .setClassToggle(".CoverVideo", this.className)
+      .addTo(this.controller);
+
+    new ScrollMagic.Scene({ triggerElement: ".js-masthead" })
+      .setClassToggle(".Masthead .Tagline", this.className)
+      .addTo(this.controller);
+
+    new ScrollMagic.Scene({ triggerElement: ".Masthead" })
+      .setClassToggle(".Masthead .MoreLink", this.className)
+      .addTo(this.controller);
+
+    new ScrollMagic.Scene({ triggerElement: ".js-location-finder" })
+      .setClassToggle(".LocationFinder", this.className)
+      .addTo(this.controller);
+
+    new ScrollMagic.Scene({ triggerElement: ".js-introduction", offset: 500 })
+      .setClassToggle(".Introduction", this.className)
+      .addTo(this.controller);
+
+    new ScrollMagic.Scene({ triggerElement: ".js-partnerships-section", offset: 500 })
+      .setClassToggle(".ImageBlock#partnerships-section", this.className)
+      .addTo(this.controller);
+
+    new ScrollMagic.Scene({ triggerElement: ".js-investors-section", offset: 500 })
+      .setClassToggle(".ImageBlock#investors-section", this.className)
+      .addTo(this.controller);
+
+    new ScrollMagic.Scene({ triggerElement: ".js-careers-section", offset: 500 })
+      .setClassToggle(".ImageBlock#careers-section", this.className)
+      .addTo(this.controller);
   }
 
   render() {
-    this.reset();
-
-    if (!this.motionQuery.matches) {
+    if (this.reduceMotion.matches) {
+      document.documentElement.classList.add("disable-animations");
+    } else {
       window.scrollTo(0, 0);
       this.checkScreenSize(this.mql);
       this.mql.addListener(this.checkScreenSize);

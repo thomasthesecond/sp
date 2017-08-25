@@ -70,11 +70,7 @@
     
     
     <h2 id="what-is-schema-org-structured-data-">What is Schema.org Structured Data?</h2>
-<blockquote>
 <p>Schema.org is the result of collaboration between Google, Bing, Yandex, and Yahoo! to help you provide the information their search engines need to understand your content and provide the best search results possible at this time. Adding Schema markup to your HTML improves the way your page displays in SERPs by enhancing the rich snippets that are displayed beneath the page title.</p>
-</blockquote>
-<p>The following markup should be placed in the document’s <code>head</code> on every page (ideally near the end of the <code>head</code>). It has been placed on every template provided, but it will need to be placed on any additional pages that are created.</p>
-<p>Please note that the URL for the logo may need to be updated depending on where it is uploaded in the back-end. The source file can be found at <code>src/assets/images/logo.png</code>.</p>
 <code class="lang-html"><pre><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/ld+json"</span>&gt;</span><span class="actionscript">
   {
     <span class="hljs-string">"@context"</span>: <span class="hljs-string">"http://schema.org"</span>,
@@ -88,18 +84,53 @@
       <span class="hljs-string">"addressCountry"</span>: <span class="hljs-string">"United States"</span>
     },
     <span class="hljs-string">"name"</span>: <span class="hljs-string">"Surgery Partners"</span>,
+    <span class="hljs-string">"alternateName"</span>: [
+      <span class="hljs-string">"B13"</span>,
+      <span class="hljs-string">"Black 13"</span>,
+      <span class="hljs-string">"Black 13 Tattoo Parlor"</span>
+    ],
+    <span class="hljs-string">"legalName"</span>: <span class="hljs-string">"Black 13 Tattoo, LLC"</span>,
+    <span class="hljs-string">"containedInPlace"</span>: <span class="hljs-string">"Cummins Station"</span>,
     <span class="hljs-string">"telephone"</span>: <span class="hljs-string">"615-234-5900"</span>,
     <span class="hljs-string">"faxNumber"</span>: <span class="hljs-string">"615-234-5998"</span>,
     <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://www.surgerypartners.com/"</span>,
-    <span class="hljs-string">"logo"</span>: <span class="hljs-string">"https://www.surgerypartners.com/assets/images/logo.png"</span>,
-    <span class="hljs-string">"description"</span>: <span class="hljs-string">"Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 180 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients."</span>
+    <span class="hljs-string">"logo"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-string">"email"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-string">"description"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-string">"sameAs"</span>: [
+      <span class="hljs-string">"https://www.facebook.com/black13tattoo/"</span>,
+      <span class="hljs-string">"https://www.yelp.com/biz/black-13-tattoo-parlor-nashville"</span>,
+      <span class="hljs-string">"https://twitter.com/black13tattoo"</span>,
+      <span class="hljs-string">"https://www.instagram.com/black13tattoo/"</span>,
+      <span class="hljs-string">"https://www.youtube.com/user/Black13Tattoo/"</span>
+    ],
+    <span class="hljs-string">"image"</span>: [
+      {
+        <span class="hljs-string">"@type"</span>: <span class="hljs-string">"ImageObject"</span>,
+        <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://black13tattoo.com/images/uploads/shop/waiting.jpg"</span>,
+        <span class="hljs-string">"description"</span>: <span class="hljs-string">"tattoo parlor waiting room"</span>
+      },
+      {
+        <span class="hljs-string">"@type"</span>: <span class="hljs-string">"ImageObject"</span>,
+        <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://black13tattoo.com/images/uploads/shop/window.jpg"</span>,
+        <span class="hljs-string">"description"</span>: <span class="hljs-string">"Black 13 entrance"</span>
+      },
+      {
+        <span class="hljs-string">"@type"</span>: <span class="hljs-string">"ImageObject"</span>,
+        <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://black13tattoo.com/images/uploads/shop/waiting-4.jpg"</span>,
+        <span class="hljs-string">"description"</span>: <span class="hljs-string">"Black 13 waiting room"</span>
+      },
+      {
+        <span class="hljs-string">"@type"</span>: <span class="hljs-string">"ImageObject"</span>,
+        <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://black13tattoo.com/images/uploads/shop/workstation-3.jpg"</span>,
+        <span class="hljs-string">"description"</span>: <span class="hljs-string">"tattoo workstations"</span>
+      }
+    ]
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></code><h2 id="additional-resources">Additional resources</h2>
-<ul>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></code><ul>
 <li><a href="http://schema.org/">http://schema.org/</a></li>
 <li><a href="https://schema.org/docs/gs.html">https://schema.org/docs/gs.html</a></li>
 <li><a href="https://developers.google.com/search/docs/guides/intro-structured-data">https://developers.google.com/search/docs/guides/intro-structured-data</a></li>
-<li><a href="https://search.google.com/structured-data/testing-tool">https://search.google.com/structured-data/testing-tool</a></li>
 <li><a href="https://moz.com/learn/seo/schema-structured-data">https://moz.com/learn/seo/schema-structured-data</a></li>
 </ul>
 
@@ -219,6 +250,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../components/detail/typography.html" data-pjax>
                 <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/z-index.html" data-pjax>
+                <span>z-index</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/spacing.html" data-pjax>
+                <span>Spacing</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3257,20 +3336,6 @@
             <a class="Tree-entityLink" href="browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3279,7 +3344,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="helper-classes.html" data-pjax>
-                <span>Helper Classes</span>
+                <span>Helper classes</span>
                 
             </a>
         </li>

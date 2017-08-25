@@ -159,21 +159,22 @@
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Masthead Masthead--video"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Tagline heading-super"</span>&gt;</span>
             We operate <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>differently<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"MoreLink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>&gt;</span>
-        Learn more
-    
-    
-      <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span>
-        &gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          Learn more
+      
+      
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span>
+          &gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverVideo js-cover-video"</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"../../assets/images/home-video.mp4"</span> <span class="hljs-attr">data-type</span>=<span class="hljs-string">"video/mp4"</span> <span class="hljs-attr">data-autoplay</span>=<span class="hljs-string">""</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverVideo js-cover-video object-fit-cover"</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"../../assets/images/home-video.mp4"</span> <span class="hljs-attr">data-type</span>=<span class="hljs-string">"video/mp4"</span> <span class="hljs-attr">data-autoplay</span>=<span class="hljs-string">""</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/images/home-video-poster.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></pre>
@@ -184,10 +185,17 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-22ffdbbcdb7704e44f799a5dbd063008-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Masthead Masthead--video"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Masthead Masthead--video</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> className}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{className}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
-    </span><span class="hljs-template-variable">{{&gt; <a href="tagline.html">@tagline</a> tagline=masthead.tagline }}</span><span class="xml">
-    </span><span class="hljs-template-variable">{{&gt; <a href="more-link.html">@more-link</a> link=masthead.link }}</span><span class="xml">
+    </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> animate}}</span><span class="xml">
+      </span><span class="hljs-template-variable">{{&gt; <a href="tagline--animate.html">@tagline--animate</a> tagline=masthead.tagline }}</span><span class="xml">
+      </span><span class="hljs-template-variable">{{&gt; <a href="more-link--animate.html">@more-link--animate</a> link=masthead.link }}</span><span class="xml">
+    </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml">
+
+    </span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">unless</span></span> animate}}</span><span class="xml">
+      </span><span class="hljs-template-variable">{{&gt; <a href="tagline.html">@tagline</a> tagline=masthead.tagline }}</span><span class="xml">
+      </span><span class="hljs-template-variable">{{&gt; <a href="more-link.html">@more-link</a> link=masthead.link }}</span><span class="xml">
+    </span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">unless</span></span>}}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   </span><span class="hljs-template-variable">{{&gt; <a href="cover-video.html">@cover-video</a> coverVideo=masthead.coverVideo }}</span><span class="xml">
@@ -254,9 +262,6 @@
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-keyword">import</span> <span class="hljs-string">"./masthead.scss"</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">"../cover-photo/cover-photo.scss"</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">"../cover-video/cover-video.scss"</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">"../tagline/tagline.scss"</span>;
 </pre>
                             </code>
                             
@@ -273,7 +278,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">144 Bytes</span>
+                    <span class="Meta-value">26 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -306,7 +311,7 @@
 }
 
 <span class="hljs-selector-class">.Masthead--video</span> {
-  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">80vh</span>;
+  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">72vh</span>;
   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">420px</span>;
 }
 
@@ -402,8 +407,12 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(3)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(5)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
+            
+                <a href="tagline--animate.html">@<span>tagline--animate</span></a>, 
+            
+                <a href="more-link--animate.html">@<span>more-link--animate</span></a>, 
             
                 <a href="tagline.html">@<span>tagline</span></a>, 
             
@@ -552,6 +561,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="typography.html" data-pjax>
                 <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="z-index.html" data-pjax>
+                <span>z-index</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="spacing.html" data-pjax>
+                <span>Spacing</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3590,20 +3647,6 @@
             <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3612,7 +3655,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/helper-classes.html" data-pjax>
-                <span>Helper Classes</span>
+                <span>Helper classes</span>
                 
             </a>
         </li>

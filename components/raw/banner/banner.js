@@ -25,8 +25,7 @@ export default class Banner {
   }
 
   checkScreenSize(mql) {
-    if (mql.matches) {
-    } else {
+    if (!mql.matches) {
       this.hideNavigation();
     }
   }
@@ -70,10 +69,10 @@ export default class Banner {
 
   onEscapePress() {
     document.onkeyup = (event) => {
-      if(event.keyCode === 27) {
+      if (event.keyCode === 27) {
         this.hideNavigation();
       }
-    }
+    };
   }
 
   render() {
@@ -82,7 +81,7 @@ export default class Banner {
         this.toggleNavigation();
 
         document.addEventListener("click", this.clickOutside, false);
-      }
+      },
     });
 
     hamburger.render();

@@ -164,7 +164,7 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverPhoto"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverPhoto object-fit-cover"</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/about-masthead-sm@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>&gt;</span>
@@ -183,7 +183,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-0e7d418908b1fcd862d0cb4bc3162c9b-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Masthead"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Masthead</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> className}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{className}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Masthead-title heading-super"</span>&gt;</span>
       </span><span class="hljs-template-variable">{{ masthead.title }}</span><span class="xml">
@@ -260,9 +260,6 @@
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-keyword">import</span> <span class="hljs-string">"./masthead.scss"</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">"../cover-photo/cover-photo.scss"</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">"../cover-video/cover-video.scss"</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">"../tagline/tagline.scss"</span>;
 </pre>
                             </code>
                             
@@ -279,7 +276,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">144 Bytes</span>
+                    <span class="Meta-value">26 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -312,7 +309,7 @@
 }
 
 <span class="hljs-selector-class">.Masthead--video</span> {
-  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">80vh</span>;
+  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">72vh</span>;
   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">420px</span>;
 }
 
@@ -560,6 +557,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="typography.html" data-pjax>
                 <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="z-index.html" data-pjax>
+                <span>z-index</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="spacing.html" data-pjax>
+                <span>Spacing</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3598,20 +3643,6 @@
             <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3620,7 +3651,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/helper-classes.html" data-pjax>
-                <span>Helper Classes</span>
+                <span>Helper classes</span>
                 
             </a>
         </li>

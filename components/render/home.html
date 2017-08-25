@@ -61,23 +61,27 @@
 
 
 <main id="main" role="main" tabindex="0">
-  <header class="Masthead Masthead--video">
+  <header class="Masthead Masthead--video js-masthead">
     <div class="container">
-      <div class="Tagline heading-super">
-        We operate <b>differently</b>
-      </div>
-      <a class="MoreLink" href="/">
-          Learn more
-      
-      
-        <svg class="icon"
-          >
-          <use xlink:href="#icon-arrow"></use>
-        </svg>
-      </a>
+        <div class="Tagline heading-super">
+          <span>We operate</span> <span><b>differently</b></span>
+        </div>
+        <a class="MoreLink" href="/">
+          <span class="MoreLink-text">
+              Learn more
+        
+        
+            <svg class="icon js-masthead"
+              >
+              <use xlink:href="#icon-arrow"></use>
+            </svg>
+          </span>
+          <span class="MoreLink-bar"></span>
+        </a>
+  
     </div>
   
-    <div class="CoverVideo js-cover-video"
+    <div class="CoverVideo js-cover-video object-fit-cover"
       data-src="../../assets/images/home-video.mp4"
       data-type="video/mp4"
       data-autoplay="true">
@@ -87,8 +91,8 @@
     </div>
   </header>
 
-  <div class="LocationFinder js-location-finder" data-location-url="/locations">
-  <div class="container">
+  <div class="LocationFinder js-location-finder">
+  <div class="LocationFinder-container container">
     <fieldset>
       <legend>
         <span>Find a location</span>
@@ -348,11 +352,11 @@
 
 
   <div class="container">
-    <div class="Introduction">
+    <div class="Introduction js-introduction">
       Creating exceptional value for our patients, physicians and payors through our unique healthcare model
     </div>
 
-        <article class="ImageBlock"
+        <article class="ImageBlock js-partnerships-section"
           id="partnerships-section">
           <a href="/components/preview/partnerships">
             <picture>
@@ -393,7 +397,7 @@
         </article>
 
 
-        <article class="ImageBlock ImageBlock--alternate"
+        <article class="ImageBlock ImageBlock--alternate js-investors-section"
           id="investors-section">
           <a href="/components/preview/investors">
             <picture>
@@ -432,7 +436,7 @@
               </a>
           </div>
         </article>
-        <article class="ImageBlock"
+        <article class="ImageBlock js-careers-section"
           id="careers-section">
           <a href="/components/preview/careers">
             <picture>
