@@ -1,80 +1,161 @@
 $mq: #{(1024 / 16) * 1em};
 
-@keyframes image-scale {
+@keyframes expand {
   0% {
-    transform: scale(1.05);
+    width: 0;
   }
 
   100% {
-    transform: scale(1);
+    width: 100%;
   }
 }
 
-.js {
-  .Introduction.can-animate {
-    @media (min-width: $mq) {
+@media (min-width: $mq) {
+  .js:not(.disable-animations) {
+    // .Masthead {
+    //   box-sizing: content-box;
+    //   padding-bottom: 265px;
+    //   transition: padding-bottom 1s 1s;
+    //
+    //   &.animate {
+    //     padding-bottom: 0;
+    //   }
+    // }
+
+    .CoverVideo {
       opacity: 0;
-      transform: translateY(100px);
-      transition: opacity 400ms, transform 400ms;
-    }
-  }
+      transition: opacity 1s 1s;
 
-  .Introduction.will-animate {
-    @media (min-width: $mq) {
-      opacity: 1;
-      transform: translateY(0);
+      &.animate {
+        opacity: 1;
+      }
     }
-  }
 
-  .ImageBlock.can-animate > a::after {
-    @media (min-width: $mq) {
-      background-color: $color-background-default;
-      content: "";
-      display: block;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      transform: translateX(0);
-      transition: transform 2000ms;
-      width: 100%;
+    .Masthead .Tagline {
+      transform: translate3d(0, 140px, 0);
+      transform-style: preserve-3d;
+      transition: transform 1s .7s;
+
+      &.animate {
+        transform: translate3d(0, 0, 0);
+      }
+
+      span {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        transition: max-height .6s 1s, transform .6s 1s;
+      }
+
+      &.animate span {
+        max-height: 85px;
+        transform: translate3d(0, 0, 0);
+      }
+
+      span:first-child {
+        transform: translate3d(0, 48px, 0);
+      }
+
+      span:last-child {
+        transform: translate3d(0, 40px, 0);
+      }
     }
-  }
 
-  .ImageBlock.will-animate > a::after {
-    @media (min-width: $mq) {
-      transform: translateX(100%);
+    .Masthead .MoreLink {
+      overflow: hidden;
+      padding-left: 16px;
+      padding-right: 16px;
+
+      .MoreLink-text {
+        opacity: 0;
+        transition: opacity .4s 1.4s;
+      }
+
+      &.animate .MoreLink-text {
+        opacity: 1;
+      }
+
+      .MoreLink-bar {
+        background-color: $color-background-default;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate3d(0, 0, 0);
+        transform-style: preserve-3d;
+        transition: transform .5s 1.6s;
+        width: 100%;
+      }
+
+      &.animate .MoreLink-bar {
+        animation: expand .3s 1.3s 1 backwards;
+        transform: translate3d(100%, 0, 0);
+      }
     }
-  }
 
-  .ImageBlock.can-animate .ImageBlock-photo {
-    @media (min-width: $mq) {
-      // transform: scale(1.05);
-      // transition: transform 3000ms 500ms;
-    }
-  }
-
-  .ImageBlock.can-animate .ImageBlock-text {
-    @media (min-width: $mq) {
+    .LocationFinder {
       opacity: 0;
-      transition: opacity 1000ms 800ms;
-    }
-  }
+      transform: translate3d(0, 80px, 0);
+      transform-style: preserve-3d;
+      transition: opacity .5s 1.2s, transform 1s 1.3s;
 
-  .ImageBlock.will-animate .ImageBlock-photo {
-    @media (min-width: $mq) {
-      // transform: scale(1);
-      animation-name: image-scale;
-      animation-duration: 2500ms;
-      animation-delay: 500ms;
-      animation-fill-mode: backwards;
-      animation-iteration-count: 1;
+      &.animate {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
     }
-  }
 
-  .ImageBlock.will-animate .ImageBlock-text {
-    @media (min-width: $mq) {
-      opacity: 1;
+    .Introduction {
+      opacity: 0;
+      transform: translate3d(0, 40px, 0);
+      transform-style: preserve-3d;
+      transition: opacity .25s, transform .25s;
+
+      &.animate {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .ImageBlock {
+      > a::after {
+        background-color: $color-background-default;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transform: translate3d(0, 0, 0);
+        transform-style: preserve-3d;
+        transition: transform .5s ease-out;
+        width: 100%;
+      }
+
+      &.animate > a::after {
+        transform: translate3d(100%, 0, 0);
+      }
+
+      .ImageBlock-photo {
+        transform: scale(1.1);
+        transition: transform 2s ease-out;
+      }
+
+      &.animate .ImageBlock-photo {
+        transform: scale(1);
+      }
+
+      .ImageBlock-text {
+        opacity: 0;
+        transition: opacity .5s ease-out;
+      }
+
+      &.animate .ImageBlock-text {
+        opacity: 1;
+      }
     }
   }
 }

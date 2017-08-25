@@ -1,13 +1,13 @@
 {{ render "@banner" }}
 
 <main id="main" role="main" tabindex="0">
-  {{> @masthead--video }}
+  {{> @masthead--video animate=true }}
 
   {{ render "@location-finder" }}
   {{ render "@location-finder-button" }}
 
   <div class="container">
-    {{> @introduction }}
+    {{> @introduction className="js-introduction" }}
 
     {{#each sections}}
       {{#unless this.block.alternate}}
