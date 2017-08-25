@@ -20,7 +20,6 @@ import "../components/03-components/button";
 import Contentinfo from "../components/03-components/contentinfo";
 import "../components/03-components/hr";
 import "../components/03-components/input";
-import "../components/03-components/more-link";
 import "../components/03-components/select";
 
 // Import global modules
