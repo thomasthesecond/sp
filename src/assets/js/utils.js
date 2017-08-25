@@ -4,7 +4,7 @@
  * forEach for NodeList
  */
 const forEach = (array, callback, scope) => {
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     callback.call(scope, i, array[i]);
   }
 };
