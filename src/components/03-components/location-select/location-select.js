@@ -10,6 +10,6 @@ export default class LocationSelect {
       if (event.target.value) {
         window.location = event.target.value;
       }
-    }
+    };
   }
 }

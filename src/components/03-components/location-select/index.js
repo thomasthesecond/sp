@@ -1,3 +1,3 @@
-import LocationSelect from "./location-select.js";
+import LocationSelect from "./location-select";
 
 export default LocationSelect;
