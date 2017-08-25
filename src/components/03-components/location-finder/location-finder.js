@@ -1,5 +1,7 @@
 "use strict";
 
+import { forEach } from "../../../assets/js/utils";
+
 export default class LocationFinder {
   constructor() {
     this.locationFinder = document.querySelector(".js-location-finder");
@@ -10,20 +12,21 @@ export default class LocationFinder {
   }
 
   buildFilterUrl(params) {
-    this.locationFinderButton.href = `/locations/${Object.values(params).join("/")}`;
+    const url = this.locationFinder.dataset.locationUrl;
+    this.locationFinderButton.href = `${url}/${Object.values(params).join("/")}`;
   }
 
   render() {
     const params = {};
 
-    this.locationFinderSelect.forEach((select, index) => {
+    forEach(this.locationFinderSelect, (index, select) => {
       params[select.id] = select.value;
 
       [select][0].onchange = (event) => {
         params[select.id] = event.target.value;
 
         this.buildFilterUrl(params);
-      }
+      };
     });
 
     this.buildFilterUrl(params);
