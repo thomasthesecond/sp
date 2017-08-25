@@ -7,7 +7,7 @@
  */
 
 .NextPage {
-  @media(min-width: 600px) {
+  @media(min-width: 480px) {
     text-align: center;
   }
 }
@@ -17,12 +17,6 @@
   display: inline-block;
   text-decoration: none;
   transition: color 200ms;
-
-  // background: aliceblue;
-
-  // @media (min-width: 480px) {
-  //   display: inline-block;
-  // }
 
   &:hover,
   &:active,
@@ -39,7 +33,7 @@
   @include fluid-type(
     $min-font-size: 12,
     $max-font-size: 14,
-    $min-width: 600
+    $min-width: 480
   );
 
   color: #b5955d;
@@ -51,7 +45,7 @@
   @include fluid-type(
     $min-font-size: $font-size-heading-1-min,
     $max-font-size: $font-size-heading-1,
-    $min-width: 600
+    $min-width: 480
   );
 
   color: currentColor;
@@ -60,29 +54,15 @@
   line-height: $line-height-heading-1;
   margin-top: 8px;
   position: relative;
-
-  // @media (min-width: 320px) {
-  //   max-width: 196px;
-  // }
-  // @media (max-width: 479px) {
-  //   max-width: 196px;
-  // }
-  // @media (max-width: 479px) {
-  //   padding-right: 88px;
-  // }
 }
 
 .NextPage-icon {
   color: #bfd0d8;
   font-size: #{(66 / $font-size-heading-1) * 1em};
   height: #{(22 / 66) * 1em};
-  // position: absolute;
-  // right: 0;
-  // top: #{(22 / 66) * 1em};
-  // transform: translateX(#{((66 + $font-size-heading-1) / 66) * 1em});
+  position: absolute;
+  right: 0;
+  top: #{(22 / 66) * 1em};
+  transform: translateX(#{((66 + $font-size-heading-1) / 66) * 1em});
   transition: transform 200ms;
-
-  // @media (max-width: 479px) {
-  //   right: auto;
-  // }
 }

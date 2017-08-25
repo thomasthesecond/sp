@@ -157,8 +157,8 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-26c97aa2e91cb9079be14bf3a74b29b7-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder js-location-finder"</span> <span class="hljs-attr">data-location-url</span>=<span class="hljs-string">"/locations"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder js-location-finder"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder-container container"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Find a location<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -404,8 +404,8 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-26c97aa2e91cb9079be14bf3a74b29b7-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder js-location-finder"</span> <span class="hljs-attr">data-location-url</span>=<span class="hljs-string">"/locations"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder js-location-finder"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder-container container"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-variable">{{ locationFinder.heading }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -924,44 +924,37 @@
   }
 
   &amp;<span class="hljs-selector-class">.is-sticky</span> {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
-    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-location-finder-sticky</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>;
 
     @<span class="hljs-keyword">media</span> (max-width: 669px) {
-      <span class="hljs-comment">// box-shadow: $shadow-location-finder-sticky;</span>
-      <span class="hljs-comment">// padding-top: #{$spacing-gutter}px;</span>
-      <span class="hljs-attribute">height</span>: <span class="hljs-number">70px</span>;
-      <span class="hljs-attribute">overflow</span>: hidden;
+      <span class="hljs-comment">// box-shadow: 0 18px 42px rgba(#042435, .39);</span>
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-number">4px</span> rgba(<span class="hljs-number">#000</span>, .<span class="hljs-number">19</span>);
+      <span class="hljs-attribute">padding-top</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
     }
 
     @<span class="hljs-keyword">media</span> (min-width: 670px) {
-      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-location-finder</span>;
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-number">4px</span> rgba(<span class="hljs-number">#000</span>, .<span class="hljs-number">5</span>),
+        <span class="hljs-number">0</span> <span class="hljs-number">36px</span> <span class="hljs-number">84px</span> rgba(<span class="hljs-number">#042435</span>, .<span class="hljs-number">39</span>);
     }
   }
 }
 
-<span class="hljs-selector-class">.LocationFinder</span> <span class="hljs-selector-class">.container</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
+<span class="hljs-selector-class">.LocationFinder-container</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>;
   <span class="hljs-attribute">position</span>: relative;
 
   @<span class="hljs-keyword">media</span> (min-width: 670px) {
     <span class="hljs-attribute">display</span>: flex;
     <span class="hljs-attribute">height</span>: #{(<span class="hljs-number">90</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
-    <span class="hljs-attribute">max-height</span>: <span class="hljs-number">90px</span>;
     <span class="hljs-attribute">min-height</span>: <span class="hljs-number">60px</span>;
+    <span class="hljs-attribute">max-height</span>: <span class="hljs-number">90px</span>;
   }
-}
 
-<span class="hljs-selector-class">.LocationFinder</span><span class="hljs-selector-class">.is-sticky</span> <span class="hljs-selector-class">.container</span> {
-  @<span class="hljs-keyword">media</span> (max-width: 669px) {
-    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
-  }
-}
-
-<span class="hljs-selector-class">.LocationFinder</span>:not(<span class="hljs-selector-class">.is-sticky</span>) <span class="hljs-selector-class">.container</span> {
-  @<span class="hljs-keyword">media</span> (min-width: 670px) {
-    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-location-finder</span>;
+  <span class="hljs-selector-class">.LocationFinder</span>:not(<span class="hljs-selector-class">.is-sticky</span>) &amp; {
+    @<span class="hljs-keyword">media</span> (min-width: 670px) {
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-number">4px</span> rgba(<span class="hljs-number">#000</span>, <span class="hljs-number">0.5</span>),
+        <span class="hljs-number">0</span> <span class="hljs-number">36px</span> <span class="hljs-number">84px</span> rgba(<span class="hljs-number">#042435</span>, .<span class="hljs-number">39</span>);
+    }
   }
 }
 
@@ -983,10 +976,11 @@
 }
 
 <span class="hljs-selector-class">.LocationFinder</span> <span class="hljs-selector-tag">legend</span> {
-  <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-heading</span>, .<span class="hljs-number">79</span>);
+  <span class="hljs-attribute">color</span>: rgba(<span class="hljs-number">#25395d</span>, <span class="hljs-number">0.79</span>);
   <span class="hljs-attribute">display</span>: block;
-  <span class="hljs-attribute">float</span>: left;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
   <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-bold</span>;
+  <span class="hljs-attribute">float</span>: left;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;
   <span class="hljs-comment">// padding-left: #{(60 / $max-width) * 100%};</span>
@@ -1019,20 +1013,20 @@
 <span class="hljs-selector-class">.LocationFinder</span> <span class="hljs-selector-tag">select</span> {
   <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 
   @<span class="hljs-keyword">media</span> (max-width: 669px) {
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
-    <span class="hljs-comment">// transition: opacity 200ms, visibility 200ms;</span>
   }
 
   @<span class="hljs-keyword">media</span> (max-width: 669px) {
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, .<span class="hljs-number">27</span>);
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-number">#bfd0d8</span>, <span class="hljs-number">0.27</span>);
     <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">6px</span>;
   }
 
   @<span class="hljs-keyword">media</span> (min-width: 670px) {
-    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, .<span class="hljs-number">27</span>);
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-number">#bfd0d8</span>, <span class="hljs-number">0.27</span>);
   }
 
   &amp;:first-of-type {
@@ -1056,33 +1050,21 @@
 }
 
 <span class="hljs-selector-class">.LocationFinder</span><span class="hljs-selector-class">.is-sticky</span> <span class="hljs-selector-tag">select</span> {
-  &amp;:first-of-type {
-    @<span class="hljs-keyword">media</span> (max-width: 669px) {
-      <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
-      <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
-      <span class="hljs-attribute">padding-bottom</span>: #{<span class="hljs-variable">$spacing-gutter</span> - <span class="hljs-number">2</span>}px;;
-      <span class="hljs-attribute">padding-left</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
-      <span class="hljs-attribute">padding-top</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
-    }
-  }
-
   &amp;:not(:first-of-type) {
     @<span class="hljs-keyword">media</span> (max-width: 669px) {
-      <span class="hljs-comment">// opacity: 0;</span>
-      <span class="hljs-comment">// visibility: hidden;</span>
-      <span class="hljs-attribute">display</span>: none;
+      <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
     }
   }
 }
 
 <span class="hljs-selector-class">.LocationFinder-button</span> {
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">200ms</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 
   @<span class="hljs-keyword">media</span> (max-width: 669px) {
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
     <span class="hljs-comment">// padding-bottom: 18px;</span>
     <span class="hljs-comment">// padding-top: 18px;</span>
-    <span class="hljs-comment">// transition: opacity 200ms, visibility 200ms;</span>
   }
 
   @<span class="hljs-keyword">media</span> (min-width: 670px) {
@@ -1098,9 +1080,8 @@
 
   <span class="hljs-selector-class">.LocationFinder</span><span class="hljs-selector-class">.is-sticky</span> &amp; {
     @<span class="hljs-keyword">media</span> (max-width: 669px) {
-      <span class="hljs-comment">// opacity: 0;</span>
-      <span class="hljs-comment">// visibility: hidden;</span>
-      <span class="hljs-attribute">display</span>: none;
+      <span class="hljs-attribute">transform</span>: translateY(-<span class="hljs-number">24px</span>);
+      <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-default</span>;
     }
 
     @<span class="hljs-keyword">media</span> (min-width: 670px) {
@@ -1136,7 +1117,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">5.1 KB</span>
+                    <span class="Meta-value">4.6 KB</span>
                 </li>
             </ul>
         </div>
@@ -1361,6 +1342,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="typography.html" data-pjax>
                 <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="z-index.html" data-pjax>
+                <span>z-index</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="spacing.html" data-pjax>
+                <span>Spacing</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4399,20 +4428,16 @@
             <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/animations.html" data-pjax>
+                <span>Animations</span>
+                
             </a>
         </li>
         
@@ -4421,7 +4446,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/helper-classes.html" data-pjax>
-                <span>Helper Classes</span>
+                <span>Helper classes</span>
                 
             </a>
         </li>

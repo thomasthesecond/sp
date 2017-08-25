@@ -386,7 +386,7 @@
 /**
  * Component: Next page
  */
-@media (min-width: 600px) {
+@media (min-width: 480px) {
   .NextPage {
     text-align: center;
   }
@@ -416,9 +416,9 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 37.5em) and (max-width: 80.625em) {
+@media (min-width: 30em) and (max-width: 80.625em) {
   .NextPage-label {
-    font-size: calc(12px + (14 - 12) * (100vw - 600px) / (1290 - 600));
+    font-size: calc(12px + (14 - 12) * (100vw - 480px) / (1290 - 480));
   }
 }
 
@@ -438,9 +438,9 @@
   position: relative;
 }
 
-@media (min-width: 37.5em) and (max-width: 80.625em) {
+@media (min-width: 30em) and (max-width: 80.625em) {
   .NextPage-title {
-    font-size: calc(32px + (48 - 32) * (100vw - 600px) / (1290 - 600));
+    font-size: calc(32px + (48 - 32) * (100vw - 480px) / (1290 - 480));
   }
 }
 
@@ -454,6 +454,11 @@
   color: #bfd0d8;
   font-size: 1.375em;
   height: 0.33333em;
+  position: absolute;
+  right: 0;
+  top: 0.33333em;
+  -webkit-transform: translateX(1.72727em);
+          transform: translateX(1.72727em);
   -webkit-transition: -webkit-transform 200ms;
   transition: -webkit-transform 200ms;
   transition: transform 200ms;
