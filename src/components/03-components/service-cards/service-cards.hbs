@@ -1,4 +1,4 @@
-<div class="ServiceCards">
+<div class="ServiceCards{{#if className}} {{className}}{{/if}}">
   {{#each serviceCards}}
     {{> @service-card title=this.title iconName=this.iconName }}
   {{/each}}
