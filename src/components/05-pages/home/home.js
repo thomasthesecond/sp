@@ -42,7 +42,7 @@ export default class HomePage {
         node.classList.remove(this.className);
       });
 
-      this.controller.destroy();
+      this.controller.destroy(true);
     }
   }
 
@@ -50,6 +50,10 @@ export default class HomePage {
     if (!this.controller) {
       this.create();
     }
+
+    // new ScrollMagic.Scene({ triggerElement: ".js-banner" })
+    //   .setClassToggle(".Banner", this.className)
+    //   .addTo(this.controller);
 
     new ScrollMagic.Scene({ triggerElement: ".js-masthead" })
       .setClassToggle(".Masthead", this.className)
