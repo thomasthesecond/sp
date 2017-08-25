@@ -238,8 +238,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sticky"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder js-location-finder"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder-container container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder js-location-finder"</span> <span class="hljs-attr">data-location-url</span>=<span class="hljs-string">"/locations"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Find a location<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -914,7 +914,7 @@
  * @type page
  */</span>
 
-<span class="hljs-selector-class">.LocationFinder</span> {
+<span class="hljs-selector-class">.LocationFinder</span>:not(<span class="hljs-selector-class">.is-sticky</span>) {
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">48px</span>;
 
   @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
@@ -1235,54 +1235,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="typography.html" data-pjax>
                 <span>Typography</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="z-index.html" data-pjax>
-                <span>z-index</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="spacing.html" data-pjax>
-                <span>Spacing</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4321,6 +4273,20 @@
             <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         
@@ -4329,7 +4295,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/helper-classes.html" data-pjax>
-                <span>Helper classes</span>
+                <span>Helper Classes</span>
                 
             </a>
         </li>

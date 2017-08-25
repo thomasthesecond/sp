@@ -276,7 +276,7 @@
  */</span>
 
 <span class="hljs-selector-class">.NextPage</span> {
-  @<span class="hljs-keyword">media</span>(min-width: 480px) {
+  @<span class="hljs-keyword">media</span>(min-width: 600px) {
     <span class="hljs-attribute">text-align</span>: center;
   }
 }
@@ -286,6 +286,12 @@
   <span class="hljs-attribute">display</span>: inline-block;
   <span class="hljs-attribute">text-decoration</span>: none;
   <span class="hljs-attribute">transition</span>: color <span class="hljs-number">200ms</span>;
+
+  <span class="hljs-comment">// background: aliceblue;</span>
+
+  <span class="hljs-comment">// @media (min-width: 480px) {</span>
+  <span class="hljs-comment">//   display: inline-block;</span>
+  <span class="hljs-comment">// }</span>
 
   &amp;:hover,
   &amp;:active,
@@ -302,7 +308,7 @@
   @<span class="hljs-keyword">include</span> fluid-type(
     <span class="hljs-variable">$min-font-size</span>: 12,
     <span class="hljs-variable">$max-font-size</span>: 14,
-    <span class="hljs-variable">$min-width</span>: 480
+    <span class="hljs-variable">$min-width</span>: 600
   );
 
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#b5955d</span>;
@@ -314,7 +320,7 @@
   @<span class="hljs-keyword">include</span> fluid-type(
     <span class="hljs-variable">$min-font-size</span>: <span class="hljs-variable">$font-size-heading-1-min</span>,
     <span class="hljs-variable">$max-font-size</span>: <span class="hljs-variable">$font-size-heading-1</span>,
-    <span class="hljs-variable">$min-width</span>: 480
+    <span class="hljs-variable">$min-width</span>: 600
   );
 
   <span class="hljs-attribute">color</span>: currentColor;
@@ -323,17 +329,31 @@
   <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-heading-1</span>;
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">8px</span>;
   <span class="hljs-attribute">position</span>: relative;
+
+  <span class="hljs-comment">// @media (min-width: 320px) {</span>
+  <span class="hljs-comment">//   max-width: 196px;</span>
+  <span class="hljs-comment">// }</span>
+  <span class="hljs-comment">// @media (max-width: 479px) {</span>
+  <span class="hljs-comment">//   max-width: 196px;</span>
+  <span class="hljs-comment">// }</span>
+  <span class="hljs-comment">// @media (max-width: 479px) {</span>
+  <span class="hljs-comment">//   padding-right: 88px;</span>
+  <span class="hljs-comment">// }</span>
 }
 
 <span class="hljs-selector-class">.NextPage-icon</span> {
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#bfd0d8</span>;
   <span class="hljs-attribute">font-size</span>: #{(<span class="hljs-number">66</span> / <span class="hljs-variable">$font-size-heading-1</span>) * <span class="hljs-number">1em</span>};
   <span class="hljs-attribute">height</span>: #{(<span class="hljs-number">22</span> / <span class="hljs-number">66</span>) * <span class="hljs-number">1em</span>};
-  <span class="hljs-attribute">position</span>: absolute;
-  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">top</span>: #{(<span class="hljs-number">22</span> / <span class="hljs-number">66</span>) * <span class="hljs-number">1em</span>};
-  <span class="hljs-attribute">transform</span>: translateX(#{((<span class="hljs-number">66</span> + <span class="hljs-variable">$font-size-heading-1</span>) / <span class="hljs-number">66</span>) * <span class="hljs-number">1em</span>});
+  <span class="hljs-comment">// position: absolute;</span>
+  <span class="hljs-comment">// right: 0;</span>
+  <span class="hljs-comment">// top: #{(22 / 66) * 1em};</span>
+  <span class="hljs-comment">// transform: translateX(#{((66 + $font-size-heading-1) / 66) * 1em});</span>
   <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">200ms</span>;
+
+  <span class="hljs-comment">// @media (max-width: 479px) {</span>
+  <span class="hljs-comment">//   right: auto;</span>
+  <span class="hljs-comment">// }</span>
 }
 </pre>
                             </code>
@@ -351,7 +371,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.3 KB</span>
+                    <span class="Meta-value">1.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -558,54 +578,6 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="typography.html" data-pjax>
                 <span>Typography</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="z-index.html" data-pjax>
-                <span>z-index</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="spacing.html" data-pjax>
-                <span>Spacing</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3644,6 +3616,20 @@
             <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         
@@ -3652,7 +3638,7 @@
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/helper-classes.html" data-pjax>
-                <span>Helper classes</span>
+                <span>Helper Classes</span>
                 
             </a>
         </li>

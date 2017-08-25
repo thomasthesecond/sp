@@ -365,7 +365,9 @@ exports.default = SubNavigation;
 
 // Import page module
 
-__webpack_require__(129);
+var _about = __webpack_require__(129);
+
+var _about2 = _interopRequireDefault(_about);
 
 __webpack_require__(2);
 
@@ -392,8 +394,10 @@ __webpack_require__(71);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Import page-specific components
+var aboutPage = new _about2.default();
 var subNavigation = new _subNavigation2.default();
 
+aboutPage.render();
 subNavigation.render();
 
 /***/ }),

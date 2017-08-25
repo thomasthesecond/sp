@@ -1283,6 +1283,43 @@ hr.dark {
  * Mixins
  */
 /**
+ * Component: Banner
+ * @type Organism
+ */
+.Banner {
+  background-color: #fff;
+  height: 6.97674vw;
+  max-height: 90px;
+  min-height: 48px;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+  z-index: 7000;
+}
+
+.Banner--transparent:not(.is-open) {
+  background-color: transparent;
+}
+
+.Banner .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Contentinfo
  * @type Organism
  */
@@ -1721,43 +1758,6 @@ hr.dark {
         -ms-flex-order: -1;
             order: -1;
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Banner
- * @type Organism
- */
-.Banner {
-  background-color: #fff;
-  height: 6.97674vw;
-  max-height: 90px;
-  min-height: 48px;
-  -webkit-transition: background-color 200ms;
-  transition: background-color 200ms;
-  z-index: 7000;
-}
-
-.Banner--transparent:not(.is-open) {
-  background-color: transparent;
-}
-
-.Banner .container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
 }
 /**
  * Functions

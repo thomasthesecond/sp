@@ -7,7 +7,7 @@
  * @type page
  */
 
-.LocationFinder {
+.LocationFinder:not(.is-sticky) {
   margin-top: 48px;
 
   @media (min-width: $mq-min-670) {
