@@ -72,7 +72,7 @@ export default class HomePage {
       .addTo(this.controller);
 
     new ScrollMagic.Scene({ triggerElement: ".js-introduction", offset: 500 })
-      .setClassToggle(".js-introduction", this.className)
+      .setClassToggle(".Introduction", this.className)
       .addTo(this.controller);
 
     new ScrollMagic.Scene({ triggerElement: ".js-partnerships-section", offset: 500 })
