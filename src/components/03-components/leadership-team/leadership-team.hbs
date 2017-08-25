@@ -1,4 +1,4 @@
-<div class="LeadershipTeam">
+<div class="LeadershipTeam{{#if className}} {{className}}{{/if}}">
   {{#each teamMembers}}
     {{> @team-member teamMember=this }}
   {{/each}}
