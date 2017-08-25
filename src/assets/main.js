@@ -1,3 +1,5 @@
+"use strict";
+
 // Import global modules
 import "picturefill";
 import "normalize.css/normalize.css";

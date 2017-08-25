@@ -1,3 +1,5 @@
+"use strict";
+
 // Import global modules
 import "picturefill";
 import "normalize.css/normalize.css";
@@ -103,8 +105,6 @@ if (document.querySelector(".Modal")) {
 
 const doc = document.documentElement;
 doc.className = doc.className.replace("no-js", "js");
-
-console.info("Styleguide loaded");
 
 /**
  * Polyfill object-fit: cover

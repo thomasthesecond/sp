@@ -1,7 +1,10 @@
+"use strict";
+
 // Import page module
 import "../components/05-pages/about";
 
 // Import page-specific components
+import "../components/03-components/cover-photo";
 import "../components/03-components/feature";
 import "../components/03-components/introduction";
 import "../components/03-components/leadership-team";
@@ -15,5 +18,3 @@ import "../components/03-components/timeline";
 const subNavigation = new SubNavigation();
 
 subNavigation.render();
-
-console.info("About loaded");

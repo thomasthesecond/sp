@@ -1,3 +1,5 @@
+"use strict";
+
 // Import page module
 import InvestorsPage from "../components/05-pages/investors";
 
@@ -8,6 +10,7 @@ import "../components/03-components/file-download";
 import "../components/03-components/filter";
 import "../components/03-components/help-tip";
 // import Modal from "../components/03-components/modal";
+import "../components/03-components/more-link";
 import "../components/03-components/next-page";
 import "../components/03-components/news-article";
 import "../components/03-components/pagination";
@@ -31,5 +34,3 @@ import "../components/03-components/utility-links";
 const investorsPage = new InvestorsPage();
 
 investorsPage.render();
-
-console.info("Investors loaded");
