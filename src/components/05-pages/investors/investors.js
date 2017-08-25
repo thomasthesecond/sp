@@ -1,6 +1,7 @@
 "use strict";
 
 import Modal from "../../03-components/modal";
+import { forEach } from "../../../assets/js/utils";
 
 export default class InvestorsPage {
   static highlightsPage() {
@@ -9,7 +10,7 @@ export default class InvestorsPage {
     const modalElement = document.querySelector(".js-modal");
     const teamMembers = document.querySelectorAll(".js-team-member");
 
-    teamMembers.forEach((member) => {
+    forEach(teamMembers, (index, member) => {
       const name = member.querySelector(".TeamMember-name").innerHTML;
       const title = member.querySelector(".TeamMember-title").innerHTML;
       const bio = member.querySelector(".TeamMember-bio").innerHTML;
