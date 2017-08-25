@@ -1,5 +1,5 @@
 <article class="ImageBlock{{#if block.className}} {{ block.className }}{{/if}}"
-  {{#if block.id}}id="{{ block.id }}"{{/if}}>
+  {{#unless noId}}{{#if block.id}}id="{{ block.id }}"{{/if}}{{/unless}}>
   <a href="{{ block.link.url }}">
     {{> @image--picture image=block.image }}
   </a>
