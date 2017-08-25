@@ -28,25 +28,17 @@ import "../components/03-components/select";
 import "./scss/utils.scss";
 import "./scss/print.scss";
 
+// Import utils
+import {
+  objectFitCover,
+  replaceNoJsClassName,
+} from "./js/utils";
+
 const contentinfo = new Contentinfo();
 const banner = new Banner();
-const doc = document.documentElement;
 
 contentinfo.render();
 banner.render();
 
-doc.className = doc.className.replace("no-js", "js");
-
-
-/**
- * Polyfill object-fit: cover
- */
-if ("objectFit" in document.documentElement.style === false) {
-  document.addEventListener("DOMContentLoaded", () => {
-    Array.prototype.forEach.call(document.querySelectorAll(".object-fit-cover"), (el) => {
-      const image = el.querySelector("img");
-      (el.runtimeStyle || el.style).background = `url("${image.src}") no-repeat 50% / cover`;
-      (image.runtimeStyle || image.style).display = "none";
-    });
-  });
-}
+replaceNoJsClassName();
+objectFitCover();

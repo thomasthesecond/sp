@@ -73,6 +73,12 @@ import "../components/03-components/utility-links";
 
 import "./scss/utils.scss";
 
+// Import utils
+import {
+  objectFitCover,
+  replaceNoJsClassName,
+} from "./js/utils";
+
 if (document.querySelector(".CoverVideo")) {
   const coverVideo = new CoverVideo();
   coverVideo.render();
@@ -103,18 +109,5 @@ if (document.querySelector(".Modal")) {
   modal.render();
 }
 
-const doc = document.documentElement;
-doc.className = doc.className.replace("no-js", "js");
-
-/**
- * Polyfill object-fit: cover
- */
-if ("objectFit" in document.documentElement.style === false) {
-  document.addEventListener("DOMContentLoaded", () => {
-    Array.prototype.forEach.call(document.querySelectorAll(".object-fit-cover"), (el) => {
-      const image = el.querySelector("img");
-      (el.runtimeStyle || el.style).background = `url("${image.src}") no-repeat 50% / cover`;
-      (image.runtimeStyle || image.style).display = "none";
-    });
-  });
-}
+replaceNoJsClassName();
+objectFitCover();
