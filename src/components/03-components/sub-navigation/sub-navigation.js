@@ -135,7 +135,7 @@ class SubNavigation {
   }
 
   setUpScrollSpy() {
-    this.sections.forEach((section) => {
+    forEach(this.sections, (index, section) => {
       this.scrollSpySettings.push({
         id: section.id,
         top: section.offsetTop,
