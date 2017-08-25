@@ -1,14 +1,14 @@
 {{ render "@banner" }}
 
 <main id="main" role="main" tabindex="0">
-  {{> @masthead }}
+  {{> @masthead className="js-masthead" }}
 
   <div class="sticky">
     {{> @sub-navigation }}
   </div>
 
   <div class="container">
-    {{> @introduction }}
+    {{> @introduction className="js-introduction" }}
   </div>
 
   <section class="section-gradient js-spy-section" id="{{ sections.[0].id }}">
@@ -16,7 +16,7 @@
       <div class="column">
         {{> @text-block block=sections.[0] }}
 
-        {{> @service-cards }}
+        {{> @service-cards className="js-service-cards" }}
       </div>
     </div>
   </section>
@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    {{> @feature--highlights }}
+    {{> @feature--highlights className="js-feature" }}
   </section>
 
   <section class="js-spy-section" id="{{ sections.[2].id }}">
@@ -47,7 +47,7 @@
         <h2>Leadership</h2>
       </div>
 
-      {{> @leadership-team }}
+      {{> @leadership-team className="js-leadership-team" }}
     </div>
   </section>
 
