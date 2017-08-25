@@ -26,8 +26,6 @@ import "../components/03-components/select";
 import "./scss/utils.scss";
 import "./scss/print.scss";
 
-console.info("Main loaded");
-
 const contentinfo = new Contentinfo();
 const banner = new Banner();
 const doc = document.documentElement;
