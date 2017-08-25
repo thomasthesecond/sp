@@ -1,7 +1,7 @@
 "use strict";
 
 // Import page module
-import "../components/05-pages/about";
+import AboutPage from "../components/05-pages/about";
 
 // Import page-specific components
 import "../components/03-components/cover-photo";
@@ -15,6 +15,8 @@ import SubNavigation from "../components/03-components/sub-navigation";
 import "../components/03-components/team-member";
 import "../components/03-components/timeline";
 
+const aboutPage = new AboutPage();
 const subNavigation = new SubNavigation();
 
+aboutPage.render();
 subNavigation.render();
