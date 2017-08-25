@@ -7,6 +7,7 @@
       "label": "Image",
       "context": {
         "masthead": {
+          "className": null,
           "title": "About us",
           "coverPhoto": {
             "title": "A group of ER doctors smiling happily",
