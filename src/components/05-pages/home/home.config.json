@@ -9,11 +9,6 @@
     "slug": "/",
     "assetFileName": "home",
     "classname": "HomePage",
-    "meta": {
-      "title": "",
-      "description": "",
-      "image": ""
-    },
     "masthead": {
       "tagline": {
         "first": "We operate",
