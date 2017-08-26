@@ -6,6 +6,14 @@
   },
   "variants": [
     {
+      "name": "super",
+      "label": "Heading super",
+      "notes": "Heading super styles can be applied to any text element by using the `heading-super` classname.",
+      "context": {
+        "classname": "heading-super"
+      }
+    },
+    {
       "name": "1",
       "label": "Heading 1",
       "notes": "Heading 1 styles can be applied to any text element by using the `heading-1` classname.",
