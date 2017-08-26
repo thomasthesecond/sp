@@ -9,11 +9,6 @@
     "slug": "/about/",
     "assetFileName": "about",
     "classname": "AboutPage",
-    "meta": {
-      "title": "About us",
-      "description": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 180 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients.",
-      "image": "/assets/images/about-masthead.jpg"
-    },
     "masthead": {
       "title": "About us",
       "coverPhoto": {
