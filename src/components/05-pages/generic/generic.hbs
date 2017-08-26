@@ -1,0 +1,45 @@
+{{ render "@banner" }}
+
+<main id="main" role="main" tabindex="0">
+  <div class="page-content container padded">
+    <div class="column">
+      <h1>{{ title }}</h1>
+
+      <p>
+        Headquartered in Nashville, Tennessee, Surgery Partners is a
+        leading healthcare services company with a differentiated
+        outpatient delivery model focused on providing high quality, cost
+        effective solutions for surgical and related ancillary care in
+        support of both patients and physicians. Founded in 2004, Surgery
+        Partners is one of the largest and fastest growing surgical
+        services businesses in the country, with more than 150 locations
+        in 29 states, including ambulatory surgical facilities, surgical
+        hospitals, a diagnostic laboratory, multi-specialty physician
+        practices and urgent care facilities.
+      </p>
+
+      <p>
+        The Board of Directors of Surgery Partners (the “Company”) sets
+        high standards for the Company's employees, officers and
+        directors. Implicit in this philosophy is the importance of
+        sound corporate governance. It is the duty of the Board of
+        Directors to serve as a prudent fiduciary for shareholders and
+        to oversee the management of the Company's business. To fulfill
+        its responsibilities and to discharge its duty, the Board of
+        Directors follows the procedures and standards that are set
+        forth in these guidelines. These guidelines are subject to
+        modification from time to time as the Board of Directors deems
+        appropriate in the best interests of the Company or as required
+        by applicable laws and regulations.
+      </p>
+    </div>
+  </div>
+
+  <footer class="page-footer container">
+    <hr class="dark">
+
+    {{> @next-page }}
+  </footer>
+</main>
+
+{{ render "@contentinfo" }}

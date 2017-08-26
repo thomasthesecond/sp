@@ -1,0 +1,33 @@
+{
+  "default": "one-column",
+  "title": "Generic page",
+  "context": {
+    "preview": "@preview",
+    "description": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 180 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients.",
+    "image": "/assets/images/about-masthead.jpg",
+    "slug": "/url-to-page/",
+    "assetFileName": null,
+    "classname": null,
+    "nextPage": {
+      "label": "Read next",
+      "title": "Partnerships",
+      "url": "/"
+    }
+  },
+  "variants": [
+    {
+      "name": "one-column",
+      "label": "Generic one column",
+      "context": {
+        "title": "One column page"
+      }
+    },
+    {
+      "name": "two-column",
+      "label": "Generic Two column",
+      "context": {
+        "title": "Two column page"
+      }
+    }
+  ]
+}
