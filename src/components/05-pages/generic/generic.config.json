@@ -24,7 +24,7 @@
     },
     {
       "name": "two-column",
-      "label": "Generic Two column",
+      "label": "Generic two column",
       "context": {
         "title": "Two column page"
       }
