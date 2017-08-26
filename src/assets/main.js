@@ -4,10 +4,6 @@
 import "picturefill";
 import "normalize.css/normalize.css";
 import "./scss/global.scss";
-import "../components/03-components/heading/heading.scss";
-import "../components/03-components/list/list.scss";
-import "../components/03-components/paragraph/paragraph.scss";
-import "../components/03-components/table/table.scss";
 
 // Import icons
 import "../components/_02-icons/icons.scss";
@@ -20,10 +16,15 @@ import "../components/03-components/_skip-link";
 import Banner from "../components/03-components/banner";
 import "../components/03-components/button";
 import Contentinfo from "../components/03-components/contentinfo";
+import "../components/03-components/heading";
 import "../components/03-components/hr";
 import "../components/03-components/input";
+import "../components/03-components/list";
 import "../components/03-components/next-page";
+import "../components/03-components/paragraph";
 import "../components/03-components/select";
+import "../components/03-components/table";
+import "../components/03-components/textarea";
 
 // Import global modules
 import "./scss/utils.scss";
