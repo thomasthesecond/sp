@@ -14,7 +14,11 @@
   <section class="section-gradient js-spy-section" id="{{ sections.[0].id }}">
     <div class="container">
       <div class="column">
-        {{> @text-block block=sections.[0] }}
+        <h2>{{ sections.[0].heading }}</h2>
+
+        {{#each sections.[0].content}}
+          <p>{{ this }}</p>
+        {{/each}}
 
         {{> @service-cards className="js-service-cards" }}
       </div>
@@ -24,7 +28,11 @@
   <section class="js-spy-section" id="{{ sections.[1].id }}">
     <div class="container">
       <div class="column">
-        {{> @text-block block=sections.[1] }}
+        <h2>{{ sections.[1].heading }}</h2>
+
+        {{#each sections.[1].content}}
+          <p>{{ this }}</p>
+        {{/each}}
       </div>
     </div>
 
@@ -34,7 +42,11 @@
   <section class="js-spy-section" id="{{ sections.[2].id }}">
     <div class="container">
       <div class="column">
-        {{> @text-block block=sections.[2] }}
+        <h2>{{ sections.[2].heading }}</h2>
+
+        {{#each sections.[2].content}}
+          <p>{{ this }}</p>
+        {{/each}}
 
         {{> @timeline }}
       </div>
