@@ -24,13 +24,15 @@
 // Implementation detail
 
 .Feature .Testimonial {
-  color: $color-text-overlay;
-}
+  blockquote {
+    color: $color-text-overlay;
+  }
 
-.Feature .Testimonial-quote {
-  text-shadow: 0 2px 24px rgba(#0d3c4d, .4);
-}
+  p {
+    text-shadow: 0 2px 24px rgba(#0d3c4d, .4);
+  }
 
-.Feature .Testimonial-location {
-  color: inherit;
+  .blockquote-location {
+    color: inherit;
+  }
 }
