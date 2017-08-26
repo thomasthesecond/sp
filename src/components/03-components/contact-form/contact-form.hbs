@@ -1,0 +1,45 @@
+<form class="ContactForm" action="">
+  <p>
+    <label for="name">Name</label>
+    {{> @input
+      name="name"
+      id="name"
+      required="true"
+    }}
+  </p>
+
+  <p>
+    <label for="email-address">Email address</label>
+    {{> @input
+      type="email"
+      name="email_address"
+      id="email-address"
+      required="true"
+    }}
+  </p>
+
+  <p>
+    <label for="phone-number">Phone number</label>
+    {{> @input
+      type="tel"
+      name="phone_number"
+      id="phone-number"
+    }}
+  </p>
+
+  <p>
+    <label for="message">Message</label>
+    {{> @textarea
+      name="message"
+      id="message"
+      cols="60"
+      rows="5"
+    }}
+  </p>
+
+  <p>
+    <button class="Button" type="submit">
+      Submit
+    </button>
+  </p>
+</form>

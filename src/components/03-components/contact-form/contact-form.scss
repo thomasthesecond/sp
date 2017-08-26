@@ -1,0 +1,29 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Contact form
+ * @type Organism
+ */
+
+.ContactForm {
+  max-width: $max-width-content;
+
+  label {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  input {
+    width: 100%;
+
+    @media (min-width: $mq-min-720) {
+      width: 80%;
+    }
+  }
+
+  textarea {
+    width: 100%;
+  }
+}
