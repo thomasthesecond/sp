@@ -11,7 +11,6 @@ import "../components/03-components/filter";
 import "../components/03-components/help-tip";
 // import Modal from "../components/03-components/modal";
 import "../components/03-components/more-link";
-import "../components/03-components/next-page";
 import "../components/03-components/news-article";
 import "../components/03-components/pagination";
 import "../components/03-components/press-release-bio";

@@ -9,7 +9,6 @@ import "../components/03-components/feature";
 import "../components/03-components/introduction";
 import "../components/03-components/leadership-team";
 import "../components/03-components/masthead";
-import "../components/03-components/next-page";
 import "../components/03-components/service-cards";
 import SubNavigation from "../components/03-components/sub-navigation";
 import "../components/03-components/team-member";
