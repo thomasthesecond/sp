@@ -9,11 +9,6 @@
     "slug": "/partnerships/",
     "assetFileName": "partnerships",
     "classname": "PartnershipsPage",
-    "meta": {
-      "title": "Partnerships",
-      "description": "Our flexible approach to physician engagement and physician-centric culture focused on customer service is what drives our success.",
-      "image": "/assets/images/partnerships-masthead.jpg"
-    },
     "masthead": {
       "title": "Partnerships",
       "coverPhoto": {
