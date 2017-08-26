@@ -1,4 +1,14 @@
-<blockquote class="Blockquote">
-    <p>{{ blockquote.text }}</p>
-    <cite>{{ blockquote.citation }}</cite>
+<blockquote>
+  <p>{{ blockquote.quote }}</p>
+
+  <cite>
+    {{ blockquote.citation }}
+
+    {{#if blockquote.location}}
+      <br>
+      <span class="blockquote-location">
+        {{ blockquote.location }}
+      </span>
+    {{/if}}
+  </cite>
 </blockquote>

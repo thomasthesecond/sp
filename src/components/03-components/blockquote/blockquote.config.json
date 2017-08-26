@@ -1,8 +1,7 @@
 {
-  "status": "wip",
   "context": {
     "blockquote": {
-      "text": "Surgery Partners’ extensive surgery center experience has allowed them to provide critical guidance to our facility for many years. They share our physician partners’ focus on quality, efficiency and growth and provide resources and guidance that improve our ability to excel in each.",
+      "quote": "Surgery Partners’ extensive surgery center experience has allowed them to provide critical guidance to our facility for many years. They share our physician partners’ focus on quality, efficiency and growth and provide resources and guidance that improve our ability to excel in each.",
       "citation": "John Kagan, MD",
       "location": "Lee Island Coast Surgery Center, Ft. Myers, FL"
     }
