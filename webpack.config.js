@@ -41,6 +41,7 @@ module.exports = {
     locations: "./src/assets/locations.js",
     investors: "./src/assets/investors.js",
     partnerships: "./src/assets/partnerships.js",
+    contact: "./src/assets/contact.js",
     styleguide: "./src/assets/styleguide.js"
   },
   output: {
