@@ -1,1 +1,8 @@
-<textarea></textarea>
+<textarea
+  {{#if className}}class="{{ className }}"{{/if}}
+  {{#if id}}id="{{ id }}"{{/if}}
+  {{#if name}}name="{{ name }}"{{/if}}
+  {{#if placeholder}}placeholder="{{ placeholder }}"{{/if}}
+  {{#if cols}}cols="{{ cols }}"{{/if}}
+  {{#if rows}}rows="{{ rows }}"{{/if}}
+  {{#if required}}required{{/if}}></textarea>
