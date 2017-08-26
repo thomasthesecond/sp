@@ -1,12 +1,10 @@
 {
   "context": {
-    "input": {
-      "type": "text",
-      "name": "text-input-component",
-      "id": "text-input-component",
-      "className": null,
-      "placeholder": "Text input",
-      "required": false
-    }
+    "type": "text",
+    "name": "text-input-component",
+    "id": "text-input-component",
+    "className": null,
+    "placeholder": "Text input",
+    "required": false
   }
 }

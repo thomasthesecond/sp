@@ -1,7 +1,8 @@
 <input
-  type="{{ input.type }}"
-  {{#if input.className}}class="{{ input.className }}"{{/if}}
-  {{#if input.id}}id="{{ input.id }}"{{/if}}
-  {{#if input.name}}name="{{ input.name }}"{{/if}}
-  {{#if input.placeholder}}placeholder="{{ input.placeholder }}"{{/if}}
-  {{#if input.required}}required{{/if}}>
+  {{#if type}}type="{{ type }}"{{/if}}
+  {{#unless type}}type="text"{{/unless}}
+  {{#if className}}class="{{ className }}"{{/if}}
+  {{#if id}}id="{{ id }}"{{/if}}
+  {{#if name}}name="{{ name }}"{{/if}}
+  {{#if placeholder}}placeholder="{{ placeholder }}"{{/if}}
+  {{#if required}}required{{/if}}>
