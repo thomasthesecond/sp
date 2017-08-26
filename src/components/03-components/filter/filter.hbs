@@ -6,7 +6,11 @@
         {{> @help-tip helpTip=filter.keyword.helpTip }}
       </label>
 
-      {{> @input input=filter.keyword.input }}
+      {{> @input
+        name=filter.keyword.input.name
+        id=filter.keyword.input.id
+        placeholder=filter.keyword.input.placeholder
+      }}
     </div>
 
     <div class="Filter-fieldset">

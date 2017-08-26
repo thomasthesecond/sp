@@ -8,11 +8,9 @@
           "onClick": "javascript:return false;"
         },
         "input": {
-          "type": "text",
           "name": "keyword-search-input",
           "id": "keyword-search-input",
-          "placeholder": "Search keywords",
-          "required": false
+          "placeholder": "Search keywords"
         }
       },
       "years": {
