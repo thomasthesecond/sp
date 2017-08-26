@@ -10,11 +10,6 @@
     "slug": "/locations/",
     "assetFileName": "locations",
     "classname": "LocationsPage",
-    "meta": {
-      "title": "Locations",
-      "description": "",
-      "image": "/assets/images/locations-masthead.jpg"
-    },
     "masthead": {
       "title": "Locations",
       "coverPhoto": {
