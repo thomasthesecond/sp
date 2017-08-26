@@ -30,13 +30,13 @@
     },
     "navigation": {
       "links": [
-        { "label": "About us", "url": "/components/preview/about" },
-        { "label": "Find a location", "url": "/components/preview/locations" },
-        { "label": "Partnerships", "url": "/components/preview/partnerships" },
-        { "label": "Investors", "url": "/components/preview/investors" },
-        { "label": "Careers", "url": "/components/preview/careers" },
-        { "label": "Essentials", "url": "/components/preview/essentials" },
-        { "label": "Contact us", "url": "/components/preview/contact" }
+        { "label": "About us", "url": "/components/preview/about.html" },
+        { "label": "Find a location", "url": "/components/preview/locations.html" },
+        { "label": "Partnerships", "url": "/components/preview/partnerships.html" },
+        { "label": "Investors", "url": "/components/preview/investors.html" },
+        { "label": "Careers", "url": "https://recruiting.adp.com/srccar/RTI.home?d=External&c=1080141" },
+        { "label": "Essentials", "url": "https://essentials.surgerypartners.com/" },
+        { "label": "Contact us", "url": "/components/preview/contact.html" }
       ]
     }
   }
