@@ -14,6 +14,7 @@ import "../components/04-layout/layout.scss";
 // Import global components
 import "../components/03-components/_skip-link";
 import Banner from "../components/03-components/banner";
+import "../components/03-components/blockquote";
 import "../components/03-components/button";
 import Contentinfo from "../components/03-components/contentinfo";
 import "../components/03-components/heading";
