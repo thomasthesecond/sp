@@ -1,50 +1,48 @@
 {{ render "@banner" }}
 
-<main id="main" role="main" tabindex="0">
+<main id="main" role="main" tabindex="0" class="InvestorsPage-highlights">
   {{> @sub-navigation }}
 
-  <div class="InvestorsPage-container">
-    <div class="InvestorsPage-highlights container">
-      <div class="InvestorsPage-highlightsIntro">
-        <h1>{{ title }}</h1>
+  <div class="page-content grid two-column padded container clearfix">
+    <section class="grid-section">
+      <h1>{{ title }}</h1>
 
-        <p>
-          The Board of Directors of Surgery Partners (the “Company”) sets
-          high standards for the Company's employees, officers and
-          directors. Implicit in this philosophy is the importance of
-          sound corporate governance. It is the duty of the Board of
-          Directors to serve as a prudent fiduciary for shareholders and
-          to oversee the management of the Company's business. To fulfill
-          its responsibilities and to discharge its duty, the Board of
-          Directors follows the procedures and standards that are set
-          forth in these guidelines. These guidelines are subject to
-          modification from time to time as the Board of Directors deems
-          appropriate in the best interests of the Company or as required
-          by applicable laws and regulations.
-        </p>
-      </div>
+      <p>
+        The Board of Directors of Surgery Partners (the “Company”) sets
+        high standards for the Company's employees, officers and
+        directors. Implicit in this philosophy is the importance of
+        sound corporate governance. It is the duty of the Board of
+        Directors to serve as a prudent fiduciary for shareholders and
+        to oversee the management of the Company's business. To fulfill
+        its responsibilities and to discharge its duty, the Board of
+        Directors follows the procedures and standards that are set
+        forth in these guidelines. These guidelines are subject to
+        modification from time to time as the Board of Directors deems
+        appropriate in the best interests of the Company or as required
+        by applicable laws and regulations.
+      </p>
+    </section>
 
-      <div class="InvestorsPage-highlightsResources">
-        {{#each resourcesList}}
-          {{> @resources-list resourcesList=this }}
-        {{/each}}
-      </div>
+    <aside class="grid-aside sticky">
+      {{#each resourcesList}}
+        {{> @resources-list resourcesList=this }}
+      {{/each}}
+    </aside>
 
-      <div class="InvestorsPage-highlightsTeam">
-        {{#each teamList}}
-          {{> @team-list teamList=this }}
-        {{/each}}
-      </div>
-    </div>
+    <section class="grid-section">
+      {{#each teamList}}
+        {{> @team-list teamList=this }}
+      {{/each}}
+    </section>
   </div>
 
-  <div class="container">
-    {{> @utility-links}}
+  <footer class="page-footer container">
+    {{ render "@utility-links" }}
 
     <hr class="dark">
 
     {{> @next-page }}
-  </div>
+  </footer>
 </main>
 
 {{ render "@contentinfo" }}

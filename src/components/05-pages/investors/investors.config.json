@@ -3,23 +3,11 @@
   "default": "overview",
   "context": {
     "preview": "@preview",
-    "description": "",
-    "image": "/assets/images/masthead-image.jpg",
+    "description": "Surgery Partners is a leading operator of surgical facilities and ancillary services with more than 180 locations nationwide. We provide exceptional integrated healthcare experiences between our providers and patients.",
+    "image": "/assets/images/about-masthead.jpg",
     "slug": "/investors/",
     "assetFileName": "investors",
-    "classname": "InvestorsPage",
-    "meta": {
-      "title": "Investors",
-      "description": "",
-      "image": "/assets/images/masthead-image.jpg"
-    },
-    "utilityLinks": [
-      { "href": "#", "label": "Print page" },
-      { "href": "#", "label": "RSS Feeds" },
-      { "href": "#", "label": "Share page" },
-      { "href": "#", "label": "IR contacts" },
-      { "href": "#", "label": "Financial tear sheet" }
-    ]
+    "classname": "InvestorsPage"
   },
   "variants": [
     {
@@ -451,9 +439,59 @@
     },
     {
       "name": "full-page",
-      "label": "Full width page layout",
+      "label": "Template: Full width page",
       "context": {
-        "title": "Full width page layout",
+        "title": "Full width page",
+        "subNavigation": {
+          "useScrollSpy": false,
+          "items": [
+            { "label": "Overview", "url": "/investors" },
+            { "label": "Highlights", "url": "/investors/highlights" },
+            { "label": "Stock", "url": "/investors/stock" },
+            { "label": "SEC filings", "url": "/investors/sec-filings" },
+            { "label": "News", "url": "/investors/news" },
+            { "label": "Presentations", "url": "/investors/presentations" },
+            { "label": "Shareholders", "url": "/investors/shareholders" },
+            { "label": "Financial reports", "url": "/investors/financial-reports" }
+          ]
+        },
+        "nextPage": {
+          "label": "Next",
+          "title": "SEC filings",
+          "url": "/investors/sec-filings"
+        }
+      }
+    },
+    {
+      "name": "one-column",
+      "label": "Template: One column page",
+      "context": {
+        "title": "One column page",
+        "subNavigation": {
+          "useScrollSpy": false,
+          "items": [
+            { "label": "Overview", "url": "/investors" },
+            { "label": "Highlights", "url": "/investors/highlights" },
+            { "label": "Stock", "url": "/investors/stock" },
+            { "label": "SEC filings", "url": "/investors/sec-filings" },
+            { "label": "News", "url": "/investors/news" },
+            { "label": "Presentations", "url": "/investors/presentations" },
+            { "label": "Shareholders", "url": "/investors/shareholders" },
+            { "label": "Financial reports", "url": "/investors/financial-reports" }
+          ]
+        },
+        "nextPage": {
+          "label": "Next",
+          "title": "SEC filings",
+          "url": "/investors/sec-filings"
+        }
+      }
+    },
+    {
+      "name": "two-column",
+      "label": "Template: Two column page",
+      "context": {
+        "title": "Two column page",
         "subNavigation": {
           "useScrollSpy": false,
           "items": [

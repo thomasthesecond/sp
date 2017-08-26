@@ -3,21 +3,19 @@
 <main id="main" role="main" tabindex="0">
   {{> @sub-navigation }}
 
-  <div class="InvestorsPage-container">
-    <div class="InvestorsPage-article container">
-      {{> @breadcrumbs }}
+  <div class="page-content container padded">
+    {{> @breadcrumbs }}
 
-      {{> @news-article }}
-    </div>
+    {{> @news-article }}
   </div>
 
-  <div class="container">
-    {{> @utility-links}}
+  <footer class="page-footer container">
+    {{ render "@utility-links" }}
 
     <hr class="dark">
 
     {{> @next-page }}
-  </div>
+  </footer>
 </main>
 
 {{ render "@contentinfo" }}

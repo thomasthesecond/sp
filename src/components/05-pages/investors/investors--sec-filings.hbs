@@ -1,29 +1,27 @@
 {{ render "@banner" }}
 
-<main id="main" role="main" tabindex="0">
+<main id="main" role="main" tabindex="0" class="InvestorsPage-filings">
   {{> @sub-navigation }}
 
-  <div class="InvestorsPage-container">
-    <div class="InvestorsPage-filings container">
-      <h1>{{ title }}</h1>
+  <div class="page-content container padded">
+    <h1>{{ title }}</h1>
 
-      {{ render "@filter" }}
+    {{ render "@filter" }}
 
-      {{ render "@table--responsive" }}
+    {{ render "@table--responsive" }}
 
-      <hr>
+    <hr>
 
-      {{ render "@pagination" }}
-    </div>
+    {{ render "@pagination" }}
   </div>
 
-  <div class="container">
-    {{> @utility-links}}
+  <footer class="page-footer container">
+    {{ render "@utility-links" }}
 
     <hr class="dark">
 
     {{> @next-page }}
-  </div>
+  </footer>
 </main>
 
 {{ render "@contentinfo" }}

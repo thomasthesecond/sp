@@ -1,29 +1,31 @@
 {{ render "@banner" }}
 
-<main id="main" role="main" tabindex="0">
+<main id="main" role="main" tabindex="0" class="InvestorsPage-news">
   {{> @sub-navigation }}
 
-  <div class="InvestorsPage-container">
-    <div class="InvestorsPage-news container">
+  <div class="page-content grid two-column container padded clearfix">
+    <section class="grid-section">
       <h1>{{ title }}</h1>
+    </section>
 
+    <section class="grid-aside">
       {{ render "@search" }}
+    </section>
 
-      <div class="InvestorsPage-newsArticles">
-        {{#each newsArticles}}
-          {{> @news-article--preview newsArticle=this }}
-        {{/each}}
-      </div>
-    </div>
+    <section class="grid-section">
+      {{#each newsArticles}}
+        {{> @news-article--preview newsArticle=this }}
+      {{/each}}
+    </section>
   </div>
 
-  <div class="container">
-    {{> @utility-links}}
+  <footer class="page-footer container">
+    {{ render "@utility-links" }}
 
     <hr class="dark">
 
     {{> @next-page }}
-  </div>
+  </footer>
 </main>
 
 {{ render "@contentinfo" }}
