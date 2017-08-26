@@ -6,15 +6,10 @@
  * Global
  */
 
-// html {
-//   box-sizing: border-box;
-// }
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  // box-sizing: inherit;
 }
 
 body {
@@ -38,11 +33,6 @@ a {
   color: $color-text-link-default;
   text-decoration: none;
   transition: color 200ms;
-
-  // &:link,
-  // &:visited {
-  //   color: $color-text-link-default;
-  // }
 
   &:hover,
   &:active,
