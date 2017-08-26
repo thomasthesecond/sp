@@ -22,7 +22,7 @@
     {{/if}}
     <meta property="og:site_name" content="Surgery Partners">
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" title="favicon">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" title="favicon">
 
     {{#if _target.context.slug}}
       <link rel="canonical" href="https://www.surgerypartners.com{{ _target.context.slug }}">
@@ -30,7 +30,9 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mate|Open+Sans:300,400,600,700">
     <link rel="stylesheet" href="{{ path '/assets/main.css' }}">
-    <link rel="stylesheet" href="{{ path '/assets/{{ _target.context.assetFileName }}.css' }}">
+    {{#if _target.context.assetFileName}}
+      <link rel="stylesheet" href="{{ path '/assets/{{ _target.context.assetFileName }}.css' }}">
+    {{/if}}
 
     <script type="application/ld+json">
       {
@@ -54,7 +56,7 @@
     </script>
   </head>
 
-  <body class="{{ _target.context.classname }}">
+  <body{{#if _target.context.classname}} class="{{ _target.context.classname }}{{/if}}">
     {{> @skip-link }}
 
     {{{ yield }}}
@@ -62,6 +64,8 @@
     {{> @icon-sprite }}
 
     <script src="{{ path '/assets/main.js' }}"></script>
-    <script src="{{ path '/assets/{{ _target.context.assetFileName }}.js' }}"></script>
+    {{#if _target.context.assetFileName}}
+      <script src="{{ path '/assets/{{ _target.context.assetFileName }}.js' }}"></script>
+    {{/if}}
   </body>
 </html>
