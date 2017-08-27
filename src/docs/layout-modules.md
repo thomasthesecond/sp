@@ -3,6 +3,8 @@ title: Layout modules
 status: draft
 ---
 
+Layout modules are general-purpose and easily reusable; generally these modules wrap components and help lay out sections on a page.
+
 ## Container layout module
 
 The container layout module is used to:

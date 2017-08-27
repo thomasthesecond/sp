@@ -2,11 +2,10 @@
 
 You are viewing the front-end pattern library for Surgery Partners. It’s built with [Fractal](http://fractal.build), a tool that enables rapid development of components, templates and pages.
 
-The patterns are split into three groups:
+The patterns are split into two groups:
 
 * **Components**: The building blocks of the site; when combined, create pages; each component has a specific purpose
 * **Pages**: Fully formed webpages composed of components
-* **Layout**: Modules that are general-purpose and easily reusable; generally these modules wrap components and help lay out sections on a page  
 
 ## Setting up the project for development
 
