@@ -51,18 +51,6 @@ export default class HomePage {
       this.create();
     }
 
-    // new ScrollMagic.Scene({ triggerElement: ".js-banner" })
-    //   .setClassToggle(".Banner", this.className)
-    //   .addTo(this.controller);
-
-    new ScrollMagic.Scene({ triggerElement: ".js-sub-navigation" })
-      .setClassToggle(".SubNavigation", this.className)
-      .addTo(this.controller);
-
-    // new ScrollMagic.Scene({ triggerElement: ".js-masthead" })
-    //   .setClassToggle(".Masthead", this.className)
-    //   .addTo(this.controller);
-
     new ScrollMagic.Scene({ triggerElement: ".js-masthead" })
       .setClassToggle(".CoverPhoto", this.className)
       .addTo(this.controller);
@@ -71,55 +59,47 @@ export default class HomePage {
       .setClassToggle(".Masthead-title", this.className)
       .addTo(this.controller);
 
-    // new ScrollMagic.Scene({ triggerElement: ".Masthead" })
-    //   .setClassToggle(".Masthead .MoreLink", this.className)
-    //   .addTo(this.controller);
-    //
-    // new ScrollMagic.Scene({ triggerElement: ".js-location-finder" })
-    //   .setClassToggle(".LocationFinder", this.className)
-    //   .addTo(this.controller);
-
     new ScrollMagic.Scene({ triggerElement: ".js-introduction" })
       .setClassToggle(".Introduction", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-physician-practices", offset: 500 })
-      .setClassToggle(".ImageBlock#physician-practices", this.className)
+    new ScrollMagic.Scene({ triggerElement: ".js-physician-practices", offset: 100 })
+      .setClassToggle("#physician-practices .ImageBlock", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-ambulatory-surgery-centers", offset: 500 })
-      .setClassToggle(".ImageBlock#ambulatory-surgery-centers", this.className)
+    new ScrollMagic.Scene({ triggerElement: ".js-ambulatory-surgery-centers", offset: 100 })
+      .setClassToggle("#ambulatory-surgery-centers .ImageBlock", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-surgical-hospitals", offset: 500 })
-      .setClassToggle(".ImageBlock#surgical-hospitals", this.className)
+    new ScrollMagic.Scene({ triggerElement: ".js-surgical-hospitals", offset: 100 })
+      .setClassToggle("#surgical-hospitals .ImageBlock", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-healthcare-systems", offset: 500 })
-      .setClassToggle(".ImageBlock#healthcare-systems", this.className)
+    new ScrollMagic.Scene({ triggerElement: ".js-healthcare-systems", offset: 100 })
+      .setClassToggle("#healthcare-systems .ImageBlock", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-feature", offset: 500 })
+    new ScrollMagic.Scene({ triggerElement: ".js-feature", offset: 100 })
       .setClassToggle(".Feature .CoverPhoto", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-feature", offset: 500 })
+    new ScrollMagic.Scene({ triggerElement: ".js-feature", offset: 100 })
       .setClassToggle(".Feature .Testimonial", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-testimonial-1", offset: 500 })
+    new ScrollMagic.Scene({ triggerElement: ".js-testimonial-1", offset: 100 })
       .setClassToggle(".js-testimonial-1", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-testimonial-2", offset: 500 })
+    new ScrollMagic.Scene({ triggerElement: ".js-testimonial-2", offset: 100 })
       .setClassToggle(".js-testimonial-2", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-testimonial-3", offset: 500 })
+    new ScrollMagic.Scene({ triggerElement: ".js-testimonial-3", offset: 100 })
       .setClassToggle(".js-testimonial-3", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-testimonial-4", offset: 500 })
+    new ScrollMagic.Scene({ triggerElement: ".js-testimonial-4", offset: 100 })
       .setClassToggle(".js-testimonial-4", this.className)
       .addTo(this.controller);
   }
