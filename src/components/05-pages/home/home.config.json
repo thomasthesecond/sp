@@ -63,7 +63,7 @@
           ],
           "link": {
             "label": "Learn more",
-            "url": "/components/preview/partnerships"
+            "url": "/components/preview/partnerships.html"
           }
         }
       },
@@ -100,7 +100,7 @@
           ],
           "link": {
             "label": "Learn more",
-            "url": "/components/preview/investors"
+            "url": "/components/preview/investors.html"
           },
           "alternate": true
         }
@@ -138,7 +138,7 @@
           ],
           "link": {
             "label": "View openings",
-            "url": "/components/preview/careers"
+            "url": "/components/preview/careers.html"
           }
         }
       }
