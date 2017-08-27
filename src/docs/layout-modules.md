@@ -1,9 +1,22 @@
 ---
 title: Layout modules
-status: draft
 ---
 
 Layout modules are general-purpose and easily reusable; generally these modules wrap components and help lay out sections on a page.
+
+Source code for layout modules exists in `src/assets/scss/layout`.
+
+## Background layout module
+
+Background layout modules provide consistent background styling. Available classnames include `background-gradient`.
+
+### Markup
+
+```html
+<div class="background-gradient">
+  …
+</div>
+```
 
 ## Container layout module
 
@@ -25,15 +38,23 @@ Avoid nesting containers because this will increase the horizontal spacing from 
 </div>
 ```
 
+## Content layout module
+
+The content layout module is used to create a centered container for text content. It’s different from `container` because its maximum width is only 630px.
+
+### Markup
+
+```html
+<div class="content">
+  …
+</div>
+```
+
 ## Grid layout module
 
 The grid layout module uses CSS grid layout by applying the `grid` classname.
 
-### Browser support for CSS grid layout
-
-[View browser support on Can I use](http://caniuse.com/#feat=css-grid)
-
-For browsers that do not support grid, fallback styles can be added using flexbox or floats. The `@supports` at-rule, a.k.a feature queries, can be used to isolate grid styles.
+Chain the `two-column` classname to set up a two-column layout.
 
 ### Markup
 
@@ -43,11 +64,56 @@ For browsers that do not support grid, fallback styles can be added using flexbo
 </div>
 ```
 
+When using a two-column layout, the markup must always follow this pattern.
+
+```html
+<div class="grid two-column padded container">
+  <section class="grid-section">
+    …
+  </section>
+
+  <aside class="grid-aside">
+    …
+  </aside>
+
+  <section class="grid-section">
+    …
+  </section>
+</div>
+```
+
+There are two classes than can be chained to `grid-aside` to modify the layout:
+
+* `sticky`: Make the aside sticky on desktop-sized screens
+* `full-bleed`: Make the aside break out of the container and touch the screen edges on mobile-sized screens
+
+### Browser support for CSS grid layout
+
+[View browser support on Can I use](http://caniuse.com/#feat=css-grid)
+
+For browsers that do not support grid, fallback styles can be added using flexbox or floats. The `@supports` at-rule, a.k.a feature queries, can be used to isolate grid styles.
+
 ### Resources
 
 * [CSS grid layout at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
 * [Grid by Example](https://gridbyexample.com/learn/)
 * [@supports at MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports)
+
+## Page layout module
+
+The page layout module provides consistent margin for page sections. Available classnames include `page-content` and `page-footer`.
+
+### Markup
+
+```html
+<div class="page-content">
+  …
+</div>
+
+<div class="page-footer">
+  …
+</div>
+```
 
 ## Sticky layout module
 
