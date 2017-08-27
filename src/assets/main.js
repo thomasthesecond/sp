@@ -9,7 +9,7 @@ import "./scss/global.scss";
 import "../components/_02-icons/icons.scss";
 
 // Import layout modules
-import "../components/04-layout/layout.scss";
+import "./scss/layout.scss";
 
 // Import global components
 import "../components/03-components/_skip-link";
