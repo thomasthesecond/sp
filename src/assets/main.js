@@ -45,3 +45,5 @@ banner.render();
 
 replaceNoJsClassName();
 objectFitCover();
+
+require("smoothscroll-polyfill").polyfill();

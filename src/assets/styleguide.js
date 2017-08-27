@@ -113,3 +113,5 @@ if (document.querySelector(".Modal")) {
 
 replaceNoJsClassName();
 objectFitCover();
+
+require("smoothscroll-polyfill").polyfill();
