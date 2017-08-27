@@ -1,14 +1,38 @@
 "use strict";
 
+import ScrollMagic from "scrollmagic";
 import { forEach } from "../../../assets/js/utils";
 
 class SubNavigation {
-  static listenForAnchorClick(anchor) {
+  constructor() {
+    this.subNavigation = document.querySelector(".js-sub-navigation");
+    this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
+    this.subNavigationItems = this.subNavigation.querySelectorAll("li");
+    this.sections = document.querySelectorAll(".js-spy-section");
+
+    this.listenForAnchorClick = this.listenForAnchorClick.bind(this);
+    this.updateMarker = this.updateMarker.bind(this);
+    this.makeMarkerVisible = this.makeMarkerVisible.bind(this);
+    this.makeMarkerInvisible = this.makeMarkerInvisible.bind(this);
+    this.setMarkerWidth = this.setMarkerWidth.bind(this);
+    this.setMarkerOffset = this.setMarkerOffset.bind(this);
+    this.setMarkerTransition = this.setMarkerTransition.bind(this);
+    this.updateMarkerOffsetOnResize = this.updateMarkerOffsetOnResize.bind(this);
+    this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
+    this.setUpItems = this.setUpItems.bind(this);
+    this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
+
+    this.currentItem = null;
+
+    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
+  }
+
+  listenForAnchorClick(anchor) {
     anchor.addEventListener("click", (event) => {
       const hashId = anchor.hash.replace("#", "");
 
       window.scroll({
-        top: document.getElementById(hashId).offsetTop,
+        top: document.getElementById(hashId).offsetTop - this.subNavigation.offsetHeight,
         left: 0,
         behavior: "smooth",
       });
@@ -17,50 +41,16 @@ class SubNavigation {
     });
   }
 
-  constructor(options) {
-    this.options = options;
-
-    this.subNavigation = document.querySelector(".js-sub-navigation");
-    this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
-    this.subNavigationItems = this.subNavigation.querySelectorAll("li");
-    this.sections = document.querySelectorAll(".js-spy-section");
-
-    this.updateMarker = this.updateMarker.bind(this);
-    this.makeMarkerVisible = this.makeMarkerVisible.bind(this);
-    this.makeMarkerInvisible = this.makeMarkerInvisible.bind(this);
-    this.setMarkerWidth = this.setMarkerWidth.bind(this);
-    this.setMarkerOffset = this.setMarkerOffset.bind(this);
-    this.setMarkerTransition = this.setMarkerTransition.bind(this);
-    this.scrollSpy = this.scrollSpy.bind(this);
-    this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
-    this.setUpItems = this.setUpItems.bind(this);
-    this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
-
-    this.activeClass = "is-active";
-    this.currentItem = null;
-    this.scrollSpySettings = [];
-
-    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
-  }
-
-  addActiveClass(item) {
-    item.classList.add(this.activeClass);
-  }
-
-  removeActiveClass(item) {
-    if (item) {
-      item.classList.remove(this.activeClass);
-    }
-  }
-
   scrollActiveMarkerIntoView(offset) {
     const list = this.subNavigation.querySelector("ul");
 
-    list.scroll({
-      top: 0,
-      left: (offset - 24),
-      behavior: "smooth",
-    });
+    if (typeof list.scroll === "function") {
+      list.scroll({
+        top: 0,
+        left: (offset - 24),
+        behavior: "smooth",
+      });
+    }
   }
 
   updateMarker(item) {
@@ -99,61 +89,49 @@ class SubNavigation {
     }, 200);
   }
 
-  scrollSpy(settings) {
-    let currentId = null;
-
-    settings.forEach((item) => {
-      const top = document.getElementById(item.id).offsetTop;
-      const bottom = top + document.getElementById(item.id).offsetHeight;
-
-      if (
-        (window.pageYOffset || document.documentElement.scrollTop) >= top &&
-        (window.pageYOffset || document.documentElement.scrollTop) < bottom
-      ) {
-        currentId = item.id;
-      }
-    });
-
-    this.currentItem = this.subNavigation.querySelector(`#${currentId}-item`);
-
-    if (this.currentItem && !this.currentItem.classList.contains(this.activeClass)) {
-      this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));
-      this.addActiveClass(this.currentItem);
-    }
-
-    if (this.currentItem) {
-      this.updateMarker(this.currentItem);
-      window.addEventListener("resize", () => {
-        setTimeout(() => {
+  updateMarkerOffsetOnResize() {
+    window.addEventListener("resize", () => {
+      setTimeout(() => {
+        if (this.currentItem) {
           this.updateMarker(this.currentItem);
-        }, 200);
-      });
-    } else {
-      this.makeMarkerInvisible();
-      this.removeActiveClass(this.subNavigation.querySelector(`.${this.activeClass}`));
-    }
+        }
+      }, 100);
+    });
   }
 
   setUpScrollSpy() {
-    forEach(this.sections, (index, section) => {
-      this.scrollSpySettings.push({
-        id: section.id,
-        top: section.offsetTop,
-        bottom: (section.offsetTop + section.offsetHeight),
-        height: section.offsetHeight,
-      });
+    const controller = new ScrollMagic.Controller({
+      globalSceneOptions: {
+        triggerHook: "onEnter",
+      },
     });
 
-    this.scrollSpy(this.scrollSpySettings);
+    this.updateMarkerOffsetOnResize();
 
-    window.addEventListener("scroll", () => {
-      setTimeout(() => {
-        this.scrollSpy(this.scrollSpySettings);
+    forEach(this.sections, (index, section) => {
+      const scene = new ScrollMagic.Scene({
+        duration: document.getElementById(section.id).offsetHeight,
+        offset: (document.getElementById(section.id).offsetTop - this.subNavigation.offsetHeight),
+      }).addTo(controller);
+
+      scene.on("enter", () => {
+        this.currentItem = document.getElementById(`${section.id}-item`);
+        this.updateMarker(this.currentItem);
 
         if (this.currentItem && !this.motionQuery.matches) {
           this.setMarkerTransition();
         }
-      }, 100);
+      });
+
+      scene.on("leave", (event) => {
+        if (index === 0 && event.scrollDirection === "REVERSE") {
+          this.makeMarkerInvisible();
+        }
+
+        if (index === this.sections.length - 1 && event.scrollDirection === "FORWARD") {
+          this.makeMarkerInvisible();
+        }
+      });
     });
   }
 
@@ -161,16 +139,15 @@ class SubNavigation {
     forEach(this.subNavigationItems, (index, item) => {
       const anchor = item.querySelector("a");
 
-      if (item.classList.contains(this.activeClass)) {
-        this.updateMarker(item);
-      }
-
-      SubNavigation.listenForAnchorClick(anchor);
+      this.listenForAnchorClick(anchor);
     });
   }
 
   render() {
-    this.setUpScrollSpy();
+    if (typeof window.CSS !== "undefined" && window.CSS.supports("position", "sticky")) {
+      this.setUpScrollSpy();
+    }
+
     this.setUpItems();
   }
 }

@@ -1,7 +1,6 @@
 @import "../../../assets/scss/design-tokens";
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
-@import "../home/animate";
 
 /**
  * Page: About
@@ -26,17 +25,7 @@
   }
 }
 
-// .section-gradient:first-of-type {
-//   padding-top: 92px;
-//   padding-top: 208px;
-// }
-//
-// .section-gradient:last-of-type {
-//   padding-top: 64px;
-//   padding-top: 116px;
-// }
-
-.section-gradient {
+.background-gradient {
   padding-top: 92px;
 
   @media (min-width: 571px) {
@@ -108,20 +97,5 @@
   @media (min-width: $mq-min-container) {
     margin-bottom: 256px;
     margin-top: 156px;
-  }
-}
-
-.NextPage {
-  margin-bottom: 92px;
-  margin-top: 92px;
-
-  @media (min-width: 660px) {
-    margin-bottom: #{(180 / $max-width) * 100vw};
-    margin-top: #{(180 / $max-width) * 100vw};
-  }
-
-  @media (min-width: $mq-min-container) {
-    margin-bottom: 180px;
-    margin-top: 180px;
   }
 }

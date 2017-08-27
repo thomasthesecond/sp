@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 128);
+/******/ 	return __webpack_require__(__webpack_require__.s = 140);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -115,450 +115,6 @@ exports.objectFitCover = objectFitCover;
 /***/ }),
 
 /***/ 1:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 10:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _utils = __webpack_require__(0);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var SubNavigation = function () {
-  _createClass(SubNavigation, null, [{
-    key: "listenForAnchorClick",
-    value: function listenForAnchorClick(anchor) {
-      anchor.addEventListener("click", function (event) {
-        var hashId = anchor.hash.replace("#", "");
-
-        window.scroll({
-          top: document.getElementById(hashId).offsetTop,
-          left: 0,
-          behavior: "smooth"
-        });
-
-        event.preventDefault();
-      });
-    }
-  }]);
-
-  function SubNavigation(options) {
-    _classCallCheck(this, SubNavigation);
-
-    this.options = options;
-
-    this.subNavigation = document.querySelector(".js-sub-navigation");
-    this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
-    this.subNavigationItems = this.subNavigation.querySelectorAll("li");
-    this.sections = document.querySelectorAll(".js-spy-section");
-
-    this.updateMarker = this.updateMarker.bind(this);
-    this.makeMarkerVisible = this.makeMarkerVisible.bind(this);
-    this.makeMarkerInvisible = this.makeMarkerInvisible.bind(this);
-    this.setMarkerWidth = this.setMarkerWidth.bind(this);
-    this.setMarkerOffset = this.setMarkerOffset.bind(this);
-    this.setMarkerTransition = this.setMarkerTransition.bind(this);
-    this.scrollSpy = this.scrollSpy.bind(this);
-    this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
-    this.setUpItems = this.setUpItems.bind(this);
-    this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
-
-    this.activeClass = "is-active";
-    this.currentItem = null;
-    this.scrollSpySettings = [];
-
-    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
-  }
-
-  _createClass(SubNavigation, [{
-    key: "addActiveClass",
-    value: function addActiveClass(item) {
-      item.classList.add(this.activeClass);
-    }
-  }, {
-    key: "removeActiveClass",
-    value: function removeActiveClass(item) {
-      if (item) {
-        item.classList.remove(this.activeClass);
-      }
-    }
-  }, {
-    key: "scrollActiveMarkerIntoView",
-    value: function scrollActiveMarkerIntoView(offset) {
-      var list = this.subNavigation.querySelector("ul");
-
-      list.scroll({
-        top: 0,
-        left: offset - 24,
-        behavior: "smooth"
-      });
-    }
-  }, {
-    key: "updateMarker",
-    value: function updateMarker(item) {
-      var mql = window.matchMedia("(max-width: 1006px)");
-      var activeWidth = item.offsetWidth;
-      var activeOffset = item.offsetLeft;
-
-      var padding = function padding() {
-        return mql.matches ? 10 : 0;
-      };
-      mql.addListener(padding);
-
-      this.makeMarkerVisible();
-      this.setMarkerWidth(activeWidth);
-      this.setMarkerOffset(activeOffset - padding());
-      this.scrollActiveMarkerIntoView(activeOffset);
-    }
-  }, {
-    key: "makeMarkerVisible",
-    value: function makeMarkerVisible() {
-      this.subNavigationMarker.style.opacity = 1;
-    }
-  }, {
-    key: "makeMarkerInvisible",
-    value: function makeMarkerInvisible() {
-      this.subNavigationMarker.style.opacity = 0;
-    }
-  }, {
-    key: "setMarkerWidth",
-    value: function setMarkerWidth(width) {
-      this.subNavigationMarker.style.width = width + "px";
-    }
-  }, {
-    key: "setMarkerOffset",
-    value: function setMarkerOffset(offset) {
-      this.subNavigationMarker.style.transform = "translateX(" + offset + "px)";
-    }
-  }, {
-    key: "setMarkerTransition",
-    value: function setMarkerTransition() {
-      var _this = this;
-
-      setTimeout(function () {
-        _this.subNavigationMarker.style.transition = "opacity 200ms, transform 200ms";
-      }, 200);
-    }
-  }, {
-    key: "scrollSpy",
-    value: function scrollSpy(settings) {
-      var _this2 = this;
-
-      var currentId = null;
-
-      settings.forEach(function (item) {
-        var top = document.getElementById(item.id).offsetTop;
-        var bottom = top + document.getElementById(item.id).offsetHeight;
-
-        if ((window.pageYOffset || document.documentElement.scrollTop) >= top && (window.pageYOffset || document.documentElement.scrollTop) < bottom) {
-          currentId = item.id;
-        }
-      });
-
-      this.currentItem = this.subNavigation.querySelector("#" + currentId + "-item");
-
-      if (this.currentItem && !this.currentItem.classList.contains(this.activeClass)) {
-        this.removeActiveClass(this.subNavigation.querySelector("." + this.activeClass));
-        this.addActiveClass(this.currentItem);
-      }
-
-      if (this.currentItem) {
-        this.updateMarker(this.currentItem);
-        window.addEventListener("resize", function () {
-          setTimeout(function () {
-            _this2.updateMarker(_this2.currentItem);
-          }, 200);
-        });
-      } else {
-        this.makeMarkerInvisible();
-        this.removeActiveClass(this.subNavigation.querySelector("." + this.activeClass));
-      }
-    }
-  }, {
-    key: "setUpScrollSpy",
-    value: function setUpScrollSpy() {
-      var _this3 = this;
-
-      (0, _utils.forEach)(this.sections, function (index, section) {
-        _this3.scrollSpySettings.push({
-          id: section.id,
-          top: section.offsetTop,
-          bottom: section.offsetTop + section.offsetHeight,
-          height: section.offsetHeight
-        });
-      });
-
-      this.scrollSpy(this.scrollSpySettings);
-
-      window.addEventListener("scroll", function () {
-        setTimeout(function () {
-          _this3.scrollSpy(_this3.scrollSpySettings);
-
-          if (_this3.currentItem && !_this3.motionQuery.matches) {
-            _this3.setMarkerTransition();
-          }
-        }, 100);
-      });
-    }
-  }, {
-    key: "setUpItems",
-    value: function setUpItems() {
-      var _this4 = this;
-
-      (0, _utils.forEach)(this.subNavigationItems, function (index, item) {
-        var anchor = item.querySelector("a");
-
-        if (item.classList.contains(_this4.activeClass)) {
-          _this4.updateMarker(item);
-        }
-
-        SubNavigation.listenForAnchorClick(anchor);
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      this.setUpScrollSpy();
-      this.setUpItems();
-    }
-  }]);
-
-  return SubNavigation;
-}();
-
-exports.default = SubNavigation;
-
-/***/ }),
-
-/***/ 11:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 12:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 128:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import page module
-
-var _about = __webpack_require__(129);
-
-var _about2 = _interopRequireDefault(_about);
-
-__webpack_require__(2);
-
-__webpack_require__(24);
-
-__webpack_require__(5);
-
-__webpack_require__(67);
-
-__webpack_require__(3);
-
-__webpack_require__(7);
-
-__webpack_require__(69);
-
-var _subNavigation = __webpack_require__(9);
-
-var _subNavigation2 = _interopRequireDefault(_subNavigation);
-
-__webpack_require__(26);
-
-__webpack_require__(71);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Import page-specific components
-var aboutPage = new _about2.default();
-var subNavigation = new _subNavigation2.default();
-
-aboutPage.render();
-subNavigation.render();
-
-/***/ }),
-
-/***/ 129:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _about = __webpack_require__(130);
-
-var _about2 = _interopRequireDefault(_about);
-
-__webpack_require__(131);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _about2.default;
-
-/***/ }),
-
-/***/ 130:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _scrollmagic = __webpack_require__(16);
-
-var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
-
-var _utils = __webpack_require__(0);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var AboutPage = function () {
-  function AboutPage() {
-    _classCallCheck(this, AboutPage);
-
-    this.controller = null;
-    this.className = "animate";
-
-    this.mql = window.matchMedia("(min-width: 1024px)");
-    this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
-
-    this.checkScreenSize = this.checkScreenSize.bind(this);
-    this.create = this.create.bind(this);
-    this.animate = this.animate.bind(this);
-    this.destroy = this.destroy.bind(this);
-  }
-
-  _createClass(AboutPage, [{
-    key: "checkScreenSize",
-    value: function checkScreenSize(mql) {
-      if (mql.matches) {
-        this.animate();
-      } else {
-        this.destroy();
-      }
-    }
-  }, {
-    key: "create",
-    value: function create() {
-      this.controller = new _scrollmagic2.default.Controller({
-        globalSceneOptions: {
-          reverse: false,
-          triggerHook: "onEnter"
-        }
-      });
-    }
-  }, {
-    key: "destroy",
-    value: function destroy() {
-      var _this = this;
-
-      if (this.controller) {
-        var nodes = document.querySelectorAll("." + this.className);
-
-        (0, _utils.forEach)(nodes, function (index, node) {
-          node.classList.remove(_this.className);
-        });
-
-        this.controller.destroy(true);
-      }
-    }
-  }, {
-    key: "animate",
-    value: function animate() {
-      if (!this.controller) {
-        this.create();
-      }
-
-      // new ScrollMagic.Scene({ triggerElement: ".js-banner" })
-      //   .setClassToggle(".Banner", this.className)
-      //   .addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-sub-navigation" }).setClassToggle(".SubNavigation", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".CoverPhoto", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".Masthead-title", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-introduction" }).setClassToggle(".Introduction", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-service-cards", offset: -250 }).setClassToggle(".ServiceCards", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-feature" }).setClassToggle(".Feature .CoverPhoto", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-feature" }).setClassToggle(".Feature .Highlight", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-leadership-team", offset: -250 }).setClassToggle(".LeadershipTeam", this.className).addTo(this.controller);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      if (this.reduceMotion.matches) {
-        document.documentElement.classList.add("disable-animations");
-      } else {
-        window.scrollTo(0, 0);
-        this.checkScreenSize(this.mql);
-        this.mql.addListener(this.checkScreenSize);
-      }
-    }
-  }]);
-
-  return AboutPage;
-}();
-
-exports.default = AboutPage;
-
-/***/ }),
-
-/***/ 131:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 15:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 16:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3376,44 +2932,267 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /***/ }),
 
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(1);
-
-/***/ }),
-
-/***/ 24:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(25);
-
-__webpack_require__(1);
-
-__webpack_require__(15);
-
-/***/ }),
-
-/***/ 25:
+/***/ 10:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 26:
+/***/ 11:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 14:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 140:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(12);
+// Import page module
+
+var _about = __webpack_require__(141);
+
+var _about2 = _interopRequireDefault(_about);
+
+__webpack_require__(3);
+
+__webpack_require__(23);
+
+__webpack_require__(6);
+
+__webpack_require__(77);
+
+__webpack_require__(4);
+
+__webpack_require__(79);
+
+var _subNavigation = __webpack_require__(8);
+
+var _subNavigation2 = _interopRequireDefault(_subNavigation);
+
+__webpack_require__(25);
+
+__webpack_require__(81);
+
+__webpack_require__(22);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Import page-specific components
+var aboutPage = new _about2.default();
+
+// Import animations
+
+var subNavigation = new _subNavigation2.default();
+
+aboutPage.render();
+subNavigation.render();
+
+/***/ }),
+
+/***/ 141:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _about = __webpack_require__(142);
+
+var _about2 = _interopRequireDefault(_about);
+
+__webpack_require__(143);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _about2.default;
+
+/***/ }),
+
+/***/ 142:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _scrollmagic = __webpack_require__(1);
+
+var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
+
+var _utils = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var AboutPage = function () {
+  function AboutPage() {
+    _classCallCheck(this, AboutPage);
+
+    this.controller = null;
+    this.className = "animate";
+
+    this.mql = window.matchMedia("(min-width: 1024px)");
+    this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
+
+    this.checkScreenSize = this.checkScreenSize.bind(this);
+    this.create = this.create.bind(this);
+    this.animate = this.animate.bind(this);
+    this.destroy = this.destroy.bind(this);
+  }
+
+  _createClass(AboutPage, [{
+    key: "checkScreenSize",
+    value: function checkScreenSize(mql) {
+      if (mql.matches) {
+        this.animate();
+      } else {
+        this.destroy();
+      }
+    }
+  }, {
+    key: "create",
+    value: function create() {
+      this.controller = new _scrollmagic2.default.Controller({
+        globalSceneOptions: {
+          reverse: false,
+          triggerHook: "onEnter"
+        }
+      });
+    }
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      var _this = this;
+
+      if (this.controller) {
+        var nodes = document.querySelectorAll("." + this.className);
+
+        (0, _utils.forEach)(nodes, function (index, node) {
+          node.classList.remove(_this.className);
+        });
+
+        this.controller.destroy(true);
+      }
+    }
+  }, {
+    key: "animate",
+    value: function animate() {
+      if (!this.controller) {
+        this.create();
+      }
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".CoverPhoto", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".Masthead-title", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-introduction" }).setClassToggle(".Introduction", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-service-cards", offset: -300 }).setClassToggle(".ServiceCards", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-feature" }).setClassToggle(".Feature .CoverPhoto", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-feature" }).setClassToggle(".Feature .Highlight", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-leadership-team", offset: -300 }).setClassToggle(".LeadershipTeam", this.className).addTo(this.controller);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.reduceMotion.matches) {
+        document.documentElement.classList.add("disable-animations");
+      } else {
+        window.scrollTo(0, 0);
+        this.checkScreenSize(this.mql);
+        this.mql.addListener(this.checkScreenSize);
+      }
+    }
+  }]);
+
+  return AboutPage;
+}();
+
+exports.default = AboutPage;
+
+/***/ }),
+
+/***/ 143:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 22:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 23:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(24);
+
+__webpack_require__(2);
+
+__webpack_require__(14);
+
+/***/ }),
+
+/***/ 24:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 25:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(11);
+
+/***/ }),
+
+/***/ 29:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -3423,105 +3202,113 @@ __webpack_require__(12);
 "use strict";
 
 
-__webpack_require__(4);
-
-/***/ }),
-
-/***/ 30:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+__webpack_require__(2);
 
 /***/ }),
 
 /***/ 4:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(5);
 
 /***/ }),
 
 /***/ 5:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-__webpack_require__(6);
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
 /***/ 6:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(68);
-
-/***/ }),
-
-/***/ 68:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 69:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(30);
-
-__webpack_require__(70);
+__webpack_require__(7);
 
 /***/ }),
 
 /***/ 7:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(8);
-
-/***/ }),
-
-/***/ 70:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 71:
+/***/ 77:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(72);
+__webpack_require__(78);
 
 /***/ }),
 
-/***/ 72:
+/***/ 78:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 79:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(29);
+
+__webpack_require__(80);
 
 /***/ }),
 
 /***/ 8:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _subNavigation = __webpack_require__(9);
+
+var _subNavigation2 = _interopRequireDefault(_subNavigation);
+
+__webpack_require__(10);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _subNavigation2.default;
+
+/***/ }),
+
+/***/ 80:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 81:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(82);
+
+/***/ }),
+
+/***/ 82:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3538,15 +3325,198 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _subNavigation = __webpack_require__(10);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _subNavigation2 = _interopRequireDefault(_subNavigation);
+var _scrollmagic = __webpack_require__(1);
 
-__webpack_require__(11);
+var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
+
+var _utils = __webpack_require__(0);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = _subNavigation2.default;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SubNavigation = function () {
+  function SubNavigation() {
+    _classCallCheck(this, SubNavigation);
+
+    this.subNavigation = document.querySelector(".js-sub-navigation");
+    this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
+    this.subNavigationItems = this.subNavigation.querySelectorAll("li");
+    this.sections = document.querySelectorAll(".js-spy-section");
+
+    this.listenForAnchorClick = this.listenForAnchorClick.bind(this);
+    this.updateMarker = this.updateMarker.bind(this);
+    this.makeMarkerVisible = this.makeMarkerVisible.bind(this);
+    this.makeMarkerInvisible = this.makeMarkerInvisible.bind(this);
+    this.setMarkerWidth = this.setMarkerWidth.bind(this);
+    this.setMarkerOffset = this.setMarkerOffset.bind(this);
+    this.setMarkerTransition = this.setMarkerTransition.bind(this);
+    this.updateMarkerOffsetOnResize = this.updateMarkerOffsetOnResize.bind(this);
+    this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
+    this.setUpItems = this.setUpItems.bind(this);
+    this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
+
+    this.currentItem = null;
+
+    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
+  }
+
+  _createClass(SubNavigation, [{
+    key: "listenForAnchorClick",
+    value: function listenForAnchorClick(anchor) {
+      var _this = this;
+
+      anchor.addEventListener("click", function (event) {
+        var hashId = anchor.hash.replace("#", "");
+
+        window.scroll({
+          top: document.getElementById(hashId).offsetTop - _this.subNavigation.offsetHeight,
+          left: 0,
+          behavior: "smooth"
+        });
+
+        event.preventDefault();
+      });
+    }
+  }, {
+    key: "scrollActiveMarkerIntoView",
+    value: function scrollActiveMarkerIntoView(offset) {
+      var list = this.subNavigation.querySelector("ul");
+
+      if (typeof list.scroll === "function") {
+        list.scroll({
+          top: 0,
+          left: offset - 24,
+          behavior: "smooth"
+        });
+      }
+    }
+  }, {
+    key: "updateMarker",
+    value: function updateMarker(item) {
+      var mql = window.matchMedia("(max-width: 1006px)");
+      var activeWidth = item.offsetWidth;
+      var activeOffset = item.offsetLeft;
+
+      var padding = function padding() {
+        return mql.matches ? 10 : 0;
+      };
+      mql.addListener(padding);
+
+      this.makeMarkerVisible();
+      this.setMarkerWidth(activeWidth);
+      this.setMarkerOffset(activeOffset - padding());
+      this.scrollActiveMarkerIntoView(activeOffset);
+    }
+  }, {
+    key: "makeMarkerVisible",
+    value: function makeMarkerVisible() {
+      this.subNavigationMarker.style.opacity = 1;
+    }
+  }, {
+    key: "makeMarkerInvisible",
+    value: function makeMarkerInvisible() {
+      this.subNavigationMarker.style.opacity = 0;
+    }
+  }, {
+    key: "setMarkerWidth",
+    value: function setMarkerWidth(width) {
+      this.subNavigationMarker.style.width = width + "px";
+    }
+  }, {
+    key: "setMarkerOffset",
+    value: function setMarkerOffset(offset) {
+      this.subNavigationMarker.style.transform = "translateX(" + offset + "px)";
+    }
+  }, {
+    key: "setMarkerTransition",
+    value: function setMarkerTransition() {
+      var _this2 = this;
+
+      setTimeout(function () {
+        _this2.subNavigationMarker.style.transition = "opacity 200ms, transform 200ms";
+      }, 200);
+    }
+  }, {
+    key: "updateMarkerOffsetOnResize",
+    value: function updateMarkerOffsetOnResize() {
+      var _this3 = this;
+
+      window.addEventListener("resize", function () {
+        setTimeout(function () {
+          if (_this3.currentItem) {
+            _this3.updateMarker(_this3.currentItem);
+          }
+        }, 100);
+      });
+    }
+  }, {
+    key: "setUpScrollSpy",
+    value: function setUpScrollSpy() {
+      var _this4 = this;
+
+      var controller = new _scrollmagic2.default.Controller({
+        globalSceneOptions: {
+          triggerHook: "onEnter"
+        }
+      });
+
+      this.updateMarkerOffsetOnResize();
+
+      (0, _utils.forEach)(this.sections, function (index, section) {
+        var scene = new _scrollmagic2.default.Scene({
+          duration: document.getElementById(section.id).offsetHeight,
+          offset: document.getElementById(section.id).offsetTop - _this4.subNavigation.offsetHeight
+        }).addTo(controller);
+
+        scene.on("enter", function () {
+          _this4.currentItem = document.getElementById(section.id + "-item");
+          _this4.updateMarker(_this4.currentItem);
+
+          if (_this4.currentItem && !_this4.motionQuery.matches) {
+            _this4.setMarkerTransition();
+          }
+        });
+
+        scene.on("leave", function (event) {
+          if (index === 0 && event.scrollDirection === "REVERSE") {
+            _this4.makeMarkerInvisible();
+          }
+
+          if (index === _this4.sections.length - 1 && event.scrollDirection === "FORWARD") {
+            _this4.makeMarkerInvisible();
+          }
+        });
+      });
+    }
+  }, {
+    key: "setUpItems",
+    value: function setUpItems() {
+      var _this5 = this;
+
+      (0, _utils.forEach)(this.subNavigationItems, function (index, item) {
+        var anchor = item.querySelector("a");
+
+        _this5.listenForAnchorClick(anchor);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (typeof window.CSS !== "undefined" && window.CSS.supports("position", "sticky")) {
+        this.setUpScrollSpy();
+      }
+
+      this.setUpItems();
+    }
+  }]);
+
+  return SubNavigation;
+}();
+
+exports.default = SubNavigation;
 
 /***/ })
 

@@ -4,34 +4,30 @@
 
 /**
  * Component: Leadership team
- * @type Organism
  */
 
 .LeadershipTeam {
-  display: grid;
-  grid-gap: 0;
-  grid-row-gap: 64px;
-  grid-template-columns: repeat(2, 1fr);
-  // grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  // max-width: 630px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
 
-  @media (min-width: 480px) {
-    grid-column-gap: 24px; // #{(24 / 904) * 100%};
-    // grid-gap: 80px;
-    grid-row-gap: 56px;
-    grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
-    // grid-template-columns: repeat(3, minmax(160px, 1fr));
-    // max-width: 630px;
-  }
-
-  @media (min-width: 480px) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 904px;
-  }
-
-  // @media (min-width: 968px) {
-  @media (min-width: 808px) {
-    grid-column-gap: 80px; // #{(80 / 904) * 100%};
-  }
+  // @supports (display: grid) {
+  //   display: grid;
+  //   grid-gap: 0;
+  //   grid-row-gap: 64px;
+  //   grid-template-columns: repeat(2, 1fr);
+  //
+  //   @media (min-width: 480px) {
+  //     grid-column-gap: 24px;
+  //     grid-row-gap: 56px;
+  //     grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //     max-width: 904px;
+  //   }
+  //
+  //   @media (min-width: 808px) {
+  //     grid-column-gap: 80px;
+  //   }
+  // }
 }

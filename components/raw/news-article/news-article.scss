@@ -22,8 +22,8 @@
 
 .NewsArticle-article {
   @media (min-width: 800px) {
-    max-width: #{$max-width-investors-article}px;
-    width: #{($max-width-investors-article / $max-width-investors-page) * 100%};
+    max-width: #{$max-width-content}px;
+    width: #{($max-width-content / $max-width-grid-padded) * 100%};
   }
 }
 
@@ -34,7 +34,7 @@
     $min-width: 600
   );
 
-  color: $color-text-news-date;
+  color: $color-text-meta;
   margin-bottom: 0;
   margin-top: 0;
 

@@ -9,7 +9,7 @@
 
 .UtilityLinks {
   display: flex;
-  font-size: 14px;
+  font-size: #{$font-size-body-small}px;
   justify-content: space-between;
   width: 100%;
 
@@ -17,6 +17,7 @@
     border-top: 1px solid rgba($color-border-default, .37);
     flex-wrap: wrap;
     line-height: (28 / 12);
+    padding-top: 40px;
   }
 
   a {

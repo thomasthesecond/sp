@@ -7,5 +7,54 @@
  * @type Atom
  */
 
-.Blockquote {
+blockquote {
+  color: $color-text-blockquote;
+  margin: 0;
+
+  p {
+    @include fluid-type(
+      $min-font-size: $font-size-heading-4-min,
+      $max-font-size: $font-size-heading-4,
+      $min-width: 600,
+      $max-width: 1024
+    );
+
+    font-family: $font-family-serif;
+    font-weight: $font-weight-light;
+    line-height: (32 / $font-size-heading-4);
+    margin-bottom: #{(32 / $font-size-heading-4) * 1em};
+    margin-top: 0;
+  }
+
+  cite {
+    @include fluid-type(
+      $min-font-size: $font-size-default-min,
+      $max-font-size: $font-size-default,
+      $min-width: 600,
+      $max-width: 1024
+    );
+
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    line-height: (24 / $font-size-default);
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.blockquote-location {
+  @include fluid-type(
+    $min-font-size: $font-size-body-tiny,
+    $max-font-size: $font-size-body-small,
+    $min-width: 600,
+    $max-width: 1024
+  );
+
+  color: $color-text-meta;
+  display: block;
+  font-weight: $font-weight-regular;
+  line-height: (17 / $font-size-body-small);
+  margin-top: #{(6 / $font-size-body-small) * 1em};
 }

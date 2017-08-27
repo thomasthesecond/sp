@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 124);
+/******/ 	return __webpack_require__(__webpack_require__.s = 136);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -115,213 +115,6 @@ exports.objectFitCover = objectFitCover;
 /***/ }),
 
 /***/ 1:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 124:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Import page module
-
-var _home = __webpack_require__(125);
-
-var _home2 = _interopRequireDefault(_home);
-
-__webpack_require__(2);
-
-var _coverVideo = __webpack_require__(60);
-
-var _coverVideo2 = _interopRequireDefault(_coverVideo);
-
-__webpack_require__(17);
-
-__webpack_require__(5);
-
-var _locationFinder = __webpack_require__(19);
-
-var _locationFinder2 = _interopRequireDefault(_locationFinder);
-
-__webpack_require__(63);
-
-__webpack_require__(3);
-
-__webpack_require__(22);
-
-__webpack_require__(65);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var homePage = new _home2.default();
-
-// Import page-specific components
-
-var coverVideo = new _coverVideo2.default();
-var locationFinder = new _locationFinder2.default();
-
-homePage.render();
-coverVideo.render();
-locationFinder.render();
-
-/***/ }),
-
-/***/ 125:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _home = __webpack_require__(126);
-
-var _home2 = _interopRequireDefault(_home);
-
-__webpack_require__(127);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _home2.default;
-
-/***/ }),
-
-/***/ 126:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _scrollmagic = __webpack_require__(16);
-
-var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
-
-var _utils = __webpack_require__(0);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var HomePage = function () {
-  function HomePage() {
-    _classCallCheck(this, HomePage);
-
-    this.controller = null;
-    this.className = "animate";
-
-    this.mql = window.matchMedia("(min-width: 1024px)");
-    this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
-
-    this.checkScreenSize = this.checkScreenSize.bind(this);
-    this.create = this.create.bind(this);
-    this.animate = this.animate.bind(this);
-    this.destroy = this.destroy.bind(this);
-  }
-
-  _createClass(HomePage, [{
-    key: "checkScreenSize",
-    value: function checkScreenSize(mql) {
-      if (mql.matches) {
-        this.animate();
-      } else {
-        this.destroy();
-      }
-    }
-  }, {
-    key: "create",
-    value: function create() {
-      this.controller = new _scrollmagic2.default.Controller({
-        globalSceneOptions: {
-          reverse: false,
-          triggerHook: "onEnter"
-        }
-      });
-    }
-  }, {
-    key: "destroy",
-    value: function destroy() {
-      var _this = this;
-
-      if (this.controller) {
-        var nodes = document.querySelectorAll("." + this.className);
-
-        (0, _utils.forEach)(nodes, function (index, node) {
-          node.classList.remove(_this.className);
-        });
-
-        this.controller.destroy(true);
-      }
-    }
-  }, {
-    key: "animate",
-    value: function animate() {
-      if (!this.controller) {
-        this.create();
-      }
-
-      // new ScrollMagic.Scene({ triggerElement: ".js-banner" })
-      //   .setClassToggle(".Banner", this.className)
-      //   .addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".Masthead", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".CoverVideo", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".Masthead .Tagline", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".Masthead" }).setClassToggle(".Masthead .MoreLink", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-location-finder" }).setClassToggle(".LocationFinder", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-introduction", offset: 500 }).setClassToggle(".Introduction", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-partnerships-section", offset: 500 }).setClassToggle(".ImageBlock#partnerships-section", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-investors-section", offset: 500 }).setClassToggle(".ImageBlock#investors-section", this.className).addTo(this.controller);
-
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-careers-section", offset: 500 }).setClassToggle(".ImageBlock#careers-section", this.className).addTo(this.controller);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      if (this.reduceMotion.matches) {
-        document.documentElement.classList.add("disable-animations");
-      } else {
-        window.scrollTo(0, 0);
-        this.checkScreenSize(this.mql);
-        this.mql.addListener(this.checkScreenSize);
-      }
-    }
-  }]);
-
-  return HomePage;
-}();
-
-exports.default = HomePage;
-
-/***/ }),
-
-/***/ 127:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 16:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3139,24 +2932,59 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /***/ }),
 
-/***/ 17:
+/***/ 136:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(18);
+// Import page module
+
+var _home = __webpack_require__(137);
+
+var _home2 = _interopRequireDefault(_home);
+
+__webpack_require__(3);
+
+var _coverVideo = __webpack_require__(70);
+
+var _coverVideo2 = _interopRequireDefault(_coverVideo);
+
+__webpack_require__(15);
+
+__webpack_require__(6);
+
+var _locationFinder = __webpack_require__(17);
+
+var _locationFinder2 = _interopRequireDefault(_locationFinder);
+
+__webpack_require__(73);
+
+__webpack_require__(4);
+
+__webpack_require__(20);
+
+__webpack_require__(75);
+
+__webpack_require__(22);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Import page-specific components
+var homePage = new _home2.default();
+
+// Import animations
+
+var coverVideo = new _coverVideo2.default();
+var locationFinder = new _locationFinder2.default();
+
+homePage.render();
+coverVideo.render();
+locationFinder.render();
 
 /***/ }),
 
-/***/ 18:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 19:
+/***/ 137:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3166,11 +2994,179 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _locationFinder = __webpack_require__(20);
+var _home = __webpack_require__(138);
+
+var _home2 = _interopRequireDefault(_home);
+
+__webpack_require__(139);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _home2.default;
+
+/***/ }),
+
+/***/ 138:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _scrollmagic = __webpack_require__(1);
+
+var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
+
+var _utils = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var HomePage = function () {
+  function HomePage() {
+    _classCallCheck(this, HomePage);
+
+    this.controller = null;
+    this.className = "animate";
+
+    this.mql = window.matchMedia("(min-width: 1024px)");
+    this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
+
+    this.checkScreenSize = this.checkScreenSize.bind(this);
+    this.create = this.create.bind(this);
+    this.animate = this.animate.bind(this);
+    this.destroy = this.destroy.bind(this);
+  }
+
+  _createClass(HomePage, [{
+    key: "checkScreenSize",
+    value: function checkScreenSize(mql) {
+      if (mql.matches) {
+        this.animate();
+      } else {
+        this.destroy();
+      }
+    }
+  }, {
+    key: "create",
+    value: function create() {
+      this.controller = new _scrollmagic2.default.Controller({
+        globalSceneOptions: {
+          reverse: false,
+          triggerHook: "onEnter"
+        }
+      });
+    }
+  }, {
+    key: "destroy",
+    value: function destroy() {
+      var _this = this;
+
+      if (this.controller) {
+        var nodes = document.querySelectorAll("." + this.className);
+
+        (0, _utils.forEach)(nodes, function (index, node) {
+          node.classList.remove(_this.className);
+        });
+
+        this.controller.destroy(true);
+      }
+    }
+  }, {
+    key: "animate",
+    value: function animate() {
+      if (!this.controller) {
+        this.create();
+      }
+
+      // new ScrollMagic.Scene({ triggerElement: ".js-banner" })
+      //   .setClassToggle(".Banner", this.className)
+      //   .addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".Masthead", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".CoverVideo", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".Masthead .Tagline", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".Masthead" }).setClassToggle(".Masthead .MoreLink", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-location-finder" }).setClassToggle(".LocationFinder", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-introduction", offset: 0 }).setClassToggle(".Introduction", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-partnerships-section", offset: 100 }).setClassToggle("#partnerships-section", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-investors-section", offset: 100 }).setClassToggle("#investors-section", this.className).addTo(this.controller);
+
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-careers-section", offset: 100 }).setClassToggle("#careers-section", this.className).addTo(this.controller);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.reduceMotion.matches) {
+        document.documentElement.classList.add("disable-animations");
+      } else {
+        window.scrollTo(0, 0);
+        this.checkScreenSize(this.mql);
+        this.mql.addListener(this.checkScreenSize);
+      }
+    }
+  }]);
+
+  return HomePage;
+}();
+
+exports.default = HomePage;
+
+/***/ }),
+
+/***/ 139:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 15:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(16);
+
+/***/ }),
+
+/***/ 16:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 17:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _locationFinder = __webpack_require__(18);
 
 var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
-__webpack_require__(21);
+__webpack_require__(19);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3178,17 +3174,7 @@ exports.default = _locationFinder2.default;
 
 /***/ }),
 
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(1);
-
-/***/ }),
-
-/***/ 20:
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3250,6 +3236,30 @@ exports.default = LocationFinder;
 
 /***/ }),
 
+/***/ 19:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 20:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(21);
+
+/***/ }),
+
 /***/ 21:
 /***/ (function(module, exports) {
 
@@ -3258,16 +3268,6 @@ exports.default = LocationFinder;
 /***/ }),
 
 /***/ 22:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(23);
-
-/***/ }),
-
-/***/ 23:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3280,35 +3280,45 @@ __webpack_require__(23);
 "use strict";
 
 
-__webpack_require__(4);
+__webpack_require__(2);
 
 /***/ }),
 
 /***/ 4:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(6);
+__webpack_require__(5);
 
 /***/ }),
 
-/***/ 6:
+/***/ 5:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 60:
+/***/ 6:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(7);
+
+/***/ }),
+
+/***/ 7:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3318,11 +3328,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _coverVideo = __webpack_require__(61);
+var _coverVideo = __webpack_require__(71);
 
 var _coverVideo2 = _interopRequireDefault(_coverVideo);
 
-__webpack_require__(62);
+__webpack_require__(72);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3330,7 +3340,7 @@ exports.default = _coverVideo2.default;
 
 /***/ }),
 
-/***/ 61:
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3443,41 +3453,41 @@ exports.default = CoverVideo;
 
 /***/ }),
 
-/***/ 62:
+/***/ 72:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 63:
+/***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(64);
+__webpack_require__(74);
 
 /***/ }),
 
-/***/ 64:
+/***/ 74:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 65:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(66);
+__webpack_require__(76);
 
 /***/ }),
 
-/***/ 66:
+/***/ 76:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

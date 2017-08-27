@@ -14,7 +14,8 @@
     $min-width: 600
   );
 
-  color: #12769f;
+  backface-visibility: hidden;
+  color: $color-text-more-link;
   display: inline-block;
   line-height: (19 / 14);
   position: relative;
@@ -24,19 +25,18 @@
   &:active,
   &:focus {
     .icon {
-      transform: translateX(24px + 6px);
+      transform: translateX(0);
     }
   }
 }
 
 .MoreLink .icon {
-  display: block;
+  display: inline-block;
   font-size: 24px;
   height: 10px;
-  position: absolute;
-  right: 0;
-  top: 5px;
-  transform: translateX(24px + 12px);
+  stroke: currentColor;
+  stroke-width: 1px;
+  transform: translateX(6px);
   transition: color 200ms, transform 200ms;
 }
 

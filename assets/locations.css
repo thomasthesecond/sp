@@ -60,50 +60,53 @@
  */
 .LocationFinder.is-sticky {
   background-color: #fff;
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
-    padding-top: 24px;
-  }
+  -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
+          box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
 }
 
 @media (min-width: 670px) {
   .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
-.LocationFinder-container {
+.LocationFinder .container {
   background-color: #fff;
   position: relative;
 }
 
 @media (min-width: 670px) {
-  .LocationFinder-container {
+  .LocationFinder .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 6.97674vw;
-    min-height: 60px;
     max-height: 90px;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 669px) {
+  .LocationFinder.is-sticky .container {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 @media (min-width: 670px) {
-  .LocationFinder:not(.is-sticky) .LocationFinder-container {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+  .LocationFinder:not(.is-sticky) .container {
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
 .LocationFinder fieldset {
   border: 0;
+  height: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 @media (min-width: 670px) {
@@ -112,18 +115,11 @@
   }
 }
 
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky fieldset {
-    margin-bottom: -24px;
-  }
-}
-
 .LocationFinder legend {
   color: rgba(37, 57, 93, 0.79);
   display: block;
-  font-size: 16px;
-  font-weight: 700;
   float: left;
+  font-weight: 700;
   height: 100%;
   line-height: 1;
   width: 22.48062%;
@@ -155,8 +151,6 @@
 .LocationFinder select {
   border: 0;
   height: 100%;
-  -webkit-transition: opacity 200ms;
-  transition: opacity 200ms;
   width: 100%;
 }
 
@@ -199,16 +193,22 @@
 }
 
 @media (max-width: 669px) {
+  .LocationFinder.is-sticky select:first-of-type {
+    border: 0;
+    margin-bottom: 0;
+    padding-bottom: 22px;
+    padding-left: 24px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 669px) {
   .LocationFinder.is-sticky select:not(:first-of-type) {
-    opacity: 0;
+    display: none;
   }
 }
 
 .LocationFinder-button {
-  -webkit-transition: -webkit-transform 200ms;
-  transition: -webkit-transform 200ms;
-  transition: transform 200ms;
-  transition: transform 200ms, -webkit-transform 200ms;
   width: 100%;
 }
 
@@ -227,9 +227,7 @@
 
 @media (max-width: 669px) {
   .LocationFinder.is-sticky .LocationFinder-button {
-    -webkit-transform: translateY(-24px);
-            transform: translateY(-24px);
-    z-index: 1;
+    display: none;
   }
 }
 
@@ -439,35 +437,80 @@
 }
 
 .LocationsPage-grid {
-  grid-template-columns: auto;
-  grid-template-rows: auto;
   margin-top: 48px;
 }
 
 @media (min-width: 41.875em) {
   .LocationsPage-grid {
-    grid-template-columns: 38.60465% 14.57364% 46.82171%;
     margin-top: 19.06977vw;
+  }
+  @supports (display: grid) {
+    .LocationsPage-grid {
+      overflow: initial;
+    }
   }
 }
 
 @media (min-width: 83.625em) {
   .LocationsPage-grid {
-    grid-template-columns: 108px 444px 188px 550px;
     margin-top: 246px;
+  }
+}
+
+@supports (display: grid) {
+  .LocationsPage-grid {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+  @media (min-width: 41.875em) {
+    .LocationsPage-grid {
+      grid-template-columns: 38.60465% 14.57364% 46.82171%;
+    }
+  }
+  @media (min-width: 83.625em) {
+    .LocationsPage-grid {
+      grid-template-columns: 108px 444px 188px 550px;
+    }
   }
 }
 
 @media (min-width: 41.875em) {
   .LocationsPage-content {
-    grid-column: 1 / 2;
-    grid-row: 1;
+    float: left;
+    width: 38.60465%;
+  }
+  @supports (display: grid) {
+    .LocationsPage-content {
+      float: none;
+      width: auto;
+    }
   }
 }
 
 @media (min-width: 83.625em) {
   .LocationsPage-content {
-    grid-column: 2 / 3;
+    margin-left: 8.37209%;
+    width: 34.4186%;
+  }
+  @supports (display: grid) {
+    .LocationsPage-content {
+      margin-left: 0;
+      width: auto;
+    }
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 41.875em) {
+    .LocationsPage-content {
+      grid-column: 1 / 2;
+      grid-row: 1;
+    }
+  }
+  @media (min-width: 83.625em) {
+    .LocationsPage-content {
+      grid-column: 2 / 3;
+    }
   }
 }
 
@@ -482,20 +525,50 @@
 
 @media (min-width: 41.875em) {
   .LocationsPage-aside {
-    -ms-flex-item-align: start;
-        align-self: start;
-    grid-column: 3 / 4;
-    grid-row: 1;
     position: -webkit-sticky;
     position: sticky;
-    top: 19.06977vw;
+    top: 19.06977%;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationsPage-aside {
+    float: right;
+    margin-left: 14.57364%;
+    width: 46.82171%;
+  }
+  @supports (display: grid) {
+    .LocationsPage-aside {
+      margin-left: 0;
+      width: auto;
+    }
   }
 }
 
 @media (min-width: 83.625em) {
   .LocationsPage-aside {
-    grid-column: 4 / 5;
-    top: 246px;
+    width: 42.63566%;
+  }
+  @supports (display: grid) {
+    .LocationsPage-aside {
+      width: 100%;
+    }
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 41.875em) {
+    .LocationsPage-aside {
+      -ms-flex-item-align: start;
+          align-self: start;
+      grid-column: 3 / 4;
+      grid-row: 1;
+    }
+  }
+  @media (min-width: 83.625em) {
+    .LocationsPage-aside {
+      grid-column: 4 / 5;
+    }
   }
 }
 

@@ -55,12 +55,6 @@
         <h1 class="Document-title">Icons</h1>
         
 
-<div class="Status Status--tag">
-
-<label class="Status-label" style="background-color: #FF3333; border-color: #FF3333;">Draft</label>
-
-</div>
-
 
         
     </div>
@@ -75,7 +69,86 @@
 
     
     
-    <svg
+    <p>SVG icons can be found in <code>src/components/_icons</code>.</p>
+<p>To use the icons, first include the icon sprite on the page (typically at the bottom of the <code>body</code>).</p>
+<p>Then, using the icon’s ID, add it to the page like so:</p>
+<code class="lang-html"><pre><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">xmlns:xlink</span>=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"icon-arrow"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span></pre></code><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Icon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  <code>icon-arrow</code></td>
+<td><svg class="icon" viewBox="0 0 96 32" width="32"><use xlink:href="#icon-arrow"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-building</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-building"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-carot-left</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-carot-left"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-carot-right</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-carot-right"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-chart-line</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-chart-line"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-clipboard</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-clipboard"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-eye</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-eye"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-first-aid</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-first-aid"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-heart</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-heart"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-pill</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-pill"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-select-arrow</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-select-arrow"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-stethoscope</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-stethoscope"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-stethoscope-mono</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-stethoscope-mono"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-syringe</code></td>
+<td><svg class="icon" viewBox="0 0 32 32" width="32"><use xlink:href="#icon-syringe"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-triangle-down</code></td>
+<td><svg class="icon" viewBox="0 0 64 32" width="32"><use xlink:href="#icon-triangle-down"></use></svg></td>
+</tr>
+<tr>
+<td>  <code>icon-triangle-up</code></td>
+<td><svg class="icon" viewBox="0 0 64 32" width="32"><use xlink:href="#icon-triangle-up"></use></svg></td>
+</tr>
+</tbody>
+</table>
+<svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   version="1.1"
@@ -88,16 +161,6 @@
     </symbol>
 
     <symbol id="icon-building" viewBox="0 0 32 32">
-      <title>Building icon</title>
-      <path d="M19.8 9.7v-7.3h-19.8v27.2h32v-19.9h-12.2zM1.5 28v-24.2h16.8v24.2h-16.8zM30.5 28.1h-10.7v-17h10.8v17z"></path>
-      <path d="M4.2 9.8h11.4v1h-11.4v-1z"></path>
-      <path d="M4.2 16.7h11.4v1h-11.4v-1z"></path>
-      <path d="M22.5 16.6h5.7v1h-5.7v-1z"></path>
-      <path d="M22.5 22h5.7v1h-5.7v-1z"></path>
-      <path d="M6.9 21.6h5.9v6.4h-5.9v-6.4z"></path>
-    </symbol>
-
-    <symbol id="icon-building-color" viewBox="0 0 32 32">
       <title>Building icon</title>
       <path fill="#b4c2c7" d="M19.8 9.7v-7.3h-19.8v27.2h32v-19.9h-12.2zM1.5 28v-24.2h16.8v24.2h-16.8zM30.5 28.1h-10.7v-17h10.8v17z"></path>
       <path fill="#6091a1" d="M4.2 9.8h11.4v1h-11.4v-1z"></path>
@@ -138,28 +201,11 @@
 
     <symbol id="icon-eye" viewBox="0 0 32 32">
       <title>Eye icon</title>
-      <path d="M16 24.9c-6.2 0-11.5-2.9-15.7-8.5l-0.3-0.4 0.3-0.4c4.2-5.6 9.5-8.5 15.7-8.5s11.5 2.9 15.7 8.5l0.3 0.4-0.3 0.4c-4.2 5.6-9.5 8.5-15.7 8.5zM1.6 16c4 5.1 8.7 7.6 14.4 7.6s10.4-2.5 14.4-7.6c-3.9-5.1-8.7-7.6-14.4-7.6s-10.4 2.5-14.4 7.6z"></path>
-      <path d="M15.9 9.6c-0.7 0-1.3 0.1-2 0.3 0.8 0.6 1.4 1.5 1.4 2.5 0 1.7-1.5 3.1-3.3 3.1-1.2 0-2.2-0.6-2.8-1.4-0.2 0.6-0.4 1.3-0.4 2.1 0 3.7 3.1 6.6 7 6.6s7-3 7-6.6c0.1-3.6-3-6.6-6.9-6.6z"></path>
-    </symbol>
-
-    <symbol id="icon-eye-color" viewBox="0 0 32 32">
-      <title>Eye icon</title>
       <path fill="#b4c2c7" d="M16 24.9c-6.2 0-11.5-2.9-15.7-8.5l-0.3-0.4 0.3-0.4c4.2-5.6 9.5-8.5 15.7-8.5s11.5 2.9 15.7 8.5l0.3 0.4-0.3 0.4c-4.2 5.6-9.5 8.5-15.7 8.5zM1.6 16c4 5.1 8.7 7.6 14.4 7.6s10.4-2.5 14.4-7.6c-3.9-5.1-8.7-7.6-14.4-7.6s-10.4 2.5-14.4 7.6z"></path>
       <path fill="#6091a1" d="M15.9 9.6c-0.7 0-1.3 0.1-2 0.3 0.8 0.6 1.4 1.5 1.4 2.5 0 1.7-1.5 3.1-3.3 3.1-1.2 0-2.2-0.6-2.8-1.4-0.2 0.6-0.4 1.3-0.4 2.1 0 3.7 3.1 6.6 7 6.6s7-3 7-6.6c0.1-3.6-3-6.6-6.9-6.6z"></path>
     </symbol>
 
     <symbol id="icon-first-aid" viewBox="0 0 32 32">
-      <title>First aid icon</title>
-      <path d="M19.4 30.4h-6.8v-0.5h-1.6v2.1h10v-2.1h-1.6z"></path>
-      <path d="M29.3 20.4h-8.3v1.6h9.9v-2.1h-1.6z"></path>
-      <path d="M21 11.6h-1.6v2.1h9.9v-1.6h-8.3z"></path>
-      <path d="M2.7 20.4v-0.5h-1.6v2.1h9.9v-1.6z"></path>
-      <path d="M12.6 2.1h6.8v1.6h-6.8v-1.6z"></path>
-      <path d="M12.6 11.6h-1.6v0.5h-8.3v1.6h9.9z"></path>
-      <path d="M21 10v-10h-10v10h-10v9.9h10v9.9h10v-9.9h10v-9.9h-10zM29.3 13.7v4.6h-10v9.9h-6.8v-9.9h-10v-6.7h10.1v-10h6.8v9.9h10v2.2z"></path>
-    </symbol>
-
-    <symbol id="icon-first-aid-color" viewBox="0 0 32 32">
       <title>First aid icon</title>
       <path fill="#edf6f6" d="M19.4 30.4h-6.8v-0.5h-1.6v2.1h10v-2.1h-1.6z"></path>
       <path fill="#edf6f6" d="M29.3 20.4h-8.3v1.6h9.9v-2.1h-1.6z"></path>
@@ -177,13 +223,6 @@
 
     <symbol id="icon-pill" viewBox="0 0 32 32">
       <title>Pill icon</title>
-      <path d="M22.1 31.7c-2.6 0-5-1-6.8-2.8l-12.5-12.5c-1.8-1.8-2.8-4.2-2.8-6.8s1-5 2.8-6.8c1.8-1.8 4.3-2.8 6.8-2.8s5 1 6.8 2.8l12.4 12.4c1.8 1.8 2.8 4.2 2.8 6.8s-1 5-2.8 6.8c-1.8 1.9-4.2 2.9-6.7 2.9zM9.6 1.6c-2.1 0-4.1 0.9-5.6 2.4s-2.4 3.5-2.4 5.6 0.8 4.1 2.3 5.6l12.4 12.4c1.5 1.5 3.5 2.3 5.6 2.3s4.1-0.8 5.6-2.3c1.5-1.5 2.3-3.5 2.3-5.6s-0.8-4.1-2.3-5.6l-12.2-12.4c-1.5-1.5-3.5-2.4-5.7-2.4z"></path>
-      <path d="M8.8 22.4l13.6-13.6 6.8 6.8c3.8 3.8 3.8 9.9 0 13.6s-9.9 3.8-13.6 0l-6.8-6.8z"></path>
-      <path d="M13.8 8.5l-2.4-2.5c-2-0.7-3.4-0.7-4.1 0l-0.8-0.8c1.1-1 2.9-1.1 5.4-0.1h0.1l2.6 2.6-0.8 0.8z"></path>
-    </symbol>
-
-    <symbol id="icon-pill-color" viewBox="0 0 32 32">
-      <title>Pill icon</title>
       <path fill="#b4c2c7" d="M22.1 31.7c-2.6 0-5-1-6.8-2.8l-12.5-12.5c-1.8-1.8-2.8-4.2-2.8-6.8s1-5 2.8-6.8c1.8-1.8 4.3-2.8 6.8-2.8s5 1 6.8 2.8l12.4 12.4c1.8 1.8 2.8 4.2 2.8 6.8s-1 5-2.8 6.8c-1.8 1.9-4.2 2.9-6.7 2.9zM9.6 1.6c-2.1 0-4.1 0.9-5.6 2.4s-2.4 3.5-2.4 5.6 0.8 4.1 2.3 5.6l12.4 12.4c1.5 1.5 3.5 2.3 5.6 2.3s4.1-0.8 5.6-2.3c1.5-1.5 2.3-3.5 2.3-5.6s-0.8-4.1-2.3-5.6l-12.2-12.4c-1.5-1.5-3.5-2.4-5.7-2.4z"></path>
       <path fill="#6091a1" d="M8.8 22.4l13.6-13.6 6.8 6.8c3.8 3.8 3.8 9.9 0 13.6s-9.9 3.8-13.6 0l-6.8-6.8z"></path>
       <path fill="#6facc1" d="M13.8 8.5l-2.4-2.5c-2-0.7-3.4-0.7-4.1 0l-0.8-0.8c1.1-1 2.9-1.1 5.4-0.1h0.1l2.6 2.6-0.8 0.8z"></path>
@@ -196,38 +235,19 @@
 
     <symbol id="icon-stethoscope" viewBox="0 0 32 32">
       <title>Stethoscope icon</title>
-      <path d="M19.8 19.1c0 0 0 0 0 0-1 0-2 0.4-2.7 1.1-1.3 1.3-1.5 3.3-0.5 4.8l-4 4c-1.1 1.1-2.7 1.6-4.2 1.3-1.4-0.3-2.6-1.4-2.8-2.8-0.3-1.5 0.2-3.1 1.3-4.2l5.9-5.9-0.1-0.1c0.6 0.5 1.3 0.8 2 1.1 0.6 0.2 1.3 0.3 2 0.3 1.6 0 3.2-0.6 4.3-1.8l4.9-4.9-1.1-1.1-4.9 4.9c-1.2 1.2-3.1 1.6-4.7 1.1-1.7-0.6-3.1-2-3.7-3.7-0.6-1.6-0.1-3.5 1.1-4.7l4.9-4.9-1.1-1.1-4.9 4.9c-1.6 1.6-2.2 4.1-1.5 6.3 0.3 1 0.9 1.9 1.7 2.7l-5.9 5.9c-1.5 1.5-2.1 3.6-1.7 5.6 0.4 2.1 2 3.6 4.1 4.1 0.2 0 0.7 0 1.1 0 1.6 0 3.2-0.6 4.4-1.8l4-4c0.6 0.4 1.4 0.6 2.1 0.6 1 0 2-0.4 2.7-1.1 1.5-1.5 1.5-3.9 0-5.4-0.7-0.8-1.7-1.2-2.7-1.2zM21.4 24.5c-0.9 0.9-2.3 0.9-3.2 0s-0.9-2.3 0-3.2c0.4-0.4 1-0.7 1.6-0.7 0 0 0 0 0 0 0.6 0 1.2 0.2 1.6 0.7 0.9 0.9 0.9 2.3 0 3.2z"></path>
-      <path d="M19.085 0.665c0.859 0.859 0.859 2.252 0 3.111s-2.252 0.859-3.111 0c-0.859-0.859-0.859-2.252 0-3.111s2.252-0.859 3.111 0z"></path>
-      <path d="M27.536 9.041c0.859 0.859 0.859 2.252 0 3.111s-2.252 0.859-3.111 0c-0.859-0.859-0.859-2.252 0-3.111s2.252-0.859 3.111 0z"></path>
-    </symbol>
-
-    <symbol id="icon-stethoscope-color" viewBox="0 0 32 32">
-      <title>Stethoscope icon</title>
       <path fill="#b4c2c7" d="M19.8 19.1c0 0 0 0 0 0-1 0-2 0.4-2.7 1.1-1.3 1.3-1.5 3.3-0.5 4.8l-4 4c-1.1 1.1-2.7 1.6-4.2 1.3-1.4-0.3-2.6-1.4-2.8-2.8-0.3-1.5 0.2-3.1 1.3-4.2l5.9-5.9-0.1-0.1c0.6 0.5 1.3 0.8 2 1.1 0.6 0.2 1.3 0.3 2 0.3 1.6 0 3.2-0.6 4.3-1.8l4.9-4.9-1.1-1.1-4.9 4.9c-1.2 1.2-3.1 1.6-4.7 1.1-1.7-0.6-3.1-2-3.7-3.7-0.6-1.6-0.1-3.5 1.1-4.7l4.9-4.9-1.1-1.1-4.9 4.9c-1.6 1.6-2.2 4.1-1.5 6.3 0.3 1 0.9 1.9 1.7 2.7l-5.9 5.9c-1.5 1.5-2.1 3.6-1.7 5.6 0.4 2.1 2 3.6 4.1 4.1 0.2 0 0.7 0 1.1 0 1.6 0 3.2-0.6 4.4-1.8l4-4c0.6 0.4 1.4 0.6 2.1 0.6 1 0 2-0.4 2.7-1.1 1.5-1.5 1.5-3.9 0-5.4-0.7-0.8-1.7-1.2-2.7-1.2zM21.4 24.5c-0.9 0.9-2.3 0.9-3.2 0s-0.9-2.3 0-3.2c0.4-0.4 1-0.7 1.6-0.7 0 0 0 0 0 0 0.6 0 1.2 0.2 1.6 0.7 0.9 0.9 0.9 2.3 0 3.2z"></path>
       <path fill="#6098af" d="M19.085 0.665c0.859 0.859 0.859 2.252 0 3.111s-2.252 0.859-3.111 0c-0.859-0.859-0.859-2.252 0-3.111s2.252-0.859 3.111 0z"></path>
       <path fill="#6098af" d="M27.536 9.041c0.859 0.859 0.859 2.252 0 3.111s-2.252 0.859-3.111 0c-0.859-0.859-0.859-2.252 0-3.111s2.252-0.859 3.111 0z"></path>
     </symbol>
 
-    <symbol id="icon-stock-price-up" viewBox="0 0 64 32">
-      <title>Stock is up</title>
-      <path d="M32 0l32 32h-64z"></path>
-    </symbol>
-
-    <symbol id="icon-stock-price-down" viewBox="0 0 64 32">
-      <title>Stock is down</title>
-      <path d="M32 32l-32-32h64z"></path>
+    <symbol id="icon-stethoscope-mono" viewBox="0 0 32 32">
+      <title>Stethoscope icon</title>
+      <path d="M19.8 19.1c0 0 0 0 0 0-1 0-2 0.4-2.7 1.1-1.3 1.3-1.5 3.3-0.5 4.8l-4 4c-1.1 1.1-2.7 1.6-4.2 1.3-1.4-0.3-2.6-1.4-2.8-2.8-0.3-1.5 0.2-3.1 1.3-4.2l5.9-5.9-0.1-0.1c0.6 0.5 1.3 0.8 2 1.1 0.6 0.2 1.3 0.3 2 0.3 1.6 0 3.2-0.6 4.3-1.8l4.9-4.9-1.1-1.1-4.9 4.9c-1.2 1.2-3.1 1.6-4.7 1.1-1.7-0.6-3.1-2-3.7-3.7-0.6-1.6-0.1-3.5 1.1-4.7l4.9-4.9-1.1-1.1-4.9 4.9c-1.6 1.6-2.2 4.1-1.5 6.3 0.3 1 0.9 1.9 1.7 2.7l-5.9 5.9c-1.5 1.5-2.1 3.6-1.7 5.6 0.4 2.1 2 3.6 4.1 4.1 0.2 0 0.7 0 1.1 0 1.6 0 3.2-0.6 4.4-1.8l4-4c0.6 0.4 1.4 0.6 2.1 0.6 1 0 2-0.4 2.7-1.1 1.5-1.5 1.5-3.9 0-5.4-0.7-0.8-1.7-1.2-2.7-1.2zM21.4 24.5c-0.9 0.9-2.3 0.9-3.2 0s-0.9-2.3 0-3.2c0.4-0.4 1-0.7 1.6-0.7 0 0 0 0 0 0 0.6 0 1.2 0.2 1.6 0.7 0.9 0.9 0.9 2.3 0 3.2z"></path>
+      <path d="M19.085 0.665c0.859 0.859 0.859 2.252 0 3.111s-2.252 0.859-3.111 0c-0.859-0.859-0.859-2.252 0-3.111s2.252-0.859 3.111 0z"></path>
+      <path d="M27.536 9.041c0.859 0.859 0.859 2.252 0 3.111s-2.252 0.859-3.111 0c-0.859-0.859-0.859-2.252 0-3.111s2.252-0.859 3.111 0z"></path>
     </symbol>
 
     <symbol id="icon-syringe" viewBox="0 0 32 32">
-      <title>Syringe icon</title>
-      <path d="M27.9 19.4l-14.7-14.7 2.9-2.9-1.1-1.2-7 7-3-3 1.7-1.7-1-1.2-4.9 4.9 1.1 1.1 2.1-2.1 3 3-7 7 1.1 1.1 3.4-3.4 14.7 14.7c1.2 1.2 2.7 1.8 4.3 1.8s3.2-0.6 4.3-1.8c1.2-1.2 1.8-2.7 1.8-4.3 0.1-1.6-0.5-3.2-1.7-4.3zM26.8 27c-1.8 1.8-4.7 1.8-6.4 0l-14.5-14.5 6.4-6.4 14.5 14.5c0.9 0.9 1.3 2 1.3 3.2 0 1.1-0.4 2.3-1.3 3.2z"></path>
-      <path d="M18.986 20.337l3.748-3.748 0.778 0.778-3.748 3.748-0.778-0.778z"></path>
-      <path d="M16.4 17.704l3.748-3.748 0.778 0.778-3.748 3.748-0.778-0.778z"></path>
-      <path d="M13.404 14.695l3.748-3.748 0.778 0.778-3.748 3.748-0.778-0.778z"></path>
-      <path d="M27.498 27.656l0.778-0.778 3.748 3.748-0.778 0.778-3.748-3.748z"></path>
-    </symbol>
-
-    <symbol id="icon-syringe-color" viewBox="0 0 32 32">
       <title>Syringe icon</title>
       <path fill="#b4c2c7" d="M27.9 19.4l-14.7-14.7 2.9-2.9-1.1-1.2-7 7-3-3 1.7-1.7-1-1.2-4.9 4.9 1.1 1.1 2.1-2.1 3 3-7 7 1.1 1.1 3.4-3.4 14.7 14.7c1.2 1.2 2.7 1.8 4.3 1.8s3.2-0.6 4.3-1.8c1.2-1.2 1.8-2.7 1.8-4.3 0.1-1.6-0.5-3.2-1.7-4.3zM26.8 27c-1.8 1.8-4.7 1.8-6.4 0l-14.5-14.5 6.4-6.4 14.5 14.5c0.9 0.9 1.3 2 1.3 3.2 0 1.1-0.4 2.3-1.3 3.2z"></path>
       <path fill="#6091a1" d="M18.986 20.337l3.748-3.748 0.778 0.778-3.748 3.748-0.778-0.778z"></path>
@@ -235,111 +255,19 @@
       <path fill="#6091a1" d="M13.404 14.695l3.748-3.748 0.778 0.778-3.748 3.748-0.778-0.778z"></path>
       <path fill="#6091a1" d="M27.498 27.656l0.778-0.778 3.748 3.748-0.778 0.778-3.748-3.748z"></path>
     </symbol>
+
+    <symbol id="icon-triangle-down" viewBox="0 0 64 32">
+      <title>Down</title>
+      <path d="M32 32l-32-32h64z"></path>
+    </symbol>
+
+    <symbol id="icon-triangle-up" viewBox="0 0 64 32">
+      <title>Up</title>
+      <path d="M32 0l32 32h-64z"></path>
+    </symbol>
   </defs>
 </svg>
 
-
-<table>
-<thead>
-<tr>
-<th>ID</th>
-<th>Icon</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>  <code>icon-arrow</code></td>
-<td><svg class="icon" viewBox="0 0 96 32" width="96" height="32"><use xlink:href="#icon-arrow"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-building</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-building"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-building-color</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-building-color"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-carot-left</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-carot-left"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-carot-right</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-carot-right"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-chart-line</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-chart-line"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-clipboard</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-clipboard"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-eye</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-eye"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-eye-color</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-eye-color"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-first-aid</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-first-aid"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-first-aid-color</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-first-aid-color"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-heart</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-heart"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-pill</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-pill"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-pill-color</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-pill-color"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-select-arrow</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-select-arrow"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-stethoscope</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-stethoscope"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-stethoscope-color</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-stethoscope-color"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-stock-price-up</code></td>
-<td><svg class="icon" viewBox="0 0 64 32" width="64" height="32"><use xlink:href="#icon-stock-price-up"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-stock-price-down</code></td>
-<td><svg class="icon" viewBox="0 0 64 32" width="64" height="32"><use xlink:href="#icon-stock-price-down"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-syringe</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-syringe"></use></svg></td>
-</tr>
-<tr>
-<td>  <code>icon-syringe-color</code></td>
-<td><svg class="icon" viewBox="0 0 32 32" width="32" height="32"><use xlink:href="#icon-syringe-color"></use></svg></td>
-</tr>
-</tbody>
-</table>
-<p>The <em>SVG</em> folder contains the icons you selected as separate SVG files.</p>
-<p>If you prefer using PNGs, PDFs, or CSS sprites, refer to the Preferences panel of the IcoMoon app before downloading your zip pack.</p>
-<p><em>demo.html</em> lists the icons that you selected. To insert your icons as inline SVGs (with the <use> element), copy the <svg> element (that contains symbol definitions) from the source of the demo.html file, below your own HTML’s <body> tag. After copying this SVG, you can reference your glyphs like the following:</p>
-<code class="lang-html"><pre><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon-building.ai"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-building.ai"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span></pre></code><p>You can get this code from the SVG tab of the IcoMoon app, or by referring to the source of the demo.html file. To see how you can change the color/size of your icons using CSS, refer to the example provided in the <em>style.css</em> file.</p>
-<p>If you prefer to reference an external SVG (containing <defs>) instead of embedding it in HTML, you will need to use <em>svgxuse.js</em> in order to support IE 9+. In browsers that don’t support referencing external SVGs (such as IE 9), this polyfill sends one HTTP request to fetch and cache all symbol definitions. See <em>demo-external-svg.html</em> for this approach. This demo references the <em>symbol-defs.svg</em> file and uses the aforementioned polyfill. Note that it must be hosted on a web server to work
-properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyamoon/svgxuse">https://github.com/Keyamoon/svgxuse</a></p>
-<p>You can import <em>selection.json</em> back to the IcoMoon app using the <em>Import Icons</em> button (or via Main Menu → Manage Projects) to retrieve your icon selection.</p>
 
     
 
@@ -476,54 +404,6 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
         </li>
         
     
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/z-index.html" data-pjax>
-                <span>z-index</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/spacing.html" data-pjax>
-                <span>Spacing</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
 
             </ul>
         </li>
@@ -576,7 +456,7 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -713,6 +593,30 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
 
 
 <span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/contact-form.html" data-pjax>
+                <span>Contact Form</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -1178,6 +1082,30 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/heading--super.html" data-pjax>
+                <span>Heading super</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../components/detail/heading--2.html" data-pjax>
                 <span>Heading 2</span>
                 
@@ -1611,7 +1539,7 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -1635,7 +1563,7 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -1659,7 +1587,7 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -1683,7 +1611,7 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2864,7 +2792,7 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2930,166 +2858,6 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-layout">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Layout</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/column.html" data-pjax>
-                <span>Column</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/container.html" data-pjax>
-                <span>Container</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/grid.html" data-pjax>
-                <span>Grid</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/section.html" data-pjax>
-                <span>Section</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/sticky.html" data-pjax>
-                <span>Sticky</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../components/detail/text-block.html" data-pjax>
-                <span>Text Block</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pages">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Pages</span>
@@ -3121,6 +2889,94 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/contact.html" data-pjax>
+                <span>Contact</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-generic">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Generic</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/generic--one-column.html" data-pjax>
+                <span>Generic one column</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/generic--two-column.html" data-pjax>
+                <span>Generic two column</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -3307,7 +3163,55 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../components/detail/investors--full-page.html" data-pjax>
-                <span>Full width page layout</span>
+                <span>Template: Full width page</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/investors--one-column.html" data-pjax>
+                <span>Template: One column page</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/investors--two-column.html" data-pjax>
+                <span>Template: Two column page</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3543,6 +3447,20 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
             <a class="Tree-entityLink" href="browser-support.html" data-pjax>
                 <span>Browser Support</span>
                 
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         
@@ -3560,8 +3478,18 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="assets.html" data-pjax>
+                <span>Assets</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="helper-classes.html" data-pjax>
-                <span>Helper classes</span>
+                <span>Helper Classes</span>
                 
             </a>
         </li>
@@ -3572,6 +3500,16 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>Icons</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="investors-pages.html" data-pjax>
+                <span>Investors Pages</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3597,20 +3535,6 @@ properly. Learn more aobut this polyfill here: <a href="https://github.com/Keyam
             <a class="Tree-entityLink" href="layout-modules.html" data-pjax>
                 <span>Layout Modules</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
