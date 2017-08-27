@@ -51,14 +51,6 @@ export default class AboutPage {
       this.create();
     }
 
-    // new ScrollMagic.Scene({ triggerElement: ".js-banner" })
-    //   .setClassToggle(".Banner", this.className)
-    //   .addTo(this.controller);
-
-    new ScrollMagic.Scene({ triggerElement: ".js-sub-navigation" })
-      .setClassToggle(".SubNavigation", this.className)
-      .addTo(this.controller);
-
     new ScrollMagic.Scene({ triggerElement: ".js-masthead" })
       .setClassToggle(".CoverPhoto", this.className)
       .addTo(this.controller);
@@ -71,7 +63,7 @@ export default class AboutPage {
       .setClassToggle(".Introduction", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-service-cards", offset: -250 })
+    new ScrollMagic.Scene({ triggerElement: ".js-service-cards", offset: -300 })
       .setClassToggle(".ServiceCards", this.className)
       .addTo(this.controller);
 
@@ -83,7 +75,7 @@ export default class AboutPage {
       .setClassToggle(".Feature .Highlight", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-leadership-team", offset: -250 })
+    new ScrollMagic.Scene({ triggerElement: ".js-leadership-team", offset: -300 })
       .setClassToggle(".LeadershipTeam", this.className)
       .addTo(this.controller);
   }
