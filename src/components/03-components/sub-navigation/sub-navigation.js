@@ -1,6 +1,7 @@
 "use strict";
 
 import ScrollMagic from "scrollmagic";
+import { forEach } from "../../../assets/js/utils";
 
 class SubNavigation {
   constructor() {
@@ -107,7 +108,7 @@ class SubNavigation {
 
     this.updateMarkerOffsetOnResize();
 
-    this.sections.forEach((section, index) => {
+    forEach(this.sections, (index, section) => {
       const scene = new ScrollMagic.Scene({
         duration: document.getElementById(section.id).offsetHeight,
         offset: (document.getElementById(section.id).offsetTop - this.subNavigation.offsetHeight),
@@ -135,7 +136,7 @@ class SubNavigation {
   }
 
   setUpItems() {
-    this.subNavigationItems.forEach((item) => {
+    forEach(this.subNavigationItems, (index, item) => {
       const anchor = item.querySelector("a");
 
       this.listenForAnchorClick(anchor);
@@ -143,7 +144,10 @@ class SubNavigation {
   }
 
   render() {
-    this.setUpScrollSpy();
+    if (typeof window.CSS !== "undefined" && window.CSS.supports("position", "sticky")) {
+      this.setUpScrollSpy();
+    }
+
     this.setUpItems();
   }
 }
