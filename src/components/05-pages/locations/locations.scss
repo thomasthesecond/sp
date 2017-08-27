@@ -24,6 +24,10 @@
 
   @media (min-width: $mq-min-670) {
     margin-top: #{(246 / $max-width) * 100vw};
+
+    @supports (display: grid) {
+      overflow: initial;
+    }
   }
 
   @media (min-width: $mq-min-container) {
