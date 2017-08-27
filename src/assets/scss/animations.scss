@@ -16,16 +16,6 @@ $mq: #{(1024 / 16) * 1em};
 
 @media (min-width: $mq) {
   .js:not(.disable-animations) {
-    // .HomePage .Masthead {
-    //   box-sizing: content-box;
-    //   padding-bottom: 265px;
-    //   transition: padding-bottom 1s 1s;
-    //
-    //   &.animate {
-    //     padding-bottom: 0;
-    //   }
-    // }
-
     .CoverVideo,
     .Masthead .CoverPhoto {
       opacity: 0;
@@ -140,7 +130,7 @@ $mq: #{(1024 / 16) * 1em};
       }
     }
 
-    :not(.HomePage) .Introduction {
+    body:not(.HomePage) .Introduction {
       transition-delay: 1.3s;
     }
 
