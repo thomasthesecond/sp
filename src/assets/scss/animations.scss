@@ -41,40 +41,29 @@ $mq: #{(1024 / 16) * 1em};
     }
 
     .Masthead .Tagline {
-      transform: translate3d(0, 140px, 0);
-      transform-style: preserve-3d;
-      transition: transform 1s .7s;
+      div {
+        overflow: hidden;
+      }
 
-      &.animate {
-        transform: translate3d(0, 0, 0);
+      div:last-child {
+        padding-bottom: 4px;
       }
 
       span {
         display: block;
-        max-height: 0;
-        overflow: hidden;
-        transform-style: preserve-3d;
-        transition: max-height .6s 1s, transform .6s 1s;
+        transform: translate3d(0, 100%, 0);
+        transition: transform .6s 1s;
       }
 
       &.animate span {
-        max-height: 85px;
         transform: translate3d(0, 0, 0);
-      }
-
-      span:first-child {
-        transform: translate3d(0, 48px, 0);
-      }
-
-      span:last-child {
-        transform: translate3d(0, 40px, 0);
       }
     }
 
     .Masthead .MoreLink {
       overflow: hidden;
-      padding-left: 16px;
-      padding-right: 16px;
+      padding: 4px 22px 4px 16px;
+      top: -4px;
 
       .MoreLink-text {
         opacity: 0;
