@@ -1,8 +1,16 @@
 <header class="Masthead{{#if className}} {{className}}{{/if}}">
   <div class="container">
-    <h1 class="Masthead-title heading-super">
-      {{ masthead.title }}
-    </h1>
+    {{#if animate}}
+      <h1 class="Masthead-title heading-super">
+        <span>{{ masthead.title }}</span>
+      </h1>
+    {{/if}}
+
+    {{#unless animate}}
+      <h1 class="Masthead-title heading-super">
+        {{ masthead.title }}
+      </h1>
+    {{/unless}}
   </div>
 
   {{> @cover-photo coverPhoto=masthead.coverPhoto }}
