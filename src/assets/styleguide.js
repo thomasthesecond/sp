@@ -7,7 +7,7 @@ import "./scss/global.scss";
 import "./scss/styleguide.scss";
 
 // Import icons
-import "../components/_02-icons/icons.scss";
+import "../components/_icon/icon.scss";
 
 // Import layout modules
 import "./scss/layout.scss";

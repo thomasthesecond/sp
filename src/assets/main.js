@@ -6,7 +6,7 @@ import "normalize.css/normalize.css";
 import "./scss/global.scss";
 
 // Import icons
-import "../components/_02-icons/icons.scss";
+import "../components/_icon/icon.scss";
 
 // Import layout modules
 import "./scss/layout.scss";

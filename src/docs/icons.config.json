@@ -1,0 +1,70 @@
+{
+  "context": {
+    "icon": [
+      {
+        "id": "icon-arrow",
+        "size": [96, 32]
+      },
+      {
+        "id": "icon-building",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-carot-left",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-carot-right",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-chart-line",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-clipboard",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-eye",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-first-aid",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-heart",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-pill",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-select-arrow",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-stethoscope",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-stethoscope-mono",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-syringe",
+        "size": [32, 32]
+      },
+      {
+        "id": "icon-triangle-down",
+        "size": [64, 32]
+      },
+      {
+        "id": "icon-triangle-up",
+        "size": [64, 32]
+      }
+    ]
+  }
+}

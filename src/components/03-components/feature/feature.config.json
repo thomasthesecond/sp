@@ -31,7 +31,7 @@
           },
           "highlights": [
             {
-              "icon": "icon-stethoscope",
+              "icon": "icon-stethoscope-mono",
               "number": "5,000 +",
               "label": "Affiliated physicians"
             },

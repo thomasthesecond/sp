@@ -2,27 +2,27 @@
   "context": {
     "serviceCards": [
       {
-        "icon": "icon-building-color",
+        "icon": "icon-building",
         "title": "Surgical facilities"
       },
       {
-        "icon": "icon-syringe-color",
+        "icon": "icon-syringe",
         "title": "Anesthesia"
       },
       {
-        "icon": "icon-pill-color",
+        "icon": "icon-pill",
         "title": "Pharmacy"
       },
       {
-        "icon": "icon-eye-color",
+        "icon": "icon-eye",
         "title": "Optical"
       },
       {
-        "icon": "icon-stethoscope-color",
+        "icon": "icon-stethoscope",
         "title": "Physician practices"
       },
       {
-        "icon": "icon-first-aid-color",
+        "icon": "icon-first-aid",
         "title": "Urgent care"
       }
     ]

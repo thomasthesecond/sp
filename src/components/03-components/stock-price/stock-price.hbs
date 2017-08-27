@@ -5,14 +5,14 @@
 
   {{#if stockPrice.up}}
     <div class="StockPrice-ticker text-positive">
-      {{> @icon id="icon-stock-price-up" }}
+      {{> @icon id="icon-triangle-up" }}
       {{ stockPrice.points }} ({{ stockPrice.percent }}%)
     </div>
   {{/if}}
 
   {{#if stockPrice.down}}
     <div class="StockPrice-ticker text-negative">
-      {{> @icon id="icon-stock-price-down" }}
+      {{> @icon id="icon-triangle-down" }}
       {{ stockPrice.points }} ({{ stockPrice.percent }}%)
     </div>
   {{/if}}
