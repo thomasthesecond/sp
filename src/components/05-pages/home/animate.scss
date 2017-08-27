@@ -203,7 +203,7 @@ $mq: #{(1024 / 16) * 1em};
     .ServiceCards {
       .ServiceCard {
         opacity: 0;
-        transform: translate3d(0, -40px, 0);
+        transform: translate3d(0, 56px, 0);
         transition: opacity .5s cubic-bezier(.23, 1, .32, 1),
           transform .5s cubic-bezier(.175, .885, .32, 1.275);
 
@@ -223,7 +223,7 @@ $mq: #{(1024 / 16) * 1em};
     .LeadershipTeam {
       .TeamMember {
         opacity: 0;
-        transform: translate3d(0, -40px, 0);
+        transform: translate3d(0, 56px, 0);
         transition: opacity .5s cubic-bezier(.23, 1, .32, 1),
           transform .5s cubic-bezier(.175, .885, .32, 1.275);
 
@@ -242,7 +242,7 @@ $mq: #{(1024 / 16) * 1em};
 
     .Highlight {
       opacity: 0;
-      transform: translate3d(0, -40px, 0);
+      transform: translate3d(0, 56px, 0);
       transition: opacity .5s cubic-bezier(.23, 1, .32, 1),
         transform .5s cubic-bezier(.175, .885, .32, 1.275);
 
