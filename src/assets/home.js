@@ -14,6 +14,9 @@ import "../components/03-components/masthead";
 import "../components/03-components/more-link";
 import "../components/03-components/tagline";
 
+// Import animations
+import "./scss/animations.scss";
+
 const homePage = new HomePage();
 const coverVideo = new CoverVideo();
 const locationFinder = new LocationFinder();

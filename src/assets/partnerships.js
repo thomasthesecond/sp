@@ -12,6 +12,9 @@ import "../components/03-components/masthead";
 import SubNavigation from "../components/03-components/sub-navigation";
 import "../components/03-components/testimonial";
 
+// Import animations
+import "./scss/animations.scss";
+
 const partnershipsPage = new PartnershipsPage();
 const subNavigation = new SubNavigation();
 

@@ -14,6 +14,9 @@ import SubNavigation from "../components/03-components/sub-navigation";
 import "../components/03-components/team-member";
 import "../components/03-components/timeline";
 
+// Import animations
+import "./scss/animations.scss";
+
 const aboutPage = new AboutPage();
 const subNavigation = new SubNavigation();
 
