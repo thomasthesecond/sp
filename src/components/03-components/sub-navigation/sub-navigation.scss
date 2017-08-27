@@ -8,7 +8,7 @@
  */
 
 @mixin marker() {
-  background-color: #b5955d;
+  background-color: $color-sub-navigation-marker;
   bottom: 0;
   height: 3px;
   position: absolute;
