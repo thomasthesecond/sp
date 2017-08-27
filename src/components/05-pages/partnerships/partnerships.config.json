@@ -88,7 +88,7 @@
     "sections": [
       {
         "id": "physician-practices",
-        "className": "js-spy-section js-physician-practices",
+        "className": "js-physician-practices",
         "image": {
           "className": "ImageBlock-photo",
           "title": "",
@@ -119,7 +119,7 @@
       },
       {
         "id": "ambulatory-surgery-centers",
-        "className": "js-spy-section js-ambulatory-surgery-centers",
+        "className": "js-ambulatory-surgery-centers",
         "image": {
           "className": "ImageBlock-photo",
           "title": "",
@@ -150,7 +150,7 @@
       },
       {
         "id": "surgical-hospitals",
-        "className": "js-spy-section js-surgical-hospitals",
+        "className": "js-surgical-hospitals",
         "image": {
           "className": "ImageBlock-photo",
           "title": "",
@@ -181,7 +181,7 @@
       },
       {
         "id": "healthcare-systems",
-        "className": "js-spy-section js-healthcare-systems",
+        "className": "js-healthcare-systems",
         "image": {
           "className": "ImageBlock-photo",
           "title": "",

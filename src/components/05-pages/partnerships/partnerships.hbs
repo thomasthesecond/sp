@@ -9,39 +9,55 @@
 
   <div class="container">
     {{> @introduction className="js-introduction" }}
-
-    {{> @image-block block=sections.[0] }}
-
-    <hr>
-
-    {{> @testimonial testimonial=testimonials.[0] className="js-testimonial-1" }}
-
-    <hr>
-
-    {{> @image-block--alternate block=sections.[1] }}
-
-    <hr>
-
-    {{> @testimonial testimonial=testimonials.[1] className="js-testimonial-2" }}
   </div>
 
-  {{> @feature className="js-feature" }}
+  <section class="js-spy-section" id="{{ sections.[0].id }}">
+    <div class="container">
+      {{> @image-block block=sections.[0] noId=true }}
+
+      <hr>
+
+      {{> @testimonial testimonial=testimonials.[0] className="js-testimonial-1" }}
+
+      <hr>
+    </div>
+  </section>
+
+  <section class="js-spy-section" id="{{ sections.[1].id }}">
+    <div class="container">
+      {{> @image-block--alternate block=sections.[1] noId=true }}
+
+      <hr>
+
+      {{> @testimonial testimonial=testimonials.[1] className="js-testimonial-2" }}
+    </div>
+
+    {{> @feature className="js-feature" }}
+  </section>
+
+  <section class="js-spy-section" id="{{ sections.[2].id }}">
+    <div class="container">
+      {{> @image-block--alternate block=sections.[2] noId=true }}
+
+      <hr>
+
+      {{> @testimonial testimonial=testimonials.[2] className="js-testimonial-3" }}
+
+      <hr>
+    </div>
+  </section>
+
+  <section class="js-spy-section" id="{{ sections.[3].id }}">
+    <div class="container">
+      {{> @image-block block=sections.[3] noId=true }}
+
+      <hr>
+
+      {{> @testimonial testimonial=testimonials.[3] className="js-testimonial-4" }}
+    </div>
+  </section>
 
   <div class="container">
-    {{> @image-block--alternate block=sections.[2] }}
-
-    <hr>
-
-    {{> @testimonial testimonial=testimonials.[2] className="js-testimonial-3" }}
-
-    <hr>
-
-    {{> @image-block block=sections.[3] }}
-
-    <hr>
-
-    {{> @testimonial testimonial=testimonials.[3] className="js-testimonial-4" }}
-
     <hr class="dark">
 
     {{> @next-page }}
