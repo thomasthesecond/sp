@@ -36,7 +36,6 @@ const filename = production ? "[name].min" : "[name]";
 
 const plugins = [
   new ExtractTextPlugin(`${filename}.css`),
-  new ExtractTextPlugin(`${filename}.css`),
   new CopyWebpackPlugin([
     {
       from: "src/assets/images",
