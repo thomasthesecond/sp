@@ -15,25 +15,24 @@
   border: 0;
   color: $color-text-overlay;
   cursor: pointer;
-  // display: inline-block;
-  // display: flex;
   display: inline-flex;
   font-size: 14px;
   font-weight: $font-weight-semibold;
   justify-content: center;
   letter-spacing: .7px;
   line-height: 1;
-  // padding: 24px 40px;
   padding: #{(24 / 14) * 1em} #{(40 / 14) * 1em};
+  position: relative;
   text-align: center;
   text-decoration: none;
-  transition: background-color 200ms, color 200ms;
+  transition: background-color .4s;
   vertical-align: middle;
   white-space: nowrap;
 
   &:hover,
   &:active,
   &:focus {
+    background-color: lighten($color-background-button-default, 8);
     color: $color-text-overlay;
   }
 }
@@ -41,5 +40,12 @@
 .Button--dark {
   background-color: $color-background-button-dark;
   border: 1px solid $color-border-button-dark;
-  color: $color-text-overlay; // rgba($color-text-overlay, 0.57);
+  color: $color-text-overlay;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: lighten($color-background-button-dark, 10);
+    color: $color-text-overlay;
+  }
 }
