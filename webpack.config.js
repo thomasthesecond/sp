@@ -6,6 +6,8 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 
+const filename = production ? "[name].min" : "[name]";
+
 const loaders = {
   css: {
     loader: "css-loader",
@@ -31,8 +33,6 @@ const loaders = {
     },
   },
 };
-
-const filename = production ? "[name].min" : "[name]";
 
 const plugins = [
   new ExtractTextPlugin(`${filename}.css`),
