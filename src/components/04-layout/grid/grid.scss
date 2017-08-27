@@ -14,6 +14,14 @@
     display: block;
   }
 
+  @media (min-width: $mq-min-860) {
+    overflow: hidden;
+
+    @supports (display: grid) {
+      overflow: initial;
+    }
+  }
+
   @supports (display: grid) {
     @media (min-width: $mq-min-860) {
       grid-template-columns: #{($max-width-content / $max-width) * 100%} auto #{(522 / $max-width) * 100%};
