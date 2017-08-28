@@ -38,8 +38,8 @@
 
 .MoreLink .icon {
   display: inline-block;
-  font-size: 24px;
-  height: 10px;
+  font-size: 20px;
+  height: 8px;
   stroke: currentColor;
   stroke-width: 1px;
   -webkit-transform: translateX(6px);
@@ -48,6 +48,13 @@
   transition: color 200ms, -webkit-transform 200ms;
   transition: color 200ms, transform 200ms;
   transition: color 200ms, transform 200ms, -webkit-transform 200ms;
+}
+
+@media (min-width: 600px) {
+  .MoreLink .icon {
+    font-size: 24px;
+    height: 10px;
+  }
 }
 
 .Masthead .MoreLink {
@@ -1064,28 +1071,6 @@
  * Mixins
  */
 /**
- * Component: File download
- */
-.FileDownload {
-  display: inline-block;
-}
-
-.FileDownload img {
-  display: block;
-  height: auto;
-  width: 14px;
-}
-
-.FileDownload + .FileDownload {
-  margin-left: 24px;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Filter
  * @type Organism
  */
@@ -1218,6 +1203,28 @@
   .Filter-link {
     margin-top: 48px;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: File download
+ */
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
 }
 /**
  * Functions
@@ -1386,6 +1393,12 @@
 @media (min-width: 480px) {
   .InvestorsPage-news .Search {
     max-width: 296px;
+  }
+}
+
+@media (max-width: 53.6875em) {
+  .InvestorsPage-news .Search {
+    margin-bottom: 64px;
   }
 }
 

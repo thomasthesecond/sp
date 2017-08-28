@@ -417,8 +417,8 @@
 
 .MoreLink .icon {
   display: inline-block;
-  font-size: 24px;
-  height: 10px;
+  font-size: 20px;
+  height: 8px;
   stroke: currentColor;
   stroke-width: 1px;
   -webkit-transform: translateX(6px);
@@ -427,6 +427,13 @@
   transition: color 200ms, -webkit-transform 200ms;
   transition: color 200ms, transform 200ms;
   transition: color 200ms, transform 200ms, -webkit-transform 200ms;
+}
+
+@media (min-width: 600px) {
+  .MoreLink .icon {
+    font-size: 24px;
+    height: 10px;
+  }
 }
 
 .Masthead .MoreLink {
