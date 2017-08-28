@@ -599,6 +599,124 @@ main {
   outline: none;
 }
 /**
+ * Mixins
+ */
+/**
+ * Functions
+ */
+/**
+ * Styleguide
+ * @note Not for production
+ */
+abbr[title] {
+  border-bottom: none;
+  cursor: help;
+  text-decoration: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+.swatch {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.swatch--light {
+  color: #000;
+}
+
+.token-table {
+  border-bottom: 1px solid #d4d4d8;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.token-table tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+.token-table th {
+  text-align: left;
+}
+
+.token-table th,
+.token-table td {
+  border-bottom: 1px solid #d4d4d8;
+  padding: 16px;
+}
+
+.token-table th:not(:first-child),
+.token-table td:not(:first-child) {
+  border-left: 1px solid #d4d4d8;
+}
+
+.font-family-open-sans {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-regular {
+  font-weight: 400;
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.font-preview {
+  color: #25395d;
+  overflow: hidden;
+}
+
+.font-preview-info {
+  float: left;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
+}
+
+.font-preview-info span {
+  color: #646e7e;
+}
+
+.font-preview-characters {
+  float: left;
+  overflow: hidden;
+}
+
+.font-preview-characters-aa {
+  float: left;
+  font-size: 120px;
+  line-height: 1;
+}
+
+.font-preview-characters-az {
+  float: left;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
+}
+/**
  * Functions
  */
 /**
@@ -902,124 +1020,6 @@ main {
   top: 0;
   width: 100%;
   z-index: 1000;
-}
-/**
- * Mixins
- */
-/**
- * Functions
- */
-/**
- * Styleguide
- * @note Not for production
- */
-abbr[title] {
-  border-bottom: none;
-  cursor: help;
-  text-decoration: none;
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-
-.swatch {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-.swatch--light {
-  color: #000;
-}
-
-.token-table {
-  border-bottom: 1px solid #d4d4d8;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.token-table tr:nth-child(odd) {
-  background-color: #f6f6f6;
-}
-
-.token-table th {
-  text-align: left;
-}
-
-.token-table th,
-.token-table td {
-  border-bottom: 1px solid #d4d4d8;
-  padding: 16px;
-}
-
-.token-table th:not(:first-child),
-.token-table td:not(:first-child) {
-  border-left: 1px solid #d4d4d8;
-}
-
-.font-family-open-sans {
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.font-weight-light {
-  font-weight: 300;
-}
-
-.font-weight-regular {
-  font-weight: 400;
-}
-
-.font-weight-semibold {
-  font-weight: 600;
-}
-
-.font-weight-bold {
-  font-weight: 700;
-}
-
-.font-preview {
-  color: #25395d;
-  overflow: hidden;
-}
-
-.font-preview-info {
-  float: left;
-  font-size: 16px;
-  line-height: 1.4;
-  margin-left: 40px;
-  margin-top: 14px;
-}
-
-.font-preview-info span {
-  color: #646e7e;
-}
-
-.font-preview-characters {
-  float: left;
-  overflow: hidden;
-}
-
-.font-preview-characters-aa {
-  float: left;
-  font-size: 120px;
-  line-height: 1;
-}
-
-.font-preview-characters-az {
-  float: left;
-  font-size: 24px;
-  line-height: 1.4;
-  margin-left: 40px;
-  margin-top: 14px;
 }
 /**
  * Functions
