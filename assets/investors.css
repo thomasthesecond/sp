@@ -85,7 +85,6 @@
  */
 /**
  * Component: Team member
- * @type Molecule
  */
 .TeamMember:not(.TeamMember--small) {
   -webkit-box-align: center;
@@ -168,26 +167,26 @@
   background-color: #fff;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  position: absolute;
-  padding: 3.72093%;
-  width: calc(100% + 7.44186%);
-  top: -3.72093%;
-  z-index: 1;
-  padding-top: 408px;
-  -webkit-box-shadow: 0 42px 84px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 42px 84px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
+          box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
   opacity: 0;
+  padding: 3.72093%;
+  padding-top: 408px;
+  position: absolute;
+  top: -3.72093%;
+  width: calc(100% + 7.44186%);
   -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
   visibility: hidden;
+  z-index: 1;
 }
 
 @media (min-width: 1015px) {
   .TeamMember-panel {
     padding: 48px;
-    width: calc(100% + 96px);
-    top: -48px;
     padding-top: 408px;
+    top: -48px;
+    width: calc(100% + 96px);
   }
 }
 
@@ -1234,101 +1233,6 @@
  * Mixins
  */
 /**
- * Component: Modal
- */
-.Modal {
-  background-color: #fff;
-  -webkit-box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
-          box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
-  left: 0;
-  margin: auto;
-  opacity: 0;
-  padding-bottom: 24px;
-  padding-top: 24px;
-  position: fixed;
-  right: 0;
-  -webkit-transform: translateY(10vh);
-          transform: translateY(10vh);
-  -webkit-transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
-  transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
-  transition: opacity 200ms, transform 200ms, visibility 200ms;
-  transition: opacity 200ms, transform 200ms, visibility 200ms, -webkit-transform 200ms;
-  visibility: hidden;
-  z-index: 9000;
-}
-
-@media (max-width: 479px) {
-  .Modal {
-    bottom: 0;
-    height: 100vh;
-    top: 0;
-    width: 100vw;
-  }
-}
-
-@media (min-width: 480px) {
-  .Modal {
-    max-height: 80vh;
-    max-width: 800px;
-    top: 50%;
-  }
-}
-
-.Modal.is-open {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  visibility: visible;
-}
-
-@media (min-width: 480px) {
-  .Modal.is-open {
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-}
-
-.Modal-close {
-  background-color: transparent;
-  border: 0;
-  color: rgba(100, 110, 126, 0.4);
-  cursor: pointer;
-  display: block;
-  font-size: 24px;
-  height: 24px;
-  padding: 0;
-  position: absolute;
-  right: 24px;
-  top: 24px;
-  -webkit-transition: color 200ms;
-  transition: color 200ms;
-  width: 24px;
-}
-
-.Modal-close:hover, .Modal-close:active, .Modal-close:focus {
-  color: rgba(100, 110, 126, 0.8);
-}
-
-.Modal-content {
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: auto;
-  padding-left: 24px;
-  padding-right: 48px;
-}
-
-@media (min-width: 480px) {
-  .Modal-content {
-    padding-left: 48px;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Page: Investors
  * @type page
  */
@@ -1472,6 +1376,101 @@
 @media (min-width: 83.625em) {
   .InvestorsPage-news .NewsArticle--preview + .NewsArticle--preview {
     margin-top: 120px;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Modal
+ */
+.Modal {
+  background-color: #fff;
+  -webkit-box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
+          box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  position: fixed;
+  right: 0;
+  -webkit-transform: translateY(10vh);
+          transform: translateY(10vh);
+  -webkit-transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
+  transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
+  transition: opacity 200ms, transform 200ms, visibility 200ms;
+  transition: opacity 200ms, transform 200ms, visibility 200ms, -webkit-transform 200ms;
+  visibility: hidden;
+  z-index: 9000;
+}
+
+@media (max-width: 479px) {
+  .Modal {
+    bottom: 0;
+    height: 100vh;
+    top: 0;
+    width: 100vw;
+  }
+}
+
+@media (min-width: 480px) {
+  .Modal {
+    max-height: 80vh;
+    max-width: 800px;
+    top: 50%;
+  }
+}
+
+.Modal.is-open {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+}
+
+@media (min-width: 480px) {
+  .Modal.is-open {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+.Modal-close {
+  background-color: transparent;
+  border: 0;
+  color: rgba(100, 110, 126, 0.4);
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+  height: 24px;
+  padding: 0;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+  width: 24px;
+}
+
+.Modal-close:hover, .Modal-close:active, .Modal-close:focus {
+  color: rgba(100, 110, 126, 0.8);
+}
+
+.Modal-content {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  padding-left: 24px;
+  padding-right: 48px;
+}
+
+@media (min-width: 480px) {
+  .Modal-content {
+    padding-left: 48px;
   }
 }
 /**

@@ -1228,49 +1228,6 @@ p {
  * Mixins
  */
 /**
- * Component: List
- * @type Atom
- */
-ul,
-ol,
-dl {
-  font-size: 14px;
-  line-height: 1.71429;
-  margin-bottom: 1.71429em;
-  margin-top: 1.71429em;
-}
-
-@media (min-width: 600px) {
-  ul,
-  ol,
-  dl {
-    font-size: 16px;
-    line-height: 1.75;
-    margin-bottom: 2em;
-    margin-top: 2em;
-  }
-}
-
-dt {
-  font-weight: 600;
-}
-
-dd {
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
-
-.list-unstyled {
-  list-style-type: none;
-  padding-left: 0;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Next page
  */
 @media (min-width: 600px) {
@@ -1360,6 +1317,49 @@ dd {
     transition: transform 200ms;
     transition: transform 200ms, -webkit-transform 200ms;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: List
+ * @type Atom
+ */
+ul,
+ol,
+dl {
+  font-size: 14px;
+  line-height: 1.71429;
+  margin-bottom: 1.71429em;
+  margin-top: 1.71429em;
+}
+
+@media (min-width: 600px) {
+  ul,
+  ol,
+  dl {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.list-unstyled {
+  list-style-type: none;
+  padding-left: 0;
 }
 /**
  * Functions

@@ -1280,49 +1280,6 @@ p {
  * Mixins
  */
 /**
- * Component: List
- * @type Atom
- */
-ul,
-ol,
-dl {
-  font-size: 14px;
-  line-height: 1.71429;
-  margin-bottom: 1.71429em;
-  margin-top: 1.71429em;
-}
-
-@media (min-width: 600px) {
-  ul,
-  ol,
-  dl {
-    font-size: 16px;
-    line-height: 1.75;
-    margin-bottom: 2em;
-    margin-top: 2em;
-  }
-}
-
-dt {
-  font-weight: 600;
-}
-
-dd {
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
-
-.list-unstyled {
-  list-style-type: none;
-  padding-left: 0;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Next page
  */
 @media (min-width: 600px) {
@@ -1412,6 +1369,49 @@ dd {
     transition: transform 200ms;
     transition: transform 200ms, -webkit-transform 200ms;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: List
+ * @type Atom
+ */
+ul,
+ol,
+dl {
+  font-size: 14px;
+  line-height: 1.71429;
+  margin-bottom: 1.71429em;
+  margin-top: 1.71429em;
+}
+
+@media (min-width: 600px) {
+  ul,
+  ol,
+  dl {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.list-unstyled {
+  list-style-type: none;
+  padding-left: 0;
 }
 /**
  * Functions
@@ -2829,50 +2829,53 @@ blockquote cite br {
  */
 .LocationFinder.is-sticky {
   background-color: #fff;
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
-    padding-top: 24px;
-  }
+  -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
+          box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
 }
 
 @media (min-width: 670px) {
   .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
-.LocationFinder-container {
+.LocationFinder .container {
   background-color: #fff;
   position: relative;
 }
 
 @media (min-width: 670px) {
-  .LocationFinder-container {
+  .LocationFinder .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 6.97674vw;
-    min-height: 60px;
     max-height: 90px;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 669px) {
+  .LocationFinder.is-sticky .container {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 @media (min-width: 670px) {
-  .LocationFinder:not(.is-sticky) .LocationFinder-container {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+  .LocationFinder:not(.is-sticky) .container {
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
 .LocationFinder fieldset {
   border: 0;
+  height: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 @media (min-width: 670px) {
@@ -2881,18 +2884,11 @@ blockquote cite br {
   }
 }
 
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky fieldset {
-    margin-bottom: -24px;
-  }
-}
-
 .LocationFinder legend {
   color: rgba(37, 57, 93, 0.79);
   display: block;
-  font-size: 16px;
-  font-weight: 700;
   float: left;
+  font-weight: 700;
   height: 100%;
   line-height: 1;
   width: 22.48062%;
@@ -2924,8 +2920,6 @@ blockquote cite br {
 .LocationFinder select {
   border: 0;
   height: 100%;
-  -webkit-transition: opacity 200ms;
-  transition: opacity 200ms;
   width: 100%;
 }
 
@@ -2968,16 +2962,22 @@ blockquote cite br {
 }
 
 @media (max-width: 669px) {
+  .LocationFinder.is-sticky select:first-of-type {
+    border: 0;
+    margin-bottom: 0;
+    padding-bottom: 22px;
+    padding-left: 24px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 669px) {
   .LocationFinder.is-sticky select:not(:first-of-type) {
-    opacity: 0;
+    display: none;
   }
 }
 
 .LocationFinder-button {
-  -webkit-transition: -webkit-transform 200ms;
-  transition: -webkit-transform 200ms;
-  transition: transform 200ms;
-  transition: transform 200ms, -webkit-transform 200ms;
   width: 100%;
 }
 
@@ -2996,9 +2996,7 @@ blockquote cite br {
 
 @media (max-width: 669px) {
   .LocationFinder.is-sticky .LocationFinder-button {
-    -webkit-transform: translateY(-24px);
-            transform: translateY(-24px);
-    z-index: 1;
+    display: none;
   }
 }
 
@@ -3225,7 +3223,6 @@ blockquote cite br {
  */
 /**
  * Component: Team member
- * @type Molecule
  */
 .TeamMember:not(.TeamMember--small) {
   -webkit-box-align: center;
@@ -3308,26 +3305,26 @@ blockquote cite br {
   background-color: #fff;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  position: absolute;
-  padding: 3.72093%;
-  width: calc(100% + 7.44186%);
-  top: -3.72093%;
-  z-index: 1;
-  padding-top: 408px;
-  -webkit-box-shadow: 0 42px 84px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 42px 84px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
+          box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
   opacity: 0;
+  padding: 3.72093%;
+  padding-top: 408px;
+  position: absolute;
+  top: -3.72093%;
+  width: calc(100% + 7.44186%);
   -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
   visibility: hidden;
+  z-index: 1;
 }
 
 @media (min-width: 1015px) {
   .TeamMember-panel {
     padding: 48px;
-    width: calc(100% + 96px);
-    top: -48px;
     padding-top: 408px;
+    top: -48px;
+    width: calc(100% + 96px);
   }
 }
 
@@ -3731,34 +3728,28 @@ blockquote cite br {
  */
 /**
  * Component: Leadership team
- * @type Organism
  */
-.LeadershipTeam {
-  display: grid;
-  grid-gap: 0;
-  grid-row-gap: 64px;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-@media (min-width: 480px) {
+@supports (display: grid) {
   .LeadershipTeam {
-    grid-column-gap: 24px;
-    grid-row-gap: 56px;
-    grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+    display: grid;
+    grid-gap: 0;
+    grid-row-gap: 64px;
+    grid-template-columns: repeat(2, 1fr);
   }
-}
-
-@media (min-width: 480px) {
-  .LeadershipTeam {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 904px;
+  @media (min-width: 480px) {
+    .LeadershipTeam {
+      grid-column-gap: 24px;
+      grid-row-gap: 56px;
+      grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 904px;
+    }
   }
-}
-
-@media (min-width: 808px) {
-  .LeadershipTeam {
-    grid-column-gap: 80px;
+  @media (min-width: 808px) {
+    .LeadershipTeam {
+      grid-column-gap: 80px;
+    }
   }
 }
 /**
