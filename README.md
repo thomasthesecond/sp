@@ -63,6 +63,7 @@ All dependencies are installed by running `yarn`. Here’s a brief overview of e
 | `normalize.css` | A modern alternative to CSS resets |
 | `picturefill` | A responsive image polyfill |
 | `scrollmagic` | JavaScript library for scroll interactions |
+| `smoothscroll-polyfill` | Polyfill for smooth scroll behavior |
 
 A separate list of `devDependencies` are used for compiling and building the project. These packages will not see the browser and are only run within the Node environment.
 
