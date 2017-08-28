@@ -2771,6 +2771,59 @@ blockquote cite br {
  * Mixins
  */
 /**
+ * Component: Introduction
+ * @type Atom
+ */
+.Introduction {
+  font-size: 20px;
+  color: #25395d;
+  font-weight: 300;
+  letter-spacing: -.9px;
+  line-height: 1.8;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 856px;
+  text-align: center;
+}
+
+@media (min-width: 30em) and (max-width: 53.5em) {
+  .Introduction {
+    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (856 - 480));
+  }
+}
+
+@media (min-width: 53.5em) {
+  .Introduction {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 30em) {
+  .Introduction {
+    letter-spacing: -1.4px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 30em) {
+  .Introduction::after {
+    background-color: #b5955d;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.25em;
+    width: 80px;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Location finder
  * @type Organism
  */
@@ -2963,59 +3016,6 @@ blockquote cite br {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Introduction
- * @type Atom
- */
-.Introduction {
-  font-size: 20px;
-  color: #25395d;
-  font-weight: 300;
-  letter-spacing: -.9px;
-  line-height: 1.8;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 856px;
-  text-align: center;
-}
-
-@media (min-width: 30em) and (max-width: 53.5em) {
-  .Introduction {
-    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (856 - 480));
-  }
-}
-
-@media (min-width: 53.5em) {
-  .Introduction {
-    font-size: 32px;
-  }
-}
-
-@media (min-width: 30em) {
-  .Introduction {
-    letter-spacing: -1.4px;
-    line-height: 1.5;
-  }
-}
-
-@media (min-width: 30em) {
-  .Introduction::after {
-    background-color: #b5955d;
-    content: "";
-    display: block;
-    height: 4px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.25em;
-    width: 80px;
   }
 }
 /**
