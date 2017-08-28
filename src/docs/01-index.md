@@ -41,7 +41,7 @@ All commands should be run through `yarn run`.
 | Command | Description |
 | ------- | ----------- |
 | `start`| Starts Fractal and the local development server |
-| `assets`| Watches and compiles JS and SCSS assests with webpack |
+| `assets`| Watches and compiles JS and SCSS assets with webpack |
 | `build`| Builds and compiles production-ready files |
 | `clean`| Deletes the build directories `tmp` and `www`; used within the `build` script |
 | `eslint`| Lints JavaScript files with ESLint |
