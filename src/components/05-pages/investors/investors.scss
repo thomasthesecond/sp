@@ -119,6 +119,10 @@
       max-width: 296px;
     }
 
+    @media (max-width: $mq-max-860) {
+      margin-bottom: 64px;
+    }
+
     @media (min-width: $mq-min-860) {
       float: right;
       margin-top: 96px;
