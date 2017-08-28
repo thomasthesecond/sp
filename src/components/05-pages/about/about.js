@@ -71,11 +71,11 @@ export default class AboutPage {
       .setClassToggle(".Feature .CoverPhoto", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-feature" })
+    new ScrollMagic.Scene({ triggerElement: ".js-feature", offset: -300 })
       .setClassToggle(".Feature .Highlight", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-leadership-team", offset: -300 })
+    new ScrollMagic.Scene({ triggerElement: ".js-leadership-team", offset: -500 })
       .setClassToggle(".LeadershipTeam", this.className)
       .addTo(this.controller);
   }
