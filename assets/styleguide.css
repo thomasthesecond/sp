@@ -599,6 +599,124 @@ main {
   outline: none;
 }
 /**
+ * Mixins
+ */
+/**
+ * Functions
+ */
+/**
+ * Styleguide
+ * @note Not for production
+ */
+abbr[title] {
+  border-bottom: none;
+  cursor: help;
+  text-decoration: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+.swatch {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.swatch--light {
+  color: #000;
+}
+
+.token-table {
+  border-bottom: 1px solid #d4d4d8;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.token-table tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+.token-table th {
+  text-align: left;
+}
+
+.token-table th,
+.token-table td {
+  border-bottom: 1px solid #d4d4d8;
+  padding: 16px;
+}
+
+.token-table th:not(:first-child),
+.token-table td:not(:first-child) {
+  border-left: 1px solid #d4d4d8;
+}
+
+.font-family-open-sans {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-regular {
+  font-weight: 400;
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.font-preview {
+  color: #25395d;
+  overflow: hidden;
+}
+
+.font-preview-info {
+  float: left;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
+}
+
+.font-preview-info span {
+  color: #646e7e;
+}
+
+.font-preview-characters {
+  float: left;
+  overflow: hidden;
+}
+
+.font-preview-characters-aa {
+  float: left;
+  font-size: 120px;
+  line-height: 1;
+}
+
+.font-preview-characters-az {
+  float: left;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
+}
+/**
  * Functions
  */
 /**
@@ -902,124 +1020,6 @@ main {
   top: 0;
   width: 100%;
   z-index: 1000;
-}
-/**
- * Mixins
- */
-/**
- * Functions
- */
-/**
- * Styleguide
- * @note Not for production
- */
-abbr[title] {
-  border-bottom: none;
-  cursor: help;
-  text-decoration: none;
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-
-.swatch {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-.swatch--light {
-  color: #000;
-}
-
-.token-table {
-  border-bottom: 1px solid #d4d4d8;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.token-table tr:nth-child(odd) {
-  background-color: #f6f6f6;
-}
-
-.token-table th {
-  text-align: left;
-}
-
-.token-table th,
-.token-table td {
-  border-bottom: 1px solid #d4d4d8;
-  padding: 16px;
-}
-
-.token-table th:not(:first-child),
-.token-table td:not(:first-child) {
-  border-left: 1px solid #d4d4d8;
-}
-
-.font-family-open-sans {
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.font-weight-light {
-  font-weight: 300;
-}
-
-.font-weight-regular {
-  font-weight: 400;
-}
-
-.font-weight-semibold {
-  font-weight: 600;
-}
-
-.font-weight-bold {
-  font-weight: 700;
-}
-
-.font-preview {
-  color: #25395d;
-  overflow: hidden;
-}
-
-.font-preview-info {
-  float: left;
-  font-size: 16px;
-  line-height: 1.4;
-  margin-left: 40px;
-  margin-top: 14px;
-}
-
-.font-preview-info span {
-  color: #646e7e;
-}
-
-.font-preview-characters {
-  float: left;
-  overflow: hidden;
-}
-
-.font-preview-characters-aa {
-  float: left;
-  font-size: 120px;
-  line-height: 1;
-}
-
-.font-preview-characters-az {
-  float: left;
-  font-size: 24px;
-  line-height: 1.4;
-  margin-left: 40px;
-  margin-top: 14px;
 }
 /**
  * Functions
@@ -2829,53 +2829,50 @@ blockquote cite br {
  */
 .LocationFinder.is-sticky {
   background-color: #fff;
-  -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
-          box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
+}
+
+@media (max-width: 669px) {
+  .LocationFinder.is-sticky {
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+    padding-top: 24px;
+  }
 }
 
 @media (min-width: 670px) {
   .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
-.LocationFinder .container {
+.LocationFinder-container {
   background-color: #fff;
   position: relative;
 }
 
 @media (min-width: 670px) {
-  .LocationFinder .container {
+  .LocationFinder-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 6.97674vw;
-    max-height: 90px;
     min-height: 60px;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky .container {
-    margin-left: 0;
-    margin-right: 0;
+    max-height: 90px;
   }
 }
 
 @media (min-width: 670px) {
-  .LocationFinder:not(.is-sticky) .container {
-    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+  .LocationFinder:not(.is-sticky) .LocationFinder-container {
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
 .LocationFinder fieldset {
   border: 0;
-  height: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 @media (min-width: 670px) {
@@ -2884,11 +2881,18 @@ blockquote cite br {
   }
 }
 
+@media (max-width: 669px) {
+  .LocationFinder.is-sticky fieldset {
+    margin-bottom: -24px;
+  }
+}
+
 .LocationFinder legend {
   color: rgba(37, 57, 93, 0.79);
   display: block;
-  float: left;
+  font-size: 16px;
   font-weight: 700;
+  float: left;
   height: 100%;
   line-height: 1;
   width: 22.48062%;
@@ -2920,6 +2924,8 @@ blockquote cite br {
 .LocationFinder select {
   border: 0;
   height: 100%;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
   width: 100%;
 }
 
@@ -2962,22 +2968,16 @@ blockquote cite br {
 }
 
 @media (max-width: 669px) {
-  .LocationFinder.is-sticky select:first-of-type {
-    border: 0;
-    margin-bottom: 0;
-    padding-bottom: 22px;
-    padding-left: 24px;
-    padding-top: 24px;
-  }
-}
-
-@media (max-width: 669px) {
   .LocationFinder.is-sticky select:not(:first-of-type) {
-    display: none;
+    opacity: 0;
   }
 }
 
 .LocationFinder-button {
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
   width: 100%;
 }
 
@@ -2996,7 +2996,9 @@ blockquote cite br {
 
 @media (max-width: 669px) {
   .LocationFinder.is-sticky .LocationFinder-button {
-    display: none;
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    z-index: 1;
   }
 }
 
@@ -3253,7 +3255,15 @@ blockquote cite br {
 
 .TeamMember-image {
   display: block;
+  height: 100%;
   max-width: 100%;
+  width: auto;
+}
+
+@supports (display: grid) {
+  .TeamMember-image {
+    height: auto;
+  }
 }
 
 @media (min-width: 1015px) {
@@ -3302,11 +3312,12 @@ blockquote cite br {
 }
 
 .TeamMember-panel {
-  background-color: #fff;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  background-color: #fff;
   -webkit-box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
           box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
+  left: -3.72093%;
   opacity: 0;
   padding: 3.72093%;
   padding-top: 408px;
@@ -3321,8 +3332,8 @@ blockquote cite br {
 
 @media (min-width: 1015px) {
   .TeamMember-panel {
-    padding: 48px;
-    padding-top: 408px;
+    left: -48px;
+    padding: 408px 48px 48px;
     top: -48px;
     width: calc(100% + 96px);
   }
@@ -3353,7 +3364,31 @@ blockquote cite br {
 }
 
 .LeadershipTeam .TeamMember {
+  float: left;
   max-width: none;
+  width: 47.34513%;
+}
+
+@supports (display: grid) {
+  .LeadershipTeam .TeamMember {
+    float: none;
+    width: auto;
+  }
+}
+
+@media (min-width: 615px) {
+  .LeadershipTeam .TeamMember {
+    margin-left: 4.42478%;
+    margin-top: 56px;
+    width: 27.43363%;
+  }
+  @supports (display: grid) {
+    .LeadershipTeam .TeamMember {
+      margin-left: 0;
+      margin-top: 0;
+      width: auto;
+    }
+  }
 }
 
 .TeamList .TeamMember {
@@ -3729,6 +3764,26 @@ blockquote cite br {
 /**
  * Component: Leadership team
  */
+@media (min-width: 480px) {
+  .LeadershipTeam {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 904px;
+  }
+}
+
+@media (min-width: 615px) {
+  .LeadershipTeam {
+    position: relative;
+    top: -56px;
+  }
+  @supports (display: grid) {
+    .LeadershipTeam {
+      top: 0;
+    }
+  }
+}
+
 @supports (display: grid) {
   .LeadershipTeam {
     display: grid;
@@ -3750,6 +3805,12 @@ blockquote cite br {
     .LeadershipTeam {
       grid-column-gap: 80px;
     }
+  }
+}
+
+@supports (display: grid) {
+  .LeadershipTeam::before, .LeadershipTeam::after {
+    display: none;
   }
 }
 /**
@@ -4687,28 +4748,6 @@ blockquote cite br {
  * Mixins
  */
 /**
- * Component: File download
- */
-.FileDownload {
-  display: inline-block;
-}
-
-.FileDownload img {
-  display: block;
-  height: auto;
-  width: 14px;
-}
-
-.FileDownload + .FileDownload {
-  margin-left: 24px;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Filter
  * @type Organism
  */
@@ -4841,6 +4880,28 @@ blockquote cite br {
   .Filter-link {
     margin-top: 48px;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: File download
+ */
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
 }
 /**
  * Functions

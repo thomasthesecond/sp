@@ -7,9 +7,20 @@
  */
 
 .LeadershipTeam {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: center;
+  @media (min-width: 480px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 904px;
+  }
+
+  @media (min-width: 615px) {
+    position: relative;
+    top: -56px;
+
+    @supports (display: grid) {
+      top: 0;
+    }
+  }
 
   @supports (display: grid) {
     display: grid;
@@ -28,6 +39,14 @@
 
     @media (min-width: 808px) {
       grid-column-gap: 80px;
+    }
+  }
+
+  // Zero out clearfix
+  &::before,
+  &::after {
+    @supports (display: grid) {
+      display: none;
     }
   }
 }

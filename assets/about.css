@@ -536,7 +536,15 @@
 
 .TeamMember-image {
   display: block;
+  height: 100%;
   max-width: 100%;
+  width: auto;
+}
+
+@supports (display: grid) {
+  .TeamMember-image {
+    height: auto;
+  }
 }
 
 @media (min-width: 1015px) {
@@ -585,11 +593,12 @@
 }
 
 .TeamMember-panel {
-  background-color: #fff;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  background-color: #fff;
   -webkit-box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
           box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
+  left: -3.72093%;
   opacity: 0;
   padding: 3.72093%;
   padding-top: 408px;
@@ -604,8 +613,8 @@
 
 @media (min-width: 1015px) {
   .TeamMember-panel {
-    padding: 48px;
-    padding-top: 408px;
+    left: -48px;
+    padding: 408px 48px 48px;
     top: -48px;
     width: calc(100% + 96px);
   }
@@ -636,7 +645,31 @@
 }
 
 .LeadershipTeam .TeamMember {
+  float: left;
   max-width: none;
+  width: 47.34513%;
+}
+
+@supports (display: grid) {
+  .LeadershipTeam .TeamMember {
+    float: none;
+    width: auto;
+  }
+}
+
+@media (min-width: 615px) {
+  .LeadershipTeam .TeamMember {
+    margin-left: 4.42478%;
+    margin-top: 56px;
+    width: 27.43363%;
+  }
+  @supports (display: grid) {
+    .LeadershipTeam .TeamMember {
+      margin-left: 0;
+      margin-top: 0;
+      width: auto;
+    }
+  }
 }
 
 .TeamList .TeamMember {
@@ -1012,6 +1045,26 @@
 /**
  * Component: Leadership team
  */
+@media (min-width: 480px) {
+  .LeadershipTeam {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 904px;
+  }
+}
+
+@media (min-width: 615px) {
+  .LeadershipTeam {
+    position: relative;
+    top: -56px;
+  }
+  @supports (display: grid) {
+    .LeadershipTeam {
+      top: 0;
+    }
+  }
+}
+
 @supports (display: grid) {
   .LeadershipTeam {
     display: grid;
@@ -1033,6 +1086,12 @@
     .LeadershipTeam {
       grid-column-gap: 80px;
     }
+  }
+}
+
+@supports (display: grid) {
+  .LeadershipTeam::before, .LeadershipTeam::after {
+    display: none;
   }
 }
 /**
