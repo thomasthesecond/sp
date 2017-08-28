@@ -1,5 +1,6 @@
 ---
 title: Open graph protocol
+label: Open graph protocol
 ---
 
 Open graph protocol is used by social networks such as Facebook and Twitter to read data from a website. This data can then be used by Facebook and Twitter when a user shares a link on one of those networks. It’s kind of like SEO for social networks.
