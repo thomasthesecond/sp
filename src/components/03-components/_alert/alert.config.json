@@ -1,8 +1,0 @@
-{
-  "context": {
-    "type": "atom",
-    "alert": {
-      "text": "This is an alert"
-    }
-  }
-}
