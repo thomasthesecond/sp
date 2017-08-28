@@ -100,7 +100,7 @@ The source code exists within the `src` directory at the root of the project.
 
 Compiled build files are contained within the `www` directory at the root of the project.
 
-When making a change to component or page, only the source files should be edited.
+Ideally, files within `src` should be edited and then compiled to `www` with webpack.
 
 ## Languages used
 
