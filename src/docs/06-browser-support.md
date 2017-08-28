@@ -1,5 +1,7 @@
 ---
 title: Browser support
+label: Browser support
+status: draft
 ---
 
 ## Graceful degradation
