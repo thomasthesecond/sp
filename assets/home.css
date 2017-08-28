@@ -139,10 +139,6 @@
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
-  .js:not(.disable-animations) body:not(.HomePage) .Introduction {
-    -webkit-transition-delay: 1.3s;
-            transition-delay: 1.3s;
-  }
   .js:not(.disable-animations) .ImageBlock > a::after {
     background-color: #fff;
     content: "";
