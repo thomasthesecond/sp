@@ -1,6 +1,5 @@
 ---
 title: Surgery Partners Pattern Library
-status: draft
 ---
 You are viewing the front-end pattern library for Surgery Partners. It’s built with [Fractal](http://fractal.build), a tool that enables rapid development of components, templates and pages.
 
