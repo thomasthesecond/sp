@@ -1,14 +1,14 @@
 {
   "name": "surgery-partners",
-  "title": "Surgery Partners Component Library",
+  "title": "Surgery Partners Pattern Library",
   "version": "1.0.0-beta",
-  "description": "Component library and documentation for surgery-partners.com",
+  "description": "Pattern library and documentation for surgerypartners.com",
   "main": "fractal.js",
   "private": true,
   "scripts": {
     "start": "fractal start --sync",
     "assets": "webpack --watch",
-    "build": "yarn run clean && webpack && fractal build",
+    "build": "yarn run clean && webpack && NODE_ENV=production webpack && fractal build",
     "clean": "rimraf tmp && rimraf www",
     "scsslint": "scss-lint . --config .scsslint.yml",
     "eslint": "eslint src --ext .js",
@@ -34,7 +34,6 @@
     "> 5%",
     "last 2 versions"
   ],
-  "pre-commit": [],
   "dependencies": {
     "@frctl/fractal": "^1.1.5",
     "@frctl/mandelbrot": "^1.1.0",
@@ -66,7 +65,6 @@
     "postcss": "^6.0.6",
     "postcss-cli": "^4.1.0",
     "postcss-loader": "^2.0.3",
-    "pre-commit": "^1.2.2",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.4",
     "style-loader": "^0.17.0",
