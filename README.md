@@ -87,7 +87,6 @@ A separate list of `devDependencies` are used for compiling and building the pro
 | `postcss` | Tool for transforming styles with JS plugins |
 | `postcss-cli` | CLI for PostCSS |
 | `postcss-loader` | PostCSS loader module for webpack |
-| `pre-commit` | Automatically install pre-commit hooks for npm modules |
 | `rimraf` | A deep deletion module for node |
 | `sass-loader` | Sass loader module for webpack |
 | `style-loader` | Style loader module for webpack |
