@@ -122,10 +122,6 @@ $mq: #{(1024 / 16) * 1em};
       }
     }
 
-    body:not(.HomePage) .Introduction {
-      transition-delay: 1.3s;
-    }
-
     .ImageBlock {
       > a::after {
         background-color: $color-background-default;
