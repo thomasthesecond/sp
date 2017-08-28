@@ -1,5 +1,6 @@
 ---
 title: Layout modules
+label: Layout modules
 ---
 
 Layout modules are general-purpose and easily reusable; generally these modules wrap components and help lay out sections on a page.
