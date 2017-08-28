@@ -1,5 +1,6 @@
 ---
 title: URL redirects
+label: URL redirects
 status: draft
 ---
 
