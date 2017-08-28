@@ -32,20 +32,25 @@
 
 .MoreLink .icon {
   display: inline-block;
-  font-size: 24px;
-  height: 10px;
+  font-size: 20px;
+  height: 8px;
   stroke: currentColor;
   stroke-width: 1px;
   transform: translateX(6px);
   transition: color 200ms, transform 200ms;
+
+  @media (min-width: 600px) {
+    font-size: 24px;
+    height: 10px;
+  }
 }
 
 // Implementation detail
 
 .Masthead .MoreLink {
   @include fluid-type(
-    $min-font-size: 14,
-    $max-font-size: 16,
+    $min-font-size: $font-size-default-min,
+    $max-font-size: $font-size-default,
     $min-width: 600
   );
 
