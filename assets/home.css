@@ -595,53 +595,50 @@
  */
 .LocationFinder.is-sticky {
   background-color: #fff;
-  -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
-          box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
+}
+
+@media (max-width: 669px) {
+  .LocationFinder.is-sticky {
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+    padding-top: 24px;
+  }
 }
 
 @media (min-width: 670px) {
   .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
-.LocationFinder .container {
+.LocationFinder-container {
   background-color: #fff;
   position: relative;
 }
 
 @media (min-width: 670px) {
-  .LocationFinder .container {
+  .LocationFinder-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 6.97674vw;
-    max-height: 90px;
     min-height: 60px;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky .container {
-    margin-left: 0;
-    margin-right: 0;
+    max-height: 90px;
   }
 }
 
 @media (min-width: 670px) {
-  .LocationFinder:not(.is-sticky) .container {
-    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+  .LocationFinder:not(.is-sticky) .LocationFinder-container {
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 36px 84px rgba(4, 36, 53, 0.39);
   }
 }
 
 .LocationFinder fieldset {
   border: 0;
-  height: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 @media (min-width: 670px) {
@@ -650,11 +647,18 @@
   }
 }
 
+@media (max-width: 669px) {
+  .LocationFinder.is-sticky fieldset {
+    margin-bottom: -24px;
+  }
+}
+
 .LocationFinder legend {
   color: rgba(37, 57, 93, 0.79);
   display: block;
-  float: left;
+  font-size: 16px;
   font-weight: 700;
+  float: left;
   height: 100%;
   line-height: 1;
   width: 22.48062%;
@@ -686,6 +690,8 @@
 .LocationFinder select {
   border: 0;
   height: 100%;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
   width: 100%;
 }
 
@@ -728,22 +734,16 @@
 }
 
 @media (max-width: 669px) {
-  .LocationFinder.is-sticky select:first-of-type {
-    border: 0;
-    margin-bottom: 0;
-    padding-bottom: 22px;
-    padding-left: 24px;
-    padding-top: 24px;
-  }
-}
-
-@media (max-width: 669px) {
   .LocationFinder.is-sticky select:not(:first-of-type) {
-    display: none;
+    opacity: 0;
   }
 }
 
 .LocationFinder-button {
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
   width: 100%;
 }
 
@@ -762,7 +762,9 @@
 
 @media (max-width: 669px) {
   .LocationFinder.is-sticky .LocationFinder-button {
-    display: none;
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+    z-index: 1;
   }
 }
 

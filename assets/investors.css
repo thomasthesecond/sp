@@ -85,6 +85,7 @@
  */
 /**
  * Component: Team member
+ * @type Molecule
  */
 .TeamMember:not(.TeamMember--small) {
   -webkit-box-align: center;
@@ -167,26 +168,26 @@
   background-color: #fff;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
-          box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
-  opacity: 0;
-  padding: 3.72093%;
-  padding-top: 408px;
   position: absolute;
-  top: -3.72093%;
+  padding: 3.72093%;
   width: calc(100% + 7.44186%);
+  top: -3.72093%;
+  z-index: 1;
+  padding-top: 408px;
+  -webkit-box-shadow: 0 42px 84px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 42px 84px rgba(0, 0, 0, 0.3);
+  opacity: 0;
   -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
   visibility: hidden;
-  z-index: 1;
 }
 
 @media (min-width: 1015px) {
   .TeamMember-panel {
     padding: 48px;
-    padding-top: 408px;
-    top: -48px;
     width: calc(100% + 96px);
+    top: -48px;
+    padding-top: 408px;
   }
 }
 
@@ -1031,6 +1032,28 @@
  * Mixins
  */
 /**
+ * Component: File download
+ */
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Filter
  * @type Organism
  */
@@ -1163,28 +1186,6 @@
   .Filter-link {
     margin-top: 48px;
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: File download
- */
-.FileDownload {
-  display: inline-block;
-}
-
-.FileDownload img {
-  display: block;
-  height: auto;
-  width: 14px;
-}
-
-.FileDownload + .FileDownload {
-  margin-left: 24px;
 }
 /**
  * Functions

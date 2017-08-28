@@ -1,0 +1,18 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Location item
+ * @type Organism
+ */
+
+.LocationItem {}
+
+.LocationItem h4 {
+  margin-bottom: 0;
+}
+
+.LocationItem p {
+  margin-top: 0;
+}

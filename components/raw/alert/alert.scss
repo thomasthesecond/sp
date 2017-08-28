@@ -1,0 +1,16 @@
+@import "../../../assets/scss/design-tokens";
+@import "../../../assets/scss/functions";
+@import "../../../assets/scss/mixins";
+
+/**
+ * Component: Alert
+ * @type Atom
+ */
+
+.Alert {
+  background-color: $background-yellow;
+  color: #3b444f;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+}

@@ -75,20 +75,20 @@ export default class HomePage {
       .setClassToggle(".LocationFinder", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-introduction", offset: 0 })
+    new ScrollMagic.Scene({ triggerElement: ".js-introduction", offset: 500 })
       .setClassToggle(".Introduction", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-partnerships-section", offset: 100 })
-      .setClassToggle("#partnerships-section", this.className)
+    new ScrollMagic.Scene({ triggerElement: ".js-partnerships-section", offset: 500 })
+      .setClassToggle(".ImageBlock#partnerships-section", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-investors-section", offset: 100 })
-      .setClassToggle("#investors-section", this.className)
+    new ScrollMagic.Scene({ triggerElement: ".js-investors-section", offset: 500 })
+      .setClassToggle(".ImageBlock#investors-section", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-careers-section", offset: 100 })
-      .setClassToggle("#careers-section", this.className)
+    new ScrollMagic.Scene({ triggerElement: ".js-careers-section", offset: 500 })
+      .setClassToggle(".ImageBlock#careers-section", this.className)
       .addTo(this.controller);
   }
 

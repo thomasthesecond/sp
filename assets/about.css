@@ -506,6 +506,7 @@
  */
 /**
  * Component: Team member
+ * @type Molecule
  */
 .TeamMember:not(.TeamMember--small) {
   -webkit-box-align: center;
@@ -588,26 +589,26 @@
   background-color: #fff;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
-          box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
-  opacity: 0;
-  padding: 3.72093%;
-  padding-top: 408px;
   position: absolute;
-  top: -3.72093%;
+  padding: 3.72093%;
   width: calc(100% + 7.44186%);
+  top: -3.72093%;
+  z-index: 1;
+  padding-top: 408px;
+  -webkit-box-shadow: 0 42px 84px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 42px 84px rgba(0, 0, 0, 0.3);
+  opacity: 0;
   -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
   visibility: hidden;
-  z-index: 1;
 }
 
 @media (min-width: 1015px) {
   .TeamMember-panel {
     padding: 48px;
-    padding-top: 408px;
-    top: -48px;
     width: calc(100% + 96px);
+    top: -48px;
+    padding-top: 408px;
   }
 }
 
@@ -1011,7 +1012,36 @@
  */
 /**
  * Component: Leadership team
+ * @type Organism
  */
+.LeadershipTeam {
+  display: grid;
+  grid-gap: 0;
+  grid-row-gap: 64px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 480px) {
+  .LeadershipTeam {
+    grid-column-gap: 24px;
+    grid-row-gap: 56px;
+    grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  }
+}
+
+@media (min-width: 480px) {
+  .LeadershipTeam {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 904px;
+  }
+}
+
+@media (min-width: 808px) {
+  .LeadershipTeam {
+    grid-column-gap: 80px;
+  }
+}
 /**
  * Functions
  */
