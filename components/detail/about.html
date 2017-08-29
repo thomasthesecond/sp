@@ -826,7 +826,24 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Modal js-modal hidden"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"team-member-modal"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"team-member-modal-title"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"team-member-modal-description"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alertdialog"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Modal-close js-modal-close"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Close"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Close"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span>
+      <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>
+      <span class="hljs-attr">xmlns:xlink</span>=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span>
+      <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#icon-close"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Modal-content js-modal-content"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Overlay js-overlay hidden"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -906,7 +923,10 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
 
-</span><span class="hljs-template-variable">{{ render "<a href="contentinfo.html">@contentinfo</a>" }}</span><span class="xml"></span></pre>
+</span><span class="hljs-template-variable">{{ render "<a href="contentinfo.html">@contentinfo</a>" }}</span><span class="xml">
+
+</span><span class="hljs-template-variable">{{&gt; <a href="modal.html">@modal</a> id="team-member-modal" hidden=true }}</span><span class="xml">
+</span><span class="hljs-template-variable">{{&gt; <a href="overlay.html">@overlay</a> hidden=true }}</span><span class="xml"></span></pre>
     </code>
 </div>
 
@@ -1200,14 +1220,41 @@
                                 <pre><span class="hljs-meta">"use strict"</span>;
 
 <span class="hljs-keyword">import</span> ScrollMagic <span class="hljs-keyword">from</span> <span class="hljs-string">"scrollmagic"</span>;
+<span class="hljs-keyword">import</span> Modal <span class="hljs-keyword">from</span> <span class="hljs-string">"../../03-components/modal"</span>;
 <span class="hljs-keyword">import</span> { forEach } <span class="hljs-keyword">from</span> <span class="hljs-string">"../../../assets/js/utils"</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AboutPage</span> </span>{
+  <span class="hljs-keyword">static</span> teamMemberModal() {
+    <span class="hljs-keyword">const</span> modal = <span class="hljs-keyword">new</span> Modal();
+    <span class="hljs-keyword">const</span> teamMembers = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">".TeamMember"</span>);
+    <span class="hljs-keyword">const</span> modalElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal"</span>);
+
+    forEach(teamMembers, (index, member) =&gt; {
+      <span class="hljs-keyword">const</span> name = member.querySelector(<span class="hljs-string">".TeamMember-name"</span>).innerHTML;
+      <span class="hljs-keyword">const</span> title = member.querySelector(<span class="hljs-string">".TeamMember-title"</span>).innerHTML;
+      <span class="hljs-keyword">const</span> bio = member.querySelector(<span class="hljs-string">".TeamMember-bio"</span>).innerHTML;
+
+      <span class="hljs-keyword">const</span> content = <span class="hljs-string">`
+        &lt;div class="TeamMember"&gt;
+          &lt;h2 class="TeamMember-name" id="<span class="hljs-subst">${modalElement.id}</span>-title"&gt;<span class="hljs-subst">${name}</span>&lt;/h2&gt;
+          &lt;div class="TeamMember-title"&gt;<span class="hljs-subst">${title}</span>&lt;/div&gt;
+          &lt;p class="TeamMember-bio" id="<span class="hljs-subst">${modalElement.id}</span>-description"&gt;<span class="hljs-subst">${bio}</span>&lt;/p&gt;
+        &lt;/div&gt;
+      `</span>;
+
+      member.addEventListener(<span class="hljs-string">"click"</span>, (event) =&gt; {
+        modal.open(content);
+        event.preventDefault();
+      }, <span class="hljs-literal">false</span>);
+    });
+  }
+
   <span class="hljs-keyword">constructor</span>() {
     <span class="hljs-keyword">this</span>.controller = <span class="hljs-literal">null</span>;
     <span class="hljs-keyword">this</span>.className = <span class="hljs-string">"animate"</span>;
 
     <span class="hljs-keyword">this</span>.mql = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(min-width: 1024px)"</span>);
+    <span class="hljs-keyword">this</span>.mqlModal = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(max-width: 1014px)"</span>);
     <span class="hljs-keyword">this</span>.reduceMotion = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(prefers-reduced-motion)"</span>);
 
     <span class="hljs-keyword">this</span>.checkScreenSize = <span class="hljs-keyword">this</span>.checkScreenSize.bind(<span class="hljs-keyword">this</span>);
@@ -1287,6 +1334,9 @@
       <span class="hljs-keyword">this</span>.checkScreenSize(<span class="hljs-keyword">this</span>.mql);
       <span class="hljs-keyword">this</span>.mql.addListener(<span class="hljs-keyword">this</span>.checkScreenSize);
     }
+
+    AboutPage.teamMemberModal(<span class="hljs-keyword">this</span>.mqlModal);
+    <span class="hljs-keyword">this</span>.mqlModal.addListener(AboutPage.teamMemberModal);
   }
 }
 </pre>
@@ -1305,7 +1355,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.5 KB</span>
+                    <span class="Meta-value">3.6 KB</span>
                 </li>
             </ul>
         </div>
@@ -1513,7 +1563,7 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(10)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(12)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="banner.html">@<span>banner</span></a>, 
@@ -1534,7 +1584,11 @@
             
                 <a href="next-page.html">@<span>next-page</span></a>, 
             
-                <a href="contentinfo.html">@<span>contentinfo</span></a>
+                <a href="contentinfo.html">@<span>contentinfo</span></a>, 
+            
+                <a href="modal.html">@<span>modal</span></a>, 
+            
+                <a href="overlay.html">@<span>overlay</span></a>
             
             </span>
         </li class="Meta-item">
@@ -3315,7 +3369,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

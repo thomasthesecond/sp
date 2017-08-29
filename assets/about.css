@@ -592,31 +592,29 @@
   }
 }
 
-.TeamMember-panel {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background-color: #fff;
-  -webkit-box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
-          box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
-  left: -3.72093%;
-  opacity: 0;
-  padding: 3.72093%;
-  padding-top: 408px;
-  position: absolute;
-  top: -3.72093%;
-  width: calc(100% + 7.44186%);
-  -webkit-transition: opacity 200ms;
-  transition: opacity 200ms;
-  visibility: hidden;
-  z-index: 1;
+@media (max-width: 1014px) {
+  .TeamMember-panel {
+    display: none;
+  }
 }
 
 @media (min-width: 1015px) {
   .TeamMember-panel {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    background-color: #fff;
+    -webkit-box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
+            box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
     left: -48px;
+    opacity: 0;
     padding: 408px 48px 48px;
+    position: absolute;
     top: -48px;
     width: calc(100% + 96px);
+    -webkit-transition: opacity 200ms;
+    transition: opacity 200ms;
+    visibility: hidden;
+    z-index: 1;
   }
 }
 
@@ -857,6 +855,41 @@
  * Mixins
  */
 /**
+ * Component: Service cards
+ */
+.ServiceCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 630px;
+}
+
+@supports (display: grid) {
+  .ServiceCards {
+    display: grid;
+    grid-column-gap: 0;
+    grid-row-gap: 64px;
+    grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
+  }
+  @media (min-width: 480px) {
+    .ServiceCards {
+      grid-gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
+    }
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Service card
  */
 .ServiceCard {
@@ -999,41 +1032,6 @@
   .ServiceCards .ServiceCard {
     margin-left: 0 !important;
     margin-top: 0 !important;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Service cards
- */
-.ServiceCards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 630px;
-}
-
-@supports (display: grid) {
-  .ServiceCards {
-    display: grid;
-    grid-column-gap: 0;
-    grid-row-gap: 64px;
-    grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
-  }
-  @media (min-width: 480px) {
-    .ServiceCards {
-      grid-gap: 30px;
-      grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
-    }
   }
 }
 /**
@@ -1254,20 +1252,16 @@
 
 @media (min-width: 660px) {
   .Feature .Highlight {
-    -ms-flex-preferred-size: 300px;
-        flex-basis: 300px;
+    -ms-flex-preferred-size: 298px;
+        flex-basis: 298px;
+    margin-bottom: 64px;
+    margin-top: 64px;
   }
 }
 
 @media (max-width: 659px) {
   .Feature .Highlight:not(:first-child) {
     margin-top: 60px;
-  }
-}
-
-@media (min-width: 660px) {
-  .Feature .Highlight:nth-child(3), .Feature .Highlight:nth-child(4) {
-    margin-top: 128px;
   }
 }
 /**
@@ -1401,4 +1395,129 @@
     margin-bottom: 256px;
     margin-top: 156px;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Modal
+ */
+.Modal {
+  background-color: #fff;
+  -webkit-box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
+          box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  -webkit-transform: translateY(10vh);
+          transform: translateY(10vh);
+  -webkit-transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
+  transition: opacity 200ms, visibility 200ms, -webkit-transform 200ms;
+  transition: opacity 200ms, transform 200ms, visibility 200ms;
+  transition: opacity 200ms, transform 200ms, visibility 200ms, -webkit-transform 200ms;
+  visibility: hidden;
+  will-change: transform;
+  z-index: 9000;
+}
+
+@media (max-width: 479px) {
+  .Modal {
+    height: 100vh;
+    top: 0;
+    width: 100vw;
+  }
+}
+
+@media (min-width: 480px) {
+  .Modal {
+    max-height: 80vh;
+    max-width: 800px;
+    top: 50%;
+    width: 96vw;
+  }
+}
+
+.Modal.is-open {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+}
+
+@media (min-width: 480px) {
+  .Modal.is-open {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+.Modal-close {
+  background-color: transparent;
+  border: 0;
+  color: rgba(100, 110, 126, 0.4);
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+  height: 24px;
+  padding: 0;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+  width: 24px;
+  z-index: 1;
+}
+
+.Modal-close:hover, .Modal-close:active, .Modal-close:focus {
+  color: rgba(100, 110, 126, 0.8);
+}
+
+.Modal-content {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 48px;
+  padding-top: 24px;
+}
+
+@media (min-width: 480px) {
+  .Modal-content {
+    padding-left: 48px;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Overlay
+ * @type Atom
+ */
+.Overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transition: opacity 200ms, visibility 200ms;
+  transition: opacity 200ms, visibility 200ms;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 8000;
+}
+
+.Overlay.is-open {
+  opacity: 1;
+  visibility: visible;
 }

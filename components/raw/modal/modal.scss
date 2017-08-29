@@ -15,8 +15,8 @@
   margin: auto;
   opacity: 0;
   // padding: #{$spacing-gutter}px;
-  padding-bottom: #{$spacing-gutter}px;
-  padding-top: #{$spacing-gutter}px;
+  // padding-bottom: #{$spacing-gutter}px;
+  // padding-top: #{$spacing-gutter}px;
   position: fixed;
   right: 0;
   // top: 0;
@@ -24,10 +24,10 @@
   transition: opacity 200ms, transform 200ms, visibility 200ms;
   visibility: hidden;
   // width: 100vw;
+  will-change: transform;
   z-index: $z-index-modal;
 
   @media (max-width: 479px) {
-    bottom: 0;
     height: 100vh;
     top: 0;
     width: 100vw;
@@ -40,6 +40,7 @@
     max-width: 800px;
     top: 50%;
     // width: 80vw;
+    width: 96vw;
   }
 
   // @media (min-width: 800px) {
@@ -72,6 +73,7 @@
   top: #{$spacing-gutter}px;
   transition: color 200ms;
   width: 24px;
+  z-index: $z-index-default;
 
   &:hover,
   &:active,
@@ -84,8 +86,10 @@
   height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
+  padding-bottom: #{$spacing-gutter}px;
   padding-left: #{$spacing-gutter}px;
   padding-right: #{$spacing-gutter * 2}px;
+  padding-top: #{$spacing-gutter}px;
 
   @media (min-width: 480px) {
     padding-left: #{$spacing-gutter * 2}px;

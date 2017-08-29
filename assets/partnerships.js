@@ -122,6 +122,211 @@ exports.objectFitCover = objectFitCover;
 /***/ }),
 
 /***/ 10:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _scrollmagic = __webpack_require__(2);
+
+var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
+
+var _utils = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SubNavigation = function () {
+  function SubNavigation() {
+    _classCallCheck(this, SubNavigation);
+
+    this.subNavigation = document.querySelector(".js-sub-navigation");
+    this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
+    this.subNavigationItems = this.subNavigation.querySelectorAll("li");
+    this.sections = document.querySelectorAll(".js-spy-section");
+
+    this.listenForAnchorClick = this.listenForAnchorClick.bind(this);
+    this.updateMarker = this.updateMarker.bind(this);
+    this.makeMarkerVisible = this.makeMarkerVisible.bind(this);
+    this.makeMarkerInvisible = this.makeMarkerInvisible.bind(this);
+    this.setMarkerWidth = this.setMarkerWidth.bind(this);
+    this.setMarkerOffset = this.setMarkerOffset.bind(this);
+    this.setMarkerTransition = this.setMarkerTransition.bind(this);
+    this.updateMarkerOffsetOnResize = this.updateMarkerOffsetOnResize.bind(this);
+    this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
+    this.setUpItems = this.setUpItems.bind(this);
+    this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
+
+    this.currentItem = null;
+
+    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
+  }
+
+  _createClass(SubNavigation, [{
+    key: "listenForAnchorClick",
+    value: function listenForAnchorClick(anchor) {
+      var _this = this;
+
+      anchor.addEventListener("click", function (event) {
+        var hashId = anchor.hash.replace("#", "");
+
+        window.scroll({
+          top: document.getElementById(hashId).offsetTop - _this.subNavigation.offsetHeight,
+          left: 0,
+          behavior: "smooth"
+        });
+
+        event.preventDefault();
+      });
+    }
+  }, {
+    key: "scrollActiveMarkerIntoView",
+    value: function scrollActiveMarkerIntoView(offset) {
+      var list = this.subNavigation.querySelector("ul");
+
+      if (typeof list.scroll === "function") {
+        list.scroll({
+          top: 0,
+          left: offset - 24,
+          behavior: "smooth"
+        });
+      }
+    }
+  }, {
+    key: "updateMarker",
+    value: function updateMarker(item) {
+      var mql = window.matchMedia("(max-width: 1006px)");
+      var activeWidth = item.offsetWidth;
+      var activeOffset = item.offsetLeft;
+
+      var padding = function padding() {
+        return mql.matches ? 10 : 0;
+      };
+      mql.addListener(padding);
+
+      this.makeMarkerVisible();
+      this.setMarkerWidth(activeWidth);
+      this.setMarkerOffset(activeOffset - padding());
+      this.scrollActiveMarkerIntoView(activeOffset);
+    }
+  }, {
+    key: "makeMarkerVisible",
+    value: function makeMarkerVisible() {
+      this.subNavigationMarker.style.opacity = 1;
+    }
+  }, {
+    key: "makeMarkerInvisible",
+    value: function makeMarkerInvisible() {
+      this.subNavigationMarker.style.opacity = 0;
+    }
+  }, {
+    key: "setMarkerWidth",
+    value: function setMarkerWidth(width) {
+      this.subNavigationMarker.style.width = width + "px";
+    }
+  }, {
+    key: "setMarkerOffset",
+    value: function setMarkerOffset(offset) {
+      this.subNavigationMarker.style.transform = "translateX(" + offset + "px)";
+    }
+  }, {
+    key: "setMarkerTransition",
+    value: function setMarkerTransition() {
+      var _this2 = this;
+
+      setTimeout(function () {
+        _this2.subNavigationMarker.style.transition = "opacity 200ms, transform 200ms";
+      }, 200);
+    }
+  }, {
+    key: "updateMarkerOffsetOnResize",
+    value: function updateMarkerOffsetOnResize() {
+      var _this3 = this;
+
+      window.addEventListener("resize", function () {
+        setTimeout(function () {
+          if (_this3.currentItem) {
+            _this3.updateMarker(_this3.currentItem);
+          }
+        }, 100);
+      });
+    }
+  }, {
+    key: "setUpScrollSpy",
+    value: function setUpScrollSpy() {
+      var _this4 = this;
+
+      var controller = new _scrollmagic2.default.Controller({
+        globalSceneOptions: {
+          triggerHook: "onEnter"
+        }
+      });
+
+      this.updateMarkerOffsetOnResize();
+
+      (0, _utils.forEach)(this.sections, function (index, section) {
+        var scene = new _scrollmagic2.default.Scene({
+          duration: document.getElementById(section.id).offsetHeight,
+          offset: document.getElementById(section.id).offsetTop - _this4.subNavigation.offsetHeight
+        }).addTo(controller);
+
+        scene.on("enter", function () {
+          _this4.currentItem = document.getElementById(section.id + "-item");
+          _this4.updateMarker(_this4.currentItem);
+
+          if (_this4.currentItem && !_this4.motionQuery.matches) {
+            _this4.setMarkerTransition();
+          }
+        });
+
+        scene.on("leave", function (event) {
+          if (index === 0 && event.scrollDirection === "REVERSE") {
+            _this4.makeMarkerInvisible();
+          }
+
+          if (index === _this4.sections.length - 1 && event.scrollDirection === "FORWARD") {
+            _this4.makeMarkerInvisible();
+          }
+        });
+      });
+    }
+  }, {
+    key: "setUpItems",
+    value: function setUpItems() {
+      var _this5 = this;
+
+      (0, _utils.forEach)(this.subNavigationItems, function (index, item) {
+        var anchor = item.querySelector("a");
+
+        _this5.listenForAnchorClick(anchor);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (typeof window.CSS !== "undefined" && window.CSS.supports("position", "sticky")) {
+        this.setUpScrollSpy();
+      }
+
+      this.setUpItems();
+    }
+  }]);
+
+  return SubNavigation;
+}();
+
+exports.default = SubNavigation;
+
+/***/ }),
+
+/***/ 11:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -145,20 +350,10 @@ __webpack_require__(129);
 
 /***/ }),
 
-/***/ 14:
+/***/ 15:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 15:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(16);
 
 /***/ }),
 
@@ -176,21 +371,21 @@ var _partnerships2 = _interopRequireDefault(_partnerships);
 
 __webpack_require__(3);
 
-__webpack_require__(23);
+__webpack_require__(27);
 
-__webpack_require__(6);
+__webpack_require__(7);
 
-__webpack_require__(15);
+__webpack_require__(16);
 
 __webpack_require__(4);
 
-var _subNavigation = __webpack_require__(8);
+var _subNavigation = __webpack_require__(9);
 
 var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
 __webpack_require__(128);
 
-__webpack_require__(22);
+__webpack_require__(23);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -362,6 +557,16 @@ exports.default = HomePage;
 /***/ }),
 
 /***/ 16:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(17);
+
+/***/ }),
+
+/***/ 17:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3186,28 +3391,28 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 23:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(24);
+__webpack_require__(28);
 
 __webpack_require__(1);
 
-__webpack_require__(14);
+__webpack_require__(15);
 
 /***/ }),
 
-/***/ 24:
+/***/ 28:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3241,42 +3446,20 @@ __webpack_require__(5);
 
 /***/ }),
 
-/***/ 6:
+/***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(7);
-
-/***/ }),
-
-/***/ 7:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+__webpack_require__(8);
 
 /***/ }),
 
 /***/ 8:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _subNavigation = __webpack_require__(9);
-
-var _subNavigation2 = _interopRequireDefault(_subNavigation);
-
-__webpack_require__(10);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _subNavigation2.default;
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -3290,198 +3473,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _subNavigation = __webpack_require__(10);
 
-var _scrollmagic = __webpack_require__(2);
+var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
-
-var _utils = __webpack_require__(0);
+__webpack_require__(11);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var SubNavigation = function () {
-  function SubNavigation() {
-    _classCallCheck(this, SubNavigation);
-
-    this.subNavigation = document.querySelector(".js-sub-navigation");
-    this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
-    this.subNavigationItems = this.subNavigation.querySelectorAll("li");
-    this.sections = document.querySelectorAll(".js-spy-section");
-
-    this.listenForAnchorClick = this.listenForAnchorClick.bind(this);
-    this.updateMarker = this.updateMarker.bind(this);
-    this.makeMarkerVisible = this.makeMarkerVisible.bind(this);
-    this.makeMarkerInvisible = this.makeMarkerInvisible.bind(this);
-    this.setMarkerWidth = this.setMarkerWidth.bind(this);
-    this.setMarkerOffset = this.setMarkerOffset.bind(this);
-    this.setMarkerTransition = this.setMarkerTransition.bind(this);
-    this.updateMarkerOffsetOnResize = this.updateMarkerOffsetOnResize.bind(this);
-    this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
-    this.setUpItems = this.setUpItems.bind(this);
-    this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
-
-    this.currentItem = null;
-
-    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
-  }
-
-  _createClass(SubNavigation, [{
-    key: "listenForAnchorClick",
-    value: function listenForAnchorClick(anchor) {
-      var _this = this;
-
-      anchor.addEventListener("click", function (event) {
-        var hashId = anchor.hash.replace("#", "");
-
-        window.scroll({
-          top: document.getElementById(hashId).offsetTop - _this.subNavigation.offsetHeight,
-          left: 0,
-          behavior: "smooth"
-        });
-
-        event.preventDefault();
-      });
-    }
-  }, {
-    key: "scrollActiveMarkerIntoView",
-    value: function scrollActiveMarkerIntoView(offset) {
-      var list = this.subNavigation.querySelector("ul");
-
-      if (typeof list.scroll === "function") {
-        list.scroll({
-          top: 0,
-          left: offset - 24,
-          behavior: "smooth"
-        });
-      }
-    }
-  }, {
-    key: "updateMarker",
-    value: function updateMarker(item) {
-      var mql = window.matchMedia("(max-width: 1006px)");
-      var activeWidth = item.offsetWidth;
-      var activeOffset = item.offsetLeft;
-
-      var padding = function padding() {
-        return mql.matches ? 10 : 0;
-      };
-      mql.addListener(padding);
-
-      this.makeMarkerVisible();
-      this.setMarkerWidth(activeWidth);
-      this.setMarkerOffset(activeOffset - padding());
-      this.scrollActiveMarkerIntoView(activeOffset);
-    }
-  }, {
-    key: "makeMarkerVisible",
-    value: function makeMarkerVisible() {
-      this.subNavigationMarker.style.opacity = 1;
-    }
-  }, {
-    key: "makeMarkerInvisible",
-    value: function makeMarkerInvisible() {
-      this.subNavigationMarker.style.opacity = 0;
-    }
-  }, {
-    key: "setMarkerWidth",
-    value: function setMarkerWidth(width) {
-      this.subNavigationMarker.style.width = width + "px";
-    }
-  }, {
-    key: "setMarkerOffset",
-    value: function setMarkerOffset(offset) {
-      this.subNavigationMarker.style.transform = "translateX(" + offset + "px)";
-    }
-  }, {
-    key: "setMarkerTransition",
-    value: function setMarkerTransition() {
-      var _this2 = this;
-
-      setTimeout(function () {
-        _this2.subNavigationMarker.style.transition = "opacity 200ms, transform 200ms";
-      }, 200);
-    }
-  }, {
-    key: "updateMarkerOffsetOnResize",
-    value: function updateMarkerOffsetOnResize() {
-      var _this3 = this;
-
-      window.addEventListener("resize", function () {
-        setTimeout(function () {
-          if (_this3.currentItem) {
-            _this3.updateMarker(_this3.currentItem);
-          }
-        }, 100);
-      });
-    }
-  }, {
-    key: "setUpScrollSpy",
-    value: function setUpScrollSpy() {
-      var _this4 = this;
-
-      var controller = new _scrollmagic2.default.Controller({
-        globalSceneOptions: {
-          triggerHook: "onEnter"
-        }
-      });
-
-      this.updateMarkerOffsetOnResize();
-
-      (0, _utils.forEach)(this.sections, function (index, section) {
-        var scene = new _scrollmagic2.default.Scene({
-          duration: document.getElementById(section.id).offsetHeight,
-          offset: document.getElementById(section.id).offsetTop - _this4.subNavigation.offsetHeight
-        }).addTo(controller);
-
-        scene.on("enter", function () {
-          _this4.currentItem = document.getElementById(section.id + "-item");
-          _this4.updateMarker(_this4.currentItem);
-
-          if (_this4.currentItem && !_this4.motionQuery.matches) {
-            _this4.setMarkerTransition();
-          }
-        });
-
-        scene.on("leave", function (event) {
-          if (index === 0 && event.scrollDirection === "REVERSE") {
-            _this4.makeMarkerInvisible();
-          }
-
-          if (index === _this4.sections.length - 1 && event.scrollDirection === "FORWARD") {
-            _this4.makeMarkerInvisible();
-          }
-        });
-      });
-    }
-  }, {
-    key: "setUpItems",
-    value: function setUpItems() {
-      var _this5 = this;
-
-      (0, _utils.forEach)(this.subNavigationItems, function (index, item) {
-        var anchor = item.querySelector("a");
-
-        _this5.listenForAnchorClick(anchor);
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      if (typeof window.CSS !== "undefined" && window.CSS.supports("position", "sticky")) {
-        this.setUpScrollSpy();
-      }
-
-      this.setUpItems();
-    }
-  }]);
-
-  return SubNavigation;
-}();
-
-exports.default = SubNavigation;
+exports.default = _subNavigation2.default;
 
 /***/ })
 

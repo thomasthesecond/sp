@@ -25,7 +25,7 @@ export default class InvestorsPage {
       `;
 
       trigger.addEventListener("click", (event) => {
-        modal.openModal(content);
+        modal.open(content);
         event.preventDefault();
       }, false);
     });

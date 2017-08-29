@@ -865,20 +865,16 @@
 
 @media (min-width: 660px) {
   .Feature .Highlight {
-    -ms-flex-preferred-size: 300px;
-        flex-basis: 300px;
+    -ms-flex-preferred-size: 298px;
+        flex-basis: 298px;
+    margin-bottom: 64px;
+    margin-top: 64px;
   }
 }
 
 @media (max-width: 659px) {
   .Feature .Highlight:not(:first-child) {
     margin-top: 60px;
-  }
-}
-
-@media (min-width: 660px) {
-  .Feature .Highlight:nth-child(3), .Feature .Highlight:nth-child(4) {
-    margin-top: 128px;
   }
 }
 /**

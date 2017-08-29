@@ -157,7 +157,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-6bc816dda6fbff269df1a462ed5e28ba-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Modal js-modal hidden"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alertdialog"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Modal js-modal is-open"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alertdialog"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Modal-close js-modal-close"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Close"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Close"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span>
       <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>
@@ -169,7 +169,13 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Modal-content js-modal-content"</span>&gt;</span>
-
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-title"</span>&gt;</span>Surgery Partners<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-description"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Our diverse company operates multiple types of healthcare businesses dedicated to improving the quality of care in a convenient and cost-effective manner. The support of our ancillary services is one of many unique attributes that differentiate
+                us from our competitors. These services include multi-specialty physician practices, urgent care facilities, anesthesia services, a diagnostic laboratory, specialty pharmacy services, and optical services.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Far more than a business arrangement, Surgery Partners has a rich history of reaching out to its partners, maintaining accessibility to resources and expertise rarely found in our industry. Surgery Partners' story is as simple as its business
+                style: We deliver quality at an exceptional value. We make healthcare local, and more importantly, personal.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
@@ -180,7 +186,7 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-6bc816dda6fbff269df1a462ed5e28ba-panel-view">
     <code class="Code Code--lang-handlebars">
         <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>
-  <span class="hljs-attr">class</span>=<span class="hljs-string">"Modal js-modal hidden"</span>
+  <span class="hljs-attr">class</span>=<span class="hljs-string">"Modal js-modal</span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> hidden}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> hidden</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">unless</span></span> hidden}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> is-open</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">unless</span></span>}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
   </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> id}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">
   </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> id}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">-title"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">
   </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> id}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">-description"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">
@@ -202,9 +208,7 @@
         
             
             <pre>{
-  <span class="hljs-attr">"modal"</span>: {
-    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"modal"</span>
-  }
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"&lt;h2 id=\"modal-title\"&gt;Surgery Partners&lt;/h2&gt;&lt;div id=\"modal-description\"&gt;&lt;p&gt;Our diverse company operates multiple types of healthcare businesses dedicated to improving the quality of care in a convenient and cost-effective manner. The support of our ancillary services is one of many unique attributes that differentiate us from our competitors. These services include multi-specialty physician practices, urgent care facilities, anesthesia services, a diagnostic laboratory, specialty pharmacy services, and optical services.&lt;/p&gt;&lt;p&gt;Far more than a business arrangement, Surgery Partners has a rich history of reaching out to its partners, maintaining accessibility to resources and expertise rarely found in our industry.  Surgery Partners' story is as simple as its business style: We deliver quality at an exceptional value.  We make healthcare local, and more importantly, personal.&lt;/p&gt;&lt;/div&gt;"</span>
 }</pre>
             
         
@@ -279,22 +283,21 @@
 <span class="hljs-keyword">import</span> noScroll <span class="hljs-keyword">from</span> <span class="hljs-string">"no-scroll"</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Modal</span> </span>{
-  <span class="hljs-keyword">constructor</span>(options) {
-    <span class="hljs-keyword">this</span>.options = options;
-
+  <span class="hljs-keyword">constructor</span>() {
     <span class="hljs-keyword">this</span>.document = <span class="hljs-built_in">document</span>.documentElement;
     <span class="hljs-keyword">this</span>.modal = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal"</span>);
-    <span class="hljs-keyword">this</span>.trigger = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal-trigger"</span>);
-    <span class="hljs-keyword">this</span>.content = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal-content"</span>);
-    <span class="hljs-keyword">this</span>.close = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal-close"</span>);
-    <span class="hljs-keyword">this</span>.overlay = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-overlay"</span>);
+    <span class="hljs-keyword">this</span>.modalTrigger = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal-trigger"</span>);
+    <span class="hljs-keyword">this</span>.modalContent = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal-content"</span>);
+    <span class="hljs-keyword">this</span>.modalClose = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-modal-close"</span>);
+    <span class="hljs-keyword">this</span>.modalOverlay = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-overlay"</span>);
     <span class="hljs-keyword">this</span>.mql = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(min-width: 768px)"</span>);
 
+    <span class="hljs-keyword">this</span>.content = <span class="hljs-literal">null</span>;
     <span class="hljs-keyword">this</span>.openClassName = <span class="hljs-string">"is-open"</span>;
 
     <span class="hljs-comment">// this.checkScreenSize = this.checkScreenSize.bind(this);</span>
-    <span class="hljs-keyword">this</span>.closeModal = <span class="hljs-keyword">this</span>.closeModal.bind(<span class="hljs-keyword">this</span>);
-    <span class="hljs-keyword">this</span>.openModal = <span class="hljs-keyword">this</span>.openModal.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.close = <span class="hljs-keyword">this</span>.close.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.open = <span class="hljs-keyword">this</span>.open.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.clickOutside = <span class="hljs-keyword">this</span>.clickOutside.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.onEscapePress = <span class="hljs-keyword">this</span>.onEscapePress.bind(<span class="hljs-keyword">this</span>);
   }
@@ -307,67 +310,73 @@
   <span class="hljs-comment">//   }</span>
   <span class="hljs-comment">// }</span>
 
-  closeModal() {
+  close() {
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.modal.classList.contains(<span class="hljs-keyword">this</span>.openClassName)) {
       noScroll.off();
-      <span class="hljs-keyword">this</span>.close.removeEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.closeModal, <span class="hljs-literal">false</span>);
+      <span class="hljs-keyword">this</span>.modalClose.removeEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.close, <span class="hljs-literal">false</span>);
 
       <span class="hljs-keyword">this</span>.modal.setAttribute(<span class="hljs-string">"tabindex"</span>, <span class="hljs-string">"-1"</span>);
       <span class="hljs-keyword">this</span>.modal.setAttribute(<span class="hljs-string">"aria-hidden"</span>, <span class="hljs-string">"true"</span>);
       <span class="hljs-keyword">this</span>.modal.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
-      <span class="hljs-keyword">this</span>.overlay.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
+      <span class="hljs-keyword">this</span>.modalOverlay.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
 
       setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
         <span class="hljs-keyword">this</span>.modal.classList.add(<span class="hljs-string">"hidden"</span>);
-        <span class="hljs-keyword">this</span>.overlay.classList.add(<span class="hljs-string">"hidden"</span>);
+        <span class="hljs-keyword">this</span>.modalOverlay.classList.add(<span class="hljs-string">"hidden"</span>);
         <span class="hljs-comment">// this.modal.style.display = "none";</span>
-        <span class="hljs-comment">// this.overlay.style.display = "none";</span>
-        <span class="hljs-keyword">this</span>.content.innerHTML = <span class="hljs-string">""</span>;
+        <span class="hljs-comment">// this.modalOverlay.style.display = "none";</span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.content) {
+          <span class="hljs-keyword">this</span>.modalContent.innerHTML = <span class="hljs-string">""</span>;
+        }
       }, <span class="hljs-number">200</span>);
 
-      <span class="hljs-comment">// this.overlay.classList.remove(this.openClassName);</span>
+      <span class="hljs-comment">// this.modalOverlay.classList.remove(this.openClassName);</span>
       <span class="hljs-comment">// setTimeout(() =&gt; {</span>
-      <span class="hljs-comment">//   document.body.removeChild(this.overlay);</span>
+      <span class="hljs-comment">//   document.body.removeChild(this.modalOverlay);</span>
       <span class="hljs-comment">// }, 200);</span>
 
       <span class="hljs-built_in">document</span>.removeEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.clickOutside, <span class="hljs-literal">false</span>);
     }
   }
 
-  openModal(content) {
+  open(content) {
     <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.modal.classList.contains(<span class="hljs-keyword">this</span>.openClassName)) {
       noScroll.on();
-      <span class="hljs-keyword">this</span>.close.addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.closeModal, <span class="hljs-literal">false</span>);
+      <span class="hljs-keyword">this</span>.modalClose.addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.close, <span class="hljs-literal">false</span>);
       <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.clickOutside, <span class="hljs-literal">false</span>);
       <span class="hljs-keyword">this</span>.onEscapePress();
 
       <span class="hljs-keyword">this</span>.modal.setAttribute(<span class="hljs-string">"tabindex"</span>, <span class="hljs-string">"0"</span>);
       <span class="hljs-keyword">this</span>.modal.setAttribute(<span class="hljs-string">"aria-hidden"</span>, <span class="hljs-string">"false"</span>);
       <span class="hljs-comment">// this.modal.style.display = "block";</span>
-      <span class="hljs-comment">// this.overlay.style.display = "block";</span>
+      <span class="hljs-comment">// this.modalOverlay.style.display = "block";</span>
       <span class="hljs-keyword">this</span>.modal.classList.remove(<span class="hljs-string">"hidden"</span>);
-      <span class="hljs-keyword">this</span>.overlay.classList.remove(<span class="hljs-string">"hidden"</span>);
+      <span class="hljs-keyword">this</span>.modalOverlay.classList.remove(<span class="hljs-string">"hidden"</span>);
 
       setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
         <span class="hljs-keyword">this</span>.modal.classList.add(<span class="hljs-keyword">this</span>.openClassName);
-        <span class="hljs-keyword">this</span>.overlay.classList.add(<span class="hljs-keyword">this</span>.openClassName);
+        <span class="hljs-keyword">this</span>.modalOverlay.classList.add(<span class="hljs-keyword">this</span>.openClassName);
       }, <span class="hljs-number">10</span>);
 
-      <span class="hljs-keyword">this</span>.content.innerHTML = content;
+      <span class="hljs-keyword">if</span> (content) {
+        <span class="hljs-keyword">this</span>.content = content;
+        <span class="hljs-keyword">this</span>.modalContent.innerHTML = <span class="hljs-keyword">this</span>.content;
+      }
 
-      <span class="hljs-comment">// document.body.appendChild(this.overlay);</span>
+      <span class="hljs-comment">// document.body.appendChild(this.modalOverlay);</span>
       <span class="hljs-comment">// setTimeout(() =&gt; {</span>
-      <span class="hljs-comment">//   this.overlay.classList.add(this.openClassName);</span>
+      <span class="hljs-comment">//   this.modalOverlay.classList.add(this.openClassName);</span>
       <span class="hljs-comment">// }, 10);</span>
     }
   }
 
   clickOutside(event) {
     <span class="hljs-keyword">const</span> isModal = <span class="hljs-keyword">this</span>.modal.contains(event.target);
-    <span class="hljs-keyword">const</span> isTrigger = <span class="hljs-keyword">this</span>.trigger.contains(event.target);
+    <span class="hljs-comment">// const isTrigger = this.modalTrigger.contains(event.target);</span>
 
-    <span class="hljs-keyword">if</span> (!isModal &amp;&amp; !isTrigger) {
-      <span class="hljs-keyword">this</span>.closeModal();
+    <span class="hljs-comment">// if (!isModal &amp;&amp; !isTrigger) {</span>
+    <span class="hljs-keyword">if</span> (!isModal) {
+      <span class="hljs-keyword">this</span>.close();
     }
 
     event.preventDefault();
@@ -376,7 +385,7 @@
   onEscapePress() {
     <span class="hljs-built_in">document</span>.onkeyup = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
       <span class="hljs-keyword">if</span> (event.keyCode === <span class="hljs-number">27</span>) {
-        <span class="hljs-keyword">this</span>.closeModal();
+        <span class="hljs-keyword">this</span>.close();
       }
     };
   }
@@ -385,24 +394,28 @@
     <span class="hljs-comment">// this.checkScreenSize(this.mql);</span>
     <span class="hljs-comment">// this.mql.addListener(this.checkScreenSize);</span>
 
-    <span class="hljs-comment">// console.log(this.overlay());</span>
+    <span class="hljs-comment">// console.log(this.modalOverlay());</span>
     <span class="hljs-comment">// console.log(this.mod());</span>
 
     <span class="hljs-comment">// this.modal.style.display = "none";</span>
-    <span class="hljs-comment">// this.overlay.style.display = "none";</span>
+    <span class="hljs-comment">// this.modalOverlay.style.display = "none";</span>
 
-    <span class="hljs-keyword">this</span>.trigger.addEventListener(<span class="hljs-string">"click"</span>, () =&gt; {
-      <span class="hljs-keyword">this</span>.openModal();
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.modalContent);
 
-
-      <span class="hljs-comment">// document.body.innerHTML = this.overlay();</span>
-      <span class="hljs-comment">// $("body").append(this.overlay());</span>
-      <span class="hljs-comment">// $("body").find(".js-overlay").addClass("is-open");</span>
-      <span class="hljs-comment">// this.document.querySelector(".js-overlay").classList.add("is-open");</span>
-
-      <span class="hljs-comment">// console.log(this.overlay());</span>
-      <span class="hljs-comment">// document.body.appendChild();</span>
-    });
+    <span class="hljs-comment">// if (this.modalTrigger) {</span>
+    <span class="hljs-comment">//   this.modalTrigger.addEventListener("click", () =&gt; {</span>
+    <span class="hljs-comment">//     this.open();</span>
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">//     // document.body.innerHTML = this.modalOverlay();</span>
+    <span class="hljs-comment">//     // $("body").append(this.modalOverlay());</span>
+    <span class="hljs-comment">//     // $("body").find(".js-overlay").addClass("is-open");</span>
+    <span class="hljs-comment">//     // this.document.querySelector(".js-overlay").classList.add("is-open");</span>
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">//     // console.log(this.modalOverlay());</span>
+    <span class="hljs-comment">//     // document.body.appendChild();</span>
+    <span class="hljs-comment">//   });</span>
+    <span class="hljs-comment">// }</span>
   }
 }
 </pre>
@@ -421,7 +434,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.8 KB</span>
+                    <span class="Meta-value">4.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -451,8 +464,8 @@
   <span class="hljs-attribute">margin</span>: auto;
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
   <span class="hljs-comment">// padding: #{$spacing-gutter}px;</span>
-  <span class="hljs-attribute">padding-bottom</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
-  <span class="hljs-attribute">padding-top</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
+  <span class="hljs-comment">// padding-bottom: #{$spacing-gutter}px;</span>
+  <span class="hljs-comment">// padding-top: #{$spacing-gutter}px;</span>
   <span class="hljs-attribute">position</span>: fixed;
   <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
   <span class="hljs-comment">// top: 0;</span>
@@ -460,10 +473,10 @@
   <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>, transform <span class="hljs-number">200ms</span>, visibility <span class="hljs-number">200ms</span>;
   <span class="hljs-attribute">visibility</span>: hidden;
   <span class="hljs-comment">// width: 100vw;</span>
+  will-change: transform;
   <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-modal</span>;
 
   @<span class="hljs-keyword">media</span> (max-width: 479px) {
-    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">width</span>: <span class="hljs-number">100vw</span>;
@@ -476,6 +489,7 @@
     <span class="hljs-attribute">max-width</span>: <span class="hljs-number">800px</span>;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
     <span class="hljs-comment">// width: 80vw;</span>
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">96vw</span>;
   }
 
   <span class="hljs-comment">// @media (min-width: 800px) {</span>
@@ -508,6 +522,7 @@
   <span class="hljs-attribute">top</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
   <span class="hljs-attribute">transition</span>: color <span class="hljs-number">200ms</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-default</span>;
 
   &amp;:hover,
   &amp;:active,
@@ -520,8 +535,10 @@
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
   -webkit-<span class="hljs-attribute">overflow</span>-scrolling: touch;
   <span class="hljs-attribute">overflow-y</span>: auto;
+  <span class="hljs-attribute">padding-bottom</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
   <span class="hljs-attribute">padding-left</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
   <span class="hljs-attribute">padding-right</span>: #{<span class="hljs-variable">$spacing-gutter</span> * <span class="hljs-number">2</span>}px;
+  <span class="hljs-attribute">padding-top</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
 
   @<span class="hljs-keyword">media</span> (min-width: 480px) {
     <span class="hljs-attribute">padding-left</span>: #{<span class="hljs-variable">$spacing-gutter</span> * <span class="hljs-number">2</span>}px;
@@ -543,7 +560,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.8 KB</span>
+                    <span class="Meta-value">1.9 KB</span>
                 </li>
             </ul>
         </div>
@@ -617,10 +634,14 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(2)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(4)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="modal--dynamic-content.html">@<span>modal--dynamic-content</span></a>, 
+            
+                <a href="modal--with-trigger.html">@<span>modal--with-trigger</span></a>, 
+            
+                <a href="about.html">@<span>about</span></a>, 
             
                 <a href="investors--highlights.html">@<span>investors--highlights</span></a>
             
@@ -2442,7 +2463,7 @@ trigger.addEventListener(<span class="hljs-string">"click"</span>, (event) =&gt;
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

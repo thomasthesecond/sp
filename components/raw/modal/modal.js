@@ -3,22 +3,21 @@
 import noScroll from "no-scroll";
 
 export default class Modal {
-  constructor(options) {
-    this.options = options;
-
+  constructor() {
     this.document = document.documentElement;
     this.modal = document.querySelector(".js-modal");
-    this.trigger = document.querySelector(".js-modal-trigger");
-    this.content = document.querySelector(".js-modal-content");
-    this.close = document.querySelector(".js-modal-close");
-    this.overlay = document.querySelector(".js-overlay");
+    this.modalTrigger = document.querySelector(".js-modal-trigger");
+    this.modalContent = document.querySelector(".js-modal-content");
+    this.modalClose = document.querySelector(".js-modal-close");
+    this.modalOverlay = document.querySelector(".js-overlay");
     this.mql = window.matchMedia("(min-width: 768px)");
 
+    this.content = null;
     this.openClassName = "is-open";
 
     // this.checkScreenSize = this.checkScreenSize.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-    this.openModal = this.openModal.bind(this);
+    this.close = this.close.bind(this);
+    this.open = this.open.bind(this);
     this.clickOutside = this.clickOutside.bind(this);
     this.onEscapePress = this.onEscapePress.bind(this);
   }
@@ -31,67 +30,73 @@ export default class Modal {
   //   }
   // }
 
-  closeModal() {
+  close() {
     if (this.modal.classList.contains(this.openClassName)) {
       noScroll.off();
-      this.close.removeEventListener("click", this.closeModal, false);
+      this.modalClose.removeEventListener("click", this.close, false);
 
       this.modal.setAttribute("tabindex", "-1");
       this.modal.setAttribute("aria-hidden", "true");
       this.modal.classList.remove(this.openClassName);
-      this.overlay.classList.remove(this.openClassName);
+      this.modalOverlay.classList.remove(this.openClassName);
 
       setTimeout(() => {
         this.modal.classList.add("hidden");
-        this.overlay.classList.add("hidden");
+        this.modalOverlay.classList.add("hidden");
         // this.modal.style.display = "none";
-        // this.overlay.style.display = "none";
-        this.content.innerHTML = "";
+        // this.modalOverlay.style.display = "none";
+        if (this.content) {
+          this.modalContent.innerHTML = "";
+        }
       }, 200);
 
-      // this.overlay.classList.remove(this.openClassName);
+      // this.modalOverlay.classList.remove(this.openClassName);
       // setTimeout(() => {
-      //   document.body.removeChild(this.overlay);
+      //   document.body.removeChild(this.modalOverlay);
       // }, 200);
 
       document.removeEventListener("click", this.clickOutside, false);
     }
   }
 
-  openModal(content) {
+  open(content) {
     if (!this.modal.classList.contains(this.openClassName)) {
       noScroll.on();
-      this.close.addEventListener("click", this.closeModal, false);
+      this.modalClose.addEventListener("click", this.close, false);
       document.addEventListener("click", this.clickOutside, false);
       this.onEscapePress();
 
       this.modal.setAttribute("tabindex", "0");
       this.modal.setAttribute("aria-hidden", "false");
       // this.modal.style.display = "block";
-      // this.overlay.style.display = "block";
+      // this.modalOverlay.style.display = "block";
       this.modal.classList.remove("hidden");
-      this.overlay.classList.remove("hidden");
+      this.modalOverlay.classList.remove("hidden");
 
       setTimeout(() => {
         this.modal.classList.add(this.openClassName);
-        this.overlay.classList.add(this.openClassName);
+        this.modalOverlay.classList.add(this.openClassName);
       }, 10);
 
-      this.content.innerHTML = content;
+      if (content) {
+        this.content = content;
+        this.modalContent.innerHTML = this.content;
+      }
 
-      // document.body.appendChild(this.overlay);
+      // document.body.appendChild(this.modalOverlay);
       // setTimeout(() => {
-      //   this.overlay.classList.add(this.openClassName);
+      //   this.modalOverlay.classList.add(this.openClassName);
       // }, 10);
     }
   }
 
   clickOutside(event) {
     const isModal = this.modal.contains(event.target);
-    const isTrigger = this.trigger.contains(event.target);
+    // const isTrigger = this.modalTrigger.contains(event.target);
 
-    if (!isModal && !isTrigger) {
-      this.closeModal();
+    // if (!isModal && !isTrigger) {
+    if (!isModal) {
+      this.close();
     }
 
     event.preventDefault();
@@ -100,7 +105,7 @@ export default class Modal {
   onEscapePress() {
     document.onkeyup = (event) => {
       if (event.keyCode === 27) {
-        this.closeModal();
+        this.close();
       }
     };
   }
@@ -109,23 +114,27 @@ export default class Modal {
     // this.checkScreenSize(this.mql);
     // this.mql.addListener(this.checkScreenSize);
 
-    // console.log(this.overlay());
+    // console.log(this.modalOverlay());
     // console.log(this.mod());
 
     // this.modal.style.display = "none";
-    // this.overlay.style.display = "none";
+    // this.modalOverlay.style.display = "none";
 
-    this.trigger.addEventListener("click", () => {
-      this.openModal();
+    console.log(this.modalContent);
 
-
-      // document.body.innerHTML = this.overlay();
-      // $("body").append(this.overlay());
-      // $("body").find(".js-overlay").addClass("is-open");
-      // this.document.querySelector(".js-overlay").classList.add("is-open");
-
-      // console.log(this.overlay());
-      // document.body.appendChild();
-    });
+    // if (this.modalTrigger) {
+    //   this.modalTrigger.addEventListener("click", () => {
+    //     this.open();
+    //
+    //
+    //     // document.body.innerHTML = this.modalOverlay();
+    //     // $("body").append(this.modalOverlay());
+    //     // $("body").find(".js-overlay").addClass("is-open");
+    //     // this.document.querySelector(".js-overlay").classList.add("is-open");
+    //
+    //     // console.log(this.modalOverlay());
+    //     // document.body.appendChild();
+    //   });
+    // }
   }
 }

@@ -122,13 +122,218 @@ exports.objectFitCover = objectFitCover;
 /***/ }),
 
 /***/ 10:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _scrollmagic = __webpack_require__(2);
+
+var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
+
+var _utils = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SubNavigation = function () {
+  function SubNavigation() {
+    _classCallCheck(this, SubNavigation);
+
+    this.subNavigation = document.querySelector(".js-sub-navigation");
+    this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
+    this.subNavigationItems = this.subNavigation.querySelectorAll("li");
+    this.sections = document.querySelectorAll(".js-spy-section");
+
+    this.listenForAnchorClick = this.listenForAnchorClick.bind(this);
+    this.updateMarker = this.updateMarker.bind(this);
+    this.makeMarkerVisible = this.makeMarkerVisible.bind(this);
+    this.makeMarkerInvisible = this.makeMarkerInvisible.bind(this);
+    this.setMarkerWidth = this.setMarkerWidth.bind(this);
+    this.setMarkerOffset = this.setMarkerOffset.bind(this);
+    this.setMarkerTransition = this.setMarkerTransition.bind(this);
+    this.updateMarkerOffsetOnResize = this.updateMarkerOffsetOnResize.bind(this);
+    this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
+    this.setUpItems = this.setUpItems.bind(this);
+    this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
+
+    this.currentItem = null;
+
+    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
+  }
+
+  _createClass(SubNavigation, [{
+    key: "listenForAnchorClick",
+    value: function listenForAnchorClick(anchor) {
+      var _this = this;
+
+      anchor.addEventListener("click", function (event) {
+        var hashId = anchor.hash.replace("#", "");
+
+        window.scroll({
+          top: document.getElementById(hashId).offsetTop - _this.subNavigation.offsetHeight,
+          left: 0,
+          behavior: "smooth"
+        });
+
+        event.preventDefault();
+      });
+    }
+  }, {
+    key: "scrollActiveMarkerIntoView",
+    value: function scrollActiveMarkerIntoView(offset) {
+      var list = this.subNavigation.querySelector("ul");
+
+      if (typeof list.scroll === "function") {
+        list.scroll({
+          top: 0,
+          left: offset - 24,
+          behavior: "smooth"
+        });
+      }
+    }
+  }, {
+    key: "updateMarker",
+    value: function updateMarker(item) {
+      var mql = window.matchMedia("(max-width: 1006px)");
+      var activeWidth = item.offsetWidth;
+      var activeOffset = item.offsetLeft;
+
+      var padding = function padding() {
+        return mql.matches ? 10 : 0;
+      };
+      mql.addListener(padding);
+
+      this.makeMarkerVisible();
+      this.setMarkerWidth(activeWidth);
+      this.setMarkerOffset(activeOffset - padding());
+      this.scrollActiveMarkerIntoView(activeOffset);
+    }
+  }, {
+    key: "makeMarkerVisible",
+    value: function makeMarkerVisible() {
+      this.subNavigationMarker.style.opacity = 1;
+    }
+  }, {
+    key: "makeMarkerInvisible",
+    value: function makeMarkerInvisible() {
+      this.subNavigationMarker.style.opacity = 0;
+    }
+  }, {
+    key: "setMarkerWidth",
+    value: function setMarkerWidth(width) {
+      this.subNavigationMarker.style.width = width + "px";
+    }
+  }, {
+    key: "setMarkerOffset",
+    value: function setMarkerOffset(offset) {
+      this.subNavigationMarker.style.transform = "translateX(" + offset + "px)";
+    }
+  }, {
+    key: "setMarkerTransition",
+    value: function setMarkerTransition() {
+      var _this2 = this;
+
+      setTimeout(function () {
+        _this2.subNavigationMarker.style.transition = "opacity 200ms, transform 200ms";
+      }, 200);
+    }
+  }, {
+    key: "updateMarkerOffsetOnResize",
+    value: function updateMarkerOffsetOnResize() {
+      var _this3 = this;
+
+      window.addEventListener("resize", function () {
+        setTimeout(function () {
+          if (_this3.currentItem) {
+            _this3.updateMarker(_this3.currentItem);
+          }
+        }, 100);
+      });
+    }
+  }, {
+    key: "setUpScrollSpy",
+    value: function setUpScrollSpy() {
+      var _this4 = this;
+
+      var controller = new _scrollmagic2.default.Controller({
+        globalSceneOptions: {
+          triggerHook: "onEnter"
+        }
+      });
+
+      this.updateMarkerOffsetOnResize();
+
+      (0, _utils.forEach)(this.sections, function (index, section) {
+        var scene = new _scrollmagic2.default.Scene({
+          duration: document.getElementById(section.id).offsetHeight,
+          offset: document.getElementById(section.id).offsetTop - _this4.subNavigation.offsetHeight
+        }).addTo(controller);
+
+        scene.on("enter", function () {
+          _this4.currentItem = document.getElementById(section.id + "-item");
+          _this4.updateMarker(_this4.currentItem);
+
+          if (_this4.currentItem && !_this4.motionQuery.matches) {
+            _this4.setMarkerTransition();
+          }
+        });
+
+        scene.on("leave", function (event) {
+          if (index === 0 && event.scrollDirection === "REVERSE") {
+            _this4.makeMarkerInvisible();
+          }
+
+          if (index === _this4.sections.length - 1 && event.scrollDirection === "FORWARD") {
+            _this4.makeMarkerInvisible();
+          }
+        });
+      });
+    }
+  }, {
+    key: "setUpItems",
+    value: function setUpItems() {
+      var _this5 = this;
+
+      (0, _utils.forEach)(this.subNavigationItems, function (index, item) {
+        var anchor = item.querySelector("a");
+
+        _this5.listenForAnchorClick(anchor);
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (typeof window.CSS !== "undefined" && window.CSS.supports("position", "sticky")) {
+        this.setUpScrollSpy();
+      }
+
+      this.setUpItems();
+    }
+  }]);
+
+  return SubNavigation;
+}();
+
+exports.default = SubNavigation;
+
+/***/ }),
+
+/***/ 11:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 11:
+/***/ 12:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -156,25 +361,25 @@ var _about2 = _interopRequireDefault(_about);
 
 __webpack_require__(3);
 
-__webpack_require__(23);
+__webpack_require__(27);
 
-__webpack_require__(6);
+__webpack_require__(7);
 
-__webpack_require__(77);
+__webpack_require__(80);
 
 __webpack_require__(4);
 
-__webpack_require__(79);
+__webpack_require__(82);
 
-var _subNavigation = __webpack_require__(8);
+var _subNavigation = __webpack_require__(9);
 
 var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-__webpack_require__(25);
+__webpack_require__(29);
 
-__webpack_require__(81);
+__webpack_require__(84);
 
-__webpack_require__(22);
+__webpack_require__(23);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -229,6 +434,10 @@ var _scrollmagic = __webpack_require__(2);
 
 var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
 
+var _modal = __webpack_require__(24);
+
+var _modal2 = _interopRequireDefault(_modal);
+
 var _utils = __webpack_require__(0);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -236,6 +445,28 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var AboutPage = function () {
+  _createClass(AboutPage, null, [{
+    key: "teamMemberModal",
+    value: function teamMemberModal() {
+      var modal = new _modal2.default();
+      var teamMembers = document.querySelectorAll(".TeamMember");
+      var modalElement = document.querySelector(".js-modal");
+
+      (0, _utils.forEach)(teamMembers, function (index, member) {
+        var name = member.querySelector(".TeamMember-name").innerHTML;
+        var title = member.querySelector(".TeamMember-title").innerHTML;
+        var bio = member.querySelector(".TeamMember-bio").innerHTML;
+
+        var content = "\n        <div class=\"TeamMember\">\n          <h2 class=\"TeamMember-name\" id=\"" + modalElement.id + "-title\">" + name + "</h2>\n          <div class=\"TeamMember-title\">" + title + "</div>\n          <p class=\"TeamMember-bio\" id=\"" + modalElement.id + "-description\">" + bio + "</p>\n        </div>\n      ";
+
+        member.addEventListener("click", function (event) {
+          modal.open(content);
+          event.preventDefault();
+        }, false);
+      });
+    }
+  }]);
+
   function AboutPage() {
     _classCallCheck(this, AboutPage);
 
@@ -243,6 +474,7 @@ var AboutPage = function () {
     this.className = "animate";
 
     this.mql = window.matchMedia("(min-width: 1024px)");
+    this.mqlModal = window.matchMedia("(max-width: 1014px)");
     this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
 
     this.checkScreenSize = this.checkScreenSize.bind(this);
@@ -316,6 +548,9 @@ var AboutPage = function () {
         this.checkScreenSize(this.mql);
         this.mql.addListener(this.checkScreenSize);
       }
+
+      AboutPage.teamMemberModal(this.mqlModal);
+      this.mqlModal.addListener(AboutPage.teamMemberModal);
     }
   }]);
 
@@ -327,6 +562,13 @@ exports.default = AboutPage;
 /***/ }),
 
 /***/ 143:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 15:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3151,31 +3393,34 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 23:
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(24);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-__webpack_require__(1);
+var _modal = __webpack_require__(25);
+
+var _modal2 = _interopRequireDefault(_modal);
+
+__webpack_require__(26);
 
 __webpack_require__(14);
 
-/***/ }),
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/***/ 24:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+exports.default = _modal2.default;
 
 /***/ }),
 
@@ -3185,14 +3430,214 @@ __webpack_require__(14);
 "use strict";
 
 
-__webpack_require__(11);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _noScroll = __webpack_require__(6);
+
+var _noScroll2 = _interopRequireDefault(_noScroll);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+  function Modal() {
+    _classCallCheck(this, Modal);
+
+    this.document = document.documentElement;
+    this.modal = document.querySelector(".js-modal");
+    this.modalTrigger = document.querySelector(".js-modal-trigger");
+    this.modalContent = document.querySelector(".js-modal-content");
+    this.modalClose = document.querySelector(".js-modal-close");
+    this.modalOverlay = document.querySelector(".js-overlay");
+    this.mql = window.matchMedia("(min-width: 768px)");
+
+    this.content = null;
+    this.openClassName = "is-open";
+
+    // this.checkScreenSize = this.checkScreenSize.bind(this);
+    this.close = this.close.bind(this);
+    this.open = this.open.bind(this);
+    this.clickOutside = this.clickOutside.bind(this);
+    this.onEscapePress = this.onEscapePress.bind(this);
+  }
+
+  // checkScreenSize(mql) {
+  //   if (mql.matches) {
+  //     console.log("matches");
+  //   } else {
+  //     console.log("no matches");
+  //   }
+  // }
+
+  _createClass(Modal, [{
+    key: "close",
+    value: function close() {
+      var _this = this;
+
+      if (this.modal.classList.contains(this.openClassName)) {
+        _noScroll2.default.off();
+        this.modalClose.removeEventListener("click", this.close, false);
+
+        this.modal.setAttribute("tabindex", "-1");
+        this.modal.setAttribute("aria-hidden", "true");
+        this.modal.classList.remove(this.openClassName);
+        this.modalOverlay.classList.remove(this.openClassName);
+
+        setTimeout(function () {
+          _this.modal.classList.add("hidden");
+          _this.modalOverlay.classList.add("hidden");
+          // this.modal.style.display = "none";
+          // this.modalOverlay.style.display = "none";
+          if (_this.content) {
+            _this.modalContent.innerHTML = "";
+          }
+        }, 200);
+
+        // this.modalOverlay.classList.remove(this.openClassName);
+        // setTimeout(() => {
+        //   document.body.removeChild(this.modalOverlay);
+        // }, 200);
+
+        document.removeEventListener("click", this.clickOutside, false);
+      }
+    }
+  }, {
+    key: "open",
+    value: function open(content) {
+      var _this2 = this;
+
+      if (!this.modal.classList.contains(this.openClassName)) {
+        _noScroll2.default.on();
+        this.modalClose.addEventListener("click", this.close, false);
+        document.addEventListener("click", this.clickOutside, false);
+        this.onEscapePress();
+
+        this.modal.setAttribute("tabindex", "0");
+        this.modal.setAttribute("aria-hidden", "false");
+        // this.modal.style.display = "block";
+        // this.modalOverlay.style.display = "block";
+        this.modal.classList.remove("hidden");
+        this.modalOverlay.classList.remove("hidden");
+
+        setTimeout(function () {
+          _this2.modal.classList.add(_this2.openClassName);
+          _this2.modalOverlay.classList.add(_this2.openClassName);
+        }, 10);
+
+        if (content) {
+          this.content = content;
+          this.modalContent.innerHTML = this.content;
+        }
+
+        // document.body.appendChild(this.modalOverlay);
+        // setTimeout(() => {
+        //   this.modalOverlay.classList.add(this.openClassName);
+        // }, 10);
+      }
+    }
+  }, {
+    key: "clickOutside",
+    value: function clickOutside(event) {
+      var isModal = this.modal.contains(event.target);
+      // const isTrigger = this.modalTrigger.contains(event.target);
+
+      // if (!isModal && !isTrigger) {
+      if (!isModal) {
+        this.close();
+      }
+
+      event.preventDefault();
+    }
+  }, {
+    key: "onEscapePress",
+    value: function onEscapePress() {
+      var _this3 = this;
+
+      document.onkeyup = function (event) {
+        if (event.keyCode === 27) {
+          _this3.close();
+        }
+      };
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      // this.checkScreenSize(this.mql);
+      // this.mql.addListener(this.checkScreenSize);
+
+      // console.log(this.modalOverlay());
+      // console.log(this.mod());
+
+      // this.modal.style.display = "none";
+      // this.modalOverlay.style.display = "none";
+
+      console.log(this.modalContent);
+
+      // if (this.modalTrigger) {
+      //   this.modalTrigger.addEventListener("click", () => {
+      //     this.open();
+      //
+      //
+      //     // document.body.innerHTML = this.modalOverlay();
+      //     // $("body").append(this.modalOverlay());
+      //     // $("body").find(".js-overlay").addClass("is-open");
+      //     // this.document.querySelector(".js-overlay").classList.add("is-open");
+      //
+      //     // console.log(this.modalOverlay());
+      //     // document.body.appendChild();
+      //   });
+      // }
+    }
+  }]);
+
+  return Modal;
+}();
+
+exports.default = Modal;
+
+/***/ }),
+
+/***/ 26:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 27:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(28);
+
+__webpack_require__(1);
+
+__webpack_require__(15);
+
+/***/ }),
+
+/***/ 28:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
 /***/ 29:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(12);
 
 /***/ }),
 
@@ -3203,6 +3648,13 @@ __webpack_require__(11);
 
 
 __webpack_require__(1);
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -3229,86 +3681,140 @@ __webpack_require__(5);
 "use strict";
 
 
-__webpack_require__(7);
+(function (root) {
+  var isOn = false;
+  var scrollbarSize;
+  var scrollTop;
+
+  function getScrollbarSize() {
+    if (typeof scrollbarSize !== 'undefined') return scrollbarSize;
+
+    var doc = document.documentElement;
+    var dummyScroller = document.createElement('div');
+    dummyScroller.setAttribute('style', 'width:99px;height:99px;' + 'position:absolute;top:-9999px;overflow:scroll;');
+    doc.appendChild(dummyScroller);
+    scrollbarSize = dummyScroller.offsetWidth - dummyScroller.clientWidth;
+    doc.removeChild(dummyScroller);
+    return scrollbarSize;
+  }
+
+  function hasScrollbar() {
+    return document.documentElement.scrollHeight > window.innerHeight;
+  }
+
+  function on(options) {
+    if (typeof document === 'undefined') return;
+    var doc = document.documentElement;
+    scrollTop = window.pageYOffset;
+    if (hasScrollbar()) {
+      doc.style.width = 'calc(100% - ' + getScrollbarSize() + 'px)';
+    } else {
+      doc.style.width = '100%';
+    }
+    doc.style.position = 'fixed';
+    doc.style.top = -scrollTop + 'px';
+    doc.style.overflow = 'hidden';
+    isOn = true;
+  }
+
+  function off() {
+    if (typeof document === 'undefined') return;
+    var doc = document.documentElement;
+    doc.style.width = '';
+    doc.style.position = '';
+    doc.style.top = '';
+    doc.style.overflow = '';
+    window.scroll(0, scrollTop);
+    isOn = false;
+  }
+
+  function toggle() {
+    if (isOn) {
+      off();
+      return;
+    }
+    on();
+  }
+
+  var noScroll = {
+    on: on,
+    off: off,
+    toggle: toggle
+  };
+
+  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = noScroll;
+  } else {
+    root.noScroll = noScroll;
+  }
+})(undefined);
 
 /***/ }),
 
 /***/ 7:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 77:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(78);
-
-/***/ }),
-
-/***/ 78:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 79:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(29);
-
-__webpack_require__(80);
+__webpack_require__(8);
 
 /***/ }),
 
 /***/ 8:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _subNavigation = __webpack_require__(9);
-
-var _subNavigation2 = _interopRequireDefault(_subNavigation);
-
-__webpack_require__(10);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _subNavigation2.default;
-
-/***/ }),
-
-/***/ 80:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 81:
+/***/ 80:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(82);
+__webpack_require__(81);
+
+/***/ }),
+
+/***/ 81:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
 /***/ 82:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(33);
+
+__webpack_require__(83);
+
+/***/ }),
+
+/***/ 83:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 84:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(85);
+
+/***/ }),
+
+/***/ 85:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3325,198 +3831,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _subNavigation = __webpack_require__(10);
 
-var _scrollmagic = __webpack_require__(2);
+var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
-
-var _utils = __webpack_require__(0);
+__webpack_require__(11);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var SubNavigation = function () {
-  function SubNavigation() {
-    _classCallCheck(this, SubNavigation);
-
-    this.subNavigation = document.querySelector(".js-sub-navigation");
-    this.subNavigationMarker = this.subNavigation.querySelector(".js-sub-navigation-marker");
-    this.subNavigationItems = this.subNavigation.querySelectorAll("li");
-    this.sections = document.querySelectorAll(".js-spy-section");
-
-    this.listenForAnchorClick = this.listenForAnchorClick.bind(this);
-    this.updateMarker = this.updateMarker.bind(this);
-    this.makeMarkerVisible = this.makeMarkerVisible.bind(this);
-    this.makeMarkerInvisible = this.makeMarkerInvisible.bind(this);
-    this.setMarkerWidth = this.setMarkerWidth.bind(this);
-    this.setMarkerOffset = this.setMarkerOffset.bind(this);
-    this.setMarkerTransition = this.setMarkerTransition.bind(this);
-    this.updateMarkerOffsetOnResize = this.updateMarkerOffsetOnResize.bind(this);
-    this.setUpScrollSpy = this.setUpScrollSpy.bind(this);
-    this.setUpItems = this.setUpItems.bind(this);
-    this.scrollActiveMarkerIntoView = this.scrollActiveMarkerIntoView.bind(this);
-
-    this.currentItem = null;
-
-    this.motionQuery = window.matchMedia("(prefers-reduced-motion)");
-  }
-
-  _createClass(SubNavigation, [{
-    key: "listenForAnchorClick",
-    value: function listenForAnchorClick(anchor) {
-      var _this = this;
-
-      anchor.addEventListener("click", function (event) {
-        var hashId = anchor.hash.replace("#", "");
-
-        window.scroll({
-          top: document.getElementById(hashId).offsetTop - _this.subNavigation.offsetHeight,
-          left: 0,
-          behavior: "smooth"
-        });
-
-        event.preventDefault();
-      });
-    }
-  }, {
-    key: "scrollActiveMarkerIntoView",
-    value: function scrollActiveMarkerIntoView(offset) {
-      var list = this.subNavigation.querySelector("ul");
-
-      if (typeof list.scroll === "function") {
-        list.scroll({
-          top: 0,
-          left: offset - 24,
-          behavior: "smooth"
-        });
-      }
-    }
-  }, {
-    key: "updateMarker",
-    value: function updateMarker(item) {
-      var mql = window.matchMedia("(max-width: 1006px)");
-      var activeWidth = item.offsetWidth;
-      var activeOffset = item.offsetLeft;
-
-      var padding = function padding() {
-        return mql.matches ? 10 : 0;
-      };
-      mql.addListener(padding);
-
-      this.makeMarkerVisible();
-      this.setMarkerWidth(activeWidth);
-      this.setMarkerOffset(activeOffset - padding());
-      this.scrollActiveMarkerIntoView(activeOffset);
-    }
-  }, {
-    key: "makeMarkerVisible",
-    value: function makeMarkerVisible() {
-      this.subNavigationMarker.style.opacity = 1;
-    }
-  }, {
-    key: "makeMarkerInvisible",
-    value: function makeMarkerInvisible() {
-      this.subNavigationMarker.style.opacity = 0;
-    }
-  }, {
-    key: "setMarkerWidth",
-    value: function setMarkerWidth(width) {
-      this.subNavigationMarker.style.width = width + "px";
-    }
-  }, {
-    key: "setMarkerOffset",
-    value: function setMarkerOffset(offset) {
-      this.subNavigationMarker.style.transform = "translateX(" + offset + "px)";
-    }
-  }, {
-    key: "setMarkerTransition",
-    value: function setMarkerTransition() {
-      var _this2 = this;
-
-      setTimeout(function () {
-        _this2.subNavigationMarker.style.transition = "opacity 200ms, transform 200ms";
-      }, 200);
-    }
-  }, {
-    key: "updateMarkerOffsetOnResize",
-    value: function updateMarkerOffsetOnResize() {
-      var _this3 = this;
-
-      window.addEventListener("resize", function () {
-        setTimeout(function () {
-          if (_this3.currentItem) {
-            _this3.updateMarker(_this3.currentItem);
-          }
-        }, 100);
-      });
-    }
-  }, {
-    key: "setUpScrollSpy",
-    value: function setUpScrollSpy() {
-      var _this4 = this;
-
-      var controller = new _scrollmagic2.default.Controller({
-        globalSceneOptions: {
-          triggerHook: "onEnter"
-        }
-      });
-
-      this.updateMarkerOffsetOnResize();
-
-      (0, _utils.forEach)(this.sections, function (index, section) {
-        var scene = new _scrollmagic2.default.Scene({
-          duration: document.getElementById(section.id).offsetHeight,
-          offset: document.getElementById(section.id).offsetTop - _this4.subNavigation.offsetHeight
-        }).addTo(controller);
-
-        scene.on("enter", function () {
-          _this4.currentItem = document.getElementById(section.id + "-item");
-          _this4.updateMarker(_this4.currentItem);
-
-          if (_this4.currentItem && !_this4.motionQuery.matches) {
-            _this4.setMarkerTransition();
-          }
-        });
-
-        scene.on("leave", function (event) {
-          if (index === 0 && event.scrollDirection === "REVERSE") {
-            _this4.makeMarkerInvisible();
-          }
-
-          if (index === _this4.sections.length - 1 && event.scrollDirection === "FORWARD") {
-            _this4.makeMarkerInvisible();
-          }
-        });
-      });
-    }
-  }, {
-    key: "setUpItems",
-    value: function setUpItems() {
-      var _this5 = this;
-
-      (0, _utils.forEach)(this.subNavigationItems, function (index, item) {
-        var anchor = item.querySelector("a");
-
-        _this5.listenForAnchorClick(anchor);
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      if (typeof window.CSS !== "undefined" && window.CSS.supports("position", "sticky")) {
-        this.setUpScrollSpy();
-      }
-
-      this.setUpItems();
-    }
-  }]);
-
-  return SubNavigation;
-}();
-
-exports.default = SubNavigation;
+exports.default = _subNavigation2.default;
 
 /***/ })
 

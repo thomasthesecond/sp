@@ -2933,9 +2933,84 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /* 3 */,
 /* 4 */,
 /* 5 */,
-/* 6 */,
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+(function (root) {
+  var isOn = false;
+  var scrollbarSize;
+  var scrollTop;
+
+  function getScrollbarSize() {
+    if (typeof scrollbarSize !== 'undefined') return scrollbarSize;
+
+    var doc = document.documentElement;
+    var dummyScroller = document.createElement('div');
+    dummyScroller.setAttribute('style', 'width:99px;height:99px;' + 'position:absolute;top:-9999px;overflow:scroll;');
+    doc.appendChild(dummyScroller);
+    scrollbarSize = dummyScroller.offsetWidth - dummyScroller.clientWidth;
+    doc.removeChild(dummyScroller);
+    return scrollbarSize;
+  }
+
+  function hasScrollbar() {
+    return document.documentElement.scrollHeight > window.innerHeight;
+  }
+
+  function on(options) {
+    if (typeof document === 'undefined') return;
+    var doc = document.documentElement;
+    scrollTop = window.pageYOffset;
+    if (hasScrollbar()) {
+      doc.style.width = 'calc(100% - ' + getScrollbarSize() + 'px)';
+    } else {
+      doc.style.width = '100%';
+    }
+    doc.style.position = 'fixed';
+    doc.style.top = -scrollTop + 'px';
+    doc.style.overflow = 'hidden';
+    isOn = true;
+  }
+
+  function off() {
+    if (typeof document === 'undefined') return;
+    var doc = document.documentElement;
+    doc.style.width = '';
+    doc.style.position = '';
+    doc.style.top = '';
+    doc.style.overflow = '';
+    window.scroll(0, scrollTop);
+    isOn = false;
+  }
+
+  function toggle() {
+    if (isOn) {
+      off();
+      return;
+    }
+    on();
+  }
+
+  var noScroll = {
+    on: on,
+    off: off,
+    toggle: toggle
+  };
+
+  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = noScroll;
+  } else {
+    root.noScroll = noScroll;
+  }
+})(undefined);
+
+/***/ }),
 /* 7 */,
-/* 8 */
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2945,18 +3020,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _subNavigation = __webpack_require__(9);
+var _subNavigation = __webpack_require__(10);
 
 var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-__webpack_require__(10);
+__webpack_require__(11);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _subNavigation2.default;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3160,12 +3235,6 @@ var SubNavigation = function () {
 exports.default = SubNavigation;
 
 /***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
 /* 11 */
 /***/ (function(module, exports) {
 
@@ -3173,124 +3242,259 @@ exports.default = SubNavigation;
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-(function (root) {
-  var isOn = false;
-  var scrollbarSize;
-  var scrollTop;
-
-  function getScrollbarSize() {
-    if (typeof scrollbarSize !== 'undefined') return scrollbarSize;
-
-    var doc = document.documentElement;
-    var dummyScroller = document.createElement('div');
-    dummyScroller.setAttribute('style', 'width:99px;height:99px;' + 'position:absolute;top:-9999px;overflow:scroll;');
-    doc.appendChild(dummyScroller);
-    scrollbarSize = dummyScroller.offsetWidth - dummyScroller.clientWidth;
-    doc.removeChild(dummyScroller);
-    return scrollbarSize;
-  }
-
-  function hasScrollbar() {
-    return document.documentElement.scrollHeight > window.innerHeight;
-  }
-
-  function on(options) {
-    if (typeof document === 'undefined') return;
-    var doc = document.documentElement;
-    scrollTop = window.pageYOffset;
-    if (hasScrollbar()) {
-      doc.style.width = 'calc(100% - ' + getScrollbarSize() + 'px)';
-    } else {
-      doc.style.width = '100%';
-    }
-    doc.style.position = 'fixed';
-    doc.style.top = -scrollTop + 'px';
-    doc.style.overflow = 'hidden';
-    isOn = true;
-  }
-
-  function off() {
-    if (typeof document === 'undefined') return;
-    var doc = document.documentElement;
-    doc.style.width = '';
-    doc.style.position = '';
-    doc.style.top = '';
-    doc.style.overflow = '';
-    window.scroll(0, scrollTop);
-    isOn = false;
-  }
-
-  function toggle() {
-    if (isOn) {
-      off();
-      return;
-    }
-    on();
-  }
-
-  var noScroll = {
-    on: on,
-    off: off,
-    toggle: toggle
-  };
-
-  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = noScroll;
-  } else {
-    root.noScroll = noScroll;
-  }
-})(undefined);
-
-/***/ }),
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(21);
-
-/***/ }),
-/* 21 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 22 */,
+/* 13 */,
+/* 14 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(22);
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 23 */,
-/* 24 */,
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _modal = __webpack_require__(25);
+
+var _modal2 = _interopRequireDefault(_modal);
+
+__webpack_require__(26);
+
+__webpack_require__(14);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _modal2.default;
+
+/***/ }),
 /* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(11);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _noScroll = __webpack_require__(6);
+
+var _noScroll2 = _interopRequireDefault(_noScroll);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+  function Modal() {
+    _classCallCheck(this, Modal);
+
+    this.document = document.documentElement;
+    this.modal = document.querySelector(".js-modal");
+    this.modalTrigger = document.querySelector(".js-modal-trigger");
+    this.modalContent = document.querySelector(".js-modal-content");
+    this.modalClose = document.querySelector(".js-modal-close");
+    this.modalOverlay = document.querySelector(".js-overlay");
+    this.mql = window.matchMedia("(min-width: 768px)");
+
+    this.content = null;
+    this.openClassName = "is-open";
+
+    // this.checkScreenSize = this.checkScreenSize.bind(this);
+    this.close = this.close.bind(this);
+    this.open = this.open.bind(this);
+    this.clickOutside = this.clickOutside.bind(this);
+    this.onEscapePress = this.onEscapePress.bind(this);
+  }
+
+  // checkScreenSize(mql) {
+  //   if (mql.matches) {
+  //     console.log("matches");
+  //   } else {
+  //     console.log("no matches");
+  //   }
+  // }
+
+  _createClass(Modal, [{
+    key: "close",
+    value: function close() {
+      var _this = this;
+
+      if (this.modal.classList.contains(this.openClassName)) {
+        _noScroll2.default.off();
+        this.modalClose.removeEventListener("click", this.close, false);
+
+        this.modal.setAttribute("tabindex", "-1");
+        this.modal.setAttribute("aria-hidden", "true");
+        this.modal.classList.remove(this.openClassName);
+        this.modalOverlay.classList.remove(this.openClassName);
+
+        setTimeout(function () {
+          _this.modal.classList.add("hidden");
+          _this.modalOverlay.classList.add("hidden");
+          // this.modal.style.display = "none";
+          // this.modalOverlay.style.display = "none";
+          if (_this.content) {
+            _this.modalContent.innerHTML = "";
+          }
+        }, 200);
+
+        // this.modalOverlay.classList.remove(this.openClassName);
+        // setTimeout(() => {
+        //   document.body.removeChild(this.modalOverlay);
+        // }, 200);
+
+        document.removeEventListener("click", this.clickOutside, false);
+      }
+    }
+  }, {
+    key: "open",
+    value: function open(content) {
+      var _this2 = this;
+
+      if (!this.modal.classList.contains(this.openClassName)) {
+        _noScroll2.default.on();
+        this.modalClose.addEventListener("click", this.close, false);
+        document.addEventListener("click", this.clickOutside, false);
+        this.onEscapePress();
+
+        this.modal.setAttribute("tabindex", "0");
+        this.modal.setAttribute("aria-hidden", "false");
+        // this.modal.style.display = "block";
+        // this.modalOverlay.style.display = "block";
+        this.modal.classList.remove("hidden");
+        this.modalOverlay.classList.remove("hidden");
+
+        setTimeout(function () {
+          _this2.modal.classList.add(_this2.openClassName);
+          _this2.modalOverlay.classList.add(_this2.openClassName);
+        }, 10);
+
+        if (content) {
+          this.content = content;
+          this.modalContent.innerHTML = this.content;
+        }
+
+        // document.body.appendChild(this.modalOverlay);
+        // setTimeout(() => {
+        //   this.modalOverlay.classList.add(this.openClassName);
+        // }, 10);
+      }
+    }
+  }, {
+    key: "clickOutside",
+    value: function clickOutside(event) {
+      var isModal = this.modal.contains(event.target);
+      // const isTrigger = this.modalTrigger.contains(event.target);
+
+      // if (!isModal && !isTrigger) {
+      if (!isModal) {
+        this.close();
+      }
+
+      event.preventDefault();
+    }
+  }, {
+    key: "onEscapePress",
+    value: function onEscapePress() {
+      var _this3 = this;
+
+      document.onkeyup = function (event) {
+        if (event.keyCode === 27) {
+          _this3.close();
+        }
+      };
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      // this.checkScreenSize(this.mql);
+      // this.mql.addListener(this.checkScreenSize);
+
+      // console.log(this.modalOverlay());
+      // console.log(this.mod());
+
+      // this.modal.style.display = "none";
+      // this.modalOverlay.style.display = "none";
+
+      console.log(this.modalContent);
+
+      // if (this.modalTrigger) {
+      //   this.modalTrigger.addEventListener("click", () => {
+      //     this.open();
+      //
+      //
+      //     // document.body.innerHTML = this.modalOverlay();
+      //     // $("body").append(this.modalOverlay());
+      //     // $("body").find(".js-overlay").addClass("is-open");
+      //     // this.document.querySelector(".js-overlay").classList.add("is-open");
+      //
+      //     // console.log(this.modalOverlay());
+      //     // document.body.appendChild();
+      //   });
+      // }
+    }
+  }]);
+
+  return Modal;
+}();
+
+exports.default = Modal;
 
 /***/ }),
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */
+/* 26 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 27 */,
+/* 28 */,
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(12);
+
+/***/ }),
+/* 30 */,
 /* 31 */,
 /* 32 */,
 /* 33 */,
@@ -3351,205 +3555,9 @@ __webpack_require__(11);
 /* 88 */,
 /* 89 */,
 /* 90 */,
-/* 91 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _modal = __webpack_require__(92);
-
-var _modal2 = _interopRequireDefault(_modal);
-
-__webpack_require__(93);
-
-__webpack_require__(30);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _modal2.default;
-
-/***/ }),
-/* 92 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _noScroll = __webpack_require__(12);
-
-var _noScroll2 = _interopRequireDefault(_noScroll);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Modal = function () {
-  function Modal(options) {
-    _classCallCheck(this, Modal);
-
-    this.options = options;
-
-    this.document = document.documentElement;
-    this.modal = document.querySelector(".js-modal");
-    this.trigger = document.querySelector(".js-modal-trigger");
-    this.content = document.querySelector(".js-modal-content");
-    this.close = document.querySelector(".js-modal-close");
-    this.overlay = document.querySelector(".js-overlay");
-    this.mql = window.matchMedia("(min-width: 768px)");
-
-    this.openClassName = "is-open";
-
-    // this.checkScreenSize = this.checkScreenSize.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-    this.openModal = this.openModal.bind(this);
-    this.clickOutside = this.clickOutside.bind(this);
-    this.onEscapePress = this.onEscapePress.bind(this);
-  }
-
-  // checkScreenSize(mql) {
-  //   if (mql.matches) {
-  //     console.log("matches");
-  //   } else {
-  //     console.log("no matches");
-  //   }
-  // }
-
-  _createClass(Modal, [{
-    key: "closeModal",
-    value: function closeModal() {
-      var _this = this;
-
-      if (this.modal.classList.contains(this.openClassName)) {
-        _noScroll2.default.off();
-        this.close.removeEventListener("click", this.closeModal, false);
-
-        this.modal.setAttribute("tabindex", "-1");
-        this.modal.setAttribute("aria-hidden", "true");
-        this.modal.classList.remove(this.openClassName);
-        this.overlay.classList.remove(this.openClassName);
-
-        setTimeout(function () {
-          _this.modal.classList.add("hidden");
-          _this.overlay.classList.add("hidden");
-          // this.modal.style.display = "none";
-          // this.overlay.style.display = "none";
-          _this.content.innerHTML = "";
-        }, 200);
-
-        // this.overlay.classList.remove(this.openClassName);
-        // setTimeout(() => {
-        //   document.body.removeChild(this.overlay);
-        // }, 200);
-
-        document.removeEventListener("click", this.clickOutside, false);
-      }
-    }
-  }, {
-    key: "openModal",
-    value: function openModal(content) {
-      var _this2 = this;
-
-      if (!this.modal.classList.contains(this.openClassName)) {
-        _noScroll2.default.on();
-        this.close.addEventListener("click", this.closeModal, false);
-        document.addEventListener("click", this.clickOutside, false);
-        this.onEscapePress();
-
-        this.modal.setAttribute("tabindex", "0");
-        this.modal.setAttribute("aria-hidden", "false");
-        // this.modal.style.display = "block";
-        // this.overlay.style.display = "block";
-        this.modal.classList.remove("hidden");
-        this.overlay.classList.remove("hidden");
-
-        setTimeout(function () {
-          _this2.modal.classList.add(_this2.openClassName);
-          _this2.overlay.classList.add(_this2.openClassName);
-        }, 10);
-
-        this.content.innerHTML = content;
-
-        // document.body.appendChild(this.overlay);
-        // setTimeout(() => {
-        //   this.overlay.classList.add(this.openClassName);
-        // }, 10);
-      }
-    }
-  }, {
-    key: "clickOutside",
-    value: function clickOutside(event) {
-      var isModal = this.modal.contains(event.target);
-      var isTrigger = this.trigger.contains(event.target);
-
-      if (!isModal && !isTrigger) {
-        this.closeModal();
-      }
-
-      event.preventDefault();
-    }
-  }, {
-    key: "onEscapePress",
-    value: function onEscapePress() {
-      var _this3 = this;
-
-      document.onkeyup = function (event) {
-        if (event.keyCode === 27) {
-          _this3.closeModal();
-        }
-      };
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this4 = this;
-
-      // this.checkScreenSize(this.mql);
-      // this.mql.addListener(this.checkScreenSize);
-
-      // console.log(this.overlay());
-      // console.log(this.mod());
-
-      // this.modal.style.display = "none";
-      // this.overlay.style.display = "none";
-
-      this.trigger.addEventListener("click", function () {
-        _this4.openModal();
-
-        // document.body.innerHTML = this.overlay();
-        // $("body").append(this.overlay());
-        // $("body").find(".js-overlay").addClass("is-open");
-        // this.document.querySelector(".js-overlay").classList.add("is-open");
-
-        // console.log(this.overlay());
-        // document.body.appendChild();
-      });
-    }
-  }]);
-
-  return Modal;
-}();
-
-exports.default = Modal;
-
-/***/ }),
-/* 93 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
+/* 91 */,
+/* 92 */,
+/* 93 */,
 /* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3783,7 +3791,7 @@ __webpack_require__(123);
 
 __webpack_require__(125);
 
-__webpack_require__(11);
+__webpack_require__(12);
 
 /***/ }),
 /* 125 */
@@ -3849,7 +3857,7 @@ __webpack_require__(100);
 
 __webpack_require__(102);
 
-__webpack_require__(20);
+__webpack_require__(21);
 
 __webpack_require__(104);
 
@@ -3871,11 +3879,11 @@ __webpack_require__(120);
 
 __webpack_require__(122);
 
-__webpack_require__(8);
+__webpack_require__(9);
 
 __webpack_require__(124);
 
-__webpack_require__(25);
+__webpack_require__(29);
 
 __webpack_require__(126);
 
@@ -3921,7 +3929,7 @@ exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _modal = __webpack_require__(91);
+var _modal = __webpack_require__(24);
 
 var _modal2 = _interopRequireDefault(_modal);
 
@@ -3949,7 +3957,7 @@ var InvestorsPage = function () {
         var content = "\n        <div class=\"TeamMember\">\n          <h2 class=\"TeamMember-name\" id=\"" + modalElement.id + "-title\">" + name + "</h2>\n          <div class=\"TeamMember-title\">" + title + "</div>\n          <p class=\"TeamMember-bio\" id=\"" + modalElement.id + "-description\">" + bio + "</p>\n        </div>\n      ";
 
         trigger.addEventListener("click", function (event) {
-          modal.openModal(content);
+          modal.open(content);
           event.preventDefault();
         }, false);
       });

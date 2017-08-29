@@ -1,15 +1,15 @@
 
 
-<button class="js-modal-trigger" aria-owns="modal">
+<button class="Button js-modal-trigger" aria-owns="modal-with-trigger-example">
   Open modal
 </button>
 
 <div
-  class="Modal js-modal"
-  id="modal"
-  role="alertdialog" tabindex="-1" aria-hidden="true"
-  aria-labelledby="modal-title"
-  aria-describedby="modal-description">
+  class="Modal js-modal hidden"
+  id="modal-with-trigger-example"
+  aria-labelledby="modal-with-trigger-example-title"
+  aria-describedby="modal-with-trigger-example-description"
+  role="alertdialog" tabindex="-1" aria-hidden="true">
   <button class="Modal-close js-modal-close" title="Close" aria-label="Close">
     <svg version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -20,14 +20,9 @@
     </svg>
   </button>
 
-  <h2 class="Modal-title" id="modal-title">
-    Modal title
-  </h2>
-
-  <div class="Modal-content" id="modal-description">
-    <p>
-      Modal content
-    </p>
+  <div class="Modal-content js-modal-content">
+    <h2 id="modal-with-trigger-example-title">Surgery Partners</h2><div id="modal-with-trigger-example-description"><p>Our diverse company operates multiple types of healthcare businesses dedicated to improving the quality of care in a convenient and cost-effective manner. The support of our ancillary services is one of many unique attributes that differentiate us from our competitors. These services include multi-specialty physician practices, urgent care facilities, anesthesia services, a diagnostic laboratory, specialty pharmacy services, and optical services.</p><p>Far more than a business arrangement, Surgery Partners has a rich history of reaching out to its partners, maintaining accessibility to resources and expertise rarely found in our industry.  Surgery Partners' story is as simple as its business style: We deliver quality at an exceptional value.  We make healthcare local, and more importantly, personal.</p></div>
   </div>
 </div>
+<div class="Overlay js-overlay hidden"></div>
 
