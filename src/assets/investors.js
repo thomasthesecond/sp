@@ -9,7 +9,6 @@ import "../components/03-components/feed";
 import "../components/03-components/file-download";
 import "../components/03-components/filter";
 import "../components/03-components/help-tip";
-// import Modal from "../components/03-components/modal";
 import "../components/03-components/more-link";
 import "../components/03-components/news-article";
 import "../components/03-components/pagination";
@@ -25,10 +24,6 @@ import "../components/03-components/sub-navigation";
 import "../components/03-components/team-list";
 import "../components/03-components/team-member";
 import "../components/03-components/utility-links";
-
-// const modal = new Modal();
-
-// modal.render();
 
 const investorsPage = new InvestorsPage();
 
