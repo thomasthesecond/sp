@@ -77,19 +77,14 @@
   flex: 1 0 100%;
 
   @media (min-width: 660px) {
-    flex-basis: 300px;
+    flex-basis: 298px;
+    margin-bottom: 64px;
+    margin-top: 64px;
   }
 
   &:not(:first-child) {
     @media (max-width: 659px) {
       margin-top: 60px;
-    }
-  }
-
-  &:nth-child(3),
-  &:nth-child(4) {
-    @media (min-width: 660px) {
-      margin-top: 128px;
     }
   }
 }
