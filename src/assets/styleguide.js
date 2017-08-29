@@ -36,7 +36,6 @@ import "../components/03-components/introduction";
 import "../components/03-components/leadership-team";
 import "../components/03-components/list";
 import LocationFinder from "../components/03-components/location-finder";
-// import LocationSelect from "../components/03-components/location-select";
 import "../components/03-components/location-finder-button";
 import "../components/03-components/location-list";
 import "../components/03-components/location-map-legend";
@@ -101,14 +100,30 @@ if (document.querySelector(".js-location-finder")) {
   locationFinder.render();
 }
 
-// if (document.querySelector(".js-location-select")) {
-//   const locationSelect = new LocationSelect();
-//   locationSelect.render();
-// }
-
-if (document.querySelector(".Modal")) {
+if (document.getElementById("modal-with-trigger-example")) {
   const modal = new Modal();
-  modal.render();
+  const modalTrigger = document.querySelector(".js-modal-trigger");
+
+  if (modalTrigger) {
+    modalTrigger.addEventListener("click", () => {
+      modal.open();
+    });
+  }
+}
+
+if (document.getElementById("modal-with-dynamic-content-example")) {
+  const modal = new Modal();
+  const modalTrigger = document.querySelector(".js-modal-trigger");
+  const content = `
+    <h2 id="modal-with-dynamic-content-example-title">Dynamic content example</h2>
+    <p id="modal-with-dynamic-content-example-description">This content has been loaded dyanmically via JavaScript.</p>
+  `;
+
+  if (modalTrigger) {
+    modalTrigger.addEventListener("click", () => {
+      modal.open(content);
+    });
+  }
 }
 
 replaceNoJsClassName();
