@@ -90,7 +90,7 @@ export default class AboutPage {
       .setClassToggle(".Introduction", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-service-cards", offset: -300 })
+    new ScrollMagic.Scene({ triggerElement: ".js-service-cards", offset: -350 })
       .setClassToggle(".ServiceCards", this.className)
       .addTo(this.controller);
 
@@ -98,11 +98,11 @@ export default class AboutPage {
       .setClassToggle(".Feature .CoverPhoto", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-feature", offset: -300 })
+    new ScrollMagic.Scene({ triggerElement: ".js-feature", offset: -350 })
       .setClassToggle(".Feature .Highlight", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-leadership-team", offset: -500 })
+    new ScrollMagic.Scene({ triggerElement: ".js-leadership-team", offset: -550 })
       .setClassToggle(".LeadershipTeam", this.className)
       .addTo(this.controller);
   }

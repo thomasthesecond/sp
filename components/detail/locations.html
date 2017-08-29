@@ -239,8 +239,8 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sticky"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder js-location-finder"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder-container container"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationFinder js-location-finder"</span> <span class="hljs-attr">data-location-url</span>=<span class="hljs-string">"/locations"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Find a location<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
@@ -486,6 +486,7 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationsPage-aside"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationMap"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"MapWidget"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Replace this image with interactive map"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/images/fake-map.png"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: block; height: 100%; object-fit: cover; width: 100%;"</span> /&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"LocationMapLegend"</span>&gt;</span>
@@ -971,30 +972,30 @@
                                 <pre><span class="hljs-meta">"use strict"</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LocationsPage</span> </span>{
-  <span class="hljs-keyword">constructor</span>(options) {
-    <span class="hljs-keyword">this</span>.options = options;
-
+  <span class="hljs-keyword">constructor</span>() {
     <span class="hljs-keyword">this</span>.locationFinder = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-location-finder"</span>);
+
+    <span class="hljs-keyword">this</span>.toggleSticky = <span class="hljs-keyword">this</span>.toggleSticky.bind(<span class="hljs-keyword">this</span>);
   }
 
-  render() {
+  toggleSticky() {
     <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"scroll"</span>, () =&gt; {
       setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
         <span class="hljs-keyword">const</span> scrollPosition = <span class="hljs-built_in">window</span>.pageYOffset || <span class="hljs-built_in">document</span>.documentElement.scrollTop;
 
-        <span class="hljs-comment">// console.log(scrollPosition, this.locationFinder.parentNode.offsetTop);</span>
-
         <span class="hljs-keyword">if</span> (scrollPosition &gt;= <span class="hljs-keyword">this</span>.locationFinder.parentNode.offsetTop) {
           <span class="hljs-keyword">this</span>.locationFinder.classList.add(<span class="hljs-string">"is-sticky"</span>);
-          <span class="hljs-comment">// this.locationFinder.parentNode.classList.remove("container");</span>
-          <span class="hljs-comment">// console.log("is-sticky");</span>
         } <span class="hljs-keyword">else</span> {
           <span class="hljs-keyword">this</span>.locationFinder.classList.remove(<span class="hljs-string">"is-sticky"</span>);
-          <span class="hljs-comment">// this.locationFinder.parentNode.classList.add("container");</span>
-          <span class="hljs-comment">// console.log("is-not-sticky");</span>
         }
       }, <span class="hljs-number">100</span>);
     });
+  }
+
+  render() {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span>.CSS !== <span class="hljs-string">"undefined"</span> &amp;&amp; <span class="hljs-built_in">window</span>.CSS.supports(<span class="hljs-string">"position"</span>, <span class="hljs-string">"sticky"</span>)) {
+      <span class="hljs-keyword">this</span>.toggleSticky();
+    }
   }
 }
 </pre>
@@ -1013,7 +1014,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">919 Bytes</span>
+                    <span class="Meta-value">773 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -2725,7 +2726,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

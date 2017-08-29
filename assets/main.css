@@ -530,6 +530,72 @@ template {
 .text-negative {
   color: #d90a0a;
 }
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .Banner,
+  .Contentinfo,
+  .SubNavigation,
+  .UtilityLinks,
+  .Pagination,
+  .NextPage {
+    display: none !important;
+  }
+}
 @charset "UTF-8";
 /**
  * Mixins
@@ -597,72 +663,6 @@ cite {
 
 main {
   outline: none;
-}
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: transparent !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-    color: #000 !important;
-    text-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-  pre {
-    white-space: pre-wrap !important;
-  }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  /*
-   * Printing Tables:
-   * http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-  .Banner,
-  .Contentinfo,
-  .SubNavigation,
-  .UtilityLinks,
-  .Pagination,
-  .NextPage {
-    display: none !important;
-  }
 }
 /**
  * Functions
@@ -1022,42 +1022,6 @@ textarea.dark {
  * Mixins
  */
 /**
- * Component: Select
- * @type Atom
- */
-select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='rgba(94, 145, 161, 0.87)' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
-  background-position: calc(100% - 24px) calc(50% + 2px);
-  background-repeat: no-repeat;
-  background-size: 8px;
-  border: 1px solid #bfd0d8;
-  border-radius: 0;
-  color: #77919e;
-  cursor: pointer;
-  display: block;
-  font-size: 100%;
-  font-weight: 300;
-  line-height: 2;
-  padding: 0.75em 3.375em 0.625em 1.5em;
-}
-
-select.dark {
-  background-color: #152640;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#bfd0d8' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
-  border-color: rgba(191, 208, 216, 0.2);
-  color: #fff;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Table
  * @type Molecule
  */
@@ -1195,6 +1159,42 @@ tr:hover td {
   .table-responsive tr:hover td {
     background-color: inherit;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Select
+ * @type Atom
+ */
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='rgba(94, 145, 161, 0.87)' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
+  background-position: calc(100% - 24px) calc(50% + 2px);
+  background-repeat: no-repeat;
+  background-size: 8px;
+  border: 1px solid #bfd0d8;
+  border-radius: 0;
+  color: #77919e;
+  cursor: pointer;
+  display: block;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 2;
+  padding: 0.75em 3.375em 0.625em 1.5em;
+}
+
+select.dark {
+  background-color: #152640;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#bfd0d8' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
+  border-color: rgba(191, 208, 216, 0.2);
+  color: #fff;
 }
 /**
  * Functions
@@ -2360,6 +2360,37 @@ blockquote cite br {
  * Mixins
  */
 /**
+ * Component: Skip link
+ * @type Atom
+ */
+.SkipLink {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.SkipLink:focus {
+  background-color: #fff;
+  clip: auto;
+  color: #446975;
+  height: auto;
+  line-height: 40px;
+  padding: 10px 20px;
+  text-decoration: none;
+  top: 90px;
+  width: auto;
+  z-index: 1000;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Navigation
  * @type Molecule
  */
@@ -2506,35 +2537,4 @@ blockquote cite br {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Skip link
- * @type Atom
- */
-.SkipLink {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  margin: 0;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-}
-
-.SkipLink:focus {
-  background-color: #fff;
-  clip: auto;
-  color: #446975;
-  height: auto;
-  line-height: 40px;
-  padding: 10px 20px;
-  text-decoration: none;
-  top: 90px;
-  width: auto;
-  z-index: 1000;
 }

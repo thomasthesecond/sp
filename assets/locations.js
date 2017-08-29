@@ -199,36 +199,37 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var LocationsPage = function () {
-  function LocationsPage(options) {
+  function LocationsPage() {
     _classCallCheck(this, LocationsPage);
 
-    this.options = options;
-
     this.locationFinder = document.querySelector(".js-location-finder");
+
+    this.toggleSticky = this.toggleSticky.bind(this);
   }
 
   _createClass(LocationsPage, [{
-    key: "render",
-    value: function render() {
+    key: "toggleSticky",
+    value: function toggleSticky() {
       var _this = this;
 
       window.addEventListener("scroll", function () {
         setTimeout(function () {
           var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-          // console.log(scrollPosition, this.locationFinder.parentNode.offsetTop);
-
           if (scrollPosition >= _this.locationFinder.parentNode.offsetTop) {
             _this.locationFinder.classList.add("is-sticky");
-            // this.locationFinder.parentNode.classList.remove("container");
-            // console.log("is-sticky");
           } else {
             _this.locationFinder.classList.remove("is-sticky");
-            // this.locationFinder.parentNode.classList.add("container");
-            // console.log("is-not-sticky");
           }
         }, 100);
       });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (typeof window.CSS !== "undefined" && window.CSS.supports("position", "sticky")) {
+        this.toggleSticky();
+      }
     }
   }]);
 

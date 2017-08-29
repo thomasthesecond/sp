@@ -530,13 +530,13 @@ var AboutPage = function () {
 
       new _scrollmagic2.default.Scene({ triggerElement: ".js-introduction" }).setClassToggle(".Introduction", this.className).addTo(this.controller);
 
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-service-cards", offset: -300 }).setClassToggle(".ServiceCards", this.className).addTo(this.controller);
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-service-cards", offset: -350 }).setClassToggle(".ServiceCards", this.className).addTo(this.controller);
 
       new _scrollmagic2.default.Scene({ triggerElement: ".js-feature" }).setClassToggle(".Feature .CoverPhoto", this.className).addTo(this.controller);
 
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-feature", offset: -300 }).setClassToggle(".Feature .Highlight", this.className).addTo(this.controller);
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-feature", offset: -350 }).setClassToggle(".Feature .Highlight", this.className).addTo(this.controller);
 
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-leadership-team", offset: -500 }).setClassToggle(".LeadershipTeam", this.className).addTo(this.controller);
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-leadership-team", offset: -550 }).setClassToggle(".LeadershipTeam", this.className).addTo(this.controller);
     }
   }, {
     key: "render",
