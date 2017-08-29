@@ -1,5 +1,5 @@
 <div
-  class="Modal js-modal hidden"
+  class="Modal js-modal{{#if hidden}} hidden{{/if}}{{#unless hidden}} is-open{{/unless}}"
   {{#if id}}id="{{ id }}"{{/if}}
   {{#if id}}aria-labelledby="{{ id }}-title"{{/if}}
   {{#if id}}aria-describedby="{{ id }}-description"{{/if}}
