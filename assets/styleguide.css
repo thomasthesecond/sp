@@ -3583,41 +3583,6 @@ blockquote cite br {
  * Mixins
  */
 /**
- * Component: Service cards
- */
-.ServiceCards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 630px;
-}
-
-@supports (display: grid) {
-  .ServiceCards {
-    display: grid;
-    grid-column-gap: 0;
-    grid-row-gap: 64px;
-    grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
-  }
-  @media (min-width: 480px) {
-    .ServiceCards {
-      grid-gap: 30px;
-      grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
-    }
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Service card
  */
 .ServiceCard {
@@ -3760,6 +3725,41 @@ blockquote cite br {
   .ServiceCards .ServiceCard {
     margin-left: 0 !important;
     margin-top: 0 !important;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Service cards
+ */
+.ServiceCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 630px;
+}
+
+@supports (display: grid) {
+  .ServiceCards {
+    display: grid;
+    grid-column-gap: 0;
+    grid-row-gap: 64px;
+    grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
+  }
+  @media (min-width: 480px) {
+    .ServiceCards {
+      grid-gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
+    }
   }
 }
 /**
@@ -4755,6 +4755,28 @@ blockquote cite br {
  * Mixins
  */
 /**
+ * Component: File download
+ */
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Filter
  * @type Organism
  */
@@ -4887,28 +4909,6 @@ blockquote cite br {
   .Filter-link {
     margin-top: 48px;
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: File download
- */
-.FileDownload {
-  display: inline-block;
-}
-
-.FileDownload img {
-  display: block;
-  height: auto;
-  width: 14px;
-}
-
-.FileDownload + .FileDownload {
-  margin-left: 24px;
 }
 /**
  * Functions

@@ -1968,7 +1968,6 @@ var Banner = function () {
     this.hideNavigation = this.hideNavigation.bind(this);
     this.showNavigation = this.showNavigation.bind(this);
     this.toggleNavigation = this.toggleNavigation.bind(this);
-    this.clickOutside = this.clickOutside.bind(this);
     this.onEscapePress = this.onEscapePress.bind(this);
   }
 
@@ -1988,7 +1987,6 @@ var Banner = function () {
         this.header.classList.remove(this.openClassName);
         this.navigation.classList.remove(this.openClassName);
         this.hamburger.classList.remove(this.openClassName);
-        document.removeEventListener("click", this.clickOutside, false);
       }
     }
   }, {
@@ -2006,19 +2004,6 @@ var Banner = function () {
     key: "toggleNavigation",
     value: function toggleNavigation() {
       return this.isOpen ? this.hideNavigation() : this.showNavigation();
-    }
-  }, {
-    key: "clickOutside",
-    value: function clickOutside(event) {
-      var isHeader = this.header.contains(event.target);
-      var isHamburger = this.hamburger.contains(event.target);
-      var isNavigation = this.navigation.contains(event.target);
-
-      if (!isHeader && !isHamburger && !isNavigation) {
-        this.hideNavigation();
-      }
-
-      event.preventDefault();
     }
   }, {
     key: "onEscapePress",
@@ -2039,8 +2024,6 @@ var Banner = function () {
       var hamburger = new _hamburger2.default({
         onClick: function onClick() {
           _this2.toggleNavigation();
-
-          document.addEventListener("click", _this2.clickOutside, false);
         }
       });
 

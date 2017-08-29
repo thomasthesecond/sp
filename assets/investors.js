@@ -3881,14 +3881,8 @@ __webpack_require__(126);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// const modal = new Modal();
-
-// modal.render();
-
 // Import page-specific components
 var investorsPage = new _investors2.default();
-// import Modal from "../components/03-components/modal";
-
 
 investorsPage.render();
 

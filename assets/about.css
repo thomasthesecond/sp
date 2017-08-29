@@ -139,6 +139,10 @@
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
+  .js:not(.disable-animations) body:not(.HomePage) .Introduction {
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+  }
   .js:not(.disable-animations) .ImageBlock > a::after {
     background-color: #fff;
     content: "";
@@ -853,41 +857,6 @@
  * Mixins
  */
 /**
- * Component: Service cards
- */
-.ServiceCards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 630px;
-}
-
-@supports (display: grid) {
-  .ServiceCards {
-    display: grid;
-    grid-column-gap: 0;
-    grid-row-gap: 64px;
-    grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
-  }
-  @media (min-width: 480px) {
-    .ServiceCards {
-      grid-gap: 30px;
-      grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
-    }
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Service card
  */
 .ServiceCard {
@@ -1030,6 +999,41 @@
   .ServiceCards .ServiceCard {
     margin-left: 0 !important;
     margin-top: 0 !important;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Service cards
+ */
+.ServiceCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 630px;
+}
+
+@supports (display: grid) {
+  .ServiceCards {
+    display: grid;
+    grid-column-gap: 0;
+    grid-row-gap: 64px;
+    grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
+  }
+  @media (min-width: 480px) {
+    .ServiceCards {
+      grid-gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
+    }
   }
 }
 /**

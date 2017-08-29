@@ -294,7 +294,6 @@
     <span class="hljs-keyword">this</span>.hideNavigation = <span class="hljs-keyword">this</span>.hideNavigation.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.showNavigation = <span class="hljs-keyword">this</span>.showNavigation.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.toggleNavigation = <span class="hljs-keyword">this</span>.toggleNavigation.bind(<span class="hljs-keyword">this</span>);
-    <span class="hljs-keyword">this</span>.clickOutside = <span class="hljs-keyword">this</span>.clickOutside.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.onEscapePress = <span class="hljs-keyword">this</span>.onEscapePress.bind(<span class="hljs-keyword">this</span>);
   }
 
@@ -311,7 +310,6 @@
       <span class="hljs-keyword">this</span>.header.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
       <span class="hljs-keyword">this</span>.navigation.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
       <span class="hljs-keyword">this</span>.hamburger.classList.remove(<span class="hljs-keyword">this</span>.openClassName);
-      <span class="hljs-built_in">document</span>.removeEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.clickOutside, <span class="hljs-literal">false</span>);
     }
   }
 
@@ -329,18 +327,6 @@
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.isOpen ? <span class="hljs-keyword">this</span>.hideNavigation() : <span class="hljs-keyword">this</span>.showNavigation();
   }
 
-  clickOutside(event) {
-    <span class="hljs-keyword">const</span> isHeader = <span class="hljs-keyword">this</span>.header.contains(event.target);
-    <span class="hljs-keyword">const</span> isHamburger = <span class="hljs-keyword">this</span>.hamburger.contains(event.target);
-    <span class="hljs-keyword">const</span> isNavigation = <span class="hljs-keyword">this</span>.navigation.contains(event.target);
-
-    <span class="hljs-keyword">if</span> (!isHeader &amp;&amp; !isHamburger &amp;&amp; !isNavigation) {
-      <span class="hljs-keyword">this</span>.hideNavigation();
-    }
-
-    event.preventDefault();
-  }
-
   onEscapePress() {
     <span class="hljs-built_in">document</span>.onkeyup = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
       <span class="hljs-keyword">if</span> (event.keyCode === <span class="hljs-number">27</span>) {
@@ -353,8 +339,6 @@
     <span class="hljs-keyword">const</span> hamburger = <span class="hljs-keyword">new</span> Hamburger({
       <span class="hljs-attr">onClick</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
         <span class="hljs-keyword">this</span>.toggleNavigation();
-
-        <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.clickOutside, <span class="hljs-literal">false</span>);
       },
     });
 
@@ -382,7 +366,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.6 KB</span>
+                    <span class="Meta-value">2 KB</span>
                 </li>
             </ul>
         </div>
@@ -2106,6 +2090,30 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="modal--default.html" data-pjax>
                 <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="modal--dynamic-content.html" data-pjax>
+                <span>Dynamic Content</span>
                 
 
 <div class="Status Status--unlabelled">

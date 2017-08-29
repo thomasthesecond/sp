@@ -1071,6 +1071,28 @@
  * Mixins
  */
 /**
+ * Component: File download
+ */
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Filter
  * @type Organism
  */
@@ -1203,28 +1225,6 @@
   .Filter-link {
     margin-top: 48px;
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: File download
- */
-.FileDownload {
-  display: inline-block;
-}
-
-.FileDownload img {
-  display: block;
-  height: auto;
-  width: 14px;
-}
-
-.FileDownload + .FileDownload {
-  margin-left: 24px;
 }
 /**
  * Functions

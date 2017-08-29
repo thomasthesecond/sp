@@ -20,7 +20,6 @@ export default class Banner {
     this.hideNavigation = this.hideNavigation.bind(this);
     this.showNavigation = this.showNavigation.bind(this);
     this.toggleNavigation = this.toggleNavigation.bind(this);
-    this.clickOutside = this.clickOutside.bind(this);
     this.onEscapePress = this.onEscapePress.bind(this);
   }
 
@@ -37,7 +36,6 @@ export default class Banner {
       this.header.classList.remove(this.openClassName);
       this.navigation.classList.remove(this.openClassName);
       this.hamburger.classList.remove(this.openClassName);
-      document.removeEventListener("click", this.clickOutside, false);
     }
   }
 
@@ -55,18 +53,6 @@ export default class Banner {
     return this.isOpen ? this.hideNavigation() : this.showNavigation();
   }
 
-  clickOutside(event) {
-    const isHeader = this.header.contains(event.target);
-    const isHamburger = this.hamburger.contains(event.target);
-    const isNavigation = this.navigation.contains(event.target);
-
-    if (!isHeader && !isHamburger && !isNavigation) {
-      this.hideNavigation();
-    }
-
-    event.preventDefault();
-  }
-
   onEscapePress() {
     document.onkeyup = (event) => {
       if (event.keyCode === 27) {
@@ -79,8 +65,6 @@ export default class Banner {
     const hamburger = new Hamburger({
       onClick: () => {
         this.toggleNavigation();
-
-        document.addEventListener("click", this.clickOutside, false);
       },
     });
 
