@@ -1,20 +1,11 @@
 ---
 title: URL redirects
 label: URL redirects
-status: draft
 ---
 
 ## surgerypartners.com vs. surgery-partners.com
 
-It appears http://www.surgerypartners.com/ and http://www.surgery-partners.com/ are the same site.
-
-Redirects must be set up to resolve the issue.
-
-**Issues:**
-* Google uses both URLs https://cl.ly/0Z3n2N1a1e0e
-* No canonical URL
-
-All traffic should be redirected to https://www.surgerypartners.com/. This includes:
+There are currently two versions of the Surgery Partners website; http://www.surgerypartners.com/ and http://www.surgery-partners.com/. This is a problem because [Google has indexed both versions](https://cl.ly/0Z3n2N1a1e0e) and there is no canonical URL. The solution is to redirect all traffic to https://www.surgerypartners.com/ (note `https`). This includes:
 
 * Non-www URLs
 * Non-https URLs
@@ -22,7 +13,7 @@ All traffic should be redirected to https://www.surgerypartners.com/. This inclu
 
 ## 301 redirects
 
-301 redirects will need to be configured after the new URL structure is defined.
+301 redirects will need to be configured after the new URL structure is defined. Below is a small sample of URLs that will need to be redirected. A complete audit will need to be performed in order to capture and configure all redirects.
 
 | Old URL | Proposed new URL |
 | ------- | ---------------- |
@@ -37,3 +28,5 @@ All traffic should be redirected to https://www.surgerypartners.com/. This inclu
 | https://www.surgerypartners.com/content/healthcare-systems | https://www.surgerypartners.com/partnerships/ |
 | https://www.surgerypartners.com/development-team | https://www.surgerypartners.com/partnerships/ |
 | http://www.surgerypartners.com/content/contact-us | https://www.surgerypartners.com/contact/ |
+
+Again, this is not a complete list of redirects, only an example.
