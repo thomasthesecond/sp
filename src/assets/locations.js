@@ -11,6 +11,9 @@ import "../components/components/location-map-legend";
 import "../components/components/map-widget";
 import "../components/components/masthead";
 
+// Import animations
+import "./scss/animations.scss";
+
 const locationsPage = new LocationsPage();
 const locationFinder = new LocationFinder();
 
