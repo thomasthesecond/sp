@@ -73,6 +73,10 @@
     margin-right: auto;
     max-width: #{$max-width}px;
   }
+
+  body:not(.InvestorsPage) & {
+    border-bottom: 1px solid rgba($color-border-default, $opacity-27);
+  }
 }
 
 .SubNavigation-item {
