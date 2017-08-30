@@ -1,6 +1,5 @@
 const production = process.env.NODE_ENV === "production";
 const path = require("path");
-const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
@@ -42,11 +41,6 @@ const plugins = [
       to: "images",
     },
   ]),
-  new webpack.ProvidePlugin({
-    $: "jquery",
-    jQuery: "jquery",
-    jquery: "jquery",
-  }),
 ];
 
 if (production) {
