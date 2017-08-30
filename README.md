@@ -1,5 +1,6 @@
-# Surgery Partners Pattern Library
-
+---
+title: Surgery Partners Pattern Library
+---
 You are viewing the front-end pattern library for Surgery Partners. It’s built with [Fractal](http://fractal.build), a tool that enables rapid development of components, templates and pages.
 
 The patterns are split into two groups:
@@ -22,9 +23,19 @@ HTML templates can be found at `www/components/preview`. This folder includes HT
 * `locations.html`
 * `partnerships.html`
 
+## Source files
+
+The source code exists within the `src` directory at the root of the project. Ideally, files within `src` should be edited and then compiled to `www` with webpack.
+
+## Languages used
+
+* **Handlebars**: HTML templating
+* **SCSS**: CSS pre-processing
+* **JavaScript**: vanilla JavaScript using ES6 spec
+
 ## Setting up the project for development
 
-Here’s what you need to do to get up and running.
+If you made it this far, chances are you’re already up and running, but just incase you’re not, here’s what you need to do. *This information is also contained within the project’s README file at the root.*
 
 ### Requirements
 
@@ -110,17 +121,3 @@ A separate list of `devDependencies` are used for compiling and building the pro
 | `stylelint-scss` | A collection of SCSS specific rules for stylelint
 | `uglifyjs-webpack-plugin` | UglifyJS plugin for webpack |
 | `webpack` | Packs CommonJs/AMD modules for the browser |
-
-### Source vs. build files
-
-The source code exists within the `src` directory at the root of the project.
-
-Compiled build files are contained within the `www` directory at the root of the project.
-
-Ideally, files within `src` should be edited and then compiled to `www` with webpack.
-
-## Languages used
-
-* **Handlebars**: HTML templating
-* **SCSS**: CSS pre-processing
-* **JavaScript**: vanilla JavaScript using ES6 spec

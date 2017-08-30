@@ -23,6 +23,16 @@ HTML templates can be found at `www/components/preview`. This folder includes HT
 * `locations.html`
 * `partnerships.html`
 
+## Source files
+
+The source code exists within the `src` directory at the root of the project. Ideally, files within `src` should be edited and then compiled to `www` with webpack.
+
+## Languages used
+
+* **Handlebars**: HTML templating
+* **SCSS**: CSS pre-processing
+* **JavaScript**: vanilla JavaScript using ES6 spec
+
 ## Setting up the project for development
 
 If you made it this far, chances are you’re already up and running, but just incase you’re not, here’s what you need to do. *This information is also contained within the project’s README file at the root.*
@@ -111,17 +121,3 @@ A separate list of `devDependencies` are used for compiling and building the pro
 | `stylelint-scss` | A collection of SCSS specific rules for stylelint
 | `uglifyjs-webpack-plugin` | UglifyJS plugin for webpack |
 | `webpack` | Packs CommonJs/AMD modules for the browser |
-
-### Source vs. build files
-
-The source code exists within the `src` directory at the root of the project.
-
-Compiled build files are contained within the `www` directory at the root of the project.
-
-Ideally, files within `src` should be edited and then compiled to `www` with webpack.
-
-## Languages used
-
-* **Handlebars**: HTML templating
-* **SCSS**: CSS pre-processing
-* **JavaScript**: vanilla JavaScript using ES6 spec
