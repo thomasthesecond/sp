@@ -2,7 +2,7 @@
 title: Animations
 ---
 
-The home, about and partnership pages contain scrolling animations.
+The home, about, partnership and locations pages contain scrolling animations.
 
 [ScrollMagic](http://scrollmagic.io/) is used to handle the animations.
 
