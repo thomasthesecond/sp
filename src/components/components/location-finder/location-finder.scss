@@ -11,10 +11,6 @@ $location-finder-button-width: 258;
   &.is-sticky {
     background-color: $color-background-default;
     box-shadow: $shadow-location-finder-sticky;
-
-    @media (min-width: $mq-min-670) {
-      box-shadow: $shadow-location-finder;
-    }
   }
 }
 
