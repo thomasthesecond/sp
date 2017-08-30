@@ -1017,38 +1017,6 @@ textarea.dark {
 /**
  * Mixins
  */
-select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='rgba(94, 145, 161, 0.87)' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
-  background-position: calc(100% - 24px) calc(50% + 2px);
-  background-repeat: no-repeat;
-  background-size: 8px;
-  border: 1px solid #bfd0d8;
-  border-radius: 0;
-  color: #77919e;
-  cursor: pointer;
-  display: block;
-  font-size: 100%;
-  font-weight: 300;
-  line-height: 2;
-  padding: 0.75em 3.375em 0.625em 1.5em;
-}
-
-select.dark {
-  background-color: #152640;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#bfd0d8' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
-  border-color: rgba(191, 208, 216, 0.2);
-  color: #fff;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
 table {
   border: 0;
   border-collapse: collapse;
@@ -1183,6 +1151,38 @@ tr:hover td {
   .table-responsive tr:hover td {
     background-color: inherit;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='rgba(94, 145, 161, 0.87)' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
+  background-position: calc(100% - 24px) calc(50% + 2px);
+  background-repeat: no-repeat;
+  background-size: 8px;
+  border: 1px solid #bfd0d8;
+  border-radius: 0;
+  color: #77919e;
+  cursor: pointer;
+  display: block;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 2;
+  padding: 0.75em 3.375em 0.625em 1.5em;
+}
+
+select.dark {
+  background-color: #152640;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#bfd0d8' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
+  border-color: rgba(191, 208, 216, 0.2);
+  color: #fff;
 }
 /**
  * Functions
@@ -2301,43 +2301,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-.SkipLink {
-  position: absolute;
-}
-
-.SkipLink:focus {
-  background-color: #fff;
-  color: #446975;
-  height: auto;
-  line-height: 40px;
-  padding: 10px 20px;
-  text-decoration: none;
-  top: 48px;
-  width: auto;
-  z-index: 1000;
-}
-
-@media (min-width: 688px) {
-  .SkipLink:focus {
-    top: 6.97674vw;
-  }
-}
-
-@media (min-width: 83.625em) {
-  .SkipLink:focus {
-    top: 90px;
-  }
-}
-
-.SkipLink.visuallyhidden.focusable:focus {
-  position: absolute;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Navigation {
   font-size: 12px;
   background-color: #fff;
@@ -2481,4 +2444,41 @@ blockquote cite br {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+.SkipLink {
+  position: absolute;
+}
+
+.SkipLink:focus {
+  background-color: #fff;
+  color: #446975;
+  height: auto;
+  line-height: 40px;
+  padding: 10px 20px;
+  text-decoration: none;
+  top: 48px;
+  width: auto;
+  z-index: 1000;
+}
+
+@media (min-width: 688px) {
+  .SkipLink:focus {
+    top: 6.97674vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .SkipLink:focus {
+    top: 90px;
+  }
+}
+
+.SkipLink.visuallyhidden.focusable:focus {
+  position: absolute;
 }
