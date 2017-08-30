@@ -74,6 +74,7 @@
   }
 
   @media (min-width: $mq-min-banner) {
+    height: 100%;
     margin-left: auto;
   }
 }
@@ -88,6 +89,10 @@
 .Banner .Navigation ul {
   @media (max-width: $mq-max-banner) {
     margin-top: 48px;
+  }
+
+  @media (min-width: $mq-min-banner) {
+    height: 100%;
   }
 }
 
@@ -121,5 +126,13 @@
   @media (max-width: $mq-max-banner) {
     opacity: $opacity-100;
     transform: translateY(0);
+  }
+}
+
+.Banner .Navigation a {
+  @media (min-width: $mq-min-banner) {
+    align-items: center;
+    display: flex;
+    height: 100%;
   }
 }
