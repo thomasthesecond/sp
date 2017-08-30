@@ -218,7 +218,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   }
 
   @media (min-width: 800px) {
-    border-left: 1px solid rgba($color-border-default, 0.07);
+    border-left: 1px solid rgba($color-border-default, $opacity-07);
     float: left;
     margin-left: $contact-column-margin;
     padding-left: column-width($contact-padding);
@@ -314,7 +314,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
 
     &::before {
       @media (min-width: 650px) {
-        background-color: rgba($color-border-default, 0.07);
+        background-color: rgba($color-border-default, $opacity-07);
         content: "";
         display: inline-block;
         height: 1em;
