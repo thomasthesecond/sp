@@ -1,7 +1,7 @@
 "use strict";
 
 // Import page module
-import LocationsPage from "../components/05-pages/locations";
+import LocationsPage from "../components/pages/locations";
 
 // Import page-specific components
 import "../components/components/cover-photo";

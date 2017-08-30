@@ -1,7 +1,7 @@
 "use strict";
 
 // Import page module
-import InvestorsPage from "../components/05-pages/investors";
+import InvestorsPage from "../components/pages/investors";
 
 // Import page-specific components
 import "../components/components/breadcrumbs";

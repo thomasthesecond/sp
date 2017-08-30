@@ -1,7 +1,7 @@
 "use strict";
 
 // Import page module
-import HomePage from "../components/05-pages/home";
+import HomePage from "../components/pages/home";
 
 // Import page-specific components
 import "../components/components/cover-photo";
