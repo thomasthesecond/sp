@@ -1,23 +1,16 @@
 {
+  "extends": [
+    "stylelint-config-standard"
+  ],
   "plugins": [
     "stylelint-scss"
   ],
   "rules": {
-    # "block-no-empty": null,
-    # "color-no-invalid-hex": true,
-    # "comment-empty-line-before": [ "always", {
-    #   "ignore": ["stylelint-command", "after-comment"]
-    # } ],
-    # "declaration-colon-space-after": "always",
-    # "indentation": ["tab", {
-    #   "except": ["value"]
-    # }],
-    # "max-empty-lines": 2,
-    # "rule-empty-line-before": [ "always", {
-    #   "except": ["first-nested"],
-    #   "ignore": ["after-comment"]
-    # } ],
-    # "unit-whitelist": ["em", "rem", "%", "s"],
+    "at-rule-no-unknown": null,
+    "selector-pseudo-element-colon-notation": "double",
+    "declaration-block-no-redundant-longhand-properties": [true, {
+      ignoreShorthands: ["flex-flow", "grid-gap"]
+    }],
     "scss/at-else-closing-brace-newline-after": true,
     "scss/at-else-closing-brace-space-after": true,
     "scss/at-else-empty-line-before": true,
@@ -33,7 +26,7 @@
     "scss/dollar-variable-empty-line-before": "always",
     "scss/dollar-variable-no-missing-interpolation": true,
     "scss/double-slash-comment-empty-line-before": "always",
-    "scss/double-slash-comment-inline": "always",
+    "scss/double-slash-comment-inline": "never",
     "scss/double-slash-comment-whitespace-inside": "always",
     "scss/declaration-nested-properties": "never",
     "scss/declaration-nested-properties-no-divided-groups": true,
