@@ -92,6 +92,7 @@ A separate list of `devDependencies` are used for compiling and building the pro
 | `sass-loader` | Sass loader module for webpack |
 | `style-loader` | Style loader module for webpack |
 | `stylelint` | A mighty, modern CSS linter |
+| `stylelint-scss` | A collection of SCSS specific rules for stylelint
 | `uglifyjs-webpack-plugin` | UglifyJS plugin for webpack |
 | `webpack` | Packs CommonJs/AMD modules for the browser |
 
