@@ -7,6 +7,8 @@ $color-background-default: #fff; // rgb(255, 255, 255) // White
 $color-background-footer: #152640; // rgb(21, 38, 64) // Big Stone
 $color-background-cover-gradient-start: #b5955d; // rgb(181, 149, 93) // Muddy Waters
 $color-background-cover-gradient-end: #5d91a1; // rgb(93, 145, 161) // Horizon
+$color-background-section-gradient-start: #fcfaf7; // rgb(252, 250, 247) // Vista White
+$color-background-section-gradient-end: #fff; // rgb(255, 255, 255) // White
 $color-background-overlay: #000; // rgb(0, 0, 0) // Black
 $color-background-button-default: #5d91a1; // rgb(93, 145, 161) // Horizon
 $color-background-button-dark: #152640; // rgb(21, 38, 64) // Big Stone
@@ -24,7 +26,7 @@ $color-border-input: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
 $color-border-input-dark: rgba(#bfd0d8, 0.2); // rgb(191, 208, 216) // Jungle Mist
 
 // Text colors
-$color-text-default: #646e7e; // #8f9aa8; // rgb(143, 154, 168) // Regent Gray
+$color-text-default: #646e7e; // rgb(100, 110, 126) // Pale Sky
 $color-text-heading: #25395d; // rgb(37, 57, 93) // Cloud Burst
 $color-text-overlay: #fff; // rgb(255, 255, 255) // White
 $color-text-introduction: #25395d; // rgb(37, 57, 93) // Cloud Burst
@@ -46,6 +48,12 @@ $color-text-positive: #6fc179;
 $color-text-negative: #d90a0a;
 $color-text-blockquote: #25395d; // rgb(37, 57, 93) // Cloud Burst
 $color-text-arrow: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
+$color-text-map-legend: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
+$color-text-table-cell-emphesis: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
+$color-text-logo: #717271; // rgb(113, 114, 113) Gray
+$color-text-logo-arrow-left: #c0cdd5; // rgb(192, 205, 213) Heather
+$color-text-logo-arrow-right: #619ab1; // rgb(97, 154, 177) // Hippie Blue
+$color-text-select-arrow: rgba(#5e91a1, 0.87);
 
 $color-accent-mint: #edf6f6; // rgb(237, 246, 246) // Catskill White
 $color-accent-gray: #b4c2c7; // rgb(180, 194, 199) // Submarine
@@ -71,10 +79,9 @@ $color-text-skip-link: #446975; // rgb(68, 105, 117) // Blue Bayoux
 // Gradients
 // ---------------------------------------------------------------------
 
-// section-gradient
-// background: linear-gradient(to bottom, #fcfaf7 0%, #fff 100%);
-// cover-photo
-// background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
+$gradient-cover-photo: linear-gradient(to bottom, $color-background-cover-gradient-start 0%, $color-background-cover-gradient-end 100%);
+$gradient-section: linear-gradient(to bottom, $color-background-section-gradient-start 0%, $color-background-section-gradient-end 100%);
+$gradient-stock-price-card: linear-gradient(to bottom, rgba(#b5955d, 0.07) 0%, rgba(#5e91a1, 0.07) 100%);
 
 // h2
 // color: #21365a;
@@ -281,6 +288,8 @@ $font-size-heading-5-min: 14;
 $font-size-heading-6: 12;
 $font-size-heading-6-min: 10;
 
+$font-size-help-tip: 11;
+
 // Font weight
 $font-weight-light: 300;
 $font-weight-regular: 400;
@@ -318,6 +327,20 @@ $line-height-reset: 1;
 // Opacity
 // ---------------------------------------------------------------------
 
+$opacity-100: 1;
+$opacity-80: 0.8;
+$opacity-70: 0.7;
+$opacity-60: 0.6;
+$opacity-47: 0.47;
+$opacity-40: 0.4;
+$opacity-37: 0.37;
+$opacity-27: 0.27;
+$opacity-26: 0.26;
+$opacity-20: 0.2;
+$opacity-10: 0.1;
+$opacity-07: 0.07;
+$opacity-0: 0;
+
 // ---------------------------------------------------------------------
 // Spacing
 // ---------------------------------------------------------------------
@@ -335,6 +358,7 @@ $max-width-investors-page: $max-width - ($spacing-investors-page * 2);
 $max-width-investors-article: 630;
 $max-width-content: 630;
 $max-width-banner: 620;
+$max-width-filter: 960;
 $max-width-grid-padded: $max-width - ($spacing-grid-padded * 2);
 
 // ---------------------------------------------------------------------
@@ -351,9 +375,15 @@ $max-width-grid-padded: $max-width - ($spacing-grid-padded * 2);
 
 $shadow-location-finder: 0 2px 34px rgba(#1c2d3e, 0.09), 0 36px 84px rgba(#042435, 0.39);
 $shadow-location-finder-sticky: 0 2px 34px rgba(#1c2d3e, 0.09);
+$shadow-location-finder-button: 0 10px 14px rgba($color-button-finder, 0.22);
 $shadow-modal: 0 36px 84px rgba(#042435, 0.39);
 $shadow-service-card: 0 22px 54px rgba(#6b778c, 0.21);
 $shadow-team-member-panel: 0 42px 84px rgba(#1c2d3e, 0.3);
+$shadow-highlight-icon: 0 11px 46px rgba($color-stat-shadow, 0.28);
+$shadow-highlight-text: 0 0 34px $color-stat-text-shadow;
+$shadow-masthead-title: 0 0 72px rgba(#0d3c4d, 0.4);
+$shadow-table-row: 0 14px 34px rgba($color-background-overlay, 0.09);
+$shadow-feature-testimonial: 0 2px 24px rgba(#0d3c4d, 0.4);
 
 // ---------------------------------------------------------------------
 // Time
@@ -362,14 +392,46 @@ $shadow-team-member-panel: 0 42px 84px rgba(#1c2d3e, 0.3);
 // ---------------------------------------------------------------------
 // Media query
 // ---------------------------------------------------------------------
+$mq-max-375: #{((375 - 1) / $font-size-default) * 1em};
+$mq-min-375: #{(375 / $font-size-default) * 1em};
+$mq-max-436: #{((436 - 1) / $font-size-default) * 1em};
+$mq-min-436: #{(436 / $font-size-default) * 1em};
 $mq-max-480: #{((480 - 1) / $font-size-default) * 1em};
 $mq-min-480: #{(480 / $font-size-default) * 1em};
+$mq-max-520: #{((520 - 1) / $font-size-default) * 1em};
+$mq-min-520: #{(520 / $font-size-default) * 1em};
+$mq-max-544: #{((544 - 1) / $font-size-default) * 1em};
+$mq-min-544: #{(544 / $font-size-default) * 1em};
+$mq-max-560: #{((560 - 1) / $font-size-default) * 1em};
+$mq-min-560: #{(560 / $font-size-default) * 1em};
+$mq-max-600: #{((600 - 1) / $font-size-default) * 1em};
+$mq-min-600: #{(600 / $font-size-default) * 1em};
+$mq-max-615: #{((615 - 1) / $font-size-default) * 1em};
+$mq-min-615: #{(615 / $font-size-default) * 1em};
+$mq-max-620: #{((620 - 1) / $font-size-default) * 1em};
+$mq-min-620: #{(620 / $font-size-default) * 1em};
+$mq-max-624: #{((624 - 1) / $font-size-default) * 1em};
+$mq-min-624: #{(624 / $font-size-default) * 1em};
 $mq-max-670: #{((670 - 1) / $font-size-default) * 1em};
 $mq-min-670: #{(670 / $font-size-default) * 1em};
+$mq-max-687: #{((687 - 1) / $font-size-default) * 1em};
+$mq-min-687: #{(687 / $font-size-default) * 1em};
+$mq-max-700: #{((700 - 1) / $font-size-default) * 1em};
+$mq-min-700: #{(700 / $font-size-default) * 1em};
 $mq-max-720: #{((720 - 1) / $font-size-default) * 1em};
 $mq-min-720: #{(720 / $font-size-default) * 1em};
+$mq-max-808: #{((808 - 1) / $font-size-default) * 1em};
+$mq-min-808: #{(808 / $font-size-default) * 1em};
+$mq-max-840: #{((840 - 1) / $font-size-default) * 1em};
+$mq-min-840: #{(840 / $font-size-default) * 1em};
 $mq-max-860: #{((860 - 1) / $font-size-default) * 1em};
 $mq-min-860: #{(860 / $font-size-default) * 1em};
+$mq-max-1007: #{((1007 - 1) / $font-size-default) * 1em};
+$mq-min-1007: #{(1007 / $font-size-default) * 1em};
+$mq-max-1024: #{((1024 - 1) / $font-size-default) * 1em};
+$mq-min-1024: #{(1024 / $font-size-default) * 1em};
+$mq-max-1290: #{((1290 - 1) / $font-size-default) * 1em};
+$mq-min-1290: #{(1290 / $font-size-default) * 1em};
 $mq-max-container: #{((($max-width + ($spacing-gutter * 2)) - 1) / $font-size-default) * 1em};
 $mq-min-container: #{(($max-width + ($spacing-gutter * 2)) / $font-size-default) * 1em};
 $mq-max-banner: #{(($max-width-banner - 1) / $font-size-default) * 1em};
