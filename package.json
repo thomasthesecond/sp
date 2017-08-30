@@ -10,7 +10,6 @@
     "assets": "webpack --watch",
     "build": "yarn run clean && webpack && NODE_ENV=production webpack && fractal build",
     "clean": "rimraf tmp && rimraf www",
-    "scsslint": "scss-lint . --config .scsslint.yml",
     "eslint": "eslint src --ext .js",
     "stylelint": "stylelint src/**/*.scss",
     "lint": "yarn run eslint && yarn run stylelint",
@@ -69,6 +68,8 @@
     "sass-loader": "^6.0.4",
     "style-loader": "^0.17.0",
     "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-scss": "^2.1.0",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.2.0"
   }
