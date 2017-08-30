@@ -7,6 +7,21 @@ The patterns are split into two groups:
 * **Components**: The building blocks of the site; when combined, create pages; each component has a specific purpose
 * **Pages**: Fully formed Web pages composed of components
 
+## Locating the build files
+
+CSS, JavaScript and image assets can be found at `www/assets`.
+
+HTML templates can be found at `www/components/preview`. This folder includes HTML files of *all* components and pages. The list of pages are as follows:
+
+* `about.html`
+* `contact.html`
+* `generic--one-column.html` (or `generic.html`)
+* `generic--two-column.html`
+* `home.html`
+* `locations--no-results.html`
+* `locations.html`
+* `partnerships.html`
+
 ## Setting up the project for development
 
 Here’s what you need to do to get up and running.
