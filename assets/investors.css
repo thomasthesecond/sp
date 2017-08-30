@@ -888,6 +888,17 @@
 /**
  * Mixins
  */
+.NewsArticle .PressReleaseContact {
+  border-top: 1px solid #bfd0d8;
+  margin-top: 3em;
+  padding-top: 2em;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
 .ResourcesList-heading {
   border-bottom: 1px solid rgba(191, 208, 216, 0.6);
   margin-bottom: 0.8em;
@@ -926,17 +937,6 @@
   margin-right: 4px;
   vertical-align: -2px;
   width: 14px;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-.NewsArticle .PressReleaseContact {
-  border-top: 1px solid #bfd0d8;
-  margin-top: 3em;
-  padding-top: 2em;
 }
 /**
  * Functions
@@ -1136,25 +1136,6 @@
 /**
  * Mixins
  */
-.FileDownload {
-  display: inline-block;
-}
-
-.FileDownload img {
-  display: block;
-  height: auto;
-  width: 14px;
-}
-
-.FileDownload + .FileDownload {
-  margin-left: 24px;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Filter {
   max-width: 960px;
   width: 100%;
@@ -1284,6 +1265,25 @@
   .Filter-link {
     margin-top: 48px;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
 }
 /**
  * Functions

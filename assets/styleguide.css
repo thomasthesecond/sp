@@ -1069,6 +1069,38 @@ textarea.dark {
 /**
  * Mixins
  */
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='rgba(94, 145, 161, 0.87)' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
+  background-position: calc(100% - 24px) calc(50% + 2px);
+  background-repeat: no-repeat;
+  background-size: 8px;
+  border: 1px solid #bfd0d8;
+  border-radius: 0;
+  color: #77919e;
+  cursor: pointer;
+  display: block;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 2;
+  padding: 0.75em 3.375em 0.625em 1.5em;
+}
+
+select.dark {
+  background-color: #152640;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#bfd0d8' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
+  border-color: rgba(191, 208, 216, 0.2);
+  color: #fff;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
 table {
   border: 0;
   border-collapse: collapse;
@@ -1210,38 +1242,6 @@ tr:hover td {
 /**
  * Mixins
  */
-select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='rgba(94, 145, 161, 0.87)' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
-  background-position: calc(100% - 24px) calc(50% + 2px);
-  background-repeat: no-repeat;
-  background-size: 8px;
-  border: 1px solid #bfd0d8;
-  border-radius: 0;
-  color: #77919e;
-  cursor: pointer;
-  display: block;
-  font-size: 100%;
-  font-weight: 300;
-  line-height: 2;
-  padding: 0.75em 3.375em 0.625em 1.5em;
-}
-
-select.dark {
-  background-color: #152640;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#bfd0d8' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
-  border-color: rgba(191, 208, 216, 0.2);
-  color: #fff;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
 p {
   font-size: 14px;
   line-height: 1.71429;
@@ -1256,6 +1256,45 @@ p {
     margin-bottom: 2em;
     margin-top: 2em;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+ul,
+ol,
+dl {
+  font-size: 14px;
+  line-height: 1.71429;
+  margin-bottom: 1.71429em;
+  margin-top: 1.71429em;
+}
+
+@media (min-width: 600px) {
+  ul,
+  ol,
+  dl {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.list-unstyled {
+  list-style-type: none;
+  padding-left: 0;
 }
 /**
  * Functions
@@ -1350,45 +1389,6 @@ p {
     transition: transform 200ms;
     transition: transform 200ms, -webkit-transform 200ms;
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-ul,
-ol,
-dl {
-  font-size: 14px;
-  line-height: 1.71429;
-  margin-bottom: 1.71429em;
-  margin-top: 1.71429em;
-}
-
-@media (min-width: 600px) {
-  ul,
-  ol,
-  dl {
-    font-size: 16px;
-    line-height: 1.75;
-    margin-bottom: 2em;
-    margin-top: 2em;
-  }
-}
-
-dt {
-  font-weight: 600;
-}
-
-dd {
-  margin-bottom: 1em;
-  margin-top: 1em;
-}
-
-.list-unstyled {
-  list-style-type: none;
-  padding-left: 0;
 }
 /**
  * Functions
@@ -1685,6 +1685,81 @@ h6,
 .Button--dark:hover, .Button--dark:active, .Button--dark:focus {
   background-color: #223d66;
   color: #fff;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+blockquote {
+  color: #25395d;
+  margin: 0;
+}
+
+blockquote p {
+  font-size: 16px;
+  font-family: "Mate", Georgia, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  margin-top: 0;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  blockquote p {
+    font-size: calc(16px + (20 - 16) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  blockquote p {
+    font-size: 20px;
+  }
+}
+
+blockquote cite {
+  font-size: 14px;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  blockquote cite {
+    font-size: calc(14px + (16 - 14) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  blockquote cite {
+    font-size: 16px;
+  }
+}
+
+blockquote cite br {
+  display: none;
+}
+
+.blockquote-location {
+  font-size: 10px;
+  color: #b5955d;
+  display: block;
+  font-weight: 400;
+  line-height: 1.21429;
+  margin-top: 0.42857em;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .blockquote-location {
+    font-size: calc(10px + (14 - 10) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  .blockquote-location {
+    font-size: 14px;
+  }
 }
 /**
  * Functions
@@ -2126,81 +2201,6 @@ h6,
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-blockquote {
-  color: #25395d;
-  margin: 0;
-}
-
-blockquote p {
-  font-size: 16px;
-  font-family: "Mate", Georgia, sans-serif;
-  font-weight: 300;
-  line-height: 1.6;
-  margin-bottom: 1.6em;
-  margin-top: 0;
-}
-
-@media (min-width: 37.5em) and (max-width: 64em) {
-  blockquote p {
-    font-size: calc(16px + (20 - 16) * (100vw - 600px) / (1024 - 600));
-  }
-}
-
-@media (min-width: 64em) {
-  blockquote p {
-    font-size: 20px;
-  }
-}
-
-blockquote cite {
-  font-size: 14px;
-  display: inline-block;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-@media (min-width: 37.5em) and (max-width: 64em) {
-  blockquote cite {
-    font-size: calc(14px + (16 - 14) * (100vw - 600px) / (1024 - 600));
-  }
-}
-
-@media (min-width: 64em) {
-  blockquote cite {
-    font-size: 16px;
-  }
-}
-
-blockquote cite br {
-  display: none;
-}
-
-.blockquote-location {
-  font-size: 10px;
-  color: #b5955d;
-  display: block;
-  font-weight: 400;
-  line-height: 1.21429;
-  margin-top: 0.42857em;
-}
-
-@media (min-width: 37.5em) and (max-width: 64em) {
-  .blockquote-location {
-    font-size: calc(10px + (14 - 10) * (100vw - 600px) / (1024 - 600));
-  }
-}
-
-@media (min-width: 64em) {
-  .blockquote-location {
-    font-size: 14px;
   }
 }
 /**
@@ -4433,6 +4433,17 @@ blockquote cite br {
 /**
  * Mixins
  */
+.NewsArticle .PressReleaseContact {
+  border-top: 1px solid #bfd0d8;
+  margin-top: 3em;
+  padding-top: 2em;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
 .ResourcesList-heading {
   border-bottom: 1px solid rgba(191, 208, 216, 0.6);
   margin-bottom: 0.8em;
@@ -4471,17 +4482,6 @@ blockquote cite br {
   margin-right: 4px;
   vertical-align: -2px;
   width: 14px;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-.NewsArticle .PressReleaseContact {
-  border-top: 1px solid #bfd0d8;
-  margin-top: 3em;
-  padding-top: 2em;
 }
 /**
  * Functions
@@ -4681,25 +4681,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-.FileDownload {
-  display: inline-block;
-}
-
-.FileDownload img {
-  display: block;
-  height: auto;
-  width: 14px;
-}
-
-.FileDownload + .FileDownload {
-  margin-left: 24px;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Filter {
   max-width: 960px;
   width: 100%;
@@ -4829,6 +4810,25 @@ blockquote cite br {
   .Filter-link {
     margin-top: 48px;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
 }
 /**
  * Functions
