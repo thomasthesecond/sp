@@ -119,7 +119,7 @@
 
 .Banner .Navigation.is-open li {
   @media (max-width: $mq-max-banner) {
-    opacity: 1;
+    opacity: $opacity-100;
     transform: translateY(0);
   }
 }

@@ -18,11 +18,11 @@ $mq: #{(1024 / 16) * 1em};
   .js:not(.disable-animations) {
     .CoverVideo,
     .Masthead .CoverPhoto {
-      opacity: 0;
+      opacity: $opacity-0;
       transition: opacity 1s 1s;
 
       &.animate {
-        opacity: 1;
+        opacity: $opacity-100;
       }
     }
 
@@ -69,12 +69,12 @@ $mq: #{(1024 / 16) * 1em};
       top: -4px;
 
       .MoreLink-text {
-        opacity: 0;
+        opacity: $opacity-0;
         transition: opacity 0.4s 1.4s;
       }
 
       &.animate .MoreLink-text {
-        opacity: 1;
+        opacity: $opacity-100;
       }
 
       .MoreLink-bar {
@@ -98,19 +98,19 @@ $mq: #{(1024 / 16) * 1em};
     }
 
     .LocationFinder {
-      opacity: 0;
+      opacity: $opacity-0;
       transform: translate3d(0, 80px, 0);
       transform-style: preserve-3d;
       transition: opacity 0.5s 1.2s, transform 1s 1.3s;
 
       &.animate {
-        opacity: 1;
+        opacity: $opacity-100;
         transform: translate3d(0, 0, 0);
       }
     }
 
     .Introduction {
-      opacity: 0;
+      opacity: $opacity-0;
       transform: translate3d(0, 40px, 0);
       transform-style: preserve-3d;
       transition:
@@ -118,7 +118,7 @@ $mq: #{(1024 / 16) * 1em};
         transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
       &.animate {
-        opacity: 1;
+        opacity: $opacity-100;
         transform: translate3d(0, 0, 0);
       }
     }
@@ -156,23 +156,23 @@ $mq: #{(1024 / 16) * 1em};
       }
 
       .ImageBlock-text {
-        opacity: 0;
+        opacity: $opacity-0;
         transition: opacity 0.5s ease-out;
       }
 
       &.animate .ImageBlock-text {
-        opacity: 1;
+        opacity: $opacity-100;
       }
     }
 
     .Testimonial {
-      opacity: 0;
+      opacity: $opacity-0;
       transform: translate3d(0, 40px, 0);
       transform-style: preserve-3d;
       transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 
       &.animate {
-        opacity: 1;
+        opacity: $opacity-100;
         transform: translate3d(0, 0, 0);
       }
     }
@@ -189,7 +189,7 @@ $mq: #{(1024 / 16) * 1em};
 
     .ServiceCards {
       .ServiceCard {
-        opacity: 0;
+        opacity: $opacity-0;
         transform: translate3d(0, 56px, 0);
         transition:
           opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
@@ -203,14 +203,14 @@ $mq: #{(1024 / 16) * 1em};
       }
 
       &.animate .ServiceCard {
-        opacity: 1;
+        opacity: $opacity-100;
         transform: translate3d(0, 0, 0);
       }
     }
 
     .LeadershipTeam {
       .TeamMember {
-        opacity: 0;
+        opacity: $opacity-0;
         transform: translate3d(0, 56px, 0);
         transition:
           opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
@@ -224,13 +224,13 @@ $mq: #{(1024 / 16) * 1em};
       }
 
       &.animate .TeamMember {
-        opacity: 1;
+        opacity: $opacity-100;
         transform: translate3d(0, 0, 0);
       }
     }
 
     .Highlight {
-      opacity: 0;
+      opacity: $opacity-0;
       transform: translate3d(0, 56px, 0);
       transition:
         opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
@@ -243,7 +243,7 @@ $mq: #{(1024 / 16) * 1em};
       }
 
       &.animate {
-        opacity: 1;
+        opacity: $opacity-100;
         transform: translate3d(0, 0, 0);
       }
     }

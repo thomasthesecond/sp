@@ -18,7 +18,7 @@
   }
 
   &:not(.TeamMember--small):hover::after {
-    opacity: 1;
+    opacity: $opacity-100;
     visibility: visible;
   }
 }
@@ -89,7 +89,7 @@
     background-color: $color-background-default;
     box-shadow: $shadow-team-member-panel;
     left: -48px;
-    opacity: 0;
+    opacity: $opacity-0;
     padding: 408px 48px 48px;
     position: absolute;
     top: -48px;
@@ -101,7 +101,7 @@
 
   .TeamMember:hover & {
     @media (min-width: 1015px) {
-      opacity: 1;
+      opacity: $opacity-100;
       visibility: visible;
     }
   }
