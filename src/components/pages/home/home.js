@@ -51,10 +51,6 @@ export default class HomePage {
       this.create();
     }
 
-    // new ScrollMagic.Scene({ triggerElement: ".js-banner" })
-    //   .setClassToggle(".Banner", this.className)
-    //   .addTo(this.controller);
-
     new ScrollMagic.Scene({ triggerElement: ".js-masthead" })
       .setClassToggle(".Masthead", this.className)
       .addTo(this.controller);
