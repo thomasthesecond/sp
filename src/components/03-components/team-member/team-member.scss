@@ -88,28 +88,16 @@
     backface-visibility: hidden;
     background-color: $color-background-default;
     box-shadow: $shadow-team-member-panel;
-    // left: #{(-48 / $max-width) * 100%};
     left: -48px;
     opacity: 0;
-    // padding: #{(48 / $max-width) * 100%};
-    // padding-top: 408px;
     padding: 408px 48px 48px;
     position: absolute;
-    // top: #{(-48 / $max-width) * 100%};
     top: -48px;
-    // width: calc(100% + #{(96 / $max-width) * 100%});
     width: calc(100% + 96px);
     transition: opacity 200ms;
     visibility: hidden;
     z-index: $z-index-default;
   }
-
-  // @media (min-width: 1015px) {
-  //   left: -48px;
-  //   padding: 408px 48px 48px;
-  //   top: -48px;
-  //   width: calc(100% + 96px);
-  // }
 
   .TeamMember:hover & {
     @media (min-width: 1015px) {
