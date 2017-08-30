@@ -2,11 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Testimonial
- * @type Organism
- */
-
 .Testimonial {
   max-width: 856px;
   text-align: center;
@@ -29,7 +24,7 @@
   }
 
   p {
-    text-shadow: 0 2px 24px rgba(#0d3c4d, 0.4);
+    text-shadow: $shadow-feature-testimonial;
   }
 
   .blockquote-location {

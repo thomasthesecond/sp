@@ -2,13 +2,8 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Overlay
- * @type Atom
- */
-
 .Overlay {
-  background-color: rgba($color-background-overlay, 0.2);
+  background-color: rgba($color-background-overlay, $opacity-20);
   height: 100vh;
   left: 0;
   opacity: 0;

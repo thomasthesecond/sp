@@ -2,13 +2,8 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Logo
- * @type Atom
- */
-
 .Logo {
-  color: #717271;
+  color: $color-text-logo;
   display: block;
   max-width: 256px;
   min-width: 148px;
@@ -28,11 +23,11 @@
 }
 
 .Logo-arrow--left {
-  fill: #c0cdd5;
+  fill: $color-text-logo-arrow-left;
 }
 
 .Logo-arrow--right {
-  fill: #6199af;
+  fill: $color-text-logo-arrow-right;
 }
 
 // Implementation detail

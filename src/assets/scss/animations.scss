@@ -38,7 +38,7 @@ $mq: #{(1024 / 16) * 1em};
       }
 
       &.animate span {
-        text-shadow: 0 0 72px rgba(#0d3c4d, 0.4);
+        text-shadow: $shadow-masthead-title;
         transform: translate3d(0, 0, 0);
       }
     }

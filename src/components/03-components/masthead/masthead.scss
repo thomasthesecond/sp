@@ -2,11 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Masthead
- * @type Atom
- */
-
 .Masthead {
   height: 55vw;
   max-height: 466px;
@@ -36,5 +31,5 @@
 .Masthead-title {
   color: $color-text-overlay;
   margin: 0;
-  text-shadow: 0 0 72px rgba(#0d3c4d, 0.4);
+  text-shadow: $shadow-masthead-title;
 }

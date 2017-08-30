@@ -2,17 +2,10 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Select
- * @type Atom
- */
-
-$select-arrow-color: rgba(#5e91a1, 0.87);
-
 select {
   appearance: none;
   background-color: $color-background-input;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#{$select-arrow-color}' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#{$color-text-select-arrow}' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
   background-position: calc(100% - 24px) calc(50% + 2px);
   background-repeat: no-repeat;
   background-size: 8px;

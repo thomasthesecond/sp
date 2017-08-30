@@ -2,11 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Contentinfo
- * @type Organism
- */
-
 @function column-width($value) {
   @return #{($value / $max-width) * 100%};
 }
@@ -31,13 +26,13 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
     $min-width: 700
   );
 
-  background-color: #152640;
-  color: rgba(#fff, 0.57);
+  background-color: $color-background-footer;
+  color: rgba($color-text-overlay, 0.57);
   line-height: (24 / 12);
   padding-top: 64px;
 
   @media (min-width: 800px) {
-    line-height: (28 / 16);
+    line-height: (28 / $font-size-default);
     padding-top: 110px;
   }
 }
@@ -78,7 +73,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   &:hover,
   &:active,
   &:focus {
-    color: rgba(#fff, 0.77);
+    color: rgba($color-text-overlay, 0.77);
   }
 }
 
@@ -216,14 +211,14 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
 }
 
 .Contentinfo-contact {
-  line-height: (36 / 16);
+  line-height: (36 / $font-size-default);
 
   @media (max-width: 799px) {
     margin-top: 64px;
   }
 
   @media (min-width: 800px) {
-    border-left: 1px solid rgba(#bfd0d8, 0.07);
+    border-left: 1px solid rgba($color-border-default, 0.07);
     float: left;
     margin-left: $contact-column-margin;
     padding-left: column-width($contact-padding);
@@ -248,8 +243,8 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
 }
 
 .Contentinfo-navigation {
-  border-top: 1px solid rgba(#bfd0d8, 0.2);
-  line-height: 1;
+  border-top: 1px solid rgba($color-border-default, 0.2);
+  line-height: $line-height-reset;
   margin-top: 32px;
   padding-bottom: 32px;
   padding-top: 40px;
@@ -319,7 +314,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
 
     &::before {
       @media (min-width: 650px) {
-        background-color: rgba(#bfd0d8, 0.07);
+        background-color: rgba($color-border-default, 0.07);
         content: "";
         display: inline-block;
         height: 1em;
@@ -342,7 +337,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   }
 
   @media (max-width: 649px) {
-    border-top: 1px solid rgba(#bfd0d8, 0.2);
+    border-top: 1px solid rgba($color-border-default, 0.2);
     padding-top: 30px;
   }
 

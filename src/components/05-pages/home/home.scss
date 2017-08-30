@@ -2,13 +2,8 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Page: Home
- * @type page
- */
-
 .Banner {
-  @media (max-width: 619px) {
+  @media (max-width: $mq-max-620) {
     left: 0;
     position: absolute;
     right: 0;
@@ -17,25 +12,25 @@
 }
 
 .Banner:not(.is-open) {
-  @media (max-width: 619px) {
+  @media (max-width: $mq-max-620) {
     background-color: transparent;
   }
 }
 
 .Hamburger:not(.is-open) {
-  @media (max-width: 619px) {
+  @media (max-width: $mq-max-620) {
     color: $color-text-hamburger-overlay;
   }
 }
 
 .Banner:not(.is-open) .Logo {
-  @media (max-width: 619px) {
+  @media (max-width: $mq-max-620) {
     color: $color-text-overlay;
   }
 }
 
 .Banner:not(.is-open) .Logo-arrow {
-  @media (max-width: 619px) {
+  @media (max-width: $mq-max-620) {
     fill: $color-text-overlay;
   }
 }
@@ -43,11 +38,11 @@
 .LocationFinder {
   z-index: $z-index-sticky;
 
-  @media (max-width: 669px) {
+  @media (max-width: $mq-max-670) {
     display: none;
   }
 
-  @media (min-width: 670px) {
+  @media (min-width: $mq-min-670) {
     margin-top: #{(-45 / $max-width) * 100vw};
   }
 
@@ -59,11 +54,11 @@
 .LocationFinderButton {
   z-index: $z-index-sticky;
 
-  @media (max-width: 669px) {
+  @media (max-width: $mq-max-670) {
     margin-top: -22px;
   }
 
-  @media (min-width: 670px) {
+  @media (min-width: $mq-min-670) {
     display: none;
   }
 }
@@ -72,12 +67,12 @@
   margin-bottom: 104px;
   margin-top: 104px;
 
-  @media (min-width: 544px) {
+  @media (min-width: $mq-min-544) {
     margin-bottom: #{(164 / $max-width) * 100vw};
     margin-top: #{(174 / $max-width) * 100vw};
   }
 
-  @media (min-width: 1290px) {
+  @media (min-width: $mq-min-1290) {
     margin-bottom: 164px;
     margin-top: 174px;
   }
@@ -86,11 +81,11 @@
 .ImageBlock {
   margin-top: 96px;
 
-  @media (min-width: 544px) {
+  @media (min-width: $mq-min-544) {
     margin-top: #{(184 / $max-width) * 100vw};
   }
 
-  @media (min-width: 1290px) {
+  @media (min-width: $mq-min-1290) {
     margin-top: 184px;
   }
 }
@@ -98,11 +93,11 @@
 .Contentinfo {
   margin-top: 136px;
 
-  @media (min-width: 544px) {
+  @media (min-width: $mq-min-544) {
     margin-top: #{(456 / $max-width) * 100vw};
   }
 
-  @media (min-width: 1290px) {
+  @media (min-width: $mq-min-1290) {
     margin-top: 456px;
   }
 }

@@ -2,58 +2,39 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Modal
- */
-
 .Modal {
   background-color: $color-background-default;
-  // bottom: 0;
   box-shadow: $shadow-modal;
-  // height: 100vh;
   left: 0;
   margin: auto;
-  opacity: 0;
-  // padding: #{$spacing-gutter}px;
-  // padding-bottom: #{$spacing-gutter}px;
-  // padding-top: #{$spacing-gutter}px;
+  opacity: $opacity-0;
   position: fixed;
   right: 0;
-  // top: 0;
   transform: translateY(10vh);
   transition: opacity 200ms, transform 200ms, visibility 200ms;
   visibility: hidden;
-  // width: 100vw;
   will-change: transform;
   z-index: $z-index-modal;
 
-  @media (max-width: 479px) {
+  @media (max-width: $mq-max-480) {
     height: 100vh;
     top: 0;
     width: 100vw;
   }
 
-  @media (min-width: 480px) {
-    // height: 80vh;
+  @media (min-width: $mq-min-480) {
     max-height: 80vh;
-    // max-width: 80vw;
     max-width: 800px;
     top: 50%;
-    // width: 80vw;
     width: 96vw;
   }
 
-  // @media (min-width: 800px) {
-  //   max-width: 50vw;
-  //   width: 50vw;
-  // }
-
   &.is-open {
-    opacity: 1;
+    opacity: $opacity-100;
     transform: translateY(0);
     visibility: visible;
 
-    @media (min-width: 480px) {
+    @media (min-width: $mq-min-480) {
       transform: translateY(-50%);
     }
   }
@@ -62,7 +43,7 @@
 .Modal-close {
   background-color: transparent;
   border: 0;
-  color: rgba($color-text-default, 0.4);
+  color: rgba($color-text-default, $opacity-40);
   cursor: pointer;
   display: block;
   font-size: 24px;
@@ -78,7 +59,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: rgba($color-text-default, 0.8);
+    color: rgba($color-text-default, $opacity-80);
   }
 }
 
@@ -92,7 +73,7 @@
     #{$spacing-gutter}px
     #{$spacing-gutter}px;
 
-  @media (min-width: 480px) {
+  @media (min-width: $mq-min-480) {
     padding-left: #{$spacing-gutter * 2}px;
   }
 }

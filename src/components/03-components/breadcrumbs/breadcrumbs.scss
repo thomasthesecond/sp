@@ -2,17 +2,13 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Breadcrumbs
- */
-
 .Breadcrumbs {
-  font-size: 14px;
+  font-size: #{$font-size-body-small}px;
   letter-spacing: 0.6px;
   line-height: $line-height-reset;
 
   .icon {
-    font-size: #{(10 / 14)}em;
+    font-size: #{($font-size-body-tiny / $font-size-body-small)}em;
     margin-right: 1px;
   }
 }

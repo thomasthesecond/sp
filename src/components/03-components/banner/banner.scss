@@ -2,11 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Banner
- * @type Organism
- */
-
 .Banner {
   background-color: $color-background-default;
   height: #{(90 / $max-width) * 100vw};

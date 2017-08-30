@@ -2,33 +2,28 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Highlight
- * @type Molecule
- */
-
 .Highlight {
   align-items: flex-start;
-  color: #fff;
+  color: $color-text-overlay;
   display: flex;
 }
 
 .Highlight-icon {
   align-items: center;
-  background-color: #fff;
+  background-color: $color-background-default;
   border-radius: 100%;
-  box-shadow: 0 11px 46px rgba(#729ba8, 0.28);
-  color: #25395d;
+  box-shadow: $shadow-highlight-icon;
+  color: $color-text-heading;
   display: flex;
   flex: 0 0 auto;
-  font-size: 24px;
+  font-size: #{$font-size-heading-2-min}px;
   height: 60px;
   justify-content: center;
   margin-right: 24px;
   width: 60px;
 
   @media (min-width: 420px) {
-    font-size: 32px;
+    font-size: #{$font-size-heading-2}px;
     height: 80px;
     width: 80px;
   }
@@ -48,24 +43,24 @@
   font-size: 24px;
   font-weight: $font-weight-bold;
   letter-spacing: 0.5px;
-  line-height: 1;
-  text-shadow: 0 0 34px #446975;
+  line-height: $line-height-reset;
+  text-shadow: $shadow-highlight-text;
 
   @media (min-width: 420px) {
-    font-size: 32px;
+    font-size: #{$font-size-heading-2}px;
   }
 }
 
 .Highlight-label {
-  font-size: 12px;
+  font-size: #{$font-size-heading-6}px;
   font-weight: $font-weight-semibold;
-  line-height: (17 / 12);
+  line-height: (17 / #{$font-size-heading-6});
   margin-top: 7px;
-  text-shadow: 0 0 34px #446975;
+  text-shadow: $shadow-highlight-text;
 
   @media (min-width: 420px) {
-    font-size: 14px;
-    line-height: (19 / 14);
+    font-size: #{$font-size-body-small}px;
+    line-height: $line-height-body-small;
   }
 }
 
