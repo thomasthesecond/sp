@@ -8,12 +8,15 @@
 }
 
 .StockPrice-price {
-  font-weight: $font-weight-regular;
   line-height: $line-height-reset;
   margin-right: 32px;
 
   @media (min-width: 500px) {
     margin-right: 10px;
+  }
+
+  &.heading-1 {
+    font-weight: $font-weight-regular;
   }
 }
 
