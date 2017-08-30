@@ -57,7 +57,7 @@ $location-finder-button-width: 258;
 }
 
 .LocationFinder legend {
-  color: rgba($color-text-heading, 0.79);
+  color: rgba($color-text-heading, $opacity-80);
   display: block;
   float: left;
   font-weight: $font-weight-bold;

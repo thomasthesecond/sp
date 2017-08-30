@@ -27,7 +27,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   );
 
   background-color: $color-background-footer;
-  color: rgba($color-text-overlay, 0.57);
+  color: rgba($color-text-overlay, $opacity-57);
   line-height: (24 / 12);
   padding-top: 64px;
 
@@ -73,7 +73,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   &:hover,
   &:active,
   &:focus {
-    color: rgba($color-text-overlay, 0.77);
+    color: rgba($color-text-overlay, $opacity-77);
   }
 }
 
@@ -243,7 +243,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
 }
 
 .Contentinfo-navigation {
-  border-top: 1px solid rgba($color-border-default, 0.2);
+  border-top: 1px solid rgba($color-border-default, $opacity-20);
   line-height: $line-height-reset;
   margin-top: 32px;
   padding-bottom: 32px;
@@ -337,7 +337,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   }
 
   @media (max-width: 649px) {
-    border-top: 1px solid rgba($color-border-default, 0.2);
+    border-top: 1px solid rgba($color-border-default, $opacity-20);
     padding-top: 30px;
   }
 
