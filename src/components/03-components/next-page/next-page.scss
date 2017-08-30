@@ -7,7 +7,7 @@
  */
 
 .NextPage {
-  @media(min-width: 600px) {
+  @media (min-width: 600px) {
     text-align: center;
   }
 }
@@ -21,7 +21,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: rgba($color-text-heading, .7);
+    color: rgba($color-text-heading, 0.7);
 
     @media (min-width: 520px) {
       .NextPage-icon {

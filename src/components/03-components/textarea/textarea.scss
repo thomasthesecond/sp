@@ -17,7 +17,8 @@ textarea {
   font-size: 100%;
   font-weight: $font-weight-light;
   line-height: 2;
-  padding: #{(12 / 16) * 1em}
+  padding:
+    #{(12 / 16) * 1em}
     #{(24 / 16) * 1em}
     #{(10 / 16) * 1em};
 

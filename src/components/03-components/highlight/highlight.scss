@@ -17,7 +17,7 @@
   align-items: center;
   background-color: #fff;
   border-radius: 100%;
-  box-shadow: 0 11px 46px rgba(#729ba8, .28);
+  box-shadow: 0 11px 46px rgba(#729ba8, 0.28);
   color: #25395d;
   display: flex;
   flex: 0 0 auto;
@@ -58,8 +58,8 @@
 
 .Highlight-label {
   font-size: 12px;
-  line-height: (17 / 12);
   font-weight: $font-weight-semibold;
+  line-height: (17 / 12);
   margin-top: 7px;
   text-shadow: 0 0 34px #446975;
 
@@ -68,8 +68,6 @@
     line-height: (19 / 14);
   }
 }
-
-
 
 // Implementation detail
 

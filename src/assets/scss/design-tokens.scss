@@ -10,7 +10,7 @@ $color-background-cover-gradient-end: #5d91a1; // rgb(93, 145, 161) // Horizon
 $color-background-overlay: #000; // rgb(0, 0, 0) // Black
 $color-background-button-default: #5d91a1; // rgb(93, 145, 161) // Horizon
 $color-background-button-dark: #152640; // rgb(21, 38, 64) // Big Stone
-$color-background-pagination-hover: rgba(#619ab1, .06); // rgb(97, 154, 177) // Hippie Blue
+$color-background-pagination-hover: rgba(#619ab1, 0.06); // rgb(97, 154, 177) // Hippie Blue
 $color-background-input: #fff; // rgb(255, 255, 255) // White
 $color-background-input-dark: #152640; // rgb(21, 38, 64) // Big Stone
 $color-sub-navigation-marker: #b5955d; // rgb(181, 149, 93) // Muddy Waters
@@ -18,10 +18,10 @@ $color-sub-navigation-marker: #b5955d; // rgb(181, 149, 93) // Muddy Waters
 // Border colors
 $color-border-default: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
 $color-border-introduction: #b5955d; // rgb(181, 149, 93) // Muddy Waters
-$color-border-button-dark: rgba($color-border-default, .2); // rgb(191, 208, 216) // Jungle Mist
+$color-border-button-dark: rgba($color-border-default, 0.2); // rgb(191, 208, 216) // Jungle Mist
 $color-border-pagination-active: #619ab1; // rgb(97, 154, 177) // Hippie Blue
 $color-border-input: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
-$color-border-input-dark: rgba(#bfd0d8, .2); // rgb(191, 208, 216) // Jungle Mist
+$color-border-input-dark: rgba(#bfd0d8, 0.2); // rgb(191, 208, 216) // Jungle Mist
 
 // Text colors
 $color-text-default: #646e7e; // #8f9aa8; // rgb(143, 154, 168) // Regent Gray
@@ -46,6 +46,26 @@ $color-text-positive: #6fc179;
 $color-text-negative: #d90a0a;
 $color-text-blockquote: #25395d; // rgb(37, 57, 93) // Cloud Burst
 $color-text-arrow: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
+
+$color-accent-mint: #edf6f6; // rgb(237, 246, 246) // Catskill White
+$color-accent-gray: #b4c2c7; // rgb(180, 194, 199) // Submarine
+$color-accent-teal: #6091a1; // rgb(96, 145, 161) // Horizon
+$color-home-heading: #435e6c; // rgb(67, 94, 108) // Fiord
+$color-shadow-finder: #042435; // rgb(4, 36, 53) // Tangaroa
+$color-legend-finder: #25395d; // rgb(37, 57, 93) // Cloud Burst
+$color-button-finder: #406c7a; // rgb(64, 108, 122) // Bismark
+$color-masthead-text-shadow: #6facc1; // rgb(111, 172, 193) // Glacier
+$color-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
+$color-navigation: #7d7d7d; // rgb(125, 125, 125) // Boulder
+$color-select-text: #757675; // rgb(117, 118, 117) // Xanadu
+$color-select-icon: #5e91a1; // rgb(94, 145, 161) // Horizon
+$color-card-text: #77919e; // rgb(119, 145, 158) // Gothic
+$color-card-shadow: #6b778c; // rgb(107, 119, 140) // Slate Gray
+$color-stat-shadow: #729ba8; // rgb(114, 155, 168) // Gothic
+$color-stat-text-shadow: #446975; // rgb(68, 105, 117) // Blue Bayoux
+$color-text-sub-nav: #446975; // rgb(68, 105, 117) // Blue Bayoux
+$color-border-sub-nav-marker: #da745b; // rgb(218, 116, 91) // Japonica
+$color-text-skip-link: #446975; // rgb(68, 105, 117) // Blue Bayoux
 
 // ---------------------------------------------------------------------
 // Gradients
@@ -114,14 +134,14 @@ $color-text-arrow: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
 
 // LocationFinder
 // background-color: #fff;
-// box-shadow: rgba(#000, 0.5), rgba(#042435, .39);
+// box-shadow: rgba(#000, 0.5), rgba(#042435, 0.39);
 // LocationFinder legend
 // color: rgba(#25395d, 0.79);
 // LocationFinder select
 // border-left: 1px solid rgba(#bfd0d8, 0.27);
 
 // LocationFinderButton
-// box-shadow: rgba(#406c7a, .22);
+// box-shadow: rgba(#406c7a, 0.22);
 
 // Masthead-title
 // color: $color-text-overlay;
@@ -146,7 +166,7 @@ $color-text-arrow: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
 // select
 // background-color: #fff;
 // color: #757675;
-// svg fill: rgba(#5e91a1, .87)
+// svg fill: rgba(#5e91a1, 0.87)
 // select.dark
 // background-color: #152640;
 // border-color: rgba(#bfd0d8, 0.2);
@@ -156,7 +176,7 @@ $color-text-arrow: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
 // ServiceCard
 // color: #77919e;
 // background-color: #fff;
-// box-shadow: 0 22px 54px rgba(#6b778c, .21);
+// box-shadow: 0 22px 54px rgba(#6b778c, 0.21);
 
 // SkipLink:focus
 // background-color: #fff;
@@ -166,7 +186,7 @@ $color-text-arrow: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
 // color: #fff;
 // Statistic-icon
 // background-color: #fff;
-// box-shadow: 0 11px 46px rgba(#729ba8, .28);
+// box-shadow: 0 11px 46px rgba(#729ba8, 0.28);
 // color: #25395d;
 // Statistic-number
 // text-shadow: 0 0 34px #446975;
@@ -178,13 +198,13 @@ $color-text-arrow: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
 // border-bottom: 1px solid #fff;
 // color: #446975;
 // SubNavigation.is-sticky
-// border-bottom-color: rgba(#bfd0d8, .37);
+// border-bottom-color: rgba(#bfd0d8, 0.37);
 // SubNavigation::before
 // background: linear-gradient(to right, #fff 20%, rgba(#fff, 0) 100%);
 // SubNavigation::after
 // background: linear-gradient(to left, #fff 20%, rgba(#fff, 0) 100%);
 // SubNavigation-link:hover
-// color: rgba(#446975, .60);
+// color: rgba(#446975, 0.60);
 // SubNavigation-marker
 // background-color: #da745b;
 
@@ -197,7 +217,7 @@ $color-text-arrow: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
 // color: #b5955d; Muddy Waters
 // TeamMember-panel
 // background-color: #fff; White
-// box-shadow: 0 42px 84px rgba(#000, .3); Black
+// box-shadow: 0 42px 84px rgba(#000, 0.3); Black
 // TeamMember-bio
 // color: #8f9aa8; // Regent Gray
 
@@ -329,11 +349,11 @@ $max-width-grid-padded: $max-width - ($spacing-grid-padded * 2);
 // Shadow
 // ---------------------------------------------------------------------
 
-$shadow-location-finder: 0 2px 34px rgba(#1c2d3e, .09), 0 36px 84px rgba(#042435, .39);
-$shadow-location-finder-sticky: 0 2px 34px rgba(#1c2d3e, .09);
-$shadow-modal: 0 36px 84px rgba(#042435, .39);
-$shadow-service-card: 0 22px 54px rgba(#6b778c, .21);
-$shadow-team-member-panel: 0 42px 84px rgba(#1c2d3e, .3);
+$shadow-location-finder: 0 2px 34px rgba(#1c2d3e, 0.09), 0 36px 84px rgba(#042435, 0.39);
+$shadow-location-finder-sticky: 0 2px 34px rgba(#1c2d3e, 0.09);
+$shadow-modal: 0 36px 84px rgba(#042435, 0.39);
+$shadow-service-card: 0 22px 54px rgba(#6b778c, 0.21);
+$shadow-team-member-panel: 0 42px 84px rgba(#1c2d3e, 0.3);
 
 // ---------------------------------------------------------------------
 // Time

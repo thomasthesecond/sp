@@ -15,18 +15,15 @@ table {
   width: 100%;
 }
 
-.table-striped {
-}
-
 .table-responsive {
-  @media(max-width: 599px) {
-    border-top: 1px solid rgba($color-border-default, .27);
+  @media (max-width: 599px) {
+    border-top: 1px solid rgba($color-border-default, 0.27);
   }
 }
 
 thead {
   .table-responsive & {
-    @media(max-width: 599px) {
+    @media (max-width: 599px) {
       @include visuallyhidden;
     }
   }
@@ -34,13 +31,13 @@ thead {
 
 tr {
   tbody & {
-    border-top: 1px solid rgba($color-border-default, .27);
+    border-top: 1px solid rgba($color-border-default, 0.27);
   }
 
   .table-responsive & {
-    @media(max-width: 599px) {
+    @media (max-width: 599px) {
       border-top: 0;
-      box-shadow: 0 14px 34px rgba(#000, .09);
+      box-shadow: 0 14px 34px rgba(#000, 0.09);
       display: block;
       margin-bottom: #{$spacing-gutter}px;
       margin-top: #{$spacing-gutter}px;
@@ -57,11 +54,11 @@ td {
   vertical-align: top;
 
   &:not(:first-of-type) {
-    padding-left: #{(72 / $max-width)* 100%};
+    padding-left: #{(72 / $max-width) * 100%};
   }
 
   .table-responsive & {
-    @media(max-width: 599px) {
+    @media (max-width: 599px) {
       padding: 12px #{$spacing-gutter}px;
     }
   }
@@ -94,7 +91,7 @@ td {
   // table:not(.table-striped) tr:hover &,
   // table:not(.table-responsive) tr:hover & {
   tr:hover & {
-    background-color: rgba($color-border-default, .07);
+    background-color: rgba($color-border-default, 0.07);
   }
 
   .table-striped tr:hover & {
@@ -102,11 +99,11 @@ td {
   }
 
   .table-striped tr:nth-child(odd) & {
-    background-color: rgba($color-border-default, .07);
+    background-color: rgba($color-border-default, 0.07);
   }
 
   .table-responsive & {
-    @media(max-width: 599px) {
+    @media (max-width: 599px) {
       // border-bottom: 1px solid green;
       display: block;
 
@@ -121,7 +118,7 @@ td {
   }
 
   .table-responsive tr:hover & {
-    @media(max-width: 599px) {
+    @media (max-width: 599px) {
       background-color: inherit;
     }
   }

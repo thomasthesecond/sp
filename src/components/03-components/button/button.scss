@@ -19,13 +19,13 @@
   font-size: 14px;
   font-weight: $font-weight-semibold;
   justify-content: center;
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
   line-height: 1;
   padding: #{(24 / 14) * 1em} #{(40 / 14) * 1em};
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: background-color .4s;
+  transition: background-color 0.4s;
   vertical-align: middle;
   white-space: nowrap;
 

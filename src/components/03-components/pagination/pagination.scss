@@ -63,9 +63,6 @@
     font-size: 14px;
   }
 
-  @media (min-width: 600px) {
-  }
-
   .Pagination-more ~ & {
     @media (max-width: 599px) {
       &:not(:nth-last-child(2)) {

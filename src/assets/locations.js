@@ -10,7 +10,6 @@ import "../components/03-components/location-list";
 import "../components/03-components/location-map-legend";
 import "../components/03-components/map-widget";
 import "../components/03-components/masthead";
-import "../components/03-components/no-results";
 
 const locationsPage = new LocationsPage();
 const locationFinder = new LocationFinder();

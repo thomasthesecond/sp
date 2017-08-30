@@ -47,7 +47,6 @@ import "../components/03-components/more-link";
 import "../components/03-components/navigation";
 import "../components/03-components/news-article";
 import "../components/03-components/next-page";
-import "../components/03-components/no-results";
 import "../components/03-components/overlay";
 import "../components/03-components/pagination";
 import "../components/03-components/paragraph";
