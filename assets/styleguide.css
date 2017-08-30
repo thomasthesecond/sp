@@ -599,6 +599,124 @@ main {
   outline: none;
 }
 /**
+ * Mixins
+ */
+/**
+ * Functions
+ */
+/**
+ * Styleguide
+ * @note Not for production
+ */
+abbr[title] {
+  border-bottom: none;
+  cursor: help;
+  text-decoration: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+.swatch {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.swatch--light {
+  color: #000;
+}
+
+.token-table {
+  border-bottom: 1px solid #d4d4d8;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.token-table tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+.token-table th {
+  text-align: left;
+}
+
+.token-table th,
+.token-table td {
+  border-bottom: 1px solid #d4d4d8;
+  padding: 16px;
+}
+
+.token-table th:not(:first-child),
+.token-table td:not(:first-child) {
+  border-left: 1px solid #d4d4d8;
+}
+
+.font-family-open-sans {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-regular {
+  font-weight: 400;
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.font-preview {
+  color: #25395d;
+  overflow: hidden;
+}
+
+.font-preview-info {
+  float: left;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
+}
+
+.font-preview-info span {
+  color: #646e7e;
+}
+
+.font-preview-characters {
+  float: left;
+  overflow: hidden;
+}
+
+.font-preview-characters-aa {
+  float: left;
+  font-size: 120px;
+  line-height: 1;
+}
+
+.font-preview-characters-az {
+  float: left;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
+}
+/**
  * Functions
  */
 /**
@@ -904,124 +1022,6 @@ main {
   z-index: 1000;
 }
 /**
- * Mixins
- */
-/**
- * Functions
- */
-/**
- * Styleguide
- * @note Not for production
- */
-abbr[title] {
-  border-bottom: none;
-  cursor: help;
-  text-decoration: none;
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-
-.swatch {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-.swatch--light {
-  color: #000;
-}
-
-.token-table {
-  border-bottom: 1px solid #d4d4d8;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.token-table tr:nth-child(odd) {
-  background-color: #f6f6f6;
-}
-
-.token-table th {
-  text-align: left;
-}
-
-.token-table th,
-.token-table td {
-  border-bottom: 1px solid #d4d4d8;
-  padding: 16px;
-}
-
-.token-table th:not(:first-child),
-.token-table td:not(:first-child) {
-  border-left: 1px solid #d4d4d8;
-}
-
-.font-family-open-sans {
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.font-weight-light {
-  font-weight: 300;
-}
-
-.font-weight-regular {
-  font-weight: 400;
-}
-
-.font-weight-semibold {
-  font-weight: 600;
-}
-
-.font-weight-bold {
-  font-weight: 700;
-}
-
-.font-preview {
-  color: #25395d;
-  overflow: hidden;
-}
-
-.font-preview-info {
-  float: left;
-  font-size: 16px;
-  line-height: 1.4;
-  margin-left: 40px;
-  margin-top: 14px;
-}
-
-.font-preview-info span {
-  color: #646e7e;
-}
-
-.font-preview-characters {
-  float: left;
-  overflow: hidden;
-}
-
-.font-preview-characters-aa {
-  float: left;
-  font-size: 120px;
-  line-height: 1;
-}
-
-.font-preview-characters-az {
-  float: left;
-  font-size: 24px;
-  line-height: 1.4;
-  margin-left: 40px;
-  margin-top: 14px;
-}
-/**
  * Functions
  */
 /**
@@ -1064,6 +1064,42 @@ textarea:-moz-placeholder {
 
 textarea.dark {
   background-color: #152640;
+  border-color: rgba(191, 208, 216, 0.2);
+  color: #fff;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Select
+ * @type Atom
+ */
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='rgba(94, 145, 161, 0.87)' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
+  background-position: calc(100% - 24px) calc(50% + 2px);
+  background-repeat: no-repeat;
+  background-size: 8px;
+  border: 1px solid #bfd0d8;
+  border-radius: 0;
+  color: #77919e;
+  cursor: pointer;
+  display: block;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 2;
+  padding: 0.75em 3.375em 0.625em 1.5em;
+}
+
+select.dark {
+  background-color: #152640;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#bfd0d8' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
   border-color: rgba(191, 208, 216, 0.2);
   color: #fff;
 }
@@ -1211,42 +1247,6 @@ tr:hover td {
   .table-responsive tr:hover td {
     background-color: inherit;
   }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Select
- * @type Atom
- */
-select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='rgba(94, 145, 161, 0.87)' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
-  background-position: calc(100% - 24px) calc(50% + 2px);
-  background-repeat: no-repeat;
-  background-size: 8px;
-  border: 1px solid #bfd0d8;
-  border-radius: 0;
-  color: #77919e;
-  cursor: pointer;
-  display: block;
-  font-size: 100%;
-  font-weight: 300;
-  line-height: 2;
-  padding: 0.75em 3.375em 0.625em 1.5em;
-}
-
-select.dark {
-  background-color: #152640;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#bfd0d8' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
-  border-color: rgba(191, 208, 216, 0.2);
-  color: #fff;
 }
 /**
  * Functions
@@ -1553,8 +1553,8 @@ h2,
   color: #25395d;
   font-weight: 700;
   line-height: 1.25;
-  margin-bottom: .5em;
-  margin-top: .5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
 
 @media (min-width: 30em) and (max-width: 80.625em) {
@@ -1577,8 +1577,8 @@ h3,
   color: #25395d;
   font-weight: 700;
   line-height: 1.33333;
-  margin-bottom: .5em;
-  margin-top: .5em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
 
 @media (min-width: 30em) and (max-width: 80.625em) {
@@ -1697,14 +1697,14 @@ h6,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
   line-height: 1;
   padding: 1.71429em 2.85714em;
   position: relative;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: background-color .4s;
-  transition: background-color .4s;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
   vertical-align: middle;
   white-space: nowrap;
 }
@@ -2571,7 +2571,7 @@ blockquote cite br {
  */
 .Tagline {
   font-weight: 300;
-  letter-spacing: -.5px;
+  letter-spacing: -0.5px;
   line-height: 1.4;
   text-align: center;
 }
@@ -2769,59 +2769,6 @@ blockquote cite br {
   padding: 0;
   text-transform: none;
   width: 100%;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Introduction
- * @type Atom
- */
-.Introduction {
-  font-size: 20px;
-  color: #25395d;
-  font-weight: 300;
-  letter-spacing: -.9px;
-  line-height: 1.8;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 856px;
-  text-align: center;
-}
-
-@media (min-width: 30em) and (max-width: 53.5em) {
-  .Introduction {
-    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (856 - 480));
-  }
-}
-
-@media (min-width: 53.5em) {
-  .Introduction {
-    font-size: 32px;
-  }
-}
-
-@media (min-width: 30em) {
-  .Introduction {
-    letter-spacing: -1.4px;
-    line-height: 1.5;
-  }
-}
-
-@media (min-width: 30em) {
-  .Introduction::after {
-    background-color: #b5955d;
-    content: "";
-    display: block;
-    height: 4px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.25em;
-    width: 80px;
-  }
 }
 /**
  * Functions
@@ -3034,6 +2981,59 @@ blockquote cite br {
  * Mixins
  */
 /**
+ * Component: Introduction
+ * @type Atom
+ */
+.Introduction {
+  font-size: 20px;
+  color: #25395d;
+  font-weight: 300;
+  letter-spacing: -0.9px;
+  line-height: 1.8;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 856px;
+  text-align: center;
+}
+
+@media (min-width: 30em) and (max-width: 53.5em) {
+  .Introduction {
+    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (856 - 480));
+  }
+}
+
+@media (min-width: 53.5em) {
+  .Introduction {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 30em) {
+  .Introduction {
+    letter-spacing: -1.4px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 30em) {
+  .Introduction::after {
+    background-color: #b5955d;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.25em;
+    width: 80px;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
  * Component: Home block
  * @type Organism
  */
@@ -3142,7 +3142,7 @@ blockquote cite br {
   display: block;
   height: 100%;
   left: 0;
-  opacity: .26;
+  opacity: 0.26;
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -3183,7 +3183,7 @@ blockquote cite br {
   display: block;
   height: 100%;
   left: 0;
-  opacity: .26;
+  opacity: 0.26;
   position: absolute;
   top: 0;
   width: 100%;
@@ -3583,41 +3583,6 @@ blockquote cite br {
  * Mixins
  */
 /**
- * Component: Service cards
- */
-.ServiceCards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 630px;
-}
-
-@supports (display: grid) {
-  .ServiceCards {
-    display: grid;
-    grid-column-gap: 0;
-    grid-row-gap: 64px;
-    grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
-  }
-  @media (min-width: 480px) {
-    .ServiceCards {
-      grid-gap: 30px;
-      grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
-    }
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
  * Component: Service card
  */
 .ServiceCard {
@@ -3760,6 +3725,41 @@ blockquote cite br {
   .ServiceCards .ServiceCard {
     margin-left: 0 !important;
     margin-top: 0 !important;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+/**
+ * Component: Service cards
+ */
+.ServiceCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 630px;
+}
+
+@supports (display: grid) {
+  .ServiceCards {
+    display: grid;
+    grid-column-gap: 0;
+    grid-row-gap: 64px;
+    grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
+  }
+  @media (min-width: 480px) {
+    .ServiceCards {
+      grid-gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(188px, 1fr));
+    }
   }
 }
 /**
@@ -3959,8 +3959,8 @@ blockquote cite br {
 
 .Highlight-label {
   font-size: 12px;
-  line-height: 1.41667;
   font-weight: 600;
+  line-height: 1.41667;
   margin-top: 7px;
   text-shadow: 0 0 34px #446975;
 }
@@ -4078,10 +4078,7 @@ blockquote cite br {
   height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
-  padding-bottom: 24px;
-  padding-left: 24px;
-  padding-right: 48px;
-  padding-top: 24px;
+  padding: 24px 48px 24px 24px;
 }
 
 @media (min-width: 480px) {
@@ -4117,16 +4114,6 @@ blockquote cite br {
   opacity: 1;
   visibility: visible;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: No results
- * @type Organism
- */
 /**
  * Functions
  */
@@ -5063,7 +5050,7 @@ blockquote cite br {
  */
 .Breadcrumbs {
   font-size: 14px;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   line-height: 1;
 }
 

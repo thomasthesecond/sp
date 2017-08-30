@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 132);
+/******/ 	return __webpack_require__(__webpack_require__.s = 130);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2756,9 +2756,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /* 127 */,
 /* 128 */,
 /* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2776,7 +2774,7 @@ __webpack_require__(38);
 
 __webpack_require__(39);
 
-__webpack_require__(133);
+__webpack_require__(131);
 
 var _banner = __webpack_require__(40);
 
@@ -2810,7 +2808,7 @@ __webpack_require__(69);
 
 __webpack_require__(71);
 
-__webpack_require__(135);
+__webpack_require__(133);
 
 var _utils = __webpack_require__(0);
 
@@ -2841,22 +2839,22 @@ banner.render();
 __webpack_require__(72).polyfill();
 
 /***/ }),
-/* 133 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(134);
+__webpack_require__(132);
 
 /***/ }),
-/* 134 */
+/* 132 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 135 */
+/* 133 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

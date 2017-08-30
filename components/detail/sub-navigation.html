@@ -533,7 +533,7 @@
   <span class="hljs-attribute">position</span>: relative;
 
   <span class="hljs-comment">// @media (max-width: 599px) {</span>
-  <span class="hljs-comment">//   border-bottom-color: rgba(#bfd0d8, .37);</span>
+  <span class="hljs-comment">//   border-bottom-color: rgba(#bfd0d8, 0.37);</span>
   <span class="hljs-comment">// }</span>
 
   @<span class="hljs-keyword">media</span> (min-width: 600px) {
@@ -541,7 +541,7 @@
   }
 
   <span class="hljs-comment">// &amp;.is-sticky {</span>
-  <span class="hljs-comment">//   border-bottom-color: rgba(#bfd0d8, .37);</span>
+  <span class="hljs-comment">//   border-bottom-color: rgba(#bfd0d8, 0.37);</span>
   <span class="hljs-comment">// }</span>
 
   &amp;::after,
@@ -556,26 +556,18 @@
   }
 
   &amp;::before {
-    <span class="hljs-attribute">background</span>: linear-gradient(
-      to right,
-      <span class="hljs-variable">$color-background-default</span> <span class="hljs-number">20%</span>,
-      rgba(<span class="hljs-variable">$color-background-default</span>, <span class="hljs-number">0</span>) <span class="hljs-number">100%</span>
-    );
+    <span class="hljs-attribute">background</span>: linear-gradient(to right, <span class="hljs-variable">$color-background-default</span> <span class="hljs-number">20%</span>, rgba(<span class="hljs-variable">$color-background-default</span>, <span class="hljs-number">0</span>) <span class="hljs-number">100%</span>);
     <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
   }
 
   &amp;::after {
-    <span class="hljs-attribute">background</span>: linear-gradient(
-      to left,
-      <span class="hljs-variable">$color-background-default</span> <span class="hljs-number">20%</span>,
-      rgba(<span class="hljs-variable">$color-background-default</span>, <span class="hljs-number">0</span>) <span class="hljs-number">100%</span>
-    );
+    <span class="hljs-attribute">background</span>: linear-gradient(to left, <span class="hljs-variable">$color-background-default</span> <span class="hljs-number">20%</span>, rgba(<span class="hljs-variable">$color-background-default</span>, <span class="hljs-number">0</span>) <span class="hljs-number">100%</span>);
     <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
   }
 }
 
 <span class="hljs-selector-class">.SubNavigation-list</span> {
-  <span class="hljs-comment">// border-bottom: 1px solid rgba($color-border-default, .37);</span>
+  <span class="hljs-comment">// border-bottom: 1px solid rgba($color-border-default, 0.37);</span>
   <span class="hljs-comment">// color: currentColor;</span>
   <span class="hljs-comment">// font-family: sans-serif;</span>
   <span class="hljs-comment">// font-size: 16px;</span>
@@ -626,6 +618,7 @@
 <span class="hljs-selector-class">.SubNavigation-item</span><span class="hljs-selector-class">.is-active</span>::after {
   <span class="hljs-selector-class">.SubNavigation</span>:not(<span class="hljs-selector-class">.SubNavigation--scrollSpy</span>) &amp; {
     @<span class="hljs-keyword">include</span> marker();
+
     <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
     <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
@@ -663,7 +656,7 @@
   &amp;:hover,
   &amp;:active {
     <span class="hljs-selector-class">.SubNavigation-item</span>:not(<span class="hljs-selector-class">.is-active</span>) &amp; {
-      <span class="hljs-attribute">color</span>: rgba(<span class="hljs-number">#446975</span>, .<span class="hljs-number">60</span>);
+      <span class="hljs-attribute">color</span>: rgba(<span class="hljs-number">#446975</span>, <span class="hljs-number">0.6</span>);
     }
 
     <span class="hljs-comment">// &amp;::after {</span>
@@ -673,7 +666,7 @@
 
   &amp;:active,
   &amp;:focus {
-    <span class="hljs-comment">// color: rgba(#446975, .60);</span>
+    <span class="hljs-comment">// color: rgba(#446975, 0.6);</span>
 
     <span class="hljs-comment">// &amp;::after {</span>
     <span class="hljs-comment">//   background-color: currentColor;</span>
@@ -683,6 +676,7 @@
 
 <span class="hljs-selector-class">.SubNavigation-marker</span> {
   @<span class="hljs-keyword">include</span> marker();
+
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
@@ -3792,95 +3786,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
-                <span>Design tokens</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/accessibility.html" data-pjax>
                 <span>Accessibility</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../docs/code-style.html" data-pjax>
-                <span>Code style</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
-                <span>Browser support</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3901,6 +3809,50 @@
             <a class="Tree-entityLink" href="../../docs/assets.html" data-pjax>
                 <span>Assets</span>
                 
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
+                <span>Browser support</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/code-style.html" data-pjax>
+                <span>Code style</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
+                <span>Design tokens</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         

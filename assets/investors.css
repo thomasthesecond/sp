@@ -520,10 +520,7 @@
   height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
-  padding-bottom: 24px;
-  padding-left: 24px;
-  padding-right: 48px;
-  padding-top: 24px;
+  padding: 24px 48px 24px 24px;
 }
 
 @media (min-width: 480px) {
@@ -1381,7 +1378,7 @@
  */
 .Breadcrumbs {
   font-size: 14px;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   line-height: 1;
 }
 

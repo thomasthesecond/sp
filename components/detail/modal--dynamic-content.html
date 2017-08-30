@@ -502,7 +502,7 @@
 <span class="hljs-selector-class">.Modal-close</span> {
   <span class="hljs-attribute">background-color</span>: transparent;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-default</span>, .<span class="hljs-number">4</span>);
+  <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-default</span>, <span class="hljs-number">0.4</span>);
   <span class="hljs-attribute">cursor</span>: pointer;
   <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
@@ -518,7 +518,7 @@
   &amp;:hover,
   &amp;:active,
   &amp;:focus {
-    <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-default</span>, .<span class="hljs-number">8</span>);
+    <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-default</span>, <span class="hljs-number">0.8</span>);
   }
 }
 
@@ -526,10 +526,11 @@
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
   -webkit-<span class="hljs-attribute">overflow</span>-scrolling: touch;
   <span class="hljs-attribute">overflow-y</span>: auto;
-  <span class="hljs-attribute">padding-bottom</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
-  <span class="hljs-attribute">padding-left</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
-  <span class="hljs-attribute">padding-right</span>: #{<span class="hljs-variable">$spacing-gutter</span> * <span class="hljs-number">2</span>}px;
-  <span class="hljs-attribute">padding-top</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
+  <span class="hljs-attribute">padding</span>:
+    #{<span class="hljs-variable">$spacing-gutter</span>}px
+    #{<span class="hljs-variable">$spacing-gutter</span> * <span class="hljs-number">2</span>}px
+    #{<span class="hljs-variable">$spacing-gutter</span>}px
+    #{<span class="hljs-variable">$spacing-gutter</span>}px;
 
   @<span class="hljs-keyword">media</span> (min-width: 480px) {
     <span class="hljs-attribute">padding-left</span>: #{<span class="hljs-variable">$spacing-gutter</span> * <span class="hljs-number">2</span>}px;
@@ -3679,95 +3680,9 @@ trigger.addEventListener(<span class="hljs-string">"click"</span>, (event) =&gt;
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
-                <span>Design tokens</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/accessibility.html" data-pjax>
                 <span>Accessibility</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../docs/code-style.html" data-pjax>
-                <span>Code style</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
-                <span>Browser support</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3788,6 +3703,50 @@ trigger.addEventListener(<span class="hljs-string">"click"</span>, (event) =&gt;
             <a class="Tree-entityLink" href="../../docs/assets.html" data-pjax>
                 <span>Assets</span>
                 
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
+                <span>Browser support</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/code-style.html" data-pjax>
+                <span>Code style</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
+                <span>Design tokens</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         

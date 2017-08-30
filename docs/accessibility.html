@@ -55,12 +55,6 @@
         <h1 class="Document-title">Accessibility</h1>
         
 
-<div class="Status Status--tag">
-
-<label class="Status-label" style="background-color: #FF3333; border-color: #FF3333;">Draft</label>
-
-</div>
-
 
         
     </div>
@@ -75,15 +69,29 @@
 
     
     
-    <p>Web accessibility (also referred to as a11y) is the design and creation of websites that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret web pages.</p>
+    <p>Web accessibility (also referred to as a11y) is the design and creation of websites that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret Web pages.</p>
 <h2 id="skip-link">Skip link</h2>
 <p>A <a href="http://a11yproject.com/posts/skip-nav-links/">“skip to content” link</a> has been added above the site banner. This link has been configured to be hidden from view until the tab key is pressed on the keyboard. It is the first item in the page’s tab order so it will always receive focus first.</p>
 <h2 id="alt-tags-for-images">Alt tags for images</h2>
+<p>Any time an image is used, add the <code>alt</code> attribute on the <code>img</code> element. This will provide a clear text alternative of the image for screen reader users. The description in the <code>alt</code> attribute should be meaningful in the context of the Web page. An image should always include an <code>alt</code> attribute, even if its value is empty.</p>
 <h2 id="focus-states">Focus states</h2>
+<p>Interactive element, such as inputs, buttons and anchors, should always have a focus state to assist keyboard users when navigating the site.</p>
+<p>Additionally, <code>outline: none;</code> should not be used for any interactive elements because it makes the site less accessible.</p>
+<h2 id="visually-hidden-content">Visually hidden content</h2>
+<p>Content which should be visually hidden, but remain accessible to assistive technologies such as screen readers, can be styled using the <code>.visuallyhidden</code> class. This can be useful in situations where additional visual information need to also be conveyed to non-visual users.</p>
+<p>For visually hidden interactive controls, <code>.visuallyhidden</code> can be chained to the <code>.focusable</code> class. This will ensure that the control becomes visible once focused (for sighted keyboard users).</p>
 <h2 id="no-js-alternatives">no-js alternatives</h2>
+<p>A <code>no-js</code> classname has been added to the <code>html</code> element. When the page loads and if JavaScript is enabled, the <code>no-js</code> class is replaced with <code>js</code>. This is a way to apply different CSS rules depending on whether or not JavaScript available.</p>
+<p>This technique can be used to progressively enhance the experience as well.</p>
 <h2 id="reduce-motion">Reduce motion</h2>
+<p>The <a href="https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion"><code>prefers-reduced-motion</code> media feature</a> can be used to serve alternate animations that avoid motion sickness triggers experienced by some site visitors.</p>
+<p>This feature is currently supported by WebKit browsers and can be used in a CSS <code>@media</code> block or through the <code>window.matchMedia()</code> interface in JavaScript.</p>
 <h2 id="resources">Resources</h2>
-<p><a href="http://a11yproject.com/resources.html">http://a11yproject.com/resources.html</a></p>
+<ul>
+<li><a href="http://a11yproject.com/resources.html">http://a11yproject.com/resources.html</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">https://developer.mozilla.org/en-US/docs/Web/Accessibility</a></li>
+<li><a href="https://webkit.org/blog/7551/responsive-design-for-motion/">https://webkit.org/blog/7551/responsive-design-for-motion/</a></li>
+</ul>
 <h2 id="helpful-checklists">Helpful checklists</h2>
 <ul>
 <li><a href="http://accessibility.voxmedia.com/">http://accessibility.voxmedia.com/</a></li>
@@ -3091,96 +3099,10 @@
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="design-tokens.html" data-pjax>
-                <span>Design tokens</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>Accessibility</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="code-style.html" data-pjax>
-                <span>Code style</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="browser-support.html" data-pjax>
-                <span>Browser support</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3201,6 +3123,50 @@
             <a class="Tree-entityLink" href="assets.html" data-pjax>
                 <span>Assets</span>
                 
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="browser-support.html" data-pjax>
+                <span>Browser support</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="code-style.html" data-pjax>
+                <span>Code style</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="design-tokens.html" data-pjax>
+                <span>Design tokens</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         

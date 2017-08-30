@@ -157,7 +157,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-6faec4bb7b11a3f0fb2bfe7d4d288961-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SkipLink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#main"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SkipLink visuallyhidden focusable"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#main"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span>&gt;</span>
   Skip to Main Content
 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
         
@@ -167,7 +167,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-6faec4bb7b11a3f0fb2bfe7d4d288961-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SkipLink"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#main"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"SkipLink visuallyhidden focusable"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#main"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"1"</span>&gt;</span>
   Skip to Main Content
 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span></pre>
     </code>
@@ -251,24 +251,30 @@
  */</span>
 
 <span class="hljs-selector-class">.SkipLink</span> {
-  <span class="hljs-attribute">clip</span>: rect(<span class="hljs-number">1px</span>, <span class="hljs-number">1px</span>, <span class="hljs-number">1px</span>, <span class="hljs-number">1px</span>);
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">1px</span>;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">overflow</span>: hidden;
   <span class="hljs-attribute">position</span>: absolute;
-  <span class="hljs-attribute">width</span>: <span class="hljs-number">1px</span>;
 
   &amp;:focus {
-    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>;
-    <span class="hljs-attribute">clip</span>: auto;
-    <span class="hljs-attribute">color</span>: <span class="hljs-number">#446975</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-skip-link</span>;
     <span class="hljs-attribute">height</span>: auto;
     <span class="hljs-attribute">line-height</span>: <span class="hljs-number">40px</span>;
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span> <span class="hljs-number">20px</span>;
     <span class="hljs-attribute">text-decoration</span>: none;
-    <span class="hljs-attribute">top</span>: <span class="hljs-number">90px</span>;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">48px</span>;
     <span class="hljs-attribute">width</span>: auto;
     <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-sticky</span>;
+
+    @<span class="hljs-keyword">media</span> (min-width: 688px) {
+      <span class="hljs-attribute">top</span>: #{(<span class="hljs-number">90</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
+    }
+
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-container</span>) {
+      <span class="hljs-attribute">top</span>: <span class="hljs-number">90px</span>;
+    }
+  }
+
+  &amp;<span class="hljs-selector-class">.visuallyhidden</span><span class="hljs-selector-class">.focusable</span>:focus {
+    <span class="hljs-attribute">position</span>: absolute;
   }
 }
 </pre>
@@ -287,7 +293,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">542 Bytes</span>
+                    <span class="Meta-value">679 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -3356,95 +3362,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
-                <span>Design tokens</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/accessibility.html" data-pjax>
                 <span>Accessibility</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../docs/code-style.html" data-pjax>
-                <span>Code style</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
-                <span>Browser support</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3465,6 +3385,50 @@
             <a class="Tree-entityLink" href="../../docs/assets.html" data-pjax>
                 <span>Assets</span>
                 
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/browser-support.html" data-pjax>
+                <span>Browser support</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/code-style.html" data-pjax>
+                <span>Code style</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
+                <span>Design tokens</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         

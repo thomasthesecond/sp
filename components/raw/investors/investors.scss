@@ -36,7 +36,7 @@
 .InvestorsPage-highlights {
   .TeamList:first-child {
     @media (min-width: $mq-min-860) {
-      border-top: 1px solid rgba($color-border-default, .47);
+      border-top: 1px solid rgba($color-border-default, 0.47);
       margin-top: 56px;
       padding-top: 80px;
     }
@@ -95,7 +95,7 @@
       width: calc(100% + #{$spacing-gutter * 2}px);
     }
 
-    @media(min-width: 600px) {
+    @media (min-width: 600px) {
       margin-bottom: 80px;
     }
 
@@ -107,7 +107,7 @@
   }
 
   .Pagination {
-    @media(min-width: 600px) {
+    @media (min-width: 600px) {
       margin-top: 32px;
     }
   }

@@ -1,1 +1,0 @@
-import "./location-map.scss";

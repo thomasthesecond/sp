@@ -55,12 +55,6 @@
         <h1 class="Document-title">Browser support</h1>
         
 
-<div class="Status Status--tag">
-
-<label class="Status-label" style="background-color: #FF3333; border-color: #FF3333;">Draft</label>
-
-</div>
-
 
         
     </div>
@@ -75,13 +69,11 @@
 
     
     
-    <h2 id="graceful-degradation">Graceful degradation</h2>
+    <p>When talking about browser support, it’s important to first mention graceful degradation and progressive enhancement.</p>
 <p>Graceful degradation is the practice of building a web site or application so it provides a good level of user experience in modern browsers. However, it will degrade gracefully for those using older browsers. The system may not be as pleasant or as pretty, but the basic functionality will work on older systems.</p>
-<h2 id="progressive-enhancement">Progressive enhancement</h2>
-<p>Progressive enhancement is a strategy for web design that emphasizes core webpage content first. This strategy then progressively adds more nuanced and technically rigorous layers of presentation and features on top of the content as the end-user’s browser/internet connection allow.</p>
+<p>Progressive enhancement is a strategy for web design that emphasizes core Web page content first. This strategy then progressively adds more nuanced and technically rigorous layers of presentation and features on top of the content as the end-user’s browser/internet connection allow.</p>
 <h2 id="browser-tiers">Browser tiers</h2>
-<p>The idea of graceful degradation means that the website may not look or function the same in every web browser, especially those that are outdated. This table groups web browsers into three tiers in an attempt to illustrate how the site will degrade. The “supported” column denotes if this website, surgery-partners.com, has been tested in and supports these web browsers.</p>
-<!-- The "supported" column denotes support for this website, surgery-partners.com. -->
+<p>Accounting for graceful degradation, this table groups web browsers into three tiers in an attempt to illustrate how the site will degrade. The “supported” column denotes if this website has been tested in and supports these web browsers.</p>
 <table>
 <thead>
 <tr>
@@ -116,14 +108,12 @@
 </tr>
 </tbody>
 </table>
-<!-- * Tier 1: Top-level browsers
-* Tier 2: Mid-level browsers
-* Tier 3: Low-level browsers; includes legacy or unsupported browsers, could be browsers released five or more years ago, example: Internet Explorer 10 -->
 <h2 id="css-vendor-prefixes">CSS vendor prefixes</h2>
 <p>Vendor prefixes for CSS properties are used where necessary. Flexbox, for example, is pretty well supported among all Tier 1 and Tier 2 browsers, however, some of these browsers still require a vendor prefix.</p>
 <p>Vendor prefixing is done automatically with <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> and configured with <a href="https://github.com/ai/browserslist">browserlist</a> to <code>[&quot;&gt; 5%&quot;, &quot;last 2 versions&quot;]</code> which uses versions selected by global usage greater than 5% and  the last 2 versions for each browser.</p>
 <h2 id="resources">Resources</h2>
 <ul>
+<li><a href="https://alistapart.com/article/understandingprogressiveenhancement">Understanding Progressive Enhancement at A List Apart</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix">Vendor prefixes at MDN</a></li>
 </ul>
 
@@ -3128,95 +3118,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="design-tokens.html" data-pjax>
-                <span>Design tokens</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="accessibility.html" data-pjax>
                 <span>Accessibility</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="code-style.html" data-pjax>
-                <span>Code style</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
-                <span>Browser support</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3237,6 +3141,50 @@
             <a class="Tree-entityLink" href="assets.html" data-pjax>
                 <span>Assets</span>
                 
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Browser support</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="code-style.html" data-pjax>
+                <span>Code style</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="design-tokens.html" data-pjax>
+                <span>Design tokens</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         

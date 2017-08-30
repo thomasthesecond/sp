@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 152);
+/******/ 	return __webpack_require__(__webpack_require__.s = 150);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -333,17 +333,17 @@ exports.default = SubNavigation;
 
 /***/ }),
 
-/***/ 128:
+/***/ 126:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(129);
+__webpack_require__(127);
 
 /***/ }),
 
-/***/ 129:
+/***/ 127:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -357,7 +357,7 @@ __webpack_require__(129);
 
 /***/ }),
 
-/***/ 152:
+/***/ 150:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -365,7 +365,7 @@ __webpack_require__(129);
 
 // Import page module
 
-var _partnerships = __webpack_require__(153);
+var _partnerships = __webpack_require__(151);
 
 var _partnerships2 = _interopRequireDefault(_partnerships);
 
@@ -383,7 +383,7 @@ var _subNavigation = __webpack_require__(9);
 
 var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-__webpack_require__(128);
+__webpack_require__(126);
 
 __webpack_require__(23);
 
@@ -401,7 +401,7 @@ subNavigation.render();
 
 /***/ }),
 
-/***/ 153:
+/***/ 151:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -411,11 +411,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _partnerships = __webpack_require__(154);
+var _partnerships = __webpack_require__(152);
 
 var _partnerships2 = _interopRequireDefault(_partnerships);
 
-__webpack_require__(155);
+__webpack_require__(153);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -423,7 +423,7 @@ exports.default = _partnerships2.default;
 
 /***/ }),
 
-/***/ 154:
+/***/ 152:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -549,7 +549,7 @@ exports.default = HomePage;
 
 /***/ }),
 
-/***/ 155:
+/***/ 153:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

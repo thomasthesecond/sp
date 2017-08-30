@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 148);
+/******/ 	return __webpack_require__(__webpack_require__.s = 146);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -3556,8 +3556,21 @@ __webpack_require__(12);
 /* 89 */,
 /* 90 */,
 /* 91 */,
-/* 92 */,
-/* 93 */,
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(93);
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3776,6 +3789,8 @@ __webpack_require__(121);
 
 __webpack_require__(123);
 
+__webpack_require__(12);
+
 /***/ }),
 /* 123 */
 /***/ (function(module, exports) {
@@ -3791,8 +3806,6 @@ __webpack_require__(123);
 
 __webpack_require__(125);
 
-__webpack_require__(12);
-
 /***/ }),
 /* 125 */
 /***/ (function(module, exports) {
@@ -3800,21 +3813,8 @@ __webpack_require__(12);
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 126 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(127);
-
-/***/ }),
-/* 127 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
+/* 126 */,
+/* 127 */,
 /* 128 */,
 /* 129 */,
 /* 130 */,
@@ -3833,9 +3833,7 @@ __webpack_require__(127);
 /* 143 */,
 /* 144 */,
 /* 145 */,
-/* 146 */,
-/* 147 */,
-/* 148 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3843,9 +3841,11 @@ __webpack_require__(127);
 
 // Import page module
 
-var _investors = __webpack_require__(149);
+var _investors = __webpack_require__(147);
 
 var _investors2 = _interopRequireDefault(_investors);
+
+__webpack_require__(92);
 
 __webpack_require__(94);
 
@@ -3855,9 +3855,9 @@ __webpack_require__(98);
 
 __webpack_require__(100);
 
-__webpack_require__(102);
-
 __webpack_require__(21);
+
+__webpack_require__(102);
 
 __webpack_require__(104);
 
@@ -3877,15 +3877,13 @@ __webpack_require__(118);
 
 __webpack_require__(120);
 
-__webpack_require__(122);
-
 __webpack_require__(9);
 
-__webpack_require__(124);
+__webpack_require__(122);
 
 __webpack_require__(29);
 
-__webpack_require__(126);
+__webpack_require__(124);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3895,7 +3893,7 @@ var investorsPage = new _investors2.default();
 investorsPage.render();
 
 /***/ }),
-/* 149 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3905,18 +3903,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _investors = __webpack_require__(150);
+var _investors = __webpack_require__(148);
 
 var _investors2 = _interopRequireDefault(_investors);
 
-__webpack_require__(151);
+__webpack_require__(149);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _investors2.default;
 
 /***/ }),
-/* 150 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3987,7 +3985,7 @@ var InvestorsPage = function () {
 exports.default = InvestorsPage;
 
 /***/ }),
-/* 151 */
+/* 149 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 136);
+/******/ 	return __webpack_require__(__webpack_require__.s = 134);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -121,7 +121,7 @@ exports.objectFitCover = objectFitCover;
 
 /***/ }),
 
-/***/ 136:
+/***/ 134:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -129,7 +129,7 @@ exports.objectFitCover = objectFitCover;
 
 // Import page module
 
-var _home = __webpack_require__(137);
+var _home = __webpack_require__(135);
 
 var _home2 = _interopRequireDefault(_home);
 
@@ -173,7 +173,7 @@ locationFinder.render();
 
 /***/ }),
 
-/***/ 137:
+/***/ 135:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -183,11 +183,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _home = __webpack_require__(138);
+var _home = __webpack_require__(136);
 
 var _home2 = _interopRequireDefault(_home);
 
-__webpack_require__(139);
+__webpack_require__(137);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -195,7 +195,7 @@ exports.default = _home2.default;
 
 /***/ }),
 
-/***/ 138:
+/***/ 136:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -317,7 +317,7 @@ exports.default = HomePage;
 
 /***/ }),
 
-/***/ 139:
+/***/ 137:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

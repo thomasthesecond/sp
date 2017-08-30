@@ -55,12 +55,6 @@
         <h1 class="Document-title">Code style</h1>
         
 
-<div class="Status Status--tag">
-
-<label class="Status-label" style="background-color: #FF3333; border-color: #FF3333;">Draft</label>
-
-</div>
-
 
         
     </div>
@@ -76,9 +70,12 @@
     
     
     <p>This document details the coding style and conventions used in this project.</p>
-<h2 id="javascript">JavaScript</h2>
+<h2 id="linting">Linting</h2>
+<p>Code linting helps avoid errors and enforces a consistent coding style. Run <code>yarn run lint</code> to lint both .js and .scss files.</p>
+<h3 id="javascript">JavaScript</h3>
 <p>To enforce a consistent JavaScript code style, this project uses <a href="https://eslint.org/">ESLint</a> and <a href="https://github.com/airbnb/javascript">Airbnb’s style guide</a>. Some additional rules are defined in <code>.eslintrc</code> which lives at the project root. Run <code>yarn run eslint</code> to run the linter on .js files.</p>
-<h2 id="css-scss">CSS / SCSS</h2>
+<h3 id="css-scss">CSS / SCSS</h3>
+<p><a href="https://stylelint.io/">stylelint</a> is used to enforce consistent conventions in stylesheets. Its configuration file <code>.stylelintrc</code> is located at the root. Run <code>yarn run stylelint</code> to run the linter on .scss files.</p>
 <h2 id="editorconfig">editorconfig</h2>
 <blockquote>
 <p><a href="http://editorconfig.org/">EditorConfig</a> helps developers define and maintain consistent coding styles between different editors and IDEs.</p>
@@ -3097,95 +3094,9 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="design-tokens.html" data-pjax>
-                <span>Design tokens</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="accessibility.html" data-pjax>
                 <span>Accessibility</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
-                <span>Code style</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="browser-support.html" data-pjax>
-                <span>Browser support</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
@@ -3206,6 +3117,50 @@
             <a class="Tree-entityLink" href="assets.html" data-pjax>
                 <span>Assets</span>
                 
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="browser-support.html" data-pjax>
+                <span>Browser support</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Code style</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="design-tokens.html" data-pjax>
+                <span>Design tokens</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
+
+
+</div>
+
+</div>
+
+
             </a>
         </li>
         

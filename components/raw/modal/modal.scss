@@ -62,7 +62,7 @@
 .Modal-close {
   background-color: transparent;
   border: 0;
-  color: rgba($color-text-default, .4);
+  color: rgba($color-text-default, 0.4);
   cursor: pointer;
   display: block;
   font-size: 24px;
@@ -78,7 +78,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: rgba($color-text-default, .8);
+    color: rgba($color-text-default, 0.8);
   }
 }
 
@@ -86,10 +86,11 @@
   height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
-  padding-bottom: #{$spacing-gutter}px;
-  padding-left: #{$spacing-gutter}px;
-  padding-right: #{$spacing-gutter * 2}px;
-  padding-top: #{$spacing-gutter}px;
+  padding:
+    #{$spacing-gutter}px
+    #{$spacing-gutter * 2}px
+    #{$spacing-gutter}px
+    #{$spacing-gutter}px;
 
   @media (min-width: 480px) {
     padding-left: #{$spacing-gutter * 2}px;
