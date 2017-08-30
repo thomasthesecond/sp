@@ -6,4 +6,4 @@ Minified CSS and JavaScript assets have been included for each page. These asset
 
 Each page requires `main.css` and `main.js`, and has its own CSS and JavaScript file. For example, `about.html` includes `main.css`, `about.css`, `main.js` and `about.js`.
 
-`styleguide.css` and `styleguide.js` assets are only intended for use on the pattern library. They should not be included on any production webpages.
+`styleguide.css` and `styleguide.js` assets are only intended for use on the pattern library. They should not be included on any production Web pages.

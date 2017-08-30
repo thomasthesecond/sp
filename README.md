@@ -5,7 +5,7 @@ You are viewing the front-end pattern library for Surgery Partners. It’s built
 The patterns are split into two groups:
 
 * **Components**: The building blocks of the site; when combined, create pages; each component has a specific purpose
-* **Pages**: Fully formed webpages composed of components
+* **Pages**: Fully formed Web pages composed of components
 
 ## Setting up the project for development
 

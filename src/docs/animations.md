@@ -6,11 +6,11 @@ The home, about and partnership pages contain scrolling animations.
 
 [ScrollMagic](http://scrollmagic.io/) is used to handle the animations.
 
-Animations for each page are configured in their respective JavaScript module files located in `src/components/05-pages`.
+Animations for each page are configured in their respective JavaScript module files located in `src/components/pages`.
 
-All of the animation styles are contained in a single Sass partial, `home/animate.scss`.
+All of the animation styles are contained in a single Sass partial, `assets/src/scss/animations.scss`.
 
-Animations will not be run if:
+Animations will *not* be run if:
 
 * JavaScript is disabled or fails to load
 * a user [prefers reduced motion](https://webkit.org/blog/7551/responsive-design-for-motion/)
