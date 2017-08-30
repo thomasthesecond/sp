@@ -12,20 +12,20 @@ import "../components/_icon/icon.scss";
 import "./scss/layout.scss";
 
 // Import global components
-import "../components/03-components/_skip-link";
-import Banner from "../components/03-components/banner";
-import "../components/03-components/blockquote";
-import "../components/03-components/button";
-import Contentinfo from "../components/03-components/contentinfo";
-import "../components/03-components/heading";
-import "../components/03-components/hr";
-import "../components/03-components/input";
-import "../components/03-components/list";
-import "../components/03-components/next-page";
-import "../components/03-components/paragraph";
-import "../components/03-components/select";
-import "../components/03-components/table";
-import "../components/03-components/textarea";
+import "../components/components/_skip-link";
+import Banner from "../components/components/banner";
+import "../components/components/blockquote";
+import "../components/components/button";
+import Contentinfo from "../components/components/contentinfo";
+import "../components/components/heading";
+import "../components/components/hr";
+import "../components/components/input";
+import "../components/components/list";
+import "../components/components/next-page";
+import "../components/components/paragraph";
+import "../components/components/select";
+import "../components/components/table";
+import "../components/components/textarea";
 
 // Import global modules
 import "./scss/utils.scss";

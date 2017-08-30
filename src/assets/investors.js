@@ -4,26 +4,26 @@
 import InvestorsPage from "../components/05-pages/investors";
 
 // Import page-specific components
-import "../components/03-components/breadcrumbs";
-import "../components/03-components/feed";
-import "../components/03-components/file-download";
-import "../components/03-components/filter";
-import "../components/03-components/help-tip";
-import "../components/03-components/more-link";
-import "../components/03-components/news-article";
-import "../components/03-components/pagination";
-import "../components/03-components/press-release-bio";
-import "../components/03-components/press-release-contact";
-import "../components/03-components/resources-list";
-import "../components/03-components/search";
-import "../components/03-components/stock-chart";
-import "../components/03-components/stock-chart-filter";
-import "../components/03-components/stock-price";
-import "../components/03-components/stock-price-card";
-import "../components/03-components/sub-navigation";
-import "../components/03-components/team-list";
-import "../components/03-components/team-member";
-import "../components/03-components/utility-links";
+import "../components/components/breadcrumbs";
+import "../components/components/feed";
+import "../components/components/file-download";
+import "../components/components/filter";
+import "../components/components/help-tip";
+import "../components/components/more-link";
+import "../components/components/news-article";
+import "../components/components/pagination";
+import "../components/components/press-release-bio";
+import "../components/components/press-release-contact";
+import "../components/components/resources-list";
+import "../components/components/search";
+import "../components/components/stock-chart";
+import "../components/components/stock-chart-filter";
+import "../components/components/stock-price";
+import "../components/components/stock-price-card";
+import "../components/components/sub-navigation";
+import "../components/components/team-list";
+import "../components/components/team-member";
+import "../components/components/utility-links";
 
 const investorsPage = new InvestorsPage();
 
