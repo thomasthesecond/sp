@@ -13,7 +13,7 @@ There are currently two versions of the Surgery Partners website; http://www.sur
 
 ## 301 redirects
 
-301 redirects will need to be configured after the new URL structure is defined. Below is a small sample of URLs that will need to be redirected. A complete audit will need to be performed in order to capture and configure all redirects.
+301 redirects will need to be configured after the new URL structure is defined. Below is a small sample of URLs that will need to be redirected. A complete audit will need to be performed before configuring all redirects.
 
 | Old URL | Proposed new URL |
 | ------- | ---------------- |
