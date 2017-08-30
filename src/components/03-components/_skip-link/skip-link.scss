@@ -8,23 +8,29 @@
  */
 
 .SkipLink {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  margin: 0;
-  overflow: hidden;
   position: absolute;
-  width: 1px;
 
   &:focus {
-    background-color: #fff;
-    clip: auto;
-    color: #446975;
+    background-color: $color-background-default;
+    color: $color-text-skip-link;
     height: auto;
     line-height: 40px;
     padding: 10px 20px;
     text-decoration: none;
-    top: 90px;
+    top: 48px;
     width: auto;
     z-index: $z-index-sticky;
+
+    @media (min-width: 688px) {
+      top: #{(90 / $max-width) * 100vw};
+    }
+
+    @media (min-width: $mq-min-container) {
+      top: 90px;
+    }
+  }
+
+  &.visuallyhidden.focusable:focus {
+    position: absolute;
   }
 }
