@@ -2,13 +2,8 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Home block
- * @type Organism
- */
-
 .ImageBlock {
-  @media (min-width: 544px) {
+  @media (min-width: $mq-min-544) {
     align-items: center;
     display: flex;
   }
@@ -19,14 +14,14 @@
   overflow: hidden;
   position: relative;
 
-  @media (max-width: 543px) {
+  @media (max-width: $mq-max-544) {
     margin-left: -#{$spacing-gutter}px;
     width: calc(100% + #{($spacing-gutter * 2)}px);
   }
 }
 
 .ImageBlock--alternate {
-  @media (min-width: 544px) {
+  @media (min-width: $mq-min-544) {
     flex-direction: row-reverse;
   }
 }
@@ -36,25 +31,25 @@
   height: auto;
   max-width: 100%;
 
-  @media (min-width: 544px) {
+  @media (min-width: $mq-min-544) {
     max-height: 720px;
   }
 }
 
 .ImageBlock--alternate .ImageBlock-photo {
-  @media (min-width: 544px) {
+  @media (min-width: $mq-min-544) {
     max-height: 668px;
   }
 }
 
 .ImageBlock-text {
-  @media (min-width: 544px) {
+  @media (min-width: $mq-min-544) {
     margin-left: #{(136 / $max-width) * 100%};
     max-width: 400px;
   }
 
   h2 {
-    @media (max-width: 544px) {
+    @media (max-width: $mq-max-544) {
       margin-top: 32px;
     }
   }
@@ -63,7 +58,7 @@
 .ImageBlock--alternate .ImageBlock-text {
   margin-left: 0;
 
-  @media (min-width: 544px) {
+  @media (min-width: $mq-min-544) {
     margin-right: #{(120 / $max-width) * 100%};
   }
 

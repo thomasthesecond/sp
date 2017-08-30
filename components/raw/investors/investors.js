@@ -1,6 +1,6 @@
 "use strict";
 
-import Modal from "../../03-components/modal";
+import Modal from "../../components/modal";
 import { forEach } from "../../../assets/js/utils";
 
 export default class InvestorsPage {

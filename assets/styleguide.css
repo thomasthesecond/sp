@@ -599,124 +599,6 @@ main {
   outline: none;
 }
 /**
- * Mixins
- */
-/**
- * Functions
- */
-/**
- * Styleguide
- * @note Not for production
- */
-abbr[title] {
-  border-bottom: none;
-  cursor: help;
-  text-decoration: none;
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-
-.swatch {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-.swatch--light {
-  color: #000;
-}
-
-.token-table {
-  border-bottom: 1px solid #d4d4d8;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.token-table tr:nth-child(odd) {
-  background-color: #f6f6f6;
-}
-
-.token-table th {
-  text-align: left;
-}
-
-.token-table th,
-.token-table td {
-  border-bottom: 1px solid #d4d4d8;
-  padding: 16px;
-}
-
-.token-table th:not(:first-child),
-.token-table td:not(:first-child) {
-  border-left: 1px solid #d4d4d8;
-}
-
-.font-family-open-sans {
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-.font-weight-light {
-  font-weight: 300;
-}
-
-.font-weight-regular {
-  font-weight: 400;
-}
-
-.font-weight-semibold {
-  font-weight: 600;
-}
-
-.font-weight-bold {
-  font-weight: 700;
-}
-
-.font-preview {
-  color: #25395d;
-  overflow: hidden;
-}
-
-.font-preview-info {
-  float: left;
-  font-size: 16px;
-  line-height: 1.4;
-  margin-left: 40px;
-  margin-top: 14px;
-}
-
-.font-preview-info span {
-  color: #646e7e;
-}
-
-.font-preview-characters {
-  float: left;
-  overflow: hidden;
-}
-
-.font-preview-characters-aa {
-  float: left;
-  font-size: 120px;
-  line-height: 1;
-}
-
-.font-preview-characters-az {
-  float: left;
-  font-size: 24px;
-  line-height: 1.4;
-  margin-left: 40px;
-  margin-top: 14px;
-}
-/**
  * Functions
  */
 /**
@@ -1022,14 +904,128 @@ abbr[title] {
   z-index: 1000;
 }
 /**
+ * Mixins
+ */
+/**
+ * Functions
+ */
+/**
+ * Styleguide
+ * @note Not for production
+ */
+abbr[title] {
+  border-bottom: none;
+  cursor: help;
+  text-decoration: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+.swatch {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.swatch--light {
+  color: #000;
+}
+
+.token-table {
+  border-bottom: 1px solid #d4d4d8;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.token-table tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+.token-table th {
+  text-align: left;
+}
+
+.token-table th,
+.token-table td {
+  border-bottom: 1px solid #d4d4d8;
+  padding: 16px;
+}
+
+.token-table th:not(:first-child),
+.token-table td:not(:first-child) {
+  border-left: 1px solid #d4d4d8;
+}
+
+.font-family-open-sans {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-regular {
+  font-weight: 400;
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.font-preview {
+  color: #25395d;
+  overflow: hidden;
+}
+
+.font-preview-info {
+  float: left;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
+}
+
+.font-preview-info span {
+  color: #646e7e;
+}
+
+.font-preview-characters {
+  float: left;
+  overflow: hidden;
+}
+
+.font-preview-characters-aa {
+  float: left;
+  font-size: 120px;
+  line-height: 1;
+}
+
+.font-preview-characters-az {
+  float: left;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-left: 40px;
+  margin-top: 14px;
+}
+/**
  * Functions
  */
 /**
  * Mixins
- */
-/**
- * Component: Textarea
- * @type Atom
  */
 textarea {
   -webkit-appearance: none;
@@ -1073,46 +1069,6 @@ textarea.dark {
 /**
  * Mixins
  */
-/**
- * Component: Select
- * @type Atom
- */
-select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='rgba(94, 145, 161, 0.87)' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
-  background-position: calc(100% - 24px) calc(50% + 2px);
-  background-repeat: no-repeat;
-  background-size: 8px;
-  border: 1px solid #bfd0d8;
-  border-radius: 0;
-  color: #77919e;
-  cursor: pointer;
-  display: block;
-  font-size: 100%;
-  font-weight: 300;
-  line-height: 2;
-  padding: 0.75em 3.375em 0.625em 1.5em;
-}
-
-select.dark {
-  background-color: #152640;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#bfd0d8' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
-  border-color: rgba(191, 208, 216, 0.2);
-  color: #fff;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Table
- * @type Molecule
- */
 table {
   border: 0;
   border-collapse: collapse;
@@ -1121,13 +1077,13 @@ table {
   width: 100%;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 37.4375em) {
   .table-responsive {
     border-top: 1px solid rgba(191, 208, 216, 0.27);
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 37.4375em) {
   .table-responsive thead {
     border: 0;
     -webkit-clip-path: inset(50%);
@@ -1146,7 +1102,7 @@ tbody tr {
   border-top: 1px solid rgba(191, 208, 216, 0.27);
 }
 
-@media (max-width: 599px) {
+@media (max-width: 37.4375em) {
   .table-responsive tr {
     border-top: 0;
     -webkit-box-shadow: 0 14px 34px rgba(0, 0, 0, 0.09);
@@ -1171,7 +1127,7 @@ td:not(:first-of-type) {
   padding-left: 5.5814%;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 37.4375em) {
   .table-responsive th, .table-responsive
   td {
     padding: 12px 24px;
@@ -1214,7 +1170,7 @@ td {
 }
 
 td > b {
-  color: #8993a3;
+  color: #8f9aa8;
   font-weight: 400;
 }
 
@@ -1230,7 +1186,7 @@ tr:hover td {
   background-color: rgba(191, 208, 216, 0.07);
 }
 
-@media (max-width: 599px) {
+@media (max-width: 37.4375em) {
   .table-responsive td {
     display: block;
   }
@@ -1243,7 +1199,7 @@ tr:hover td {
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 37.4375em) {
   .table-responsive tr:hover td {
     background-color: inherit;
   }
@@ -1254,9 +1210,37 @@ tr:hover td {
 /**
  * Mixins
  */
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='rgba(94, 145, 161, 0.87)' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
+  background-position: calc(100% - 24px) calc(50% + 2px);
+  background-repeat: no-repeat;
+  background-size: 8px;
+  border: 1px solid #bfd0d8;
+  border-radius: 0;
+  color: #77919e;
+  cursor: pointer;
+  display: block;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 2;
+  padding: 0.75em 3.375em 0.625em 1.5em;
+}
+
+select.dark {
+  background-color: #152640;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 32 32'><path fill='#bfd0d8' d='M16 25.4l-16-16 2.8-2.8 13.2 13.3 13.2-13.3 2.8 2.8z' /></svg>");
+  border-color: rgba(191, 208, 216, 0.2);
+  color: #fff;
+}
 /**
- * Component: Paragraph
- * @type Atom
+ * Functions
+ */
+/**
+ * Mixins
  */
 p {
   font-size: 14px;
@@ -1279,10 +1263,7 @@ p {
 /**
  * Mixins
  */
-/**
- * Component: Next page
- */
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .NextPage {
     text-align: center;
   }
@@ -1300,7 +1281,7 @@ p {
   color: rgba(37, 57, 93, 0.7);
 }
 
-@media (min-width: 520px) {
+@media (min-width: 32.5em) {
   .NextPage a:hover .NextPage-icon, .NextPage a:active .NextPage-icon, .NextPage a:focus .NextPage-icon {
     -webkit-transform: translateX(1.24242em);
             transform: translateX(1.24242em);
@@ -1354,7 +1335,7 @@ p {
   }
 }
 
-@media (min-width: 520px) {
+@media (min-width: 32.5em) {
   .NextPage-icon {
     color: #bfd0d8;
     font-size: 1.375em;
@@ -1375,10 +1356,6 @@ p {
  */
 /**
  * Mixins
- */
-/**
- * Component: List
- * @type Atom
  */
 ul,
 ol,
@@ -1418,10 +1395,6 @@ dd {
  */
 /**
  * Mixins
- */
-/**
- * Component: Input
- * @type Atom
  */
 input[type="text"],
 input[type="email"],
@@ -1477,9 +1450,6 @@ input[type="tel"].dark {
 /**
  * Mixins
  */
-/**
- * Component: Horizontal rule
- */
 hr {
   background-color: rgba(191, 208, 216, 0.47);
   border: 0;
@@ -1496,10 +1466,6 @@ hr.dark {
  */
 /**
  * Mixins
- */
-/**
- * Component: Heading
- * @type Atom
  */
 .heading-super {
   font-size: 32px;
@@ -1672,10 +1638,6 @@ h6,
 /**
  * Mixins
  */
-/**
- * Component: Button
- * @type Atom
- */
 .Button {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1729,89 +1691,6 @@ h6,
  */
 /**
  * Mixins
- */
-/**
- * Component: Blockquote
- * @type Atom
- */
-blockquote {
-  color: #25395d;
-  margin: 0;
-}
-
-blockquote p {
-  font-size: 16px;
-  font-family: "Mate", Georgia, sans-serif;
-  font-weight: 300;
-  line-height: 1.6;
-  margin-bottom: 1.6em;
-  margin-top: 0;
-}
-
-@media (min-width: 37.5em) and (max-width: 64em) {
-  blockquote p {
-    font-size: calc(16px + (20 - 16) * (100vw - 600px) / (1024 - 600));
-  }
-}
-
-@media (min-width: 64em) {
-  blockquote p {
-    font-size: 20px;
-  }
-}
-
-blockquote cite {
-  font-size: 14px;
-  display: inline-block;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-@media (min-width: 37.5em) and (max-width: 64em) {
-  blockquote cite {
-    font-size: calc(14px + (16 - 14) * (100vw - 600px) / (1024 - 600));
-  }
-}
-
-@media (min-width: 64em) {
-  blockquote cite {
-    font-size: 16px;
-  }
-}
-
-blockquote cite br {
-  display: none;
-}
-
-.blockquote-location {
-  font-size: 10px;
-  color: #b5955d;
-  display: block;
-  font-weight: 400;
-  line-height: 1.21429;
-  margin-top: 0.42857em;
-}
-
-@media (min-width: 37.5em) and (max-width: 64em) {
-  .blockquote-location {
-    font-size: calc(10px + (14 - 10) * (100vw - 600px) / (1024 - 600));
-  }
-}
-
-@media (min-width: 64em) {
-  .blockquote-location {
-    font-size: 14px;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Contentinfo
- * @type Organism
  */
 .Contentinfo {
   font-size: 12px;
@@ -2255,9 +2134,80 @@ blockquote cite br {
 /**
  * Mixins
  */
+blockquote {
+  color: #25395d;
+  margin: 0;
+}
+
+blockquote p {
+  font-size: 16px;
+  font-family: "Mate", Georgia, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  margin-top: 0;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  blockquote p {
+    font-size: calc(16px + (20 - 16) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  blockquote p {
+    font-size: 20px;
+  }
+}
+
+blockquote cite {
+  font-size: 14px;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  blockquote cite {
+    font-size: calc(14px + (16 - 14) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  blockquote cite {
+    font-size: 16px;
+  }
+}
+
+blockquote cite br {
+  display: none;
+}
+
+.blockquote-location {
+  font-size: 10px;
+  color: #b5955d;
+  display: block;
+  font-weight: 400;
+  line-height: 1.21429;
+  margin-top: 0.42857em;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .blockquote-location {
+    font-size: calc(10px + (14 - 10) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  .blockquote-location {
+    font-size: 14px;
+  }
+}
 /**
- * Component: Banner
- * @type Organism
+ * Functions
+ */
+/**
+ * Mixins
  */
 .Banner {
   background-color: #fff;
@@ -2291,10 +2241,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Hamburger
- * @type Atom
  */
 .Hamburger {
   color: #275e70;
@@ -2364,10 +2310,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Logo
- * @type Atom
- */
 .Logo {
   color: #717271;
   display: block;
@@ -2391,7 +2333,7 @@ blockquote cite br {
 }
 
 .Logo-arrow--right {
-  fill: #6199af;
+  fill: #619ab1;
 }
 
 @media (max-width: 38.6875em) {
@@ -2410,10 +2352,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Navigation
- * @type Molecule
  */
 .Navigation {
   font-size: 12px;
@@ -2565,10 +2503,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Tagline
- * @type Atom
- */
 .Tagline {
   font-weight: 300;
   letter-spacing: -0.5px;
@@ -2587,7 +2521,7 @@ blockquote cite br {
   font-weight: 600;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .Tagline b {
     font-weight: 700;
   }
@@ -2599,13 +2533,13 @@ blockquote cite br {
   margin-right: auto;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 23.4375em) {
   .Masthead .Tagline {
     max-width: 50vw;
   }
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 80.625em) {
   .Masthead .Tagline {
     max-width: 480px;
   }
@@ -2615,10 +2549,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: More link
- * @type Atom
  */
 .MoreLink {
   font-size: 12px;
@@ -2687,7 +2617,7 @@ blockquote cite br {
   }
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 80.625em) {
   .Masthead .MoreLink {
     margin-top: 64px;
   }
@@ -2701,10 +2631,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Masthead
- * @type Atom
  */
 .Masthead {
   height: 55vw;
@@ -2752,10 +2678,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Location finder button
- * @type Atom
- */
 .LocationFinderButton {
   -webkit-box-shadow: 0 10px 14px rgba(64, 108, 122, 0.22);
           box-shadow: 0 10px 14px rgba(64, 108, 122, 0.22);
@@ -2763,8 +2685,8 @@ blockquote cite br {
 }
 
 .LocationFinderButton .Button {
-  height: 44px;
   font-weight: 400;
+  height: 44px;
   letter-spacing: 0;
   padding: 0;
   text-transform: none;
@@ -2775,214 +2697,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Location finder
- * @type Organism
- */
-.LocationFinder.is-sticky {
-  background-color: #fff;
-  -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
-          box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
-}
-
-@media (min-width: 670px) {
-  .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-  }
-}
-
-.LocationFinder .container {
-  background-color: #fff;
-  position: relative;
-}
-
-@media (min-width: 670px) {
-  .LocationFinder .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 6.97674vw;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    max-height: 90px;
-    min-height: 60px;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky .container {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 670px) {
-  .LocationFinder:not(.is-sticky) .container {
-    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-  }
-}
-
-.LocationFinder fieldset {
-  border: 0;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-@media (min-width: 670px) {
-  .LocationFinder fieldset {
-    width: 80%;
-  }
-}
-
-.LocationFinder legend {
-  color: rgba(37, 57, 93, 0.79);
-  display: block;
-  float: left;
-  font-weight: 700;
-  height: 100%;
-  line-height: 1;
-  width: 22.48062%;
-}
-
-@media (max-width: 1023px) {
-  .LocationFinder legend {
-    display: none;
-  }
-}
-
-.LocationFinder legend span {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.LocationFinder label {
-  display: none;
-}
-
-.LocationFinder select {
-  border: 0;
-  height: 100%;
-  width: 100%;
-}
-
-@media (max-width: 669px) {
-  .LocationFinder select {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder select {
-    border: 1px solid rgba(191, 208, 216, 0.27);
-    margin-bottom: 6px;
-  }
-}
-
-@media (min-width: 670px) {
-  .LocationFinder select {
-    border-left: 1px solid rgba(191, 208, 216, 0.27);
-  }
-}
-
-@media (min-width: 670px) and (max-width: 1023px) {
-  .LocationFinder select:first-of-type {
-    border-left: 0;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder select:not(:first-of-type) {
-    float: left;
-    width: calc(50% - 3px);
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder select:last-of-type {
-    margin-left: 6px;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky select:first-of-type {
-    border: 0;
-    margin-bottom: 0;
-    padding-bottom: 22px;
-    padding-left: 24px;
-    padding-top: 24px;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky select:not(:first-of-type) {
-    display: none;
-  }
-}
-
-.LocationFinder-button {
-  width: 100%;
-}
-
-@media (max-width: 669px) {
-  .LocationFinder-button {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 670px) {
-  .LocationFinder-button {
-    min-width: 128px;
-    width: 20%;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky .LocationFinder-button {
-    display: none;
-  }
-}
-
-@media (min-width: 670px) {
-  .LocationFinder.is-sticky .LocationFinder-button {
-    -ms-flex-item-align: center;
-        align-self: center;
-    border-radius: 56px;
-    height: 56px;
-    max-width: 220px;
-  }
-}
-
-@media (min-width: 670px) {
-  .LocationFinder-controls {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Introduction
- * @type Atom
  */
 .Introduction {
   font-size: 20px;
@@ -3033,11 +2747,207 @@ blockquote cite br {
 /**
  * Mixins
  */
+.LocationFinder.is-sticky {
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
+          box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder.is-sticky {
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+  }
+}
+
+.LocationFinder .container {
+  background-color: #fff;
+  position: relative;
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 6.97674vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-height: 90px;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder.is-sticky .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder:not(.is-sticky) .container {
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+  }
+}
+
+.LocationFinder fieldset {
+  border: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder fieldset {
+    width: 80%;
+  }
+}
+
+.LocationFinder legend {
+  color: rgba(37, 57, 93, 0.8);
+  display: block;
+  float: left;
+  font-weight: 700;
+  height: 100%;
+  line-height: 1;
+  width: 22.48062%;
+}
+
+@media (max-width: 63.9375em) {
+  .LocationFinder legend {
+    display: none;
+  }
+}
+
+.LocationFinder legend span {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.LocationFinder label {
+  display: none;
+}
+
+.LocationFinder select {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder select {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder select {
+    border: 1px solid rgba(191, 208, 216, 0.27);
+    margin-bottom: 6px;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder select {
+    border-left: 1px solid rgba(191, 208, 216, 0.27);
+  }
+}
+
+@media (min-width: 41.875em) and (max-width: 63.9375em) {
+  .LocationFinder select:first-of-type {
+    border-left: 0;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder select:not(:first-of-type) {
+    float: left;
+    width: calc(50% - 3px);
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder select:last-of-type {
+    margin-left: 6px;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder.is-sticky select:first-of-type {
+    border: 0;
+    margin-bottom: 0;
+    padding-bottom: 22px;
+    padding-left: 24px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder.is-sticky select:not(:first-of-type) {
+    display: none;
+  }
+}
+
+.LocationFinder-button {
+  width: 100%;
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder-button {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder-button {
+    min-width: 128px;
+    width: 20%;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder.is-sticky .LocationFinder-button {
+    display: none;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder.is-sticky .LocationFinder-button {
+    -ms-flex-item-align: center;
+        align-self: center;
+    border-radius: 56px;
+    height: 56px;
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+  }
+}
 /**
- * Component: Home block
- * @type Organism
+ * Functions
  */
-@media (min-width: 544px) {
+/**
+ * Mixins
+ */
+@media (min-width: 34em) {
   .ImageBlock {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -3054,14 +2964,14 @@ blockquote cite br {
   position: relative;
 }
 
-@media (max-width: 543px) {
+@media (max-width: 33.9375em) {
   .ImageBlock > a {
     margin-left: -24px;
     width: calc(100% + 48px);
   }
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .ImageBlock--alternate {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -3076,26 +2986,26 @@ blockquote cite br {
   max-width: 100%;
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .ImageBlock-photo {
     max-height: 720px;
   }
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .ImageBlock--alternate .ImageBlock-photo {
     max-height: 668px;
   }
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .ImageBlock-text {
     margin-left: 10.54264%;
     max-width: 400px;
   }
 }
 
-@media (max-width: 544px) {
+@media (max-width: 33.9375em) {
   .ImageBlock-text h2 {
     margin-top: 32px;
   }
@@ -3105,7 +3015,7 @@ blockquote cite br {
   margin-left: 0;
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .ImageBlock--alternate .ImageBlock-text {
     margin-right: 9.30233%;
   }
@@ -3122,10 +3032,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Cover video
- * @type Atom
- */
 .CoverVideo {
   display: block;
   height: 100%;
@@ -3136,13 +3042,13 @@ blockquote cite br {
 }
 
 .CoverVideo::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5e91a1));
-  background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5d91a1));
+  background: linear-gradient(to bottom, #b5955d 0%, #5d91a1 100%);
   content: "";
   display: block;
   height: 100%;
   left: 0;
-  opacity: 0.26;
+  opacity: 0.27;
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -3163,10 +3069,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Cover photo
- * @type Atom
- */
 .CoverPhoto {
   display: block;
   height: 100%;
@@ -3177,13 +3079,13 @@ blockquote cite br {
 }
 
 .CoverPhoto::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5e91a1));
-  background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5d91a1));
+  background: linear-gradient(to bottom, #b5955d 0%, #5d91a1 100%);
   content: "";
   display: block;
   height: 100%;
   left: 0;
-  opacity: 0.26;
+  opacity: 0.27;
   position: absolute;
   top: 0;
   width: 100%;
@@ -3201,10 +3103,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Timeline
- * @type Organism
  */
 .Timeline {
   margin-top: 3em;
@@ -3231,9 +3129,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Team member
  */
 .TeamMember:not(.TeamMember--small) {
   -webkit-box-align: center;
@@ -3434,10 +3329,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Sub Navigation
- * @type Molecule
- */
 .SubNavigation {
   font-size: 12px;
   background-color: #fff;
@@ -3459,7 +3350,7 @@ blockquote cite br {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .SubNavigation {
     height: 90px;
   }
@@ -3503,14 +3394,14 @@ blockquote cite br {
   width: 100%;
 }
 
-@media (max-width: 1006px) {
+@media (max-width: 62.875em) {
   .SubNavigation-list {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 
-@media (min-width: 1007px) {
+@media (min-width: 62.9375em) {
   .SubNavigation-list {
     margin-left: auto;
     margin-right: auto;
@@ -3526,7 +3417,7 @@ blockquote cite br {
   position: relative;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .SubNavigation-item {
     margin-left: 14px;
     margin-right: 14px;
@@ -3555,7 +3446,7 @@ blockquote cite br {
   transition: color 200ms;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .SubNavigation-link {
     padding-bottom: 34px;
     padding-top: 39px;
@@ -3581,160 +3472,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Service card
- */
-.ServiceCard {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #77919e;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 14px;
-  line-height: 1.35714;
-  min-width: 124px;
-  text-align: center;
-  width: 188px;
-}
-
-@media (max-width: 479px) {
-  .ServiceCard {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media (min-width: 480px) {
-  .ServiceCard {
-    background-color: #fff;
-    border-radius: 8px;
-    -webkit-box-shadow: 0 22px 54px rgba(107, 119, 140, 0.21);
-            box-shadow: 0 22px 54px rgba(107, 119, 140, 0.21);
-    font-size: 16px;
-    height: 188px;
-    line-height: 1.375;
-  }
-}
-
-.ServiceCard .icon {
-  font-size: 4em;
-}
-
-@media (min-width: 480px) {
-  .ServiceCard .icon {
-    position: relative;
-    top: 45px;
-  }
-}
-
-.ServiceCard-title {
-  display: inline-block;
-}
-
-@media (max-width: 479px) {
-  .ServiceCard-title {
-    margin-top: 12px;
-  }
-}
-
-@media (min-width: 480px) {
-  .ServiceCard-title {
-    max-width: 40%;
-    position: relative;
-    top: 57px;
-  }
-}
-
-@media (min-width: 624px) {
-  .ServiceCard-title {
-    max-width: 48%;
-  }
-}
-
-.ServiceCards .ServiceCard {
-  width: auto;
-}
-
-@media (max-width: 479px) {
-  .ServiceCards .ServiceCard {
-    background-color: transparent;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    font-size: 14px;
-    height: auto;
-    line-height: 1.35714;
-  }
-}
-
-@media (max-width: 479px) {
-  .ServiceCards .ServiceCard {
-    margin-top: 64px;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 686px) {
-  .ServiceCards .ServiceCard {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 45.2381%;
-            flex: 0 1 45.2381%;
-  }
-}
-
-@media (min-width: 687px) {
-  .ServiceCards .ServiceCard {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 29.84127%;
-            flex: 0 1 29.84127%;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 686px) {
-  .ServiceCards .ServiceCard:nth-child(2), .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(6) {
-    margin-left: 4.7619%;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 686px) {
-  .ServiceCards .ServiceCard:nth-child(3), .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
-    margin-top: 4.7619%;
-  }
-}
-
-@media (min-width: 687px) {
-  .ServiceCards .ServiceCard:nth-child(2), .ServiceCards .ServiceCard:nth-child(3), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
-    margin-left: 4.7619%;
-  }
-}
-
-@media (min-width: 687px) {
-  .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
-    margin-top: 4.7619%;
-  }
-}
-
-@supports (display: grid) {
-  .ServiceCards .ServiceCard {
-    margin-left: 0 !important;
-    margin-top: 0 !important;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Service cards
  */
 .ServiceCards {
   display: -webkit-box;
@@ -3768,10 +3505,155 @@ blockquote cite br {
 /**
  * Mixins
  */
+.ServiceCard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #77919e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  line-height: 1.35714;
+  min-width: 124px;
+  text-align: center;
+  width: 188px;
+}
+
+@media (max-width: 29.9375em) {
+  .ServiceCard {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 30em) {
+  .ServiceCard {
+    background-color: #fff;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 22px 54px rgba(107, 119, 140, 0.21);
+            box-shadow: 0 22px 54px rgba(107, 119, 140, 0.21);
+    font-size: 16px;
+    height: 188px;
+    line-height: 1.375;
+  }
+}
+
+.ServiceCard .icon {
+  font-size: 4em;
+}
+
+@media (min-width: 30em) {
+  .ServiceCard .icon {
+    position: relative;
+    top: 45px;
+  }
+}
+
+.ServiceCard-title {
+  display: inline-block;
+}
+
+@media (max-width: 29.9375em) {
+  .ServiceCard-title {
+    margin-top: 12px;
+  }
+}
+
+@media (min-width: 30em) {
+  .ServiceCard-title {
+    max-width: 40%;
+    position: relative;
+    top: 57px;
+  }
+}
+
+@media (min-width: 39em) {
+  .ServiceCard-title {
+    max-width: 48%;
+  }
+}
+
+.ServiceCards .ServiceCard {
+  width: auto;
+}
+
+@media (max-width: 29.9375em) {
+  .ServiceCards .ServiceCard {
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-size: 14px;
+    height: auto;
+    line-height: 1.35714;
+  }
+}
+
+@media (max-width: 29.9375em) {
+  .ServiceCards .ServiceCard {
+    margin-top: 64px;
+  }
+}
+
+@media (min-width: 30em) and (max-width: 42.875em) {
+  .ServiceCards .ServiceCard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 45.2381%;
+            flex: 0 1 45.2381%;
+  }
+}
+
+@media (min-width: 42.9375em) {
+  .ServiceCards .ServiceCard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 29.84127%;
+            flex: 0 1 29.84127%;
+  }
+}
+
+@media (min-width: 30em) and (max-width: 42.875em) {
+  .ServiceCards .ServiceCard:nth-child(2), .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(6) {
+    margin-left: 4.7619%;
+  }
+}
+
+@media (min-width: 30em) and (max-width: 42.875em) {
+  .ServiceCards .ServiceCard:nth-child(3), .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
+    margin-top: 4.7619%;
+  }
+}
+
+@media (min-width: 42.9375em) {
+  .ServiceCards .ServiceCard:nth-child(2), .ServiceCards .ServiceCard:nth-child(3), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
+    margin-left: 4.7619%;
+  }
+}
+
+@media (min-width: 42.9375em) {
+  .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
+    margin-top: 4.7619%;
+  }
+}
+
+@supports (display: grid) {
+  .ServiceCards .ServiceCard {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+}
 /**
- * Component: Leadership team
+ * Functions
  */
-@media (min-width: 480px) {
+/**
+ * Mixins
+ */
+@media (min-width: 30em) {
   .LeadershipTeam {
     margin-left: auto;
     margin-right: auto;
@@ -3779,7 +3661,7 @@ blockquote cite br {
   }
 }
 
-@media (min-width: 615px) {
+@media (min-width: 38.4375em) {
   .LeadershipTeam {
     position: relative;
     top: -56px;
@@ -3798,7 +3680,7 @@ blockquote cite br {
     grid-row-gap: 64px;
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (min-width: 480px) {
+  @media (min-width: 30em) {
     .LeadershipTeam {
       grid-column-gap: 24px;
       grid-row-gap: 56px;
@@ -3808,7 +3690,7 @@ blockquote cite br {
       max-width: 904px;
     }
   }
-  @media (min-width: 808px) {
+  @media (min-width: 50.5em) {
     .LeadershipTeam {
       grid-column-gap: 80px;
     }
@@ -3825,69 +3707,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Feature
- * @type Organism
- */
-.Feature {
-  height: 55.75vw;
-  max-height: 508px;
-  min-height: 446px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.Feature--tall {
-  height: 82.5vw;
-  max-height: 1000px;
-  min-height: 660px;
-}
-
-.Feature .container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  position: relative;
-  width: calc(100% - 48px);
-  z-index: 1;
-}
-
-.Feature-content {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 760px;
-  z-index: 1;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Highlight
- * @type Molecule
  */
 .Highlight {
   -webkit-box-align: start;
@@ -3998,8 +3817,60 @@ blockquote cite br {
 /**
  * Mixins
  */
+.Feature {
+  height: 55.75vw;
+  max-height: 508px;
+  min-height: 446px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.Feature--tall {
+  height: 82.5vw;
+  max-height: 1000px;
+  min-height: 660px;
+}
+
+.Feature .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: relative;
+  width: calc(100% - 48px);
+  z-index: 1;
+}
+
+.Feature-content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 760px;
+  z-index: 1;
+}
 /**
- * Component: Modal
+ * Functions
+ */
+/**
+ * Mixins
  */
 .Modal {
   background-color: #fff;
@@ -4021,7 +3892,7 @@ blockquote cite br {
   z-index: 9000;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 29.9375em) {
   .Modal {
     height: 100vh;
     top: 0;
@@ -4029,7 +3900,7 @@ blockquote cite br {
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   .Modal {
     max-height: 80vh;
     max-width: 800px;
@@ -4045,7 +3916,7 @@ blockquote cite br {
   visibility: visible;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   .Modal.is-open {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -4081,7 +3952,7 @@ blockquote cite br {
   padding: 24px 48px 24px 24px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   .Modal-content {
     padding-left: 48px;
   }
@@ -4091,10 +3962,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Overlay
- * @type Atom
  */
 .Overlay {
   background-color: rgba(0, 0, 0, 0.2);
@@ -4120,10 +3987,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Map widget
- * @type Atom
- */
 .MapWidget {
   background-color: rgba(0, 0, 0, 0.1);
   height: 42.63566vw;
@@ -4137,29 +4000,25 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Location map legend
- * @type Organism
- */
 .LocationMapLegend {
-  color: #8993a3;
+  color: #8f9aa8;
   font-size: 10px;
   line-height: 1;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .LocationMapLegend {
     font-size: 12px;
   }
 }
 
 .LocationMapLegend-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 12px;
   margin-top: 12px;
 }
@@ -4172,7 +4031,7 @@ blockquote cite br {
   width: 8px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .LocationMapLegend-pin {
     height: 14px;
     width: 14px;
@@ -4183,7 +4042,7 @@ blockquote cite br {
   margin-left: 8px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .LocationMapLegend-name {
     margin-left: 16px;
   }
@@ -4193,7 +4052,7 @@ blockquote cite br {
   margin-top: 24px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .LocationMap .LocationMapLegend {
     margin-top: 32px;
   }
@@ -4203,10 +4062,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Location list
- * @type Molecule
  */
 .LocationList h2:not(:first-of-type) {
   border-top: 1px solid rgba(191, 208, 216, 0.47);
@@ -4234,10 +4089,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Utility links
- * @type molecule
- */
 .UtilityLinks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4249,7 +4100,7 @@ blockquote cite br {
   width: 100%;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 35em) {
   .UtilityLinks {
     border-top: 1px solid rgba(191, 208, 216, 0.37);
     -ms-flex-wrap: wrap;
@@ -4259,7 +4110,7 @@ blockquote cite br {
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 35em) {
   .UtilityLinks a {
     width: 50%;
   }
@@ -4269,9 +4120,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Team list
  */
 .TeamList-heading {
   margin-bottom: 0;
@@ -4301,10 +4149,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Stock price card
- * @type Molecule
  */
 .StockPriceCard {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(181, 149, 93, 0.07)), to(rgba(94, 145, 161, 0.07)));
@@ -4381,9 +4225,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Stock price
- */
 .StockPrice {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4393,7 +4234,6 @@ blockquote cite br {
 }
 
 .StockPrice-price {
-  font-weight: 400;
   line-height: 1;
   margin-right: 32px;
 }
@@ -4402,6 +4242,10 @@ blockquote cite br {
   .StockPrice-price {
     margin-right: 10px;
   }
+}
+
+.StockPrice-price.heading-1 {
+  font-weight: 400;
 }
 
 .StockPrice-ticker {
@@ -4463,9 +4307,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Stock chart filter
- */
 .StockChartFilter {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -4487,7 +4328,7 @@ blockquote cite br {
   display: flex;
 }
 
-@media (max-width: 719px) {
+@media (max-width: 44.9375em) {
   .StockChartFilter-controls {
     margin-top: 40px;
     width: 100%;
@@ -4501,7 +4342,7 @@ blockquote cite br {
   width: calc(50% - 4px);
 }
 
-@media (min-width: 436px) {
+@media (min-width: 27.25em) {
   .StockChartFilter-controls select {
     width: 190px;
   }
@@ -4511,7 +4352,7 @@ blockquote cite br {
   margin-left: 8px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 45em) {
   .StockChartFilter-controls select:not(:first-of-type) {
     margin-left: 24px;
   }
@@ -4522,9 +4363,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Stock chart
- */
 .StockChart img {
   display: block;
   max-width: 100%;
@@ -4534,9 +4372,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Search
  */
 .Search {
   background-color: #fff;
@@ -4598,9 +4433,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Resources list
- */
 .ResourcesList-heading {
   border-bottom: 1px solid rgba(191, 208, 216, 0.6);
   margin-bottom: 0.8em;
@@ -4646,9 +4478,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Press release contact
- */
 .NewsArticle .PressReleaseContact {
   border-top: 1px solid #bfd0d8;
   margin-top: 3em;
@@ -4659,9 +4488,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Press release bio
  */
 .NewsArticle .PressReleaseBio {
   margin-top: 3em;
@@ -4772,9 +4598,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: News article
- */
 .NewsArticle h1 {
   margin-bottom: 1em;
 }
@@ -4828,10 +4651,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Help tip
- * @type Atom
- */
 .HelpTip {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -4861,10 +4680,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Filter
- * @type Organism
  */
 .Filter {
   max-width: 960px;
@@ -4900,7 +4715,7 @@ blockquote cite br {
   width: 100%;
 }
 
-@media (max-width: 699px) {
+@media (max-width: 43.6875em) {
   .Filter-controls {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -4911,13 +4726,13 @@ blockquote cite br {
   width: 100%;
 }
 
-@media (max-width: 699px) {
+@media (max-width: 43.6875em) {
   .Filter-fieldset:nth-child(1) {
     margin-bottom: 20px;
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 43.75em) {
   .Filter-fieldset:nth-child(1) {
     width: 31.25%;
   }
@@ -4928,14 +4743,14 @@ blockquote cite br {
   width: calc(50% - 8px);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 43.75em) {
   .Filter-fieldset:nth-child(2),
   .Filter-fieldset:nth-child(3) {
     width: 19.79167%;
   }
 }
 
-@media (max-width: 699px) {
+@media (max-width: 43.6875em) {
   .Filter-fieldset:nth-child(3) {
     margin-left: 16px;
   }
@@ -4947,7 +4762,7 @@ blockquote cite br {
   width: 100%;
 }
 
-@media (max-width: 699px) {
+@media (max-width: 43.6875em) {
   .Filter-fieldset input,
   .Filter-fieldset select {
     padding-left: 16px;
@@ -4955,14 +4770,14 @@ blockquote cite br {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 43.75em) {
   .Filter-button,
   .Filter-fieldset + .Filter-fieldset {
     margin-left: 8px;
   }
 }
 
-@media (min-width: 840px) {
+@media (min-width: 52.5em) {
   .Filter-button,
   .Filter-fieldset + .Filter-fieldset {
     margin-left: 32px;
@@ -4973,13 +4788,13 @@ blockquote cite br {
   border-radius: 22px;
 }
 
-@media (max-width: 699px) {
+@media (max-width: 43.6875em) {
   .Filter-button {
     margin-top: 40px;
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 43.75em) {
   .Filter-button {
     width: 19.16667%;
   }
@@ -4991,7 +4806,7 @@ blockquote cite br {
   margin-top: 24px;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 43.75em) {
   .Filter-link {
     margin-top: 48px;
   }
@@ -5001,9 +4816,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: File download
  */
 .FileDownload {
   display: inline-block;
@@ -5024,9 +4836,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Feed
- */
 .Feed time {
   color: #646e7e;
 }
@@ -5045,9 +4854,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-/**
- * Component: Breadcrumbs
- */
 .Breadcrumbs {
   font-size: 14px;
   letter-spacing: 0.6px;
@@ -5063,10 +4869,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Testimonial
- * @type Organism
  */
 .Testimonial {
   max-width: 856px;
@@ -5100,10 +4902,6 @@ blockquote cite br {
  */
 /**
  * Mixins
- */
-/**
- * Component: Contact form
- * @type Organism
  */
 .ContactForm {
   max-width: 630;

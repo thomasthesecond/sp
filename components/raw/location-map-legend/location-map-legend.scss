@@ -2,24 +2,19 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Location map legend
- * @type Organism
- */
-
 .LocationMapLegend {
-  color: #8993a3;
-  font-size: 10px;
-  line-height: 1;
+  color: $color-text-map-legend;
+  font-size: #{$font-size-heading-6-min}px;
+  line-height: $line-height-reset;
 
-  @media (min-width: 600px) {
-    font-size: 12px;
+  @media (min-width: $mq-min-600) {
+    font-size: #{$font-size-heading-6}px;
   }
 }
 
 .LocationMapLegend-item {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-bottom: 12px;
   margin-top: 12px;
 }
@@ -31,7 +26,7 @@
   height: 8px;
   width: 8px;
 
-  @media (min-width: 600px) {
+  @media (min-width: $mq-min-600) {
     height: 14px;
     width: 14px;
   }
@@ -40,18 +35,17 @@
 .LocationMapLegend-name {
   margin-left: 8px;
 
-  @media (min-width: 600px) {
+  @media (min-width: $mq-min-600) {
     margin-left: 16px;
   }
 }
 
-// Implementation
+// Implementation detail
 
 .LocationMap .LocationMapLegend {
-  // margin-top: #{(32 / 12) * 1em};
   margin-top: 24px;
 
-  @media (min-width: 600px) {
+  @media (min-width: $mq-min-600) {
     margin-top: 32px;
   }
 }

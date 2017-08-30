@@ -279,15 +279,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-2129dfcb2141ed37088189b7fc03f253">index.js</option>
+                <option value="file-47638b7bb4473cba1334b17f63f4b77e">index.js</option>
                 
-                <option value="file-9adeb961e07341290024fa096c40589d">table.scss</option>
+                <option value="file-e39ba6301970da252532c33b61930a04">table.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-2129dfcb2141ed37088189b7fc03f253" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-47638b7bb4473cba1334b17f63f4b77e" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -308,7 +308,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/table/index.js</span>
+                    <span class="Meta-value">src/components/components/table/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -317,7 +317,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-9adeb961e07341290024fa096c40589d" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-e39ba6301970da252532c33b61930a04" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -329,11 +329,6 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Table
- * @type Molecule
- */</span>
-
 <span class="hljs-selector-tag">table</span> {
   <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">border-collapse</span>: collapse;
@@ -343,14 +338,14 @@
 }
 
 <span class="hljs-selector-class">.table-responsive</span> {
-  @<span class="hljs-keyword">media</span> (max-width: 599px) {
-    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-number">0.27</span>);
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-600</span>) {
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-variable">$opacity-27</span>);
   }
 }
 
 <span class="hljs-selector-tag">thead</span> {
   <span class="hljs-selector-class">.table-responsive</span> &amp; {
-    @<span class="hljs-keyword">media</span> (max-width: 599px) {
+    @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-600</span>) {
       @<span class="hljs-keyword">include</span> visuallyhidden;
     }
   }
@@ -358,13 +353,13 @@
 
 <span class="hljs-selector-tag">tr</span> {
   <span class="hljs-selector-tag">tbody</span> &amp; {
-    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-number">0.27</span>);
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-variable">$opacity-27</span>);
   }
 
   <span class="hljs-selector-class">.table-responsive</span> &amp; {
-    @<span class="hljs-keyword">media</span> (max-width: 599px) {
+    @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-600</span>) {
       <span class="hljs-attribute">border-top</span>: <span class="hljs-number">0</span>;
-      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">14px</span> <span class="hljs-number">34px</span> rgba(<span class="hljs-number">#000</span>, <span class="hljs-number">0.09</span>);
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-table-row</span>;
       <span class="hljs-attribute">display</span>: block;
       <span class="hljs-attribute">margin-bottom</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
       <span class="hljs-attribute">margin-top</span>: #{<span class="hljs-variable">$spacing-gutter</span>}px;
@@ -385,7 +380,7 @@
   }
 
   <span class="hljs-selector-class">.table-responsive</span> &amp; {
-    @<span class="hljs-keyword">media</span> (max-width: 599px) {
+    @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-600</span>) {
       <span class="hljs-attribute">padding</span>: <span class="hljs-number">12px</span> #{<span class="hljs-variable">$spacing-gutter</span>}px;
     }
   }
@@ -393,8 +388,8 @@
 
 <span class="hljs-selector-tag">th</span> {
   @<span class="hljs-keyword">include</span> fluid-type(
-    <span class="hljs-variable">$min-font-size</span>: 14,
-    <span class="hljs-variable">$max-font-size</span>: 16,
+    <span class="hljs-variable">$min-font-size</span>: <span class="hljs-variable">$font-size-default-min</span>,
+    <span class="hljs-variable">$max-font-size</span>: <span class="hljs-variable">$font-size-default</span>,
     <span class="hljs-variable">$min-width</span>: 600
   );
 
@@ -405,20 +400,18 @@
 
 <span class="hljs-selector-tag">td</span> {
   @<span class="hljs-keyword">include</span> fluid-type(
-    <span class="hljs-variable">$min-font-size</span>: 12,
-    <span class="hljs-variable">$max-font-size</span>: 16,
+    <span class="hljs-variable">$min-font-size</span>: <span class="hljs-variable">$font-size-body-small-min</span>,
+    <span class="hljs-variable">$max-font-size</span>: <span class="hljs-variable">$font-size-default</span>,
     <span class="hljs-variable">$min-width</span>: 600
   );
 
   &gt; <span class="hljs-selector-tag">b</span> {
-    <span class="hljs-attribute">color</span>: <span class="hljs-number">#8993a3</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-table-cell-emphesis</span>;
     <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-regular</span>;
   }
 
-  <span class="hljs-comment">// table:not(.table-striped) tr:hover &amp;,</span>
-  <span class="hljs-comment">// table:not(.table-responsive) tr:hover &amp; {</span>
   <span class="hljs-selector-tag">tr</span>:hover &amp; {
-    <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-number">0.07</span>);
+    <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-variable">$opacity-07</span>);
   }
 
   <span class="hljs-selector-class">.table-striped</span> <span class="hljs-selector-tag">tr</span>:hover &amp; {
@@ -426,12 +419,11 @@
   }
 
   <span class="hljs-selector-class">.table-striped</span> <span class="hljs-selector-tag">tr</span>:nth-child(odd) &amp; {
-    <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-number">0.07</span>);
+    <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-variable">$opacity-07</span>);
   }
 
   <span class="hljs-selector-class">.table-responsive</span> &amp; {
-    @<span class="hljs-keyword">media</span> (max-width: 599px) {
-      <span class="hljs-comment">// border-bottom: 1px solid green;</span>
+    @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-600</span>) {
       <span class="hljs-attribute">display</span>: block;
 
       &amp;::before {
@@ -445,7 +437,7 @@
   }
 
   <span class="hljs-selector-class">.table-responsive</span> <span class="hljs-selector-tag">tr</span>:hover &amp; {
-    @<span class="hljs-keyword">media</span> (max-width: 599px) {
+    @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-600</span>) {
       <span class="hljs-attribute">background-color</span>: inherit;
     }
   }
@@ -462,7 +454,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/table/table.scss</span>
+                    <span class="Meta-value">src/components/components/table/table.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -526,7 +518,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/table/table.hbs</span>
+            <span class="Meta-value">src/components/components/table/table.hbs</span>
         </li>
         
         
@@ -758,31 +750,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2454,31 +2422,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

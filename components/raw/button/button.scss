@@ -2,11 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Button
- * @type Atom
- */
-
 .Button {
   align-items: center;
   appearance: none;
@@ -20,7 +15,7 @@
   font-weight: $font-weight-semibold;
   justify-content: center;
   letter-spacing: 0.7px;
-  line-height: 1;
+  line-height: $line-height-reset;
   padding: #{(24 / 14) * 1em} #{(40 / 14) * 1em};
   position: relative;
   text-align: center;

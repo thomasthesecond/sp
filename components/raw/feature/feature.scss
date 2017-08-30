@@ -2,11 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Feature
- * @type Organism
- */
-
 .Feature {
   height: #{(446 / 800) * 100vw};
   max-height: 508px;

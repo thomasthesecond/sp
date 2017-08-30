@@ -241,15 +241,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-bbb0180d3d18c8001c6c4078939aa410">index.js</option>
+                <option value="file-6edcd98a596f4991fd5b76d9a97454df">index.js</option>
                 
-                <option value="file-38d6951c5b6667c78adc36d04c09d0ce">location-map-legend.scss</option>
+                <option value="file-d9e2d9c4e2caf4f3564f403f811a7b56">location-map-legend.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-bbb0180d3d18c8001c6c4078939aa410" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-6edcd98a596f4991fd5b76d9a97454df" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -270,7 +270,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/location-map-legend/index.js</span>
+                    <span class="Meta-value">src/components/components/location-map-legend/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -279,7 +279,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-38d6951c5b6667c78adc36d04c09d0ce" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-d9e2d9c4e2caf4f3564f403f811a7b56" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -291,24 +291,19 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Location map legend
- * @type Organism
- */</span>
-
 <span class="hljs-selector-class">.LocationMapLegend</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#8993a3</span>;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">10px</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-map-legend</span>;
+  <span class="hljs-attribute">font-size</span>: #{<span class="hljs-variable">$font-size-heading-6-min</span>}px;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-reset</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 600px) {
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-600</span>) {
+    <span class="hljs-attribute">font-size</span>: #{<span class="hljs-variable">$font-size-heading-6</span>}px;
   }
 }
 
 <span class="hljs-selector-class">.LocationMapLegend-item</span> {
-  <span class="hljs-attribute">display</span>: flex;
   <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">display</span>: flex;
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">12px</span>;
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">12px</span>;
 }
@@ -320,7 +315,7 @@
   <span class="hljs-attribute">height</span>: <span class="hljs-number">8px</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">8px</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 600px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-600</span>) {
     <span class="hljs-attribute">height</span>: <span class="hljs-number">14px</span>;
     <span class="hljs-attribute">width</span>: <span class="hljs-number">14px</span>;
   }
@@ -329,18 +324,17 @@
 <span class="hljs-selector-class">.LocationMapLegend-name</span> {
   <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8px</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 600px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-600</span>) {
     <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">16px</span>;
   }
 }
 
-<span class="hljs-comment">// Implementation</span>
+<span class="hljs-comment">// Implementation detail</span>
 
 <span class="hljs-selector-class">.LocationMap</span> <span class="hljs-selector-class">.LocationMapLegend</span> {
-  <span class="hljs-comment">// margin-top: #{(32 / 12) * 1em};</span>
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">24px</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 600px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-600</span>) {
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">32px</span>;
   }
 }
@@ -356,11 +350,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/location-map-legend/location-map-legend.scss</span>
+                    <span class="Meta-value">src/components/components/location-map-legend/location-map-legend.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">914 Bytes</span>
+                    <span class="Meta-value">925 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -401,7 +395,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/location-map-legend/location-map-legend.hbs</span>
+            <span class="Meta-value">src/components/components/location-map-legend/location-map-legend.hbs</span>
         </li>
         
         
@@ -613,31 +607,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2309,31 +2279,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

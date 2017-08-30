@@ -208,17 +208,17 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-c3798ac08e37e6cc1a63fae60a032633">cover-video.js</option>
+                <option value="file-82bd5c697e3ff644ae958e4d6206c358">cover-video.js</option>
                 
-                <option value="file-5cd8af374bf2bf6b217339049d8497e8">cover-video.scss</option>
+                <option value="file-70e2b4e3952fc3057e7757233b7a19b6">cover-video.scss</option>
                 
-                <option value="file-5cac33d4886bd6b5c0507dc8c35d270a">index.js</option>
+                <option value="file-35b1191649f6bc2373636f326def472d">index.js</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-c3798ac08e37e6cc1a63fae60a032633" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-82bd5c697e3ff644ae958e4d6206c358" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -320,7 +320,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/cover-video/cover-video.js</span>
+                    <span class="Meta-value">src/components/components/cover-video/cover-video.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -329,7 +329,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-5cd8af374bf2bf6b217339049d8497e8" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-70e2b4e3952fc3057e7757233b7a19b6" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -341,11 +341,6 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Cover video
- * @type Atom
- */</span>
-
 <span class="hljs-selector-class">.CoverVideo</span> {
   <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
@@ -355,12 +350,12 @@
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 
   &amp;::after {
-    <span class="hljs-attribute">background</span>: linear-gradient(to bottom, <span class="hljs-number">#b5955d</span> <span class="hljs-number">0%</span>, <span class="hljs-number">#5e91a1</span> <span class="hljs-number">100%</span>);
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$gradient-cover-photo</span>;
     <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
     <span class="hljs-attribute">display</span>: block;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
     <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.26</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-27</span>;
     <span class="hljs-attribute">pointer-events</span>: none;
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
@@ -387,16 +382,16 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/cover-video/cover-video.scss</span>
+                    <span class="Meta-value">src/components/components/cover-video/cover-video.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">639 Bytes</span>
+                    <span class="Meta-value">566 Bytes</span>
                 </li>
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-5cac33d4886bd6b5c0507dc8c35d270a" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-35b1191649f6bc2373636f326def472d" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -420,7 +415,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/cover-video/index.js</span>
+                    <span class="Meta-value">src/components/components/cover-video/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -465,7 +460,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/cover-video/cover-video.hbs</span>
+            <span class="Meta-value">src/components/components/cover-video/cover-video.hbs</span>
         </li>
         
         <li class="Meta-item">
@@ -702,31 +697,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2398,31 +2369,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

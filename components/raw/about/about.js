@@ -1,7 +1,7 @@
 "use strict";
 
 import ScrollMagic from "scrollmagic";
-import Modal from "../../03-components/modal";
+import Modal from "../../components/modal";
 import { forEach } from "../../../assets/js/utils";
 
 export default class AboutPage {

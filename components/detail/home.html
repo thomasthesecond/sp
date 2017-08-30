@@ -963,17 +963,17 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-37469792f0076d81d035fd6a65576d9a">home.js</option>
+                <option value="file-3a5e3246c2d242c2e891ba56e6c69da4">home.js</option>
                 
-                <option value="file-b1be2f33e6d741f19a6e971fcdd91124">home.scss</option>
+                <option value="file-e786a67e44727f82817f66732bcb074d">home.scss</option>
                 
-                <option value="file-020b0bd714cec86516bda594028fd185">index.js</option>
+                <option value="file-5894611bacf7b20c0b1eb75ec1f4545b">index.js</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-37469792f0076d81d035fd6a65576d9a" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-3a5e3246c2d242c2e891ba56e6c69da4" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -1097,7 +1097,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/05-pages/home/home.js</span>
+                    <span class="Meta-value">src/components/pages/home/home.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -1106,7 +1106,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-b1be2f33e6d741f19a6e971fcdd91124" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-e786a67e44727f82817f66732bcb074d" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -1118,13 +1118,8 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Page: Home
- * @type page
- */</span>
-
 <span class="hljs-selector-class">.Banner</span> {
-  @<span class="hljs-keyword">media</span> (max-width: 619px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-620</span>) {
     <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
@@ -1133,25 +1128,25 @@
 }
 
 <span class="hljs-selector-class">.Banner</span>:not(<span class="hljs-selector-class">.is-open</span>) {
-  @<span class="hljs-keyword">media</span> (max-width: 619px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-620</span>) {
     <span class="hljs-attribute">background-color</span>: transparent;
   }
 }
 
 <span class="hljs-selector-class">.Hamburger</span>:not(<span class="hljs-selector-class">.is-open</span>) {
-  @<span class="hljs-keyword">media</span> (max-width: 619px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-620</span>) {
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-hamburger-overlay</span>;
   }
 }
 
 <span class="hljs-selector-class">.Banner</span>:not(<span class="hljs-selector-class">.is-open</span>) <span class="hljs-selector-class">.Logo</span> {
-  @<span class="hljs-keyword">media</span> (max-width: 619px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-620</span>) {
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-overlay</span>;
   }
 }
 
 <span class="hljs-selector-class">.Banner</span>:not(<span class="hljs-selector-class">.is-open</span>) <span class="hljs-selector-class">.Logo-arrow</span> {
-  @<span class="hljs-keyword">media</span> (max-width: 619px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-620</span>) {
     fill: <span class="hljs-variable">$color-text-overlay</span>;
   }
 }
@@ -1159,11 +1154,11 @@
 <span class="hljs-selector-class">.LocationFinder</span> {
   <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-sticky</span>;
 
-  @<span class="hljs-keyword">media</span> (max-width: 669px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-670</span>) {
     <span class="hljs-attribute">display</span>: none;
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 670px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
     <span class="hljs-attribute">margin-top</span>: #{(-<span class="hljs-number">45</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
   }
 
@@ -1175,11 +1170,11 @@
 <span class="hljs-selector-class">.LocationFinderButton</span> {
   <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-sticky</span>;
 
-  @<span class="hljs-keyword">media</span> (max-width: 669px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-670</span>) {
     <span class="hljs-attribute">margin-top</span>: -<span class="hljs-number">22px</span>;
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 670px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
     <span class="hljs-attribute">display</span>: none;
   }
 }
@@ -1188,12 +1183,12 @@
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">104px</span>;
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">104px</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 544px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-544</span>) {
     <span class="hljs-attribute">margin-bottom</span>: #{(<span class="hljs-number">164</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
     <span class="hljs-attribute">margin-top</span>: #{(<span class="hljs-number">174</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 1290px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-1290</span>) {
     <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">164px</span>;
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">174px</span>;
   }
@@ -1202,11 +1197,11 @@
 <span class="hljs-selector-class">.ImageBlock</span> {
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">96px</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 544px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-544</span>) {
     <span class="hljs-attribute">margin-top</span>: #{(<span class="hljs-number">184</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 1290px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-1290</span>) {
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">184px</span>;
   }
 }
@@ -1214,11 +1209,11 @@
 <span class="hljs-selector-class">.Contentinfo</span> {
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">136px</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 544px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-544</span>) {
     <span class="hljs-attribute">margin-top</span>: #{(<span class="hljs-number">456</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 1290px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-1290</span>) {
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">456px</span>;
   }
 }
@@ -1234,16 +1229,16 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/05-pages/home/home.scss</span>
+                    <span class="Meta-value">src/components/pages/home/home.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.7 KB</span>
+                    <span class="Meta-value">1.8 KB</span>
                 </li>
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-020b0bd714cec86516bda594028fd185" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-5894611bacf7b20c0b1eb75ec1f4545b" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -1267,7 +1262,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/05-pages/home/index.js</span>
+                    <span class="Meta-value">src/components/pages/home/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -1312,7 +1307,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/05-pages/home/home.hbs</span>
+            <span class="Meta-value">src/components/pages/home/home.hbs</span>
         </li>
         
         <li class="Meta-item">
@@ -1538,31 +1533,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -3234,31 +3205,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

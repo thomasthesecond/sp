@@ -388,15 +388,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-8ba85eb8ba8c182ae444c87df1412091">index.js</option>
+                <option value="file-89c8452a13700eecf5b3e39c0f4fdaef">index.js</option>
                 
-                <option value="file-e0cad0e2c05e86cc2a8fa5a5c9b7bbbc">leadership-team.scss</option>
+                <option value="file-5f8f45ebf722d71d5028cdf580a5292f">leadership-team.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-8ba85eb8ba8c182ae444c87df1412091" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-89c8452a13700eecf5b3e39c0f4fdaef" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -417,7 +417,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/leadership-team/index.js</span>
+                    <span class="Meta-value">src/components/components/leadership-team/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -426,7 +426,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-e0cad0e2c05e86cc2a8fa5a5c9b7bbbc" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-5f8f45ebf722d71d5028cdf580a5292f" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -438,18 +438,14 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Leadership team
- */</span>
-
 <span class="hljs-selector-class">.LeadershipTeam</span> {
-  @<span class="hljs-keyword">media</span> (min-width: 480px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-480</span>) {
     <span class="hljs-attribute">margin-left</span>: auto;
     <span class="hljs-attribute">margin-right</span>: auto;
     <span class="hljs-attribute">max-width</span>: <span class="hljs-number">904px</span>;
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 615px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-615</span>) {
     <span class="hljs-attribute">position</span>: relative;
     <span class="hljs-attribute">top</span>: -<span class="hljs-number">56px</span>;
 
@@ -464,7 +460,7 @@
     grid-row-gap: <span class="hljs-number">64px</span>;
     grid-template-<span class="hljs-attribute">columns</span>: repeat(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>fr);
 
-    @<span class="hljs-keyword">media</span> (min-width: 480px) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-480</span>) {
       grid-<span class="hljs-attribute">column-gap</span>: <span class="hljs-number">24px</span>;
       grid-row-gap: <span class="hljs-number">56px</span>;
       grid-template-<span class="hljs-attribute">columns</span>: repeat(auto-fill, minmax(<span class="hljs-number">168px</span>, <span class="hljs-number">1</span>fr));
@@ -473,7 +469,7 @@
       <span class="hljs-attribute">max-width</span>: <span class="hljs-number">904px</span>;
     }
 
-    @<span class="hljs-keyword">media</span> (min-width: 808px) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-808</span>) {
       grid-<span class="hljs-attribute">column-gap</span>: <span class="hljs-number">80px</span>;
     }
   }
@@ -498,11 +494,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/leadership-team/leadership-team.scss</span>
+                    <span class="Meta-value">src/components/components/leadership-team/leadership-team.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">974 Bytes</span>
+                    <span class="Meta-value">959 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -543,7 +539,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/leadership-team/leadership-team.hbs</span>
+            <span class="Meta-value">src/components/components/leadership-team/leadership-team.hbs</span>
         </li>
         
         <li class="Meta-item">
@@ -764,31 +760,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2460,31 +2432,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

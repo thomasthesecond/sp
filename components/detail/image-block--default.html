@@ -274,15 +274,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-41949e292765c2bf1aff86666ed4ab42">image-block.scss</option>
+                <option value="file-b408845c6c7e0e5658ad84f349d31a4b">image-block.scss</option>
                 
-                <option value="file-3889c1d571c3dbb7254076bc8f48fbc0">index.js</option>
+                <option value="file-46f006e67596214305eb5b37b104431b">index.js</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-41949e292765c2bf1aff86666ed4ab42" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-b408845c6c7e0e5658ad84f349d31a4b" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -294,13 +294,8 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Home block
- * @type Organism
- */</span>
-
 <span class="hljs-selector-class">.ImageBlock</span> {
-  @<span class="hljs-keyword">media</span> (min-width: 544px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-544</span>) {
     <span class="hljs-attribute">align-items</span>: center;
     <span class="hljs-attribute">display</span>: flex;
   }
@@ -311,14 +306,14 @@
   <span class="hljs-attribute">overflow</span>: hidden;
   <span class="hljs-attribute">position</span>: relative;
 
-  @<span class="hljs-keyword">media</span> (max-width: 543px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-544</span>) {
     <span class="hljs-attribute">margin-left</span>: -#{<span class="hljs-variable">$spacing-gutter</span>}px;
     <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">100%</span> + #{(<span class="hljs-variable">$spacing-gutter</span> * <span class="hljs-number">2</span>)}px);
   }
 }
 
 <span class="hljs-selector-class">.ImageBlock--alternate</span> {
-  @<span class="hljs-keyword">media</span> (min-width: 544px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-544</span>) {
     <span class="hljs-attribute">flex-direction</span>: row-reverse;
   }
 }
@@ -328,25 +323,25 @@
   <span class="hljs-attribute">height</span>: auto;
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 544px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-544</span>) {
     <span class="hljs-attribute">max-height</span>: <span class="hljs-number">720px</span>;
   }
 }
 
 <span class="hljs-selector-class">.ImageBlock--alternate</span> <span class="hljs-selector-class">.ImageBlock-photo</span> {
-  @<span class="hljs-keyword">media</span> (min-width: 544px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-544</span>) {
     <span class="hljs-attribute">max-height</span>: <span class="hljs-number">668px</span>;
   }
 }
 
 <span class="hljs-selector-class">.ImageBlock-text</span> {
-  @<span class="hljs-keyword">media</span> (min-width: 544px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-544</span>) {
     <span class="hljs-attribute">margin-left</span>: #{(<span class="hljs-number">136</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100%</span>};
     <span class="hljs-attribute">max-width</span>: <span class="hljs-number">400px</span>;
   }
 
   <span class="hljs-selector-tag">h2</span> {
-    @<span class="hljs-keyword">media</span> (max-width: 544px) {
+    @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-544</span>) {
       <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">32px</span>;
     }
   }
@@ -355,7 +350,7 @@
 <span class="hljs-selector-class">.ImageBlock--alternate</span> <span class="hljs-selector-class">.ImageBlock-text</span> {
   <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 544px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-544</span>) {
     <span class="hljs-attribute">margin-right</span>: #{(<span class="hljs-number">120</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100%</span>};
   }
 
@@ -375,7 +370,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/image-block/image-block.scss</span>
+                    <span class="Meta-value">src/components/components/image-block/image-block.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -384,7 +379,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-3889c1d571c3dbb7254076bc8f48fbc0" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-46f006e67596214305eb5b37b104431b" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -405,7 +400,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/image-block/index.js</span>
+                    <span class="Meta-value">src/components/components/image-block/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -465,7 +460,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/image-block/image-block.hbs</span>
+            <span class="Meta-value">src/components/components/image-block/image-block.hbs</span>
         </li>
         
         <li class="Meta-item">
@@ -690,31 +685,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2386,31 +2357,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

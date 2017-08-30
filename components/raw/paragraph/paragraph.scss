@@ -2,11 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Paragraph
- * @type Atom
- */
-
 p {
   font-size: #{$font-size-default-min}px;
   line-height: $line-height-default-min;

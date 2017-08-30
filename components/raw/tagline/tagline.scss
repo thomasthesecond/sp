@@ -2,11 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Tagline
- * @type Atom
- */
-
 .Tagline {
   font-weight: $font-weight-light;
   letter-spacing: -0.5px;
@@ -22,7 +17,7 @@
 .Tagline b {
   font-weight: $font-weight-semibold;
 
-  @media (min-width: 600px) {
+  @media (min-width: $mq-min-600) {
     font-weight: $font-weight-bold;
   }
 }
@@ -34,11 +29,11 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: 375px) {
+  @media (min-width: $mq-min-375) {
     max-width: 50vw;
   }
 
-  @media (min-width: 1290px) {
+  @media (min-width: $mq-min-1290) {
     max-width: 480px;
   }
 }

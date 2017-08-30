@@ -4,10 +4,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Masthead
- * @type Atom
- */
 .Masthead {
   height: 55vw;
   max-height: 466px;
@@ -54,17 +50,13 @@
 /**
  * Mixins
  */
-/**
- * Component: Location finder
- * @type Organism
- */
 .LocationFinder.is-sticky {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
           box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
 }
 
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   .LocationFinder.is-sticky {
     -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
             box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
@@ -76,7 +68,7 @@
   position: relative;
 }
 
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   .LocationFinder .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -90,14 +82,14 @@
   }
 }
 
-@media (max-width: 669px) {
+@media (max-width: 41.8125em) {
   .LocationFinder.is-sticky .container {
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   .LocationFinder:not(.is-sticky) .container {
     -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
             box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
@@ -112,14 +104,14 @@
   width: 100%;
 }
 
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   .LocationFinder fieldset {
     width: 80%;
   }
 }
 
 .LocationFinder legend {
-  color: rgba(37, 57, 93, 0.79);
+  color: rgba(37, 57, 93, 0.8);
   display: block;
   float: left;
   font-weight: 700;
@@ -128,7 +120,7 @@
   width: 22.48062%;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 63.9375em) {
   .LocationFinder legend {
     display: none;
   }
@@ -157,45 +149,45 @@
   width: 100%;
 }
 
-@media (max-width: 669px) {
+@media (max-width: 41.8125em) {
   .LocationFinder select {
     font-size: 12px;
   }
 }
 
-@media (max-width: 669px) {
+@media (max-width: 41.8125em) {
   .LocationFinder select {
     border: 1px solid rgba(191, 208, 216, 0.27);
     margin-bottom: 6px;
   }
 }
 
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   .LocationFinder select {
     border-left: 1px solid rgba(191, 208, 216, 0.27);
   }
 }
 
-@media (min-width: 670px) and (max-width: 1023px) {
+@media (min-width: 41.875em) and (max-width: 63.9375em) {
   .LocationFinder select:first-of-type {
     border-left: 0;
   }
 }
 
-@media (max-width: 669px) {
+@media (max-width: 41.8125em) {
   .LocationFinder select:not(:first-of-type) {
     float: left;
     width: calc(50% - 3px);
   }
 }
 
-@media (max-width: 669px) {
+@media (max-width: 41.8125em) {
   .LocationFinder select:last-of-type {
     margin-left: 6px;
   }
 }
 
-@media (max-width: 669px) {
+@media (max-width: 41.8125em) {
   .LocationFinder.is-sticky select:first-of-type {
     border: 0;
     margin-bottom: 0;
@@ -205,7 +197,7 @@
   }
 }
 
-@media (max-width: 669px) {
+@media (max-width: 41.8125em) {
   .LocationFinder.is-sticky select:not(:first-of-type) {
     display: none;
   }
@@ -215,26 +207,26 @@
   width: 100%;
 }
 
-@media (max-width: 669px) {
+@media (max-width: 41.8125em) {
   .LocationFinder-button {
     font-size: 12px;
   }
 }
 
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   .LocationFinder-button {
     min-width: 128px;
     width: 20%;
   }
 }
 
-@media (max-width: 669px) {
+@media (max-width: 41.8125em) {
   .LocationFinder.is-sticky .LocationFinder-button {
     display: none;
   }
 }
 
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   .LocationFinder.is-sticky .LocationFinder-button {
     -ms-flex-item-align: center;
         align-self: center;
@@ -244,7 +236,7 @@
   }
 }
 
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   .LocationFinder-controls {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -258,10 +250,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Cover photo
- * @type Atom
- */
 .CoverPhoto {
   display: block;
   height: 100%;
@@ -272,13 +260,13 @@
 }
 
 .CoverPhoto::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5e91a1));
-  background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5d91a1));
+  background: linear-gradient(to bottom, #b5955d 0%, #5d91a1 100%);
   content: "";
   display: block;
   height: 100%;
   left: 0;
-  opacity: 0.26;
+  opacity: 0.27;
   position: absolute;
   top: 0;
   width: 100%;
@@ -297,10 +285,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Map widget
- * @type Atom
- */
 .MapWidget {
   background-color: rgba(0, 0, 0, 0.1);
   height: 42.63566vw;
@@ -314,29 +298,25 @@
 /**
  * Mixins
  */
-/**
- * Component: Location map legend
- * @type Organism
- */
 .LocationMapLegend {
-  color: #8993a3;
+  color: #8f9aa8;
   font-size: 10px;
   line-height: 1;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .LocationMapLegend {
     font-size: 12px;
   }
 }
 
 .LocationMapLegend-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 12px;
   margin-top: 12px;
 }
@@ -349,7 +329,7 @@
   width: 8px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .LocationMapLegend-pin {
     height: 14px;
     width: 14px;
@@ -360,7 +340,7 @@
   margin-left: 8px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .LocationMapLegend-name {
     margin-left: 16px;
   }
@@ -370,7 +350,7 @@
   margin-top: 24px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .LocationMap .LocationMapLegend {
     margin-top: 32px;
   }
@@ -380,10 +360,6 @@
  */
 /**
  * Mixins
- */
-/**
- * Component: Location list
- * @type Molecule
  */
 .LocationList h2:not(:first-of-type) {
   border-top: 1px solid rgba(191, 208, 216, 0.47);
@@ -410,10 +386,6 @@
  */
 /**
  * Mixins
- */
-/**
- * Page: Locations
- * @type page
  */
 .LocationFinder {
   margin-top: 48px;

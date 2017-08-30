@@ -733,17 +733,17 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-312d9f2da60c9012440a18737036d130">index.js</option>
+                <option value="file-db81428712a0aca7814485379f5870bc">index.js</option>
                 
-                <option value="file-3ebafaf5e6d1b18d303c927c2a7e88cc">investors.js</option>
+                <option value="file-3b5d38bd4b61a7cae25550bbb0670c93">investors.js</option>
                 
-                <option value="file-b70f11f5a9e6d5755b06a2c13ad78778">investors.scss</option>
+                <option value="file-744546fdc61f2c3d7b6ac5fd0525914b">investors.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-312d9f2da60c9012440a18737036d130" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-db81428712a0aca7814485379f5870bc" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -767,7 +767,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/05-pages/investors/index.js</span>
+                    <span class="Meta-value">src/components/pages/investors/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -776,7 +776,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-3ebafaf5e6d1b18d303c927c2a7e88cc" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-3b5d38bd4b61a7cae25550bbb0670c93" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -786,7 +786,7 @@
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-meta">"use strict"</span>;
 
-<span class="hljs-keyword">import</span> Modal <span class="hljs-keyword">from</span> <span class="hljs-string">"../../03-components/modal"</span>;
+<span class="hljs-keyword">import</span> Modal <span class="hljs-keyword">from</span> <span class="hljs-string">"../../components/modal"</span>;
 <span class="hljs-keyword">import</span> { forEach } <span class="hljs-keyword">from</span> <span class="hljs-string">"../../../assets/js/utils"</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InvestorsPage</span> </span>{
@@ -841,7 +841,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/05-pages/investors/investors.js</span>
+                    <span class="Meta-value">src/components/pages/investors/investors.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -850,7 +850,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-b70f11f5a9e6d5755b06a2c13ad78778" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-744546fdc61f2c3d7b6ac5fd0525914b" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -861,11 +861,6 @@
                                 <pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/design-tokens"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
-
-<span class="hljs-comment">/**
- * Page: Investors
- * @type page
- */</span>
 
 <span class="hljs-selector-class">.Breadcrumbs</span> {
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">24px</span>;
@@ -896,7 +891,7 @@
 <span class="hljs-selector-class">.InvestorsPage-highlights</span> {
   <span class="hljs-selector-class">.TeamList</span>:first-child {
     @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-860</span>) {
-      <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-number">0.47</span>);
+      <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-variable">$opacity-47</span>);
       <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">56px</span>;
       <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">80px</span>;
     }
@@ -975,7 +970,7 @@
 
 <span class="hljs-selector-class">.InvestorsPage-news</span> {
   <span class="hljs-selector-class">.Search</span> {
-    @<span class="hljs-keyword">media</span> (min-width: 480px) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-480</span>) {
       <span class="hljs-attribute">max-width</span>: <span class="hljs-number">296px</span>;
     }
 
@@ -1013,7 +1008,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/05-pages/investors/investors.scss</span>
+                    <span class="Meta-value">src/components/pages/investors/investors.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -1101,7 +1096,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/05-pages/investors/investors--news-list.hbs</span>
+            <span class="Meta-value">src/components/pages/investors/investors--news-list.hbs</span>
         </li>
         
         <li class="Meta-item">
@@ -1325,31 +1320,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -3021,31 +2992,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

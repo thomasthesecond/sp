@@ -278,15 +278,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-448937537d7f67fe484be6d012bef293">index.js</option>
+                <option value="file-e207afd547dc33bfcfb016e76bb01a0b">index.js</option>
                 
-                <option value="file-5229d4b4afbfc8ecd755d1dd6919fed3">resources-list.scss</option>
+                <option value="file-9c3e79287b4230700e13a4605fa604d5">resources-list.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-448937537d7f67fe484be6d012bef293" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-e207afd547dc33bfcfb016e76bb01a0b" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -307,7 +307,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/resources-list/index.js</span>
+                    <span class="Meta-value">src/components/components/resources-list/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -316,7 +316,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-5229d4b4afbfc8ecd755d1dd6919fed3" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-9c3e79287b4230700e13a4605fa604d5" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -328,12 +328,8 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Resources list
- */</span>
-
 <span class="hljs-selector-class">.ResourcesList-heading</span> {
-  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-number">0.6</span>);
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-variable">$opacity-60</span>);
   <span class="hljs-attribute">margin-bottom</span>: #{(<span class="hljs-number">16</span> / <span class="hljs-variable">$font-size-heading-4</span>) * <span class="hljs-number">1em</span>};
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">padding-bottom</span>: #{(<span class="hljs-number">24</span> / <span class="hljs-variable">$font-size-heading-4</span>) * <span class="hljs-number">1em</span>};
@@ -341,8 +337,8 @@
 
 <span class="hljs-selector-class">.ResourcesList-list</span> {
   @<span class="hljs-keyword">include</span> fluid-type(
-    <span class="hljs-variable">$min-font-size</span>: 12,
-    <span class="hljs-variable">$max-font-size</span>: 14,
+    <span class="hljs-variable">$min-font-size</span>: <span class="hljs-variable">$font-size-body-small-min</span>,
+    <span class="hljs-variable">$max-font-size</span>: <span class="hljs-variable">$font-size-body-small</span>,
     <span class="hljs-variable">$min-width</span>: 600
   );
 
@@ -376,11 +372,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/resources-list/resources-list.scss</span>
+                    <span class="Meta-value">src/components/components/resources-list/resources-list.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">802 Bytes</span>
+                    <span class="Meta-value">814 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -421,7 +417,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/resources-list/resources-list.hbs</span>
+            <span class="Meta-value">src/components/components/resources-list/resources-list.hbs</span>
         </li>
         
         
@@ -633,31 +629,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2329,31 +2301,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

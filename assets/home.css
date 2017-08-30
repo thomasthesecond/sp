@@ -332,10 +332,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Tagline
- * @type Atom
- */
 .Tagline {
   font-weight: 300;
   letter-spacing: -0.5px;
@@ -354,7 +350,7 @@
   font-weight: 600;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .Tagline b {
     font-weight: 700;
   }
@@ -366,13 +362,13 @@
   margin-right: auto;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 23.4375em) {
   .Masthead .Tagline {
     max-width: 50vw;
   }
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 80.625em) {
   .Masthead .Tagline {
     max-width: 480px;
   }
@@ -382,10 +378,6 @@
  */
 /**
  * Mixins
- */
-/**
- * Component: More link
- * @type Atom
  */
 .MoreLink {
   font-size: 12px;
@@ -454,7 +446,7 @@
   }
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 80.625em) {
   .Masthead .MoreLink {
     margin-top: 64px;
   }
@@ -468,10 +460,6 @@
  */
 /**
  * Mixins
- */
-/**
- * Component: Masthead
- * @type Atom
  */
 .Masthead {
   height: 55vw;
@@ -519,10 +507,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Location finder button
- * @type Atom
- */
 .LocationFinderButton {
   -webkit-box-shadow: 0 10px 14px rgba(64, 108, 122, 0.22);
           box-shadow: 0 10px 14px rgba(64, 108, 122, 0.22);
@@ -530,8 +514,8 @@
 }
 
 .LocationFinderButton .Button {
-  height: 44px;
   font-weight: 400;
+  height: 44px;
   letter-spacing: 0;
   padding: 0;
   text-transform: none;
@@ -542,214 +526,6 @@
  */
 /**
  * Mixins
- */
-/**
- * Component: Location finder
- * @type Organism
- */
-.LocationFinder.is-sticky {
-  background-color: #fff;
-  -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
-          box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
-}
-
-@media (min-width: 670px) {
-  .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-  }
-}
-
-.LocationFinder .container {
-  background-color: #fff;
-  position: relative;
-}
-
-@media (min-width: 670px) {
-  .LocationFinder .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 6.97674vw;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    max-height: 90px;
-    min-height: 60px;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky .container {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 670px) {
-  .LocationFinder:not(.is-sticky) .container {
-    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-  }
-}
-
-.LocationFinder fieldset {
-  border: 0;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-@media (min-width: 670px) {
-  .LocationFinder fieldset {
-    width: 80%;
-  }
-}
-
-.LocationFinder legend {
-  color: rgba(37, 57, 93, 0.79);
-  display: block;
-  float: left;
-  font-weight: 700;
-  height: 100%;
-  line-height: 1;
-  width: 22.48062%;
-}
-
-@media (max-width: 1023px) {
-  .LocationFinder legend {
-    display: none;
-  }
-}
-
-.LocationFinder legend span {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.LocationFinder label {
-  display: none;
-}
-
-.LocationFinder select {
-  border: 0;
-  height: 100%;
-  width: 100%;
-}
-
-@media (max-width: 669px) {
-  .LocationFinder select {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder select {
-    border: 1px solid rgba(191, 208, 216, 0.27);
-    margin-bottom: 6px;
-  }
-}
-
-@media (min-width: 670px) {
-  .LocationFinder select {
-    border-left: 1px solid rgba(191, 208, 216, 0.27);
-  }
-}
-
-@media (min-width: 670px) and (max-width: 1023px) {
-  .LocationFinder select:first-of-type {
-    border-left: 0;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder select:not(:first-of-type) {
-    float: left;
-    width: calc(50% - 3px);
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder select:last-of-type {
-    margin-left: 6px;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky select:first-of-type {
-    border: 0;
-    margin-bottom: 0;
-    padding-bottom: 22px;
-    padding-left: 24px;
-    padding-top: 24px;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky select:not(:first-of-type) {
-    display: none;
-  }
-}
-
-.LocationFinder-button {
-  width: 100%;
-}
-
-@media (max-width: 669px) {
-  .LocationFinder-button {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 670px) {
-  .LocationFinder-button {
-    min-width: 128px;
-    width: 20%;
-  }
-}
-
-@media (max-width: 669px) {
-  .LocationFinder.is-sticky .LocationFinder-button {
-    display: none;
-  }
-}
-
-@media (min-width: 670px) {
-  .LocationFinder.is-sticky .LocationFinder-button {
-    -ms-flex-item-align: center;
-        align-self: center;
-    border-radius: 56px;
-    height: 56px;
-    max-width: 220px;
-  }
-}
-
-@media (min-width: 670px) {
-  .LocationFinder-controls {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Introduction
- * @type Atom
  */
 .Introduction {
   font-size: 20px;
@@ -800,11 +576,207 @@
 /**
  * Mixins
  */
+.LocationFinder.is-sticky {
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
+          box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder.is-sticky {
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+  }
+}
+
+.LocationFinder .container {
+  background-color: #fff;
+  position: relative;
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 6.97674vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-height: 90px;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder.is-sticky .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder:not(.is-sticky) .container {
+    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
+  }
+}
+
+.LocationFinder fieldset {
+  border: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder fieldset {
+    width: 80%;
+  }
+}
+
+.LocationFinder legend {
+  color: rgba(37, 57, 93, 0.8);
+  display: block;
+  float: left;
+  font-weight: 700;
+  height: 100%;
+  line-height: 1;
+  width: 22.48062%;
+}
+
+@media (max-width: 63.9375em) {
+  .LocationFinder legend {
+    display: none;
+  }
+}
+
+.LocationFinder legend span {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.LocationFinder label {
+  display: none;
+}
+
+.LocationFinder select {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder select {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder select {
+    border: 1px solid rgba(191, 208, 216, 0.27);
+    margin-bottom: 6px;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder select {
+    border-left: 1px solid rgba(191, 208, 216, 0.27);
+  }
+}
+
+@media (min-width: 41.875em) and (max-width: 63.9375em) {
+  .LocationFinder select:first-of-type {
+    border-left: 0;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder select:not(:first-of-type) {
+    float: left;
+    width: calc(50% - 3px);
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder select:last-of-type {
+    margin-left: 6px;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder.is-sticky select:first-of-type {
+    border: 0;
+    margin-bottom: 0;
+    padding-bottom: 22px;
+    padding-left: 24px;
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder.is-sticky select:not(:first-of-type) {
+    display: none;
+  }
+}
+
+.LocationFinder-button {
+  width: 100%;
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder-button {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder-button {
+    min-width: 128px;
+    width: 20%;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .LocationFinder.is-sticky .LocationFinder-button {
+    display: none;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder.is-sticky .LocationFinder-button {
+    -ms-flex-item-align: center;
+        align-self: center;
+    border-radius: 56px;
+    height: 56px;
+    max-width: 220px;
+  }
+}
+
+@media (min-width: 41.875em) {
+  .LocationFinder-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+  }
+}
 /**
- * Component: Home block
- * @type Organism
+ * Functions
  */
-@media (min-width: 544px) {
+/**
+ * Mixins
+ */
+@media (min-width: 34em) {
   .ImageBlock {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -821,14 +793,14 @@
   position: relative;
 }
 
-@media (max-width: 543px) {
+@media (max-width: 33.9375em) {
   .ImageBlock > a {
     margin-left: -24px;
     width: calc(100% + 48px);
   }
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .ImageBlock--alternate {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -843,26 +815,26 @@
   max-width: 100%;
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .ImageBlock-photo {
     max-height: 720px;
   }
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .ImageBlock--alternate .ImageBlock-photo {
     max-height: 668px;
   }
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .ImageBlock-text {
     margin-left: 10.54264%;
     max-width: 400px;
   }
 }
 
-@media (max-width: 544px) {
+@media (max-width: 33.9375em) {
   .ImageBlock-text h2 {
     margin-top: 32px;
   }
@@ -872,7 +844,7 @@
   margin-left: 0;
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .ImageBlock--alternate .ImageBlock-text {
     margin-right: 9.30233%;
   }
@@ -889,10 +861,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Cover video
- * @type Atom
- */
 .CoverVideo {
   display: block;
   height: 100%;
@@ -903,13 +871,13 @@
 }
 
 .CoverVideo::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5e91a1));
-  background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5d91a1));
+  background: linear-gradient(to bottom, #b5955d 0%, #5d91a1 100%);
   content: "";
   display: block;
   height: 100%;
   left: 0;
-  opacity: 0.26;
+  opacity: 0.27;
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -930,10 +898,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Cover photo
- * @type Atom
- */
 .CoverPhoto {
   display: block;
   height: 100%;
@@ -944,13 +908,13 @@
 }
 
 .CoverPhoto::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5e91a1));
-  background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5d91a1));
+  background: linear-gradient(to bottom, #b5955d 0%, #5d91a1 100%);
   content: "";
   display: block;
   height: 100%;
   left: 0;
-  opacity: 0.26;
+  opacity: 0.27;
   position: absolute;
   top: 0;
   width: 100%;
@@ -969,11 +933,7 @@
 /**
  * Mixins
  */
-/**
- * Page: Home
- * @type page
- */
-@media (max-width: 619px) {
+@media (max-width: 38.6875em) {
   .Banner {
     left: 0;
     position: absolute;
@@ -982,25 +942,25 @@
   }
 }
 
-@media (max-width: 619px) {
+@media (max-width: 38.6875em) {
   .Banner:not(.is-open) {
     background-color: transparent;
   }
 }
 
-@media (max-width: 619px) {
+@media (max-width: 38.6875em) {
   .Hamburger:not(.is-open) {
     color: #fff;
   }
 }
 
-@media (max-width: 619px) {
+@media (max-width: 38.6875em) {
   .Banner:not(.is-open) .Logo {
     color: #fff;
   }
 }
 
-@media (max-width: 619px) {
+@media (max-width: 38.6875em) {
   .Banner:not(.is-open) .Logo-arrow {
     fill: #fff;
   }
@@ -1010,13 +970,13 @@
   z-index: 1000;
 }
 
-@media (max-width: 669px) {
+@media (max-width: 41.8125em) {
   .LocationFinder {
     display: none;
   }
 }
 
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   .LocationFinder {
     margin-top: -3.48837vw;
   }
@@ -1032,13 +992,13 @@
   z-index: 1000;
 }
 
-@media (max-width: 669px) {
+@media (max-width: 41.8125em) {
   .LocationFinderButton {
     margin-top: -22px;
   }
 }
 
-@media (min-width: 670px) {
+@media (min-width: 41.875em) {
   .LocationFinderButton {
     display: none;
   }
@@ -1049,14 +1009,14 @@
   margin-top: 104px;
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .Introduction {
     margin-bottom: 12.71318vw;
     margin-top: 13.48837vw;
   }
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 80.625em) {
   .Introduction {
     margin-bottom: 164px;
     margin-top: 174px;
@@ -1067,13 +1027,13 @@
   margin-top: 96px;
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .ImageBlock {
     margin-top: 14.26357vw;
   }
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 80.625em) {
   .ImageBlock {
     margin-top: 184px;
   }
@@ -1083,13 +1043,13 @@
   margin-top: 136px;
 }
 
-@media (min-width: 544px) {
+@media (min-width: 34em) {
   .Contentinfo {
     margin-top: 35.34884vw;
   }
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 80.625em) {
   .Contentinfo {
     margin-top: 456px;
   }

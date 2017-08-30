@@ -2,18 +2,13 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Filter
- * @type Organism
- */
-
 .Filter {
-  max-width: #{960}px;
+  max-width: #{$max-width-filter}px;
   width: 100%;
 
   label {
     display: inline-block;
-    font-size: 12px;
+    font-size: #{$font-size-heading-6}px;
     margin-bottom: 8px;
   }
 
@@ -36,7 +31,7 @@
   display: flex;
   width: 100%;
 
-  @media (max-width: 699px) {
+  @media (max-width: $mq-max-700) {
     flex-wrap: wrap;
   }
 }
@@ -44,12 +39,12 @@
 .Filter-fieldset:nth-child(1) {
   width: 100%;
 
-  @media (max-width: 699px) {
+  @media (max-width: $mq-max-700) {
     margin-bottom: 20px;
   }
 
-  @media (min-width: 700px) {
-    width: #{(300 / 960) * 100%};
+  @media (min-width: $mq-min-700) {
+    width: #{(300 / $max-width-filter) * 100%};
   }
 }
 
@@ -57,13 +52,13 @@
 .Filter-fieldset:nth-child(3) {
   width: calc(50% - 8px);
 
-  @media (min-width: 700px) {
-    width: #{(190 / 960) * 100%};
+  @media (min-width: $mq-min-700) {
+    width: #{(190 / $max-width-filter) * 100%};
   }
 }
 
 .Filter-fieldset:nth-child(3) {
-  @media (max-width: 699px) {
+  @media (max-width: $mq-max-700) {
     margin-left: 16px;
   }
 }
@@ -74,7 +69,7 @@
     display: block;
     width: 100%;
 
-    @media (max-width: 699px) {
+    @media (max-width: $mq-max-700) {
       padding-left: 16px;
       padding-right: 16px;
     }
@@ -83,11 +78,11 @@
 
 .Filter-button,
 .Filter-fieldset + .Filter-fieldset {
-  @media (min-width: 700px) {
+  @media (min-width: $mq-min-700) {
     margin-left: 8px;
   }
 
-  @media (min-width: 840px) {
+  @media (min-width: $mq-min-840) {
     margin-left: 32px;
   }
 }
@@ -95,21 +90,21 @@
 .Filter-button {
   border-radius: 22px;
 
-  @media (max-width: 699px) {
+  @media (max-width: $mq-max-700) {
     margin-top: 40px;
   }
 
-  @media (min-width: 700px) {
-    width: #{(184 / 960) * 100%};
+  @media (min-width: $mq-min-700) {
+    width: #{(184 / $max-width-filter) * 100%};
   }
 }
 
 .Filter-link {
   display: inline-block;
-  font-size: 12px;
+  font-size: #{$font-size-heading-6}px;
   margin-top: 24px;
 
-  @media (min-width: 700px) {
+  @media (min-width: $mq-min-700) {
     margin-top: 48px;
   }
 }

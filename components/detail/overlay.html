@@ -191,15 +191,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-81075d1d83b7358891bdfb2129980019">index.js</option>
+                <option value="file-9f96db7668618990a6e35a5a17496f46">index.js</option>
                 
-                <option value="file-dfce8f51ab404737821237a9b7d9b8a6">overlay.scss</option>
+                <option value="file-4cc027cab9103435064b668e410f9c8d">overlay.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-81075d1d83b7358891bdfb2129980019" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-9f96db7668618990a6e35a5a17496f46" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -220,7 +220,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/overlay/index.js</span>
+                    <span class="Meta-value">src/components/components/overlay/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -229,7 +229,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-dfce8f51ab404737821237a9b7d9b8a6" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-4cc027cab9103435064b668e410f9c8d" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -241,16 +241,11 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Overlay
- * @type Atom
- */</span>
-
 <span class="hljs-selector-class">.Overlay</span> {
-  <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-variable">$color-background-overlay</span>, <span class="hljs-number">0.2</span>);
+  <span class="hljs-attribute">background-color</span>: rgba(<span class="hljs-variable">$color-background-overlay</span>, <span class="hljs-variable">$opacity-20</span>);
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100vh</span>;
   <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-0</span>;
   <span class="hljs-attribute">position</span>: fixed;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>, visibility <span class="hljs-number">200ms</span>;
@@ -259,7 +254,7 @@
   <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-overlay</span>;
 
   &amp;<span class="hljs-selector-class">.is-open</span> {
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-100</span>;
     <span class="hljs-attribute">visibility</span>: visible;
   }
 }
@@ -275,11 +270,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/overlay/overlay.scss</span>
+                    <span class="Meta-value">src/components/components/overlay/overlay.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">489 Bytes</span>
+                    <span class="Meta-value">472 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -320,7 +315,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/overlay/overlay.hbs</span>
+            <span class="Meta-value">src/components/components/overlay/overlay.hbs</span>
         </li>
         
         
@@ -538,31 +533,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2234,31 +2205,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

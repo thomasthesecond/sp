@@ -2,12 +2,8 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Next page
- */
-
 .NextPage {
-  @media (min-width: 600px) {
+  @media (min-width: $mq-min-600) {
     text-align: center;
   }
 }
@@ -21,9 +17,9 @@
   &:hover,
   &:active,
   &:focus {
-    color: rgba($color-text-heading, 0.7);
+    color: rgba($color-text-heading, $opacity-70);
 
-    @media (min-width: 520px) {
+    @media (min-width: $mq-min-520) {
       .NextPage-icon {
         transform: translateX(#{((66 + 16) / 66) * 1em});
       }
@@ -33,8 +29,8 @@
 
 .NextPage-label {
   @include fluid-type(
-    $min-font-size: 12,
-    $max-font-size: 14,
+    $min-font-size: $font-size-body-small-min,
+    $max-font-size: $font-size-body-small,
     $min-width: 600
   );
 
@@ -63,7 +59,7 @@
     display: none;
   }
 
-  @media (min-width: 520px) {
+  @media (min-width: $mq-min-520) {
     color: $color-text-arrow;
     font-size: #{(66 / $font-size-heading-1) * 1em};
     height: #{(22 / 66) * 1em};

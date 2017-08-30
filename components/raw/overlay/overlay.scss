@@ -2,16 +2,11 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Overlay
- * @type Atom
- */
-
 .Overlay {
-  background-color: rgba($color-background-overlay, 0.2);
+  background-color: rgba($color-background-overlay, $opacity-20);
   height: 100vh;
   left: 0;
-  opacity: 0;
+  opacity: $opacity-0;
   position: fixed;
   top: 0;
   transition: opacity 200ms, visibility 200ms;
@@ -20,7 +15,7 @@
   z-index: $z-index-overlay;
 
   &.is-open {
-    opacity: 1;
+    opacity: $opacity-100;
     visibility: visible;
   }
 }

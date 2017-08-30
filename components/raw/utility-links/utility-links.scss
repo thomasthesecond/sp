@@ -2,26 +2,21 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Utility links
- * @type molecule
- */
-
 .UtilityLinks {
   display: flex;
   font-size: #{$font-size-body-small}px;
   justify-content: space-between;
   width: 100%;
 
-  @media (max-width: 560px) {
-    border-top: 1px solid rgba($color-border-default, 0.37);
+  @media (max-width: $mq-min-560) {
+    border-top: 1px solid rgba($color-border-default, $opacity-37);
     flex-wrap: wrap;
-    line-height: (28 / 12);
+    line-height: (28 / $font-size-body-small-min);
     padding-top: 40px;
   }
 
   a {
-    @media (max-width: 560px) {
+    @media (max-width: $mq-min-560) {
       width: 50%;
     }
   }

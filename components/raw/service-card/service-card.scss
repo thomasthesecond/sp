@@ -2,10 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Service card
- */
-
 .ServiceCard {
   align-items: center;
   color: $color-text-service-card;
@@ -17,24 +13,24 @@
   text-align: center;
   width: 188px;
 
-  @media (max-width: 479px) {
+  @media (max-width: $mq-max-480) {
     justify-content: center;
   }
 
-  @media (min-width: 480px) {
+  @media (min-width: $mq-min-480) {
     background-color: $color-background-default;
     border-radius: 8px;
     box-shadow: $shadow-service-card;
     font-size: #{$font-size-default}px;
     height: 188px;
-    line-height: (22 / 16);
+    line-height: (22 / $font-size-default);
   }
 }
 
 .ServiceCard .icon {
   font-size: #{(64 / $font-size-default) * 1em};
 
-  @media (min-width: 480px) {
+  @media (min-width: $mq-min-480) {
     position: relative;
     top: 45px;
   }
@@ -43,17 +39,17 @@
 .ServiceCard-title {
   display: inline-block;
 
-  @media (max-width: 479px) {
+  @media (max-width: $mq-max-480) {
     margin-top: 12px;
   }
 
-  @media (min-width: 480px) {
+  @media (min-width: $mq-min-480) {
     max-width: 40%;
     position: relative;
     top: 57px;
   }
 
-  @media (min-width: 624px) {
+  @media (min-width: $mq-min-624) {
     max-width: 48%;
   }
 }
@@ -63,7 +59,7 @@
 .ServiceCards .ServiceCard {
   width: auto;
 
-  @media (max-width: 479px) {
+  @media (max-width: $mq-max-480) {
     background-color: transparent;
     border-radius: 0;
     box-shadow: none;
@@ -74,22 +70,22 @@
 }
 
 .ServiceCards .ServiceCard {
-  @media (max-width: 479px) {
+  @media (max-width: $mq-max-480) {
     margin-top: 64px;
   }
 
-  @media (min-width: 480px) and (max-width: 686px) {
+  @media (min-width: $mq-min-480) and (max-width: $mq-max-687) {
     flex: 0 1 #{(285 / $max-width-content) * 100%};
   }
 
-  @media (min-width: 687px) {
+  @media (min-width: $mq-min-687) {
     flex: 0 1 #{(188 / $max-width-content) * 100%};
   }
 
   &:nth-child(2),
   &:nth-child(4),
   &:nth-child(6) {
-    @media (min-width: 480px) and (max-width: 686px) {
+    @media (min-width: $mq-min-480) and (max-width: $mq-max-687) {
       margin-left: #{(30 / $max-width-content) * 100%};
     }
   }
@@ -98,7 +94,7 @@
   &:nth-child(4),
   &:nth-child(5),
   &:nth-child(6) {
-    @media (min-width: 480px) and (max-width: 686px) {
+    @media (min-width: $mq-min-480) and (max-width: $mq-max-687) {
       margin-top: #{(30 / $max-width-content) * 100%};
     }
   }
@@ -107,7 +103,7 @@
   &:nth-child(3),
   &:nth-child(5),
   &:nth-child(6) {
-    @media (min-width: 687px) {
+    @media (min-width: $mq-min-687) {
       margin-left: #{(30 / $max-width-content) * 100%};
     }
   }
@@ -115,7 +111,7 @@
   &:nth-child(4),
   &:nth-child(5),
   &:nth-child(6) {
-    @media (min-width: 687px) {
+    @media (min-width: $mq-min-687) {
       margin-top: #{(30 / $max-width-content) * 100%};
     }
   }

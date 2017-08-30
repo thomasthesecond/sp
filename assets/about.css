@@ -332,10 +332,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Masthead
- * @type Atom
- */
 .Masthead {
   height: 55vw;
   max-height: 466px;
@@ -381,10 +377,6 @@
  */
 /**
  * Mixins
- */
-/**
- * Component: Introduction
- * @type Atom
  */
 .Introduction {
   font-size: 20px;
@@ -435,10 +427,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Cover photo
- * @type Atom
- */
 .CoverPhoto {
   display: block;
   height: 100%;
@@ -449,13 +437,13 @@
 }
 
 .CoverPhoto::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5e91a1));
-  background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5d91a1));
+  background: linear-gradient(to bottom, #b5955d 0%, #5d91a1 100%);
   content: "";
   display: block;
   height: 100%;
   left: 0;
-  opacity: 0.26;
+  opacity: 0.27;
   position: absolute;
   top: 0;
   width: 100%;
@@ -473,10 +461,6 @@
  */
 /**
  * Mixins
- */
-/**
- * Component: Timeline
- * @type Organism
  */
 .Timeline {
   margin-top: 3em;
@@ -503,9 +487,6 @@
  */
 /**
  * Mixins
- */
-/**
- * Component: Team member
  */
 .TeamMember:not(.TeamMember--small) {
   -webkit-box-align: center;
@@ -706,10 +687,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Sub Navigation
- * @type Molecule
- */
 .SubNavigation {
   font-size: 12px;
   background-color: #fff;
@@ -731,7 +708,7 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .SubNavigation {
     height: 90px;
   }
@@ -775,14 +752,14 @@
   width: 100%;
 }
 
-@media (max-width: 1006px) {
+@media (max-width: 62.875em) {
   .SubNavigation-list {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 
-@media (min-width: 1007px) {
+@media (min-width: 62.9375em) {
   .SubNavigation-list {
     margin-left: auto;
     margin-right: auto;
@@ -798,7 +775,7 @@
   position: relative;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .SubNavigation-item {
     margin-left: 14px;
     margin-right: 14px;
@@ -827,7 +804,7 @@
   transition: color 200ms;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .SubNavigation-link {
     padding-bottom: 34px;
     padding-top: 39px;
@@ -853,160 +830,6 @@
  */
 /**
  * Mixins
- */
-/**
- * Component: Service card
- */
-.ServiceCard {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #77919e;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 14px;
-  line-height: 1.35714;
-  min-width: 124px;
-  text-align: center;
-  width: 188px;
-}
-
-@media (max-width: 479px) {
-  .ServiceCard {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media (min-width: 480px) {
-  .ServiceCard {
-    background-color: #fff;
-    border-radius: 8px;
-    -webkit-box-shadow: 0 22px 54px rgba(107, 119, 140, 0.21);
-            box-shadow: 0 22px 54px rgba(107, 119, 140, 0.21);
-    font-size: 16px;
-    height: 188px;
-    line-height: 1.375;
-  }
-}
-
-.ServiceCard .icon {
-  font-size: 4em;
-}
-
-@media (min-width: 480px) {
-  .ServiceCard .icon {
-    position: relative;
-    top: 45px;
-  }
-}
-
-.ServiceCard-title {
-  display: inline-block;
-}
-
-@media (max-width: 479px) {
-  .ServiceCard-title {
-    margin-top: 12px;
-  }
-}
-
-@media (min-width: 480px) {
-  .ServiceCard-title {
-    max-width: 40%;
-    position: relative;
-    top: 57px;
-  }
-}
-
-@media (min-width: 624px) {
-  .ServiceCard-title {
-    max-width: 48%;
-  }
-}
-
-.ServiceCards .ServiceCard {
-  width: auto;
-}
-
-@media (max-width: 479px) {
-  .ServiceCards .ServiceCard {
-    background-color: transparent;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    font-size: 14px;
-    height: auto;
-    line-height: 1.35714;
-  }
-}
-
-@media (max-width: 479px) {
-  .ServiceCards .ServiceCard {
-    margin-top: 64px;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 686px) {
-  .ServiceCards .ServiceCard {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 45.2381%;
-            flex: 0 1 45.2381%;
-  }
-}
-
-@media (min-width: 687px) {
-  .ServiceCards .ServiceCard {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 29.84127%;
-            flex: 0 1 29.84127%;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 686px) {
-  .ServiceCards .ServiceCard:nth-child(2), .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(6) {
-    margin-left: 4.7619%;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 686px) {
-  .ServiceCards .ServiceCard:nth-child(3), .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
-    margin-top: 4.7619%;
-  }
-}
-
-@media (min-width: 687px) {
-  .ServiceCards .ServiceCard:nth-child(2), .ServiceCards .ServiceCard:nth-child(3), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
-    margin-left: 4.7619%;
-  }
-}
-
-@media (min-width: 687px) {
-  .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
-    margin-top: 4.7619%;
-  }
-}
-
-@supports (display: grid) {
-  .ServiceCards .ServiceCard {
-    margin-left: 0 !important;
-    margin-top: 0 !important;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Service cards
  */
 .ServiceCards {
   display: -webkit-box;
@@ -1040,10 +863,155 @@
 /**
  * Mixins
  */
+.ServiceCard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #77919e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  line-height: 1.35714;
+  min-width: 124px;
+  text-align: center;
+  width: 188px;
+}
+
+@media (max-width: 29.9375em) {
+  .ServiceCard {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 30em) {
+  .ServiceCard {
+    background-color: #fff;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 22px 54px rgba(107, 119, 140, 0.21);
+            box-shadow: 0 22px 54px rgba(107, 119, 140, 0.21);
+    font-size: 16px;
+    height: 188px;
+    line-height: 1.375;
+  }
+}
+
+.ServiceCard .icon {
+  font-size: 4em;
+}
+
+@media (min-width: 30em) {
+  .ServiceCard .icon {
+    position: relative;
+    top: 45px;
+  }
+}
+
+.ServiceCard-title {
+  display: inline-block;
+}
+
+@media (max-width: 29.9375em) {
+  .ServiceCard-title {
+    margin-top: 12px;
+  }
+}
+
+@media (min-width: 30em) {
+  .ServiceCard-title {
+    max-width: 40%;
+    position: relative;
+    top: 57px;
+  }
+}
+
+@media (min-width: 39em) {
+  .ServiceCard-title {
+    max-width: 48%;
+  }
+}
+
+.ServiceCards .ServiceCard {
+  width: auto;
+}
+
+@media (max-width: 29.9375em) {
+  .ServiceCards .ServiceCard {
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-size: 14px;
+    height: auto;
+    line-height: 1.35714;
+  }
+}
+
+@media (max-width: 29.9375em) {
+  .ServiceCards .ServiceCard {
+    margin-top: 64px;
+  }
+}
+
+@media (min-width: 30em) and (max-width: 42.875em) {
+  .ServiceCards .ServiceCard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 45.2381%;
+            flex: 0 1 45.2381%;
+  }
+}
+
+@media (min-width: 42.9375em) {
+  .ServiceCards .ServiceCard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 29.84127%;
+            flex: 0 1 29.84127%;
+  }
+}
+
+@media (min-width: 30em) and (max-width: 42.875em) {
+  .ServiceCards .ServiceCard:nth-child(2), .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(6) {
+    margin-left: 4.7619%;
+  }
+}
+
+@media (min-width: 30em) and (max-width: 42.875em) {
+  .ServiceCards .ServiceCard:nth-child(3), .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
+    margin-top: 4.7619%;
+  }
+}
+
+@media (min-width: 42.9375em) {
+  .ServiceCards .ServiceCard:nth-child(2), .ServiceCards .ServiceCard:nth-child(3), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
+    margin-left: 4.7619%;
+  }
+}
+
+@media (min-width: 42.9375em) {
+  .ServiceCards .ServiceCard:nth-child(4), .ServiceCards .ServiceCard:nth-child(5), .ServiceCards .ServiceCard:nth-child(6) {
+    margin-top: 4.7619%;
+  }
+}
+
+@supports (display: grid) {
+  .ServiceCards .ServiceCard {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+}
 /**
- * Component: Leadership team
+ * Functions
  */
-@media (min-width: 480px) {
+/**
+ * Mixins
+ */
+@media (min-width: 30em) {
   .LeadershipTeam {
     margin-left: auto;
     margin-right: auto;
@@ -1051,7 +1019,7 @@
   }
 }
 
-@media (min-width: 615px) {
+@media (min-width: 38.4375em) {
   .LeadershipTeam {
     position: relative;
     top: -56px;
@@ -1070,7 +1038,7 @@
     grid-row-gap: 64px;
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (min-width: 480px) {
+  @media (min-width: 30em) {
     .LeadershipTeam {
       grid-column-gap: 24px;
       grid-row-gap: 56px;
@@ -1080,7 +1048,7 @@
       max-width: 904px;
     }
   }
-  @media (min-width: 808px) {
+  @media (min-width: 50.5em) {
     .LeadershipTeam {
       grid-column-gap: 80px;
     }
@@ -1097,69 +1065,6 @@
  */
 /**
  * Mixins
- */
-/**
- * Component: Feature
- * @type Organism
- */
-.Feature {
-  height: 55.75vw;
-  max-height: 508px;
-  min-height: 446px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.Feature--tall {
-  height: 82.5vw;
-  max-height: 1000px;
-  min-height: 660px;
-}
-
-.Feature .container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  position: relative;
-  width: calc(100% - 48px);
-  z-index: 1;
-}
-
-.Feature-content {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 760px;
-  z-index: 1;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-/**
- * Component: Highlight
- * @type Molecule
  */
 .Highlight {
   -webkit-box-align: start;
@@ -1270,9 +1175,60 @@
 /**
  * Mixins
  */
+.Feature {
+  height: 55.75vw;
+  max-height: 508px;
+  min-height: 446px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.Feature--tall {
+  height: 82.5vw;
+  max-height: 1000px;
+  min-height: 660px;
+}
+
+.Feature .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: relative;
+  width: calc(100% - 48px);
+  z-index: 1;
+}
+
+.Feature-content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 760px;
+  z-index: 1;
+}
 /**
- * Page: About
- * @type page
+ * Functions
+ */
+/**
+ * Mixins
  */
 .Introduction {
   margin-bottom: 130px;
@@ -1402,9 +1358,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Modal
- */
 .Modal {
   background-color: #fff;
   -webkit-box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
@@ -1425,7 +1378,7 @@
   z-index: 9000;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 29.9375em) {
   .Modal {
     height: 100vh;
     top: 0;
@@ -1433,7 +1386,7 @@
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   .Modal {
     max-height: 80vh;
     max-width: 800px;
@@ -1449,7 +1402,7 @@
   visibility: visible;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   .Modal.is-open {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -1485,7 +1438,7 @@
   padding: 24px 48px 24px 24px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   .Modal-content {
     padding-left: 48px;
   }
@@ -1495,10 +1448,6 @@
  */
 /**
  * Mixins
- */
-/**
- * Component: Overlay
- * @type Atom
  */
 .Overlay {
   background-color: rgba(0, 0, 0, 0.2);

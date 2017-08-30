@@ -2,12 +2,8 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Horizontal rule
- */
-
 hr {
-  background-color: rgba($color-border-default, 0.47);
+  background-color: rgba($color-border-default, $opacity-47);
   border: 0;
   height: 1px;
   margin-bottom: 0;

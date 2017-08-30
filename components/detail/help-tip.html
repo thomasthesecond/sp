@@ -201,15 +201,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-1751c873ce26b27d42ebb32ca5a4617a">help-tip.scss</option>
+                <option value="file-49aa91cdd3589a6945416a159d0ba417">help-tip.scss</option>
                 
-                <option value="file-a3035fb0e38da71f8213bae55248716e">index.js</option>
+                <option value="file-c11db2681ff0a14c17e8403feefaa8de">index.js</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-1751c873ce26b27d42ebb32ca5a4617a" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-49aa91cdd3589a6945416a159d0ba417" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -221,23 +221,18 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Help tip
- * @type Atom
- */</span>
-
 <span class="hljs-selector-class">.HelpTip</span> {
   <span class="hljs-attribute">align-items</span>: center;
-  <span class="hljs-attribute">border</span>: #{(<span class="hljs-number">1</span> / <span class="hljs-number">11</span>) * <span class="hljs-number">1em</span>} solid currentColor;
+  <span class="hljs-attribute">border</span>: #{(<span class="hljs-number">1</span> / <span class="hljs-variable">$font-size-help-tip</span>) * <span class="hljs-number">1em</span>} solid currentColor;
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-help-tip</span>;
   <span class="hljs-attribute">display</span>: inline-flex;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">11px</span>;
-  <span class="hljs-attribute">height</span>: #{(<span class="hljs-number">20</span> / <span class="hljs-number">11</span>) * <span class="hljs-number">1em</span>};
+  <span class="hljs-attribute">font-size</span>: #{<span class="hljs-variable">$font-size-help-tip</span>}px;
+  <span class="hljs-attribute">height</span>: #{(<span class="hljs-number">20</span> / <span class="hljs-variable">$font-size-help-tip</span>) * <span class="hljs-number">1em</span>};
   <span class="hljs-attribute">justify-content</span>: center;
   <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">transform</span>: color <span class="hljs-number">200ms</span>;
-  <span class="hljs-attribute">width</span>: #{(<span class="hljs-number">20</span> / <span class="hljs-number">11</span>) * <span class="hljs-number">1em</span>};
+  <span class="hljs-attribute">width</span>: #{(<span class="hljs-number">20</span> / <span class="hljs-variable">$font-size-help-tip</span>) * <span class="hljs-number">1em</span>};
 
   &amp;:hover,
   &amp;:active,
@@ -257,16 +252,16 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/help-tip/help-tip.scss</span>
+                    <span class="Meta-value">src/components/components/help-tip/help-tip.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">568 Bytes</span>
+                    <span class="Meta-value">593 Bytes</span>
                 </li>
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-a3035fb0e38da71f8213bae55248716e" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-c11db2681ff0a14c17e8403feefaa8de" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -287,7 +282,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/help-tip/index.js</span>
+                    <span class="Meta-value">src/components/components/help-tip/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -332,7 +327,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/help-tip/help-tip.hbs</span>
+            <span class="Meta-value">src/components/components/help-tip/help-tip.hbs</span>
         </li>
         
         
@@ -544,31 +539,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2240,31 +2211,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

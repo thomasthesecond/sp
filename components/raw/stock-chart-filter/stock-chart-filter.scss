@@ -2,10 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Stock chart filter
- */
-
 .StockChartFilter {
   align-items: center;
   display: flex;
@@ -17,7 +13,7 @@
 .StockChartFilter-controls {
   display: flex;
 
-  @media (max-width: 719px) {
+  @media (max-width: $mq-max-720) {
     margin-top: 40px;
     width: 100%;
   }
@@ -28,7 +24,7 @@
     padding-top: 0;
     width: calc(50% - 4px);
 
-    @media (min-width: 436px) {
+    @media (min-width: $mq-min-436) {
       width: 190px;
     }
   }
@@ -36,7 +32,7 @@
   select:not(:first-of-type) {
     margin-left: 8px;
 
-    @media (min-width: 720px) {
+    @media (min-width: $mq-min-720) {
       margin-left: 24px;
     }
   }

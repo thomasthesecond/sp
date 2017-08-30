@@ -775,17 +775,17 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-d5b41b9479b0a6d1f3d8ab21107f88eb">index.js</option>
+                <option value="file-37b15888b875c68d6127f8243337aacd">index.js</option>
                 
-                <option value="file-ca65b7c6498a55664c6b028fc73bf723">location-finder.js</option>
+                <option value="file-29b4611047592cd5cfee1c7993844313">location-finder.js</option>
                 
-                <option value="file-b2495c7abec5a15579075003e5e1cf19">location-finder.scss</option>
+                <option value="file-df46a8b0afa77dd6fcdc3f8ad5a2e617">location-finder.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-d5b41b9479b0a6d1f3d8ab21107f88eb" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-37b15888b875c68d6127f8243337aacd" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -809,7 +809,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/location-finder/index.js</span>
+                    <span class="Meta-value">src/components/components/location-finder/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -818,7 +818,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-ca65b7c6498a55664c6b028fc73bf723" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-29b4611047592cd5cfee1c7993844313" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -872,7 +872,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/location-finder/location-finder.js</span>
+                    <span class="Meta-value">src/components/components/location-finder/location-finder.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -881,7 +881,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-b2495c7abec5a15579075003e5e1cf19" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-df46a8b0afa77dd6fcdc3f8ad5a2e617" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -893,48 +893,17 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Location finder
- * @type Organism
- */</span>
-
 <span class="hljs-variable">$location-finder-fieldset-width</span>: <span class="hljs-number">1032</span>;
 <span class="hljs-variable">$location-finder-legend-width</span>: <span class="hljs-number">232</span>;
 <span class="hljs-variable">$location-finder-controls-width</span>: <span class="hljs-variable">$location-finder-fieldset-width</span> - <span class="hljs-variable">$location-finder-legend-width</span>;
 <span class="hljs-variable">$location-finder-button-width</span>: <span class="hljs-number">258</span>;
 
 <span class="hljs-selector-class">.LocationFinder</span> {
-  <span class="hljs-comment">// background-color: $color-background-default;</span>
-  <span class="hljs-comment">// position: relative;</span>
-
-  <span class="hljs-comment">// @media (min-width: 670px) {</span>
-  <span class="hljs-comment">//   box-shadow: 0 2px 4px rgba(#000, 0.5),</span>
-  <span class="hljs-comment">//     0 36px 84px rgba(#042435, 0.39);</span>
-  <span class="hljs-comment">//   display: flex;</span>
-  <span class="hljs-comment">//   height: #{(90 / $max-width) * 100vw};</span>
-  <span class="hljs-comment">//   min-height: 60px;</span>
-  <span class="hljs-comment">//   max-height: 90px;</span>
-  <span class="hljs-comment">// }</span>
-
-  @<span class="hljs-keyword">media</span> (min-width: 670px) {
-    <span class="hljs-comment">// background-color: rgba(#fff, 0);</span>
-    <span class="hljs-comment">// box-shadow: 0 2px 4px rgba(#000, 0),</span>
-    <span class="hljs-comment">//   0 36px 84px rgba(#042435, 0);</span>
-    <span class="hljs-comment">// transition: background-color 200ms, box-shadow 200ms;</span>
-  }
-
   &amp;<span class="hljs-selector-class">.is-sticky</span> {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
     <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-location-finder-sticky</span>;
 
-    @<span class="hljs-keyword">media</span> (max-width: 669px) {
-      <span class="hljs-comment">// box-shadow: $shadow-location-finder-sticky;</span>
-      <span class="hljs-comment">// padding-top: #{$spacing-gutter}px;</span>
-      <span class="hljs-comment">// height: 70px;</span>
-      <span class="hljs-comment">// overflow: hidden;</span>
-    }
-
-    @<span class="hljs-keyword">media</span> (min-width: 670px) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
       <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-location-finder</span>;
     }
   }
@@ -944,7 +913,7 @@
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
   <span class="hljs-attribute">position</span>: relative;
 
-  @<span class="hljs-keyword">media</span> (min-width: 670px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
     <span class="hljs-attribute">display</span>: flex;
     <span class="hljs-attribute">height</span>: #{(<span class="hljs-number">90</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
     <span class="hljs-attribute">justify-content</span>: space-between;
@@ -954,14 +923,14 @@
 }
 
 <span class="hljs-selector-class">.LocationFinder</span><span class="hljs-selector-class">.is-sticky</span> <span class="hljs-selector-class">.container</span> {
-  @<span class="hljs-keyword">media</span> (max-width: 669px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-670</span>) {
     <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
   }
 }
 
 <span class="hljs-selector-class">.LocationFinder</span>:not(<span class="hljs-selector-class">.is-sticky</span>) <span class="hljs-selector-class">.container</span> {
-  @<span class="hljs-keyword">media</span> (min-width: 670px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
     <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-location-finder</span>;
   }
 }
@@ -973,34 +942,21 @@
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 670px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
     <span class="hljs-attribute">width</span>: #{(<span class="hljs-variable">$location-finder-fieldset-width</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100%</span>};
   }
 }
 
-<span class="hljs-comment">// .LocationFinder.is-sticky fieldset {</span>
-<span class="hljs-comment">//   @media (max-width: 669px) {</span>
-<span class="hljs-comment">//     margin-bottom: -24px;</span>
-<span class="hljs-comment">//   }</span>
-<span class="hljs-comment">// }</span>
-
 <span class="hljs-selector-class">.LocationFinder</span> <span class="hljs-selector-tag">legend</span> {
-  <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-heading</span>, <span class="hljs-number">0.79</span>);
+  <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-heading</span>, <span class="hljs-variable">$opacity-80</span>);
   <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">float</span>: left;
   <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-bold</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;
-  <span class="hljs-comment">// padding-left: #{(60 / $max-width) * 100%};</span>
-  <span class="hljs-comment">// padding-right: #{(60 / $max-width) * 100%};</span>
-  <span class="hljs-comment">// padding-left: 60px;</span>
-  <span class="hljs-comment">// padding-right: 60px;</span>
-  <span class="hljs-comment">// padding-top: 39px;</span>
-  <span class="hljs-comment">// width: 232px;</span>
-  <span class="hljs-comment">// min-width: 232px;</span>
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-reset</span>;
   <span class="hljs-attribute">width</span>: #{(<span class="hljs-variable">$location-finder-legend-width</span> / <span class="hljs-variable">$location-finder-fieldset-width</span>) * <span class="hljs-number">100%</span>};
 
-  @<span class="hljs-keyword">media</span> (max-width: 1023px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-1024</span>) {
     <span class="hljs-attribute">display</span>: none;
   }
 
@@ -1023,35 +979,34 @@
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 
-  @<span class="hljs-keyword">media</span> (max-width: 669px) {
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
-    <span class="hljs-comment">// transition: opacity 200ms, visibility 200ms;</span>
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-670</span>) {
+    <span class="hljs-attribute">font-size</span>: #{<span class="hljs-variable">$font-size-heading-6</span>}px;
   }
 
-  @<span class="hljs-keyword">media</span> (max-width: 669px) {
-    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-number">0.27</span>);
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-670</span>) {
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-variable">$opacity-27</span>);
     <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">6px</span>;
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 670px) {
-    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-number">0.27</span>);
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-variable">$opacity-27</span>);
   }
 
   &amp;:first-of-type {
-    @<span class="hljs-keyword">media</span> (min-width: 670px) and (max-width: 1023px) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) and (max-width: <span class="hljs-variable">$mq-max-1024</span>) {
       <span class="hljs-attribute">border-left</span>: <span class="hljs-number">0</span>;
     }
   }
 
   &amp;:not(:first-of-type) {
-    @<span class="hljs-keyword">media</span> (max-width: 669px) {
+    @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-670</span>) {
       <span class="hljs-attribute">float</span>: left;
       <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">50%</span> - <span class="hljs-number">3px</span>);
     }
   }
 
   &amp;:last-of-type {
-    @<span class="hljs-keyword">media</span> (max-width: 669px) {
+    @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-670</span>) {
       <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">6px</span>;
     }
   }
@@ -1059,7 +1014,7 @@
 
 <span class="hljs-selector-class">.LocationFinder</span><span class="hljs-selector-class">.is-sticky</span> <span class="hljs-selector-tag">select</span> {
   &amp;:first-of-type {
-    @<span class="hljs-keyword">media</span> (max-width: 669px) {
+    @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-670</span>) {
       <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
       <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
       <span class="hljs-attribute">padding-bottom</span>: #{<span class="hljs-variable">$spacing-gutter</span> - <span class="hljs-number">2</span>}px;
@@ -1069,9 +1024,7 @@
   }
 
   &amp;:not(:first-of-type) {
-    @<span class="hljs-keyword">media</span> (max-width: 669px) {
-      <span class="hljs-comment">// opacity: 0;</span>
-      <span class="hljs-comment">// visibility: hidden;</span>
+    @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-670</span>) {
       <span class="hljs-attribute">display</span>: none;
     }
   }
@@ -1080,32 +1033,21 @@
 <span class="hljs-selector-class">.LocationFinder-button</span> {
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 
-  @<span class="hljs-keyword">media</span> (max-width: 669px) {
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
-    <span class="hljs-comment">// padding-bottom: 18px;</span>
-    <span class="hljs-comment">// padding-top: 18px;</span>
-    <span class="hljs-comment">// transition: opacity 200ms, visibility 200ms;</span>
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-670</span>) {
+    <span class="hljs-attribute">font-size</span>: #{<span class="hljs-variable">$font-size-heading-6</span>}px;
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 670px) {
-    <span class="hljs-comment">// padding-left: #{(100 / $max-width) * 100%};</span>
-    <span class="hljs-comment">// padding-right: #{(100 / $max-width) * 100%};</span>
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
     <span class="hljs-attribute">min-width</span>: <span class="hljs-number">128px</span>;
-    <span class="hljs-comment">// min-width: 258px;</span>
-    <span class="hljs-comment">// width: 258px;</span>
-    <span class="hljs-comment">// transition: border-radius 200ms, height 200ms;</span>
     <span class="hljs-attribute">width</span>: #{(<span class="hljs-variable">$location-finder-button-width</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100%</span>};
-    <span class="hljs-comment">// width: #{(258 / 1075) * 100%};</span>
   }
 
   <span class="hljs-selector-class">.LocationFinder</span><span class="hljs-selector-class">.is-sticky</span> &amp; {
-    @<span class="hljs-keyword">media</span> (max-width: 669px) {
-      <span class="hljs-comment">// opacity: 0;</span>
-      <span class="hljs-comment">// visibility: hidden;</span>
+    @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-670</span>) {
       <span class="hljs-attribute">display</span>: none;
     }
 
-    @<span class="hljs-keyword">media</span> (min-width: 670px) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
       <span class="hljs-attribute">align-self</span>: center;
       <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">56px</span>;
       <span class="hljs-attribute">height</span>: <span class="hljs-number">56px</span>;
@@ -1117,10 +1059,9 @@
 <span class="hljs-comment">// Fixes a bug in Webkit browsers where flexbox</span>
 <span class="hljs-comment">// doesn’t work with fieldset</span>
 <span class="hljs-selector-class">.LocationFinder-controls</span> {
-  @<span class="hljs-keyword">media</span> (min-width: 670px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
     <span class="hljs-attribute">display</span>: flex;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
-    <span class="hljs-comment">// width: #{($location-finder-controls-width / $max-width) * 100%};</span>
   }
 }
 </pre>
@@ -1135,11 +1076,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/location-finder/location-finder.scss</span>
+                    <span class="Meta-value">src/components/components/location-finder/location-finder.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">5.2 KB</span>
+                    <span class="Meta-value">3.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -1180,7 +1121,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/location-finder/location-finder.hbs</span>
+            <span class="Meta-value">src/components/components/location-finder/location-finder.hbs</span>
         </li>
         
         <li class="Meta-item">
@@ -1435,31 +1376,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -3131,31 +3048,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

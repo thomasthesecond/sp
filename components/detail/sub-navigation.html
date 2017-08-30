@@ -265,17 +265,17 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-eaa76b9676c15fb4438f8efc32a0ea9e">index.js</option>
+                <option value="file-3c12627a14239958a28ea7ecf3a6b220">index.js</option>
                 
-                <option value="file-a320b4d2f284b79c8aaf5eaf76bb6147">sub-navigation.js</option>
+                <option value="file-cc2b7c53beeabd90f7a710afa329d28b">sub-navigation.js</option>
                 
-                <option value="file-dcd8079b810ac40332975d72872251fc">sub-navigation.scss</option>
+                <option value="file-64bf2ec449060bf2e85376777dc9b307">sub-navigation.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-eaa76b9676c15fb4438f8efc32a0ea9e" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-3c12627a14239958a28ea7ecf3a6b220" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -299,7 +299,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/sub-navigation/index.js</span>
+                    <span class="Meta-value">src/components/components/sub-navigation/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -308,7 +308,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-a320b4d2f284b79c8aaf5eaf76bb6147" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-cc2b7c53beeabd90f7a710afa329d28b" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -483,7 +483,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/sub-navigation/sub-navigation.js</span>
+                    <span class="Meta-value">src/components/components/sub-navigation/sub-navigation.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -492,7 +492,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-dcd8079b810ac40332975d72872251fc" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-64bf2ec449060bf2e85376777dc9b307" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -504,11 +504,6 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Sub Navigation
- * @type Molecule
- */</span>
-
 @<span class="hljs-keyword">mixin</span> marker() {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-sub-navigation-marker</span>;
   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
@@ -518,31 +513,20 @@
 
 <span class="hljs-selector-class">.SubNavigation</span> {
   @<span class="hljs-keyword">include</span> fluid-type(
-    <span class="hljs-variable">$min-font-size</span>: 12,
+    <span class="hljs-variable">$min-font-size</span>: <span class="hljs-variable">$font-size-body-small-min</span>,
     <span class="hljs-variable">$max-font-size</span>: <span class="hljs-variable">$font-size-default</span>,
     <span class="hljs-variable">$min-width</span>: 600
   );
 
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
-  <span class="hljs-comment">// border-bottom: 1px solid #fff;</span>
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-default</span>;
-  <span class="hljs-comment">// height: 81px;</span>
   <span class="hljs-attribute">height</span>: <span class="hljs-number">60px</span>;
   <span class="hljs-attribute">overflow</span>: hidden;
-  <span class="hljs-comment">// transition: border-color 200ms;</span>
   <span class="hljs-attribute">position</span>: relative;
 
-  <span class="hljs-comment">// @media (max-width: 599px) {</span>
-  <span class="hljs-comment">//   border-bottom-color: rgba(#bfd0d8, 0.37);</span>
-  <span class="hljs-comment">// }</span>
-
-  @<span class="hljs-keyword">media</span> (min-width: 600px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-600</span>) {
     <span class="hljs-attribute">height</span>: <span class="hljs-number">90px</span>;
   }
-
-  <span class="hljs-comment">// &amp;.is-sticky {</span>
-  <span class="hljs-comment">//   border-bottom-color: rgba(#bfd0d8, 0.37);</span>
-  <span class="hljs-comment">// }</span>
 
   &amp;::after,
   &amp;::before {
@@ -567,13 +551,8 @@
 }
 
 <span class="hljs-selector-class">.SubNavigation-list</span> {
-  <span class="hljs-comment">// border-bottom: 1px solid rgba($color-border-default, 0.37);</span>
-  <span class="hljs-comment">// color: currentColor;</span>
-  <span class="hljs-comment">// font-family: sans-serif;</span>
-  <span class="hljs-comment">// font-size: 16px;</span>
-  <span class="hljs-comment">// height: calc(100% + 15px);</span>
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-reset</span>;
   <span class="hljs-attribute">list-style</span>: none;
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
@@ -586,20 +565,16 @@
   <span class="hljs-attribute">white-space</span>: nowrap;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
 
-  @<span class="hljs-keyword">media</span> (max-width: 1006px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-1007</span>) {
     <span class="hljs-attribute">padding-left</span>: #{(<span class="hljs-variable">$spacing-gutter</span> - <span class="hljs-number">14</span>)}px;
     <span class="hljs-attribute">padding-right</span>: #{(<span class="hljs-variable">$spacing-gutter</span> - <span class="hljs-number">14</span>)}px;
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 1007px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-1007</span>) {
     <span class="hljs-attribute">margin-left</span>: auto;
     <span class="hljs-attribute">margin-right</span>: auto;
     <span class="hljs-attribute">max-width</span>: #{<span class="hljs-variable">$max-width</span>}px;
   }
-
-  <span class="hljs-comment">// .SubNavigation:not(.SubNavigation--scrollSpy) &amp; {</span>
-  <span class="hljs-comment">//   border-bottom-color: #fff;</span>
-  <span class="hljs-comment">// }</span>
 }
 
 <span class="hljs-selector-class">.SubNavigation-item</span> {
@@ -609,7 +584,7 @@
   <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">8px</span>;
   <span class="hljs-attribute">position</span>: relative;
 
-  @<span class="hljs-keyword">media</span> (min-width: 600px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-600</span>) {
     <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">14px</span>;
     <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">14px</span>;
   }
@@ -621,7 +596,7 @@
 
     <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
     <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-100</span>;
     <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   }
 }
@@ -635,49 +610,23 @@
   <span class="hljs-attribute">text-decoration</span>: none;
   <span class="hljs-attribute">transition</span>: color <span class="hljs-number">200ms</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 600px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-600</span>) {
     <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">34px</span>;
     <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">39px</span>;
   }
 
-  <span class="hljs-comment">// &amp;::after {</span>
-  <span class="hljs-comment">//   background-color: currentColor;</span>
-  <span class="hljs-comment">//   bottom: -1px;</span>
-  <span class="hljs-comment">//   content: '';</span>
-  <span class="hljs-comment">//   height: 1px;</span>
-  <span class="hljs-comment">//   left: 0;</span>
-  <span class="hljs-comment">//   position: absolute;</span>
-  <span class="hljs-comment">//   transform: scaleX(0);</span>
-  <span class="hljs-comment">//   transition: background-color $timing--fast $easing--default,</span>
-  <span class="hljs-comment">//     transform ($timing--fast - 50);</span>
-  <span class="hljs-comment">//   width: 100%;</span>
-  <span class="hljs-comment">// }</span>
-
   &amp;:hover,
   &amp;:active {
     <span class="hljs-selector-class">.SubNavigation-item</span>:not(<span class="hljs-selector-class">.is-active</span>) &amp; {
-      <span class="hljs-attribute">color</span>: rgba(<span class="hljs-number">#446975</span>, <span class="hljs-number">0.6</span>);
+      <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-sub-nav</span>, <span class="hljs-variable">$opacity-60</span>);
     }
-
-    <span class="hljs-comment">// &amp;::after {</span>
-    <span class="hljs-comment">//   transform: scaleX(1);</span>
-    <span class="hljs-comment">// }</span>
-  }
-
-  &amp;:active,
-  &amp;:focus {
-    <span class="hljs-comment">// color: rgba(#446975, 0.6);</span>
-
-    <span class="hljs-comment">// &amp;::after {</span>
-    <span class="hljs-comment">//   background-color: currentColor;</span>
-    <span class="hljs-comment">// }</span>
   }
 }
 
 <span class="hljs-selector-class">.SubNavigation-marker</span> {
   @<span class="hljs-keyword">include</span> marker();
 
-  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-0</span>;
   <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
 }
@@ -693,11 +642,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/sub-navigation/sub-navigation.scss</span>
+                    <span class="Meta-value">src/components/components/sub-navigation/sub-navigation.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.6 KB</span>
+                    <span class="Meta-value">2.6 KB</span>
                 </li>
             </ul>
         </div>
@@ -738,7 +687,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/sub-navigation/sub-navigation.hbs</span>
+            <span class="Meta-value">src/components/components/sub-navigation/sub-navigation.hbs</span>
         </li>
         
         
@@ -972,31 +921,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2668,31 +2593,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

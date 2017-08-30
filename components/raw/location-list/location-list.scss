@@ -2,13 +2,8 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Location list
- * @type Molecule
- */
-
 .LocationList h2:not(:first-of-type) {
-  border-top: 1px solid rgba($color-border-default, 0.47);
+  border-top: 1px solid rgba($color-border-default, $opacity-47);
   margin-top: 48px;
   padding-top: 40px;
 

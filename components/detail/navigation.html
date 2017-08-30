@@ -249,15 +249,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-bb445c5dac2f29957d8548b40d5908be">index.js</option>
+                <option value="file-0acdb1a20c4ed02b912c7deffa947eef">index.js</option>
                 
-                <option value="file-3b388e27363a2814795cd5005796f288">navigation.scss</option>
+                <option value="file-83bf345ce1d92c1bcc8b759ab14fabf0">navigation.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-bb445c5dac2f29957d8548b40d5908be" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-0acdb1a20c4ed02b912c7deffa947eef" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -266,7 +266,6 @@
                             
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-keyword">import</span> <span class="hljs-string">"./navigation.scss"</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">"../hamburger/hamburger.scss"</span>;
 </pre>
                             </code>
                             
@@ -279,16 +278,16 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/navigation/index.js</span>
+                    <span class="Meta-value">src/components/components/navigation/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">66 Bytes</span>
+                    <span class="Meta-value">28 Bytes</span>
                 </li>
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-3b388e27363a2814795cd5005796f288" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-83bf345ce1d92c1bcc8b759ab14fabf0" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -300,14 +299,9 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Navigation
- * @type Molecule
- */</span>
-
 <span class="hljs-selector-class">.Navigation</span> {
   @<span class="hljs-keyword">include</span> fluid-type(
-    <span class="hljs-variable">$min-font-size</span>: 12,
+    <span class="hljs-variable">$min-font-size</span>: <span class="hljs-variable">$font-size-body-small-min</span>,
     <span class="hljs-variable">$max-font-size</span>: <span class="hljs-variable">$font-size-default</span>,
     <span class="hljs-variable">$min-width</span>: <span class="hljs-variable">$max-width-banner</span>,
     <span class="hljs-variable">$max-width</span>: 954
@@ -315,9 +309,9 @@
 
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-heading</span>;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
+  <span class="hljs-attribute">font-size</span>: #{<span class="hljs-variable">$font-size-heading-3</span>}px;
   <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">$font-weight-semibold</span>;
-  <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">72</span> / <span class="hljs-number">24</span>);
+  <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">72</span> / <span class="hljs-variable">$font-size-heading-3</span>);
 
   @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-banner</span>) {
     <span class="hljs-attribute">text-align</span>: center;
@@ -363,10 +357,10 @@
   <span class="hljs-attribute">width</span>: <span class="hljs-number">78%</span>;
 
   @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-banner</span>) {
-    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-number">0.37</span>);
+    <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid rgba(<span class="hljs-variable">$color-border-default</span>, <span class="hljs-variable">$opacity-37</span>);
     <span class="hljs-attribute">height</span>: calc(<span class="hljs-number">100vh</span> - <span class="hljs-number">48px</span>);
     <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-0</span>;
     <span class="hljs-attribute">position</span>: fixed;
     <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">48px</span> - <span class="hljs-number">1px</span>;
@@ -383,7 +377,7 @@
 
 <span class="hljs-selector-class">.Banner</span> <span class="hljs-selector-class">.Navigation</span><span class="hljs-selector-class">.is-open</span> {
   @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-banner</span>) {
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-100</span>;
     <span class="hljs-attribute">visibility</span>: visible;
   }
 }
@@ -396,7 +390,7 @@
 
 <span class="hljs-selector-class">.Banner</span> <span class="hljs-selector-class">.Navigation</span> <span class="hljs-selector-tag">li</span> {
   @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-banner</span>) {
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-0</span>;
     <span class="hljs-attribute">transform</span>: translateY(-<span class="hljs-number">26px</span>);
     <span class="hljs-attribute">transition</span>:
       opacity <span class="hljs-number">200ms</span> cubic-bezier(<span class="hljs-number">0.23</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0.32</span>, <span class="hljs-number">1</span>),
@@ -422,7 +416,7 @@
 
 <span class="hljs-selector-class">.Banner</span> <span class="hljs-selector-class">.Navigation</span><span class="hljs-selector-class">.is-open</span> <span class="hljs-selector-tag">li</span> {
   @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-banner</span>) {
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-100</span>;
     <span class="hljs-attribute">transform</span>: translateY(<span class="hljs-number">0</span>);
   }
 }
@@ -438,7 +432,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/navigation/navigation.scss</span>
+                    <span class="Meta-value">src/components/components/navigation/navigation.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -483,7 +477,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/navigation/navigation.hbs</span>
+            <span class="Meta-value">src/components/components/navigation/navigation.hbs</span>
         </li>
         
         
@@ -695,31 +689,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2391,31 +2361,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

@@ -2,14 +2,9 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Navigation
- * @type Molecule
- */
-
 .Navigation {
   @include fluid-type(
-    $min-font-size: 12,
+    $min-font-size: $font-size-body-small-min,
     $max-font-size: $font-size-default,
     $min-width: $max-width-banner,
     $max-width: 954
@@ -17,9 +12,9 @@
 
   background-color: $color-background-default;
   color: $color-text-heading;
-  font-size: 24px;
+  font-size: #{$font-size-heading-3}px;
   font-weight: $font-weight-semibold;
-  line-height: (72 / 24);
+  line-height: (72 / $font-size-heading-3);
 
   @media (max-width: $mq-max-banner) {
     text-align: center;
@@ -65,10 +60,10 @@
   width: 78%;
 
   @media (max-width: $mq-max-banner) {
-    border-top: 1px solid rgba($color-border-default, 0.37);
+    border-top: 1px solid rgba($color-border-default, $opacity-37);
     height: calc(100vh - 48px);
     max-width: 100%;
-    opacity: 0;
+    opacity: $opacity-0;
     position: fixed;
     right: 0;
     top: 48px - 1px;
@@ -85,7 +80,7 @@
 
 .Banner .Navigation.is-open {
   @media (max-width: $mq-max-banner) {
-    opacity: 1;
+    opacity: $opacity-100;
     visibility: visible;
   }
 }
@@ -98,7 +93,7 @@
 
 .Banner .Navigation li {
   @media (max-width: $mq-max-banner) {
-    opacity: 0;
+    opacity: $opacity-0;
     transform: translateY(-26px);
     transition:
       opacity 200ms cubic-bezier(0.23, 1, 0.32, 1),
@@ -124,7 +119,7 @@
 
 .Banner .Navigation.is-open li {
   @media (max-width: $mq-max-banner) {
-    opacity: 1;
+    opacity: $opacity-100;
     transform: translateY(0);
   }
 }

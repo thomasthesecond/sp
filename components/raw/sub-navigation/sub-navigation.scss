@@ -2,11 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Sub Navigation
- * @type Molecule
- */
-
 @mixin marker() {
   background-color: $color-sub-navigation-marker;
   bottom: 0;
@@ -16,31 +11,20 @@
 
 .SubNavigation {
   @include fluid-type(
-    $min-font-size: 12,
+    $min-font-size: $font-size-body-small-min,
     $max-font-size: $font-size-default,
     $min-width: 600
   );
 
   background-color: $color-background-default;
-  // border-bottom: 1px solid #fff;
   color: $color-text-default;
-  // height: 81px;
   height: 60px;
   overflow: hidden;
-  // transition: border-color 200ms;
   position: relative;
 
-  // @media (max-width: 599px) {
-  //   border-bottom-color: rgba(#bfd0d8, 0.37);
-  // }
-
-  @media (min-width: 600px) {
+  @media (min-width: $mq-min-600) {
     height: 90px;
   }
-
-  // &.is-sticky {
-  //   border-bottom-color: rgba(#bfd0d8, 0.37);
-  // }
 
   &::after,
   &::before {
@@ -65,13 +49,8 @@
 }
 
 .SubNavigation-list {
-  // border-bottom: 1px solid rgba($color-border-default, 0.37);
-  // color: currentColor;
-  // font-family: sans-serif;
-  // font-size: 16px;
-  // height: calc(100% + 15px);
   height: 100%;
-  line-height: 1;
+  line-height: $line-height-reset;
   list-style: none;
   margin-bottom: 0;
   margin-top: 0;
@@ -84,20 +63,16 @@
   white-space: nowrap;
   width: 100%;
 
-  @media (max-width: 1006px) {
+  @media (max-width: $mq-max-1007) {
     padding-left: #{($spacing-gutter - 14)}px;
     padding-right: #{($spacing-gutter - 14)}px;
   }
 
-  @media (min-width: 1007px) {
+  @media (min-width: $mq-min-1007) {
     margin-left: auto;
     margin-right: auto;
     max-width: #{$max-width}px;
   }
-
-  // .SubNavigation:not(.SubNavigation--scrollSpy) & {
-  //   border-bottom-color: #fff;
-  // }
 }
 
 .SubNavigation-item {
@@ -107,7 +82,7 @@
   margin-right: 8px;
   position: relative;
 
-  @media (min-width: 600px) {
+  @media (min-width: $mq-min-600) {
     margin-left: 14px;
     margin-right: 14px;
   }
@@ -119,7 +94,7 @@
 
     content: "";
     left: 0;
-    opacity: 1;
+    opacity: $opacity-100;
     width: 100%;
   }
 }
@@ -133,49 +108,23 @@
   text-decoration: none;
   transition: color 200ms;
 
-  @media (min-width: 600px) {
+  @media (min-width: $mq-min-600) {
     padding-bottom: 34px;
     padding-top: 39px;
   }
 
-  // &::after {
-  //   background-color: currentColor;
-  //   bottom: -1px;
-  //   content: '';
-  //   height: 1px;
-  //   left: 0;
-  //   position: absolute;
-  //   transform: scaleX(0);
-  //   transition: background-color $timing--fast $easing--default,
-  //     transform ($timing--fast - 50);
-  //   width: 100%;
-  // }
-
   &:hover,
   &:active {
     .SubNavigation-item:not(.is-active) & {
-      color: rgba(#446975, 0.6);
+      color: rgba($color-text-sub-nav, $opacity-60);
     }
-
-    // &::after {
-    //   transform: scaleX(1);
-    // }
-  }
-
-  &:active,
-  &:focus {
-    // color: rgba(#446975, 0.6);
-
-    // &::after {
-    //   background-color: currentColor;
-    // }
   }
 }
 
 .SubNavigation-marker {
   @include marker();
 
-  opacity: 0;
+  opacity: $opacity-0;
   transition: opacity 200ms;
   width: 0;
 }

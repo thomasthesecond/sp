@@ -2,21 +2,9 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Team list
- */
-
 .TeamList-heading {
   margin-bottom: 0;
   margin-top: 0;
-
-  // @media (min-width: 774px) {
-  //   margin-bottom: #{(40 / $max-width) * 100vw};
-  // }
-  //
-  // @media (min-width: $mq-min-container) {
-  //   margin-bottom: 40px;
-  // }
 }
 
 .TeamList-members {

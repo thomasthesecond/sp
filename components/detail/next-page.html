@@ -221,15 +221,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-ccae99f8887d95b2879dc859e5bd9c48">index.js</option>
+                <option value="file-711644bdec32467923828b0b2882314a">index.js</option>
                 
-                <option value="file-bc144a95bf55d6efb836d580317543c9">next-page.scss</option>
+                <option value="file-849865a5b026ad831a8d2ed6799deefc">next-page.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-ccae99f8887d95b2879dc859e5bd9c48" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-711644bdec32467923828b0b2882314a" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -250,7 +250,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/next-page/index.js</span>
+                    <span class="Meta-value">src/components/components/next-page/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -259,7 +259,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-bc144a95bf55d6efb836d580317543c9" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-849865a5b026ad831a8d2ed6799deefc" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -271,12 +271,8 @@
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
 
-<span class="hljs-comment">/**
- * Component: Next page
- */</span>
-
 <span class="hljs-selector-class">.NextPage</span> {
-  @<span class="hljs-keyword">media</span> (min-width: 600px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-600</span>) {
     <span class="hljs-attribute">text-align</span>: center;
   }
 }
@@ -290,9 +286,9 @@
   &amp;:hover,
   &amp;:active,
   &amp;:focus {
-    <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-heading</span>, <span class="hljs-number">0.7</span>);
+    <span class="hljs-attribute">color</span>: rgba(<span class="hljs-variable">$color-text-heading</span>, <span class="hljs-variable">$opacity-70</span>);
 
-    @<span class="hljs-keyword">media</span> (min-width: 520px) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-520</span>) {
       <span class="hljs-selector-class">.NextPage-icon</span> {
         <span class="hljs-attribute">transform</span>: translateX(#{((<span class="hljs-number">66</span> + <span class="hljs-number">16</span>) / <span class="hljs-number">66</span>) * <span class="hljs-number">1em</span>});
       }
@@ -302,8 +298,8 @@
 
 <span class="hljs-selector-class">.NextPage-label</span> {
   @<span class="hljs-keyword">include</span> fluid-type(
-    <span class="hljs-variable">$min-font-size</span>: 12,
-    <span class="hljs-variable">$max-font-size</span>: 14,
+    <span class="hljs-variable">$min-font-size</span>: <span class="hljs-variable">$font-size-body-small-min</span>,
+    <span class="hljs-variable">$max-font-size</span>: <span class="hljs-variable">$font-size-body-small</span>,
     <span class="hljs-variable">$min-width</span>: 600
   );
 
@@ -332,7 +328,7 @@
     <span class="hljs-attribute">display</span>: none;
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 520px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-520</span>) {
     <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-arrow</span>;
     <span class="hljs-attribute">font-size</span>: #{(<span class="hljs-number">66</span> / <span class="hljs-variable">$font-size-heading-1</span>) * <span class="hljs-number">1em</span>};
     <span class="hljs-attribute">height</span>: #{(<span class="hljs-number">22</span> / <span class="hljs-number">66</span>) * <span class="hljs-number">1em</span>};
@@ -355,7 +351,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/next-page/next-page.scss</span>
+                    <span class="Meta-value">src/components/components/next-page/next-page.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -400,7 +396,7 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/next-page/next-page.hbs</span>
+            <span class="Meta-value">src/components/components/next-page/next-page.hbs</span>
         </li>
         
         <li class="Meta-item">
@@ -647,31 +643,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2343,31 +2315,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

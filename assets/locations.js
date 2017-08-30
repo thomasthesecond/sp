@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 142);
+/******/ 	return __webpack_require__(__webpack_require__.s = 143);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -114,14 +114,7 @@ exports.objectFitCover = objectFitCover;
 
 /***/ }),
 
-/***/ 1:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 142:
+/***/ 143:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -129,21 +122,21 @@ exports.objectFitCover = objectFitCover;
 
 // Import page module
 
-var _locations = __webpack_require__(143);
+var _locations = __webpack_require__(144);
 
 var _locations2 = _interopRequireDefault(_locations);
 
-__webpack_require__(3);
+__webpack_require__(2);
 
-var _locationFinder = __webpack_require__(18);
+var _locationFinder = __webpack_require__(17);
 
 var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
-__webpack_require__(86);
+__webpack_require__(87);
 
-__webpack_require__(88);
+__webpack_require__(89);
 
-__webpack_require__(90);
+__webpack_require__(91);
 
 __webpack_require__(4);
 
@@ -158,7 +151,7 @@ locationFinder.render();
 
 /***/ }),
 
-/***/ 143:
+/***/ 144:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -168,11 +161,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _locations = __webpack_require__(144);
+var _locations = __webpack_require__(145);
 
 var _locations2 = _interopRequireDefault(_locations);
 
-__webpack_require__(145);
+__webpack_require__(146);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -180,7 +173,7 @@ exports.default = _locations2.default;
 
 /***/ }),
 
-/***/ 144:
+/***/ 145:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -236,14 +229,14 @@ exports.default = LocationsPage;
 
 /***/ }),
 
-/***/ 145:
+/***/ 146:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 18:
+/***/ 17:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -253,11 +246,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _locationFinder = __webpack_require__(19);
+var _locationFinder = __webpack_require__(18);
 
 var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
-__webpack_require__(20);
+__webpack_require__(19);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -265,7 +258,7 @@ exports.default = _locationFinder2.default;
 
 /***/ }),
 
-/***/ 19:
+/***/ 18:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -327,20 +320,27 @@ exports.default = LocationFinder;
 
 /***/ }),
 
-/***/ 20:
+/***/ 19:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(1);
+__webpack_require__(3);
+
+/***/ }),
+
+/***/ 3:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -361,51 +361,51 @@ __webpack_require__(5);
 
 /***/ }),
 
-/***/ 86:
+/***/ 87:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(87);
-
-/***/ }),
-
-/***/ 87:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+__webpack_require__(88);
 
 /***/ }),
 
 /***/ 88:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(89);
-
-/***/ }),
-
-/***/ 89:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 90:
+/***/ 89:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(91);
+__webpack_require__(90);
+
+/***/ }),
+
+/***/ 90:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
 /***/ 91:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(92);
+
+/***/ }),
+
+/***/ 92:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -4,10 +4,6 @@
 /**
  * Mixins
  */
-/**
- * Component: Contact form
- * @type Organism
- */
 .ContactForm {
   max-width: 630;
 }

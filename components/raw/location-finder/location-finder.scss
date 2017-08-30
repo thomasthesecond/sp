@@ -2,48 +2,17 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Location finder
- * @type Organism
- */
-
 $location-finder-fieldset-width: 1032;
 $location-finder-legend-width: 232;
 $location-finder-controls-width: $location-finder-fieldset-width - $location-finder-legend-width;
 $location-finder-button-width: 258;
 
 .LocationFinder {
-  // background-color: $color-background-default;
-  // position: relative;
-
-  // @media (min-width: 670px) {
-  //   box-shadow: 0 2px 4px rgba(#000, 0.5),
-  //     0 36px 84px rgba(#042435, 0.39);
-  //   display: flex;
-  //   height: #{(90 / $max-width) * 100vw};
-  //   min-height: 60px;
-  //   max-height: 90px;
-  // }
-
-  @media (min-width: 670px) {
-    // background-color: rgba(#fff, 0);
-    // box-shadow: 0 2px 4px rgba(#000, 0),
-    //   0 36px 84px rgba(#042435, 0);
-    // transition: background-color 200ms, box-shadow 200ms;
-  }
-
   &.is-sticky {
     background-color: $color-background-default;
     box-shadow: $shadow-location-finder-sticky;
 
-    @media (max-width: 669px) {
-      // box-shadow: $shadow-location-finder-sticky;
-      // padding-top: #{$spacing-gutter}px;
-      // height: 70px;
-      // overflow: hidden;
-    }
-
-    @media (min-width: 670px) {
+    @media (min-width: $mq-min-670) {
       box-shadow: $shadow-location-finder;
     }
   }
@@ -53,7 +22,7 @@ $location-finder-button-width: 258;
   background-color: $color-background-default;
   position: relative;
 
-  @media (min-width: 670px) {
+  @media (min-width: $mq-min-670) {
     display: flex;
     height: #{(90 / $max-width) * 100vw};
     justify-content: space-between;
@@ -63,14 +32,14 @@ $location-finder-button-width: 258;
 }
 
 .LocationFinder.is-sticky .container {
-  @media (max-width: 669px) {
+  @media (max-width: $mq-max-670) {
     margin-left: 0;
     margin-right: 0;
   }
 }
 
 .LocationFinder:not(.is-sticky) .container {
-  @media (min-width: 670px) {
+  @media (min-width: $mq-min-670) {
     box-shadow: $shadow-location-finder;
   }
 }
@@ -82,34 +51,21 @@ $location-finder-button-width: 258;
   padding: 0;
   width: 100%;
 
-  @media (min-width: 670px) {
+  @media (min-width: $mq-min-670) {
     width: #{($location-finder-fieldset-width / $max-width) * 100%};
   }
 }
 
-// .LocationFinder.is-sticky fieldset {
-//   @media (max-width: 669px) {
-//     margin-bottom: -24px;
-//   }
-// }
-
 .LocationFinder legend {
-  color: rgba($color-text-heading, 0.79);
+  color: rgba($color-text-heading, $opacity-80);
   display: block;
   float: left;
   font-weight: $font-weight-bold;
   height: 100%;
-  line-height: 1;
-  // padding-left: #{(60 / $max-width) * 100%};
-  // padding-right: #{(60 / $max-width) * 100%};
-  // padding-left: 60px;
-  // padding-right: 60px;
-  // padding-top: 39px;
-  // width: 232px;
-  // min-width: 232px;
+  line-height: $line-height-reset;
   width: #{($location-finder-legend-width / $location-finder-fieldset-width) * 100%};
 
-  @media (max-width: 1023px) {
+  @media (max-width: $mq-max-1024) {
     display: none;
   }
 
@@ -132,35 +88,34 @@ $location-finder-button-width: 258;
   height: 100%;
   width: 100%;
 
-  @media (max-width: 669px) {
-    font-size: 12px;
-    // transition: opacity 200ms, visibility 200ms;
+  @media (max-width: $mq-max-670) {
+    font-size: #{$font-size-heading-6}px;
   }
 
-  @media (max-width: 669px) {
-    border: 1px solid rgba($color-border-default, 0.27);
+  @media (max-width: $mq-max-670) {
+    border: 1px solid rgba($color-border-default, $opacity-27);
     margin-bottom: 6px;
   }
 
-  @media (min-width: 670px) {
-    border-left: 1px solid rgba($color-border-default, 0.27);
+  @media (min-width: $mq-min-670) {
+    border-left: 1px solid rgba($color-border-default, $opacity-27);
   }
 
   &:first-of-type {
-    @media (min-width: 670px) and (max-width: 1023px) {
+    @media (min-width: $mq-min-670) and (max-width: $mq-max-1024) {
       border-left: 0;
     }
   }
 
   &:not(:first-of-type) {
-    @media (max-width: 669px) {
+    @media (max-width: $mq-max-670) {
       float: left;
       width: calc(50% - 3px);
     }
   }
 
   &:last-of-type {
-    @media (max-width: 669px) {
+    @media (max-width: $mq-max-670) {
       margin-left: 6px;
     }
   }
@@ -168,7 +123,7 @@ $location-finder-button-width: 258;
 
 .LocationFinder.is-sticky select {
   &:first-of-type {
-    @media (max-width: 669px) {
+    @media (max-width: $mq-max-670) {
       border: 0;
       margin-bottom: 0;
       padding-bottom: #{$spacing-gutter - 2}px;
@@ -178,9 +133,7 @@ $location-finder-button-width: 258;
   }
 
   &:not(:first-of-type) {
-    @media (max-width: 669px) {
-      // opacity: 0;
-      // visibility: hidden;
+    @media (max-width: $mq-max-670) {
       display: none;
     }
   }
@@ -189,32 +142,21 @@ $location-finder-button-width: 258;
 .LocationFinder-button {
   width: 100%;
 
-  @media (max-width: 669px) {
-    font-size: 12px;
-    // padding-bottom: 18px;
-    // padding-top: 18px;
-    // transition: opacity 200ms, visibility 200ms;
+  @media (max-width: $mq-max-670) {
+    font-size: #{$font-size-heading-6}px;
   }
 
-  @media (min-width: 670px) {
-    // padding-left: #{(100 / $max-width) * 100%};
-    // padding-right: #{(100 / $max-width) * 100%};
+  @media (min-width: $mq-min-670) {
     min-width: 128px;
-    // min-width: 258px;
-    // width: 258px;
-    // transition: border-radius 200ms, height 200ms;
     width: #{($location-finder-button-width / $max-width) * 100%};
-    // width: #{(258 / 1075) * 100%};
   }
 
   .LocationFinder.is-sticky & {
-    @media (max-width: 669px) {
-      // opacity: 0;
-      // visibility: hidden;
+    @media (max-width: $mq-max-670) {
       display: none;
     }
 
-    @media (min-width: 670px) {
+    @media (min-width: $mq-min-670) {
       align-self: center;
       border-radius: 56px;
       height: 56px;
@@ -226,9 +168,8 @@ $location-finder-button-width: 258;
 // Fixes a bug in Webkit browsers where flexbox
 // doesn’t work with fieldset
 .LocationFinder-controls {
-  @media (min-width: 670px) {
+  @media (min-width: $mq-min-670) {
     display: flex;
     height: 100%;
-    // width: #{($location-finder-controls-width / $max-width) * 100%};
   }
 }

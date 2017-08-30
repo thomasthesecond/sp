@@ -2,11 +2,6 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Table
- * @type Molecule
- */
-
 table {
   border: 0;
   border-collapse: collapse;
@@ -16,14 +11,14 @@ table {
 }
 
 .table-responsive {
-  @media (max-width: 599px) {
-    border-top: 1px solid rgba($color-border-default, 0.27);
+  @media (max-width: $mq-max-600) {
+    border-top: 1px solid rgba($color-border-default, $opacity-27);
   }
 }
 
 thead {
   .table-responsive & {
-    @media (max-width: 599px) {
+    @media (max-width: $mq-max-600) {
       @include visuallyhidden;
     }
   }
@@ -31,13 +26,13 @@ thead {
 
 tr {
   tbody & {
-    border-top: 1px solid rgba($color-border-default, 0.27);
+    border-top: 1px solid rgba($color-border-default, $opacity-27);
   }
 
   .table-responsive & {
-    @media (max-width: 599px) {
+    @media (max-width: $mq-max-600) {
       border-top: 0;
-      box-shadow: 0 14px 34px rgba(#000, 0.09);
+      box-shadow: $shadow-table-row;
       display: block;
       margin-bottom: #{$spacing-gutter}px;
       margin-top: #{$spacing-gutter}px;
@@ -58,7 +53,7 @@ td {
   }
 
   .table-responsive & {
-    @media (max-width: 599px) {
+    @media (max-width: $mq-max-600) {
       padding: 12px #{$spacing-gutter}px;
     }
   }
@@ -66,8 +61,8 @@ td {
 
 th {
   @include fluid-type(
-    $min-font-size: 14,
-    $max-font-size: 16,
+    $min-font-size: $font-size-default-min,
+    $max-font-size: $font-size-default,
     $min-width: 600
   );
 
@@ -78,20 +73,18 @@ th {
 
 td {
   @include fluid-type(
-    $min-font-size: 12,
-    $max-font-size: 16,
+    $min-font-size: $font-size-body-small-min,
+    $max-font-size: $font-size-default,
     $min-width: 600
   );
 
   > b {
-    color: #8993a3;
+    color: $color-text-table-cell-emphesis;
     font-weight: $font-weight-regular;
   }
 
-  // table:not(.table-striped) tr:hover &,
-  // table:not(.table-responsive) tr:hover & {
   tr:hover & {
-    background-color: rgba($color-border-default, 0.07);
+    background-color: rgba($color-border-default, $opacity-07);
   }
 
   .table-striped tr:hover & {
@@ -99,12 +92,11 @@ td {
   }
 
   .table-striped tr:nth-child(odd) & {
-    background-color: rgba($color-border-default, 0.07);
+    background-color: rgba($color-border-default, $opacity-07);
   }
 
   .table-responsive & {
-    @media (max-width: 599px) {
-      // border-bottom: 1px solid green;
+    @media (max-width: $mq-max-600) {
       display: block;
 
       &::before {
@@ -118,7 +110,7 @@ td {
   }
 
   .table-responsive tr:hover & {
-    @media (max-width: 599px) {
+    @media (max-width: $mq-max-600) {
       background-color: inherit;
     }
   }

@@ -2,37 +2,15 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Feed
- */
-
-.Feed {
-  time {
-    color: $color-text-default;
-  }
+.Feed time {
+  color: $color-text-default;
 }
 
 .Feed-heading {
-  // margin-bottom: 24px;
   margin-bottom: 0;
   margin-top: 0;
 }
 
 .Feed-article + .Feed-article {
-  border-top: 1px solid rgba($color-border-default, 0.27);
-  // margin-top: 24px;
-  // padding-top: 12px;
-
-  // @media (min-width: 645px) {
-  //   padding-top: #{(24 / $max-width) * 100vw};
-  // }
-  //
-  // @media (min-width: 775px) {
-  //   margin-top: #{(40 / $max-width) * 100vw};
-  // }
-  //
-  // @media (min-width: $mq-min-container) {
-  //   margin-top: 40px;
-  //   padding-top: 24px;
-  // }
+  border-top: 1px solid rgba($color-border-default, $opacity-27);
 }

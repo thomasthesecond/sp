@@ -2,23 +2,18 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Help tip
- * @type Atom
- */
-
 .HelpTip {
   align-items: center;
-  border: #{(1 / 11) * 1em} solid currentColor;
+  border: #{(1 / $font-size-help-tip) * 1em} solid currentColor;
   border-radius: 100%;
   color: $color-text-help-tip;
   display: inline-flex;
-  font-size: 11px;
-  height: #{(20 / 11) * 1em};
+  font-size: #{$font-size-help-tip}px;
+  height: #{(20 / $font-size-help-tip) * 1em};
   justify-content: center;
   text-align: center;
   transform: color 200ms;
-  width: #{(20 / 11) * 1em};
+  width: #{(20 / $font-size-help-tip) * 1em};
 
   &:hover,
   &:active,

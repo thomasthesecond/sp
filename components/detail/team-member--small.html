@@ -204,7 +204,6 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TeamMember-link"</span>&gt;</span>
-    </span><span class="hljs-comment">{{!&gt; "<a href="more-link.html">@more-link</a>" link=teamMember.link }}</span><span class="xml">
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"MoreLink js-modal-trigger"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
       Read bio
       </span><span class="hljs-template-variable">{{&gt; <a href="icon.html">@icon</a> id="icon-arrow" }}</span><span class="xml">
@@ -245,15 +244,15 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-31b46d4dbfde9edd58308a9bf5483003">index.js</option>
+                <option value="file-9767efcaba7dd7db087ddc5b388c83a0">index.js</option>
                 
-                <option value="file-f82ecdabd29f04993da3a5102dc9e89a">team-member.scss</option>
+                <option value="file-39cff6bd9c19d3bd6cfd15f43254224a">team-member.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-31b46d4dbfde9edd58308a9bf5483003" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-9767efcaba7dd7db087ddc5b388c83a0" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -274,7 +273,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/team-member/index.js</span>
+                    <span class="Meta-value">src/components/components/team-member/index.js</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -283,7 +282,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-f82ecdabd29f04993da3a5102dc9e89a" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-39cff6bd9c19d3bd6cfd15f43254224a" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -294,10 +293,6 @@
                                 <pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/design-tokens"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
-
-<span class="hljs-comment">/**
- * Component: Team member
- */</span>
 
 <span class="hljs-selector-class">.TeamMember</span> {
   &amp;:not(<span class="hljs-selector-class">.TeamMember--small</span>) {
@@ -311,11 +306,11 @@
   }
 
   &amp;:not(<span class="hljs-selector-class">.TeamMember--small</span>):hover {
-    <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-default</span> + <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">z-index</span>: (<span class="hljs-variable">$z-index-default</span> + <span class="hljs-number">1</span>);
   }
 
   &amp;:not(<span class="hljs-selector-class">.TeamMember--small</span>):hover::after {
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-100</span>;
     <span class="hljs-attribute">visibility</span>: visible;
   }
 }
@@ -333,7 +328,7 @@
   <span class="hljs-selector-class">.TeamMember</span>:hover &amp; {
     @<span class="hljs-keyword">media</span> (min-width: 1015px) {
       <span class="hljs-attribute">position</span>: relative;
-      <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
+      <span class="hljs-attribute">z-index</span>: (<span class="hljs-variable">$z-index-default</span> + <span class="hljs-number">1</span>);
     }
   }
 }
@@ -352,15 +347,15 @@
   <span class="hljs-selector-class">.TeamMember</span>:not(<span class="hljs-selector-class">.TeamMember--small</span>):hover &amp; {
     @<span class="hljs-keyword">media</span> (min-width: 1015px) {
       <span class="hljs-attribute">position</span>: relative;
-      <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
+      <span class="hljs-attribute">z-index</span>: (<span class="hljs-variable">$z-index-default</span> + <span class="hljs-number">1</span>);
     }
   }
 }
 
 <span class="hljs-selector-class">.TeamMember-title</span> {
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-meta</span>;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
-  <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">18</span> / <span class="hljs-number">12</span>);
+  <span class="hljs-attribute">font-size</span>: #{<span class="hljs-variable">$font-size-heading-6</span>}px;
+  <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">18</span> / <span class="hljs-variable">$font-size-heading-6</span>);
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
 
@@ -371,7 +366,7 @@
   <span class="hljs-selector-class">.TeamMember</span>:not(<span class="hljs-selector-class">.TeamMember--small</span>):hover &amp; {
     @<span class="hljs-keyword">media</span> (min-width: 1015px) {
       <span class="hljs-attribute">position</span>: relative;
-      <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
+      <span class="hljs-attribute">z-index</span>: (<span class="hljs-variable">$z-index-default</span> + <span class="hljs-number">1</span>);
     }
   }
 }
@@ -385,32 +380,20 @@
     <span class="hljs-attribute">backface-visibility</span>: hidden;
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
     <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-team-member-panel</span>;
-    <span class="hljs-comment">// left: #{(-48 / $max-width) * 100%};</span>
     <span class="hljs-attribute">left</span>: -<span class="hljs-number">48px</span>;
-    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
-    <span class="hljs-comment">// padding: #{(48 / $max-width) * 100%};</span>
-    <span class="hljs-comment">// padding-top: 408px;</span>
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-0</span>;
     <span class="hljs-attribute">padding</span>: <span class="hljs-number">408px</span> <span class="hljs-number">48px</span> <span class="hljs-number">48px</span>;
     <span class="hljs-attribute">position</span>: absolute;
-    <span class="hljs-comment">// top: #{(-48 / $max-width) * 100%};</span>
     <span class="hljs-attribute">top</span>: -<span class="hljs-number">48px</span>;
-    <span class="hljs-comment">// width: calc(100% + #{(96 / $max-width) * 100%});</span>
     <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">100%</span> + <span class="hljs-number">96px</span>);
     <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>;
     <span class="hljs-attribute">visibility</span>: hidden;
     <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-default</span>;
   }
 
-  <span class="hljs-comment">// @media (min-width: 1015px) {</span>
-  <span class="hljs-comment">//   left: -48px;</span>
-  <span class="hljs-comment">//   padding: 408px 48px 48px;</span>
-  <span class="hljs-comment">//   top: -48px;</span>
-  <span class="hljs-comment">//   width: calc(100% + 96px);</span>
-  <span class="hljs-comment">// }</span>
-
   <span class="hljs-selector-class">.TeamMember</span>:hover &amp; {
     @<span class="hljs-keyword">media</span> (min-width: 1015px) {
-      <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+      <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-100</span>;
       <span class="hljs-attribute">visibility</span>: visible;
     }
   }
@@ -418,8 +401,8 @@
 
 <span class="hljs-selector-class">.TeamMember-bio</span> {
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#8f9aa8</span>;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
-  <span class="hljs-attribute">line-height</span>: (<span class="hljs-number">28</span> / <span class="hljs-number">16</span>);
+  <span class="hljs-attribute">font-size</span>: #{<span class="hljs-variable">$font-size-default</span>}px;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-variable">$line-height-default</span>;
   <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">16px</span>;
 }
@@ -496,11 +479,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/03-components/team-member/team-member.scss</span>
+                    <span class="Meta-value">src/components/components/team-member/team-member.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.4 KB</span>
+                    <span class="Meta-value">3.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -556,14 +539,12 @@
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/03-components/team-member/team-member--small.hbs</span>
+            <span class="Meta-value">src/components/components/team-member/team-member--small.hbs</span>
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(2)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
-            
-                <a href="more-link.html">@<span>more-link</span></a>, 
             
                 <a href="icon.html">@<span>icon</span></a>
             
@@ -779,31 +760,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox-group.html" data-pjax>
-                <span>Checkbox Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>
@@ -2475,31 +2432,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio-button-group.html" data-pjax>
-                <span>Radio Button Group</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
 
 
 </div>

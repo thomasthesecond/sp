@@ -2,12 +2,8 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
-/**
- * Component: Resources list
- */
-
 .ResourcesList-heading {
-  border-bottom: 1px solid rgba($color-border-default, 0.6);
+  border-bottom: 1px solid rgba($color-border-default, $opacity-60);
   margin-bottom: #{(16 / $font-size-heading-4) * 1em};
   margin-top: 0;
   padding-bottom: #{(24 / $font-size-heading-4) * 1em};
@@ -15,8 +11,8 @@
 
 .ResourcesList-list {
   @include fluid-type(
-    $min-font-size: 12,
-    $max-font-size: 14,
+    $min-font-size: $font-size-body-small-min,
+    $max-font-size: $font-size-body-small,
     $min-width: 600
   );
 
