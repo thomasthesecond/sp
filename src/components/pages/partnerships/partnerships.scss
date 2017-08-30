@@ -5,6 +5,7 @@
 .Introduction {
   margin-bottom: 130px;
   margin-top: 90px;
+  max-width: 786px;
 
   @media (min-width: 468px) {
     margin-top: #{(248 / $max-width) * 100vw};
