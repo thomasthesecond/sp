@@ -16,7 +16,7 @@
         "srcset": [
           {
             "src": "/assets/images/partnerships-masthead-sm@2x.jpg",
-            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"
           },
           {
             "src": "/assets/images/partnerships-masthead@2x.jpg",
@@ -24,7 +24,7 @@
           },
           {
             "src": "/assets/images/partnerships-masthead-sm.jpg",
-            "media": "(max-width: 544px)"
+            "media": "(max-width: 543px)"
           },
           {
             "src": "/assets/images/partnerships-masthead.jpg",
@@ -62,7 +62,7 @@
         "srcset": [
           {
             "src": "/assets/images/partnerships-feature-sm@2x.jpg",
-            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"
           },
           {
             "src": "/assets/images/partnerships-feature@2x.jpg",
@@ -70,7 +70,7 @@
           },
           {
             "src": "/assets/images/partnerships-feature-sm.jpg",
-            "media": "(max-width: 544px)"
+            "media": "(max-width: 543px)"
           },
           {
             "src": "/assets/images/partnerships-feature.jpg",
@@ -95,7 +95,7 @@
           "srcset": [
             {
               "src": "/assets/images/partnerships-physician-practices-sm@2x.jpg",
-              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"
             },
             {
               "src": "/assets/images/partnerships-physician-practices@2x.jpg",
@@ -103,7 +103,7 @@
             },
             {
               "src": "/assets/images/partnerships-physician-practices-sm.jpg",
-              "media": "(max-width: 544px)"
+              "media": "(max-width: 543px)"
             },
             {
               "src": "/assets/images/partnerships-physician-practices.jpg",
@@ -126,7 +126,7 @@
           "srcset": [
             {
               "src": "/assets/images/partnerships-surgery-centers-sm@2x.jpg",
-              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"
             },
             {
               "src": "/assets/images/partnerships-surgery-centers@2x.jpg",
@@ -134,7 +134,7 @@
             },
             {
               "src": "/assets/images/partnerships-surgery-centers-sm.jpg",
-              "media": "(max-width: 544px)"
+              "media": "(max-width: 543px)"
             },
             {
               "src": "/assets/images/partnerships-surgery-centers.jpg",
@@ -157,7 +157,7 @@
           "srcset": [
             {
               "src": "/assets/images/partnerships-surgical-hospitals-sm@2x.jpg",
-              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"
             },
             {
               "src": "/assets/images/partnerships-surgical-hospitals@2x.jpg",
@@ -165,7 +165,7 @@
             },
             {
               "src": "/assets/images/partnerships-surgical-hospitals-sm.jpg",
-              "media": "(max-width: 544px)"
+              "media": "(max-width: 543px)"
             },
             {
               "src": "/assets/images/partnerships-surgical-hospitals.jpg",
@@ -188,7 +188,7 @@
           "srcset": [
             {
               "src": "/assets/images/partnerships-healthcare-systems-sm@2x.jpg",
-              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+              "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"
             },
             {
               "src": "/assets/images/partnerships-healthcare-systems@2x.jpg",
@@ -196,7 +196,7 @@
             },
             {
               "src": "/assets/images/partnerships-healthcare-systems-sm.jpg",
-              "media": "(max-width: 544px)"
+              "media": "(max-width: 543px)"
             },
             {
               "src": "/assets/images/partnerships-healthcare-systems.jpg",

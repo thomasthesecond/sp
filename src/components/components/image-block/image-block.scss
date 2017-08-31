@@ -18,6 +18,17 @@
     margin-left: -#{$spacing-gutter}px;
     width: calc(100% + #{($spacing-gutter * 2)}px);
   }
+
+  @media (min-width: $mq-min-544) {
+    min-width: 200px;
+  }
+
+  .PartnershipsPage & {
+    @media (min-width: $mq-min-544) and (max-width: $mq-max-1024) {
+      align-self: flex-start;
+      margin-top: 3vw;
+    }
+  }
 }
 
 .ImageBlock--alternate {
@@ -44,6 +55,7 @@
 
 .ImageBlock-text {
   @media (min-width: $mq-min-544) {
+    flex: 0 1 200%;
     margin-left: #{(136 / $max-width) * 100%};
     max-width: 400px;
   }

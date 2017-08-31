@@ -14,7 +14,7 @@
             "srcset": [
               {
                 "src": "/assets/images/about-masthead-sm@2x.jpg",
-                "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+                "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"
               },
               {
                 "src": "/assets/images/about-masthead@2x.jpg",
@@ -22,7 +22,7 @@
               },
               {
                 "src": "/assets/images/about-masthead-sm.jpg",
-                "media": "(max-width: 544px)"
+                "media": "(max-width: 543px)"
               },
               {
                 "src": "/assets/images/about-masthead.jpg",

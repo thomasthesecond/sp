@@ -10,7 +10,7 @@
         "srcset": [
           {
             "src": "/assets/images/home-careers-sm@2x.jpg",
-            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"
+            "media": "(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"
           },
           {
             "src": "/assets/images/home-careers@2x.jpg",
@@ -18,7 +18,7 @@
           },
           {
             "src": "/assets/images/home-careers-sm.jpg",
-            "media": "(max-width: 544px)"
+            "media": "(max-width: 543px)"
           },
           {
             "src": "/assets/images/home-careers.jpg",
