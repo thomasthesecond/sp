@@ -12,7 +12,7 @@
   height: #{(20 / $font-size-help-tip) * 1em};
   justify-content: center;
   text-align: center;
-  transform: color 200ms;
+  transform: color $timing-fast;
   width: #{(20 / $font-size-help-tip) * 1em};
 
   &:hover,

@@ -1,0 +1,13 @@
+{
+  "location-finder": "0 2px 34px rgba(#1c2d3e, 0.09), 0 36px 84px rgba(#042435, 0.39)",
+  "location-finder-sticky": "0 2px 34px rgba(#1c2d3e, 0.09)",
+  "location-finder-button": "0 10px 14px rgba(#406c7a, 0.22)",
+  "modal": "0 36px 84px rgba(#042435, 0.39)",
+  "service-card": "0 22px 54px rgba(#6b778c, 0.21)",
+  "team-member-panel": "0 42px 84px rgba(#1c2d3e, 0.3)",
+  "highlight-icon": "0 11px 46px rgba(#729ba8, 0.28)",
+  "highlight-text": "0 0 34px #446975",
+  "masthead-title": "0 0 72px rgba(#0d3c4d, 0.4)",
+  "table-row": "0 14px 34px rgba(#000, 0.09)",
+  "feature-testimonial": "0 2px 24px rgba(#0d3c4d, 0.4)"
+}

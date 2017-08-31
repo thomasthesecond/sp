@@ -74,7 +74,7 @@
     margin-right: #{(120 / $max-width) * 100%};
   }
 
-  @media (min-width: 1088px) {
+  @media (min-width: $mq-min-1088) {
     margin-left: #{(104 / $max-width) * 100%};
   }
 }

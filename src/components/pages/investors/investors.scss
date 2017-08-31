@@ -18,7 +18,7 @@
   .Feed + .Feed {
     margin-top: 64px;
 
-    @media (min-width: 794px) {
+    @media (min-width: breakpoint(794)) {
       margin-top: #{(104 / $max-width) * 100vw};
     }
 
@@ -40,7 +40,7 @@
   .TeamList + .TeamList {
     margin-top: 56px;
 
-    @media (min-width: 903px) {
+    @media (min-width: breakpoint(903)) {
       margin-top: #{(80 / $max-width) * 100vw};
     }
 
@@ -73,7 +73,7 @@
   .Filter {
     margin-top: 32px;
 
-    @media (min-width: 430px) {
+    @media (min-width: breakpoint(430)) {
       margin-top: #{(96 / $max-width) * 100vw};
     }
 
@@ -85,24 +85,24 @@
   table {
     margin-top: 80px;
 
-    @media (max-width: 599px) {
+    @media (max-width: $mq-max-600) {
       margin-left: -#{$spacing-gutter}px;
       width: calc(100% + #{$spacing-gutter * 2}px);
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: $mq-min-600) {
       margin-bottom: 80px;
     }
 
     + hr {
-      @media (max-width: 599px) {
+      @media (max-width: $mq-max-600) {
         display: none;
       }
     }
   }
 
   .Pagination {
-    @media (min-width: 600px) {
+    @media (min-width: $mq-min-600) {
       margin-top: 32px;
     }
   }
@@ -127,7 +127,7 @@
   .NewsArticle--preview + .NewsArticle--preview {
     margin-top: 56px;
 
-    @media (min-width: 602px) {
+    @media (min-width: breakpoint(602)) {
       margin-top: #{(120 / $max-width) * 100vw};
     }
 

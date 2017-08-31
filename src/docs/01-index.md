@@ -6,7 +6,11 @@ You are viewing the front-end pattern library for Surgery Partners. It’s built
 The patterns are split into two groups:
 
 * **Components**: The building blocks of the site; when combined, create pages; each component has a specific purpose
-* **Pages**: Fully formed Web pages composed of components
+* **Pages**: Fully formed web pages composed of components
+
+## Viewing the pattern library
+
+To view the compiled pattern library, just open `www/index.html` in a web browser. A live version can be viewed at http://thomasthesecond.com/sp.
 
 ## Locating the build files
 

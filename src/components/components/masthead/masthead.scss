@@ -11,7 +11,7 @@
   text-align: center;
   width: 100%;
 
-  @media (min-height: 892px) {
+  @media (min-height: breakpoint(892)) {
     max-height: 466px;
   }
 }

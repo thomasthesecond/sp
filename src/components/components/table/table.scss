@@ -19,7 +19,7 @@ table {
 thead {
   .table-responsive & {
     @media (max-width: $mq-max-600) {
-      @include visuallyhidden;
+      @include visuallyhidden();
     }
   }
 }

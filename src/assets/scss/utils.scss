@@ -5,7 +5,7 @@
 }
 
 .visuallyhidden {
-  @include visuallyhidden;
+  @include visuallyhidden();
 
   &.focusable:active,
   &.focusable:focus {

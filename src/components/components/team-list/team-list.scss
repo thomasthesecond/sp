@@ -8,13 +8,13 @@
 }
 
 .TeamList-members {
-  @media (min-width: 480px) {
+  @media (min-width: $mq-min-480) {
     display: flex;
     flex-wrap: wrap;
   }
 
   .TeamMember {
-    @media (min-width: 480px) {
+    @media (min-width: $mq-min-480) {
       flex: 0 1 50%;
       padding-right: 8px;
     }

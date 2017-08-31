@@ -12,7 +12,7 @@
   color: $color-text-heading;
   display: inline-block;
   text-decoration: none;
-  transition: color 200ms;
+  transition: color $timing-fast;
 
   &:hover,
   &:active,
@@ -55,7 +55,7 @@
 }
 
 .NextPage-icon {
-  @media (max-width: 519px) {
+  @media (max-width: $mq-max-520) {
     display: none;
   }
 
@@ -67,6 +67,6 @@
     right: 0;
     top: #{(22 / 66) * 1em};
     transform: translateX(#{((66 + $font-size-heading-1) / 66) * 1em});
-    transition: transform 200ms;
+    transition: transform $timing-fast;
   }
 }

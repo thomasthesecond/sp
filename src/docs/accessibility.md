@@ -2,7 +2,7 @@
 title: Accessibility
 ---
 
-Web accessibility (also referred to as a11y) is the design and creation of websites that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret Web pages.
+Web accessibility (also referred to as a11y) is the design and creation of websites that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret web pages.
 
 ## Skip link
 
@@ -10,7 +10,7 @@ A [“skip to content” link](http://a11yproject.com/posts/skip-nav-links/) has
 
 ## Alt tags for images
 
-Any time an image is used, add the `alt` attribute on the `img` element. This will provide a clear text alternative of the image for screen reader users. The description in the `alt` attribute should be meaningful in the context of the Web page. An image should always include an `alt` attribute, even if its value is empty.
+Any time an image is used, add the `alt` attribute on the `img` element. This will provide a clear text alternative of the image for screen reader users. The description in the `alt` attribute should be meaningful in the context of the web page. An image should always include an `alt` attribute, even if its value is empty.
 
 ## Focus states
 

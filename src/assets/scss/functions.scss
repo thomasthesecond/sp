@@ -1,13 +1,5 @@
 @import "design-tokens";
 
-/**
- * Functions
- */
-
-@function em($value) {
-  @return ($value * 1em);
-}
-
-@function vw($value) {
-  @return ($value * 100vw);
+@function breakpoint($width) {
+  @return #{($width / $font-size-default) * 1em};
 }

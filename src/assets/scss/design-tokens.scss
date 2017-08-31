@@ -3,77 +3,57 @@
 // ---------------------------------------------------------------------
 
 // Background colors
-$color-background-default: #fff; // rgb(255, 255, 255) // White
-$color-background-footer: #152640; // rgb(21, 38, 64) // Big Stone
-$color-background-cover-gradient-start: #b5955d; // rgb(181, 149, 93) // Muddy Waters
-$color-background-cover-gradient-end: #5d91a1; // rgb(93, 145, 161) // Horizon
-$color-background-section-gradient-start: #fcfaf7; // rgb(252, 250, 247) // Vista White
-$color-background-section-gradient-end: #fff; // rgb(255, 255, 255) // White
-$color-background-overlay: #000; // rgb(0, 0, 0) // Black
-$color-background-button-default: #5d91a1; // rgb(93, 145, 161) // Horizon
-$color-background-button-dark: #152640; // rgb(21, 38, 64) // Big Stone
-$color-background-pagination-hover: rgba(#619ab1, 0.06); // rgb(97, 154, 177) // Hippie Blue
-$color-background-input: #fff; // rgb(255, 255, 255) // White
-$color-background-input-dark: #152640; // rgb(21, 38, 64) // Big Stone
-$color-sub-navigation-marker: #b5955d; // rgb(181, 149, 93) // Muddy Waters
+$color-background-default: #fff;
+$color-background-footer: #152640;
+$color-background-cover-gradient-start: #b5955d;
+$color-background-cover-gradient-end: #5d91a1;
+$color-background-section-gradient-start: #fcfaf7;
+$color-background-section-gradient-end: #fff;
+$color-background-overlay: #000;
+$color-background-button-default: #5d91a1;
+$color-background-button-dark: #152640;
+$color-background-input: #fff;
+$color-background-input-dark: #152640;
+$color-sub-navigation-marker: #b5955d;
+$color-background-pagination-hover: rgba(#619ab1, 0.06);
 
 // Border colors
-$color-border-default: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
-$color-border-introduction: #b5955d; // rgb(181, 149, 93) // Muddy Waters
-$color-border-button-dark: rgba($color-border-default, 0.2); // rgb(191, 208, 216) // Jungle Mist
-$color-border-pagination-active: #619ab1; // rgb(97, 154, 177) // Hippie Blue
-$color-border-input: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
-$color-border-input-dark: rgba(#bfd0d8, 0.2); // rgb(191, 208, 216) // Jungle Mist
+$color-border-default: #bfd0d8;
+$color-border-introduction: #b5955d;
+$color-border-pagination-active: #619ab1;
+$color-border-button-dark: rgba($color-border-default, 0.2);
+$color-border-input-dark: rgba(#bfd0d8, 0.2);
 
 // Text colors
-$color-text-default: #646e7e; // rgb(100, 110, 126) // Pale Sky
-$color-text-heading: #25395d; // rgb(37, 57, 93) // Cloud Burst
-$color-text-overlay: #fff; // rgb(255, 255, 255) // White
-$color-text-introduction: #25395d; // rgb(37, 57, 93) // Cloud Burst
-$color-text-hamburger: #275e70; // rgb(39, 94, 112) // Casal
-$color-text-hamburger-overlay: #fff; // rgb(255, 255, 255) // White
-$color-text-service-card: #25395d; // rgb(37, 57, 93) // Cloud Burst
-$color-text-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
-// $color-text-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
-$color-text-link-default: #619ab1; // rgb(97, 154, 177) // Hippie Blue
-$color-text-link-default-hover: #819ba3; // rgb(129, 155, 163) // Gumbo
-$color-text-input: #77919e; // rgb(119, 145, 158) // Gothic
-$color-text-input-dark: #fff; // rgb(255, 255, 255) // White
-$color-text-help-tip: #6facc1; // rgb(111, 172, 193) // Glacier
-$color-text-help-tip-hover: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
-$color-text-search-button: #6facc1; // rgb(111, 172, 193) // Glacier
-$color-text-search-button-hover: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
-$color-text-meta: #b5955d; // rgb(181, 149, 93) // Muddy Waters
+$color-text-default: #646e7e;
+$color-text-heading: #25395d;
+$color-text-overlay: #fff;
+$color-text-introduction: #25395d;
+$color-text-hamburger: #275e70;
+$color-text-hamburger-overlay: #fff;
+$color-text-service-card: #25395d;
+$color-text-more-link: #12769f;
+$color-text-link-default: #619ab1;
+$color-text-link-default-hover: #819ba3;
+$color-text-input: #77919e;
+$color-text-input-dark: #fff;
+$color-text-help-tip: #6facc1;
+$color-text-help-tip-hover: #8f9aa8;
+$color-text-search-button: #6facc1;
+$color-text-search-button-hover: #8f9aa8;
+$color-text-meta: #b5955d;
 $color-text-positive: #6fc179;
 $color-text-negative: #d90a0a;
-$color-text-blockquote: #25395d; // rgb(37, 57, 93) // Cloud Burst
-$color-text-arrow: #bfd0d8; // rgb(191, 208, 216) // Jungle Mist
-$color-text-map-legend: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
-$color-text-table-cell-emphesis: #8f9aa8; // rgb(143, 154, 168) // Regent Gray
-$color-text-logo: #717271; // rgb(113, 114, 113) Gray
-$color-text-logo-arrow-left: #c0cdd5; // rgb(192, 205, 213) Heather
-$color-text-logo-arrow-right: #619ab1; // rgb(97, 154, 177) // Hippie Blue
+$color-text-blockquote: #25395d;
+$color-text-arrow: #bfd0d8;
+$color-text-map-legend: #8f9aa8;
+$color-text-table-cell-emphesis: #8f9aa8;
+$color-text-logo: #717271;
+$color-text-logo-arrow-left: #c0cdd5;
+$color-text-logo-arrow-right: #619ab1;
+$color-text-skip-link: #446975;
+$color-text-sub-nav: #446975;
 $color-text-select-arrow: rgba(#5e91a1, 0.87);
-
-$color-accent-mint: #edf6f6; // rgb(237, 246, 246) // Catskill White
-$color-accent-gray: #b4c2c7; // rgb(180, 194, 199) // Submarine
-$color-accent-teal: #6091a1; // rgb(96, 145, 161) // Horizon
-$color-home-heading: #435e6c; // rgb(67, 94, 108) // Fiord
-$color-shadow-finder: #042435; // rgb(4, 36, 53) // Tangaroa
-$color-legend-finder: #25395d; // rgb(37, 57, 93) // Cloud Burst
-$color-button-finder: #406c7a; // rgb(64, 108, 122) // Bismark
-$color-masthead-text-shadow: #6facc1; // rgb(111, 172, 193) // Glacier
-$color-more-link: #12769f; // rgb(18, 118, 159) // Blue Chill
-$color-navigation: #7d7d7d; // rgb(125, 125, 125) // Boulder
-$color-select-text: #757675; // rgb(117, 118, 117) // Xanadu
-$color-select-icon: #5e91a1; // rgb(94, 145, 161) // Horizon
-$color-card-text: #77919e; // rgb(119, 145, 158) // Gothic
-$color-card-shadow: #6b778c; // rgb(107, 119, 140) // Slate Gray
-$color-stat-shadow: #729ba8; // rgb(114, 155, 168) // Gothic
-$color-stat-text-shadow: #446975; // rgb(68, 105, 117) // Blue Bayoux
-$color-text-sub-nav: #446975; // rgb(68, 105, 117) // Blue Bayoux
-$color-border-sub-nav-marker: #da745b; // rgb(218, 116, 91) // Japonica
-$color-text-skip-link: #446975; // rgb(68, 105, 117) // Blue Bayoux
 
 // ---------------------------------------------------------------------
 // Gradients
@@ -83,171 +63,10 @@ $gradient-cover-photo: linear-gradient(to bottom, $color-background-cover-gradie
 $gradient-section: linear-gradient(to bottom, $color-background-section-gradient-start 0%, $color-background-section-gradient-end 100%);
 $gradient-stock-price-card: linear-gradient(to bottom, rgba(#b5955d, 0.07) 0%, rgba(#5e91a1, 0.07) 100%);
 
-// h2
-// color: #21365a;
-// h3
-// color: #21365a;
-// p
-// color: #8f9aa8;
-
-// #b4c2c7, #6091a1 Building icon
-// #b4c2c7, #6091a1 Eye icon
-// #edf6f6, #6091a1 First aid icon
-// #b4c2c7, #6091a1, #6facc1 Pill icon
-// #b4c2c7, #6098af Stethoscope icon
-// #b4c2c7, #6091a1 Syringe icon
-
-// Button
-// background-color: #5d91a1;
-// color: #fff;
-// Button--dark
-// background-color: #152640;
-// border: 1px solid rgba(#bfd0d8, 0.2);
-
-// CoverPhoto, CoverVideo
-// background: linear-gradient(to bottom, #b5955d 0%, #5e91a1 100%);
-
-// Contentinfo
-// background-color: #152640;
-// color: rgba(#fff, 0.57);
-// Contentinfo h4
-// color: #fff;
-// Contentinfo a:hover
-// color: rgba(#fff, 0.77);
-// Contentinfo-contact
-// border-left: 1px solid rgba(#bfd0d8, 0.07);
-// Contentinfo-navigation
-// border-top: 1px solid rgba(#bfd0d8, 0.2);
-// Contentinfo-link span::before
-// background-color: rgba(#bfd0d8, 0.07);
-// Contentinfo-copyright
-// border-top: 1px solid rgba(#bfd0d8, 0.2);
-
-// Banner
-// background-color: #fff;
-
-// Hamburger
-// color: #275e70;
-// Hamburger--white
-// color: #fff;
-
-// ImageBlock-text h2
-// color: #435e6c;
-
-// Introduction
-// color: #819ba3;
-// Introduction::after
-// background-color: #b5955d;
-
-// LocationFinder
-// background-color: #fff;
-// box-shadow: rgba(#000, 0.5), rgba(#042435, 0.39);
-// LocationFinder legend
-// color: rgba(#25395d, 0.79);
-// LocationFinder select
-// border-left: 1px solid rgba(#bfd0d8, 0.27);
-
-// LocationFinderButton
-// box-shadow: rgba(#406c7a, 0.22);
-
-// Masthead-title
-// color: $color-text-overlay;
-// text-shadow: 0 0 54px #6facc1;
-
-// MoreLink
-// color: #12769f;
-// MoreLink--white
-// color: #fff;
-
-// Navigation
-// background-color: #fff;
-// color: #7d7d7d;
-// Navigation li:not(:first-child)
-// border-top: 1px solid rgba(#7d7d7d, 0.16);
-// Navigation a:hover
-// color: #5d91a1;
-
-// Overlay
-// background-color: rgba(#000, 0.20);
-
-// select
-// background-color: #fff;
-// color: #757675;
-// svg fill: rgba(#5e91a1, 0.87)
-// select.dark
-// background-color: #152640;
-// border-color: rgba(#bfd0d8, 0.2);
-// color: #fff;
-// svg fill: #bfd0d8
-
-// ServiceCard
-// color: #77919e;
-// background-color: #fff;
-// box-shadow: 0 22px 54px rgba(#6b778c, 0.21);
-
-// SkipLink:focus
-// background-color: #fff;
-// color: #5d91a1;
-
-// Statistic
-// color: #fff;
-// Statistic-icon
-// background-color: #fff;
-// box-shadow: 0 11px 46px rgba(#729ba8, 0.28);
-// color: #25395d;
-// Statistic-number
-// text-shadow: 0 0 34px #446975;
-// Statistic-label
-// text-shadow: 0 0 34px #446975;
-
-// SubNavigation
-// background-color: #fff;
-// border-bottom: 1px solid #fff;
-// color: #446975;
-// SubNavigation.is-sticky
-// border-bottom-color: rgba(#bfd0d8, 0.37);
-// SubNavigation::before
-// background: linear-gradient(to right, #fff 20%, rgba(#fff, 0) 100%);
-// SubNavigation::after
-// background: linear-gradient(to left, #fff 20%, rgba(#fff, 0) 100%);
-// SubNavigation-link:hover
-// color: rgba(#446975, 0.60);
-// SubNavigation-marker
-// background-color: #da745b;
-
-// Tagline--white
-// color: #fff; White
-
-// TeamMember-name
-// color: #25395d; Cloud Burst
-// TeamMember-title
-// color: #b5955d; Muddy Waters
-// TeamMember-panel
-// background-color: #fff; White
-// box-shadow: 0 42px 84px rgba(#000, 0.3); Black
-// TeamMember-bio
-// color: #8f9aa8; // Regent Gray
-
-// Background color
-$background-white: #fff;
-$background-blue: #1f6b9c;
-$background-plum: #973b8a;
-$background-green: #00d494;
-$background-peach: #db755c;
-$background-yellow: #ffc83f;
-
-// Text color
-$color-text-black: #000;
-
-// navy: #152640 #172741;
-// steel: #c8d6e1;
-// graphite: #686f79;
-// teal: #5e91a2 #11779f;
-// light gray: #c8cdd1 #f0f1f3;
-
 // ---------------------------------------------------------------------
 // Fonts
 // ---------------------------------------------------------------------
+
 $font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 $font-family-serif: "Mate", Georgia, sans-serif;
 
@@ -258,36 +77,23 @@ $font-family-serif: "Mate", Georgia, sans-serif;
 // Font size
 $font-size-default: 16;
 $font-size-default-min: 14;
-
 $font-size-body-small: 14;
 $font-size-body-small-min: 12;
-
 $font-size-body-tiny: 10;
-
 $font-size-heading-super: 72;
 $font-size-heading-super-min: 32;
-
 $font-size-heading-1: 48;
 $font-size-heading-1-min: 32;
-
 $font-size-heading-2: 32;
 $font-size-heading-2-min: 24;
-
 $font-size-heading-3: 24;
 $font-size-heading-3-min: 16;
-
 $font-size-heading-4: 20;
 $font-size-heading-4-min: 16;
-
 $font-size-heading-5: 16;
 $font-size-heading-5-min: 14;
-
-// $font-size-heading-5: 14;
-// $font-size-heading-5-min: 12;
-
 $font-size-heading-6: 12;
 $font-size-heading-6-min: 10;
-
 $font-size-help-tip: 11;
 
 // Font weight
@@ -299,33 +105,19 @@ $font-weight-bold: 700;
 // Line height
 $line-height-default: (28 / $font-size-default);
 $line-height-default-min: (24 / $font-size-default-min);
-
 $line-height-body-small: (19 / $font-size-body-small);
-// $line-height-body-small-min: (17 / $font-size-body-small-min);
-
 $line-height-heading-1: (58 / $font-size-heading-1);
-// $line-height-heading-1-min: (43 / $font-size-heading-1-min);
-
 $line-height-heading-2: (40 / $font-size-heading-2);
-// $line-height-heading-2-min: (42 / $font-size-heading-2-min);
-
 $line-height-heading-3: (32 / $font-size-heading-3);
-// $line-height-heading-3-min: (24 / $font-size-heading-3-min);
-
 $line-height-heading-4: (28 / $font-size-heading-4);
-// $line-height-heading-4-min: (24 / $font-size-heading-4-min);
-
 $line-height-heading-5: (24 / $font-size-heading-5);
-// $line-height-heading-5-min: (20 / $font-size-heading-5-min);
-
 $line-height-heading-6: (20 / $font-size-heading-6);
-// $line-height-heading-6-min: (16 / $font-size-heading-6-min);
-
 $line-height-reset: 1;
 
 // ---------------------------------------------------------------------
 // Opacity
 // ---------------------------------------------------------------------
+
 $opacity-100: 1;
 $opacity-80: 0.8;
 $opacity-77: 0.77;
@@ -345,6 +137,7 @@ $opacity-0: 0;
 // ---------------------------------------------------------------------
 // Spacing
 // ---------------------------------------------------------------------
+
 $spacing-gutter: 24;
 $spacing-sub-navigation-gutter: 10;
 $spacing-grid-padded: 106;
@@ -352,6 +145,7 @@ $spacing-grid-padded: 106;
 // ---------------------------------------------------------------------
 // Dimensions
 // ---------------------------------------------------------------------
+
 $min-width: 320;
 $max-width: 1290;
 $max-width-content: 630;
@@ -362,73 +156,105 @@ $max-width-grid-padded: $max-width - ($spacing-grid-padded * 2);
 // ---------------------------------------------------------------------
 // Shadow
 // ---------------------------------------------------------------------
+
 $shadow-location-finder: 0 2px 34px rgba(#1c2d3e, 0.09), 0 36px 84px rgba(#042435, 0.39);
 $shadow-location-finder-sticky: 0 2px 34px rgba(#1c2d3e, 0.09);
-$shadow-location-finder-button: 0 10px 14px rgba($color-button-finder, 0.22);
+$shadow-location-finder-button: 0 10px 14px rgba(#406c7a, 0.22);
 $shadow-modal: 0 36px 84px rgba(#042435, 0.39);
 $shadow-service-card: 0 22px 54px rgba(#6b778c, 0.21);
 $shadow-team-member-panel: 0 42px 84px rgba(#1c2d3e, 0.3);
-$shadow-highlight-icon: 0 11px 46px rgba($color-stat-shadow, 0.28);
-$shadow-highlight-text: 0 0 34px $color-stat-text-shadow;
+$shadow-highlight-icon: 0 11px 46px rgba(#729ba8, 0.28);
+$shadow-highlight-text: 0 0 34px #446975;
 $shadow-masthead-title: 0 0 72px rgba(#0d3c4d, 0.4);
-$shadow-table-row: 0 14px 34px rgba($color-background-overlay, 0.09);
+$shadow-table-row: 0 14px 34px rgba(#000, 0.09);
 $shadow-feature-testimonial: 0 2px 24px rgba(#0d3c4d, 0.4);
 
 // ---------------------------------------------------------------------
 // Time
 // ---------------------------------------------------------------------
 
+$timing-fast: 200ms;
+$timing-default: 400ms;
+
 // ---------------------------------------------------------------------
 // Media query
 // ---------------------------------------------------------------------
-$mq-max-375: #{((375 - 1) / $font-size-default) * 1em};
-$mq-min-375: #{(375 / $font-size-default) * 1em};
-$mq-max-436: #{((436 - 1) / $font-size-default) * 1em};
-$mq-min-436: #{(436 / $font-size-default) * 1em};
-$mq-max-480: #{((480 - 1) / $font-size-default) * 1em};
-$mq-min-480: #{(480 / $font-size-default) * 1em};
-$mq-max-520: #{((520 - 1) / $font-size-default) * 1em};
-$mq-min-520: #{(520 / $font-size-default) * 1em};
-$mq-max-544: #{((544 - 1) / $font-size-default) * 1em};
-$mq-min-544: #{(544 / $font-size-default) * 1em};
-$mq-max-560: #{((560 - 1) / $font-size-default) * 1em};
-$mq-min-560: #{(560 / $font-size-default) * 1em};
-$mq-max-600: #{((600 - 1) / $font-size-default) * 1em};
-$mq-min-600: #{(600 / $font-size-default) * 1em};
-$mq-max-615: #{((615 - 1) / $font-size-default) * 1em};
-$mq-min-615: #{(615 / $font-size-default) * 1em};
-$mq-max-620: #{((620 - 1) / $font-size-default) * 1em};
-$mq-min-620: #{(620 / $font-size-default) * 1em};
-$mq-max-624: #{((624 - 1) / $font-size-default) * 1em};
-$mq-min-624: #{(624 / $font-size-default) * 1em};
-$mq-max-670: #{((670 - 1) / $font-size-default) * 1em};
-$mq-min-670: #{(670 / $font-size-default) * 1em};
-$mq-max-687: #{((687 - 1) / $font-size-default) * 1em};
-$mq-min-687: #{(687 / $font-size-default) * 1em};
-$mq-max-700: #{((700 - 1) / $font-size-default) * 1em};
-$mq-min-700: #{(700 / $font-size-default) * 1em};
-$mq-max-720: #{((720 - 1) / $font-size-default) * 1em};
-$mq-min-720: #{(720 / $font-size-default) * 1em};
-$mq-max-808: #{((808 - 1) / $font-size-default) * 1em};
-$mq-min-808: #{(808 / $font-size-default) * 1em};
-$mq-max-840: #{((840 - 1) / $font-size-default) * 1em};
-$mq-min-840: #{(840 / $font-size-default) * 1em};
-$mq-max-860: #{((860 - 1) / $font-size-default) * 1em};
-$mq-min-860: #{(860 / $font-size-default) * 1em};
-$mq-max-1007: #{((1007 - 1) / $font-size-default) * 1em};
-$mq-min-1007: #{(1007 / $font-size-default) * 1em};
-$mq-max-1024: #{((1024 - 1) / $font-size-default) * 1em};
-$mq-min-1024: #{(1024 / $font-size-default) * 1em};
-$mq-max-1290: #{((1290 - 1) / $font-size-default) * 1em};
-$mq-min-1290: #{(1290 / $font-size-default) * 1em};
-$mq-max-container: #{((($max-width + ($spacing-gutter * 2)) - 1) / $font-size-default) * 1em};
-$mq-min-container: #{(($max-width + ($spacing-gutter * 2)) / $font-size-default) * 1em};
-$mq-max-banner: #{(($max-width-banner - 1) / $font-size-default) * 1em};
-$mq-min-banner: #{($max-width-banner / $font-size-default) * 1em};
+
+$mq-max-320: breakpoint(320 - 1);
+$mq-min-320: breakpoint(320);
+$mq-max-375: breakpoint(375 - 1);
+$mq-min-375: breakpoint(375);
+$mq-max-420: breakpoint(420 - 1);
+$mq-min-420: breakpoint(420);
+$mq-max-436: breakpoint(436 - 1);
+$mq-min-436: breakpoint(436);
+$mq-max-468: breakpoint(468 - 1);
+$mq-min-468: breakpoint(468);
+$mq-max-480: breakpoint(480 - 1);
+$mq-min-480: breakpoint(480);
+$mq-max-520: breakpoint(520 - 1);
+$mq-min-520: breakpoint(520);
+$mq-max-544: breakpoint(544 - 1);
+$mq-min-544: breakpoint(544);
+$mq-max-500: breakpoint(500 - 1);
+$mq-min-500: breakpoint(500);
+$mq-max-560: breakpoint(560 - 1);
+$mq-min-560: breakpoint(560);
+$mq-max-600: breakpoint(600 - 1);
+$mq-min-600: breakpoint(600);
+$mq-max-615: breakpoint(615 - 1);
+$mq-min-615: breakpoint(615);
+$mq-max-620: breakpoint(620 - 1);
+$mq-min-620: breakpoint(620);
+$mq-max-624: breakpoint(624 - 1);
+$mq-min-624: breakpoint(624);
+$mq-max-630: breakpoint(630 - 1);
+$mq-min-630: breakpoint(630);
+$mq-max-645: breakpoint(645 - 1);
+$mq-min-645: breakpoint(645);
+$mq-max-650: breakpoint(650 - 1);
+$mq-min-650: breakpoint(650);
+$mq-max-660: breakpoint(660 - 1);
+$mq-min-660: breakpoint(660);
+$mq-max-670: breakpoint(670 - 1);
+$mq-min-670: breakpoint(670);
+$mq-max-687: breakpoint(687 - 1);
+$mq-min-687: breakpoint(687);
+$mq-max-700: breakpoint(700 - 1);
+$mq-min-700: breakpoint(700);
+$mq-max-720: breakpoint(720 - 1);
+$mq-min-720: breakpoint(720);
+$mq-max-746: breakpoint(746 - 1);
+$mq-min-746: breakpoint(746);
+$mq-max-800: breakpoint(800 - 1);
+$mq-min-800: breakpoint(800);
+$mq-max-808: breakpoint(808 - 1);
+$mq-min-808: breakpoint(808);
+$mq-max-840: breakpoint(840 - 1);
+$mq-min-840: breakpoint(840);
+$mq-max-860: breakpoint(860 - 1);
+$mq-min-860: breakpoint(860);
+$mq-max-980: breakpoint(980 - 1);
+$mq-min-980: breakpoint(980);
+$mq-max-1007: breakpoint(1007 - 1);
+$mq-min-1007: breakpoint(1007);
+$mq-max-1015: breakpoint(1015 - 1);
+$mq-min-1015: breakpoint(1015);
+$mq-max-1024: breakpoint(1024 - 1);
+$mq-min-1024: breakpoint(1024);
+$mq-max-1088: breakpoint(1088 - 1);
+$mq-min-1088: breakpoint(1088);
+$mq-max-1290: breakpoint(1290 - 1);
+$mq-min-1290: breakpoint(1290);
+$mq-max-container: breakpoint(($max-width + ($spacing-gutter * 2)));
+$mq-min-container: breakpoint(($max-width + ($spacing-gutter * 2)));
+$mq-max-banner: breakpoint($max-width-banner - 1);
+$mq-min-banner: breakpoint($max-width-banner);
 
 // ---------------------------------------------------------------------
 // Z-index
 // ---------------------------------------------------------------------
+
 $z-index-toast: 10000;
 $z-index-modal: 9000;
 $z-index-overlay: 8000;

@@ -1,7 +1,7 @@
 .page-content {
   margin-top: 64px;
 
-  @media (min-width: 645px) {
+  @media (min-width: $mq-min-645) {
     margin-top: #{(128 / $max-width) * 100vw};
   }
 
@@ -25,11 +25,11 @@
   margin-bottom: 92px;
   margin-top: 80px;
 
-  @media (min-width: 404px) {
+  @media (min-width: breakpoint(404)) {
     margin-top: #{(256 / $max-width) * 100vw};
   }
 
-  @media (min-width: 660px) {
+  @media (min-width: $mq-min-660) {
     margin-bottom: #{(180 / $max-width) * 100vw};
   }
 
@@ -41,7 +41,7 @@
   hr {
     margin-bottom: 92px;
 
-    @media (min-width: 660px) {
+    @media (min-width: $mq-min-660) {
       margin-bottom: #{(180 / $max-width) * 100vw};
     }
 

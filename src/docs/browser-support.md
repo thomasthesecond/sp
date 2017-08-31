@@ -7,7 +7,7 @@ When talking about browser support, it’s important to first mention graceful d
 
 Graceful degradation is the practice of building a web site or application so it provides a good level of user experience in modern browsers. However, it will degrade gracefully for those using older browsers. The system may not be as pleasant or as pretty, but the basic functionality will work on older systems.
 
-Progressive enhancement is a strategy for web design that emphasizes core Web page content first. This strategy then progressively adds more nuanced and technically rigorous layers of presentation and features on top of the content as the end-user's browser/internet connection allow.
+Progressive enhancement is a strategy for web design that emphasizes core web page content first. This strategy then progressively adds more nuanced and technically rigorous layers of presentation and features on top of the content as the end-user's browser/internet connection allow.
 
 ## Browser tiers
 

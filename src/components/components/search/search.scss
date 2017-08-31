@@ -34,7 +34,7 @@
   line-height: $line-height-reset;
   margin: 4px;
   padding: 0 28px;
-  transition: color 200ms;
+  transition: color $timing-fast;
 
   &:hover,
   &:active,

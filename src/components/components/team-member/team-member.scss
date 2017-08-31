@@ -34,7 +34,7 @@
   }
 
   .TeamMember:hover & {
-    @media (min-width: 1015px) {
+    @media (min-width: $mq-min-1015) {
       position: relative;
       z-index: ($z-index-default + 1);
     }
@@ -53,7 +53,7 @@
   }
 
   .TeamMember:not(.TeamMember--small):hover & {
-    @media (min-width: 1015px) {
+    @media (min-width: $mq-min-1015) {
       position: relative;
       z-index: ($z-index-default + 1);
     }
@@ -72,7 +72,7 @@
   }
 
   .TeamMember:not(.TeamMember--small):hover & {
-    @media (min-width: 1015px) {
+    @media (min-width: $mq-min-1015) {
       position: relative;
       z-index: ($z-index-default + 1);
     }
@@ -80,11 +80,11 @@
 }
 
 .TeamMember-panel {
-  @media (max-width: 1014px) {
+  @media (max-width: $mq-max-1015) {
     display: none;
   }
 
-  @media (min-width: 1015px) {
+  @media (min-width: $mq-min-1015) {
     backface-visibility: hidden;
     background-color: $color-background-default;
     box-shadow: $shadow-team-member-panel;
@@ -94,13 +94,13 @@
     position: absolute;
     top: -48px;
     width: calc(100% + 96px);
-    transition: opacity 200ms;
+    transition: opacity $timing-fast;
     visibility: hidden;
     z-index: $z-index-default;
   }
 
   .TeamMember:hover & {
-    @media (min-width: 1015px) {
+    @media (min-width: $mq-min-1015) {
       opacity: $opacity-100;
       visibility: visible;
     }
@@ -136,7 +136,7 @@
     width: auto;
   }
 
-  @media (min-width: 615px) {
+  @media (min-width: $mq-min-615) {
     margin-left: #{(40 / 904) * 100%};
     margin-top: 56px;
     width: #{(248 / 904) * 100%};
@@ -152,7 +152,7 @@
 .TeamList .TeamMember {
   margin-top: 24px;
 
-  @media (min-width: 645px) {
+  @media (min-width: $mq-min-645) {
     margin-top: #{(48 / $max-width) * 100vw};
   }
 

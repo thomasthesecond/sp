@@ -1,0 +1,12 @@
+{
+  "default": 16,
+  "body-small": 14,
+  "body-tiny": 10,
+  "heading-super": 72,
+  "heading-1": 48,
+  "heading-2": 32,
+  "heading-3": 24,
+  "heading-4": 20,
+  "heading-5": 16,
+  "heading-6": 12
+}
