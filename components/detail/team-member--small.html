@@ -190,7 +190,8 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-2770942729e6b6bd29201a65992f1f4d-panel-view">
     <code class="Code Code--lang-handlebars">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TeamMember TeamMember--small js-team-member"</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"employee"</span> <span class="hljs-attr">itemscope</span> <span class="hljs-attr">itemtype</span>=<span class="hljs-string">"http://schema.org/Person"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TeamMember TeamMember--small js-team-member"</span>
+  <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"employee"</span> <span class="hljs-attr">itemscope</span> <span class="hljs-attr">itemtype</span>=<span class="hljs-string">"http://schema.org/Person"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h5</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"TeamMember-name"</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"name"</span>&gt;</span>
     </span><span class="hljs-template-variable">{{ teamMember.name }}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
@@ -326,7 +327,7 @@
   }
 
   <span class="hljs-selector-class">.TeamMember</span>:hover &amp; {
-    @<span class="hljs-keyword">media</span> (min-width: 1015px) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-1015</span>) {
       <span class="hljs-attribute">position</span>: relative;
       <span class="hljs-attribute">z-index</span>: (<span class="hljs-variable">$z-index-default</span> + <span class="hljs-number">1</span>);
     }
@@ -345,7 +346,7 @@
   }
 
   <span class="hljs-selector-class">.TeamMember</span>:not(<span class="hljs-selector-class">.TeamMember--small</span>):hover &amp; {
-    @<span class="hljs-keyword">media</span> (min-width: 1015px) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-1015</span>) {
       <span class="hljs-attribute">position</span>: relative;
       <span class="hljs-attribute">z-index</span>: (<span class="hljs-variable">$z-index-default</span> + <span class="hljs-number">1</span>);
     }
@@ -364,7 +365,7 @@
   }
 
   <span class="hljs-selector-class">.TeamMember</span>:not(<span class="hljs-selector-class">.TeamMember--small</span>):hover &amp; {
-    @<span class="hljs-keyword">media</span> (min-width: 1015px) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-1015</span>) {
       <span class="hljs-attribute">position</span>: relative;
       <span class="hljs-attribute">z-index</span>: (<span class="hljs-variable">$z-index-default</span> + <span class="hljs-number">1</span>);
     }
@@ -372,11 +373,11 @@
 }
 
 <span class="hljs-selector-class">.TeamMember-panel</span> {
-  @<span class="hljs-keyword">media</span> (max-width: 1014px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-1015</span>) {
     <span class="hljs-attribute">display</span>: none;
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 1015px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-1015</span>) {
     <span class="hljs-attribute">backface-visibility</span>: hidden;
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
     <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-team-member-panel</span>;
@@ -386,13 +387,13 @@
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">top</span>: -<span class="hljs-number">48px</span>;
     <span class="hljs-attribute">width</span>: calc(<span class="hljs-number">100%</span> + <span class="hljs-number">96px</span>);
-    <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>;
+    <span class="hljs-attribute">transition</span>: opacity <span class="hljs-variable">$timing-fast</span>;
     <span class="hljs-attribute">visibility</span>: hidden;
     <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-default</span>;
   }
 
   <span class="hljs-selector-class">.TeamMember</span>:hover &amp; {
-    @<span class="hljs-keyword">media</span> (min-width: 1015px) {
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-1015</span>) {
       <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-100</span>;
       <span class="hljs-attribute">visibility</span>: visible;
     }
@@ -428,7 +429,7 @@
     <span class="hljs-attribute">width</span>: auto;
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 615px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-615</span>) {
     <span class="hljs-attribute">margin-left</span>: #{(<span class="hljs-number">40</span> / <span class="hljs-number">904</span>) * <span class="hljs-number">100%</span>};
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">56px</span>;
     <span class="hljs-attribute">width</span>: #{(<span class="hljs-number">248</span> / <span class="hljs-number">904</span>) * <span class="hljs-number">100%</span>};
@@ -444,7 +445,7 @@
 <span class="hljs-selector-class">.TeamList</span> <span class="hljs-selector-class">.TeamMember</span> {
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">24px</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 645px) {
+  @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-645</span>) {
     <span class="hljs-attribute">margin-top</span>: #{(<span class="hljs-number">48</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
   }
 
@@ -483,7 +484,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.2 KB</span>
+                    <span class="Meta-value">3.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -3579,20 +3580,6 @@
             <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
                 <span>Design tokens</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         

@@ -281,7 +281,7 @@
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color-text-heading</span>;
   <span class="hljs-attribute">display</span>: inline-block;
   <span class="hljs-attribute">text-decoration</span>: none;
-  <span class="hljs-attribute">transition</span>: color <span class="hljs-number">200ms</span>;
+  <span class="hljs-attribute">transition</span>: color <span class="hljs-variable">$timing-fast</span>;
 
   &amp;:hover,
   &amp;:active,
@@ -324,7 +324,7 @@
 }
 
 <span class="hljs-selector-class">.NextPage-icon</span> {
-  @<span class="hljs-keyword">media</span> (max-width: 519px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-520</span>) {
     <span class="hljs-attribute">display</span>: none;
   }
 
@@ -336,7 +336,7 @@
     <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">top</span>: #{(<span class="hljs-number">22</span> / <span class="hljs-number">66</span>) * <span class="hljs-number">1em</span>};
     <span class="hljs-attribute">transform</span>: translateX(#{((<span class="hljs-number">66</span> + <span class="hljs-variable">$font-size-heading-1</span>) / <span class="hljs-number">66</span>) * <span class="hljs-number">1em</span>});
-    <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">200ms</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-variable">$timing-fast</span>;
   }
 }
 </pre>
@@ -3462,20 +3462,6 @@
             <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
                 <span>Design tokens</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         

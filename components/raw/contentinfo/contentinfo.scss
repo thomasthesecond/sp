@@ -31,7 +31,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   line-height: (24 / 12);
   padding-top: 64px;
 
-  @media (min-width: 800px) {
+  @media (min-width: $mq-min-800) {
     line-height: (28 / $font-size-default);
     padding-top: 110px;
   }
@@ -41,7 +41,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   overflow: hidden;
 
   @supports (display: grid) {
-    @media (min-width: 800px) {
+    @media (min-width: $mq-min-800) {
       display: grid;
       grid-template-areas: "location . contact";
       grid-template-columns:
@@ -68,7 +68,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
 .Contentinfo a:not(.Button) {
   color: inherit;
   text-decoration: none;
-  transition: color 200ms;
+  transition: color $timing-fast;
 
   &:hover,
   &:active,
@@ -78,7 +78,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
 }
 
 .Contentinfo-location {
-  @media (min-width: 800px) {
+  @media (min-width: $mq-min-800) {
     align-items: flex-end;
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   @supports (display: grid) {
     grid-area: location;
 
-    @media (min-width: 800px) {
+    @media (min-width: $mq-min-800) {
       align-items: flex-start;
       display: grid;
       float: none;
@@ -103,7 +103,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   }
 
   h4 {
-    @media (min-width: 800px) {
+    @media (min-width: $mq-min-800) {
       width: #{($location-width / $location-container-width) * 100%};
     }
 
@@ -111,7 +111,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
       grid-column: 2;
       grid-row: 1;
 
-      @media (min-width: 800px) {
+      @media (min-width: $mq-min-800) {
         margin-top: 0;
         width: auto;
       }
@@ -123,11 +123,11 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
     max-width: #{$image-width}px;
     width: 100%;
 
-    @media (max-width: 799px) {
+    @media (max-width: $mq-max-800) {
       margin-top: 32px;
     }
 
-    @media (min-width: 800px) {
+    @media (min-width: $mq-min-800) {
       align-self: flex-start;
       left: 0;
       margin-left: #{($image-margin / $location-container-width) * 100%};
@@ -141,7 +141,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
       grid-column: 1;
       grid-row: 1 / 4;
 
-      @media (min-width: 800px) {
+      @media (min-width: $mq-min-800) {
         margin-left: auto;
         order: 0;
         position: static;
@@ -154,11 +154,11 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
     margin-bottom: 0;
     margin-top: 23px;
 
-    @media (max-width: 799px) {
+    @media (max-width: $mq-max-800) {
       display: none;
     }
 
-    @media (min-width: 800px) {
+    @media (min-width: $mq-min-800) {
       width: #{($location-width / $location-container-width) * 100%};
     }
 
@@ -166,7 +166,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
       grid-column: 2;
       grid-row: 2;
 
-      @media (min-width: 800px) {
+      @media (min-width: $mq-min-800) {
         width: auto;
       }
     }
@@ -178,11 +178,11 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
     margin-top: 40px;
     width: 100%;
 
-    @media (min-width: 650px) {
+    @media (min-width: $mq-min-650) {
       width: 50%;
     }
 
-    @media (min-width: 800px) {
+    @media (min-width: $mq-min-800) {
       margin-right: #{(($location-width - 332) / $location-container-width) * 100%};
       margin-top: 30px;
       width: #{(332 / $location-container-width) * 100%};
@@ -192,7 +192,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
       grid-column: 2;
       grid-row: 3;
 
-      @media (min-width: 800px) {
+      @media (min-width: $mq-min-800) {
         margin-right: 0;
         width: #{(332 / $location-width) * 100%};
       }
@@ -215,11 +215,11 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
 .Contentinfo-contact {
   line-height: (36 / $font-size-default);
 
-  @media (max-width: 799px) {
+  @media (max-width: $mq-max-800) {
     margin-top: 64px;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: $mq-min-800) {
     border-left: 1px solid rgba($color-border-default, $opacity-07);
     float: left;
     margin-left: $contact-column-margin;
@@ -230,7 +230,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   @supports (display: grid) {
     grid-area: contact;
 
-    @media (min-width: 800px) {
+    @media (min-width: $mq-min-800) {
       float: none;
       margin-left: 0;
       padding-left: #{($contact-padding / ($contact-width + $contact-padding)) * 100%};
@@ -252,62 +252,62 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
   padding-top: 40px;
   width: 100%;
 
-  @media (min-width: 650px) {
+  @media (min-width: $mq-min-650) {
     float: left;
   }
 
-  @media (min-width: 650px) and (max-width: 799px) {
+  @media (min-width: $mq-min-650) and (max-width: $mq-max-800) {
     margin-top: 64px;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: $mq-min-800) {
     margin-top: 129px;
     padding-bottom: 44px;
     padding-top: 42px;
   }
 
-  @media (min-width: 980px) {
+  @media (min-width: $mq-min-980) {
     display: flex;
   }
 
   @supports (display: grid) {
     grid-column: auto / span 3;
 
-    @media (min-width: 650px) {
+    @media (min-width: $mq-min-650) {
       float: none;
     }
   }
 }
 
 .Contentinfo-links {
-  @media (max-width: 649px) {
+  @media (max-width: $mq-max-650) {
     overflow: hidden;
   }
 
-  @media (min-width: 650px) {
+  @media (min-width: $mq-min-650) {
     flex: 1 0 auto;
   }
 
   span {
-    @media (max-width: 319px) {
+    @media (max-width: $mq-max-320) {
       display: block;
     }
 
-    @media (min-width: 320px) and (max-width: 649px) {
+    @media (min-width: $mq-min-320) and (max-width: $mq-max-650) {
       float: left;
       width: 50%;
     }
 
-    @media (max-width: 649px) {
+    @media (max-width: $mq-max-650) {
       margin-bottom: 40px;
     }
 
-    @media (min-width: 650px) {
+    @media (min-width: $mq-min-650) {
       flex: 1 0 auto;
     }
 
     &:first-child::before {
-      @media (min-width: 650px) and (max-width: 979px) {
+      @media (min-width: $mq-min-650) and (max-width: $mq-max-980) {
         margin-left: 0;
         margin-right: 0;
         width: 0;
@@ -315,7 +315,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
     }
 
     &::before {
-      @media (min-width: 650px) {
+      @media (min-width: $mq-min-650) {
         background-color: rgba($color-border-default, $opacity-07);
         content: "";
         display: inline-block;
@@ -330,28 +330,28 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
 }
 
 .Contentinfo-copyright {
-  @media (max-width: 319px) {
+  @media (max-width: $mq-max-320) {
     margin-top: 0;
   }
 
-  @media (min-width: 320px) and (max-width: 649px) {
+  @media (min-width: $mq-min-320) and (max-width: $mq-max-650) {
     margin-top: 40px;
   }
 
-  @media (max-width: 649px) {
+  @media (max-width: $mq-max-650) {
     border-top: 1px solid rgba($color-border-default, $opacity-20);
     padding-top: 30px;
   }
 
-  @media (min-width: 650px) {
+  @media (min-width: $mq-min-650) {
     display: inline-block;
   }
 
-  @media (min-width: 650px) and (max-width: 979px) {
+  @media (min-width: $mq-min-650) and (max-width: $mq-max-980) {
     margin-top: 64px;
   }
 
-  @media (min-width: 980px) {
+  @media (min-width: $mq-min-980) {
     display: inline;
     flex: 0 1 auto;
     order: -1;

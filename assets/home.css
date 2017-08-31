@@ -1,9 +1,3 @@
-/**
- * Functions
- */
-/**
- * Mixins
- */
 @-webkit-keyframes expand {
   0% {
     width: 0;
@@ -12,6 +6,7 @@
     width: 100%;
   }
 }
+
 @keyframes expand {
   0% {
     width: 0;
@@ -313,12 +308,6 @@
             transform: translateY(0);
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Tagline {
   font-weight: 300;
   letter-spacing: -0.5px;
@@ -326,7 +315,7 @@
   text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .Tagline {
     letter-spacing: -1.2px;
     line-height: 1.2;
@@ -360,12 +349,6 @@
     max-width: 480px;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .MoreLink {
   font-size: 12px;
   -webkit-backface-visibility: hidden;
@@ -408,7 +391,7 @@
   transition: color 200ms, transform 200ms, -webkit-transform 200ms;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .MoreLink .icon {
     font-size: 24px;
     height: 10px;
@@ -443,12 +426,6 @@
 .Masthead .MoreLink:hover, .Masthead .MoreLink:active, .Masthead .MoreLink:focus {
   color: rgba(255, 255, 255, 0.8);
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Masthead {
   height: 55vw;
   max-height: 366px;
@@ -459,7 +436,7 @@
   width: 100%;
 }
 
-@media (min-height: 892px) {
+@media (min-height: 55.75em) {
   .Masthead {
     max-height: 466px;
   }
@@ -495,12 +472,6 @@
   margin: 0;
   text-shadow: 0 0 72px rgba(13, 60, 77, 0.4);
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .LocationFinderButton {
   -webkit-box-shadow: 0 10px 14px rgba(64, 108, 122, 0.22);
           box-shadow: 0 10px 14px rgba(64, 108, 122, 0.22);
@@ -515,12 +486,6 @@
   text-transform: none;
   width: 100%;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .LocationFinder.is-sticky {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
@@ -716,12 +681,6 @@
     height: 100%;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Introduction {
   font-size: 20px;
   color: #25395d;
@@ -765,12 +724,6 @@
     width: 80px;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 @media (min-width: 34em) {
   .ImageBlock {
     -webkit-box-align: center;
@@ -862,17 +815,11 @@
   }
 }
 
-@media (min-width: 1088px) {
+@media (min-width: 68em) {
   .ImageBlock--alternate .ImageBlock-text {
     margin-left: 8.06202%;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .CoverVideo {
   display: block;
   height: 100%;
@@ -904,12 +851,6 @@
      object-fit: cover;
   width: 100%;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .CoverPhoto {
   display: block;
   height: 100%;
@@ -926,12 +867,6 @@
      object-fit: cover;
   width: 100%;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 @media (max-width: 38.6875em) {
   .Banner {
     left: 0;
@@ -1042,7 +977,7 @@
   margin-top: 136px;
 }
 
-@media (min-width: 686px) {
+@media (min-width: 42.875em) {
   .Contentinfo {
     margin-top: 19.84496vw;
   }

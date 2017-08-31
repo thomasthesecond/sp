@@ -540,12 +540,12 @@
   }
 
   &amp;::before {
-    <span class="hljs-attribute">background</span>: linear-gradient(to right, <span class="hljs-variable">$color-background-default</span> <span class="hljs-number">20%</span>, rgba(<span class="hljs-variable">$color-background-default</span>, <span class="hljs-number">0</span>) <span class="hljs-number">100%</span>);
+    <span class="hljs-attribute">background</span>: linear-gradient(to right, <span class="hljs-variable">$color-background-default</span> <span class="hljs-number">20%</span>, rgba(<span class="hljs-variable">$color-background-default</span>, <span class="hljs-variable">$opacity-0</span>) <span class="hljs-number">100%</span>);
     <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
   }
 
   &amp;::after {
-    <span class="hljs-attribute">background</span>: linear-gradient(to left, <span class="hljs-variable">$color-background-default</span> <span class="hljs-number">20%</span>, rgba(<span class="hljs-variable">$color-background-default</span>, <span class="hljs-number">0</span>) <span class="hljs-number">100%</span>);
+    <span class="hljs-attribute">background</span>: linear-gradient(to left, <span class="hljs-variable">$color-background-default</span> <span class="hljs-number">20%</span>, rgba(<span class="hljs-variable">$color-background-default</span>, <span class="hljs-variable">$opacity-0</span>) <span class="hljs-number">100%</span>);
     <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
   }
 }
@@ -612,7 +612,7 @@
   <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">26px</span>;
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">text-decoration</span>: none;
-  <span class="hljs-attribute">transition</span>: color <span class="hljs-number">200ms</span>;
+  <span class="hljs-attribute">transition</span>: color <span class="hljs-variable">$timing-fast</span>;
 
   @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-600</span>) {
     <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">34px</span>;
@@ -631,7 +631,7 @@
   @<span class="hljs-keyword">include</span> marker();
 
   <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-0</span>;
-  <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>;
+  <span class="hljs-attribute">transition</span>: opacity <span class="hljs-variable">$timing-fast</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
 }
 </pre>
@@ -3744,20 +3744,6 @@
             <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
                 <span>Design tokens</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         

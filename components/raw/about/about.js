@@ -13,6 +13,8 @@ export default class AboutPage {
     this.mqlModal = window.matchMedia("(max-width: 1014px)");
     this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
 
+    this.modal = new Modal();
+
     this.teamMemberModal = this.teamMemberModal.bind(this);
     this.checkScreenSize = this.checkScreenSize.bind(this);
     this.create = this.create.bind(this);
@@ -20,40 +22,35 @@ export default class AboutPage {
     this.destroy = this.destroy.bind(this);
   }
 
-  teamMemberModal() {
-    if (this.mqlModal.matches) {
-      const modal = new Modal();
-      const teamMembers = document.querySelectorAll(".TeamMember");
-      const modalElement = document.querySelector(".js-modal");
+  teamMemberModal(mql) {
+    const teamMembers = document.querySelectorAll(".js-team-member");
+    const modalElement = document.querySelector(".js-modal");
 
-      forEach(teamMembers, (index, member) => {
-        const name = member.querySelector(".TeamMember-name").innerHTML;
-        const title = member.querySelector(".TeamMember-title").innerHTML;
-        const bio = member.querySelector(".TeamMember-bio").innerHTML;
+    forEach(teamMembers, (index, member) => {
+      const name = member.querySelector(".TeamMember-name").innerHTML;
+      const title = member.querySelector(".TeamMember-title").innerHTML;
+      const bio = member.querySelector(".TeamMember-bio").innerHTML;
 
-        const content = `
-          <div class="TeamMember">
-            <h2 class="TeamMember-name" id="${modalElement.id}-title">${name}</h2>
-            <div class="TeamMember-title">${title}</div>
-            <p class="TeamMember-bio" id="${modalElement.id}-description">${bio}</p>
-          </div>
-        `;
+      const content = `
+        <div class="TeamMember">
+          <h2 class="TeamMember-name" id="${modalElement.id}-title">${name}</h2>
+          <div class="TeamMember-title">${title}</div>
+          <p class="TeamMember-bio" id="${modalElement.id}-description">${bio}</p>
+        </div>
+      `;
 
-        const onClick = (event) => {
-          modal.open(content);
-          event.preventDefault();
-        }
+      const onClick = (event) => {
+        this.modal.open(content);
+        event.preventDefault();
+      };
 
-        member.addEventListener("click", onClick);
-        // if (this.mqlModal.matches) {
-        //   console.log("add", [member]);
-        //   member.addEventListener("click", onClick);
-        // } else {
-        //   console.log("rmove", [member]);
-        //   member.removeEventListener("click", onClick);
-        // }
-      });
-    }
+      if (mql.matches) {
+        member.addEventListener("click", onClick, false);
+      } else {
+        this.modal.close();
+        member.removeEventListener("click", onClick, false);
+      }
+    });
   }
 
   checkScreenSize(mql) {

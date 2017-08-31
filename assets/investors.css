@@ -1,9 +1,3 @@
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .MoreLink {
   font-size: 12px;
   -webkit-backface-visibility: hidden;
@@ -46,7 +40,7 @@
   transition: color 200ms, transform 200ms, -webkit-transform 200ms;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .MoreLink .icon {
     font-size: 24px;
     height: 10px;
@@ -81,12 +75,6 @@
 .Masthead .MoreLink:hover, .Masthead .MoreLink:active, .Masthead .MoreLink:focus {
   color: rgba(255, 255, 255, 0.8);
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .TeamMember:not(.TeamMember--small) {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -127,7 +115,7 @@
   }
 }
 
-@media (min-width: 1015px) {
+@media (min-width: 63.4375em) {
   .TeamMember:hover .TeamMember-image {
     position: relative;
     z-index: 2;
@@ -146,7 +134,7 @@
   margin-top: 0;
 }
 
-@media (min-width: 1015px) {
+@media (min-width: 63.4375em) {
   .TeamMember:not(.TeamMember--small):hover .TeamMember-name {
     position: relative;
     z-index: 2;
@@ -165,20 +153,20 @@
   margin-top: 2px;
 }
 
-@media (min-width: 1015px) {
+@media (min-width: 63.4375em) {
   .TeamMember:not(.TeamMember--small):hover .TeamMember-title {
     position: relative;
     z-index: 2;
   }
 }
 
-@media (max-width: 1014px) {
+@media (max-width: 63.375em) {
   .TeamMember-panel {
     display: none;
   }
 }
 
-@media (min-width: 1015px) {
+@media (min-width: 63.4375em) {
   .TeamMember-panel {
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -198,7 +186,7 @@
   }
 }
 
-@media (min-width: 1015px) {
+@media (min-width: 63.4375em) {
   .TeamMember:hover .TeamMember-panel {
     opacity: 1;
     visibility: visible;
@@ -235,7 +223,7 @@
   }
 }
 
-@media (min-width: 615px) {
+@media (min-width: 38.4375em) {
   .LeadershipTeam .TeamMember {
     margin-left: 4.42478%;
     margin-top: 56px;
@@ -254,7 +242,7 @@
   margin-top: 24px;
 }
 
-@media (min-width: 645px) {
+@media (min-width: 40.3125em) {
   .TeamList .TeamMember {
     margin-top: 3.72093vw;
   }
@@ -280,12 +268,6 @@
 .Modal .TeamMember-bio {
   margin-bottom: 28px;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .SubNavigation {
   font-size: 12px;
   background-color: #fff;
@@ -428,12 +410,6 @@ body:not(.InvestorsPage) .SubNavigation-list {
   transition: opacity 200ms;
   width: 0;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Modal {
   background-color: #fff;
   -webkit-box-shadow: 0 36px 84px rgba(4, 36, 53, 0.39);
@@ -519,12 +495,6 @@ body:not(.InvestorsPage) .SubNavigation-list {
     padding-left: 48px;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Overlay {
   background-color: rgba(0, 0, 0, 0.2);
   height: 100vh;
@@ -543,12 +513,6 @@ body:not(.InvestorsPage) .SubNavigation-list {
   opacity: 1;
   visibility: visible;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .UtilityLinks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -575,18 +539,12 @@ body:not(.InvestorsPage) .SubNavigation-list {
     width: 50%;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .TeamList-heading {
   margin-bottom: 0;
   margin-top: 0;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   .TeamList-members {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -596,7 +554,7 @@ body:not(.InvestorsPage) .SubNavigation-list {
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   .TeamList-members .TeamMember {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
@@ -604,25 +562,19 @@ body:not(.InvestorsPage) .SubNavigation-list {
     padding-right: 8px;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .StockPriceCard {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(181, 149, 93, 0.07)), to(rgba(94, 145, 161, 0.07)));
   background: linear-gradient(to bottom, rgba(181, 149, 93, 0.07) 0%, rgba(94, 145, 161, 0.07) 100%);
   padding: 48px 24px;
 }
 
-@media (max-width: 499px) {
+@media (max-width: 31.1875em) {
   .StockPriceCard {
     font-size: 12px;
   }
 }
 
-@media (min-width: 940px) {
+@media (min-width: 58.75em) {
   .StockPriceCard {
     padding: 6.20155vw 3.10078vw;
   }
@@ -661,13 +613,13 @@ body:not(.InvestorsPage) .SubNavigation-list {
   padding-top: 24px;
 }
 
-@media (min-width: 484px) {
+@media (min-width: 30.25em) {
   .StockPriceCard-footer {
     margin-top: 9.92248vw;
   }
 }
 
-@media (min-width: 968px) {
+@media (min-width: 60.5em) {
   .StockPriceCard-footer {
     padding-top: 2.48062vw;
   }
@@ -679,12 +631,6 @@ body:not(.InvestorsPage) .SubNavigation-list {
     padding-top: 32px;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .StockPrice {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,7 +644,7 @@ body:not(.InvestorsPage) .SubNavigation-list {
   margin-right: 32px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 31.25em) {
   .StockPrice-price {
     margin-right: 10px;
   }
@@ -732,7 +678,7 @@ body:not(.InvestorsPage) .SubNavigation-list {
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 31.25em) {
   .StockPrice-ticker {
     padding-top: 14px;
   }
@@ -752,7 +698,7 @@ body:not(.InvestorsPage) .SubNavigation-list {
   width: 100%;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 31.25em) {
   .StockPrice-range {
     margin-top: 12px;
   }
@@ -761,12 +707,6 @@ body:not(.InvestorsPage) .SubNavigation-list {
 .StockPrice-range span + span {
   margin-left: 32px;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .StockChartFilter {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -817,22 +757,10 @@ body:not(.InvestorsPage) .SubNavigation-list {
     margin-left: 24px;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .StockChart img {
   display: block;
   max-width: 100%;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Search {
   background-color: #fff;
   border: 1px solid #bfd0d8;
@@ -887,12 +815,6 @@ body:not(.InvestorsPage) .SubNavigation-list {
 .Search-button:hover, .Search-button:active, .Search-button:focus {
   color: #8f9aa8;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .ResourcesList-heading {
   border-bottom: 1px solid rgba(191, 208, 216, 0.6);
   margin-bottom: 0.8em;
@@ -932,32 +854,14 @@ body:not(.InvestorsPage) .SubNavigation-list {
   vertical-align: -2px;
   width: 14px;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .NewsArticle .PressReleaseContact {
   border-top: 1px solid #bfd0d8;
   margin-top: 3em;
   padding-top: 2em;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .NewsArticle .PressReleaseBio {
   margin-top: 3em;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 /**
  * Component: Pagination
  * @type Organism
@@ -980,7 +884,7 @@ body:not(.InvestorsPage) .SubNavigation-list {
   margin-right: 8px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .Pagination-link:first-child {
     margin-right: 20px;
   }
@@ -990,13 +894,13 @@ body:not(.InvestorsPage) .SubNavigation-list {
   margin-left: 8px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .Pagination-link:last-child {
     margin-left: 20px;
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 37.4375em) {
   .Pagination-link {
     font-size: 12px;
   }
@@ -1025,13 +929,13 @@ body:not(.InvestorsPage) .SubNavigation-list {
   border-color: #619ab1;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 37.4375em) {
   .Pagination-page {
     font-size: 14px;
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 37.4375em) {
   .Pagination-more ~ .Pagination-page:not(:nth-last-child(2)) {
     display: none;
   }
@@ -1047,47 +951,11 @@ body:not(.InvestorsPage) .SubNavigation-list {
   padding-top: 4px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .Pagination-more {
     display: none;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
-.HelpTip {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 0.09091em solid currentColor;
-  border-radius: 100%;
-  color: #6facc1;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: 11px;
-  height: 1.81818em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  -webkit-transform: color 200ms;
-          transform: color 200ms;
-  width: 1.81818em;
-}
-
-.HelpTip:hover, .HelpTip:active, .HelpTip:focus {
-  color: #8f9aa8;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .NewsArticle h1 {
   margin-bottom: 1em;
 }
@@ -1102,7 +970,7 @@ body:not(.InvestorsPage) .SubNavigation-list {
   margin-top: 24px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 50em) {
   .NewsArticle-article {
     max-width: 630px;
     width: 58.44156%;
@@ -1135,12 +1003,55 @@ body:not(.InvestorsPage) .SubNavigation-list {
   padding-right: 48px;
   padding-top: 24px;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
+.HelpTip {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.09091em solid currentColor;
+  border-radius: 100%;
+  color: #6facc1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 11px;
+  height: 1.81818em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-transform: color 200ms;
+          transform: color 200ms;
+  width: 1.81818em;
+}
+
+.HelpTip:hover, .HelpTip:active, .HelpTip:focus {
+  color: #8f9aa8;
+}
+.FileDownload {
+  display: inline-block;
+}
+
+.FileDownload img {
+  display: block;
+  height: auto;
+  width: 14px;
+}
+
+.FileDownload + .FileDownload {
+  margin-left: 24px;
+}
+.Feed time {
+  color: #646e7e;
+}
+
+.Feed-heading {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.Feed-article + .Feed-article {
+  border-top: 1px solid rgba(191, 208, 216, 0.27);
+}
 .Filter {
   max-width: 960px;
   width: 100%;
@@ -1271,49 +1182,6 @@ body:not(.InvestorsPage) .SubNavigation-list {
     margin-top: 48px;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
-.FileDownload {
-  display: inline-block;
-}
-
-.FileDownload img {
-  display: block;
-  height: auto;
-  width: 14px;
-}
-
-.FileDownload + .FileDownload {
-  margin-left: 24px;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-.Feed time {
-  color: #646e7e;
-}
-
-.Feed-heading {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.Feed-article + .Feed-article {
-  border-top: 1px solid rgba(191, 208, 216, 0.27);
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Breadcrumbs {
   font-size: 14px;
   letter-spacing: 0.6px;
@@ -1324,12 +1192,6 @@ body:not(.InvestorsPage) .SubNavigation-list {
   font-size: 0.71429em;
   margin-right: 1px;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Breadcrumbs {
   margin-bottom: 24px;
   margin-top: -38px;
@@ -1346,7 +1208,7 @@ body:not(.InvestorsPage) .SubNavigation-list {
   margin-top: 64px;
 }
 
-@media (min-width: 794px) {
+@media (min-width: 49.625em) {
   .InvestorsPage-overview .Feed + .Feed {
     margin-top: 8.06202vw;
   }
@@ -1370,7 +1232,7 @@ body:not(.InvestorsPage) .SubNavigation-list {
   margin-top: 56px;
 }
 
-@media (min-width: 903px) {
+@media (min-width: 56.4375em) {
   .InvestorsPage-highlights .TeamList + .TeamList {
     margin-top: 6.20155vw;
   }
@@ -1403,7 +1265,7 @@ body:not(.InvestorsPage) .SubNavigation-list {
   margin-top: 32px;
 }
 
-@media (min-width: 430px) {
+@media (min-width: 26.875em) {
   .InvestorsPage-filings .Filter {
     margin-top: 7.44186vw;
   }
@@ -1419,26 +1281,26 @@ body:not(.InvestorsPage) .SubNavigation-list {
   margin-top: 80px;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 37.4375em) {
   .InvestorsPage-filings table {
     margin-left: -24px;
     width: calc(100% + 48px);
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .InvestorsPage-filings table {
     margin-bottom: 80px;
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 37.4375em) {
   .InvestorsPage-filings table + hr {
     display: none;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .InvestorsPage-filings .Pagination {
     margin-top: 32px;
   }
@@ -1467,7 +1329,7 @@ body:not(.InvestorsPage) .SubNavigation-list {
   margin-top: 56px;
 }
 
-@media (min-width: 602px) {
+@media (min-width: 37.625em) {
   .InvestorsPage-news .NewsArticle--preview + .NewsArticle--preview {
     margin-top: 9.30233vw;
   }

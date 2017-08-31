@@ -22,7 +22,7 @@
   margin-right: 24px;
   width: 60px;
 
-  @media (min-width: 420px) {
+  @media (min-width: $mq-min-420) {
     font-size: #{$font-size-heading-2}px;
     height: 80px;
     width: 80px;
@@ -34,7 +34,7 @@
   padding-top: 5px;
   width: 100%;
 
-  @media (min-width: 420px) {
+  @media (min-width: $mq-min-420) {
     max-width: 220px;
   }
 }
@@ -46,7 +46,7 @@
   line-height: $line-height-reset;
   text-shadow: $shadow-highlight-text;
 
-  @media (min-width: 420px) {
+  @media (min-width: $mq-min-420) {
     font-size: #{$font-size-heading-2}px;
   }
 }
@@ -58,7 +58,7 @@
   margin-top: 7px;
   text-shadow: $shadow-highlight-text;
 
-  @media (min-width: 420px) {
+  @media (min-width: $mq-min-420) {
     font-size: #{$font-size-body-small}px;
     line-height: $line-height-body-small;
   }
@@ -69,14 +69,14 @@
 .Feature .Highlight {
   flex: 1 0 100%;
 
-  @media (min-width: 660px) {
+  @media (min-width: $mq-min-660) {
     flex-basis: 298px;
     margin-bottom: 64px;
     margin-top: 64px;
   }
 
   &:not(:first-child) {
-    @media (max-width: 659px) {
+    @media (max-width: $mq-max-660) {
       margin-top: 60px;
     }
   }

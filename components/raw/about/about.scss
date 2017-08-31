@@ -6,11 +6,11 @@
   margin-bottom: 130px;
   margin-top: 90px;
 
-  @media (min-width: 468px) {
+  @media (min-width: $mq-min-468) {
     margin-top: #{(248 / $max-width) * 100vw};
   }
 
-  @media (min-width: 630px) {
+  @media (min-width: $mq-min-630) {
     margin-bottom: #{(266 / $max-width) * 100vw};
   }
 
@@ -23,7 +23,7 @@
 .background-gradient {
   padding-top: 92px;
 
-  @media (min-width: 571px) {
+  @media (min-width: breakpoint(571)) {
     padding-top: #{(208 / $max-width) * 100vw};
   }
 
@@ -36,11 +36,11 @@
   margin-bottom: 136px;
   margin-top: 70px;
 
-  @media (min-width: 731px) {
+  @media (min-width: breakpoint(731)) {
     margin-bottom: #{(240 / $max-width) * 100vw};
   }
 
-  @media (min-width: 1004px) {
+  @media (min-width: breakpoint(1004)) {
     margin-top: #{(90 / $max-width) * 100vw};
   }
 
@@ -54,7 +54,7 @@
   margin-bottom: 92px;
   margin-top: 92px;
 
-  @media (min-width: 620px) {
+  @media (min-width: $mq-min-620) {
     margin-bottom: #{(192 / $max-width) * 100vw};
     margin-top: #{(192 / $max-width) * 100vw};
   }
@@ -68,7 +68,7 @@
 .Timeline {
   margin-bottom: 68px;
 
-  @media (min-width: 976px) {
+  @media (min-width: breakpoint(976)) {
     margin-bottom: #{(90 / $max-width) * 100vw};
   }
 
@@ -81,11 +81,11 @@
   margin-bottom: 130px;
   margin-top: 40px;
 
-  @media (min-width: 538px) {
+  @media (min-width: breakpoint(538)) {
     margin-top: #{(96 / $max-width) * 100vw};
   }
 
-  @media (min-width: 656px) {
+  @media (min-width: breakpoint(656)) {
     margin-bottom: #{(256 / $max-width) * 100vw};
   }
 

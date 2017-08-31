@@ -17,7 +17,7 @@
 }
 
 .NewsArticle-article {
-  @media (min-width: 800px) {
+  @media (min-width: $mq-min-800) {
     max-width: #{$max-width-content}px;
     width: #{($max-width-content / $max-width-grid-padded) * 100%};
   }

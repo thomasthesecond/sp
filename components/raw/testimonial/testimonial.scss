@@ -10,7 +10,7 @@
     max-width: 424px;
     width: 80%;
 
-    @media (min-width: 480px) {
+    @media (min-width: $mq-min-480) {
       width: #{(424 / 856) * 100%};
     }
   }

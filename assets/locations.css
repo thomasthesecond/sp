@@ -1,9 +1,3 @@
-/**
- * Functions
- */
-/**
- * Mixins
- */
 @-webkit-keyframes expand {
   0% {
     width: 0;
@@ -12,6 +6,7 @@
     width: 100%;
   }
 }
+
 @keyframes expand {
   0% {
     width: 0;
@@ -313,12 +308,6 @@
             transform: translateY(0);
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Masthead {
   height: 55vw;
   max-height: 366px;
@@ -329,7 +318,7 @@
   width: 100%;
 }
 
-@media (min-height: 892px) {
+@media (min-height: 55.75em) {
   .Masthead {
     max-height: 466px;
   }
@@ -365,12 +354,6 @@
   margin: 0;
   text-shadow: 0 0 72px rgba(13, 60, 77, 0.4);
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .LocationFinder.is-sticky {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
@@ -566,12 +549,6 @@
     height: 100%;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .CoverPhoto {
   display: block;
   height: 100%;
@@ -588,12 +565,6 @@
      object-fit: cover;
   width: 100%;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .MapWidget {
   background-color: rgba(0, 0, 0, 0.1);
   height: 42.63566vw;
@@ -601,12 +572,6 @@
   min-height: 200px;
   width: 100%;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .LocationMapLegend {
   color: #8f9aa8;
   font-size: 10px;
@@ -664,19 +629,13 @@
     margin-top: 32px;
   }
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .LocationList h2:not(:first-of-type) {
   border-top: 1px solid rgba(191, 208, 216, 0.47);
   margin-top: 48px;
   padding-top: 40px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .LocationList h2:not(:first-of-type) {
     margin-top: 72px;
     padding-top: 64px;
@@ -690,12 +649,6 @@
 .LocationList-item p {
   margin-top: 0;
 }
-/**
- * Functions
- */
-/**
- * Mixins
- */
 main {
   overflow: hidden;
 }
@@ -885,7 +838,7 @@ main {
   margin-top: 110px;
 }
 
-@media (min-width: 645px) {
+@media (min-width: 40.3125em) {
   .Contentinfo {
     margin-top: 17.05426vw;
   }

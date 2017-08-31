@@ -9,7 +9,7 @@
   opacity: $opacity-0;
   position: fixed;
   top: 0;
-  transition: opacity 200ms, visibility 200ms;
+  transition: opacity $timing-fast, visibility $timing-fast;
   visibility: hidden;
   width: 100vw;
   z-index: $z-index-overlay;

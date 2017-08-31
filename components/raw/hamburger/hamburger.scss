@@ -30,7 +30,7 @@
     height: 2px;
     left: 0;
     position: absolute;
-    transition: transform 400ms;
+    transition: transform $timing-default;
     width: 100%;
   }
 

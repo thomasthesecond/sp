@@ -337,7 +337,7 @@
 <span class="hljs-selector-class">.Navigation</span> <span class="hljs-selector-tag">a</span> {
   <span class="hljs-attribute">color</span>: inherit;
   <span class="hljs-attribute">text-decoration</span>: none;
-  <span class="hljs-attribute">transition</span>: color <span class="hljs-number">200ms</span>;
+  <span class="hljs-attribute">transition</span>: color <span class="hljs-variable">$timing-fast</span>;
 
   @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-banner</span>) {
     <span class="hljs-attribute">display</span>: block;
@@ -364,7 +364,7 @@
     <span class="hljs-attribute">position</span>: fixed;
     <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">48px</span> - <span class="hljs-number">1px</span>;
-    <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">400ms</span>, visibility <span class="hljs-number">400ms</span>;
+    <span class="hljs-attribute">transition</span>: opacity <span class="hljs-variable">$timing-default</span>, visibility <span class="hljs-variable">$timing-default</span>;
     <span class="hljs-attribute">visibility</span>: hidden;
     <span class="hljs-attribute">width</span>: <span class="hljs-number">100vw</span>;
     <span class="hljs-attribute">z-index</span>: <span class="hljs-variable">$z-index-modal</span>;
@@ -398,11 +398,11 @@
     <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">$opacity-0</span>;
     <span class="hljs-attribute">transform</span>: translateY(-<span class="hljs-number">26px</span>);
     <span class="hljs-attribute">transition</span>:
-      opacity <span class="hljs-number">200ms</span> cubic-bezier(<span class="hljs-number">0.23</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0.32</span>, <span class="hljs-number">1</span>),
-      transform <span class="hljs-number">200ms</span> cubic-bezier(<span class="hljs-number">0.175</span>, <span class="hljs-number">0.885</span>, <span class="hljs-number">0.32</span>, <span class="hljs-number">1.275</span>);
+      opacity <span class="hljs-variable">$timing-fast</span> cubic-bezier(<span class="hljs-number">0.23</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0.32</span>, <span class="hljs-number">1</span>),
+      transform <span class="hljs-variable">$timing-fast</span> cubic-bezier(<span class="hljs-number">0.175</span>, <span class="hljs-number">0.885</span>, <span class="hljs-number">0.32</span>, <span class="hljs-number">1.275</span>);
 
     &amp;:nth-child(1) {
-      <span class="hljs-attribute">transition-delay</span>: <span class="hljs-number">200ms</span>;
+      <span class="hljs-attribute">transition-delay</span>: <span class="hljs-variable">$timing-fast</span>;
     }
 
     &amp;:nth-child(2) {
@@ -3521,20 +3521,6 @@
             <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
                 <span>Design tokens</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         

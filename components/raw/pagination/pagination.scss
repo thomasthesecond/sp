@@ -19,7 +19,7 @@
   &:first-child {
     margin-right: 8px;
 
-    @media (min-width: 600px) {
+    @media (min-width: $mq-min-600) {
       margin-right: 20px;
     }
   }
@@ -27,12 +27,12 @@
   &:last-child {
     margin-left: 8px;
 
-    @media (min-width: 600px) {
+    @media (min-width: $mq-min-600) {
       margin-left: 20px;
     }
   }
 
-  @media (max-width: 599px) {
+  @media (max-width: $mq-max-600) {
     font-size: #{$font-size-body-small-min}px;
   }
 }
@@ -46,7 +46,7 @@
   margin-right: 4px;
   padding-bottom: 6px;
   padding-top: 6px;
-  transition: background-color 200ms;
+  transition: background-color $timing-fast;
   width: 30px;
 
   &:hover,
@@ -59,12 +59,12 @@
     border-color: $color-border-pagination-active;
   }
 
-  @media (max-width: 599px) {
+  @media (max-width: $mq-max-600) {
     font-size: #{$font-size-body-small}px;
   }
 
   .Pagination-more ~ & {
-    @media (max-width: 599px) {
+    @media (max-width: $mq-max-600) {
       &:not(:nth-last-child(2)) {
         display: none;
       }
@@ -80,7 +80,7 @@
   padding-right: 4px;
   padding-top: 4px;
 
-  @media (min-width: 600px) {
+  @media (min-width: $mq-min-600) {
     display: none;
   }
 }

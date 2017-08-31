@@ -11,7 +11,7 @@
   position: fixed;
   right: 0;
   transform: translateY(10vh);
-  transition: opacity 200ms, transform 200ms, visibility 200ms;
+  transition: opacity $timing-fast, transform $timing-fast, visibility $timing-fast;
   visibility: hidden;
   will-change: transform;
   z-index: $z-index-modal;
@@ -52,7 +52,7 @@
   position: absolute;
   right: #{$spacing-gutter}px;
   top: #{$spacing-gutter}px;
-  transition: color 200ms;
+  transition: color $timing-fast;
   width: 24px;
   z-index: $z-index-default;
 

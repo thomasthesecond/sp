@@ -65,8 +65,8 @@ $location-finder-button-width: 258;
     display: none;
   }
 
-  // Extra span is here to fix a bug in Webkit browsers
-  // where flexbox doesn’t work with fieldset
+  // Extra span is here to fix a bug in Webkit browsers where flexbox doesn’t work with fieldset
+
   span {
     align-items: center;
     display: flex;

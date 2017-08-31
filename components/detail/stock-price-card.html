@@ -326,11 +326,11 @@
   <span class="hljs-attribute">background</span>: <span class="hljs-variable">$gradient-stock-price-card</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">48px</span> <span class="hljs-number">24px</span>;
 
-  @<span class="hljs-keyword">media</span> (max-width: 499px) {
+  @<span class="hljs-keyword">media</span> (max-width: <span class="hljs-variable">$mq-max-500</span>) {
     <span class="hljs-attribute">font-size</span>: #{<span class="hljs-variable">$font-size-heading-6</span>}px;
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 940px) {
+  @<span class="hljs-keyword">media</span> (min-width: breakpoint(<span class="hljs-number">940</span>)) {
     <span class="hljs-attribute">padding</span>: #{(<span class="hljs-number">80</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>} #{(<span class="hljs-number">40</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
   }
 
@@ -362,11 +362,11 @@
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">48px</span>;
   <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">24px</span>;
 
-  @<span class="hljs-keyword">media</span> (min-width: 484px) {
+  @<span class="hljs-keyword">media</span> (min-width: breakpoint(<span class="hljs-number">484</span>)) {
     <span class="hljs-attribute">margin-top</span>: #{(<span class="hljs-number">128</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
   }
 
-  @<span class="hljs-keyword">media</span> (min-width: 968px) {
+  @<span class="hljs-keyword">media</span> (min-width: breakpoint(<span class="hljs-number">968</span>)) {
     <span class="hljs-attribute">padding-top</span>: #{(<span class="hljs-number">32</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100vw</span>};
   }
 
@@ -3472,20 +3472,6 @@
             <a class="Tree-entityLink" href="../../docs/design-tokens.html" data-pjax>
                 <span>Design tokens</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         

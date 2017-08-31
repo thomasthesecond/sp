@@ -10,7 +10,7 @@ dl {
   margin-bottom: #{(24 / $font-size-default-min) * 1em};
   margin-top: #{(24 / $font-size-default-min) * 1em};
 
-  @media (min-width: 600px) {
+  @media (min-width: $mq-min-600) {
     font-size: #{$font-size-default}px;
     line-height: $line-height-default;
     margin-bottom: #{(32 / $font-size-default) * 1em};

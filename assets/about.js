@@ -3270,6 +3270,8 @@ var AboutPage = function () {
     this.mqlModal = window.matchMedia("(max-width: 1014px)");
     this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
 
+    this.modal = new _modal2.default();
+
     this.teamMemberModal = this.teamMemberModal.bind(this);
     this.checkScreenSize = this.checkScreenSize.bind(this);
     this.create = this.create.bind(this);
@@ -3279,34 +3281,31 @@ var AboutPage = function () {
 
   _createClass(AboutPage, [{
     key: "teamMemberModal",
-    value: function teamMemberModal() {
-      if (this.mqlModal.matches) {
-        var modal = new _modal2.default();
-        var teamMembers = document.querySelectorAll(".TeamMember");
-        var modalElement = document.querySelector(".js-modal");
+    value: function teamMemberModal(mql) {
+      var _this = this;
 
-        (0, _utils.forEach)(teamMembers, function (index, member) {
-          var name = member.querySelector(".TeamMember-name").innerHTML;
-          var title = member.querySelector(".TeamMember-title").innerHTML;
-          var bio = member.querySelector(".TeamMember-bio").innerHTML;
+      var teamMembers = document.querySelectorAll(".js-team-member");
+      var modalElement = document.querySelector(".js-modal");
 
-          var content = "\n          <div class=\"TeamMember\">\n            <h2 class=\"TeamMember-name\" id=\"" + modalElement.id + "-title\">" + name + "</h2>\n            <div class=\"TeamMember-title\">" + title + "</div>\n            <p class=\"TeamMember-bio\" id=\"" + modalElement.id + "-description\">" + bio + "</p>\n          </div>\n        ";
+      (0, _utils.forEach)(teamMembers, function (index, member) {
+        var name = member.querySelector(".TeamMember-name").innerHTML;
+        var title = member.querySelector(".TeamMember-title").innerHTML;
+        var bio = member.querySelector(".TeamMember-bio").innerHTML;
 
-          var onClick = function onClick(event) {
-            modal.open(content);
-            event.preventDefault();
-          };
+        var content = "\n        <div class=\"TeamMember\">\n          <h2 class=\"TeamMember-name\" id=\"" + modalElement.id + "-title\">" + name + "</h2>\n          <div class=\"TeamMember-title\">" + title + "</div>\n          <p class=\"TeamMember-bio\" id=\"" + modalElement.id + "-description\">" + bio + "</p>\n        </div>\n      ";
 
-          member.addEventListener("click", onClick);
-          // if (this.mqlModal.matches) {
-          //   console.log("add", [member]);
-          //   member.addEventListener("click", onClick);
-          // } else {
-          //   console.log("rmove", [member]);
-          //   member.removeEventListener("click", onClick);
-          // }
-        });
-      }
+        var onClick = function onClick(event) {
+          _this.modal.open(content);
+          event.preventDefault();
+        };
+
+        if (mql.matches) {
+          member.addEventListener("click", onClick, false);
+        } else {
+          _this.modal.close();
+          member.removeEventListener("click", onClick, false);
+        }
+      });
     }
   }, {
     key: "checkScreenSize",
@@ -3330,13 +3329,13 @@ var AboutPage = function () {
   }, {
     key: "destroy",
     value: function destroy() {
-      var _this = this;
+      var _this2 = this;
 
       if (this.controller) {
         var nodes = document.querySelectorAll("." + this.className);
 
         (0, _utils.forEach)(nodes, function (index, node) {
-          node.classList.remove(_this.className);
+          node.classList.remove(_this2.className);
         });
 
         this.controller.destroy(true);

@@ -55,12 +55,6 @@
         <h1 class="Document-title">Design tokens</h1>
         
 
-<div class="Status Status--tag">
-
-<label class="Status-label" style="background-color: #FF3333; border-color: #FF3333;">Draft</label>
-
-</div>
-
 
         
     </div>
@@ -87,13 +81,11 @@
 <li><a href="#font-size">Font size</a></li>
 <li><a href="#font-weight">Font weight</a></li>
 <li><a href="#line-height">Line height</a></li>
-<li>Opacity</li>
+<li><a href="#opacity">Opacity</a></li>
+<li><a href="#dimensions">Dimensions</a></li>
 <li><a href="#spacing">Spacing</a></li>
-<li>Radius</li>
-<li>Sizing</li>
-<li>Shadow</li>
-<li>Time</li>
-<li>Media query</li>
+<li><a href="#shadow">Shadow</a></li>
+<li><a href="#timing">Timing</a></li>
 <li><a href="#z-index">z-index</a></li>
 </ul>
 <h2 id="background-color-a-name-background-color-a-">Background color<a name="background-color"></a></h2>
@@ -113,6 +105,72 @@
 <td><code>#fff</code><br><code>rgb(255, 255, 255)</code></td>
 <td>White</td>
 <td><div style="width: 24px; height: 24px; background-color:#fff; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-background-footer</code></td>
+<td><code>#152640</code><br><code>rgb(21, 38, 64)</code></td>
+<td>Big Stone</td>
+<td><div style="width: 24px; height: 24px; background-color:#152640; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-background-cover-gradient-start</code></td>
+<td><code>#b5955d</code><br><code>rgb(181, 149, 93)</code></td>
+<td>Muddy Waters</td>
+<td><div style="width: 24px; height: 24px; background-color:#b5955d; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-background-cover-gradient-end</code></td>
+<td><code>#5d91a1</code><br><code>rgb(93, 145, 161)</code></td>
+<td>Horizon</td>
+<td><div style="width: 24px; height: 24px; background-color:#5d91a1; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-background-section-gradient-start</code></td>
+<td><code>#fcfaf7</code><br><code>rgb(252, 250, 247)</code></td>
+<td>Vista White</td>
+<td><div style="width: 24px; height: 24px; background-color:#fcfaf7; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-background-section-gradient-end</code></td>
+<td><code>#fff</code><br><code>rgb(255, 255, 255)</code></td>
+<td>White</td>
+<td><div style="width: 24px; height: 24px; background-color:#fff; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-background-overlay</code></td>
+<td><code>#000</code><br><code>rgb(0, 0, 0)</code></td>
+<td>Black</td>
+<td><div style="width: 24px; height: 24px; background-color:#000; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-background-button-default</code></td>
+<td><code>#5d91a1</code><br><code>rgb(93, 145, 161)</code></td>
+<td>Horizon</td>
+<td><div style="width: 24px; height: 24px; background-color:#5d91a1; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-background-button-dark</code></td>
+<td><code>#152640</code><br><code>rgb(21, 38, 64)</code></td>
+<td>Big Stone</td>
+<td><div style="width: 24px; height: 24px; background-color:#152640; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-background-input</code></td>
+<td><code>#fff</code><br><code>rgb(255, 255, 255)</code></td>
+<td>White</td>
+<td><div style="width: 24px; height: 24px; background-color:#fff; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-background-input-dark</code></td>
+<td><code>#152640</code><br><code>rgb(21, 38, 64)</code></td>
+<td>Big Stone</td>
+<td><div style="width: 24px; height: 24px; background-color:#152640; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-background-sub-navigation-marker</code></td>
+<td><code>#b5955d</code><br><code>rgb(181, 149, 93)</code></td>
+<td>Muddy Waters</td>
+<td><div style="width: 24px; height: 24px; background-color:#b5955d; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
 </tr>
 </tbody>
 </table>
@@ -140,6 +198,12 @@
 <td>Muddy Waters</td>
 <td><div style="width: 24px; height: 24px; background-color:#b5955d; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
 </tr>
+<tr>
+<td><code>$color-border-pagination-active</code></td>
+<td><code>#619ab1</code><br><code>rgb(97, 154, 177)</code></td>
+<td>Hippie Blue</td>
+<td><div style="width: 24px; height: 24px; background-color:#619ab1; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
 </tbody>
 </table>
 <h2 id="text-color-a-name-text-color-a-">Text color<a name="text-color"></a></h2>
@@ -157,7 +221,7 @@
 <tr>
 <td><code>$color-text-default</code></td>
 <td><code>#646e7e</code><br><code>rgb(100, 110, 126)</code></td>
-<td>Regent Gray</td>
+<td>Pale Sky</td>
 <td><div style="width: 24px; height: 24px; background-color:#646e7e; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
 </tr>
 <tr>
@@ -172,10 +236,160 @@
 <td>White</td>
 <td><div style="width: 24px; height: 24px; background-color:#fff; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
 </tr>
+<tr>
+<td><code>$color-text-introduction</code></td>
+<td><code>#25395d</code><br><code>rgb(37, 57, 93)</code></td>
+<td>Cloud Burst</td>
+<td><div style="width: 24px; height: 24px; background-color:#25395d; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-hamburger</code></td>
+<td><code>#275e70</code><br><code>rgb(39, 94, 112)</code></td>
+<td>Casal</td>
+<td><div style="width: 24px; height: 24px; background-color:#275e70; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-hamburger-overlay</code></td>
+<td><code>#fff</code><br><code>rgb(255, 255, 255)</code></td>
+<td>White</td>
+<td><div style="width: 24px; height: 24px; background-color:#fff; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-service-card</code></td>
+<td><code>#25395d</code><br><code>rgb(37, 57, 93)</code></td>
+<td>Cloud Burst</td>
+<td><div style="width: 24px; height: 24px; background-color:#25395d; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-more-link</code></td>
+<td><code>#12769f</code><br><code>rgb(18, 118, 159)</code></td>
+<td>Blue Chill</td>
+<td><div style="width: 24px; height: 24px; background-color:#12769f; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-link-default</code></td>
+<td><code>#619ab1</code><br><code>rgb(97, 154, 177)</code></td>
+<td>Hippie Blue</td>
+<td><div style="width: 24px; height: 24px; background-color:#619ab1; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-link-default-hover</code></td>
+<td><code>#819ba3</code><br><code>rgb(129, 155, 163)</code></td>
+<td>Gumbo</td>
+<td><div style="width: 24px; height: 24px; background-color:#819ba3; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-input</code></td>
+<td><code>#77919e</code><br><code>rgb(119, 145, 158)</code></td>
+<td>Gothic</td>
+<td><div style="width: 24px; height: 24px; background-color:#77919e; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-input-dark</code></td>
+<td><code>#fff</code><br><code>rgb(255, 255, 255)</code></td>
+<td>White</td>
+<td><div style="width: 24px; height: 24px; background-color:#fff; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-help-tip</code></td>
+<td><code>#6facc1</code><br><code>rgb(111, 172, 193)</code></td>
+<td>Glacier</td>
+<td><div style="width: 24px; height: 24px; background-color:#6facc1; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-help-tip-hover</code></td>
+<td><code>#8f9aa8</code><br><code>rgb(143, 154, 168)</code></td>
+<td>Regent Gray</td>
+<td><div style="width: 24px; height: 24px; background-color:#8f9aa8; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-search-button</code></td>
+<td><code>#6facc1</code><br><code>rgb(111, 172, 193)</code></td>
+<td>Glacier</td>
+<td><div style="width: 24px; height: 24px; background-color:#6facc1; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-search-button-hover</code></td>
+<td><code>#8f9aa8</code><br><code>rgb(143, 154, 168)</code></td>
+<td>Regent Gray</td>
+<td><div style="width: 24px; height: 24px; background-color:#8f9aa8; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-meta</code></td>
+<td><code>#b5955d</code><br><code>rgb(181, 149, 93)</code></td>
+<td>Muddy Waters</td>
+<td><div style="width: 24px; height: 24px; background-color:#b5955d; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-positive</code></td>
+<td><code>#6fc179</code><br><code>rgb(111, 193, 121)</code></td>
+<td>Green</td>
+<td><div style="width: 24px; height: 24px; background-color:#6fc179; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-negative</code></td>
+<td><code>#d90a0a</code><br><code>rgb(217, 10, 10)</code></td>
+<td>Red</td>
+<td><div style="width: 24px; height: 24px; background-color:#d90a0a; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-blockquote</code></td>
+<td><code>#25395d</code><br><code>rgb(37, 57, 93)</code></td>
+<td>Cloud Burst</td>
+<td><div style="width: 24px; height: 24px; background-color:#25395d; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-arrow</code></td>
+<td><code>#bfd0d8</code><br><code>rgb(191, 208, 216)</code></td>
+<td>Jungle Mist</td>
+<td><div style="width: 24px; height: 24px; background-color:#bfd0d8; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-map-legend</code></td>
+<td><code>#8f9aa8</code><br><code>rgb(143, 154, 168)</code></td>
+<td>Regent Gray</td>
+<td><div style="width: 24px; height: 24px; background-color:#8f9aa8; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-table-cell-emphesis</code></td>
+<td><code>#8f9aa8</code><br><code>rgb(143, 154, 168)</code></td>
+<td>Regent Gray</td>
+<td><div style="width: 24px; height: 24px; background-color:#8f9aa8; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-logo</code></td>
+<td><code>#717271</code><br><code>rgb(113, 114, 113)</code></td>
+<td>Gray</td>
+<td><div style="width: 24px; height: 24px; background-color:#717271; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-logo-arrow-left</code></td>
+<td><code>#c0cdd5</code><br><code>rgb(192, 205, 213)</code></td>
+<td>Heather</td>
+<td><div style="width: 24px; height: 24px; background-color:#c0cdd5; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-logo-arrow-right</code></td>
+<td><code>#619ab1</code><br><code>rgb(97, 154, 177)</code></td>
+<td>Hippie Blue</td>
+<td><div style="width: 24px; height: 24px; background-color:#619ab1; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-skip-link</code></td>
+<td><code>#446975</code><br><code>rgb(68, 105, 117)</code></td>
+<td>Blue Bayoux</td>
+<td><div style="width: 24px; height: 24px; background-color:#446975; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
+<tr>
+<td><code>$color-text-sub-nav</code></td>
+<td><code>#446975</code><br><code>rgb(68, 105, 117)</code></td>
+<td>Blue Bayoux</td>
+<td><div style="width: 24px; height: 24px; background-color:#446975; border: 1px solid rgba(0, 0, 0, .2);"></div></td>
+</tr>
 </tbody>
 </table>
 <h2 id="font-family-a-name-font-family-a-">Font family<a name="font-family"></a></h2>
-<p>Since there’s only one font family, <code>font-family</code> never needs to be set on any components as it’s set on the <code>body</code> in global.css.</p>
+<p>Font family tokens are used to change the font of elements. The <code>body</code> is set to use the sans-serif font.</p>
 <table>
 <thead>
 <tr>
@@ -185,8 +399,12 @@
 </thead>
 <tbody>
 <tr>
-<td><code>$font-family-default</code></td>
+<td><code>$font-family-sans-serif</code></td>
 <td>&quot;Open Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif</td>
+</tr>
+<tr>
+<td><code>$font-family-serif</code></td>
+<td>&quot;Mate&quot;, Georgia, sans-serif</td>
 </tr>
 </tbody>
 </table>
@@ -243,7 +461,7 @@
 </tbody>
 </table>
 <h2 id="font-weight-a-name-font-weight-a-">Font weight<a name="font-weight"></a></h2>
-<p>Font weight tokens are used to adjust the weight of the default font.</p>
+<p>Font weight tokens are used to adjust the weight of the sans-serif font.</p>
 <table>
 <thead>
 <tr>
@@ -318,6 +536,115 @@
 </tr>
 </tbody>
 </table>
+<h2 id="opacity-a-name-opacity-a-">Opacity<a name="opacity"></a></h2>
+<p>Opacity tokens are used for setting opacity and also for the alpha channel in <code>rgba</code> colors.</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$opacity-100</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>$opacity-80</code></td>
+<td>0.8</td>
+</tr>
+<tr>
+<td><code>$opacity-77</code></td>
+<td>0.77</td>
+</tr>
+<tr>
+<td><code>$opacity-70</code></td>
+<td>0.7</td>
+</tr>
+<tr>
+<td><code>$opacity-60</code></td>
+<td>0.6</td>
+</tr>
+<tr>
+<td><code>$opacity-57</code></td>
+<td>0.57</td>
+</tr>
+<tr>
+<td><code>$opacity-47</code></td>
+<td>0.47</td>
+</tr>
+<tr>
+<td><code>$opacity-40</code></td>
+<td>0.4</td>
+</tr>
+<tr>
+<td><code>$opacity-37</code></td>
+<td>0.37</td>
+</tr>
+<tr>
+<td><code>$opacity-27</code></td>
+<td>0.27</td>
+</tr>
+<tr>
+<td><code>$opacity-20</code></td>
+<td>0.2</td>
+</tr>
+<tr>
+<td><code>$opacity-16</code></td>
+<td>0.16</td>
+</tr>
+<tr>
+<td><code>$opacity-10</code></td>
+<td>0.1</td>
+</tr>
+<tr>
+<td><code>$opacity-07</code></td>
+<td>0.07</td>
+</tr>
+<tr>
+<td><code>$opacity-0</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="dimensions-a-name-dimensions-a-">Dimensions<a name="dimensions"></a></h2>
+<p>Dimensions tokens are used for setting widths.</p>
+<p>Values are equivalent to <code>px</code> but are unitless so that they may be easily converted to <code>em</code>, percent (<code>%</code>) or viewport units (<code>vw</code>, <code>vh</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$min-width</code></td>
+<td>320</td>
+</tr>
+<tr>
+<td><code>$max-width</code></td>
+<td>1290</td>
+</tr>
+<tr>
+<td><code>$max-width-content</code></td>
+<td>630</td>
+</tr>
+<tr>
+<td><code>$max-width-banner</code></td>
+<td>620</td>
+</tr>
+<tr>
+<td><code>$max-width-filter</code></td>
+<td>960</td>
+</tr>
+<tr>
+<td><code>$max-width-grid-padded</code></td>
+<td>1078</td>
+</tr>
+</tbody>
+</table>
 <h2 id="spacing-a-name-spacing-a-">Spacing<a name="spacing"></a></h2>
 <p>Spacing tokens are used for padding, margins and position coordinates.</p>
 <p>Values are equivalent to <code>px</code> but are unitless so that they may be easily converted to <code>em</code>, percent (<code>%</code>) or viewport units (<code>vw</code>, <code>vh</code>).</p>
@@ -334,8 +661,88 @@
 <td>24</td>
 </tr>
 <tr>
-<td><code>$spacing-investors-page</code></td>
+<td><code>$spacing-grid-padded</code></td>
 <td>106</td>
+</tr>
+<tr>
+<td><code>$spacing-sub-navigation-gutter</code></td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shadow-a-name-shadow-a-">Shadow<a name="shadow"></a></h2>
+<p>Shadow tokens are used for <code>text-shadow</code> and <code>box-shadow</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$shadow-location-finder</code></td>
+<td>0 2px 34px rgba(#1c2d3e, 0.09), 0 36px 84px rgba(#042435, 0.39)</td>
+</tr>
+<tr>
+<td><code>$shadow-location-finder-sticky</code></td>
+<td>0 2px 34px rgba(#1c2d3e, 0.09)</td>
+</tr>
+<tr>
+<td><code>$shadow-location-finder-button</code></td>
+<td>0 10px 14px rgba(#406c7a, 0.22)</td>
+</tr>
+<tr>
+<td><code>$shadow-modal</code></td>
+<td>0 36px 84px rgba(#042435, 0.39)</td>
+</tr>
+<tr>
+<td><code>$shadow-service-card</code></td>
+<td>0 22px 54px rgba(#6b778c, 0.21)</td>
+</tr>
+<tr>
+<td><code>$shadow-team-member-panel</code></td>
+<td>0 42px 84px rgba(#1c2d3e, 0.3)</td>
+</tr>
+<tr>
+<td><code>$shadow-highlight-icon</code></td>
+<td>0 11px 46px rgba(#729ba8, 0.28)</td>
+</tr>
+<tr>
+<td><code>$shadow-highlight-text</code></td>
+<td>0 0 34px #446975</td>
+</tr>
+<tr>
+<td><code>$shadow-masthead-title</code></td>
+<td>0 0 72px rgba(#0d3c4d, 0.4)</td>
+</tr>
+<tr>
+<td><code>$shadow-table-row</code></td>
+<td>0 14px 34px rgba(#000, 0.09)</td>
+</tr>
+<tr>
+<td><code>$shadow-feature-testimonial</code></td>
+<td>0 2px 24px rgba(#0d3c4d, 0.4)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="timing-a-name-timing-a-">Timing<a name="timing"></a></h2>
+<p>Timing tokens are used for transitions.</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$timing-fast</code></td>
+<td>200ms</td>
+</tr>
+<tr>
+<td><code>$timing-default</code></td>
+<td>400ms</td>
 </tr>
 </tbody>
 </table>
@@ -3394,20 +3801,6 @@
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>Design tokens</span>
                 
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF3333;" title="Draft"></span>
-
-
-</div>
-
-</div>
-
-
             </a>
         </li>
         
