@@ -84,7 +84,6 @@ All dependencies are installed by running `yarn`. Here’s a brief overview of e
 | `mandelbrot` | Default web UI theme for Fractal |
 | `babel-core` | Babel compiler core; ES6/ES2015+ to ES5 JavaScript transpiler |
 | `babel-polyfill` | Provides polyfills necessary for a full ES2015+ environment |
-| `no-scroll` | Disable the document’s scrolling |
 | `normalize.css` | A modern alternative to CSS resets |
 | `picturefill` | A responsive image polyfill |
 | `scrollmagic` | JavaScript library for scroll interactions |
