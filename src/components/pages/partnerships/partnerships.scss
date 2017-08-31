@@ -67,3 +67,9 @@
     margin-top: 180px;
   }
 }
+
+.PartnershipsPage-hr {
+  @media (max-width: $mq-max-544) {
+    display: none;
+  }
+}

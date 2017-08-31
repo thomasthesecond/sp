@@ -19,7 +19,7 @@
 
       {{> @testimonial testimonial=testimonials.[0] className="js-testimonial-1" }}
 
-      <hr>
+      <hr class="PartnershipsPage-hr">
     </div>
   </section>
 
@@ -32,18 +32,24 @@
       {{> @testimonial testimonial=testimonials.[1] className="js-testimonial-2" }}
     </div>
 
-    {{> @feature className="js-feature" }}
+    <div class="PartnershipsPage-feature js-partnership-feature-desktop">
+      {{> @feature className="js-feature" }}
+    </div>
   </section>
 
   <section class="js-spy-section" id="{{ sections.[2].id }}">
     <div class="container">
       {{> @image-block--alternate block=sections.[2] noId=true }}
 
-      <hr>
+      <hr class="js-partnership-hr">
+    </div>
 
+    <div class="PartnershipsPage-feature js-partnership-feature-mobile"></div>
+
+    <div class="container">
       {{> @testimonial testimonial=testimonials.[2] className="js-testimonial-3" }}
 
-      <hr>
+      <hr class="PartnershipsPage-hr">
     </div>
   </section>
 
