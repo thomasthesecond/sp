@@ -1,7 +1,5 @@
 "use strict";
 
-import noScroll from "no-scroll";
-
 export default class Modal {
   constructor() {
     this.document = document.documentElement;
@@ -23,7 +21,7 @@ export default class Modal {
 
   close() {
     if (this.modal.classList.contains(this.openClassName)) {
-      noScroll.off();
+      document.documentElement.style.overflow = "";
       this.modalClose.removeEventListener("click", this.close, false);
 
       this.modal.setAttribute("tabindex", "-1");
@@ -45,7 +43,7 @@ export default class Modal {
 
   open(content) {
     if (!this.modal.classList.contains(this.openClassName)) {
-      noScroll.on();
+      document.documentElement.style.overflow = "hidden";
       this.modalClose.addEventListener("click", this.close, false);
       document.addEventListener("click", this.clickOutside, false);
       this.onEscapePress();
