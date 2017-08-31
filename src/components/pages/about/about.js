@@ -5,9 +5,25 @@ import Modal from "../../components/modal";
 import { forEach } from "../../../assets/js/utils";
 
 export default class AboutPage {
-  static teamMemberModal() {
-    const modal = new Modal();
-    const teamMembers = document.querySelectorAll(".TeamMember");
+  constructor() {
+    this.controller = null;
+    this.className = "animate";
+
+    this.mql = window.matchMedia("(min-width: 1024px)");
+    this.mqlModal = window.matchMedia("(max-width: 1014px)");
+    this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
+
+    this.modal = new Modal();
+
+    this.teamMemberModal = this.teamMemberModal.bind(this);
+    this.checkScreenSize = this.checkScreenSize.bind(this);
+    this.create = this.create.bind(this);
+    this.animate = this.animate.bind(this);
+    this.destroy = this.destroy.bind(this);
+  }
+
+  teamMemberModal(mql) {
+    const teamMembers = document.querySelectorAll(".js-team-member");
     const modalElement = document.querySelector(".js-modal");
 
     forEach(teamMembers, (index, member) => {
@@ -23,25 +39,18 @@ export default class AboutPage {
         </div>
       `;
 
-      member.addEventListener("click", (event) => {
-        modal.open(content);
+      const onClick = (event) => {
+        this.modal.open(content);
         event.preventDefault();
-      }, false);
+      };
+
+      if (mql.matches) {
+        member.addEventListener("click", onClick, false);
+      } else {
+        this.modal.close();
+        member.removeEventListener("click", onClick, false);
+      }
     });
-  }
-
-  constructor() {
-    this.controller = null;
-    this.className = "animate";
-
-    this.mql = window.matchMedia("(min-width: 1024px)");
-    this.mqlModal = window.matchMedia("(max-width: 1014px)");
-    this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
-
-    this.checkScreenSize = this.checkScreenSize.bind(this);
-    this.create = this.create.bind(this);
-    this.animate = this.animate.bind(this);
-    this.destroy = this.destroy.bind(this);
   }
 
   checkScreenSize(mql) {
@@ -116,7 +125,7 @@ export default class AboutPage {
       this.mql.addListener(this.checkScreenSize);
     }
 
-    AboutPage.teamMemberModal(this.mqlModal);
-    this.mqlModal.addListener(AboutPage.teamMemberModal);
+    this.teamMemberModal(this.mqlModal);
+    this.mqlModal.addListener(this.teamMemberModal);
   }
 }

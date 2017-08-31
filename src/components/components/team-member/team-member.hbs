@@ -1,4 +1,5 @@
-<div class="TeamMember" itemprop="employee" itemscope itemtype="http://schema.org/Person">
+<div class="TeamMember{{#if className}} {{ className }}{{/if}}"
+  itemprop="employee" itemscope itemtype="http://schema.org/Person">
   <img class="TeamMember-image"
     itemprop="image"
     src="{{ path teamMember.image.src }}"
