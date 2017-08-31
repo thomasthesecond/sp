@@ -120,7 +120,8 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
 
   img {
     display: block;
-    max-width: 100%;
+    max-width: #{$image-width}px;
+    width: 100%;
 
     @media (max-width: 799px) {
       margin-top: 32px;
@@ -130,6 +131,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
       align-self: flex-start;
       left: 0;
       margin-left: #{($image-margin / $location-container-width) * 100%};
+      max-width: 100%;
       order: -1;
       position: absolute;
       width: #{($image-width / $location-container-width) * 100%};
@@ -143,7 +145,7 @@ $contact-column-width: column-width(($contact-width + $contact-padding));
         margin-left: auto;
         order: 0;
         position: static;
-        width: auto;
+        width: #{$image-width}px;
       }
     }
   }
