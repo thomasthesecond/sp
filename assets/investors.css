@@ -56,7 +56,8 @@
 .Masthead .MoreLink {
   font-size: 14px;
   color: #fff;
-  margin-top: 4.96124vw;
+  margin-top: 3.10078vw;
+  padding: 24px;
 }
 
 @media (min-width: 37.5em) and (max-width: 80.625em) {
@@ -73,7 +74,7 @@
 
 @media (min-width: 80.625em) {
   .Masthead .MoreLink {
-    margin-top: 64px;
+    margin-top: 40px;
   }
 }
 
@@ -186,7 +187,7 @@
             box-shadow: 0 42px 84px rgba(28, 45, 62, 0.3);
     left: -48px;
     opacity: 0;
-    padding: 408px 48px 48px;
+    padding: 370px 48px 48px;
     position: absolute;
     top: -48px;
     width: calc(100% + 96px);
@@ -365,6 +366,10 @@
   }
 }
 
+body:not(.InvestorsPage) .SubNavigation-list {
+  border-bottom: 1px solid rgba(191, 208, 216, 0.27);
+}
+
 .SubNavigation-item {
   display: inline-block;
   height: 100%;
@@ -422,30 +427,6 @@
   -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
   width: 0;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-.Overlay {
-  background-color: rgba(0, 0, 0, 0.2);
-  height: 100vh;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  -webkit-transition: opacity 200ms, visibility 200ms;
-  transition: opacity 200ms, visibility 200ms;
-  visibility: hidden;
-  width: 100vw;
-  z-index: 8000;
-}
-
-.Overlay.is-open {
-  opacity: 1;
-  visibility: visible;
 }
 /**
  * Functions
@@ -537,6 +518,30 @@
   .Modal-content {
     padding-left: 48px;
   }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+.Overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transition: opacity 200ms, visibility 200ms;
+  transition: opacity 200ms, visibility 200ms;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 8000;
+}
+
+.Overlay.is-open {
+  opacity: 1;
+  visibility: visible;
 }
 /**
  * Functions
@@ -1053,6 +1058,36 @@
 /**
  * Mixins
  */
+.HelpTip {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.09091em solid currentColor;
+  border-radius: 100%;
+  color: #6facc1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 11px;
+  height: 1.81818em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-transform: color 200ms;
+          transform: color 200ms;
+  width: 1.81818em;
+}
+
+.HelpTip:hover, .HelpTip:active, .HelpTip:focus {
+  color: #8f9aa8;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
 .NewsArticle h1 {
   margin-bottom: 1em;
 }
@@ -1099,36 +1134,6 @@
   margin-bottom: 8px;
   padding-right: 48px;
   padding-top: 24px;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-.HelpTip {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 0.09091em solid currentColor;
-  border-radius: 100%;
-  color: #6facc1;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: 11px;
-  height: 1.81818em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  -webkit-transform: color 200ms;
-          transform: color 200ms;
-  width: 1.81818em;
-}
-
-.HelpTip:hover, .HelpTip:active, .HelpTip:focus {
-  color: #8f9aa8;
 }
 /**
  * Functions

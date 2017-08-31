@@ -168,9 +168,9 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverPhoto object-fit-cover"</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/about-masthead-sm@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/about-masthead-sm@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/about-masthead@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/about-masthead-sm.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(max-width: 544px)"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/about-masthead-sm.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(max-width: 543px)"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/about-masthead.jpg"</span>&gt;</span>
 
             <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/images/about-masthead@2x.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"A group of ER doctors smiling happily"</span>&gt;</span>
@@ -218,7 +218,7 @@
       <span class="hljs-attr">"srcset"</span>: [
         {
           <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/assets/images/about-masthead-sm@2x.jpg"</span>,
-          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>
+          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"</span>
         },
         {
           <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/assets/images/about-masthead@2x.jpg"</span>,
@@ -226,7 +226,7 @@
         },
         {
           <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/assets/images/about-masthead-sm.jpg"</span>,
-          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(max-width: 544px)"</span>
+          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(max-width: 543px)"</span>
         },
         {
           <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/assets/images/about-masthead.jpg"</span>,
@@ -304,12 +304,16 @@
 
 <span class="hljs-selector-class">.Masthead</span> {
   <span class="hljs-attribute">height</span>: <span class="hljs-number">55vw</span>;
-  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">466px</span>;
+  <span class="hljs-attribute">max-height</span>: <span class="hljs-number">366px</span>;
   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">178px</span>;
   <span class="hljs-attribute">overflow</span>: hidden;
   <span class="hljs-attribute">position</span>: relative;
   <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+
+  @<span class="hljs-keyword">media</span> (min-height: 892px) {
+    <span class="hljs-attribute">max-height</span>: <span class="hljs-number">466px</span>;
+  }
 }
 
 <span class="hljs-selector-class">.Masthead--video</span> {
@@ -349,7 +353,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">693 Bytes</span>
+                    <span class="Meta-value">752 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -3484,6 +3488,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/icons.html" data-pjax>
                 <span>Icons</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/image-sizes.html" data-pjax>
+                <span>Image sizes</span>
                 
             </a>
         </li>

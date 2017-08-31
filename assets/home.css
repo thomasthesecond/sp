@@ -39,8 +39,8 @@
   }
   .js:not(.disable-animations) .Masthead-title span {
     display: block;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
     -webkit-transition: text-shadow 0.6s 1.3s, -webkit-transform 0.6s 1.1s;
     transition: text-shadow 0.6s 1.3s, -webkit-transform 0.6s 1.1s;
     transition: text-shadow 0.6s 1.3s, transform 0.6s 1.1s;
@@ -48,8 +48,8 @@
   }
   .js:not(.disable-animations) .Masthead-title.animate span {
     text-shadow: 0 0 72px rgba(13, 60, 77, 0.4);
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .js:not(.disable-animations) .Masthead .Tagline div {
     overflow: hidden;
@@ -59,21 +59,20 @@
   }
   .js:not(.disable-animations) .Masthead .Tagline span {
     display: block;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
     -webkit-transition: -webkit-transform 0.6s 1s;
     transition: -webkit-transform 0.6s 1s;
     transition: transform 0.6s 1s;
     transition: transform 0.6s 1s, -webkit-transform 0.6s 1s;
   }
   .js:not(.disable-animations) .Masthead .Tagline.animate span {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .js:not(.disable-animations) .Masthead .MoreLink {
     overflow: hidden;
-    padding: 4px 22px 4px 16px;
-    top: -4px;
+    padding: 24px 22px 24px 16px;
   }
   .js:not(.disable-animations) .Masthead .MoreLink .MoreLink-text {
     opacity: 0;
@@ -87,14 +86,12 @@
     background-color: #fff;
     content: "";
     display: block;
-    height: 100%;
+    height: 29px;
     left: 0;
     position: absolute;
-    top: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    top: 19px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     -webkit-transition: -webkit-transform 0.5s 1.6s;
     transition: -webkit-transform 0.5s 1.6s;
     transition: transform 0.5s 1.6s;
@@ -104,15 +101,13 @@
   .js:not(.disable-animations) .Masthead .MoreLink.animate .MoreLink-bar {
     -webkit-animation: expand 0.3s 1.3s 1 backwards;
             animation: expand 0.3s 1.3s 1 backwards;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   .js:not(.disable-animations) .LocationFinder {
     opacity: 0;
-    -webkit-transform: translate3d(0, 80px, 0);
-            transform: translate3d(0, 80px, 0);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
     -webkit-transition: opacity 0.5s 1.2s, -webkit-transform 1s 1.3s;
     transition: opacity 0.5s 1.2s, -webkit-transform 1s 1.3s;
     transition: opacity 0.5s 1.2s, transform 1s 1.3s;
@@ -120,24 +115,22 @@
   }
   .js:not(.disable-animations) .LocationFinder.animate {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .js:not(.disable-animations) .Introduction {
     opacity: 0;
-    -webkit-transform: translate3d(0, 40px, 0);
-            transform: translate3d(0, 40px, 0);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transition: opacity 0.25s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: opacity 0.25s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: opacity 0.25s cubic-bezier(0.23, 1, 0.32, 1), transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: opacity 0.25s cubic-bezier(0.23, 1, 0.32, 1), transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform: translateY(32px);
+            transform: translateY(32px);
+    -webkit-transition: opacity 0.7s, -webkit-transform 1s;
+    transition: opacity 0.7s, -webkit-transform 1s;
+    transition: opacity 0.7s, transform 1s;
+    transition: opacity 0.7s, transform 1s, -webkit-transform 1s;
   }
   .js:not(.disable-animations) .Introduction.animate {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .js:not(.disable-animations) body:not(.HomePage) .Introduction {
     -webkit-transition-delay: 1s;
@@ -151,10 +144,8 @@
     left: 0;
     position: absolute;
     top: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     -webkit-transition: -webkit-transform 0.5s ease-out;
     transition: -webkit-transform 0.5s ease-out;
     transition: transform 0.5s ease-out;
@@ -162,20 +153,20 @@
     width: 100%;
   }
   .js:not(.disable-animations) .ImageBlock.animate > a::after {
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   .js:not(.disable-animations) .ImageBlock .ImageBlock-photo {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1, 1.1, 1.1);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     -webkit-transition: -webkit-transform 2s ease-out;
     transition: -webkit-transform 2s ease-out;
     transition: transform 2s ease-out;
     transition: transform 2s ease-out, -webkit-transform 2s ease-out;
   }
   .js:not(.disable-animations) .ImageBlock.animate .ImageBlock-photo {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   .js:not(.disable-animations) .ImageBlock .ImageBlock-text {
     opacity: 0;
@@ -187,10 +178,8 @@
   }
   .js:not(.disable-animations) .Testimonial {
     opacity: 0;
-    -webkit-transform: translate3d(0, 40px, 0);
-            transform: translate3d(0, 40px, 0);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
     -webkit-transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
     transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
@@ -198,27 +187,25 @@
   }
   .js:not(.disable-animations) .Testimonial.animate {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .js:not(.disable-animations) .Feature .CoverPhoto {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1);
-            transform: scale3d(1.1, 1.1, 1.1);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     -webkit-transition: -webkit-transform 2s ease-out;
     transition: -webkit-transform 2s ease-out;
     transition: transform 2s ease-out;
     transition: transform 2s ease-out, -webkit-transform 2s ease-out;
   }
   .js:not(.disable-animations) .Feature .CoverPhoto.animate {
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   .js:not(.disable-animations) .ServiceCards .ServiceCard {
     opacity: 0;
-    -webkit-transform: translate3d(0, 56px, 0);
-            transform: translate3d(0, 56px, 0);
+    -webkit-transform: translateY(56px);
+            transform: translateY(56px);
     -webkit-transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1), transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -250,13 +237,13 @@
   }
   .js:not(.disable-animations) .ServiceCards.animate .ServiceCard {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .js:not(.disable-animations) .LeadershipTeam .TeamMember {
     opacity: 0;
-    -webkit-transform: translate3d(0, 56px, 0);
-            transform: translate3d(0, 56px, 0);
+    -webkit-transform: translateY(56px);
+            transform: translateY(56px);
     -webkit-transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1), transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -292,13 +279,13 @@
   }
   .js:not(.disable-animations) .LeadershipTeam.animate .TeamMember {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .js:not(.disable-animations) .Highlight {
     opacity: 0;
-    -webkit-transform: translate3d(0, 56px, 0);
-            transform: translate3d(0, 56px, 0);
+    -webkit-transform: translateY(56px);
+            transform: translateY(56px);
     -webkit-transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1), transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -322,8 +309,8 @@
   }
   .js:not(.disable-animations) .Highlight.animate {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /**
@@ -431,7 +418,8 @@
 .Masthead .MoreLink {
   font-size: 14px;
   color: #fff;
-  margin-top: 4.96124vw;
+  margin-top: 3.10078vw;
+  padding: 24px;
 }
 
 @media (min-width: 37.5em) and (max-width: 80.625em) {
@@ -448,7 +436,7 @@
 
 @media (min-width: 80.625em) {
   .Masthead .MoreLink {
-    margin-top: 64px;
+    margin-top: 40px;
   }
 }
 
@@ -463,12 +451,18 @@
  */
 .Masthead {
   height: 55vw;
-  max-height: 466px;
+  max-height: 366px;
   min-height: 178px;
   overflow: hidden;
   position: relative;
   text-align: center;
   width: 100%;
+}
+
+@media (min-height: 892px) {
+  .Masthead {
+    max-height: 466px;
+  }
 }
 
 .Masthead--video {
@@ -527,66 +521,10 @@
 /**
  * Mixins
  */
-.Introduction {
-  font-size: 20px;
-  color: #25395d;
-  font-weight: 300;
-  letter-spacing: -0.9px;
-  line-height: 1.8;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 856px;
-  text-align: center;
-}
-
-@media (min-width: 30em) and (max-width: 53.5em) {
-  .Introduction {
-    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (856 - 480));
-  }
-}
-
-@media (min-width: 53.5em) {
-  .Introduction {
-    font-size: 32px;
-  }
-}
-
-@media (min-width: 30em) {
-  .Introduction {
-    letter-spacing: -1.4px;
-    line-height: 1.5;
-  }
-}
-
-@media (min-width: 30em) {
-  .Introduction::after {
-    background-color: #b5955d;
-    content: "";
-    display: block;
-    height: 4px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.25em;
-    width: 80px;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .LocationFinder.is-sticky {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
           box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09);
-}
-
-@media (min-width: 41.875em) {
-  .LocationFinder.is-sticky {
-    -webkit-box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-            box-shadow: 0 2px 34px rgba(28, 45, 62, 0.09), 0 36px 84px rgba(4, 36, 53, 0.39);
-  }
 }
 
 .LocationFinder .container {
@@ -757,8 +695,16 @@
     -ms-flex-item-align: center;
         align-self: center;
     border-radius: 56px;
-    height: 56px;
+    height: 4.34109vw;
     max-width: 220px;
+    min-height: 40px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .LocationFinder.is-sticky .LocationFinder-button {
+    height: 56px;
   }
 }
 
@@ -768,6 +714,55 @@
     display: -ms-flexbox;
     display: flex;
     height: 100%;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+.Introduction {
+  font-size: 20px;
+  color: #25395d;
+  font-weight: 300;
+  letter-spacing: -0.9px;
+  line-height: 1.8;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 856px;
+  text-align: center;
+}
+
+@media (min-width: 30em) and (max-width: 53.5em) {
+  .Introduction {
+    font-size: calc(20px + (32 - 20) * (100vw - 480px) / (856 - 480));
+  }
+}
+
+@media (min-width: 53.5em) {
+  .Introduction {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 30em) {
+  .Introduction {
+    letter-spacing: -1.4px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 30em) {
+  .Introduction::after {
+    background-color: #b5955d;
+    content: "";
+    display: block;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.25em;
+    width: 80px;
   }
 }
 /**
@@ -801,6 +796,20 @@
 }
 
 @media (min-width: 34em) {
+  .ImageBlock > a {
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 34em) and (max-width: 63.9375em) {
+  .PartnershipsPage .ImageBlock > a {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 3vw;
+  }
+}
+
+@media (min-width: 34em) {
   .ImageBlock--alternate {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -829,6 +838,9 @@
 
 @media (min-width: 34em) {
   .ImageBlock-text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 200%;
+            flex: 0 1 200%;
     margin-left: 10.54264%;
     max-width: 400px;
   }
@@ -877,7 +889,7 @@
   display: block;
   height: 100%;
   left: 0;
-  opacity: 0.27;
+  opacity: 0.16;
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -902,19 +914,6 @@
   display: block;
   height: 100%;
   left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.CoverPhoto::after {
-  background: -webkit-gradient(linear, left top, left bottom, from(#b5955d), to(#5d91a1));
-  background: linear-gradient(to bottom, #b5955d 0%, #5d91a1 100%);
-  content: "";
-  display: block;
-  height: 100%;
-  left: 0;
-  opacity: 0.27;
   position: absolute;
   top: 0;
   width: 100%;
@@ -1043,14 +1042,14 @@
   margin-top: 136px;
 }
 
-@media (min-width: 34em) {
+@media (min-width: 686px) {
   .Contentinfo {
-    margin-top: 35.34884vw;
+    margin-top: 19.84496vw;
   }
 }
 
 @media (min-width: 80.625em) {
   .Contentinfo {
-    margin-top: 456px;
+    margin-top: 256px;
   }
 }

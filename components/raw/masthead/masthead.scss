@@ -4,12 +4,16 @@
 
 .Masthead {
   height: 55vw;
-  max-height: 466px;
+  max-height: 366px;
   min-height: 178px;
   overflow: hidden;
   position: relative;
   text-align: center;
   width: 100%;
+
+  @media (min-height: 892px) {
+    max-height: 466px;
+  }
 }
 
 .Masthead--video {

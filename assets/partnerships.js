@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 151);
+/******/ 	return __webpack_require__(__webpack_require__.s = 150);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3144,17 +3144,17 @@ exports.default = SubNavigation;
 
 /***/ }),
 
-/***/ 127:
+/***/ 126:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(128);
+__webpack_require__(127);
 
 /***/ }),
 
-/***/ 128:
+/***/ 127:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3171,7 +3171,7 @@ __webpack_require__(16);
 
 /***/ }),
 
-/***/ 151:
+/***/ 150:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3179,15 +3179,15 @@ __webpack_require__(16);
 
 // Import page module
 
-var _partnerships = __webpack_require__(152);
+var _partnerships = __webpack_require__(151);
 
 var _partnerships2 = _interopRequireDefault(_partnerships);
 
 __webpack_require__(2);
 
-__webpack_require__(26);
+__webpack_require__(25);
 
-__webpack_require__(7);
+__webpack_require__(6);
 
 __webpack_require__(15);
 
@@ -3197,9 +3197,9 @@ var _subNavigation = __webpack_require__(9);
 
 var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-__webpack_require__(127);
+__webpack_require__(126);
 
-__webpack_require__(22);
+__webpack_require__(8);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3215,7 +3215,7 @@ subNavigation.render();
 
 /***/ }),
 
-/***/ 152:
+/***/ 151:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3225,11 +3225,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _partnerships = __webpack_require__(153);
+var _partnerships = __webpack_require__(152);
 
 var _partnerships2 = _interopRequireDefault(_partnerships);
 
-__webpack_require__(154);
+__webpack_require__(153);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3237,7 +3237,7 @@ exports.default = _partnerships2.default;
 
 /***/ }),
 
-/***/ 153:
+/***/ 152:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3268,8 +3268,15 @@ var HomePage = function () {
     this.className = "animate";
 
     this.mql = window.matchMedia("(min-width: 1024px)");
+    this.mqlFeature = window.matchMedia("(max-width: 543px)");
     this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
 
+    this.featureDesktop = document.querySelector(".js-partnership-feature-desktop");
+    this.featureMobile = document.querySelector(".js-partnership-feature-mobile");
+
+    this.content = this.featureDesktop.innerHTML;
+
+    this.updateFeatureForMobile = this.updateFeatureForMobile.bind(this);
     this.checkScreenSize = this.checkScreenSize.bind(this);
     this.create = this.create.bind(this);
     this.animate = this.animate.bind(this);
@@ -3277,6 +3284,20 @@ var HomePage = function () {
   }
 
   _createClass(HomePage, [{
+    key: "updateFeatureForMobile",
+    value: function updateFeatureForMobile(mql) {
+      if (mql.matches) {
+        this.featureMobile.innerHTML = this.content;
+        document.querySelector(".js-partnership-feature-desktop").hidden = true;
+        document.querySelector(".js-partnership-feature-mobile").hidden = false;
+        document.querySelector(".js-partnership-hr").hidden = true;
+
+        // Disable animations for min-width: 544px to fix a bug where animations
+        // don’t run after changing from mobile to desktop.
+        document.documentElement.classList.add("disable-animations");
+      }
+    }
+  }, {
     key: "checkScreenSize",
     value: function checkScreenSize(mql) {
       if (mql.matches) {
@@ -3353,6 +3374,9 @@ var HomePage = function () {
         this.checkScreenSize(this.mql);
         this.mql.addListener(this.checkScreenSize);
       }
+
+      this.updateFeatureForMobile(this.mqlFeature);
+      this.mqlFeature.addListener(this.updateFeatureForMobile);
     }
   }]);
 
@@ -3363,7 +3387,7 @@ exports.default = HomePage;
 
 /***/ }),
 
-/***/ 154:
+/***/ 153:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3387,24 +3411,17 @@ __webpack_require__(3);
 
 /***/ }),
 
-/***/ 22:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 26:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(27);
+__webpack_require__(26);
 
 /***/ }),
 
-/***/ 27:
+/***/ 26:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3435,13 +3452,20 @@ __webpack_require__(5);
 
 /***/ }),
 
-/***/ 7:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(8);
+__webpack_require__(7);
+
+/***/ }),
+
+/***/ 7:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

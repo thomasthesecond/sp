@@ -530,6 +530,72 @@ template {
 .text-negative {
   color: #d90a0a;
 }
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .Banner,
+  .Contentinfo,
+  .SubNavigation,
+  .UtilityLinks,
+  .Pagination,
+  .NextPage {
+    display: none !important;
+  }
+}
 @charset "UTF-8";
 /**
  * Mixins
@@ -597,72 +663,6 @@ cite {
 
 main {
   outline: none;
-}
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: transparent !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-    color: #000 !important;
-    text-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-  pre {
-    white-space: pre-wrap !important;
-  }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  /*
-   * Printing Tables:
-   * http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-  .Banner,
-  .Contentinfo,
-  .SubNavigation,
-  .UtilityLinks,
-  .Pagination,
-  .NextPage {
-    display: none !important;
-  }
 }
 /**
  * Functions
@@ -985,7 +985,6 @@ textarea {
   color: #77919e;
   display: block;
   font-size: 100%;
-  font-weight: 300;
   line-height: 2;
   padding: 0.75em 1.5em 0.625em;
 }
@@ -1032,7 +1031,6 @@ select {
   cursor: pointer;
   display: block;
   font-size: 100%;
-  font-weight: 300;
   line-height: 2;
   padding: 0.75em 3.375em 0.625em 1.5em;
 }
@@ -1356,7 +1354,6 @@ input[type="tel"] {
   color: #77919e;
   display: block;
   font-size: 100%;
-  font-weight: 300;
   line-height: 2;
   padding: 0.75em 1.5em 0.625em;
 }
@@ -1586,135 +1583,6 @@ h6,
 /**
  * Mixins
  */
-.Button {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background-color: #5d91a1;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: 14px;
-  font-weight: 600;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  letter-spacing: 0.7px;
-  line-height: 1;
-  padding: 1.71429em 2.85714em;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  -webkit-transition: background-color 0.4s;
-  transition: background-color 0.4s;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.Button:hover, .Button:active, .Button:focus {
-  background-color: #77a3b0;
-  color: #fff;
-}
-
-.Button--dark {
-  background-color: #152640;
-  border: 1px solid rgba(191, 208, 216, 0.2);
-  color: #fff;
-}
-
-.Button--dark:hover, .Button--dark:active, .Button--dark:focus {
-  background-color: #223d66;
-  color: #fff;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
-blockquote {
-  color: #25395d;
-  margin: 0;
-}
-
-blockquote p {
-  font-size: 16px;
-  font-family: "Mate", Georgia, sans-serif;
-  font-weight: 300;
-  line-height: 1.6;
-  margin-bottom: 1.6em;
-  margin-top: 0;
-}
-
-@media (min-width: 37.5em) and (max-width: 64em) {
-  blockquote p {
-    font-size: calc(16px + (20 - 16) * (100vw - 600px) / (1024 - 600));
-  }
-}
-
-@media (min-width: 64em) {
-  blockquote p {
-    font-size: 20px;
-  }
-}
-
-blockquote cite {
-  font-size: 14px;
-  display: inline-block;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-@media (min-width: 37.5em) and (max-width: 64em) {
-  blockquote cite {
-    font-size: calc(14px + (16 - 14) * (100vw - 600px) / (1024 - 600));
-  }
-}
-
-@media (min-width: 64em) {
-  blockquote cite {
-    font-size: 16px;
-  }
-}
-
-blockquote cite br {
-  display: none;
-}
-
-.blockquote-location {
-  font-size: 10px;
-  color: #b5955d;
-  display: block;
-  font-weight: 400;
-  line-height: 1.21429;
-  margin-top: 0.42857em;
-}
-
-@media (min-width: 37.5em) and (max-width: 64em) {
-  .blockquote-location {
-    font-size: calc(10px + (14 - 10) * (100vw - 600px) / (1024 - 600));
-  }
-}
-
-@media (min-width: 64em) {
-  .blockquote-location {
-    font-size: 14px;
-  }
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Contentinfo {
   font-size: 12px;
   background-color: #152640;
@@ -1845,7 +1713,8 @@ blockquote cite br {
 
 .Contentinfo-location img {
   display: block;
-  max-width: 100%;
+  max-width: 301px;
+  width: 100%;
 }
 
 @media (max-width: 799px) {
@@ -1860,6 +1729,7 @@ blockquote cite br {
         align-self: flex-start;
     left: 0;
     margin-left: 2.7027%;
+    max-width: 100%;
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -1880,7 +1750,7 @@ blockquote cite br {
           -ms-flex-order: 0;
               order: 0;
       position: static;
-      width: auto;
+      width: 301px;
     }
   }
 }
@@ -2157,6 +2027,134 @@ blockquote cite br {
 /**
  * Mixins
  */
+.Button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #5d91a1;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 1;
+  padding: 1.71429em 2.85714em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.Button:hover, .Button:active, .Button:focus {
+  background-color: #77a3b0;
+  color: #fff;
+}
+
+.Button--dark {
+  background-color: #152640;
+  border: 1px solid rgba(191, 208, 216, 0.2);
+  color: #fff;
+}
+
+.Button--dark:hover, .Button--dark:active, .Button--dark:focus {
+  background-color: #223d66;
+  color: #fff;
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+blockquote {
+  color: #25395d;
+  margin: 0;
+}
+
+blockquote p {
+  font-size: 16px;
+  font-family: "Mate", Georgia, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  margin-top: 0;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  blockquote p {
+    font-size: calc(16px + (20 - 16) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  blockquote p {
+    font-size: 20px;
+  }
+}
+
+blockquote cite {
+  font-size: 14px;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  blockquote cite {
+    font-size: calc(14px + (16 - 14) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  blockquote cite {
+    font-size: 16px;
+  }
+}
+
+blockquote cite br {
+  display: none;
+}
+
+.blockquote-location {
+  font-size: 10px;
+  color: #b5955d;
+  display: block;
+  font-weight: 400;
+  line-height: 1.21429;
+  margin-top: 0.42857em;
+}
+
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .blockquote-location {
+    font-size: calc(10px + (14 - 10) * (100vw - 600px) / (1024 - 600));
+  }
+}
+
+@media (min-width: 64em) {
+  .blockquote-location {
+    font-size: 14px;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
 .Banner {
   background-color: #fff;
   height: 6.97674vw;
@@ -2301,43 +2299,6 @@ blockquote cite br {
 /**
  * Mixins
  */
-.SkipLink {
-  position: absolute;
-}
-
-.SkipLink:focus {
-  background-color: #fff;
-  color: #446975;
-  height: auto;
-  line-height: 40px;
-  padding: 10px 20px;
-  text-decoration: none;
-  top: 48px;
-  width: auto;
-  z-index: 1000;
-}
-
-@media (min-width: 688px) {
-  .SkipLink:focus {
-    top: 6.97674vw;
-  }
-}
-
-@media (min-width: 83.625em) {
-  .SkipLink:focus {
-    top: 90px;
-  }
-}
-
-.SkipLink.visuallyhidden.focusable:focus {
-  position: absolute;
-}
-/**
- * Functions
- */
-/**
- * Mixins
- */
 .Navigation {
   font-size: 12px;
   background-color: #fff;
@@ -2430,6 +2391,7 @@ blockquote cite br {
 
 @media (min-width: 38.75em) {
   .Banner .Navigation {
+    height: 100%;
     margin-left: auto;
   }
 }
@@ -2444,6 +2406,12 @@ blockquote cite br {
 @media (max-width: 38.6875em) {
   .Banner .Navigation ul {
     margin-top: 48px;
+  }
+}
+
+@media (min-width: 38.75em) {
+  .Banner .Navigation ul {
+    height: 100%;
   }
 }
 
@@ -2481,4 +2449,53 @@ blockquote cite br {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+@media (min-width: 38.75em) {
+  .Banner .Navigation a {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+  }
+}
+/**
+ * Functions
+ */
+/**
+ * Mixins
+ */
+.SkipLink {
+  position: absolute;
+}
+
+.SkipLink:focus {
+  background-color: #fff;
+  color: #446975;
+  height: auto;
+  line-height: 40px;
+  padding: 10px 20px;
+  text-decoration: none;
+  top: 48px;
+  width: auto;
+  z-index: 1000;
+}
+
+@media (min-width: 688px) {
+  .SkipLink:focus {
+    top: 6.97674vw;
+  }
+}
+
+@media (min-width: 83.625em) {
+  .SkipLink:focus {
+    top: 90px;
+  }
+}
+
+.SkipLink.visuallyhidden.focusable:focus {
+  position: absolute;
 }

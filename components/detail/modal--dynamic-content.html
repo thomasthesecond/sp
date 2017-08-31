@@ -271,8 +271,6 @@
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-meta">"use strict"</span>;
 
-<span class="hljs-keyword">import</span> noScroll <span class="hljs-keyword">from</span> <span class="hljs-string">"no-scroll"</span>;
-
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Modal</span> </span>{
   <span class="hljs-keyword">constructor</span>() {
     <span class="hljs-keyword">this</span>.document = <span class="hljs-built_in">document</span>.documentElement;
@@ -294,7 +292,7 @@
 
   close() {
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.modal.classList.contains(<span class="hljs-keyword">this</span>.openClassName)) {
-      noScroll.off();
+      <span class="hljs-built_in">document</span>.documentElement.style.overflow = <span class="hljs-string">""</span>;
       <span class="hljs-keyword">this</span>.modalClose.removeEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.close, <span class="hljs-literal">false</span>);
 
       <span class="hljs-keyword">this</span>.modal.setAttribute(<span class="hljs-string">"tabindex"</span>, <span class="hljs-string">"-1"</span>);
@@ -316,7 +314,7 @@
 
   open(content) {
     <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.modal.classList.contains(<span class="hljs-keyword">this</span>.openClassName)) {
-      noScroll.on();
+      <span class="hljs-built_in">document</span>.documentElement.style.overflow = <span class="hljs-string">"hidden"</span>;
       <span class="hljs-keyword">this</span>.modalClose.addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.close, <span class="hljs-literal">false</span>);
       <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">"click"</span>, <span class="hljs-keyword">this</span>.clickOutside, <span class="hljs-literal">false</span>);
       <span class="hljs-keyword">this</span>.onEscapePress();
@@ -3606,6 +3604,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/icons.html" data-pjax>
                 <span>Icons</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/image-sizes.html" data-pjax>
+                <span>Image sizes</span>
                 
             </a>
         </li>

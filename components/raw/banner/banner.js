@@ -1,6 +1,5 @@
 "use strict";
 
-import noScroll from "no-scroll";
 import Hamburger from "../hamburger";
 
 export default class Banner {
@@ -32,7 +31,7 @@ export default class Banner {
   hideNavigation() {
     if (this.navigation.classList.contains(this.openClassName)) {
       this.isOpen = false;
-      noScroll.off();
+      document.documentElement.style.overflow = "";
       this.header.classList.remove(this.openClassName);
       this.navigation.classList.remove(this.openClassName);
       this.hamburger.classList.remove(this.openClassName);
@@ -42,7 +41,7 @@ export default class Banner {
   showNavigation() {
     if (!this.navigation.classList.contains(this.openClassName)) {
       this.isOpen = true;
-      noScroll.on();
+      document.documentElement.style.overflow = "hidden";
       this.header.classList.add(this.openClassName);
       this.navigation.classList.add(this.openClassName);
       this.hamburger.classList.add(this.openClassName);

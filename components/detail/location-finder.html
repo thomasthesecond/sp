@@ -902,10 +902,6 @@
   &amp;<span class="hljs-selector-class">.is-sticky</span> {
     <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color-background-default</span>;
     <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-location-finder-sticky</span>;
-
-    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
-      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow-location-finder</span>;
-    }
   }
 }
 
@@ -1050,8 +1046,14 @@
     @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-670</span>) {
       <span class="hljs-attribute">align-self</span>: center;
       <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">56px</span>;
-      <span class="hljs-attribute">height</span>: <span class="hljs-number">56px</span>;
+      <span class="hljs-attribute">height</span>: #{(<span class="hljs-number">56</span> / <span class="hljs-variable">$max-width</span>) * <span class="hljs-number">100</span>}vw;
       <span class="hljs-attribute">max-width</span>: <span class="hljs-number">220px</span>;
+      <span class="hljs-attribute">min-height</span>: <span class="hljs-number">40px</span>;
+      <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+    }
+
+    @<span class="hljs-keyword">media</span> (min-width: <span class="hljs-variable">$mq-min-container</span>) {
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">56px</span>;
     }
   }
 }
@@ -4228,6 +4230,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/icons.html" data-pjax>
                 <span>Icons</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/image-sizes.html" data-pjax>
+                <span>Image sizes</span>
                 
             </a>
         </li>

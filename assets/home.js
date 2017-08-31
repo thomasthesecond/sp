@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 135);
+/******/ 	return __webpack_require__(__webpack_require__.s = 134);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2932,7 +2932,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /***/ }),
 
-/***/ 135:
+/***/ 134:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2940,33 +2940,33 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 // Import page module
 
-var _home = __webpack_require__(136);
+var _home = __webpack_require__(135);
 
 var _home2 = _interopRequireDefault(_home);
 
 __webpack_require__(2);
 
-var _coverVideo = __webpack_require__(72);
+var _coverVideo = __webpack_require__(71);
 
 var _coverVideo2 = _interopRequireDefault(_coverVideo);
 
 __webpack_require__(15);
 
-__webpack_require__(7);
+__webpack_require__(6);
 
 var _locationFinder = __webpack_require__(17);
 
 var _locationFinder2 = _interopRequireDefault(_locationFinder);
 
-__webpack_require__(75);
+__webpack_require__(74);
 
 __webpack_require__(4);
 
 __webpack_require__(20);
 
-__webpack_require__(77);
+__webpack_require__(76);
 
-__webpack_require__(22);
+__webpack_require__(8);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2984,7 +2984,7 @@ locationFinder.render();
 
 /***/ }),
 
-/***/ 136:
+/***/ 135:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2994,11 +2994,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _home = __webpack_require__(137);
+var _home = __webpack_require__(136);
 
 var _home2 = _interopRequireDefault(_home);
 
-__webpack_require__(138);
+__webpack_require__(137);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3006,7 +3006,7 @@ exports.default = _home2.default;
 
 /***/ }),
 
-/***/ 137:
+/***/ 136:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3086,10 +3086,6 @@ var HomePage = function () {
         this.create();
       }
 
-      // new ScrollMagic.Scene({ triggerElement: ".js-banner" })
-      //   .setClassToggle(".Banner", this.className)
-      //   .addTo(this.controller);
-
       new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".Masthead", this.className).addTo(this.controller);
 
       new _scrollmagic2.default.Scene({ triggerElement: ".js-masthead" }).setClassToggle(".CoverVideo", this.className).addTo(this.controller);
@@ -3100,7 +3096,7 @@ var HomePage = function () {
 
       new _scrollmagic2.default.Scene({ triggerElement: ".js-location-finder" }).setClassToggle(".LocationFinder", this.className).addTo(this.controller);
 
-      new _scrollmagic2.default.Scene({ triggerElement: ".js-introduction", offset: 0 }).setClassToggle(".Introduction", this.className).addTo(this.controller);
+      new _scrollmagic2.default.Scene({ triggerElement: ".js-introduction", offset: 100 }).setClassToggle(".Introduction", this.className).addTo(this.controller);
 
       new _scrollmagic2.default.Scene({ triggerElement: ".js-partnerships-section", offset: 100 }).setClassToggle("#partnerships-section", this.className).addTo(this.controller);
 
@@ -3128,7 +3124,7 @@ exports.default = HomePage;
 
 /***/ }),
 
-/***/ 138:
+/***/ 137:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3270,13 +3266,6 @@ __webpack_require__(21);
 
 /***/ }),
 
-/***/ 22:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 3:
 /***/ (function(module, exports) {
 
@@ -3301,17 +3290,24 @@ __webpack_require__(5);
 
 /***/ }),
 
-/***/ 7:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(8);
+__webpack_require__(7);
 
 /***/ }),
 
-/***/ 72:
+/***/ 7:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3321,11 +3317,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _coverVideo = __webpack_require__(73);
+var _coverVideo = __webpack_require__(72);
 
 var _coverVideo2 = _interopRequireDefault(_coverVideo);
 
-__webpack_require__(74);
+__webpack_require__(73);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3333,7 +3329,7 @@ exports.default = _coverVideo2.default;
 
 /***/ }),
 
-/***/ 73:
+/***/ 72:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3446,41 +3442,41 @@ exports.default = CoverVideo;
 
 /***/ }),
 
-/***/ 74:
+/***/ 73:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 74:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(75);
 
 /***/ }),
 
 /***/ 75:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(76);
-
-/***/ }),
-
-/***/ 76:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 77:
+/***/ 76:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(78);
+__webpack_require__(77);
 
 /***/ }),
 
-/***/ 78:
+/***/ 77:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

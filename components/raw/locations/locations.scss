@@ -2,6 +2,14 @@
 @import "../../../assets/scss/functions";
 @import "../../../assets/scss/mixins";
 
+main {
+  overflow: hidden;
+
+  @supports (display: grid) {
+    overflow: initial;
+  }
+}
+
 .LocationFinder {
   margin-top: 48px;
 

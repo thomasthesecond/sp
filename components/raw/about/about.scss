@@ -81,8 +81,8 @@
   margin-bottom: 130px;
   margin-top: 40px;
 
-  @media (min-width: 332px) {
-    margin-top: #{(156 / $max-width) * 100vw};
+  @media (min-width: 538px) {
+    margin-top: #{(96 / $max-width) * 100vw};
   }
 
   @media (min-width: 656px) {
@@ -91,6 +91,6 @@
 
   @media (min-width: $mq-min-container) {
     margin-bottom: 256px;
-    margin-top: 156px;
+    margin-top: 96px;
   }
 }

@@ -10,18 +10,6 @@
   top: 0;
   width: 100%;
 
-  &::after {
-    background: $gradient-cover-photo;
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    opacity: $opacity-27;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
   img {
     display: block;
     height: 100%;

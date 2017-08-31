@@ -217,20 +217,20 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Masthead"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Masthead js-masthead"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
-
             <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Masthead-title heading-super"</span>&gt;</span>
-                Locations
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Locations<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"CoverPhoto object-fit-cover"</span>&gt;</span>
 
             <span class="hljs-tag">&lt;<span class="hljs-name">picture</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/locations-masthead-sm@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/locations-masthead-sm@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/locations-masthead@2x.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi)"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/locations-masthead-sm.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(max-width: 544px)"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/locations-masthead-sm.jpg"</span> <span class="hljs-attr">media</span>=<span class="hljs-string">"(max-width: 543px)"</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"../../assets/images/locations-masthead.jpg"</span>&gt;</span>
 
                 <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/images/locations-masthead@2x.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"A doctor writing on a clipboard as another doctor observes"</span>&gt;</span>
@@ -842,7 +842,7 @@
         <pre><span class="xml"></span><span class="hljs-template-variable">{{ render "<a href="banner.html">@banner</a>" }}</span><span class="xml">
 
 <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"main"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"0"</span>&gt;</span>
-  </span><span class="hljs-template-variable">{{&gt; <a href="masthead.html">@masthead</a> }}</span><span class="xml">
+  </span><span class="hljs-template-variable">{{&gt; <a href="masthead.html">@masthead</a> className="js-masthead" animate=true }}</span><span class="xml">
 
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sticky"</span>&gt;</span>
     </span><span class="hljs-template-variable">{{ render "<a href="location-finder.html">@location-finder</a>" }}</span><span class="xml">
@@ -884,7 +884,7 @@
       <span class="hljs-attr">"srcset"</span>: [
         {
           <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/assets/images/locations-masthead-sm@2x.jpg"</span>,
-          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 544px)"</span>
+          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) and (max-width: 543px)"</span>
         },
         {
           <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/assets/images/locations-masthead@2x.jpg"</span>,
@@ -892,7 +892,7 @@
         },
         {
           <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/assets/images/locations-masthead-sm.jpg"</span>,
-          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(max-width: 544px)"</span>
+          <span class="hljs-attr">"media"</span>: <span class="hljs-string">"(max-width: 543px)"</span>
         },
         {
           <span class="hljs-attr">"src"</span>: <span class="hljs-string">"/assets/images/locations-masthead.jpg"</span>,
@@ -1059,11 +1059,70 @@
                             <code class="Code Code--lang-JavaScript FileBrowser-code">
                                 <pre><span class="hljs-meta">"use strict"</span>;
 
+<span class="hljs-keyword">import</span> ScrollMagic <span class="hljs-keyword">from</span> <span class="hljs-string">"scrollmagic"</span>;
+<span class="hljs-keyword">import</span> { forEach } <span class="hljs-keyword">from</span> <span class="hljs-string">"../../../assets/js/utils"</span>;
+
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LocationsPage</span> </span>{
   <span class="hljs-keyword">constructor</span>() {
+    <span class="hljs-keyword">this</span>.controller = <span class="hljs-literal">null</span>;
+    <span class="hljs-keyword">this</span>.className = <span class="hljs-string">"animate"</span>;
     <span class="hljs-keyword">this</span>.locationFinder = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">".js-location-finder"</span>);
 
+    <span class="hljs-keyword">this</span>.mql = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(min-width: 1024px)"</span>);
+    <span class="hljs-keyword">this</span>.reduceMotion = <span class="hljs-built_in">window</span>.matchMedia(<span class="hljs-string">"(prefers-reduced-motion)"</span>);
+
+    <span class="hljs-keyword">this</span>.checkScreenSize = <span class="hljs-keyword">this</span>.checkScreenSize.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.create = <span class="hljs-keyword">this</span>.create.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.animate = <span class="hljs-keyword">this</span>.animate.bind(<span class="hljs-keyword">this</span>);
+    <span class="hljs-keyword">this</span>.destroy = <span class="hljs-keyword">this</span>.destroy.bind(<span class="hljs-keyword">this</span>);
     <span class="hljs-keyword">this</span>.toggleSticky = <span class="hljs-keyword">this</span>.toggleSticky.bind(<span class="hljs-keyword">this</span>);
+  }
+
+  checkScreenSize(mql) {
+    <span class="hljs-keyword">if</span> (mql.matches) {
+      <span class="hljs-keyword">this</span>.animate();
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">this</span>.destroy();
+    }
+  }
+
+  create() {
+    <span class="hljs-keyword">this</span>.controller = <span class="hljs-keyword">new</span> ScrollMagic.Controller({
+      <span class="hljs-attr">globalSceneOptions</span>: {
+        <span class="hljs-attr">reverse</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">triggerHook</span>: <span class="hljs-string">"onEnter"</span>,
+      },
+    });
+  }
+
+  destroy() {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.controller) {
+      <span class="hljs-keyword">const</span> nodes = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">`.<span class="hljs-subst">${<span class="hljs-keyword">this</span>.className}</span>`</span>);
+
+      forEach(nodes, (index, node) =&gt; {
+        node.classList.remove(<span class="hljs-keyword">this</span>.className);
+      });
+
+      <span class="hljs-keyword">this</span>.controller.destroy(<span class="hljs-literal">true</span>);
+    }
+  }
+
+  animate() {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.controller) {
+      <span class="hljs-keyword">this</span>.create();
+    }
+
+    <span class="hljs-keyword">new</span> ScrollMagic.Scene({ <span class="hljs-attr">triggerElement</span>: <span class="hljs-string">".js-masthead"</span> })
+      .setClassToggle(<span class="hljs-string">".CoverPhoto"</span>, <span class="hljs-keyword">this</span>.className)
+      .addTo(<span class="hljs-keyword">this</span>.controller);
+
+    <span class="hljs-keyword">new</span> ScrollMagic.Scene({ <span class="hljs-attr">triggerElement</span>: <span class="hljs-string">".js-masthead"</span> })
+      .setClassToggle(<span class="hljs-string">".Masthead-title"</span>, <span class="hljs-keyword">this</span>.className)
+      .addTo(<span class="hljs-keyword">this</span>.controller);
+
+    <span class="hljs-keyword">new</span> ScrollMagic.Scene({ <span class="hljs-attr">triggerElement</span>: <span class="hljs-string">".js-location-finder"</span> })
+      .setClassToggle(<span class="hljs-string">".LocationFinder"</span>, <span class="hljs-keyword">this</span>.className)
+      .addTo(<span class="hljs-keyword">this</span>.controller);
   }
 
   toggleSticky() {
@@ -1081,6 +1140,14 @@
   }
 
   render() {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.reduceMotion.matches) {
+      <span class="hljs-built_in">document</span>.documentElement.classList.add(<span class="hljs-string">"disable-animations"</span>);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-built_in">window</span>.scrollTo(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+      <span class="hljs-keyword">this</span>.checkScreenSize(<span class="hljs-keyword">this</span>.mql);
+      <span class="hljs-keyword">this</span>.mql.addListener(<span class="hljs-keyword">this</span>.checkScreenSize);
+    }
+
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span>.CSS !== <span class="hljs-string">"undefined"</span> &amp;&amp; <span class="hljs-built_in">window</span>.CSS.supports(<span class="hljs-string">"position"</span>, <span class="hljs-string">"sticky"</span>)) {
       <span class="hljs-keyword">this</span>.toggleSticky();
     }
@@ -1102,7 +1169,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">773 Bytes</span>
+                    <span class="Meta-value">2.6 KB</span>
                 </li>
             </ul>
         </div>
@@ -1118,6 +1185,14 @@
                                 <pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/design-tokens"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/functions"</span>;
 @<span class="hljs-keyword">import</span> <span class="hljs-string">"../../../assets/scss/mixins"</span>;
+
+main {
+  <span class="hljs-attribute">overflow</span>: hidden;
+
+  @supports (display: grid) {
+    <span class="hljs-attribute">overflow</span>: initial;
+  }
+}
 
 <span class="hljs-selector-class">.LocationFinder</span> {
   <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">48px</span>;
@@ -1291,7 +1366,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.2 KB</span>
+                    <span class="Meta-value">3.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -4421,6 +4496,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="../../docs/icons.html" data-pjax>
                 <span>Icons</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/image-sizes.html" data-pjax>
+                <span>Image sizes</span>
                 
             </a>
         </li>

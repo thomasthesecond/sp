@@ -11,10 +11,6 @@ $location-finder-button-width: 258;
   &.is-sticky {
     background-color: $color-background-default;
     box-shadow: $shadow-location-finder-sticky;
-
-    @media (min-width: $mq-min-670) {
-      box-shadow: $shadow-location-finder;
-    }
   }
 }
 
@@ -159,8 +155,14 @@ $location-finder-button-width: 258;
     @media (min-width: $mq-min-670) {
       align-self: center;
       border-radius: 56px;
-      height: 56px;
+      height: #{(56 / $max-width) * 100}vw;
       max-width: 220px;
+      min-height: 40px;
+      padding: 0;
+    }
+
+    @media (min-width: $mq-min-container) {
+      height: 56px;
     }
   }
 }

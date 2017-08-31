@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 139);
+/******/ 	return __webpack_require__(__webpack_require__.s = 138);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3158,7 +3158,7 @@ exports.default = SubNavigation;
 
 /***/ }),
 
-/***/ 139:
+/***/ 138:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3166,33 +3166,33 @@ exports.default = SubNavigation;
 
 // Import page module
 
-var _about = __webpack_require__(140);
+var _about = __webpack_require__(139);
 
 var _about2 = _interopRequireDefault(_about);
 
 __webpack_require__(2);
 
-__webpack_require__(26);
+__webpack_require__(25);
 
-__webpack_require__(79);
+__webpack_require__(78);
 
-__webpack_require__(7);
+__webpack_require__(6);
 
-__webpack_require__(81);
+__webpack_require__(80);
 
 __webpack_require__(4);
 
-__webpack_require__(83);
+__webpack_require__(82);
 
 var _subNavigation = __webpack_require__(9);
 
 var _subNavigation2 = _interopRequireDefault(_subNavigation);
 
-__webpack_require__(28);
+__webpack_require__(27);
 
-__webpack_require__(85);
+__webpack_require__(84);
 
-__webpack_require__(22);
+__webpack_require__(8);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3210,7 +3210,7 @@ subNavigation.render();
 
 /***/ }),
 
-/***/ 140:
+/***/ 139:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3220,11 +3220,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _about = __webpack_require__(141);
+var _about = __webpack_require__(140);
 
 var _about2 = _interopRequireDefault(_about);
 
-__webpack_require__(142);
+__webpack_require__(141);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3232,7 +3232,7 @@ exports.default = _about2.default;
 
 /***/ }),
 
-/***/ 141:
+/***/ 140:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3249,7 +3249,7 @@ var _scrollmagic = __webpack_require__(1);
 
 var _scrollmagic2 = _interopRequireDefault(_scrollmagic);
 
-var _modal = __webpack_require__(23);
+var _modal = __webpack_require__(22);
 
 var _modal2 = _interopRequireDefault(_modal);
 
@@ -3260,28 +3260,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var AboutPage = function () {
-  _createClass(AboutPage, null, [{
-    key: "teamMemberModal",
-    value: function teamMemberModal() {
-      var modal = new _modal2.default();
-      var teamMembers = document.querySelectorAll(".TeamMember");
-      var modalElement = document.querySelector(".js-modal");
-
-      (0, _utils.forEach)(teamMembers, function (index, member) {
-        var name = member.querySelector(".TeamMember-name").innerHTML;
-        var title = member.querySelector(".TeamMember-title").innerHTML;
-        var bio = member.querySelector(".TeamMember-bio").innerHTML;
-
-        var content = "\n        <div class=\"TeamMember\">\n          <h2 class=\"TeamMember-name\" id=\"" + modalElement.id + "-title\">" + name + "</h2>\n          <div class=\"TeamMember-title\">" + title + "</div>\n          <p class=\"TeamMember-bio\" id=\"" + modalElement.id + "-description\">" + bio + "</p>\n        </div>\n      ";
-
-        member.addEventListener("click", function (event) {
-          modal.open(content);
-          event.preventDefault();
-        }, false);
-      });
-    }
-  }]);
-
   function AboutPage() {
     _classCallCheck(this, AboutPage);
 
@@ -3292,6 +3270,7 @@ var AboutPage = function () {
     this.mqlModal = window.matchMedia("(max-width: 1014px)");
     this.reduceMotion = window.matchMedia("(prefers-reduced-motion)");
 
+    this.teamMemberModal = this.teamMemberModal.bind(this);
     this.checkScreenSize = this.checkScreenSize.bind(this);
     this.create = this.create.bind(this);
     this.animate = this.animate.bind(this);
@@ -3299,6 +3278,37 @@ var AboutPage = function () {
   }
 
   _createClass(AboutPage, [{
+    key: "teamMemberModal",
+    value: function teamMemberModal() {
+      if (this.mqlModal.matches) {
+        var modal = new _modal2.default();
+        var teamMembers = document.querySelectorAll(".TeamMember");
+        var modalElement = document.querySelector(".js-modal");
+
+        (0, _utils.forEach)(teamMembers, function (index, member) {
+          var name = member.querySelector(".TeamMember-name").innerHTML;
+          var title = member.querySelector(".TeamMember-title").innerHTML;
+          var bio = member.querySelector(".TeamMember-bio").innerHTML;
+
+          var content = "\n          <div class=\"TeamMember\">\n            <h2 class=\"TeamMember-name\" id=\"" + modalElement.id + "-title\">" + name + "</h2>\n            <div class=\"TeamMember-title\">" + title + "</div>\n            <p class=\"TeamMember-bio\" id=\"" + modalElement.id + "-description\">" + bio + "</p>\n          </div>\n        ";
+
+          var onClick = function onClick(event) {
+            modal.open(content);
+            event.preventDefault();
+          };
+
+          member.addEventListener("click", onClick);
+          // if (this.mqlModal.matches) {
+          //   console.log("add", [member]);
+          //   member.addEventListener("click", onClick);
+          // } else {
+          //   console.log("rmove", [member]);
+          //   member.removeEventListener("click", onClick);
+          // }
+        });
+      }
+    }
+  }, {
     key: "checkScreenSize",
     value: function checkScreenSize(mql) {
       if (mql.matches) {
@@ -3364,8 +3374,8 @@ var AboutPage = function () {
         this.mql.addListener(this.checkScreenSize);
       }
 
-      AboutPage.teamMemberModal(this.mqlModal);
-      this.mqlModal.addListener(AboutPage.teamMemberModal);
+      this.teamMemberModal(this.mqlModal);
+      this.mqlModal.addListener(this.teamMemberModal);
     }
   }]);
 
@@ -3376,7 +3386,7 @@ exports.default = AboutPage;
 
 /***/ }),
 
-/***/ 142:
+/***/ 141:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3394,9 +3404,26 @@ __webpack_require__(3);
 /***/ }),
 
 /***/ 22:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _modal = __webpack_require__(23);
+
+var _modal2 = _interopRequireDefault(_modal);
+
+__webpack_require__(24);
+
+__webpack_require__(13);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _modal2.default;
 
 /***/ }),
 
@@ -3410,38 +3437,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _modal = __webpack_require__(24);
-
-var _modal2 = _interopRequireDefault(_modal);
-
-__webpack_require__(25);
-
-__webpack_require__(13);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _modal2.default;
-
-/***/ }),
-
-/***/ 24:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = undefined;
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _noScroll = __webpack_require__(6);
-
-var _noScroll2 = _interopRequireDefault(_noScroll);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -3472,7 +3468,7 @@ var Modal = function () {
       var _this = this;
 
       if (this.modal.classList.contains(this.openClassName)) {
-        _noScroll2.default.off();
+        document.documentElement.style.overflow = "";
         this.modalClose.removeEventListener("click", this.close, false);
 
         this.modal.setAttribute("tabindex", "-1");
@@ -3497,7 +3493,7 @@ var Modal = function () {
       var _this2 = this;
 
       if (!this.modal.classList.contains(this.openClassName)) {
-        _noScroll2.default.on();
+        document.documentElement.style.overflow = "hidden";
         this.modalClose.addEventListener("click", this.close, false);
         document.addEventListener("click", this.clickOutside, false);
         this.onEscapePress();
@@ -3549,31 +3545,31 @@ exports.default = Modal;
 
 /***/ }),
 
-/***/ 25:
+/***/ 24:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 26:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(27);
+__webpack_require__(26);
 
 /***/ }),
 
-/***/ 27:
+/***/ 26:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 28:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3590,7 +3586,7 @@ __webpack_require__(12);
 
 /***/ }),
 
-/***/ 32:
+/***/ 31:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -3620,93 +3616,31 @@ __webpack_require__(5);
 "use strict";
 
 
-(function (root) {
-  var isOn = false;
-  var scrollbarSize;
-  var scrollTop;
-
-  function getScrollbarSize() {
-    if (typeof scrollbarSize !== 'undefined') return scrollbarSize;
-
-    var doc = document.documentElement;
-    var dummyScroller = document.createElement('div');
-    dummyScroller.setAttribute('style', 'width:99px;height:99px;' + 'position:absolute;top:-9999px;overflow:scroll;');
-    doc.appendChild(dummyScroller);
-    scrollbarSize = dummyScroller.offsetWidth - dummyScroller.clientWidth;
-    doc.removeChild(dummyScroller);
-    return scrollbarSize;
-  }
-
-  function hasScrollbar() {
-    return document.documentElement.scrollHeight > window.innerHeight;
-  }
-
-  function on(options) {
-    if (typeof document === 'undefined') return;
-    var doc = document.documentElement;
-    scrollTop = window.pageYOffset;
-    if (hasScrollbar()) {
-      doc.style.width = 'calc(100% - ' + getScrollbarSize() + 'px)';
-    } else {
-      doc.style.width = '100%';
-    }
-    doc.style.position = 'fixed';
-    doc.style.top = -scrollTop + 'px';
-    doc.style.overflow = 'hidden';
-    isOn = true;
-  }
-
-  function off() {
-    if (typeof document === 'undefined') return;
-    var doc = document.documentElement;
-    doc.style.width = '';
-    doc.style.position = '';
-    doc.style.top = '';
-    doc.style.overflow = '';
-    window.scroll(0, scrollTop);
-    isOn = false;
-  }
-
-  function toggle() {
-    if (isOn) {
-      off();
-      return;
-    }
-    on();
-  }
-
-  var noScroll = {
-    on: on,
-    off: off,
-    toggle: toggle
-  };
-
-  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = noScroll;
-  } else {
-    root.noScroll = noScroll;
-  }
-})(undefined);
+__webpack_require__(7);
 
 /***/ }),
 
 /***/ 7:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 78:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(8);
+__webpack_require__(79);
 
 /***/ }),
 
 /***/ 79:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-__webpack_require__(80);
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -3718,59 +3652,52 @@ __webpack_require__(80);
 /***/ }),
 
 /***/ 80:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(81);
 
 /***/ }),
 
 /***/ 81:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-__webpack_require__(82);
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
 /***/ 82:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+__webpack_require__(31);
+
+__webpack_require__(83);
 
 /***/ }),
 
 /***/ 83:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(32);
-
-__webpack_require__(84);
-
-/***/ }),
-
-/***/ 84:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 85:
+/***/ 84:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(86);
+__webpack_require__(85);
 
 /***/ }),
 
-/***/ 86:
+/***/ 85:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

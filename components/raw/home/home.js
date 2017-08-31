@@ -51,10 +51,6 @@ export default class HomePage {
       this.create();
     }
 
-    // new ScrollMagic.Scene({ triggerElement: ".js-banner" })
-    //   .setClassToggle(".Banner", this.className)
-    //   .addTo(this.controller);
-
     new ScrollMagic.Scene({ triggerElement: ".js-masthead" })
       .setClassToggle(".Masthead", this.className)
       .addTo(this.controller);
@@ -75,7 +71,7 @@ export default class HomePage {
       .setClassToggle(".LocationFinder", this.className)
       .addTo(this.controller);
 
-    new ScrollMagic.Scene({ triggerElement: ".js-introduction", offset: 0 })
+    new ScrollMagic.Scene({ triggerElement: ".js-introduction", offset: 100 })
       .setClassToggle(".Introduction", this.className)
       .addTo(this.controller);
 
