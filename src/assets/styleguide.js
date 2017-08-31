@@ -4,7 +4,6 @@
 import "picturefill";
 import "normalize.css/normalize.css";
 import "./scss/global.scss";
-import "./scss/styleguide.scss";
 
 // Import icons
 import "../components/_icon/icon.scss";
